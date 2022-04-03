@@ -7,21 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2427F9999C0073611C /* DictionaryContentView.swift */; };
+		B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */; };
+		B00D1B2A27F9ADF10073611C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2927F9ADF10073611C /* Section.swift */; };
+		B00D1B2C27F9ADF70073611C /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2B27F9ADF70073611C /* Translation.swift */; };
+		B00D1B2E27F9DEC20073611C /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2D27F9DEC20073611C /* WordView.swift */; };
 		B01279A527F86957003FB72E /* MovappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012799527F86954003FB72E /* MovappApp.swift */; };
-		B01279A627F86957003FB72E /* MovappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012799527F86954003FB72E /* MovappApp.swift */; };
-		B01279A727F86957003FB72E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012799627F86954003FB72E /* ContentView.swift */; };
-		B01279A827F86957003FB72E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012799627F86954003FB72E /* ContentView.swift */; };
+		B01279A727F86957003FB72E /* RootContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012799627F86954003FB72E /* RootContentView.swift */; };
 		B01279A927F86957003FB72E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B012799727F86957003FB72E /* Assets.xcassets */; };
-		B01279AA27F86957003FB72E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B012799727F86957003FB72E /* Assets.xcassets */; };
+		B01279C627F870BF003FB72E /* RootItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279C527F870BF003FB72E /* RootItems.swift */; };
+		B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279C927F872A9003FB72E /* DicitionaryView.swift */; };
+		B01279D027F872C3003FB72E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279CF27F872C3003FB72E /* MenuView.swift */; };
+		B01279D327F872CB003FB72E /* ForChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279D227F872CB003FB72E /* ForChildrenView.swift */; };
+		B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279D527F872D2003FB72E /* AlphabetView.swift */; };
+		B01279DA27F875E1003FB72E /* RootTabBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279D827F875E1003FB72E /* RootTabBarStyle.swift */; };
+		B01279DC27F875E1003FB72E /* RootTabItemStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279D927F875E1003FB72E /* RootTabItemStyle.swift */; };
+		B01279F127F89118003FB72E /* TabBar in Frameworks */ = {isa = PBXBuildFile; productRef = B01279F027F89118003FB72E /* TabBar */; };
+		B05FF14027F9F3910046D636 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF13F27F9F3910046D636 /* Language.swift */; };
+		B05FF14327FA14A00046D636 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF14227FA14A00046D636 /* SoundService.swift */; };
+		B05FF14527FA28440046D636 /* Movapp--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B05FF14427FA28440046D636 /* Movapp--iOS--Info.plist */; };
+		B087C88927F8A3BD0015E54B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B087C88727F8A3BD0015E54B /* Localizable.strings */; };
+		B087C88C27F8A8130015E54B /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = B087C88B27F8A8130015E54B /* Introspect */; };
+		B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C88E27F8B4080015E54B /* AccordionView.swift */; };
+		B087C89127F8B41B0015E54B /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89027F8B41B0015E54B /* TranslationView.swift */; };
+		B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89227F8B4610015E54B /* AccordionsView.swift */; };
+		B087C89527F8B46A0015E54B /* TranslationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89427F8B46A0015E54B /* TranslationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B00D1B2427F9999C0073611C /* DictionaryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryContentView.swift; sourceTree = "<group>"; };
+		B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionHeaderView.swift; sourceTree = "<group>"; };
+		B00D1B2927F9ADF10073611C /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		B00D1B2B27F9ADF70073611C /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		B00D1B2D27F9DEC20073611C /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
 		B012799527F86954003FB72E /* MovappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappApp.swift; sourceTree = "<group>"; };
-		B012799627F86954003FB72E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B012799627F86954003FB72E /* RootContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContentView.swift; sourceTree = "<group>"; };
 		B012799727F86957003FB72E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B012799C27F86957003FB72E /* Movapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B01279A227F86957003FB72E /* Movapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01279A427F86957003FB72E /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		B01279C327F87051003FB72E /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		B01279C527F870BF003FB72E /* RootItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootItems.swift; sourceTree = "<group>"; };
+		B01279C927F872A9003FB72E /* DicitionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicitionaryView.swift; sourceTree = "<group>"; };
+		B01279CF27F872C3003FB72E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		B01279D227F872CB003FB72E /* ForChildrenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenView.swift; sourceTree = "<group>"; };
+		B01279D527F872D2003FB72E /* AlphabetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetView.swift; sourceTree = "<group>"; };
+		B01279D827F875E1003FB72E /* RootTabBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabBarStyle.swift; sourceTree = "<group>"; };
+		B01279D927F875E1003FB72E /* RootTabItemStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTabItemStyle.swift; sourceTree = "<group>"; };
+		B01279EF27F89101003FB72E /* TabBar */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TabBar; sourceTree = "<group>"; };
+		B05FF13D27F9F19F0046D636 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B05FF13F27F9F3910046D636 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		B05FF14227FA14A00046D636 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
+		B05FF14427FA28440046D636 /* Movapp--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Movapp--iOS--Info.plist"; sourceTree = "<group>"; };
+		B087C88827F8A3BD0015E54B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B087C88E27F8B4080015E54B /* AccordionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionView.swift; sourceTree = "<group>"; };
+		B087C89027F8B41B0015E54B /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
+		B087C89227F8B4610015E54B /* AccordionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionsView.swift; sourceTree = "<group>"; };
+		B087C89427F8B46A0015E54B /* TranslationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,34 +70,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B012799F27F86957003FB72E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				B01279F127F89118003FB72E /* TabBar in Frameworks */,
+				B087C88C27F8A8130015E54B /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B00D1B2827F9ADE30073611C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B00D1B2927F9ADF10073611C /* Section.swift */,
+				B00D1B2B27F9ADF70073611C /* Translation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		B012798F27F86954003FB72E = {
 			isa = PBXGroup;
 			children = (
+				B05FF14427FA28440046D636 /* Movapp--iOS--Info.plist */,
+				B01279E827F885DE003FB72E /* Packages */,
 				B012799427F86954003FB72E /* Shared */,
 				B01279A327F86957003FB72E /* macOS */,
 				B012799D27F86957003FB72E /* Products */,
+				B01279E027F88504003FB72E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		B012799427F86954003FB72E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B05FF14127FA14950046D636 /* Services */,
+				B05FF13E27F9F3890046D636 /* Enums */,
+				B00D1B2827F9ADE30073611C /* Models */,
+				B087C87E27F8A1F20015E54B /* Resources */,
+				B01279CE27F872BB003FB72E /* Menu */,
+				B01279CD27F872B4003FB72E /* ForChildren */,
+				B01279CC27F872AC003FB72E /* Alphabet */,
+				B01279C827F8729C003FB72E /* Dicitionary */,
+				B01279C427F87086003FB72E /* Root */,
 				B012799527F86954003FB72E /* MovappApp.swift */,
-				B012799627F86954003FB72E /* ContentView.swift */,
 				B012799727F86957003FB72E /* Assets.xcassets */,
+				B01279C327F87051003FB72E /* LICENSE.md */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -65,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				B012799C27F86957003FB72E /* Movapp.app */,
-				B01279A227F86957003FB72E /* Movapp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +132,95 @@
 				B01279A427F86957003FB72E /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		B01279C427F87086003FB72E /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				B012799627F86954003FB72E /* RootContentView.swift */,
+				B01279C527F870BF003FB72E /* RootItems.swift */,
+				B01279D827F875E1003FB72E /* RootTabBarStyle.swift */,
+				B01279D927F875E1003FB72E /* RootTabItemStyle.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		B01279C827F8729C003FB72E /* Dicitionary */ = {
+			isa = PBXGroup;
+			children = (
+				B01279C927F872A9003FB72E /* DicitionaryView.swift */,
+				B00D1B2427F9999C0073611C /* DictionaryContentView.swift */,
+				B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */,
+				B087C88E27F8B4080015E54B /* AccordionView.swift */,
+				B087C89227F8B4610015E54B /* AccordionsView.swift */,
+				B087C89027F8B41B0015E54B /* TranslationView.swift */,
+				B087C89427F8B46A0015E54B /* TranslationsView.swift */,
+				B00D1B2D27F9DEC20073611C /* WordView.swift */,
+			);
+			path = Dicitionary;
+			sourceTree = "<group>";
+		};
+		B01279CC27F872AC003FB72E /* Alphabet */ = {
+			isa = PBXGroup;
+			children = (
+				B01279D527F872D2003FB72E /* AlphabetView.swift */,
+			);
+			path = Alphabet;
+			sourceTree = "<group>";
+		};
+		B01279CD27F872B4003FB72E /* ForChildren */ = {
+			isa = PBXGroup;
+			children = (
+				B01279D227F872CB003FB72E /* ForChildrenView.swift */,
+			);
+			path = ForChildren;
+			sourceTree = "<group>";
+		};
+		B01279CE27F872BB003FB72E /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B01279CF27F872C3003FB72E /* MenuView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		B01279E027F88504003FB72E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B01279E827F885DE003FB72E /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B01279EF27F89101003FB72E /* TabBar */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		B05FF13E27F9F3890046D636 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B05FF13F27F9F3910046D636 /* Language.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		B05FF14127FA14950046D636 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B05FF14227FA14A00046D636 /* SoundService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B087C87E27F8A1F20015E54B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B087C88727F8A3BD0015E54B /* Localizable.strings */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,25 +239,12 @@
 			dependencies = (
 			);
 			name = "Movapp (iOS)";
+			packageProductDependencies = (
+				B01279F027F89118003FB72E /* TabBar */,
+				B087C88B27F8A8130015E54B /* Introspect */,
+			);
 			productName = "Movapp (iOS)";
 			productReference = B012799C27F86957003FB72E /* Movapp.app */;
-			productType = "com.apple.product-type.application";
-		};
-		B01279A127F86957003FB72E /* Movapp (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B01279B027F86957003FB72E /* Build configuration list for PBXNativeTarget "Movapp (macOS)" */;
-			buildPhases = (
-				B012799E27F86957003FB72E /* Sources */,
-				B012799F27F86957003FB72E /* Frameworks */,
-				B01279A027F86957003FB72E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Movapp (macOS)";
-			productName = "Movapp (macOS)";
-			productReference = B01279A227F86957003FB72E /* Movapp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -128,9 +260,6 @@
 					B012799B27F86957003FB72E = {
 						CreatedOnToolsVersion = 13.3;
 					};
-					B01279A127F86957003FB72E = {
-						CreatedOnToolsVersion = 13.3;
-					};
 				};
 			};
 			buildConfigurationList = B012799327F86954003FB72E /* Build configuration list for PBXProject "Movapp" */;
@@ -139,15 +268,18 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				uk,
+				cs,
 			);
 			mainGroup = B012798F27F86954003FB72E;
+			packageReferences = (
+				B087C88A27F8A8130015E54B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = B012799D27F86957003FB72E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				B012799B27F86957003FB72E /* Movapp (iOS) */,
-				B01279A127F86957003FB72E /* Movapp (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -157,15 +289,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05FF14527FA28440046D636 /* Movapp--iOS--Info.plist in Resources */,
 				B01279A927F86957003FB72E /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B01279A027F86957003FB72E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B01279AA27F86957003FB72E /* Assets.xcassets in Resources */,
+				B087C88927F8A3BD0015E54B /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,21 +302,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B01279A727F86957003FB72E /* ContentView.swift in Sources */,
+				B01279D027F872C3003FB72E /* MenuView.swift in Sources */,
+				B01279A727F86957003FB72E /* RootContentView.swift in Sources */,
+				B01279DA27F875E1003FB72E /* RootTabBarStyle.swift in Sources */,
+				B087C89527F8B46A0015E54B /* TranslationsView.swift in Sources */,
+				B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */,
+				B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */,
+				B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */,
+				B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */,
+				B05FF14027F9F3910046D636 /* Language.swift in Sources */,
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B012799E27F86957003FB72E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B01279A827F86957003FB72E /* ContentView.swift in Sources */,
-				B01279A627F86957003FB72E /* MovappApp.swift in Sources */,
+				B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */,
+				B05FF14327FA14A00046D636 /* SoundService.swift in Sources */,
+				B00D1B2C27F9ADF70073611C /* Translation.swift in Sources */,
+				B01279DC27F875E1003FB72E /* RootTabItemStyle.swift in Sources */,
+				B01279C627F870BF003FB72E /* RootItems.swift in Sources */,
+				B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */,
+				B00D1B2E27F9DEC20073611C /* WordView.swift in Sources */,
+				B00D1B2A27F9ADF10073611C /* Section.swift in Sources */,
+				B087C89127F8B41B0015E54B /* TranslationView.swift in Sources */,
+				B01279D327F872CB003FB72E /* ForChildrenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B087C88727F8A3BD0015E54B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B087C88827F8A3BD0015E54B /* en */,
+				B05FF13D27F9F19F0046D636 /* cs */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B01279AB27F86957003FB72E /* Debug */ = {
@@ -311,12 +458,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Movapp--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,12 +488,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Movapp--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,58 +507,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B01279B127F86957003FB72E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = digital.cesko.Movapp;
-				PRODUCT_NAME = Movapp;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		B01279B227F86957003FB72E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = digital.cesko.Movapp;
-				PRODUCT_NAME = Movapp;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -434,16 +531,30 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B01279B027F86957003FB72E /* Build configuration list for PBXNativeTarget "Movapp (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B01279B127F86957003FB72E /* Debug */,
-				B01279B227F86957003FB72E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B087C88A27F8A8130015E54B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = exactVersion;
+				version = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B01279F027F89118003FB72E /* TabBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TabBar;
+		};
+		B087C88B27F8A8130015E54B /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B087C88A27F8A8130015E54B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B012799027F86954003FB72E /* Project object */;
 }

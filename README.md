@@ -4,9 +4,9 @@ Cílem [Movapp.cz](Movapp.cz) je usnadnit dorozumění mezi Čechy a Ukrajinci. 
 
 Projekt vzniká v komunitě expertních dobrovolníků [Česko.Digital](https://cesko.digital). Kontakt: [pryvit@movapp.cz](mailto:pryvit@movapp.cz).
 
-Zdrojový kód je pod MIT licencí. Texty, obrázky a audiosoubory jsou pod licencí CC BY-NC 4.0. Více na [LICENSE.md](LICENSE.md)
+Zdrojový kód je pod MIT licencí. Texty, obrázky a audiosoubory jsou pod licencí CC BY-NC 4.0. Více na [LICENSE](LICENSE)
 
-Chcete-li nám pomáhat na dalším rozvoji projektu, vyplňte formulář na [cesko.digital/join](https://cesko.digital/join) a přidejte se do Slacku [\#ua-movaapp](https://cesko-digital.slack.com/archives/C036GLKL7ME). 
+Chcete-li nám pomáhat na dalším rozvoji projektu, vyplňte formulář na [cesko.digital/join](https://cesko.digital/join) a přidejte se do Slacku na kanál `#ua-movaapp`. 
 
 # Použité technologie
 

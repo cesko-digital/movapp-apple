@@ -23,7 +23,6 @@
 		B05FF14027F9F3910046D636 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF13F27F9F3910046D636 /* Language.swift */; };
 		B05FF14327FA14A00046D636 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF14227FA14A00046D636 /* SoundService.swift */; };
 		B087C88927F8A3BD0015E54B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B087C88727F8A3BD0015E54B /* Localizable.strings */; };
-		B087C88C27F8A8130015E54B /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = B087C88B27F8A8130015E54B /* Introspect */; };
 		B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C88E27F8B4080015E54B /* AccordionView.swift */; };
 		B087C89127F8B41B0015E54B /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89027F8B41B0015E54B /* TranslationView.swift */; };
 		B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89227F8B4610015E54B /* AccordionsView.swift */; };
@@ -62,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B087C88C27F8A8130015E54B /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +217,6 @@
 			);
 			name = "Movapp (iOS)";
 			packageProductDependencies = (
-				B087C88B27F8A8130015E54B /* Introspect */,
 			);
 			productName = "Movapp (iOS)";
 			productReference = B012799C27F86957003FB72E /* Movapp.app */;
@@ -251,7 +248,6 @@
 			);
 			mainGroup = B012798F27F86954003FB72E;
 			packageReferences = (
-				B087C88A27F8A8130015E54B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = B012799D27F86957003FB72E /* Products */;
 			projectDirPath = "";
@@ -507,25 +503,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		B087C88A27F8A8130015E54B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
-			requirement = {
-				kind = exactVersion;
-				version = 0.1.4;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		B087C88B27F8A8130015E54B /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B087C88A27F8A8130015E54B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B012799027F86954003FB72E /* Project object */;
 }

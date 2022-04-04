@@ -20,8 +20,9 @@
 		B01279D027F872C3003FB72E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279CF27F872C3003FB72E /* MenuView.swift */; };
 		B01279D327F872CB003FB72E /* ForChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279D227F872CB003FB72E /* ForChildrenView.swift */; };
 		B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279D527F872D2003FB72E /* AlphabetView.swift */; };
-		B05FF14027F9F3910046D636 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF13F27F9F3910046D636 /* Language.swift */; };
 		B05FF14327FA14A00046D636 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF14227FA14A00046D636 /* SoundService.swift */; };
+		B066546C27FB7D3C002D5EDD /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066546B27FB7D3C002D5EDD /* Language.swift */; };
+		B066546E27FB7E0C002D5EDD /* SetLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066546D27FB7E0C002D5EDD /* SetLanguage.swift */; };
 		B087C88927F8A3BD0015E54B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B087C88727F8A3BD0015E54B /* Localizable.strings */; };
 		B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C88E27F8B4080015E54B /* AccordionView.swift */; };
 		B087C89127F8B41B0015E54B /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89027F8B41B0015E54B /* TranslationView.swift */; };
@@ -46,9 +47,13 @@
 		B01279D227F872CB003FB72E /* ForChildrenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenView.swift; sourceTree = "<group>"; };
 		B01279D527F872D2003FB72E /* AlphabetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetView.swift; sourceTree = "<group>"; };
 		B05FF13D27F9F19F0046D636 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
-		B05FF13F27F9F3910046D636 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		B05FF14227FA14A00046D636 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		B05FF14427FA28440046D636 /* Movapp--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Movapp--iOS--Info.plist"; sourceTree = "<group>"; };
+		B066546627FB7222002D5EDD /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B066546727FB7222002D5EDD /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		B066546827FB7222002D5EDD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B066546B27FB7D3C002D5EDD /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		B066546D27FB7E0C002D5EDD /* SetLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLanguage.swift; sourceTree = "<group>"; };
 		B087C88827F8A3BD0015E54B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B087C88E27F8B4080015E54B /* AccordionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionView.swift; sourceTree = "<group>"; };
 		B087C89027F8B41B0015E54B /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
@@ -72,6 +77,8 @@
 			children = (
 				B00D1B2927F9ADF10073611C /* Section.swift */,
 				B00D1B2B27F9ADF70073611C /* Translation.swift */,
+				B066546B27FB7D3C002D5EDD /* Language.swift */,
+				B066546D27FB7E0C002D5EDD /* SetLanguage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -80,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				B05FF14427FA28440046D636 /* Movapp--iOS--Info.plist */,
+				B066546A27FB7230002D5EDD /* Docs */,
 				B012799427F86954003FB72E /* Shared */,
 				B01279A327F86957003FB72E /* macOS */,
 				B012799D27F86957003FB72E /* Products */,
@@ -91,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				B05FF14127FA14950046D636 /* Services */,
-				B05FF13E27F9F3890046D636 /* Enums */,
 				B00D1B2827F9ADE30073611C /* Models */,
 				B087C87E27F8A1F20015E54B /* Resources */,
 				B01279CE27F872BB003FB72E /* Menu */,
@@ -176,20 +183,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B05FF13E27F9F3890046D636 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				B05FF13F27F9F3910046D636 /* Language.swift */,
-			);
-			path = Enums;
-			sourceTree = "<group>";
-		};
 		B05FF14127FA14950046D636 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				B05FF14227FA14A00046D636 /* SoundService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B066546A27FB7230002D5EDD /* Docs */ = {
+			isa = PBXGroup;
+			children = (
+				B066546727FB7222002D5EDD /* CONTRIBUTING.md */,
+				B066546627FB7222002D5EDD /* LICENSE */,
+				B066546827FB7222002D5EDD /* README.md */,
+			);
+			name = Docs;
 			sourceTree = "<group>";
 		};
 		B087C87E27F8A1F20015E54B /* Resources */ = {
@@ -280,9 +289,10 @@
 				B087C89527F8B46A0015E54B /* TranslationsView.swift in Sources */,
 				B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */,
 				B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */,
+				B066546C27FB7D3C002D5EDD /* Language.swift in Sources */,
+				B066546E27FB7E0C002D5EDD /* SetLanguage.swift in Sources */,
 				B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */,
 				B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */,
-				B05FF14027F9F3910046D636 /* Language.swift in Sources */,
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
 				B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */,
 				B05FF14327FA14A00046D636 /* SoundService.swift in Sources */,

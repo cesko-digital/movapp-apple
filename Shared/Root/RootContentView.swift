@@ -7,29 +7,29 @@
 
 import SwiftUI
 
+
+extension View {
+    func setTabItem (_ item: RootItems) -> some View {
+        self.tabItem {
+            Label(item.title, image: item.icon)
+        }.tag(item)
+    }
+}
+
 struct RootContentView: View {
     var body: some View {
-        
         TabView {
             DicitionaryView()
-                .tabItem {
-                    Text(RootItems.dictionary.title)
-                }
+                .setTabItem(RootItems.dictionary)
             
             AlphabetView()
-                .tabItem {
-                    Text(RootItems.alphabet.title)
-                }
+                .setTabItem(RootItems.alphabet)
             
             ForChildrenView()
-                .tabItem {
-                    Text(RootItems.for_chidlren.title)
-                }
+                .setTabItem(RootItems.for_chidlren)
             
             MenuView()
-                .tabItem {
-                    Text(RootItems.menu.title)
-                }
+                .setTabItem(RootItems.menu)
         }
     }
 }

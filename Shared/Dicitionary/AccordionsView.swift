@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AccordionsView: View {
     
-    let language: Language
+    let language: SetLanguage
     let sections: Sections
     
     @Binding var selectedSection: Section?

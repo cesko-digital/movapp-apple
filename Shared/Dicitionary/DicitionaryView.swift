@@ -16,13 +16,15 @@ struct DicitionaryView: View {
     
     @State private var translations: Translations?
     @State private var sections: Sections?
+
+    private let languages: SetLanguages = SetLanguage.allCases
     
-    @State private var selectedLanguage: Language = Language.csUk
+    @State private var selectedLanguage: SetLanguage = SetLanguage.csUk
     
     func loadData () {
         let decoder = JSONDecoder()
         
-        let prefix = selectedLanguage.filePrefix
+        let prefix = selectedLanguage.language.filePrefix
         
         // TODO background thread
         if let asset = NSDataAsset(name: "sections-" + prefix) {
@@ -71,19 +73,21 @@ struct DicitionaryView: View {
                 }
                 
                 Picker("Select language", selection: $selectedLanguage) {
-                    ForEach(Language.allCases, id: \.id) { value in
-                        Text(value.rawValue)
+                    ForEach(languages, id: \.self) { value in
+                        Text(value.title)
                             .tag(value)
                     }
-                }.onChange(of: selectedLanguage) { [selectedLanguage] newLanguage in
-                    
-                    if newLanguage.filePrefix != selectedLanguage.filePrefix {
-                        loaded = false
-                        translations = nil
-                        sections = nil
-                        // TODO TEST, this code should force new load
-                    }
                 }
+                 .onChange(of: selectedLanguage) { [selectedLanguage] newLanguage in
+                     
+                     if newLanguage.language.filePrefix != selectedLanguage.language.filePrefix {
+                         loaded = false
+                         translations = nil
+                         sections = nil
+                         // TODO TEST, this code should force new load
+                     }
+                 }
+                 
                 
             }
             .padding(.horizontal, 10)
@@ -93,7 +97,6 @@ struct DicitionaryView: View {
             .padding()
             .background(Color("colors/primary"))
             
-            // Content
             
             if translations != nil && sections != nil {
                 DictionaryContentView(

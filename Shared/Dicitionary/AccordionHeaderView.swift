@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AccordionHeaderView: View {
-    let language: Language
+    let language: SetLanguage
     @Binding var selectedSection: Section?
     
     var body: some View {

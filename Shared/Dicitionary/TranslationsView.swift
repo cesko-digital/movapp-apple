@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TranslationsView: View {
     var showTranslations: [Translation]
-    let language: Language
+    let language: SetLanguage
     
     func shouldShowTranslation(
         searchString: String,
@@ -25,7 +25,7 @@ struct TranslationsView: View {
     }
     
     init (
-        language: Language,
+        language: SetLanguage,
         searchString: String,
         translations: [Translation])
     {
@@ -52,8 +52,9 @@ struct TranslationsView: View {
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 16) {
-                ForEach(showTranslations) { translation in
-                    TranslationView(language: language, translation: translation)
+                ForEach(Array(showTranslations.enumerated()), id: \.0)  { index, translation in
+                    let isOdd = (index % 2) != 0
+                    TranslationView(language: language, translation: translation, isOdd: isOdd)
                 }
             }
             .padding()

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DictionaryContentView: View {
     let searchString: String
-    let language: Language
+    let language: SetLanguage
     let sections: Sections
     let translations: Translations
     
@@ -50,32 +50,25 @@ struct DictionaryContentView: View {
 }
 
 struct DictionaryContentView_Previews: PreviewProvider {
-    static var emptyText: String = ""
-    static var text: String = "dobrý"
     
-    @State static var emptySection: Section? = nil
-    @State static var section: Section? =  exampleSection
-    static var sections: Sections =  [section!]
-    
-    static var translation: Translation = exampleTranslation
     static var translations: Translations = Translations(byId: [
-        "id1": translation
+        "id1": exampleTranslation
     ])
     
     static var previews: some View {
         DictionaryContentView(
-            searchString: emptyText,
-            language: Language.csUk,
-            sections: sections,
+            searchString: "",
+            language: SetLanguage.csUk,
+            sections: [exampleSection],
             translations: translations,
-            selectedSection: $emptySection
+            selectedSection: .constant(nil)
         )
         DictionaryContentView(
-            searchString: emptyText,
-            language: Language.ukCs,
-            sections: sections,
+            searchString: "",
+            language: SetLanguage.ukCs,
+            sections: [exampleSection, exampleSection],
             translations: translations,
-            selectedSection: $section
+            selectedSection: .constant(exampleSection)
         )
     }
 }

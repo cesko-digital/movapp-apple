@@ -17,7 +17,7 @@ struct Section: Decodable, Identifiable {
     // TODO rename
     let translations: [String]
     
-    func text(language: Language) -> String {
+    func text(language: SetLanguage) -> String {
         let arguments = [name_from , name_to]
         return String(format: "%@ - %@", arguments: language.flipFromWithTo ? arguments.reversed() : arguments)
     }

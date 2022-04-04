@@ -10,7 +10,7 @@ import TabBar
 
 let NO_ICON = "none"
 
-enum RootItems: Int {
+enum RootItems: Int, Hashable {
     
     case dictionary = 0
     case alphabet
@@ -19,23 +19,19 @@ enum RootItems: Int {
     
     var icon: String {
         switch self {
-        case .dictionary: return NO_ICON
-            case .alphabet: return NO_ICON
-            case .for_chidlren: return NO_ICON
-            case .menu: return "menu"
+        case .dictionary: return "icons/dictionary"
+        case .alphabet: return "icons/alphabet"
+        case .for_chidlren: return "icons/child"
+        case .menu: return "icons/menu"
         }
     }
     
     var title: String {
         switch self {
         case .dictionary: return String(localized: "tabbar.dictionary", comment: "TabBar dictionary")
-            case .alphabet: return String(localized: "tabbar.alphabet", comment: "TabBar aklphabet - use shortcut A-Z")
-            case .for_chidlren: return String(localized: "tabbar.for_kids", comment: "TabBar For kids")
-            case .menu: return String(localized: "tabbar.menu", comment: "TabBar Menu")
+        case .alphabet: return String(localized: "tabbar.alphabet", comment: "TabBar aklphabet - use shortcut A-Z")
+        case .for_chidlren: return String(localized: "tabbar.for_kids", comment: "TabBar For kids")
+        case .menu: return String(localized: "tabbar.menu", comment: "TabBar Menu")
         }
-    }
-    
-    var cacheView: Bool {
-        return true
     }
 }

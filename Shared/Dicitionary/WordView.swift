@@ -9,7 +9,9 @@ import SwiftUI
 
 struct WordView: View {
     
-    let language: Language
+    @EnvironmentObject var soundService: SoundService
+    
+    let language: String
     let text: String
     let transcription: String
     
@@ -33,12 +35,14 @@ struct WordView: View {
             
             Spacer()
             
-            Image("icons/play")
+            Image(systemName: soundService.isSpeaking ? "stop.circle" : "play.circle")
+                .resizable()
                 .foregroundColor(Color("colors/accent"))
-                .padding(.vertical, 20)
-                .padding(.leading, 10)
+                .frame(width: 30, height: 30)
                 .onTapGesture {
-                    SoundService.speach(language: language, text: text)
+                    soundService.stop()
+                    soundService.speach(language: language, text: text)
+                    
                 }
             
         }.frame(maxWidth: .infinity)
@@ -47,17 +51,19 @@ struct WordView: View {
 
 struct WordView_Previews: PreviewProvider {
     
+    static let soundService = SoundService()
+    
     static var previews: some View {
         WordView(
-            language: .csUk,
+            language: Language.cs,
             text: exampleTranslation.translation_from,
             transcription: exampleTranslation.transcription_from
-        )
+        ).environmentObject(soundService)
         
         WordView(
-            language: .csUk,
+            language: Language.uk,
             text: "asdsajdkljaksjdk ",
             transcription: "asodlsajdklj asd jksjadl jaklsjd kljsalkd jlksajd kljaskld jaljkl j"
-        )
+        ).environmentObject(soundService)
     }
 }

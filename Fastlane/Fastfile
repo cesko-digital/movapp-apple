@@ -1,0 +1,26 @@
+desc "Make a new release: Bump version number, update changelog and commit & tag the changes"
+lane :release do |options|
+
+    # Make sure we don't commit any work-in-progress with the release
+    ensure_git_status_clean
+
+    # Read the release type from command-line arguments, default to patch
+    release_type = options[:type] ? options[:type] : "patch"
+
+    # Bump version number
+    increment_version_number_in_xcodeproj(bump_type: release_type, target: "Movapp (iOS)")
+    version_number = get_version_number(target: "Movapp (iOS)")
+
+    # Update changelog with the version number and release date
+    stamp_changelog(section_identifier: version_number)
+
+    # Commit the stamped changelog as a part of the release
+    git_add(path: 'CHANGELOG.md')
+
+    # Commit and tag the release
+    commit_version_bump(
+        message: "Release #{version_number}",
+        xcodeproj: "Movapp.xcodeproj",
+        force: true)
+    add_git_tag(tag: "v#{version_number}")
+end

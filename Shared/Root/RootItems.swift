@@ -10,7 +10,7 @@ import TabBar
 
 let NO_ICON = "none"
 
-enum RootItems: Int, Tabbable {
+enum RootItems: Int {
     
     case dictionary = 0
     case alphabet

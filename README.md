@@ -23,7 +23,7 @@ Chcete-li nám pomáhat na dalším rozvoji projektu, vyplňte formulář na [ce
 Základní použití je jednoduché:
 
 ```bash
-git clone --recurse-submodules git@github.com:cesko-digital/movapp-apple.git movapp-apple
+git clone git@github.com:cesko-digital/movapp-apple.git movapp-apple
 cd movapp-apple
 ```
 

@@ -6,30 +6,31 @@
 //
 
 import SwiftUI
-import TabBar
 
 struct RootContentView: View {
-    
-    @State private var selection: RootItems = .dictionary
-    @State private var visibility: TabBarVisibility = .visible
-    
     var body: some View {
         
-        TabBar(selection: $selection, visibility: $visibility) {
+        TabView {
             DicitionaryView()
-                .tabItem(for: RootItems.dictionary)
+                .tabItem {
+                    Text(RootItems.dictionary.title)
+                }
             
             AlphabetView()
-                .tabItem(for: RootItems.alphabet)
+                .tabItem {
+                    Text(RootItems.alphabet.title)
+                }
             
             ForChildrenView()
-                .tabItem(for: RootItems.for_chidlren)
+                .tabItem {
+                    Text(RootItems.for_chidlren.title)
+                }
             
             MenuView()
-                .tabItem(for: RootItems.menu)
+                .tabItem {
+                    Text(RootItems.menu.title)
+                }
         }
-        .tabBar(style: RootTabBarStyle())
-        .tabItem(style: RootTabItemStyle())
     }
 }
 

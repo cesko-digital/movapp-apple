@@ -25,7 +25,6 @@
 		B01279F127F89118003FB72E /* TabBar in Frameworks */ = {isa = PBXBuildFile; productRef = B01279F027F89118003FB72E /* TabBar */; };
 		B05FF14027F9F3910046D636 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF13F27F9F3910046D636 /* Language.swift */; };
 		B05FF14327FA14A00046D636 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF14227FA14A00046D636 /* SoundService.swift */; };
-		B05FF14527FA28440046D636 /* Movapp--iOS--Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B05FF14427FA28440046D636 /* Movapp--iOS--Info.plist */; };
 		B087C88927F8A3BD0015E54B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B087C88727F8A3BD0015E54B /* Localizable.strings */; };
 		B087C88C27F8A8130015E54B /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = B087C88B27F8A8130015E54B /* Introspect */; };
 		B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C88E27F8B4080015E54B /* AccordionView.swift */; };
@@ -45,7 +44,6 @@
 		B012799727F86957003FB72E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B012799C27F86957003FB72E /* Movapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01279A427F86957003FB72E /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		B01279C327F87051003FB72E /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		B01279C527F870BF003FB72E /* RootItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootItems.swift; sourceTree = "<group>"; };
 		B01279C927F872A9003FB72E /* DicitionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicitionaryView.swift; sourceTree = "<group>"; };
 		B01279CF27F872C3003FB72E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				B01279C427F87086003FB72E /* Root */,
 				B012799527F86954003FB72E /* MovappApp.swift */,
 				B012799727F86957003FB72E /* Assets.xcassets */,
-				B01279C327F87051003FB72E /* LICENSE.md */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -289,7 +286,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B05FF14527FA28440046D636 /* Movapp--iOS--Info.plist in Resources */,
 				B01279A927F86957003FB72E /* Assets.xcassets in Resources */,
 				B087C88927F8A3BD0015E54B /* Localizable.strings in Resources */,
 			);

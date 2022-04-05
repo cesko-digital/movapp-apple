@@ -1,0 +1,18 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check_build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build
+        run: |
+          bundle install
+          bundle exec fastlane gym --configuration Debug --skip_codesigning true --skip_archive true

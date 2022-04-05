@@ -8,7 +8,15 @@ Používáme schéme `x.y.z`, kde změny `z` znamenají pouze interní releasy, 
 
 # Fastlane
 
-Pro automatizaci releasů používáme [Fastlane](https://fastlane.tools). Samotnou Fastlane můžete nainstalovat buď přes `brew install fastlane`, nebo lépe přímo v repository příkazem `bundle`. Ta lokální instalace v repu je lepší v tom, že všichni používáme stejnou verzi. Dál počítáme s tím, že jste Fastlane nainstalovali takhle. Pokud ne, pište místo `bundle exec fastlane` prostě jen `fastlane`.
+Pro automatizaci releasů a souvisejících procesů používáme [Fastlane](https://fastlane.tools). Samotnou Fastlane můžete nainstalovat buď přes `brew install fastlane`, nebo lépe přímo v repository příkazem `bundle`. Ta lokální instalace v repu je lepší v tom, že všichni používáme stejnou verzi. Dál počítáme s tím, že jste Fastlane nainstalovali takhle. Pokud ne, pište místo `bundle exec fastlane` prostě jen `fastlane`.
+
+# Podepisování
+
+Pro podepsání kódu jsou potřeba certifikáty a profily, které se dají stáhnout přes Fastlane:
+
+```
+bundle exec fastlane match development --readonly
+```
 
 # Releasing
 

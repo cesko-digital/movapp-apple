@@ -11,19 +11,6 @@ struct TranslationsView: View {
     var showTranslations: [Translation]
     let language: SetLanguage
     
-    func shouldShowTranslation(
-        searchString: String,
-        strings: [String]
-    ) -> Bool {
-        for string in strings {
-            if string.localizedCaseInsensitiveContains(searchString) {
-                return true
-            }
-        }
-        
-        return false
-    }
-    
     init (
         language: SetLanguage,
         searchString: String,
@@ -34,18 +21,7 @@ struct TranslationsView: View {
         if searchString.isEmpty {
             showTranslations = translations
         } else {
-            showTranslations = []
-            
-            for translation in translations {
-                if shouldShowTranslation(searchString: searchString, strings: [
-                        translation.translation_from,
-                        translation.transcription_from,
-                        translation.transcription_to,
-                        translation.translation_to
-                    ]) {
-                    showTranslations.append(translation)
-                }
-            }
+            showTranslations = TranslationMatchService.matchTranslations(translations, searchString: searchString)
         }
     }
     

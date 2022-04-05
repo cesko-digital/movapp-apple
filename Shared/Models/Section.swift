@@ -25,12 +25,9 @@ struct Section: Decodable, Identifiable {
 
 typealias Sections = [Section]
 
-
-#if DEBUG
 let exampleSection = Section(
     id: "f22b3b19f76d8857a3171412fb5f35fc",
     name_from: "Základní fráze",
     name_to: "Основні фрази",
     translations: ["d6e710c7f44b67220cd9b870e6107bf9"]
 )
-#endif

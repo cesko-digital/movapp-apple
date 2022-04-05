@@ -74,7 +74,6 @@ struct Translations: Decodable {
     }
 }
 
-#if DEBUG
 let exampleTranslation = Translation(
     id: "f22b3b19f76d8857a3171412fb5f35fc",
     translation_from: "Dobrý den.",
@@ -83,4 +82,3 @@ let exampleTranslation = Translation(
     transcription_to: "Добрий день.",
     sectionIds: ["d6e710c7f44b67220cd9b870e6107bf9"]
 )
-#endif

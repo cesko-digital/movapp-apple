@@ -15,4 +15,4 @@ jobs:
       - name: Build
         run: |
           bundle install
-          bundle exec fastlane gym --configuration Debug --skip_codesigning true --skip_archive true
+          bundle exec fastlane gym --scheme "Movapp (iOS)" --configuration Debug --skip_codesigning true --skip_archive true

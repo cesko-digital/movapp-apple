@@ -1,0 +1,4 @@
+git_url("https://github.com/cesko-digital/apple-certificates.git")
+storage_mode("git")
+app_identifier(["cz.movapp.app"])
+username("apple-code-signing@cesko.digital")

@@ -21,6 +21,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Make a new release: Bump version number, update changelog and commit & tag the changes
 
+### build
+
+```sh
+[bundle exec] fastlane build
+```
+
+
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.

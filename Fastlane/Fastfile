@@ -24,3 +24,21 @@ lane :release do |options|
         force: true)
     add_git_tag(tag: "v#{version_number}")
 end
+
+# Create a clean temporary keychain
+def ensure_temp_keychain(name)
+    delete_keychain(name: name) if File.exist? File.expand_path("~/Library/Keychains/#{name}-db")
+    create_keychain(
+      name: name,
+      password: 'temppassword',
+      unlock: true,
+      timeout: 0
+    )
+end
+
+lane :build do
+    # This makes sure all code signing runs with a temporary, unlocked keychain
+    ensure_temp_keychain 'fastlane'
+    sync_code_signing(type: "development", readonly: true, keychain_password: "temppassword", keychain_name: "fastlane")
+    build_app(skip_archive: true, configuration: "Debug")
+end

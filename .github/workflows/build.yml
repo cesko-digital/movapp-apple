@@ -10,9 +10,12 @@ on:
 jobs:
   check_build:
     runs-on: macos-latest
+    env:
+      MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+      MATCH_GIT_PRIVATE_KEY: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}
     steps:
       - uses: actions/checkout@v2
       - name: Build
         run: |
           bundle install
-          bundle exec fastlane gym --scheme "Movapp (iOS)" --configuration Debug --skip_codesigning true --skip_archive true
+          bundle exec fastlane build

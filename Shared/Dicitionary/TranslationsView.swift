@@ -16,7 +16,7 @@ struct TranslationsView: View {
         strings: [String]
     ) -> Bool {
         for string in strings {
-            if string.contains(searchString) {
+            if string.localizedCaseInsensitiveContains(searchString) {
                 return true
             }
         }

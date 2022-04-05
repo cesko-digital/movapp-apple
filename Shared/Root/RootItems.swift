@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import TabBar
 
 let NO_ICON = "none"
 

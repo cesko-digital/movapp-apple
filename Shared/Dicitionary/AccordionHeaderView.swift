@@ -36,10 +36,7 @@ struct AccordionHeaderView: View {
 }
 
 struct SectionHeaderView_Previews: PreviewProvider {
-    
-    @State static var section: Section? = exampleSection
-    
     static var previews: some View {
-        AccordionHeaderView(language: .csUk, selectedSection: $section)
+        AccordionHeaderView(language: .csUk, selectedSection: .constant(exampleSection))
     }
 }

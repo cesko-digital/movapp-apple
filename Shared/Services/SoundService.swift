@@ -14,8 +14,6 @@ class SoundService: NSObject, ObservableObject {
     let synthesizer = AVSpeechSynthesizer()
     
     @Published var isSpeaking: Bool = false
-    @Published var isShowingSpeakingErrorAlert: Bool = false
-    
     
     override init () {
         super.init()

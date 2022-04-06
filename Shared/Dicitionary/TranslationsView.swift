@@ -30,7 +30,12 @@ struct TranslationsView: View {
             LazyVStack(spacing: 16) {
                 ForEach(Array(showTranslations.enumerated()), id: \.0)  { index, translation in
                     let isOdd = (index % 2) != 0
-                    TranslationView(language: language, translation: translation, isOdd: isOdd)
+                    
+                    TranslationView(
+                        language: language,
+                        translation: translation,
+                        isOdd: isOdd
+                    )
                 }
             }
             .padding()
@@ -40,6 +45,8 @@ struct TranslationsView: View {
 }
 
 struct TranslationsView_Previews: PreviewProvider {
+    static let soundService = SoundService()
+    
     static var previews: some View {
         TranslationsView(
             language: .csUk,
@@ -48,6 +55,7 @@ struct TranslationsView_Previews: PreviewProvider {
                 exampleTranslation
             ]
         )
+        .environmentObject(soundService)
         
         TranslationsView(
             language: .ukCs,
@@ -56,5 +64,6 @@ struct TranslationsView_Previews: PreviewProvider {
                 exampleTranslation
             ]
         )
+        .environmentObject(soundService)
     }
 }

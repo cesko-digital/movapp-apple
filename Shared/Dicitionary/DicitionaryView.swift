@@ -10,16 +10,65 @@ import SwiftUI
 
 struct DicitionaryView: View {
     @State private var searchString: String = ""
-    
-    @State private var loaded: Bool?
     @State private var selectedSection: Section? = nil
+    @State private var selectedLanguage: SetLanguage = SetLanguage.csUk
     
+    // TODO wrap to a struct object to track "one" event change?
+    @State private var loaded: Bool?
     @State private var translations: Translations?
     @State private var sections: Sections?
-
-    private let languages: SetLanguages = SetLanguage.allCases
     
-    @State private var selectedLanguage: SetLanguage = SetLanguage.csUk
+    @EnvironmentObject var favoritesService: TranslationFavoritesService
+    
+    var body: some View {
+        VStack (spacing: 0) {
+            DictionaryHeaderView(searchString: $searchString, selectedLanguage: $selectedLanguage)
+                .onChange(of: selectedLanguage) { [selectedLanguage] newLanguage in
+                    
+                    if newLanguage.language.filePrefix != selectedLanguage.language.filePrefix {
+                        loaded = false
+                        translations = nil
+                        sections = nil
+                        // TODO TEST, this code should force new load
+                    }
+                }
+            
+            if translations != nil && sections != nil {
+                DictionaryContentView(
+                    searchString: searchString,
+                    language: selectedLanguage,
+                    sections: sections!,
+                    translations: translations!,
+                    selectedSection: $selectedSection
+                )
+                
+            } else {
+                errorView
+            }
+        }
+        #if canImport(UIKit)
+        // Discard keyboard
+        .gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
+        #endif
+        
+       
+    }
+    
+    var errorView: some View {
+        // Allign middle
+        VStack {
+            Spacer()
+            if (loaded != nil) {
+                Text(
+                    "Failed to load data",
+                    comment: "When data has failed to load show this message"
+                )
+            } else {
+                ProgressView().onAppear(perform: loadData)
+            }
+            Spacer()
+        }
+    }
     
     func loadData () {
         let decoder = JSONDecoder()
@@ -37,94 +86,26 @@ struct DicitionaryView: View {
             let data = asset.data
             
             translations = try? decoder.decode(Translations.self, from: data)
+            
+            
+            
+            if translations != nil {
+                let favoriteIds = favoritesService.getFavorites(language: selectedLanguage)
+                
+                for translationId in favoriteIds {
+                    guard let translation = translations!.byId[translationId] else {
+                        print("Favorite list has non-existing translation")
+                        favoritesService.setIsFavorited(false, translationId: translationId, language: selectedLanguage)
+                        continue
+                    }
+                    
+                    translation.isFavorited = true
+                    
+                }
+            }
         }
         
         loaded = true
-    }
-    
-    
-    var body: some View {
-        VStack (spacing: 0) {
-            
-            // Search bar
-            HStack (spacing: 5) {
-                TextField("Search", text: $searchString)
-                    .disableAutocorrection(true)
-                    .foregroundColor(Color("colors/text"))
-                    .padding(.trailing, 10)
-                    .padding(.leading, 26)
-                    .overlay(
-                        HStack {
-                            Image(systemName: "magnifyingglass")
-                                .foregroundColor(.gray)
-                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                                .padding(.leading, 0)
-                        }
-                    )
-                
-                if !searchString.isEmpty {
-                    Button(
-                        action: { searchString = "" },
-                        label: {
-                            Image(systemName: "xmark.circle.fill")
-                                .foregroundColor(Color(UIColor.opaqueSeparator))
-                        }
-                    )
-                }
-                
-                Picker("Select language", selection: $selectedLanguage) {
-                    ForEach(languages, id: \.self) { value in
-                        Text(value.title)
-                            .tag(value)
-                    }
-                }
-                 .onChange(of: selectedLanguage) { [selectedLanguage] newLanguage in
-                     
-                     if newLanguage.language.filePrefix != selectedLanguage.language.filePrefix {
-                         loaded = false
-                         translations = nil
-                         sections = nil
-                         // TODO TEST, this code should force new load
-                     }
-                 }
-                 
-                
-            }
-            .padding(.horizontal, 10)
-            .frame(height: 52)
-            .background(Color("colors/input/background"))
-            .cornerRadius(13)
-            .padding()
-            .background(Color("colors/primary"))
-            
-            
-            if translations != nil && sections != nil {
-                DictionaryContentView(
-                    searchString: searchString,
-                    language: selectedLanguage,
-                    sections: sections!,
-                    translations: translations!,
-                    selectedSection: $selectedSection
-                )
-            } else {
-                // Allign middle
-                VStack {
-                    Spacer()
-                    if (loaded != nil) {
-                        Text(
-                            "Failed to load data",
-                            comment: "When data has failed to load show this message"
-                        )
-                    } else {
-                        ProgressView().onAppear(perform: loadData)
-                    }
-                    Spacer()
-                }
-            }
-        }.onTapGesture {
-            // Discard focus on the input if I tap somewhere
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
-        }
     }
 }
 

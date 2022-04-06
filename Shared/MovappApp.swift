@@ -11,6 +11,7 @@ import SwiftUI
 struct MovappApp: App {
     
     let soundService = SoundService()
+    let favoritesService = TranslationFavoritesService()
     
     init() {
         let appearance = UINavigationBarAppearance()
@@ -26,6 +27,7 @@ struct MovappApp: App {
         WindowGroup {
             RootContentView()
                 .environmentObject(soundService)
+                .environmentObject(favoritesService)
         }
     }
 }

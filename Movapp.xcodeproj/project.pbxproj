@@ -31,6 +31,8 @@
 		B0C9F40A27FCBF5500B075EB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C9F40927FCBF5500B075EB /* Launch Screen.storyboard */; };
 		B0E140DC27FCCF2F008BBBB4 /* TranslationMatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140DB27FCCF2F008BBBB4 /* TranslationMatchService.swift */; };
 		B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140DE27FCD2E5008BBBB4 /* String+Levenshtein.swift */; };
+		B0E140E127FCE1DD008BBBB4 /* TranslationFavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140E027FCE1DD008BBBB4 /* TranslationFavoritesService.swift */; };
+		B0E140E327FCE24F008BBBB4 /* DictionaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140E227FCE24F008BBBB4 /* DictionaryHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		B0C9F40927FCBF5500B075EB /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B0E140DB27FCCF2F008BBBB4 /* TranslationMatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationMatchService.swift; sourceTree = "<group>"; };
 		B0E140DE27FCD2E5008BBBB4 /* String+Levenshtein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Levenshtein.swift"; sourceTree = "<group>"; };
+		B0E140E027FCE1DD008BBBB4 /* TranslationFavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationFavoritesService.swift; sourceTree = "<group>"; };
+		B0E140E227FCE24F008BBBB4 /* DictionaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				B01279C927F872A9003FB72E /* DicitionaryView.swift */,
+				B0E140E227FCE24F008BBBB4 /* DictionaryHeaderView.swift */,
 				B00D1B2427F9999C0073611C /* DictionaryContentView.swift */,
 				B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */,
 				B087C88E27F8B4080015E54B /* AccordionView.swift */,
@@ -196,6 +201,7 @@
 			children = (
 				B05FF14227FA14A00046D636 /* SoundService.swift */,
 				B0E140DB27FCCF2F008BBBB4 /* TranslationMatchService.swift */,
+				B0E140E027FCE1DD008BBBB4 /* TranslationFavoritesService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -271,6 +277,7 @@
 				en,
 				uk,
 				cs,
+				Base,
 			);
 			mainGroup = B012798F27F86954003FB72E;
 			packageReferences = (
@@ -313,10 +320,12 @@
 				B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */,
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
 				B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */,
+				B0E140E327FCE24F008BBBB4 /* DictionaryHeaderView.swift in Sources */,
 				B05FF14327FA14A00046D636 /* SoundService.swift in Sources */,
 				B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */,
 				B00D1B2C27F9ADF70073611C /* Translation.swift in Sources */,
 				B01279C627F870BF003FB72E /* RootItems.swift in Sources */,
+				B0E140E127FCE1DD008BBBB4 /* TranslationFavoritesService.swift in Sources */,
 				B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */,
 				B0E140DC27FCCF2F008BBBB4 /* TranslationMatchService.swift in Sources */,
 				B00D1B2E27F9DEC20073611C /* WordView.swift in Sources */,
@@ -345,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -403,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

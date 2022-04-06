@@ -46,10 +46,10 @@ enum TranslationMatchService {
         
         for translation in translations {
             let distance = getMatchDistance(searchString: searchString, strings: [
-                translation.translation_from,
-                translation.transcription_from,
-                translation.transcription_to,
-                translation.translation_to
+                translation.translationFrom,
+                translation.transcriptionFrom,
+                translation.transcriptionTo,
+                translation.translationTo
             ])
             
             guard distance != 0 else {

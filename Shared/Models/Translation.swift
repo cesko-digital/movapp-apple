@@ -8,19 +8,43 @@
 import Foundation
 
 
-struct Translation: Decodable, Identifiable {
+/*
+ Due the translation favorite system and lazy grid we need to return different state
+ when SwiftUI is comparing if the data of the object has changed
+ */
+class Translation: Decodable, Identifiable, ObservableObject {
     let id: String
     // TODO rename to more universal, language will have own json
-    let translation_from: String
-    let transcription_from: String
+    let translationFrom: String
+    let transcriptionFrom: String
     
-    let translation_to: String
-    let transcription_to: String
+    let translationTo: String
+    let transcriptionTo: String
     
-    // TODO rename
-    let sectionIds: [String]
+    @Published var isFavorited: Bool = false
+    
+    enum CodingKeys: CodingKey {
+        case id, translation_from, transcription_from, translation_to, transcription_to
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        id = try container.decode(String.self, forKey: .id)
+        translationFrom = try container.decode(String.self, forKey: .translation_from)
+        transcriptionFrom = try container.decode(String.self, forKey: .transcription_from)
+        translationTo = try container.decode(String.self, forKey: .translation_to)
+        transcriptionTo = try container.decode(String.self, forKey: .transcription_to)
+    }
+    
+    internal init(id: String, translation_from: String, transcription_from: String, translation_to: String, transcription_to: String) {
+        self.id = id
+        self.translationFrom = translation_from
+        self.transcriptionFrom = transcription_from
+        self.translationTo = translation_to
+        self.transcriptionTo = transcription_to
+    }
 }
-
 
 struct Translations: Decodable {
     
@@ -63,10 +87,14 @@ struct Translations: Decodable {
         // Loop through each keys in container
         for key in container.allKeys {
             
-            // Decode Student using key & keep decoded Student object in tempArray
-            let decodedObject = try container.decode(Translation.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
-            
-            temp[key.stringValue] = decodedObject
+            do {
+                // Decode Student using key & keep decoded Student object in tempArray
+                let decodedObject = try container.decode(Translation.self, forKey: DynamicCodingKeys(stringValue: key.stringValue)!)
+                
+                temp[key.stringValue] = decodedObject
+            } catch {
+                print("Failed to decode translation data \(error)")
+            }
         }
         
         // Finish decoding all Student objects. Thus assign tempArray to array.
@@ -79,6 +107,5 @@ let exampleTranslation = Translation(
     translation_from: "Dobrý den.",
     transcription_from: "Dobryj deň",
     translation_to: "Добри ден",
-    transcription_to: "Добрий день.",
-    sectionIds: ["d6e710c7f44b67220cd9b870e6107bf9"]
+    transcription_to: "Добрий день."
 )

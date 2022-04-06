@@ -15,7 +15,7 @@ struct Section: Decodable, Identifiable {
     let name_to: String // name_to
     
     // TODO rename
-    let translations: [String]
+    var translations: [String]
     
     func text(language: SetLanguage) -> String {
         let arguments = [name_from , name_to]

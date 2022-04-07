@@ -42,3 +42,24 @@ lane :build do
     sync_code_signing(type: "development", readonly: true, keychain_password: "temppassword", keychain_name: "fastlane")
     build_app(skip_archive: true, configuration: "Debug")
 end
+
+lane :upload do
+    api_key = app_store_connect_api_key(
+        key_id: "84CT4W68YN",
+        issuer_id: "3870b8f8-0b22-4ca2-9156-487be7cb55a0",
+        key_content: ENV["APP_STORE_API_KEY"],
+        duration: 1200,
+        in_house: false
+    )
+    # This makes sure all code signing runs with a temporary, unlocked keychain
+    ensure_temp_keychain 'fastlane'
+    sync_code_signing(type: "appstore", readonly: true, keychain_password: "temppassword", keychain_name: "fastlane")
+    build_app(configuration: "Release")
+    upload_to_app_store(
+        username: "apple-code-signing@cesko.digital",
+        team_id: "8495ZSK6A6",
+        api_key: api_key,
+        precheck_include_in_app_purchases: false,
+        force: true
+    )
+end

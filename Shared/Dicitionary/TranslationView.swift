@@ -79,7 +79,7 @@ struct TranslationView: View {
         let starSize = 30.0
         
         return Image(systemName: translation.isFavorited ? "star.fill" : "star")
-            .foregroundColor(Color("colors/accent"))
+            .foregroundColor(Color("colors/yellow"))
             .frame(width: starSize, height: starSize)
             .background(Color("colors/background"))
             .cornerRadius(starSize / 2)

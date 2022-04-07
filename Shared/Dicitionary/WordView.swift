@@ -37,7 +37,7 @@ struct WordView: View {
             
             Image(systemName: soundService.isSpeaking ? "stop.circle" : "play.circle")
                 .resizable()
-                .foregroundColor(Color("colors/accent"))
+                .foregroundColor(.accentColor)
                 .frame(width: 30, height: 30)
                 .onTapGesture {
                     soundService.stop()

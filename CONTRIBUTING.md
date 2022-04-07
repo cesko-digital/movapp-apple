@@ -46,7 +46,7 @@ Fastlane zvýší číslo verze všude, kde je potřeba, aktualizuje changelog a
     
     ```swift
     Image("icons/play")
-        .foregroundColor(Color("colors/accent"))
+        .foregroundColor(Color("colors/inactive"))
     ```
 
 ## Obrazovky

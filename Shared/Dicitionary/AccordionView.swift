@@ -22,7 +22,7 @@ struct AccordionView: View {
                 .fixedSize(horizontal: false, vertical: true)
             Spacer()
             Image(systemName: "chevron.right")
-                .foregroundColor(Color("colors/accent"))
+                .foregroundColor(.accentColor)
         }
         .padding()
         .frame(maxWidth: .infinity)

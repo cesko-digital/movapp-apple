@@ -2,4 +2,6 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.0.1] - 2022-04-07Z
+
 - First release

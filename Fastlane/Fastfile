@@ -60,6 +60,8 @@ lane :upload do
         team_id: "8495ZSK6A6",
         api_key: api_key,
         precheck_include_in_app_purchases: false,
-        force: true
+        force: true,
+        skip_metadata: true,
+        skip_screenshots: true
     )
 end

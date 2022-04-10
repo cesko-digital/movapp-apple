@@ -13,30 +13,18 @@ struct AlphabetItemView: View {
     let item: AlphabetItem
     let language: String
     
-    private let letter: String
     private let soundsDirectory : String
     
     init (item: AlphabetItem, language: String) {
         self.item = item
         self.language = language
-        
-        var builtLetter = ""
-        
-        for letter in item.letters {
-            if letter != nil {
-                builtLetter.append(letter!)
-            }
-            
-        }
-        
-        letter = builtLetter
         soundsDirectory = "data/\(language)-alphabet"
     }
     
     var body: some View {
         VStack (spacing: 20) {
             
-            Text(letter)
+            Text(item.letter)
                 .font(.system(size: 100))
                 .foregroundColor(Color("colors/text"))
             

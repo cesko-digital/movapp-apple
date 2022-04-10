@@ -9,12 +9,22 @@ import Foundation
 
 
 
+private func buildLetter(_ letters: [String?]) -> String {
+    var builtLetter = ""
+    
+    for letter in letters {
+        if letter != nil {
+            builtLetter.append(letter!)
+        }
+        
+    }
+    
+    return builtLetter
+}
+
+
 struct AlphabetItem: Decodable {
-    
-    
-    
 #if DEBUG
-    
     static let example = AlphabetItem(
         id: "7fc56270e7a70fa81a5935b72eacbe29",
         fileName: "7fc56270e7a70fa81a5935b72eacbe29.mp3",
@@ -22,7 +32,6 @@ struct AlphabetItem: Decodable {
         transcription: "[a]",
         examples: [AlphabetExample(example: "abeceda", transcription: "абецеда")]
     )
-    
 #endif
     
     enum CodingKeys: CodingKey {
@@ -35,6 +44,7 @@ struct AlphabetItem: Decodable {
     
     let id: String
     let fileName: String?
+    let letter: String
     let letters: [String?] // Can contain null
     let transcription: String
     let examples: [AlphabetExample]
@@ -45,6 +55,8 @@ struct AlphabetItem: Decodable {
         self.letters = letters
         self.transcription = transcription
         self.examples = examples
+        
+        self.letter = buildLetter(letters)
     }
     
     init(from decoder: Decoder) throws {
@@ -55,6 +67,9 @@ struct AlphabetItem: Decodable {
         letters = try container.decode([String?].self, forKey: .letter)
         transcription = try container.decode(String.self, forKey: .transcription)
         examples = try container.decode([AlphabetExample].self, forKey: .examples)
+        
+        self.letter = buildLetter(letters)
+        
     }
 }
 

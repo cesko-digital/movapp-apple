@@ -23,11 +23,18 @@ struct AlphabetView: View {
             .padding()
             
             if let alphabet = dataStore.alphabet {
-                ScrollView {
-                    LazyVStack (spacing: 10) {
-                        ForEach(alphabet.data, id: \.id) { item in
-                            AlphabetItemView(item: item, language: alphabet.language)
+                ScrollViewReader { proxy in
+                    ScrollView(showsIndicators: false) {
+                        LazyVStack (spacing: 10) {
+                            ForEach(alphabet.data, id: \.id) { item in
+                                AlphabetItemView(item: item, language: alphabet.language)
+                            }
                         }
+                    }
+                    .overlay {
+                        // Based on https://www.fivestars.blog/articles/section-title-index-swiftui/
+                        AlphabetShortcutsView(items: dataStore.alphabet!.data, proxy: proxy)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
                     }
                 }
             } else {

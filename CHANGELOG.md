@@ -8,6 +8,7 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 - Refactored the dictionary data source + add alphabet data
 - Change color of action buttons to red
 - Add menu
+- Add custom scrollbar for alphabet (like contact list has)
 
 ## [1.0.2] - 2022-04-07Z
 

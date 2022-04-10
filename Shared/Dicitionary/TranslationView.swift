@@ -14,7 +14,6 @@ struct TranslationView: View {
     
     let language: SetLanguage
     @ObservedObject var translation: Translation
-    let isOdd: Bool
     
     let translations: [String]
     let transcriptions: [String]
@@ -22,9 +21,8 @@ struct TranslationView: View {
     
     let spacing: CGFloat = 10.0
     
-    init (language: SetLanguage, translation: Translation, isOdd: Bool) {
+    init (language: SetLanguage, translation: Translation) {
         self.language = language
-        self.isOdd = isOdd
         self.translation = translation
         
         var translations = [
@@ -68,7 +66,7 @@ struct TranslationView: View {
             .padding(.horizontal, spacing * 2)
             .padding(.vertical, spacing)
             .frame(maxWidth: .infinity)
-            .background(isOdd ? .clear : Color("colors/item"))
+            .background(Color("colors/item"))
             .cornerRadius(13)
             
             favoriteState
@@ -95,11 +93,11 @@ struct TranslationView_Previews: PreviewProvider {
     static let favoritesService = TranslationFavoritesService()
     
     static var previews: some View {
-        TranslationView(language: SetLanguage.csUk, translation: exampleTranslation, isOdd: true)
+        TranslationView(language: SetLanguage.csUk, translation: exampleTranslation)
             .environmentObject(soundService)
             .environmentObject(favoritesService)
         
-        TranslationView(language: SetLanguage.ukCs, translation: exampleTranslation, isOdd: false)
+        TranslationView(language: SetLanguage.ukCs, translation: exampleTranslation)
             .environmentObject(soundService)
             .environmentObject(favoritesService)
     }

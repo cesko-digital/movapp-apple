@@ -28,13 +28,10 @@ struct TranslationsView: View {
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 16) {
-                ForEach(Array(showTranslations.enumerated()), id: \.0)  { index, translation in
-                    let isOdd = (index % 2) != 0
-                    
+                ForEach(showTranslations, id: \.id)  { translation in
                     TranslationView(
                         language: language,
-                        translation: translation,
-                        isOdd: isOdd
+                        translation: translation
                     )
                 }
             }

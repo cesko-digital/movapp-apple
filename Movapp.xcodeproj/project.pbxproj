@@ -62,7 +62,6 @@
 		B05FF14227FA14A00046D636 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		B05FF14427FA28440046D636 /* Movapp--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Movapp--iOS--Info.plist"; sourceTree = "<group>"; };
 		B066546627FB7222002D5EDD /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		B066546727FB7222002D5EDD /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		B066546827FB7222002D5EDD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B066546B27FB7D3C002D5EDD /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		B066546D27FB7E0C002D5EDD /* SetLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetLanguage.swift; sourceTree = "<group>"; };
@@ -83,6 +82,8 @@
 		B0ECC1432802FDCC00BF9898 /* Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
 		B0ECC1452802FDD200BF9898 /* AlphabetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetItem.swift; sourceTree = "<group>"; };
 		B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetExample.swift; sourceTree = "<group>"; };
+		B0ECC14928033A8F00BF9898 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		B0ECC14A28033A9E00BF9898 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,7 +230,8 @@
 		B066546A27FB7230002D5EDD /* Docs */ = {
 			isa = PBXGroup;
 			children = (
-				B066546727FB7222002D5EDD /* CONTRIBUTING.md */,
+				B0ECC14A28033A9E00BF9898 /* CHANGELOG.md */,
+				B0ECC14928033A8F00BF9898 /* CONTRIBUTING.md */,
 				B066546627FB7222002D5EDD /* LICENSE */,
 				B066546827FB7222002D5EDD /* README.md */,
 			);

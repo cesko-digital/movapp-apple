@@ -53,7 +53,7 @@ extension SetLanguage: Hashable {
  Built the language in type strict way so we can use them in previews.
  */
 
-let csUkLanguage = Language(filePrefix: Language.cs, from: Language.cs, to: Language.uk)
+let csUkLanguage = Language(from: Language.cs, to: Language.uk)
 
 extension SetLanguage {
 

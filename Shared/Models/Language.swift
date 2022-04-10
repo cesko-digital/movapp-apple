@@ -14,7 +14,9 @@ struct Language {
     /**
      Indicates which file should be loaded (files are stored in assets with translations-{prefix}, sections-{prefix} name)
      */
-    let filePrefix: String
+    var dictionaryFilePrefix: String {
+        return "\(from)-\(to)"
+    }
     
     /**
      Language code - defines a language used in `from` key in our data files

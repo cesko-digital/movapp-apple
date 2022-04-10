@@ -12,6 +12,7 @@ struct MovappApp: App {
     
     let soundService = SoundService()
     let favoritesService = TranslationFavoritesService()
+    let dictionaryDataStore = DictionaryDataStore()
     
     init() {
         let appearance = UINavigationBarAppearance()
@@ -28,6 +29,7 @@ struct MovappApp: App {
             RootContentView()
                 .environmentObject(soundService)
                 .environmentObject(favoritesService)
+                .environmentObject(dictionaryDataStore)
         }
     }
 }

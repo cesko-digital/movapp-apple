@@ -2,6 +2,12 @@
 
 - [Správa slovíček](translations/README.md)
 
+# Git
+
+- Používejte rebase politiku (vždy vycházejte z `main`)
+- Před mergem vždy rebasnete nad `main` a vyřešíte konflitky
+- Pro vložení do `main` se provede squash commit a nebo si lokálně upravte komity
+
 # Verzování
 
 Používáme schéme `x.y.z`, kde změny `z` znamenají pouze interní releasy, například nové testovací verze pro interní tým, `y` se zvedá při posílání nové verze do App Storu a `x` si necháváme v záloze pro zásadnější změny.

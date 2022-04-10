@@ -21,7 +21,7 @@ struct TranslationsView: View {
         if searchString.isEmpty {
             showTranslations = translations
         } else {
-            showTranslations = TranslationMatchService.matchTranslations(translations, searchString: searchString)
+            showTranslations = TranslationMatchService.matchTranslations(translations, searchString: searchString, language: language)
         }
     }
     

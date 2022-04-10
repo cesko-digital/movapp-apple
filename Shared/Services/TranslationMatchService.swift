@@ -16,14 +16,18 @@ enum TranslationMatchService {
     
     static func getMatchDistance(
         searchString: String,
-        strings: [String]
+        strings: [String],
+        languagePrefix: String
     ) -> Int {
         var distances : [Int] = []
+        let locale = Locale(identifier: languagePrefix)
+        let cleanSearchString = searchString.lowercased().folding(options: .diacriticInsensitive, locale: locale)
+        
         for string in strings {
-            if string.localizedCaseInsensitiveContains(searchString) {
-                     
-                //let distance = Levenshtein.distance(between: searchString, and: string)
-                let distance = searchString.levenshteinDistance(with: string, caseSensitive: false, diacriticSensitive: false)
+            let cleanString = string.lowercased().folding(options: .diacriticInsensitive, locale: locale)
+            
+            if cleanString.contains(cleanSearchString) {
+                let distance = searchString.levenshteinDistance(with: string, caseSensitive: true, diacriticSensitive: true)
                 distances.append(distance)
             }
         }
@@ -38,24 +42,30 @@ enum TranslationMatchService {
     /**
      Returns translations that contains given string in all translations (all languages) and sorts by levenshtein distance.
      */
-    static func matchTranslations(_ translations: [Translation], searchString: String) -> [Translation] {
+    static func matchTranslations(_ translations: [Translation], searchString: String, language: SetLanguage) -> [Translation] {
         
         let start = CFAbsoluteTimeGetCurrent()
         
         var translationWithDistances: [TranslationWithDistance] = []
         
         for translation in translations {
-            let distance = getMatchDistance(searchString: searchString, strings: [
-                translation.translationFrom,
-                translation.transcriptionFrom,
+            
+            let languagePrefix = language.flipFromWithTo ? language.language.to : language.language.from
+            let source = language.flipFromWithTo ? [
+                translation.translationTo,
                 translation.transcriptionTo,
-                translation.translationTo
-            ])
+            ] : [
+                
+                translation.translationFrom,
+                translation.transcriptionFrom
+            ]
+            
+            let distance = getMatchDistance(searchString: searchString, strings: source, languagePrefix: languagePrefix)
             
             guard distance != 0 else {
                 continue
             }
-                
+            
             let translationWithDistance = TranslationWithDistance(translation: translation, distance: distance)
             translationWithDistances.append(translationWithDistance)
         }

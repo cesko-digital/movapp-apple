@@ -35,6 +35,11 @@
 		B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140DE27FCD2E5008BBBB4 /* String+Levenshtein.swift */; };
 		B0E140E127FCE1DD008BBBB4 /* TranslationFavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140E027FCE1DD008BBBB4 /* TranslationFavoritesService.swift */; };
 		B0E140E327FCE24F008BBBB4 /* DictionaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140E227FCE24F008BBBB4 /* DictionaryHeaderView.swift */; };
+		B0ECC1402802FC6F00BF9898 /* AlphabetItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC13F2802FC6F00BF9898 /* AlphabetItemView.swift */; };
+		B0ECC1422802FD3C00BF9898 /* AlphabetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1412802FD3C00BF9898 /* AlphabetDataStore.swift */; };
+		B0ECC1442802FDCC00BF9898 /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1432802FDCC00BF9898 /* Alphabet.swift */; };
+		B0ECC1462802FDD200BF9898 /* AlphabetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1452802FDD200BF9898 /* AlphabetItem.swift */; };
+		B0ECC1482802FF2500BF9898 /* AlphabetExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +78,11 @@
 		B0E140DE27FCD2E5008BBBB4 /* String+Levenshtein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Levenshtein.swift"; sourceTree = "<group>"; };
 		B0E140E027FCE1DD008BBBB4 /* TranslationFavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationFavoritesService.swift; sourceTree = "<group>"; };
 		B0E140E227FCE24F008BBBB4 /* DictionaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryHeaderView.swift; sourceTree = "<group>"; };
+		B0ECC13F2802FC6F00BF9898 /* AlphabetItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetItemView.swift; sourceTree = "<group>"; };
+		B0ECC1412802FD3C00BF9898 /* AlphabetDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetDataStore.swift; sourceTree = "<group>"; };
+		B0ECC1432802FDCC00BF9898 /* Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
+		B0ECC1452802FDD200BF9898 /* AlphabetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetItem.swift; sourceTree = "<group>"; };
+		B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,9 @@
 				B066546B27FB7D3C002D5EDD /* Language.swift */,
 				B066546D27FB7E0C002D5EDD /* SetLanguage.swift */,
 				B068833227FF903000E6B831 /* Dictionary.swift */,
+				B0ECC1432802FDCC00BF9898 /* Alphabet.swift */,
+				B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */,
+				B0ECC1452802FDD200BF9898 /* AlphabetItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				B01279D527F872D2003FB72E /* AlphabetView.swift */,
+				B0ECC13F2802FC6F00BF9898 /* AlphabetItemView.swift */,
 			);
 			path = Alphabet;
 			sourceTree = "<group>";
@@ -226,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				B068833527FF92E300E6B831 /* DictionaryDataStore.swift */,
+				B0ECC1412802FD3C00BF9898 /* AlphabetDataStore.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -319,10 +334,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0ECC1462802FDD200BF9898 /* AlphabetItem.swift in Sources */,
 				B01279D027F872C3003FB72E /* MenuView.swift in Sources */,
 				B01279A727F86957003FB72E /* RootContentView.swift in Sources */,
 				B087C89527F8B46A0015E54B /* TranslationsView.swift in Sources */,
 				B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */,
+				B0ECC1402802FC6F00BF9898 /* AlphabetItemView.swift in Sources */,
 				B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */,
 				B066546C27FB7D3C002D5EDD /* Language.swift in Sources */,
 				B068833627FF92E300E6B831 /* DictionaryDataStore.swift in Sources */,
@@ -330,12 +347,14 @@
 				B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */,
 				B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */,
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
+				B0ECC1482802FF2500BF9898 /* AlphabetExample.swift in Sources */,
 				B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */,
 				B0E140E327FCE24F008BBBB4 /* DictionaryHeaderView.swift in Sources */,
 				B05FF14327FA14A00046D636 /* SoundService.swift in Sources */,
 				B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */,
 				B00D1B2C27F9ADF70073611C /* Translation.swift in Sources */,
 				B01279C627F870BF003FB72E /* RootItems.swift in Sources */,
+				B0ECC1442802FDCC00BF9898 /* Alphabet.swift in Sources */,
 				B0E140E127FCE1DD008BBBB4 /* TranslationFavoritesService.swift in Sources */,
 				B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */,
 				B0E140DC27FCCF2F008BBBB4 /* TranslationMatchService.swift in Sources */,
@@ -344,6 +363,7 @@
 				B00D1B2A27F9ADF10073611C /* Section.swift in Sources */,
 				B087C89127F8B41B0015E54B /* TranslationView.swift in Sources */,
 				B01279D327F872CB003FB72E /* ForChildrenView.swift in Sources */,
+				B0ECC1422802FD3C00BF9898 /* AlphabetDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

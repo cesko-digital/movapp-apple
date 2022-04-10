@@ -12,7 +12,7 @@ struct DicitionaryView: View {
     
     @State private var searchString: String = ""
     @State private var selectedSection: Section? = nil
-    @State private var selectedLanguage: SetLanguage = SetLanguage.csUk
+    @State private var selectedLanguage: SetLanguage = .csUk
     
     @EnvironmentObject var dataStore: DictionaryDataStore
     @EnvironmentObject var favoritesService: TranslationFavoritesService
@@ -23,7 +23,7 @@ struct DicitionaryView: View {
                 .onChange(of: selectedLanguage) { [selectedLanguage] newLanguage in
                     
                     if newLanguage.language.dictionaryFilePrefix != selectedLanguage.language.dictionaryFilePrefix {
-                        dataStore.reset()
+                        dataStore.reload()
                         // TODO TEST, this code should force new load
                     }
                 }

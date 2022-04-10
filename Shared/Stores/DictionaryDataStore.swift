@@ -10,14 +10,22 @@ import UIKit
 
 class DictionaryDataStore: ObservableObject {
     
-    @Published var dictionary: Dictionary?
-    @Published var error: String? // TODO enum?
+    @Published var loading: Bool = false
+    var dictionary: Dictionary?
+    var error: String? // TODO enum?
     
-    func reset () {
+    func reload () {
         dictionary = nil
+        error = nil
+        loading = false // Force reload data
     }
     
     func load(language: SetLanguage, favoritesService: TranslationFavoritesService)  {
+        if loading {
+            return
+        }
+        
+        loading = true
         let decoder = JSONDecoder()
         
         let prefix = language.language.dictionaryFilePrefix
@@ -25,6 +33,7 @@ class DictionaryDataStore: ObservableObject {
         do {
             guard let asset = NSDataAsset(name:  "data/\(prefix)-dictionary") else {
                 error = "Invalid data file name"
+                loading = false
                 return
             }
             
@@ -52,5 +61,7 @@ class DictionaryDataStore: ObservableObject {
         } catch {
             self.error = error.localizedDescription
         }
+        
+        loading = false
     }
 }

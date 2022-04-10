@@ -35,12 +35,11 @@ struct WordView: View {
             
             Spacer()
             
-            Image(systemName: soundService.isSpeaking ? "stop.circle" : "play.circle")
+            Image(systemName: soundService.isPlaying ? "stop.circle" : "play.circle")
                 .resizable()
                 .foregroundColor(Color("colors/action"))
                 .frame(width: 30, height: 30)
                 .onTapGesture {
-                    soundService.stop()
                     soundService.speach(language: language, text: text)
                     
                 }

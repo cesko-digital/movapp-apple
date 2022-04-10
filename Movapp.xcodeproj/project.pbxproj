@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2427F9999C0073611C /* DictionaryContentView.swift */; };
 		B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */; };
-		B00D1B2A27F9ADF10073611C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2927F9ADF10073611C /* Section.swift */; };
+		B00D1B2A27F9ADF10073611C /* DictionarySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2927F9ADF10073611C /* DictionarySection.swift */; };
 		B00D1B2C27F9ADF70073611C /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2B27F9ADF70073611C /* Translation.swift */; };
 		B00D1B2E27F9DEC20073611C /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2D27F9DEC20073611C /* WordView.swift */; };
 		B01279A527F86957003FB72E /* MovappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012799527F86954003FB72E /* MovappApp.swift */; };
@@ -40,12 +40,13 @@
 		B0ECC1442802FDCC00BF9898 /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1432802FDCC00BF9898 /* Alphabet.swift */; };
 		B0ECC1462802FDD200BF9898 /* AlphabetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1452802FDD200BF9898 /* AlphabetItem.swift */; };
 		B0ECC1482802FF2500BF9898 /* AlphabetExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */; };
+		B0ECC14C2803431A00BF9898 /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14B2803431A00BF9898 /* Bundle+version.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B00D1B2427F9999C0073611C /* DictionaryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryContentView.swift; sourceTree = "<group>"; };
 		B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionHeaderView.swift; sourceTree = "<group>"; };
-		B00D1B2927F9ADF10073611C /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		B00D1B2927F9ADF10073611C /* DictionarySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionarySection.swift; sourceTree = "<group>"; };
 		B00D1B2B27F9ADF70073611C /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		B00D1B2D27F9DEC20073611C /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
 		B012799527F86954003FB72E /* MovappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappApp.swift; sourceTree = "<group>"; };
@@ -84,6 +85,7 @@
 		B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetExample.swift; sourceTree = "<group>"; };
 		B0ECC14928033A8F00BF9898 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		B0ECC14A28033A9E00BF9898 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		B0ECC14B2803431A00BF9898 /* Bundle+version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+version.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,7 @@
 		B00D1B2827F9ADE30073611C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B00D1B2927F9ADF10073611C /* Section.swift */,
+				B00D1B2927F9ADF10073611C /* DictionarySection.swift */,
 				B00D1B2B27F9ADF70073611C /* Translation.swift */,
 				B066546B27FB7D3C002D5EDD /* Language.swift */,
 				B066546D27FB7E0C002D5EDD /* SetLanguage.swift */,
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				B0E140DE27FCD2E5008BBBB4 /* String+Levenshtein.swift */,
+				B0ECC14B2803431A00BF9898 /* Bundle+version.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
 				B0ECC1482802FF2500BF9898 /* AlphabetExample.swift in Sources */,
 				B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */,
+				B0ECC14C2803431A00BF9898 /* Bundle+version.swift in Sources */,
 				B0E140E327FCE24F008BBBB4 /* DictionaryHeaderView.swift in Sources */,
 				B05FF14327FA14A00046D636 /* SoundService.swift in Sources */,
 				B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */,
@@ -362,7 +366,7 @@
 				B0E140DC27FCCF2F008BBBB4 /* TranslationMatchService.swift in Sources */,
 				B00D1B2E27F9DEC20073611C /* WordView.swift in Sources */,
 				B068833327FF903000E6B831 /* Dictionary.swift in Sources */,
-				B00D1B2A27F9ADF10073611C /* Section.swift in Sources */,
+				B00D1B2A27F9ADF10073611C /* DictionarySection.swift in Sources */,
 				B087C89127F8B41B0015E54B /* TranslationView.swift in Sources */,
 				B01279D327F872CB003FB72E /* ForChildrenView.swift in Sources */,
 				B0ECC1422802FD3C00BF9898 /* AlphabetDataStore.swift in Sources */,

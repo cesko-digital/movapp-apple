@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Section: Decodable, Identifiable {
+struct DictionarySection: Decodable, Identifiable {
     let id: String
     // TODO rename to more universal, language will have own json
     let name_from: String // name_from
@@ -23,9 +23,9 @@ struct Section: Decodable, Identifiable {
     }
 }
 
-typealias Sections = [Section]
+typealias Sections = [DictionarySection]
 
-let exampleSection = Section(
+let exampleSection = DictionarySection(
     id: "f22b3b19f76d8857a3171412fb5f35fc",
     name_from: "Základní fráze",
     name_to: "Основні фрази",

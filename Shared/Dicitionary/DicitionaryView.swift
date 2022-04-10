@@ -11,7 +11,7 @@ import SwiftUI
 struct DicitionaryView: View {
     
     @State private var searchString: String = ""
-    @State private var selectedSection: Section? = nil
+    @State private var selectedSection: DictionarySection? = nil
     @State private var selectedLanguage: SetLanguage = .csUk
     
     @EnvironmentObject var dataStore: DictionaryDataStore

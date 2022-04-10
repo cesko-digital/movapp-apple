@@ -33,7 +33,7 @@ struct DictionaryContentView: View {
     
     @EnvironmentObject var favoritesService: TranslationFavoritesService
     
-    @Binding var selectedSection: Section?
+    @Binding var selectedSection: DictionarySection?
     @State private var view: DictionaryContentSubView = .dictionary;
     
     init(
@@ -41,7 +41,7 @@ struct DictionaryContentView: View {
         language: SetLanguage,
         sections: Sections,
         translations: Translations,
-        selectedSection: Binding<Section?>
+        selectedSection: Binding<DictionarySection?>
     ) {
         self.searchString = searchString
         self.language = language

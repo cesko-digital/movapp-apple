@@ -12,7 +12,7 @@ struct AccordionsView: View {
     let language: SetLanguage
     let sections: Sections
     
-    @Binding var selectedSection: Section?
+    @Binding var selectedSection: DictionarySection?
     
     var body: some View {
         ScrollView {
@@ -37,8 +37,8 @@ struct AccordionsView: View {
 
 struct AccordionsView_Previews: PreviewProvider {
     
-    @State static var emptySection: Section? = nil
-    @State static var section: Section? = exampleSection
+    @State static var emptySection: DictionarySection? = nil
+    @State static var section: DictionarySection? = exampleSection
     
     static var previews: some View {
         

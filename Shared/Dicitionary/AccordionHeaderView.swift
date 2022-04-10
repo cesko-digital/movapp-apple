@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AccordionHeaderView: View {
     let language: SetLanguage
-    @Binding var selectedSection: Section?
+    @Binding var selectedSection: DictionarySection?
     
     var body: some View {
         HStack(alignment: .center, spacing: 20) {

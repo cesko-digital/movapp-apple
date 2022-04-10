@@ -19,7 +19,7 @@ struct Dictionary: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        sections = try container.decode([Section].self, forKey: .sections)
+        sections = try container.decode([DictionarySection].self, forKey: .sections)
         translations = try container.decode(Translations.self, forKey: .translations)
     }
 }

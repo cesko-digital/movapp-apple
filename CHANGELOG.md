@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.0.3] - 2022-04-11Z
+
 - Add alphabet list view
 - Improve search matching
 - Remove toggling gray / white background for translation

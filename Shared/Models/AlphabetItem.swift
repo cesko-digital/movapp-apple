@@ -24,7 +24,6 @@ private func buildLetter(_ letters: [String?]) -> String {
 
 
 struct AlphabetItem: Decodable {
-#if DEBUG
     static let example = AlphabetItem(
         id: "7fc56270e7a70fa81a5935b72eacbe29",
         fileName: "7fc56270e7a70fa81a5935b72eacbe29.mp3",
@@ -32,7 +31,6 @@ struct AlphabetItem: Decodable {
         transcription: "[a]",
         examples: [AlphabetExample(example: "abeceda", transcription: "абецеда")]
     )
-#endif
     
     enum CodingKeys: CodingKey {
         case id,

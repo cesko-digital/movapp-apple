@@ -8,13 +8,49 @@
 import SwiftUI
 
 struct ForChildrenView: View {
+    @EnvironmentObject var dataStore: ForKidsDataStore
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if dataStore.forKids != nil {
+                ScrollViewReader { proxy in
+                    ScrollView(showsIndicators: false) {
+                        LazyVStack (spacing: 10) {
+                            ForEach(dataStore.forKids!) { item in
+                               ForChildrenItemView(item: item)
+                            }
+                        }
+                    }
+                }
+            } else {
+                errorOrLoadView
+            }
+        }.onAppear(perform: loadData)
+    }
+    
+    var errorOrLoadView: some View {
+        // Allign middle
+        VStack {
+            Spacer()
+            if let error = dataStore.error {
+                Text(error)
+            } else {
+                ProgressView().onAppear(perform: loadData)
+            }
+            Spacer()
+        }
+    }
+    
+    func loadData() {
+        dataStore.load()
     }
 }
 
 struct ForChildrenView_Previews: PreviewProvider {
+  static let dataStore = ForKidsDataStore()
+    
     static var previews: some View {
         ForChildrenView()
+            .environmentObject(dataStore)
     }
 }

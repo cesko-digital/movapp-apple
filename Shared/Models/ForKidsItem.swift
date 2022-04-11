@@ -7,9 +7,11 @@
 
 import Foundation
 
-struct ForKids: Decodable {
+struct ForKidsItem: Identifiable, Decodable {
+    var id = UUID()
+    
 #if DEBUG
-    static let example = ForKids(
+    static let example = ForKidsItem(
         czTranslation: "panenka",
         czTranscription: "паненка",
         uaTranslation: "лялька",

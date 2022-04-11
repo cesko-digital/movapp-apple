@@ -6,11 +6,13 @@
 
 import SwiftUI
 
-struct ForChildrenItem: View {
+struct ForChildrenItemView: View {
+    let item: ForKidsItem
+    
     var body: some View {
         
             VStack (spacing: 20) {
-                Image("auticka")
+                Image(item.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(.black)
@@ -28,9 +30,9 @@ struct ForChildrenItem: View {
                     }
                     HStack {
                         VStack(alignment: .leading) {
-                            Text("Slova")
+                            Text(item.czTranslation)
                                 .foregroundColor(Color("colors/text"))
-                            Text("Tanskripce")
+                            Text(item.czTranscription)
                                 .foregroundColor(Color("colors/secondary"))
                         }
                         Spacer()
@@ -55,9 +57,9 @@ struct ForChildrenItem: View {
                     }
                     HStack {
                         VStack(alignment: .leading) {
-                            Text("Slova")
+                            Text(item.uaTranslation)
                                 .foregroundColor(Color("colors/text"))
-                            Text("Tanskripce")
+                            Text("[\(item.uaTranscription)]")
                                 .foregroundColor(Color("colors/secondary"))
                         }
                         Spacer()
@@ -85,7 +87,7 @@ struct ForChildrenItem: View {
 
 struct ForChildrenItem_Previews: PreviewProvider {
     static var previews: some View {
-        ForChildrenItem()
+        ForChildrenItemView(item: ForKidsItem.example)
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4410E96D28044BD300688E9F /* ForKids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96C28044BD300688E9F /* ForKids.swift */; };
 		5B77295D280443B00087F582 /* ForChildrenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77295C280443B00087F582 /* ForChildrenItem.swift */; };
 		B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2427F9999C0073611C /* DictionaryContentView.swift */; };
 		B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4410E96C28044BD300688E9F /* ForKids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForKids.swift; sourceTree = "<group>"; };
 		5B77295C280443B00087F582 /* ForChildrenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenItem.swift; sourceTree = "<group>"; };
 		B00D1B2427F9999C0073611C /* DictionaryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryContentView.swift; sourceTree = "<group>"; };
 		B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionHeaderView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				B0ECC1432802FDCC00BF9898 /* Alphabet.swift */,
 				B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */,
 				B0ECC1452802FDD200BF9898 /* AlphabetItem.swift */,
+				4410E96C28044BD300688E9F /* ForKids.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				B00D1B2C27F9ADF70073611C /* Translation.swift in Sources */,
 				B01279C627F870BF003FB72E /* RootItems.swift in Sources */,
 				B0ECC1442802FDCC00BF9898 /* Alphabet.swift in Sources */,
+				4410E96D28044BD300688E9F /* ForKids.swift in Sources */,
 				B0E140E127FCE1DD008BBBB4 /* TranslationFavoritesService.swift in Sources */,
 				B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */,
 				B0E140DC27FCCF2F008BBBB4 /* TranslationMatchService.swift in Sources */,

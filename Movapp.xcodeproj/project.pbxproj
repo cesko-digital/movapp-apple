@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B77295D280443B00087F582 /* ForChildrenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77295C280443B00087F582 /* ForChildrenItem.swift */; };
 		B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2427F9999C0073611C /* DictionaryContentView.swift */; };
 		B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */; };
 		B00D1B2A27F9ADF10073611C /* DictionarySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2927F9ADF10073611C /* DictionarySection.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B77295C280443B00087F582 /* ForChildrenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenItem.swift; sourceTree = "<group>"; };
 		B00D1B2427F9999C0073611C /* DictionaryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryContentView.swift; sourceTree = "<group>"; };
 		B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionHeaderView.swift; sourceTree = "<group>"; };
 		B00D1B2927F9ADF10073611C /* DictionarySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionarySection.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				B01279D227F872CB003FB72E /* ForChildrenView.swift */,
+				5B77295C280443B00087F582 /* ForChildrenItem.swift */,
 			);
 			path = ForChildren;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				B066546E27FB7E0C002D5EDD /* SetLanguage.swift in Sources */,
 				B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */,
 				B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */,
+				5B77295D280443B00087F582 /* ForChildrenItem.swift in Sources */,
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
 				B0ECC1482802FF2500BF9898 /* AlphabetExample.swift in Sources */,
 				B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */,

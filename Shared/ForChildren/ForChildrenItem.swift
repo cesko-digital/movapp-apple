@@ -16,7 +16,7 @@ struct ForChildrenItem: View {
                     .foregroundColor(.black)
                 VStack {
                     HStack {
-                        Image("FlagCzech")
+                        Image("flagCzech")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 30)
@@ -43,7 +43,7 @@ struct ForChildrenItem: View {
                             }
                     }
                     HStack {
-                        Image("FlagUkraine")
+                        Image("flagUkraine")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 30)

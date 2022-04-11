@@ -32,7 +32,7 @@ struct ForChildrenItemView: View {
                         VStack(alignment: .leading) {
                             Text(item.czTranslation)
                                 .foregroundColor(Color("colors/text"))
-                            Text(item.czTranscription)
+                            Text("[\(item.czTranscription)]")
                                 .foregroundColor(Color("colors/secondary"))
                         }
                         Spacer()

@@ -37,7 +37,7 @@ class ForKidsDataStore: ObservableObject {
             }
             
             let data = asset.data
-            print(data)
+
             self.forKids = try decoder.decode([ForKidsItem].self, from: data)
             
         } catch {

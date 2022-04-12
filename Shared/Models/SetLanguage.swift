@@ -25,7 +25,7 @@ struct SetLanguage: Identifiable {
         self.language = language
         self.flipFromWithTo = flipFromWithTo
         
-        var fromTo = [language.from, language.to]
+        var fromTo = [language.from.rawValue, language.to.rawValue]
         if flipFromWithTo {
             fromTo = fromTo.reversed()
         }
@@ -35,6 +35,14 @@ struct SetLanguage: Identifiable {
     
     var title: String {
         return id
+    }
+    
+    var languagePrefix: Languages {
+        if flipFromWithTo {
+            return language.to
+        }
+        
+        return language.from
     }
 }
 
@@ -53,7 +61,7 @@ extension SetLanguage: Hashable {
  Built the language in type strict way so we can use them in previews.
  */
 
-let csUkLanguage = Language(from: Language.cs, to: Language.uk)
+let csUkLanguage = Language(from: Languages.cs, to: Languages.uk)
 
 extension SetLanguage {
 

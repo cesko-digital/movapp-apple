@@ -48,9 +48,10 @@ enum TranslationMatchService {
         
         var translationWithDistances: [TranslationWithDistance] = []
         
+        let languagePrefix = language.languagePrefix.rawValue
+        
         for translation in translations {
             
-            let languagePrefix = language.flipFromWithTo ? language.language.to : language.language.from
             let source = language.flipFromWithTo ? [
                 translation.translationTo,
                 translation.transcriptionTo,

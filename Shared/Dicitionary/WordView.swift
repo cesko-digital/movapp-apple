@@ -11,7 +11,7 @@ struct WordView: View {
     
     @EnvironmentObject var soundService: SoundService
     
-    let language: String
+    let language: Languages
     let text: String
     let transcription: String
     
@@ -54,13 +54,13 @@ struct WordView_Previews: PreviewProvider {
     
     static var previews: some View {
         WordView(
-            language: Language.cs,
+            language: Languages.cs,
             text: exampleTranslation.translationFrom,
             transcription: exampleTranslation.transcriptionFrom
         ).environmentObject(soundService)
         
         WordView(
-            language: Language.uk,
+            language: Languages.uk,
             text: "asdsajdkljaksjdk ",
             transcription: "asodlsajdklj asd jksjadl jaklsjd kljsalkd jlksajd kljaskld jaljkl j"
         ).environmentObject(soundService)

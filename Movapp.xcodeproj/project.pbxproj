@@ -34,6 +34,8 @@
 		B087C89127F8B41B0015E54B /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89027F8B41B0015E54B /* TranslationView.swift */; };
 		B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89227F8B4610015E54B /* AccordionsView.swift */; };
 		B087C89527F8B46A0015E54B /* TranslationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89427F8B46A0015E54B /* TranslationsView.swift */; };
+		B0C0F8E828060B750036441E /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E728060B750036441E /* Flags.swift */; };
+		B0C0F8EA28060BE60036441E /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E928060BE60036441E /* Languages.swift */; };
 		B0C9F40A27FCBF5500B075EB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C9F40927FCBF5500B075EB /* Launch Screen.storyboard */; };
 		B0E140DC27FCCF2F008BBBB4 /* TranslationMatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140DB27FCCF2F008BBBB4 /* TranslationMatchService.swift */; };
 		B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140DE27FCD2E5008BBBB4 /* String+Levenshtein.swift */; };
@@ -82,6 +84,8 @@
 		B087C89027F8B41B0015E54B /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 		B087C89227F8B4610015E54B /* AccordionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionsView.swift; sourceTree = "<group>"; };
 		B087C89427F8B46A0015E54B /* TranslationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationsView.swift; sourceTree = "<group>"; };
+		B0C0F8E728060B750036441E /* Flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags.swift; sourceTree = "<group>"; };
+		B0C0F8E928060BE60036441E /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		B0C9F40927FCBF5500B075EB /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B0E140DB27FCCF2F008BBBB4 /* TranslationMatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationMatchService.swift; sourceTree = "<group>"; };
 		B0E140DE27FCD2E5008BBBB4 /* String+Levenshtein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Levenshtein.swift"; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 		B012799427F86954003FB72E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B0C0F8E628060B6C0036441E /* Enums */,
 				B076F0962805FD7700C1F88F /* Components */,
 				B068833427FF92B700E6B831 /* Stores */,
 				B0E140DD27FCD2D5008BBBB4 /* Extensions */,
@@ -280,6 +285,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B0C0F8E628060B6C0036441E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B0C0F8E728060B750036441E /* Flags.swift */,
+				B0C0F8E928060BE60036441E /* Languages.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		B0E140DD27FCD2D5008BBBB4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,7 +399,9 @@
 				4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */,
 				B05FF14327FA14A00046D636 /* SoundService.swift in Sources */,
 				B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */,
+				B0C0F8EA28060BE60036441E /* Languages.swift in Sources */,
 				B00D1B2C27F9ADF70073611C /* Translation.swift in Sources */,
+				B0C0F8E828060B750036441E /* Flags.swift in Sources */,
 				B01279C627F870BF003FB72E /* RootItems.swift in Sources */,
 				B0ECC1442802FDCC00BF9898 /* Alphabet.swift in Sources */,
 				4410E96D28044BD300688E9F /* ForChildrenItem.swift in Sources */,

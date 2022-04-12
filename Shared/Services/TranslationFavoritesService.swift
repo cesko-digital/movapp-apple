@@ -29,7 +29,7 @@ class TranslationFavoritesService: ObservableObject {
     }
     
     func getFavorites( language: SetLanguage) -> [String] {
-        guard let favorites = favoritedTranslationsByLanguage[language.language.from] else {
+        guard let favorites = favoritedTranslationsByLanguage[language.language.from.rawValue] else {
             return []
         }
         
@@ -39,7 +39,7 @@ class TranslationFavoritesService: ObservableObject {
     
     
     func isFavorited(_ translation: Translation, language: SetLanguage) -> Bool {
-        let isFavorited = favoritedTranslationsByLanguage[language.language.from]?[translation.id]
+        let isFavorited = favoritedTranslationsByLanguage[language.language.from.rawValue]?[translation.id]
         guard isFavorited != nil else {
             return false
         }
@@ -60,14 +60,14 @@ class TranslationFavoritesService: ObservableObject {
      Sets favorte state by given id - will not update translation object (UI will not be updated)
      */
     func setIsFavorited(_ isFavorited: Bool, translationId: String, language: SetLanguage) {
-        if favoritedTranslationsByLanguage[language.language.from] == nil {
-            favoritedTranslationsByLanguage[language.language.from] = [:]
+        if favoritedTranslationsByLanguage[language.language.from.rawValue] == nil {
+            favoritedTranslationsByLanguage[language.language.from.rawValue] = [:]
         }
         
         if isFavorited == true {
-            favoritedTranslationsByLanguage[language.language.from]![translationId] = translationId
+            favoritedTranslationsByLanguage[language.language.from.rawValue]![translationId] = translationId
         } else {
-            favoritedTranslationsByLanguage[language.language.from]!.removeValue(forKey:translationId)
+            favoritedTranslationsByLanguage[language.language.from.rawValue]!.removeValue(forKey:translationId)
         }
         
         UserDefaults.standard.setValue(favoritedTranslationsByLanguage, forKey: userDefaultsKey)

@@ -23,17 +23,9 @@ struct ForChildrenItemView: View {
                 .aspectRatio(contentMode: .fit)
                 .foregroundColor(.black)
             VStack {
-                HStack {
-                    Image("flagCzech")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 30)
-                        .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.8), radius: 38, x: 0, y: 19)
-                    Text("česky")
-                        .font(.system(size: 20))
-                        .fontWeight(.bold)
-                    Spacer()
-                }
+                
+                languageTitle(flag: "flagCzech", language: "česky")
+                
                 HStack {
                     VStack(alignment: .leading) {
                         Text(item.translationFrom)
@@ -42,19 +34,11 @@ struct ForChildrenItemView: View {
                             .foregroundColor(Color("colors/secondary"))
                     }
                     Spacer()
-                    playButton(language: Language.cs)
+                    playButton(language: Language.cs, text: item.translationFrom)
                 }
-                HStack {
-                    Image("flagUkraine")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 30)
-                        .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.8), radius: 38, x: 0, y: 19)
-                    Text("ukrajinsky")
-                        .font(.system(size: 20))
-                        .fontWeight(.bold)
-                    Spacer()
-                }
+                
+                languageTitle(flag: "flagUkraine", language: "ukrajinsky")
+                
                 HStack {
                     VStack(alignment: .leading) {
                         Text(item.translationTo)
@@ -62,8 +46,10 @@ struct ForChildrenItemView: View {
                         Text("[\(item.transcriptionTo)]")
                             .foregroundColor(Color("colors/secondary"))
                     }
+                    
                     Spacer()
-                    playButton(language: Language.uk)
+                    
+                    playButton(language: Language.uk, text: item.translationTo)
                 }
             }
             .padding(10)
@@ -78,13 +64,27 @@ struct ForChildrenItemView: View {
         .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.04), radius: 12, x: 0, y: 15)
     }
     
-    private func playButton(language: String) -> some View {
+    private func languageTitle(flag: String, language: String) -> some View {
+        HStack {
+            Image(flag)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 30)
+                .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.8), radius: 38, x: 0, y: 19)
+            Text(language)
+                .font(.system(size: 20))
+                .fontWeight(.bold)
+            Spacer()
+        }
+    }
+    
+    private func playButton(language: String, text: String) -> some View {
         Image (systemName: soundService.isPlaying ? "stop.circle" : "play.circle")
             .resizable()
             .foregroundColor(Color("colors/action"))
             .frame(width: 30, height: 30)
             .onTapGesture {
-                soundService.speach(language: language, text: item.translationFrom)
+                soundService.speach(language: language, text: text)
             }
     }
 }

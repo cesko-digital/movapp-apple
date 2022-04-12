@@ -9,3 +9,17 @@
 
 /* TabBar Menu */
 "tabbar.menu" = "Menu";
+
+"menu.section.about_project.header" = "About the project";
+
+"menu.section.about_app.header" = "About the app";
+
+"menu.section.about_app.want_help" = "I want to help";
+
+"menu.section.about_app.license" = "License";
+
+"menu.section.partner_projects.header" = "Partner project";
+
+"menu.section.partner_projects.stojime_za_ukrajinou" = "Stojíme za Ukrajinou";
+
+"menu.section.partner_projects.umapa" = "Umapa";

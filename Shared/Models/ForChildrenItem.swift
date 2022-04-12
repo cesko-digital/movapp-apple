@@ -1,5 +1,5 @@
 //
-//  ForKids.swift
+//  ForChildrenItem.swift
 //  Movapp (iOS)
 //
 //  Created by Daryna Polevyk on 11.04.2022.
@@ -7,19 +7,17 @@
 
 import Foundation
 
-struct ForKidsItem: Identifiable, Decodable {
+struct ForChildrenItem: Identifiable, Decodable {
     var id = UUID()
     
-#if DEBUG
-    static let example = ForKidsItem(
+    static let example = ForChildrenItem(
         translationFrom: "panenka",
         transcriptionFrom: "паненка",
         translationTo: "лялька",
         transcriptionTo: "ljal’ka",
         imageName: "panenka"
     )
-#endif
-
+    
     let translationFrom, transcriptionFrom, translationTo, transcriptionTo: String
     let imageName: String
 

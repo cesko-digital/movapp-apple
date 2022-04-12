@@ -1,5 +1,5 @@
 //
-//  ForKidsDataStore.swift
+//  ForChildrenDataStore.swift
 //  Movapp (iOS)
 //
 //  Created by Daryna Polevyk on 11.04.2022.
@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-class ForKidsDataStore: ObservableObject {
+class ForChildrenDataStore: ObservableObject {
     
     @Published var loading: Bool = false
     
-    var forKids: [ForKidsItem]?
+    var forKids: [ForChildrenItem]?
     var error: String? // TODO enum?
     
     func reset() {
@@ -38,7 +38,7 @@ class ForKidsDataStore: ObservableObject {
             
             let data = asset.data
 
-            self.forKids = try decoder.decode([ForKidsItem].self, from: data)
+            self.forKids = try decoder.decode([ForChildrenItem].self, from: data)
             
         } catch {
             self.error = error.localizedDescription

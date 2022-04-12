@@ -14,7 +14,7 @@ struct MovappApp: App {
     let favoritesService = TranslationFavoritesService()
     let dictionaryDataStore = DictionaryDataStore()
     let alphabetDataStore = AlphabetDataStore()
-    let forKidsDataStore = ForKidsDataStore()
+    let forKidsDataStore = ForChildrenDataStore()
     
     init() {
         let appearance = UINavigationBarAppearance()

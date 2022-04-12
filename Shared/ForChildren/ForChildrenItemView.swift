@@ -6,26 +6,45 @@
 
 import SwiftUI
 
+private extension Image {
+    func flagStyle () -> some View {
+        self.resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 30)
+            .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.8), radius: 38, x: 0, y: 19)
+    }
+}
+
+
+private extension Text {
+    func languageStyle () -> some View {
+        self.font(.system(size: 20))
+            .fontWeight(.bold)
+    }
+}
+
+
 struct ForChildrenItemView: View {
     let item: ForKidsItem
     
     var body: some View {
         
-        VStack (spacing: 20) {
-            Image(item.imageName)
+        VStack {
+            // Ensure that the image is not stretched to wide and to big
+            Image("for-children/\(item.imageName)")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .foregroundColor(.black)
+                .frame(maxHeight: 300)
+                .padding(20)
+            
             VStack {
                 HStack {
-                    Image("flagCzech")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 30)
-                        .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.8), radius: 38, x: 0, y: 19)
+                    Image("icons/flags/czech")
+                        .flagStyle()
+                    
                     Text("česky")
-                        .font(.system(size: 20))
-                        .fontWeight(.bold)
+                        .languageStyle()
+                    
                     Spacer()
                 }
                 HStack {
@@ -45,14 +64,11 @@ struct ForChildrenItemView: View {
                         }
                 }
                 HStack {
-                    Image("flagUkraine")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 30)
-                        .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.8), radius: 38, x: 0, y: 19)
+                    Image("icons/flags/ukraine")
+                        .flagStyle()
+                    
                     Text("ukrajinsky")
-                        .font(.system(size: 20))
-                        .fontWeight(.bold)
+                        .languageStyle()
                     Spacer()
                 }
                 HStack {

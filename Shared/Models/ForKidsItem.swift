@@ -10,7 +10,6 @@ import Foundation
 struct ForKidsItem: Identifiable, Decodable {
     var id = UUID()
     
-#if DEBUG
     static let example = ForKidsItem(
         translationFrom: "panenka",
         transcriptionFrom: "паненка",
@@ -18,7 +17,6 @@ struct ForKidsItem: Identifiable, Decodable {
         transcriptionTo: "ljal’ka",
         imageName: "panenka"
     )
-#endif
 
     let translationFrom, transcriptionFrom, translationTo, transcriptionTo: String
     let imageName: String

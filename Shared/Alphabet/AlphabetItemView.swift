@@ -22,28 +22,27 @@ struct AlphabetItemView: View {
     }
     
     var body: some View {
-        VStack (spacing: 20) {
-            
-            Text(item.letter)
-                .font(.system(size: 100))
-                .foregroundColor(Color("colors/text"))
-            
-            if item.fileName != nil {
-                Image(systemName: soundService.isPlaying ? "stop.circle" : "play.circle")
-                    .resizable()
-                    .foregroundColor(Color("colors/action"))
-                    .frame(width: 52, height: 52)
-                    .onTapGesture {
-                        soundService.play(item.id, inDirectory: soundsDirectory)
-                    }
+        CardView {
+            Content {
+                Text(item.letter)
+                    .font(.system(size: 100))
+                    .foregroundColor(Color("colors/text"))
+                
+                if item.fileName != nil {
+                    Image(systemName: soundService.isPlaying ? "stop.circle" : "play.circle")
+                        .resizable()
+                        .foregroundColor(Color("colors/action"))
+                        .frame(width: 52, height: 52)
+                        .onTapGesture {
+                            soundService.play(item.id, inDirectory: soundsDirectory)
+                        }
+                }
+                
+                Text(item.transcription)
+                    .font(.system(size: 25))
+                    .foregroundColor(Color("colors/text"))
             }
-            
-            Text(item.transcription)
-                .font(.system(size: 25))
-                .foregroundColor(Color("colors/text"))
-            
-            
-            VStack {
+            Footer {
                 ForEach(item.examples, id: \.example) { example in
                     HStack {
                         Text(example.example)
@@ -67,16 +66,7 @@ struct AlphabetItemView: View {
                     .frame(maxWidth: .infinity)
                 }
             }
-            .padding(10)
-            .frame(maxWidth: .infinity)
-            .background(Color("colors/yellow"))
         }
-        .background(.white)
-        .clipShape(RoundedRectangle(cornerRadius: 8))
-        .padding()
-        .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.04), radius: 38, x: 0, y: 19)
-        .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.04), radius: 12, x: 0, y: 15)
-        
     }
     
     

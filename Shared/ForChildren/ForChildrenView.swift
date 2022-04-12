@@ -13,15 +13,13 @@ struct ForChildrenView: View {
     var body: some View {
         VStack {
             if let forKids = dataStore.forKids {
-              //  ScrollViewReader { proxy in
-                    ScrollView(showsIndicators: false) {
+                    ScrollView {
                         LazyVStack (spacing: 10) {
                             ForEach(forKids) { item in
                                 ForChildrenItemView(item: item)
                             }
                         }
                     }
-              //  }
             } else {
                 errorOrLoadView
             }

@@ -12,16 +12,16 @@ struct ForChildrenView: View {
     
     var body: some View {
         VStack {
-            if dataStore.forKids != nil {
-                ScrollViewReader { proxy in
+            if let forKids = dataStore.forKids {
+              //  ScrollViewReader { proxy in
                     ScrollView(showsIndicators: false) {
                         LazyVStack (spacing: 10) {
-                            ForEach(dataStore.forKids!) { item in
-                               ForChildrenItemView(item: item)
+                            ForEach(forKids) { item in
+                                ForChildrenItemView(item: item)
                             }
                         }
                     }
-                }
+              //  }
             } else {
                 errorOrLoadView
             }
@@ -47,7 +47,7 @@ struct ForChildrenView: View {
 }
 
 struct ForChildrenView_Previews: PreviewProvider {
-  static let dataStore = ForKidsDataStore()
+    static let dataStore = ForKidsDataStore()
     
     static var previews: some View {
         ForChildrenView()

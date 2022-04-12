@@ -16,27 +16,27 @@ struct ForKidsItem: Identifiable, Decodable {
         czTranscription: "паненка",
         uaTranslation: "лялька",
         uaTranscription: "ljal’ka",
-        image: "panenka"
+        imageName: "panenka"
     )
 #endif
 
     let czTranslation, czTranscription, uaTranslation, uaTranscription: String
-    let image: String
+    let imageName: String
 
     enum CodingKeys: String, CodingKey {
         case czTranslation = "cz_translation"
         case czTranscription = "cz_transcription"
         case uaTranslation = "ua_translation"
         case uaTranscription = "ua_transcription"
-        case image
+        case imageName
     }
     
-    internal init(czTranslation: String, czTranscription: String, uaTranslation: String, uaTranscription: String, image: String) {
+    internal init(czTranslation: String, czTranscription: String, uaTranslation: String, uaTranscription: String, imageName: String) {
         self.czTranslation = czTranslation
         self.czTranscription = czTranscription
         self.uaTranslation = uaTranslation
         self.uaTranscription = uaTranscription
-        self.image = image
+        self.imageName = imageName
     }
     
     init(from decoder: Decoder) throws {
@@ -46,7 +46,7 @@ struct ForKidsItem: Identifiable, Decodable {
         czTranscription = try container.decode(String.self, forKey: .czTranscription)
         uaTranslation = try container.decode(String.self, forKey: .uaTranslation)
         uaTranscription = try container.decode(String.self, forKey: .uaTranscription)
-        image = try container.decode(String.self, forKey: .image)
+        imageName = try container.decode(String.self, forKey: .imageName)
     }
 }
 

@@ -12,7 +12,7 @@ struct ForChildrenItemView: View {
     var body: some View {
         
             VStack (spacing: 20) {
-                Image(item.image)
+                Image(item.imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .foregroundColor(.black)

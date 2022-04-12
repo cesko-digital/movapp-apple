@@ -2,6 +2,9 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Updated menu with more links
+- Add for kids section
+
 ## [1.0.4] - 2022-04-11Z
 
 - Fix build in Release configuration

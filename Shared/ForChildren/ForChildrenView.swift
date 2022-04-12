@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ForChildrenView: View {
-    @EnvironmentObject var dataStore: ForKidsDataStore
+    @EnvironmentObject var dataStore: ForChildrenDataStore
     
     var body: some View {
         VStack {
@@ -45,7 +45,7 @@ struct ForChildrenView: View {
 }
 
 struct ForChildrenView_Previews: PreviewProvider {
-    static let dataStore = ForKidsDataStore()
+    static let dataStore = ForChildrenDataStore()
     
     static var previews: some View {
         ForChildrenView()

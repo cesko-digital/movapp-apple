@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4410E96D28044BD300688E9F /* ForKidsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96C28044BD300688E9F /* ForKidsItem.swift */; };
-		4410E96F28044D8E00688E9F /* ForKidsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96E28044D8E00688E9F /* ForKidsDataStore.swift */; };
+		4410E96D28044BD300688E9F /* ForChildrenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96C28044BD300688E9F /* ForChildrenItem.swift */; };
+		4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */; };
 		5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77295C280443B00087F582 /* ForChildrenItemView.swift */; };
 		B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2427F9999C0073611C /* DictionaryContentView.swift */; };
 		B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */; };
@@ -48,8 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4410E96C28044BD300688E9F /* ForKidsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForKidsItem.swift; sourceTree = "<group>"; };
-		4410E96E28044D8E00688E9F /* ForKidsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForKidsDataStore.swift; sourceTree = "<group>"; };
+		4410E96C28044BD300688E9F /* ForChildrenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenItem.swift; sourceTree = "<group>"; };
+		4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenDataStore.swift; sourceTree = "<group>"; };
 		5B77295C280443B00087F582 /* ForChildrenItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenItemView.swift; sourceTree = "<group>"; };
 		B00D1B2427F9999C0073611C /* DictionaryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryContentView.swift; sourceTree = "<group>"; };
 		B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionHeaderView.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 				B0ECC1432802FDCC00BF9898 /* Alphabet.swift */,
 				B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */,
 				B0ECC1452802FDD200BF9898 /* AlphabetItem.swift */,
-				4410E96C28044BD300688E9F /* ForKidsItem.swift */,
+				4410E96C28044BD300688E9F /* ForChildrenItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,9 +256,17 @@
 			children = (
 				B068833527FF92E300E6B831 /* DictionaryDataStore.swift */,
 				B0ECC1412802FD3C00BF9898 /* AlphabetDataStore.swift */,
-				4410E96E28044D8E00688E9F /* ForKidsDataStore.swift */,
+				4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */,
 			);
 			path = Stores;
+			sourceTree = "<group>";
+		};
+		B076F0962805FD7700C1F88F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B076F0972806011500C1F88F /* CardView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		B087C87E27F8A1F20015E54B /* Resources */ = {
@@ -370,13 +378,13 @@
 				B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */,
 				B0ECC14C2803431A00BF9898 /* Bundle+version.swift in Sources */,
 				B0E140E327FCE24F008BBBB4 /* DictionaryHeaderView.swift in Sources */,
-				4410E96F28044D8E00688E9F /* ForKidsDataStore.swift in Sources */,
+				4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */,
 				B05FF14327FA14A00046D636 /* SoundService.swift in Sources */,
 				B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */,
 				B00D1B2C27F9ADF70073611C /* Translation.swift in Sources */,
 				B01279C627F870BF003FB72E /* RootItems.swift in Sources */,
 				B0ECC1442802FDCC00BF9898 /* Alphabet.swift in Sources */,
-				4410E96D28044BD300688E9F /* ForKidsItem.swift in Sources */,
+				4410E96D28044BD300688E9F /* ForChildrenItem.swift in Sources */,
 				B0E140E127FCE1DD008BBBB4 /* TranslationFavoritesService.swift in Sources */,
 				B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */,
 				B0E140DC27FCCF2F008BBBB4 /* TranslationMatchService.swift in Sources */,

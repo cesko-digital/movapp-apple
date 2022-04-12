@@ -25,7 +25,7 @@ private extension Text {
 
 
 struct ForChildrenItemView: View {
-    let item: ForKidsItem
+    let item: ForChildrenItem
     
     var body: some View {
         

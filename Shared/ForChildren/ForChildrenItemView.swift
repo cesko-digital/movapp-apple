@@ -7,7 +7,13 @@
 import SwiftUI
 
 struct ForChildrenItemView: View {
+    @EnvironmentObject var soundService: SoundService
+    
     let item: ForKidsItem
+    
+    init (item: ForKidsItem) {
+        self.item = item
+    }
     
     var body: some View {
         
@@ -36,13 +42,7 @@ struct ForChildrenItemView: View {
                             .foregroundColor(Color("colors/secondary"))
                     }
                     Spacer()
-                    Image(systemName: "play.circle") //(systemName: soundService.isPlaying ? "stop.circle" : "play.circle")
-                        .resizable()
-                        .foregroundColor(Color("colors/action"))
-                        .frame(width: 30, height: 30)
-                        .onTapGesture {
-                            // soundService.speach(language: language, text: example.example)
-                        }
+                    playButton(language: Language.cs)
                 }
                 HStack {
                     Image("flagUkraine")
@@ -63,13 +63,7 @@ struct ForChildrenItemView: View {
                             .foregroundColor(Color("colors/secondary"))
                     }
                     Spacer()
-                    Image(systemName: "play.circle") //(systemName: soundService.isPlaying ? "stop.circle" : "play.circle")
-                        .resizable()
-                        .foregroundColor(Color("colors/action"))
-                        .frame(width: 30, height: 30)
-                        .onTapGesture {
-                            // soundService.speach(language: language, text: example.example)
-                        }
+                    playButton(language: Language.uk)
                 }
             }
             .padding(10)
@@ -82,6 +76,16 @@ struct ForChildrenItemView: View {
         .padding()
         .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.04), radius: 38, x: 0, y: 19)
         .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.04), radius: 12, x: 0, y: 15)
+    }
+    
+    private func playButton(language: String) -> some View {
+        Image (systemName: soundService.isPlaying ? "stop.circle" : "play.circle")
+            .resizable()
+            .foregroundColor(Color("colors/action"))
+            .frame(width: 30, height: 30)
+            .onTapGesture {
+                soundService.speach(language: language, text: item.translationFrom)
+            }
     }
 }
 

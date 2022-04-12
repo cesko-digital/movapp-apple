@@ -89,13 +89,13 @@ class SoundService: NSObject, ObservableObject {
     
     
     // https://developer.apple.com/documentation/avfoundation/speech_synthesis#overview
-    func speach(language: String, text: String) {
+    func speach(language: Languages, text: String) {
         stop()
         
         // Create an utterance.
         let utterance = AVSpeechUtterance(string: text)
         
-        let voice = AVSpeechSynthesisVoice(language: language)
+        let voice = AVSpeechSynthesisVoice(language: language.rawValue)
         
         // Assign the voice to the utterance.
         utterance.voice = voice

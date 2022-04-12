@@ -17,7 +17,7 @@ struct TranslationView: View {
     
     let translations: [String]
     let transcriptions: [String]
-    let ttsLanguages: [String]
+    let ttsLanguages: [Languages]
     
     let spacing: CGFloat = 10.0
     

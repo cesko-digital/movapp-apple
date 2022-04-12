@@ -11,14 +11,14 @@ struct AlphabetItemView: View {
     @EnvironmentObject var soundService: SoundService
     
     let item: AlphabetItem
-    let language: String
+    let language: Languages
     
     private let soundsDirectory : String
     
-    init (item: AlphabetItem, language: String) {
+    init (item: AlphabetItem, language: Languages) {
         self.item = item
         self.language = language
-        soundsDirectory = "data/\(language)-alphabet"
+        soundsDirectory = "data/\(language.rawValue)-alphabet"
     }
     
     var body: some View {

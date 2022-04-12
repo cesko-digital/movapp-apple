@@ -27,7 +27,7 @@ struct AlphabetView: View {
                     ScrollView(showsIndicators: false) {
                         LazyVStack (spacing: 10) {
                             ForEach(alphabet.data, id: \.id) { item in
-                                AlphabetItemView(item: item, language: alphabet.language)
+                                AlphabetItemView(item: item, language: selectedLanguage.languagePrefix)
                             }
                         }
                     }

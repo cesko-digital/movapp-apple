@@ -11,11 +11,10 @@ import SwiftUI
 struct DicitionaryView: View {
     
     @State private var searchString: String = ""
-    @State private var selectedSection: DictionarySection? = nil
+    @State private var selectedSection: Dictionary.Section? = nil
     @State private var selectedLanguage: SetLanguage = .csUk
     
     @EnvironmentObject var dataStore: DictionaryDataStore
-    @EnvironmentObject var favoritesService: TranslationFavoritesService
     
     var body: some View {
         VStack (spacing: 0) {
@@ -63,7 +62,7 @@ struct DicitionaryView: View {
     }
     
     func loadData() {
-        dataStore.load(language: selectedLanguage, favoritesService: favoritesService)
+        dataStore.load(language: selectedLanguage)
     }
 }
 

@@ -7,20 +7,32 @@
 
 import Foundation
 
-
 struct Dictionary: Decodable {
-    enum CodingKeys: CodingKey {
-        case sections, translations
-    }
-    
-    let translations: Translations
-    let sections: Sections
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        
-        sections = try container.decode([DictionarySection].self, forKey: .sections)
-        translations = try container.decode(Translations.self, forKey: .translations)
-    }
-}
 
+    typealias TranslationID = String
+    
+    struct Section: Decodable, Identifiable {
+        let id: String
+        let nameFrom: String
+        let nameTo: String
+        let translations: [TranslationID]
+        
+        func text(language: SetLanguage) -> String {
+            let arguments = [nameFrom , nameTo]
+            return String(format: "%@ - %@", arguments: language.flipFromWithTo ? arguments.reversed() : arguments)
+        }
+    }
+    
+    struct Translation: Decodable, Identifiable {
+        let id: String
+        let translationFrom: String
+        let transcriptionFrom: String
+        let translationTo: String
+        let transcriptionTo: String
+    }
+    
+    let from: String
+    let to: String
+    let sections: [Section]
+    let translations: [TranslationID: Translation]
+}

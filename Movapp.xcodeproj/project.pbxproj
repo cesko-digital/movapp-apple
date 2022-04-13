@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		250E55E4280723E0004511EC /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E928060BE60036441E /* Languages.swift */; };
+		250E55E628072591004511EC /* Dictionary+UIExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250E55E528072591004511EC /* Dictionary+UIExamples.swift */; };
 		4410E96D28044BD300688E9F /* ForChildrenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96C28044BD300688E9F /* ForChildrenItem.swift */; };
 		4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */; };
 		5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77295C280443B00087F582 /* ForChildrenItemView.swift */; };
 		B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2427F9999C0073611C /* DictionaryContentView.swift */; };
 		B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */; };
-		B00D1B2A27F9ADF10073611C /* DictionarySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2927F9ADF10073611C /* DictionarySection.swift */; };
-		B00D1B2C27F9ADF70073611C /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2B27F9ADF70073611C /* Translation.swift */; };
 		B00D1B2E27F9DEC20073611C /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2D27F9DEC20073611C /* WordView.swift */; };
 		B01279A527F86957003FB72E /* MovappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012799527F86954003FB72E /* MovappApp.swift */; };
 		B01279A727F86957003FB72E /* RootContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012799627F86954003FB72E /* RootContentView.swift */; };
@@ -36,7 +36,6 @@
 		B087C89527F8B46A0015E54B /* TranslationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89427F8B46A0015E54B /* TranslationsView.swift */; };
 		B0C0F8E528060A310036441E /* ForChildrenRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E428060A310036441E /* ForChildrenRowView.swift */; };
 		B0C0F8E828060B750036441E /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E728060B750036441E /* Flags.swift */; };
-		B0C0F8EA28060BE60036441E /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E928060BE60036441E /* Languages.swift */; };
 		B0C9F40A27FCBF5500B075EB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C9F40927FCBF5500B075EB /* Launch Screen.storyboard */; };
 		B0E140DC27FCCF2F008BBBB4 /* TranslationMatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140DB27FCCF2F008BBBB4 /* TranslationMatchService.swift */; };
 		B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140DE27FCD2E5008BBBB4 /* String+Levenshtein.swift */; };
@@ -52,13 +51,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		250E55E528072591004511EC /* Dictionary+UIExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+UIExamples.swift"; sourceTree = "<group>"; };
 		4410E96C28044BD300688E9F /* ForChildrenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenItem.swift; sourceTree = "<group>"; };
 		4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenDataStore.swift; sourceTree = "<group>"; };
 		5B77295C280443B00087F582 /* ForChildrenItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenItemView.swift; sourceTree = "<group>"; };
 		B00D1B2427F9999C0073611C /* DictionaryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryContentView.swift; sourceTree = "<group>"; };
 		B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionHeaderView.swift; sourceTree = "<group>"; };
-		B00D1B2927F9ADF10073611C /* DictionarySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionarySection.swift; sourceTree = "<group>"; };
-		B00D1B2B27F9ADF70073611C /* Translation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		B00D1B2D27F9DEC20073611C /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
 		B012799527F86954003FB72E /* MovappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappApp.swift; sourceTree = "<group>"; };
 		B012799627F86954003FB72E /* RootContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContentView.swift; sourceTree = "<group>"; };
@@ -118,11 +116,9 @@
 		B00D1B2827F9ADE30073611C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B00D1B2927F9ADF10073611C /* DictionarySection.swift */,
-				B00D1B2B27F9ADF70073611C /* Translation.swift */,
+				B068833227FF903000E6B831 /* Dictionary.swift */,
 				B066546B27FB7D3C002D5EDD /* Language.swift */,
 				B066546D27FB7E0C002D5EDD /* SetLanguage.swift */,
-				B068833227FF903000E6B831 /* Dictionary.swift */,
 				B0ECC1432802FDCC00BF9898 /* Alphabet.swift */,
 				B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */,
 				B0ECC1452802FDD200BF9898 /* AlphabetItem.swift */,
@@ -193,6 +189,7 @@
 		B01279C827F8729C003FB72E /* Dicitionary */ = {
 			isa = PBXGroup;
 			children = (
+				250E55E528072591004511EC /* Dictionary+UIExamples.swift */,
 				B01279C927F872A9003FB72E /* DicitionaryView.swift */,
 				B0E140E227FCE24F008BBBB4 /* DictionaryHeaderView.swift */,
 				B00D1B2427F9999C0073611C /* DictionaryContentView.swift */,
@@ -394,6 +391,8 @@
 				B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */,
 				B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */,
 				5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */,
+				250E55E628072591004511EC /* Dictionary+UIExamples.swift in Sources */,
+				250E55E4280723E0004511EC /* Languages.swift in Sources */,
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
 				B0ECC1482802FF2500BF9898 /* AlphabetExample.swift in Sources */,
 				B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */,
@@ -402,8 +401,6 @@
 				4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */,
 				B05FF14327FA14A00046D636 /* SoundService.swift in Sources */,
 				B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */,
-				B0C0F8EA28060BE60036441E /* Languages.swift in Sources */,
-				B00D1B2C27F9ADF70073611C /* Translation.swift in Sources */,
 				B0C0F8E528060A310036441E /* ForChildrenRowView.swift in Sources */,
 				B0C0F8E828060B750036441E /* Flags.swift in Sources */,
 				B01279C627F870BF003FB72E /* RootItems.swift in Sources */,
@@ -414,7 +411,6 @@
 				B0E140DC27FCCF2F008BBBB4 /* TranslationMatchService.swift in Sources */,
 				B00D1B2E27F9DEC20073611C /* WordView.swift in Sources */,
 				B068833327FF903000E6B831 /* Dictionary.swift in Sources */,
-				B00D1B2A27F9ADF10073611C /* DictionarySection.swift in Sources */,
 				B087C89127F8B41B0015E54B /* TranslationView.swift in Sources */,
 				B01279D327F872CB003FB72E /* ForChildrenView.swift in Sources */,
 				B0ECC1422802FD3C00BF9898 /* AlphabetDataStore.swift in Sources */,

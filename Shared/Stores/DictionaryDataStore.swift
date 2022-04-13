@@ -20,13 +20,15 @@ class DictionaryDataStore: ObservableObject {
         loading = false // Force reload data
     }
     
-    func load(language: SetLanguage, favoritesService: TranslationFavoritesService)  {
+    func load(language: SetLanguage)  {
         if loading {
             return
         }
         
         loading = true
+        
         let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         let prefix = language.language.dictionaryFilePrefix
         
@@ -37,26 +39,7 @@ class DictionaryDataStore: ObservableObject {
                 return
             }
             
-            let data = asset.data
-            
-            let dictionary = try decoder.decode(Dictionary.self, from: data)
-            //self.error = nil
-            
-            let favoriteIds = favoritesService.getFavorites(language: language)
-            
-            for translationId in favoriteIds {
-                guard let translation = dictionary.translations.byId[translationId] else {
-                    print("Favorite list has non-existing translation")
-                    favoritesService.setIsFavorited(false, translationId: translationId, language: language)
-                    continue
-                }
-                
-                translation.isFavorited = true
-                
-            }
-            
-            
-            self.dictionary = dictionary
+            self.dictionary = try decoder.decode(Dictionary.self, from: asset.data)
             
         } catch {
             self.error = error.localizedDescription

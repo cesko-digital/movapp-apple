@@ -41,7 +41,6 @@ struct WordView: View {
                 .frame(width: 30, height: 30)
                 .onTapGesture {
                     soundService.speach(language: language, text: text)
-                    
                 }
             
         }.frame(maxWidth: .infinity)

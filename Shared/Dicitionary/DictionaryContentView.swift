@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-enum DictionaryContentSubView: Int {
+enum DictionaryContentSubView: Equatable {
     case dictionary
     case favorites
 }
-
 
 extension View {
     /**
@@ -36,6 +35,10 @@ struct DictionaryContentView: View {
     @Binding var selectedSection: Dictionary.Section?
     @State private var view: DictionaryContentSubView = .dictionary;
     
+    // This serves as a cache for favorites because there is a requirement that unfavorited translation
+    // should stay visible until user switch modes to `dictionary` and back.
+    @State private var favoritesToDisplay: [Dictionary.TranslationID] = []
+    
     init(
         searchString: String,
         language: SetLanguage,
@@ -51,16 +54,7 @@ struct DictionaryContentView: View {
         
         // Optimize the view
         if let selectedSection = selectedSection.wrappedValue {
-            var translations : [Dictionary.Translation] = []
-            for translationId in selectedSection.translations {
-                guard let translation = self.translations[translationId] else {
-                    continue
-                }
-                
-                translations.append(translation)
-            }
-            
-            sectionTranslations = translations
+            sectionTranslations = translations.filter(identifiers: selectedSection.translations)
         } else {
             sectionTranslations = nil
         }
@@ -91,6 +85,14 @@ struct DictionaryContentView: View {
             } else {
                 translationsView
             }
+            
+        }.onChange(of: view) { viewType in
+            switch viewType {
+                case .favorites:
+                    $favoritesToDisplay.wrappedValue = favoritesService.getFavorites(language: language)
+                case .dictionary:
+                    $favoritesToDisplay.wrappedValue = []
+            }
         }
     }
     
@@ -102,18 +104,7 @@ struct DictionaryContentView: View {
         case .dictionary:
             visibleTranslations = sectionTranslations ?? Array(translations.values)
         case .favorites:
-            let favoritesIds = favoritesService.getFavorites(language: language)
-            
-            var translations: [Dictionary.Translation] = []
-            for favoriteId in favoritesIds {
-                guard let translation = self.translations[favoriteId] else {
-                    continue
-                }
-                
-                translations.append(translation)
-            }
-            
-            visibleTranslations = translations
+            visibleTranslations = translations.filter(identifiers: favoritesToDisplay)
         }
         
         return TranslationsView(

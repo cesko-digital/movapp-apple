@@ -36,3 +36,15 @@ struct Dictionary: Decodable {
     let sections: [Section]
     let translations: [TranslationID: Translation]
 }
+
+extension Swift.Dictionary where Key == Dictionary.TranslationID, Value == Dictionary.Translation {
+   
+    func filter(identifiers: [Key]) -> [Value] {
+        
+        identifiers.reduce(into: []) { accumulator, id in
+            if let translation = self[id] {
+                accumulator.append(translation)
+            }
+        }
+    }
+}

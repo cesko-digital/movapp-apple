@@ -8,7 +8,7 @@
 import Foundation
 
 struct TranslationWithDistance {
-    let translation: Translation
+    let translation: Dictionary.Translation
     let distance: Int
 }
 
@@ -42,7 +42,7 @@ enum TranslationMatchService {
     /**
      Returns translations that contains given string in all translations (all languages) and sorts by levenshtein distance.
      */
-    static func matchTranslations(_ translations: [Translation], searchString: String, language: SetLanguage) -> [Translation] {
+    static func matchTranslations(_ translations: [Dictionary.Translation], searchString: String, language: SetLanguage) -> [Dictionary.Translation] {
         
         let start = CFAbsoluteTimeGetCurrent()
         

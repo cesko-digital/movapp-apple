@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-enum DictionaryContentSubView: Int {
+enum DictionaryContentSubView: Equatable {
     case dictionary
     case favorites
 }
-
 
 extension View {
     /**
@@ -27,21 +26,25 @@ extension View {
 struct DictionaryContentView: View {
     let searchString: String
     let language: SetLanguage
-    let sections: Sections
-    let translations: Translations
-    let sectionTranslations: Array<Translation>?
+    let sections: [Dictionary.Section]
+    let translations: [Dictionary.TranslationID: Dictionary.Translation]
+    let sectionTranslations: Array<Dictionary.Translation>?
     
     @EnvironmentObject var favoritesService: TranslationFavoritesService
     
-    @Binding var selectedSection: DictionarySection?
+    @Binding var selectedSection: Dictionary.Section?
     @State private var view: DictionaryContentSubView = .dictionary;
+    
+    // This serves as a cache for favorites because there is a requirement that unfavorited translation
+    // should stay visible until user switch modes to `dictionary` and back.
+    @State private var favoritesToDisplay: [Dictionary.TranslationID] = []
     
     init(
         searchString: String,
         language: SetLanguage,
-        sections: Sections,
-        translations: Translations,
-        selectedSection: Binding<DictionarySection?>
+        sections: [Dictionary.Section],
+        translations: [Dictionary.TranslationID: Dictionary.Translation],
+        selectedSection: Binding<Dictionary.Section?>
     ) {
         self.searchString = searchString
         self.language = language
@@ -50,18 +53,8 @@ struct DictionaryContentView: View {
         self._selectedSection = selectedSection
         
         // Optimize the view
-        if selectedSection.wrappedValue != nil {
-            var translations : [Translation] = []
-            
-            for translationId in selectedSection.wrappedValue!.translations {
-                guard let translation = self.translations.byId[translationId] else {
-                    continue
-                }
-                
-                translations.append(translation)
-            }
-            
-            sectionTranslations = translations
+        if let selectedSection = selectedSection.wrappedValue {
+            sectionTranslations = translations.filter(identifiers: selectedSection.translations)
         } else {
             sectionTranslations = nil
         }
@@ -92,30 +85,26 @@ struct DictionaryContentView: View {
             } else {
                 translationsView
             }
+            
+        }.onChange(of: view) { viewType in
+            switch viewType {
+                case .favorites:
+                    $favoritesToDisplay.wrappedValue = favoritesService.getFavorites(language: language)
+                case .dictionary:
+                    $favoritesToDisplay.wrappedValue = []
+            }
         }
     }
     
-    
     var translationsView: some View {
         
-        let visibleTranslations: [Translation]
+        let visibleTranslations: [Dictionary.Translation]
         
         switch (view) {
         case .dictionary:
-            visibleTranslations = sectionTranslations ?? Array(translations.byId.values)
+            visibleTranslations = sectionTranslations ?? Array(translations.values)
         case .favorites:
-            let favoritesIds = favoritesService.getFavorites(language: language)
-            
-            var translations: [Translation] = []
-            for favoriteId in favoritesIds {
-                guard let translation = self.translations.byId[favoriteId] else {
-                    continue
-                }
-                
-                translations.append(translation)
-            }
-            
-            visibleTranslations = translations
+            visibleTranslations = translations.filter(identifiers: favoritesToDisplay)
         }
         
         return TranslationsView(
@@ -132,9 +121,9 @@ struct DictionaryContentView_Previews: PreviewProvider {
     static let soundService = SoundService()
     static let favoritesService = TranslationFavoritesService()
     
-    static let translations: Translations = Translations(byId: [
-        "d6e710c7f44b67220cd9b870e6107bf9": exampleTranslation
-    ])
+    static let translations: [Dictionary.TranslationID: Dictionary.Translation] = [
+        exampleTranslation.id: exampleTranslation
+    ]
     
     static var previews: some View {
         DictionaryContentView(

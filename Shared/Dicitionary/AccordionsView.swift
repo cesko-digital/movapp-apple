@@ -10,9 +10,9 @@ import SwiftUI
 struct AccordionsView: View {
     
     let language: SetLanguage
-    let sections: Sections
+    let sections: [Dictionary.Section]
     
-    @Binding var selectedSection: DictionarySection?
+    @Binding var selectedSection: Dictionary.Section?
     
     var body: some View {
         ScrollView {
@@ -37,8 +37,8 @@ struct AccordionsView: View {
 
 struct AccordionsView_Previews: PreviewProvider {
     
-    @State static var emptySection: DictionarySection? = nil
-    @State static var section: DictionarySection? = exampleSection
+    @State static var emptySection: Dictionary.Section? = nil
+    @State static var section: Dictionary.Section? = exampleSection
     
     static var previews: some View {
         

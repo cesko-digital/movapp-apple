@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct TranslationsView: View {
-    var showTranslations: [Translation]
+    
+    var showTranslations: [Dictionary.Translation]
     let language: SetLanguage
     
     init (
         language: SetLanguage,
         searchString: String,
-        translations: [Translation])
+        translations: [Dictionary.Translation])
     {
         self.language = language
         
@@ -28,7 +29,7 @@ struct TranslationsView: View {
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 16) {
-                ForEach(showTranslations, id: \.id)  { translation in
+                ForEach(showTranslations)  { translation in
                     TranslationView(
                         language: language,
                         translation: translation
@@ -43,16 +44,18 @@ struct TranslationsView: View {
 
 struct TranslationsView_Previews: PreviewProvider {
     static let soundService = SoundService()
+    static let favoritesService = TranslationFavoritesService()
     
     static var previews: some View {
         TranslationsView(
             language: .csUk,
             searchString: "",
             translations: [
-                exampleTranslation
+                exampleTranslation,
             ]
         )
         .environmentObject(soundService)
+        .environmentObject(favoritesService)
         
         TranslationsView(
             language: .ukCs,
@@ -62,5 +65,6 @@ struct TranslationsView_Previews: PreviewProvider {
             ]
         )
         .environmentObject(soundService)
+        .environmentObject(favoritesService)
     }
 }

@@ -7,17 +7,21 @@
 
 import Foundation
 
-
-fileprivate let userDefaultsKey = "favorite.translations"
-fileprivate typealias FavoritesTranslationsStore = [String: [String: String]]
+typealias FavoritesTranslationsStore = [String: [String: String]]
 
 class TranslationFavoritesService: ObservableObject {
+    
+    private let userDefaultsKey = "favorite.translations"
     
     /**
      A map of favorited translations by language pack and translation id
      [language pack][translationId] = translation id
      */
-    private var favoritedTranslationsByLanguage: FavoritesTranslationsStore = [:]
+    @Published private(set) var favoritedTranslationsByLanguage: FavoritesTranslationsStore = [:] {
+        didSet {
+            UserDefaults.standard.setValue(favoritedTranslationsByLanguage, forKey: userDefaultsKey)
+        }
+    }
     
     /**
     In near future we can provide interface for storing favorites, now we are using UserDefaults (we could do a wrapper that hooks on changes and sends to to backend, etc)
@@ -28,7 +32,7 @@ class TranslationFavoritesService: ObservableObject {
         }
     }
     
-    func getFavorites( language: SetLanguage) -> [String] {
+    func getFavorites( language: SetLanguage) -> [Dictionary.TranslationID] {
         guard let favorites = favoritedTranslationsByLanguage[language.language.from.rawValue] else {
             return []
         }
@@ -37,8 +41,7 @@ class TranslationFavoritesService: ObservableObject {
         return Array(favorites.values)
     }
     
-    
-    func isFavorited(_ translation: Translation, language: SetLanguage) -> Bool {
+    func isFavorited(_ translation: Dictionary.Translation, language: SetLanguage) -> Bool {
         let isFavorited = favoritedTranslationsByLanguage[language.language.from.rawValue]?[translation.id]
         guard isFavorited != nil else {
             return false
@@ -46,20 +49,11 @@ class TranslationFavoritesService: ObservableObject {
         
         return true
     }
-    
-    /**
-     Updates the isFavorite state on the translation and stores the change
-     */
-    func setIsFavorited(_ isFavorited: Bool, translation: Translation, language: SetLanguage) {
-        translation.isFavorited = isFavorited
-        
-        setIsFavorited(isFavorited, translationId: translation.id, language: language)
-    }
-    
+
     /**
      Sets favorte state by given id - will not update translation object (UI will not be updated)
      */
-    func setIsFavorited(_ isFavorited: Bool, translationId: String, language: SetLanguage) {
+    func setIsFavorited(_ isFavorited: Bool, translationId: Dictionary.TranslationID, language: SetLanguage) {
         if favoritedTranslationsByLanguage[language.language.from.rawValue] == nil {
             favoritedTranslationsByLanguage[language.language.from.rawValue] = [:]
         }
@@ -69,7 +63,5 @@ class TranslationFavoritesService: ObservableObject {
         } else {
             favoritedTranslationsByLanguage[language.language.from.rawValue]!.removeValue(forKey:translationId)
         }
-        
-        UserDefaults.standard.setValue(favoritedTranslationsByLanguage, forKey: userDefaultsKey)
     }
 }

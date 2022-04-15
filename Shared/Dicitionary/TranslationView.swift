@@ -36,7 +36,7 @@ struct TranslationView: View {
         let displayableTranslation = DisplayableTranslation(
             translationFrom: translation.translationFrom,
             translationTo: translation.translationTo,
-            transcriptionFrom: translation.transcriptionTo,
+            transcriptionFrom: translation.transcriptionFrom,
             transcriptionTo: translation.transcriptionTo,
             ttsLanguageFrom: language.language.from,
             ttsLanguageTo: language.language.to

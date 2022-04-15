@@ -12,6 +12,7 @@ struct MovappApp: App {
     
     let soundService = SoundService()
     let favoritesService = TranslationFavoritesService()
+    let favoritesProvider: TranslationFavoritesProvider
     let dictionaryDataStore = DictionaryDataStore()
     let alphabetDataStore = AlphabetDataStore()
     let forKidsDataStore = ForChildrenDataStore()
@@ -23,14 +24,16 @@ struct MovappApp: App {
         appearance.backgroundColor = UIColor(Color("colors/primary"))
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        
+        self.favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
     }
-    
 
     var body: some Scene {
         WindowGroup {
             RootContentView()
                 .environmentObject(soundService)
                 .environmentObject(favoritesService)
+                .environmentObject(favoritesProvider)
                 .environmentObject(dictionaryDataStore)
                 .environmentObject(alphabetDataStore)
                 .environmentObject(forKidsDataStore)

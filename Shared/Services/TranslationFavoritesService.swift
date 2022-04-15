@@ -16,7 +16,7 @@ class TranslationFavoritesService: ObservableObject {
     /**
      A map of favorited translations by language pack and translation id
      [language pack][translationId] = translation id
-     */
+    */
     @Published private(set) var favoritedTranslationsByLanguage: FavoritesTranslationsStore = [:] {
         didSet {
             UserDefaults.standard.setValue(favoritedTranslationsByLanguage, forKey: userDefaultsKey)

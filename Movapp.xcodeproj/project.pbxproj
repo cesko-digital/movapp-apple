@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		250E55E4280723E0004511EC /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E928060BE60036441E /* Languages.swift */; };
 		250E55E628072591004511EC /* Dictionary+UIExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250E55E528072591004511EC /* Dictionary+UIExamples.swift */; };
+		25A239862809B89800750977 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A239852809B89800750977 /* WidgetKit.framework */; };
+		25A239882809B89800750977 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25A239872809B89800750977 /* SwiftUI.framework */; };
+		25A2398B2809B89800750977 /* Movapp_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2398A2809B89800750977 /* Movapp_Widget.swift */; };
+		25A2398E2809B89900750977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A2398D2809B89900750977 /* Assets.xcassets */; };
+		25A239902809B89900750977 /* Movapp_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 25A2398C2809B89800750977 /* Movapp_Widget.intentdefinition */; };
+		25A239912809B89900750977 /* Movapp_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 25A2398C2809B89800750977 /* Movapp_Widget.intentdefinition */; };
+		25A239942809B89900750977 /* Movapp WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 25A239842809B89800750977 /* Movapp WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		25A239992809C41C00750977 /* DictionaryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068833527FF92E300E6B831 /* DictionaryDataStore.swift */; };
+		25A2399C2809C43400750977 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068833227FF903000E6B831 /* Dictionary.swift */; };
+		25A2399D2809C43800750977 /* SetLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066546D27FB7E0C002D5EDD /* SetLanguage.swift */; };
+		25A2399E2809C43C00750977 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066546B27FB7D3C002D5EDD /* Language.swift */; };
+		25A2399F2809C44400750977 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E928060BE60036441E /* Languages.swift */; };
+		25A239A02809C44B00750977 /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E728060B750036441E /* Flags.swift */; };
+		25A239A12809C6C200750977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B012799727F86957003FB72E /* Assets.xcassets */; };
 		4410E96D28044BD300688E9F /* ForChildrenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96C28044BD300688E9F /* ForChildrenItem.swift */; };
 		4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */; };
 		5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77295C280443B00087F582 /* ForChildrenItemView.swift */; };
@@ -50,8 +64,41 @@
 		B0ECC1502803485B00BF9898 /* AlphabetShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		25A239922809B89900750977 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B012799027F86954003FB72E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25A239832809B89800750977;
+			remoteInfo = "Movapp WidgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		25A239952809B89900750977 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				25A239942809B89900750977 /* Movapp WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		250E55E528072591004511EC /* Dictionary+UIExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+UIExamples.swift"; sourceTree = "<group>"; };
+		251A3A522809C9CC00937FAC /* Movapp (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Movapp (iOS).entitlements"; sourceTree = "<group>"; };
+		25A2397E2808883400750977 /* TranslationFavoritesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationFavoritesProvider.swift; sourceTree = "<group>"; };
+		25A239842809B89800750977 /* Movapp WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Movapp WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A239852809B89800750977 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		25A239872809B89800750977 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		25A2398A2809B89800750977 /* Movapp_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movapp_Widget.swift; sourceTree = "<group>"; };
+		25A2398C2809B89800750977 /* Movapp_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Movapp_Widget.intentdefinition; sourceTree = "<group>"; };
+		25A2398D2809B89900750977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25A2398F2809B89900750977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4410E96C28044BD300688E9F /* ForChildrenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenItem.swift; sourceTree = "<group>"; };
 		4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenDataStore.swift; sourceTree = "<group>"; };
 		5B77295C280443B00087F582 /* ForChildrenItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenItemView.swift; sourceTree = "<group>"; };
@@ -103,6 +150,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		25A239812809B89800750977 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25A239882809B89800750977 /* SwiftUI.framework in Frameworks */,
+				25A239862809B89800750977 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B012799927F86957003FB72E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,6 +169,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25A113072809CAFA00373699 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				25A2397E2808883400750977 /* TranslationFavoritesProvider.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		25A239892809B89800750977 /* Movapp Widget */ = {
+			isa = PBXGroup;
+			children = (
+				25A2398A2809B89800750977 /* Movapp_Widget.swift */,
+				25A2398C2809B89800750977 /* Movapp_Widget.intentdefinition */,
+				25A2398D2809B89900750977 /* Assets.xcassets */,
+				25A2398F2809B89900750977 /* Info.plist */,
+			);
+			path = "Movapp Widget";
+			sourceTree = "<group>";
+		};
 		B00D1B2827F9ADE30073611C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,12 +205,15 @@
 		B012798F27F86954003FB72E = {
 			isa = PBXGroup;
 			children = (
+				251A3A522809C9CC00937FAC /* Movapp (iOS).entitlements */,
 				B05FF14427FA28440046D636 /* Movapp--iOS--Info.plist */,
 				B066546A27FB7230002D5EDD /* Docs */,
 				B012799427F86954003FB72E /* Shared */,
 				B01279A327F86957003FB72E /* macOS */,
+				25A239892809B89800750977 /* Movapp Widget */,
 				B012799D27F86957003FB72E /* Products */,
 				B01279E027F88504003FB72E /* Frameworks */,
+				25A113072809CAFA00373699 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				B012799C27F86957003FB72E /* Movapp.app */,
+				25A239842809B89800750977 /* Movapp WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,6 +313,8 @@
 		B01279E027F88504003FB72E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25A239852809B89800750977 /* WidgetKit.framework */,
+				25A239872809B89800750977 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -306,6 +387,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		25A239832809B89800750977 /* Movapp WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25A239982809B89900750977 /* Build configuration list for PBXNativeTarget "Movapp WidgetExtension" */;
+			buildPhases = (
+				25A239802809B89800750977 /* Sources */,
+				25A239812809B89800750977 /* Frameworks */,
+				25A239822809B89800750977 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Movapp WidgetExtension";
+			productName = "Movapp WidgetExtension";
+			productReference = 25A239842809B89800750977 /* Movapp WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		B012799B27F86957003FB72E /* Movapp (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B01279AD27F86957003FB72E /* Build configuration list for PBXNativeTarget "Movapp (iOS)" */;
@@ -313,10 +411,12 @@
 				B012799827F86957003FB72E /* Sources */,
 				B012799927F86957003FB72E /* Frameworks */,
 				B012799A27F86957003FB72E /* Resources */,
+				25A239952809B89900750977 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				25A239932809B89900750977 /* PBXTargetDependency */,
 			);
 			name = "Movapp (iOS)";
 			productName = "Movapp (iOS)";
@@ -333,6 +433,9 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					25A239832809B89800750977 = {
+						CreatedOnToolsVersion = 13.3;
+					};
 					B012799B27F86957003FB72E = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -354,11 +457,21 @@
 			projectRoot = "";
 			targets = (
 				B012799B27F86957003FB72E /* Movapp (iOS) */,
+				25A239832809B89800750977 /* Movapp WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		25A239822809B89800750977 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25A239A12809C6C200750977 /* Assets.xcassets in Resources */,
+				25A2398E2809B89900750977 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B012799A27F86957003FB72E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,6 +485,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		25A239802809B89800750977 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25A239992809C41C00750977 /* DictionaryDataStore.swift in Sources */,
+				25A2398B2809B89800750977 /* Movapp_Widget.swift in Sources */,
+				25A2399A2809C42B00750977 /* TranslationFavoritesProvider.swift in Sources */,
+				25A2399D2809C43800750977 /* SetLanguage.swift in Sources */,
+				25A2399E2809C43C00750977 /* Language.swift in Sources */,
+				25A239902809B89900750977 /* Movapp_Widget.intentdefinition in Sources */,
+				25A239A02809C44B00750977 /* Flags.swift in Sources */,
+				25A2399C2809C43400750977 /* Dictionary.swift in Sources */,
+				25A2399F2809C44400750977 /* Languages.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B012799827F86957003FB72E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,6 +533,7 @@
 				B0C0F8E528060A310036441E /* ForChildrenRowView.swift in Sources */,
 				B0C0F8E828060B750036441E /* Flags.swift in Sources */,
 				B01279C627F870BF003FB72E /* RootItems.swift in Sources */,
+				25A239912809B89900750977 /* Movapp_Widget.intentdefinition in Sources */,
 				B0ECC1442802FDCC00BF9898 /* Alphabet.swift in Sources */,
 				4410E96D28044BD300688E9F /* ForChildrenItem.swift in Sources */,
 				B0E140E127FCE1DD008BBBB4 /* TranslationFavoritesService.swift in Sources */,
@@ -419,6 +549,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		25A239932809B89900750977 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25A239832809B89800750977 /* Movapp WidgetExtension */;
+			targetProxy = 25A239922809B89900750977 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B087C88727F8A3BD0015E54B /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -432,6 +570,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		25A239962809B89900750977 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8495ZSK6A6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Movapp Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Movapp Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.movapp.app.Movapp-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25A239972809B89900750977 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8495ZSK6A6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Movapp Widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Movapp Widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "cz.movapp.app.Movapp-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		B01279AB27F86957003FB72E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -546,9 +744,11 @@
 		B01279AE27F86957003FB72E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Movapp (iOS).entitlements";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8495ZSK6A6;
@@ -580,9 +780,11 @@
 		B01279AF27F86957003FB72E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Movapp (iOS).entitlements";
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -616,6 +818,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		25A239982809B89900750977 /* Build configuration list for PBXNativeTarget "Movapp WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25A239962809B89900750977 /* Debug */,
+				25A239972809B89900750977 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B012799327F86954003FB72E /* Build configuration list for PBXProject "Movapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

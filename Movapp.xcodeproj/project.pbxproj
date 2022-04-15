@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		250E55E4280723E0004511EC /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E928060BE60036441E /* Languages.swift */; };
 		250E55E628072591004511EC /* Dictionary+UIExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250E55E528072591004511EC /* Dictionary+UIExamples.swift */; };
+		25A2397F2808883400750977 /* TranslationFavoritesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2397E2808883400750977 /* TranslationFavoritesProvider.swift */; };
 		4410E96D28044BD300688E9F /* ForChildrenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96C28044BD300688E9F /* ForChildrenItem.swift */; };
 		4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */; };
 		5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77295C280443B00087F582 /* ForChildrenItemView.swift */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		250E55E528072591004511EC /* Dictionary+UIExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+UIExamples.swift"; sourceTree = "<group>"; };
+		25A2397E2808883400750977 /* TranslationFavoritesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationFavoritesProvider.swift; sourceTree = "<group>"; };
 		4410E96C28044BD300688E9F /* ForChildrenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenItem.swift; sourceTree = "<group>"; };
 		4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenDataStore.swift; sourceTree = "<group>"; };
 		5B77295C280443B00087F582 /* ForChildrenItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenItemView.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				B05FF14227FA14A00046D636 /* SoundService.swift */,
 				B0E140DB27FCCF2F008BBBB4 /* TranslationMatchService.swift */,
 				B0E140E027FCE1DD008BBBB4 /* TranslationFavoritesService.swift */,
+				25A2397E2808883400750977 /* TranslationFavoritesProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				250E55E4280723E0004511EC /* Languages.swift in Sources */,
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
 				B0ECC1482802FF2500BF9898 /* AlphabetExample.swift in Sources */,
+				25A2397F2808883400750977 /* TranslationFavoritesProvider.swift in Sources */,
 				B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */,
 				B0ECC14C2803431A00BF9898 /* Bundle+version.swift in Sources */,
 				B0E140E327FCE24F008BBBB4 /* DictionaryHeaderView.swift in Sources */,

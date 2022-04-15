@@ -30,14 +30,10 @@ struct DictionaryContentView: View {
     let translations: [Dictionary.TranslationID: Dictionary.Translation]
     let sectionTranslations: Array<Dictionary.Translation>?
     
-    @EnvironmentObject var favoritesService: TranslationFavoritesService
-    
+    @EnvironmentObject var favoritesProvider: TranslationFavoritesProvider
+   
     @Binding var selectedSection: Dictionary.Section?
     @State private var view: DictionaryContentSubView = .dictionary;
-    
-    // This serves as a cache for favorites because there is a requirement that unfavorited translation
-    // should stay visible until user switch modes to `dictionary` and back.
-    @State private var favoritesToDisplay: [Dictionary.TranslationID] = []
     
     init(
         searchString: String,
@@ -85,14 +81,6 @@ struct DictionaryContentView: View {
             } else {
                 translationsView
             }
-            
-        }.onChange(of: view) { viewType in
-            switch viewType {
-                case .favorites:
-                    $favoritesToDisplay.wrappedValue = favoritesService.getFavorites(language: language)
-                case .dictionary:
-                    $favoritesToDisplay.wrappedValue = []
-            }
         }
     }
     
@@ -104,7 +92,7 @@ struct DictionaryContentView: View {
         case .dictionary:
             visibleTranslations = sectionTranslations ?? Array(translations.values)
         case .favorites:
-            visibleTranslations = translations.filter(identifiers: favoritesToDisplay)
+            visibleTranslations = translations.filter(identifiers: favoritesProvider.getFavorites(language: language))
         }
         
         return TranslationsView(
@@ -120,6 +108,7 @@ struct DictionaryContentView_Previews: PreviewProvider {
     
     static let soundService = SoundService()
     static let favoritesService = TranslationFavoritesService()
+    static let favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
     
     static let translations: [Dictionary.TranslationID: Dictionary.Translation] = [
         exampleTranslation.id: exampleTranslation
@@ -135,6 +124,7 @@ struct DictionaryContentView_Previews: PreviewProvider {
         )
         .environmentObject(soundService)
         .environmentObject(favoritesService)
+        .environmentObject(favoritesProvider)
         
         DictionaryContentView(
             searchString: "",
@@ -145,5 +135,6 @@ struct DictionaryContentView_Previews: PreviewProvider {
         )
         .environmentObject(soundService)
         .environmentObject(favoritesService)
+        .environmentObject(favoritesProvider)
     }
 }

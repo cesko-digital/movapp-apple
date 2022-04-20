@@ -13,29 +13,7 @@
 		4410E96D28044BD300688E9F /* ForChildrenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96C28044BD300688E9F /* ForChildrenItem.swift */; };
 		4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */; };
 		44A09F0D28072DFE0072AC4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A09F0C28072DFE0072AC4A /* Assets.xcassets */; };
-		44A09F1328072DFF0072AC4A /* WatchMovapp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 44A09F1228072DFF0072AC4A /* WatchMovapp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		44A09F1828072DFF0072AC4A /* MovappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A09F1728072DFF0072AC4A /* MovappApp.swift */; };
-		44A09F1A28072DFF0072AC4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A09F1928072DFF0072AC4A /* ContentView.swift */; };
-		44A09F1C28072DFF0072AC4A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A09F1B28072DFF0072AC4A /* NotificationController.swift */; };
-		44A09F1E28072DFF0072AC4A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A09F1D28072DFF0072AC4A /* NotificationView.swift */; };
-		44A09F2028072DFF0072AC4A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A09F1F28072DFF0072AC4A /* ComplicationController.swift */; };
-		44A09F2228072E000072AC4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A09F2128072E000072AC4A /* Assets.xcassets */; };
-		44A09F2528072E000072AC4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A09F2428072E000072AC4A /* Preview Assets.xcassets */; };
 		44A09F2A28072E000072AC4A /* WatchMovapp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 44A09F0A28072DFC0072AC4A /* WatchMovapp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		44A09F33280730860072AC4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B012799727F86957003FB72E /* Assets.xcassets */; };
-		44A09F342807326E0072AC4A /* DictionaryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068833527FF92E300E6B831 /* DictionaryDataStore.swift */; };
-		44A09F35280734180072AC4A /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B068833227FF903000E6B831 /* Dictionary.swift */; };
-		44A09F36280734260072AC4A /* SetLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066546D27FB7E0C002D5EDD /* SetLanguage.swift */; };
-		44A09F37280734350072AC4A /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066546B27FB7D3C002D5EDD /* Language.swift */; };
-		44A09F382807343F0072AC4A /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E928060BE60036441E /* Languages.swift */; };
-		44A09F392807344A0072AC4A /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E728060B750036441E /* Flags.swift */; };
-		44B2A2D728082CED00964034 /* RootContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B2A2D628082CED00964034 /* RootContentView.swift */; };
-		44B2A2D8280833A400964034 /* RootItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279C527F870BF003FB72E /* RootItems.swift */; };
-		44B2A2DA2808395500964034 /* RootItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B2A2D92808395500964034 /* RootItemView.swift */; };
-		44B2A2DB2808411D00964034 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B087C88727F8A3BD0015E54B /* Localizable.strings */; };
-		44B2A2DE2808448200964034 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B2A2DD2808448200964034 /* DictionaryView.swift */; };
-		44B2A2E1280844A300964034 /* AlphabetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B2A2E0280844A300964034 /* AlphabetView.swift */; };
-		44B2A2E428084ABD00964034 /* ForChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B2A2E328084ABD00964034 /* ForChildrenView.swift */; };
 		5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77295C280443B00087F582 /* ForChildrenItemView.swift */; };
 		B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2427F9999C0073611C /* DictionaryContentView.swift */; };
 		B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */; };
@@ -76,13 +54,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		44A09F1428072DFF0072AC4A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B012799027F86954003FB72E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 44A09F1128072DFF0072AC4A;
-			remoteInfo = "WatchMovapp WatchKit Extension";
-		};
 		44A09F2828072E000072AC4A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B012799027F86954003FB72E /* Project object */;
@@ -110,7 +81,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				44A09F1328072DFF0072AC4A /* WatchMovapp WatchKit Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,7 +94,6 @@
 		4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenDataStore.swift; sourceTree = "<group>"; };
 		44A09F0A28072DFC0072AC4A /* WatchMovapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchMovapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A09F0C28072DFE0072AC4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		44A09F1228072DFF0072AC4A /* WatchMovapp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchMovapp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A09F1728072DFF0072AC4A /* MovappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappApp.swift; sourceTree = "<group>"; };
 		44A09F1928072DFF0072AC4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		44A09F1B28072DFF0072AC4A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -188,13 +157,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		44A09F0F28072DFF0072AC4A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B012799927F86957003FB72E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -329,7 +291,6 @@
 			children = (
 				B012799C27F86957003FB72E /* Movapp.app */,
 				44A09F0A28072DFC0072AC4A /* WatchMovapp.app */,
-				44A09F1228072DFF0072AC4A /* WatchMovapp WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -482,29 +443,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				44A09F1528072DFF0072AC4A /* PBXTargetDependency */,
 			);
 			name = WatchMovapp;
 			productName = WatchMovapp;
 			productReference = 44A09F0A28072DFC0072AC4A /* WatchMovapp.app */;
 			productType = "com.apple.product-type.application.watchapp2";
-		};
-		44A09F1128072DFF0072AC4A /* WatchMovapp WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 44A09F3128072E000072AC4A /* Build configuration list for PBXNativeTarget "WatchMovapp WatchKit Extension" */;
-			buildPhases = (
-				44A09F0E28072DFF0072AC4A /* Sources */,
-				44A09F0F28072DFF0072AC4A /* Frameworks */,
-				44A09F1028072DFF0072AC4A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "WatchMovapp WatchKit Extension";
-			productName = "WatchMovapp WatchKit Extension";
-			productReference = 44A09F1228072DFF0072AC4A /* WatchMovapp WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		B012799B27F86957003FB72E /* Movapp (iOS) */ = {
 			isa = PBXNativeTarget;
@@ -538,9 +481,6 @@
 					44A09F0928072DFC0072AC4A = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
-					44A09F1128072DFF0072AC4A = {
-						CreatedOnToolsVersion = 13.2.1;
-					};
 					B012799B27F86957003FB72E = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -563,7 +503,6 @@
 			targets = (
 				B012799B27F86957003FB72E /* Movapp (iOS) */,
 				44A09F0928072DFC0072AC4A /* WatchMovapp */,
-				44A09F1128072DFF0072AC4A /* WatchMovapp WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -574,17 +513,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				44A09F0D28072DFE0072AC4A /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		44A09F1028072DFF0072AC4A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				44A09F2528072E000072AC4A /* Preview Assets.xcassets in Resources */,
-				44B2A2DB2808411D00964034 /* Localizable.strings in Resources */,
-				44A09F33280730860072AC4A /* Assets.xcassets in Resources */,
-				44A09F2228072E000072AC4A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,30 +529,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		44A09F0E28072DFF0072AC4A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				44A09F1C28072DFF0072AC4A /* NotificationController.swift in Sources */,
-				44A09F1A28072DFF0072AC4A /* ContentView.swift in Sources */,
-				44A09F2028072DFF0072AC4A /* ComplicationController.swift in Sources */,
-				44A09F37280734350072AC4A /* Language.swift in Sources */,
-				44B2A2E428084ABD00964034 /* ForChildrenView.swift in Sources */,
-				44B2A2DE2808448200964034 /* DictionaryView.swift in Sources */,
-				44A09F392807344A0072AC4A /* Flags.swift in Sources */,
-				44A09F342807326E0072AC4A /* DictionaryDataStore.swift in Sources */,
-				44B2A2D728082CED00964034 /* RootContentView.swift in Sources */,
-				44B2A2D8280833A400964034 /* RootItems.swift in Sources */,
-				44B2A2E1280844A300964034 /* AlphabetView.swift in Sources */,
-				44A09F36280734260072AC4A /* SetLanguage.swift in Sources */,
-				44A09F35280734180072AC4A /* Dictionary.swift in Sources */,
-				44A09F1828072DFF0072AC4A /* MovappApp.swift in Sources */,
-				44B2A2DA2808395500964034 /* RootItemView.swift in Sources */,
-				44A09F1E28072DFF0072AC4A /* NotificationView.swift in Sources */,
-				44A09F382807343F0072AC4A /* Languages.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B012799827F86957003FB72E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -674,11 +578,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		44A09F1528072DFF0072AC4A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 44A09F1128072DFF0072AC4A /* WatchMovapp WatchKit Extension */;
-			targetProxy = 44A09F1428072DFF0072AC4A /* PBXContainerItemProxy */;
-		};
 		44A09F2928072E000072AC4A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 44A09F0928072DFC0072AC4A /* WatchMovapp */;
@@ -750,71 +649,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cz.movapp.app.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development cz.movapp.app.watchkitapp";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
-			};
-			name = Release;
-		};
-		44A09F2F28072E000072AC4A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WatchMovapp WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = DX7MV54CYW;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WatchMovapp WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "WatchMovapp WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cz.movapp.app.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.3;
-			};
-			name = Debug;
-		};
-		44A09F3028072E000072AC4A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WatchMovapp WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = DX7MV54CYW;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "WatchMovapp WatchKit Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "WatchMovapp WatchKit Extension";
-				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cz.movapp.app.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1009,15 +843,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		44A09F3128072E000072AC4A /* Build configuration list for PBXNativeTarget "WatchMovapp WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				44A09F2F28072E000072AC4A /* Debug */,
-				44A09F3028072E000072AC4A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		44A09F3228072E000072AC4A /* Build configuration list for PBXNativeTarget "WatchMovapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

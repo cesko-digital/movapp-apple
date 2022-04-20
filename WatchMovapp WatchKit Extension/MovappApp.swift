@@ -15,7 +15,5 @@ struct MovappApp: App {
                 RootContentView()
             }
         }
-        
-        WKNotificationScene(controller: NotificationController.self, category: "myCategory")
     }
 }

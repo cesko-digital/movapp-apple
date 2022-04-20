@@ -16,8 +16,6 @@
 		44A09F1328072DFF0072AC4A /* WatchMovapp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 44A09F1228072DFF0072AC4A /* WatchMovapp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		44A09F1828072DFF0072AC4A /* MovappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A09F1728072DFF0072AC4A /* MovappApp.swift */; };
 		44A09F1A28072DFF0072AC4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A09F1928072DFF0072AC4A /* ContentView.swift */; };
-		44A09F1C28072DFF0072AC4A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A09F1B28072DFF0072AC4A /* NotificationController.swift */; };
-		44A09F1E28072DFF0072AC4A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A09F1D28072DFF0072AC4A /* NotificationView.swift */; };
 		44A09F2028072DFF0072AC4A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A09F1F28072DFF0072AC4A /* ComplicationController.swift */; };
 		44A09F2228072E000072AC4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A09F2128072E000072AC4A /* Assets.xcassets */; };
 		44A09F2528072E000072AC4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44A09F2428072E000072AC4A /* Preview Assets.xcassets */; };
@@ -127,13 +125,10 @@
 		44A09F1228072DFF0072AC4A /* WatchMovapp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchMovapp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A09F1728072DFF0072AC4A /* MovappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappApp.swift; sourceTree = "<group>"; };
 		44A09F1928072DFF0072AC4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		44A09F1B28072DFF0072AC4A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		44A09F1D28072DFF0072AC4A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		44A09F1F28072DFF0072AC4A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		44A09F2128072E000072AC4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44A09F2428072E000072AC4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		44A09F2628072E000072AC4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		44A09F2728072E000072AC4A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		44B2A2D628082CED00964034 /* RootContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContentView.swift; sourceTree = "<group>"; };
 		44B2A2D92808395500964034 /* RootItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootItemView.swift; sourceTree = "<group>"; };
 		44B2A2DD2808448200964034 /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
@@ -222,12 +217,9 @@
 				44B2A2D428082C9D00964034 /* Root */,
 				44A09F1728072DFF0072AC4A /* MovappApp.swift */,
 				44A09F1928072DFF0072AC4A /* ContentView.swift */,
-				44A09F1B28072DFF0072AC4A /* NotificationController.swift */,
-				44A09F1D28072DFF0072AC4A /* NotificationView.swift */,
 				44A09F1F28072DFF0072AC4A /* ComplicationController.swift */,
 				44A09F2128072E000072AC4A /* Assets.xcassets */,
 				44A09F2628072E000072AC4A /* Info.plist */,
-				44A09F2728072E000072AC4A /* PushNotificationPayload.apns */,
 				44A09F2328072E000072AC4A /* Preview Content */,
 			);
 			path = "WatchMovapp WatchKit Extension";
@@ -605,7 +597,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44A09F1C28072DFF0072AC4A /* NotificationController.swift in Sources */,
 				44A09F1A28072DFF0072AC4A /* ContentView.swift in Sources */,
 				44A09F2028072DFF0072AC4A /* ComplicationController.swift in Sources */,
 				44A09F37280734350072AC4A /* Language.swift in Sources */,
@@ -620,7 +611,6 @@
 				44A09F35280734180072AC4A /* Dictionary.swift in Sources */,
 				44A09F1828072DFF0072AC4A /* MovappApp.swift in Sources */,
 				44B2A2DA2808395500964034 /* RootItemView.swift in Sources */,
-				44A09F1E28072DFF0072AC4A /* NotificationView.swift in Sources */,
 				44A09F382807343F0072AC4A /* Languages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

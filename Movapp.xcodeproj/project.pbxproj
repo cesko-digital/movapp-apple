@@ -570,7 +570,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = cz.movapp.app;
 				PRODUCT_NAME = Movapp;
 				PROVISIONING_PROFILE_SPECIFIER = "match Development cz.movapp.app";
@@ -605,7 +605,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = cz.movapp.app;
 				PRODUCT_NAME = Movapp;
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore cz.movapp.app";

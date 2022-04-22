@@ -52,14 +52,14 @@ enum TranslationMatchService {
         
         for translation in translations {
             
-            let source = language.flipFromWithTo ? [
-                translation.translationTo,
-                translation.transcriptionTo,
-            ] : [
-                
+            let source = [
                 translation.translationFrom,
-                translation.transcriptionFrom
+                translation.translationTo
             ]
+            // TODO:
+            // First rank - favorite
+            // Second rank - exact word match
+            // Third rank - match distance
             
             let distance = getMatchDistance(searchString: searchString, strings: source, languagePrefix: languagePrefix)
             

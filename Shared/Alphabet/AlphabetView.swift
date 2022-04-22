@@ -43,6 +43,7 @@ struct AlphabetView: View {
             
             Spacer(minLength: 0)
         }
+        .background(Color("colors/item"))
         .onChange(of: selectedLanguage) { _ in
             dataStore.reset()
         }

@@ -23,7 +23,10 @@ struct ForChildrenView: View {
             } else {
                 errorOrLoadView
             }
-        }.onAppear(perform: loadData)
+        }
+        
+        .background(Color("colors/item"))
+        .onAppear(perform: loadData)
     }
     
     var errorOrLoadView: some View {

@@ -98,7 +98,8 @@ struct DictionaryContentView: View {
         return TranslationsView(
             language: language,
             searchString: searchString,
-            translations: visibleTranslations
+            translations: visibleTranslations,
+            matchService: TranslationMatchService(favoritesService: self.favoritesProvider.favoritesService)
         )
     }
     

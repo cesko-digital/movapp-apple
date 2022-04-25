@@ -15,14 +15,16 @@ struct TranslationsView: View {
     init (
         language: SetLanguage,
         searchString: String,
-        translations: [Dictionary.Translation])
+        translations: [Dictionary.Translation],
+        matchService: TranslationMatchService
+    )
     {
         self.language = language
         
         if searchString.isEmpty {
             showTranslations = translations
         } else {
-            showTranslations = TranslationMatchService.matchTranslations(translations, searchString: searchString, language: language)
+            showTranslations = matchService.matchTranslations(translations, searchString: searchString, language: language)
         }
     }
     
@@ -45,6 +47,7 @@ struct TranslationsView: View {
 struct TranslationsView_Previews: PreviewProvider {
     static let soundService = SoundService()
     static let favoritesService = TranslationFavoritesService()
+    static let matchService = TranslationMatchService(favoritesService: favoritesService)
     
     static var previews: some View {
         TranslationsView(
@@ -52,7 +55,8 @@ struct TranslationsView_Previews: PreviewProvider {
             searchString: "",
             translations: [
                 exampleTranslation,
-            ]
+            ],
+            matchService: matchService
         )
         .environmentObject(soundService)
         .environmentObject(favoritesService)
@@ -62,7 +66,8 @@ struct TranslationsView_Previews: PreviewProvider {
             searchString: "",
             translations: [
                 exampleTranslation
-            ]
+            ],
+            matchService: matchService
         )
         .environmentObject(soundService)
         .environmentObject(favoritesService)

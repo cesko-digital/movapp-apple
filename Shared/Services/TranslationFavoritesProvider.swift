@@ -16,7 +16,7 @@ import Foundation
 ///     - Use service if you need to re-render your view on each change. Otherwise use provider.
 final class TranslationFavoritesProvider: ObservableObject {
     
-    private let favoritesService: TranslationFavoritesService
+    let favoritesService: TranslationFavoritesService
     
     init(favoritesService: TranslationFavoritesService) {
         self.favoritesService = favoritesService

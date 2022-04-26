@@ -109,6 +109,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D9BEC7C281814D700C1636B /* Movapp (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Movapp (iOS).entitlements"; sourceTree = "<group>"; };
 		250E55E528072591004511EC /* Dictionary+UIExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+UIExamples.swift"; sourceTree = "<group>"; };
 		25A2397E2808883400750977 /* TranslationFavoritesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationFavoritesProvider.swift; sourceTree = "<group>"; };
 		4410E96C28044BD300688E9F /* ForChildrenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenItem.swift; sourceTree = "<group>"; };
@@ -274,6 +275,7 @@
 		B012798F27F86954003FB72E = {
 			isa = PBXGroup;
 			children = (
+				0D9BEC7C281814D700C1636B /* Movapp (iOS).entitlements */,
 				B05FF14427FA28440046D636 /* Movapp--iOS--Info.plist */,
 				B066546A27FB7230002D5EDD /* Docs */,
 				B012799427F86954003FB72E /* Shared */,
@@ -920,6 +922,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Movapp (iOS).entitlements";
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -952,6 +955,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = "Movapp (iOS).entitlements";
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Introspect
 
 struct AlphabetView: View {
     @EnvironmentObject var dataStore: AlphabetDataStore
@@ -21,6 +21,12 @@ struct AlphabetView: View {
             }
             .pickerStyle(.segmented)
             .padding()
+            .background(Color("colors/primary"))
+            .introspectSegmentedControl { control in
+                control.setTitleTextAttributes([.foregroundColor: UIColor(white: 1, alpha: 0.8)], for: .normal)
+                
+                control.setTitleTextAttributes([.foregroundColor: UIColor.black], for: .selected)
+            }
             
             if let alphabet = dataStore.alphabet {
                 ScrollViewReader { proxy in

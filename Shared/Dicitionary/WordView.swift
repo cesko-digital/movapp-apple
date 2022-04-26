@@ -9,8 +9,6 @@ import SwiftUI
 
 struct WordView: View {
     
-    @EnvironmentObject var soundService: SoundService
-    
     let language: Languages
     let text: String
     let transcription: String
@@ -35,13 +33,7 @@ struct WordView: View {
             
             Spacer()
             
-            Image(systemName: soundService.isPlaying ? "stop.circle" : "play.circle")
-                .resizable()
-                .foregroundColor(Color("colors/action"))
-                .frame(width: 30, height: 30)
-                .onTapGesture {
-                    soundService.speach(language: language, text: text)
-                }
+            SpeakButtonView(language: language, text: text)
             
         }.frame(maxWidth: .infinity)
     }

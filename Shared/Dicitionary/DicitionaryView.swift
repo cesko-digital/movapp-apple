@@ -12,20 +12,14 @@ struct DicitionaryView: View {
     
     @State private var searchString: String = ""
     @State private var selectedSection: Dictionary.Section? = nil
-    @State private var selectedLanguage: SetLanguage = .csUk
+    
+    let selectedLanguage: SetLanguage
     
     @EnvironmentObject var dataStore: DictionaryDataStore
     
     var body: some View {
         VStack (spacing: 0) {
-            DictionaryHeaderView(searchString: $searchString, selectedLanguage: $selectedLanguage)
-                .onChange(of: selectedLanguage) { [selectedLanguage] newLanguage in
-                    
-                    if newLanguage.language.dictionaryFilePrefix != selectedLanguage.language.dictionaryFilePrefix {
-                        dataStore.reload()
-                        // TODO TEST, this code should force new load
-                    }
-                }
+            DictionaryHeaderView(searchString: $searchString)
             
             if let dictionary = dataStore.dictionary {
                 DictionaryContentView(
@@ -70,7 +64,7 @@ struct DicitionaryView_Previews: PreviewProvider {
     static let dataStore = DictionaryDataStore()
     
     static var previews: some View {
-        DicitionaryView()
+        DicitionaryView(selectedLanguage: .csUk)
             .environmentObject(dataStore)
     }
 }

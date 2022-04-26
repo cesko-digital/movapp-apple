@@ -10,6 +10,13 @@
 /* TabBar Menu */
 "tabbar.menu" = "Menu";
 
+"language.cs-uk" = "Ukrajinštinu";
+"language.uk-cs" = "Češtinu";
+
+"menu.section.settings.header" = "Settings";
+
+"menu.section.settings.learn" = "Want to learn";
+
 "menu.section.about_project.header" = "About the project";
 
 "menu.section.about_app.header" = "About the app";

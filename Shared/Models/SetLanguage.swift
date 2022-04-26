@@ -30,11 +30,11 @@ struct SetLanguage: Identifiable {
             fromTo = fromTo.reversed()
         }
         
-        id = fromTo.joined(separator: "->")
+        id = fromTo.joined(separator: "-")
     }
     
     var title: String {
-        return id
+        return "language.\(id)"
     }
     
     var languagePrefix: Languages {

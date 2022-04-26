@@ -17,9 +17,11 @@ extension View {
 }
 
 struct RootContentView: View {
+    @EnvironmentObject var languageService: LanguageService
+    
     var body: some View {
         TabView {
-            DicitionaryView()
+            DicitionaryView(selectedLanguage: languageService.currentLanguage)
                 .setTabItem(RootItems.dictionary)
             
             AlphabetView()
@@ -28,7 +30,7 @@ struct RootContentView: View {
             ForChildrenView()
                 .setTabItem(RootItems.for_chidlren)
             
-            MenuView()
+            MenuView(selectedLanguage: languageService.currentLanguage)
                 .setTabItem(RootItems.menu)
         }
     }

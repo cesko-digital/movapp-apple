@@ -7,8 +7,9 @@
 
 import SwiftUI
 
-struct MenuView: View {
 
+struct MenuView: View {
+    
     var body: some View {
         
         List {
@@ -18,28 +19,26 @@ struct MenuView: View {
         }
     }
     
+    func openLinkButton (_ title: String, url: String) -> some View {
+        Button {
+            openUrl(url)
+        } label: {
+            HStack {
+                Text(title)
+                Spacer()
+                Image(systemName: "chevron.right")
+            }
+        }
+    }
+    
     private var projectSection: some View {
         Section {
-            
-            Button("Web") {
-                openUrl("https://movapp.cz")
-            }
-            
-            Button("Twitter") {
-                openUrl("https://twitter.com/movappcz")
-            }
-            
-            Button("Facebook") {
-                openUrl("https://www.facebook.com/movappcz")
-            }
-            
-            Button("Instagram") {
-                openUrl("https://www.instagram.com/movappcz/")
-            }
-            
-            Button("LinkedIn") {
-                openUrl("https://www.linkedin.com/company/movapp-cz/")
-            }
+            openLinkButton("Web", url: "https://movapp.cz")
+            openLinkButton("Twitter", url: "https://twitter.com/movappcz")
+            openLinkButton("Facebook", url: "https://www.facebook.com/movappcz")
+            openLinkButton("Instagram", url: "https://www.instagram.com/movappcz/")
+            openLinkButton("LinkedIn", url: "https://www.linkedin.com/company/movapp-cz")
+            openLinkButton("Web", url: "https://movapp.cz")
             
         } header: {
             Image("logo")
@@ -53,15 +52,9 @@ struct MenuView: View {
     
     private var appSection: some View {
         Section {
+            openLinkButton(String(localized: "menu.section.about_app.want_help"), url: "https://github.com/cesko-digital/movapp-apple")
             
-            Button("menu.section.about_app.want_help") {
-                openUrl("https://github.com/cesko-digital/movapp-apple")
-            }
-            
-            Button("menu.section.about_app.license") {
-                openUrl("https://github.com/cesko-digital/movapp-apple/blob/main/LICENSE")
-            }
-            
+            openLinkButton(String(localized: "menu.section.about_app.license"), url: "https://github.com/cesko-digital/movapp-apple/blob/main/LICENSE")
         } header: {
             Text("menu.section.about_app.header")
         } footer: {
@@ -71,14 +64,9 @@ struct MenuView: View {
     
     private var partnerSection: some View {
         Section {
+            openLinkButton("Stojíme za Ukrajinou", url: "https://www.stojimezaukrajinou.cz/")
             
-            Button("Stojíme za Ukrajinou") {
-                openUrl("https://www.stojimezaukrajinou.cz/")
-            }
-            
-            Button("Umapa") {
-                openUrl("https://www.umapa.eu/")
-            }
+            openLinkButton("Umapa", url: "https://www.umapa.eu/")
             
         } header: {
             Text("menu.section.partner_projects.header")

@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct AlphabetItemView: View {
-    @EnvironmentObject var soundService: SoundService
-    
     let item: AlphabetItem
     let language: Languages
     
@@ -29,13 +27,7 @@ struct AlphabetItemView: View {
                     .foregroundColor(Color("colors/text"))
                 
                 if item.fileName != nil {
-                    Image(systemName: soundService.isPlaying ? "stop.circle" : "play.circle")
-                        .resizable()
-                        .foregroundColor(Color("colors/action"))
-                        .frame(width: 52, height: 52)
-                        .onTapGesture {
-                            soundService.play(item.id, inDirectory: soundsDirectory)
-                        }
+                    PlayButtonView(id: item.id, inDirectory: soundsDirectory)
                 }
                 
                 Text(item.transcription)
@@ -55,13 +47,8 @@ struct AlphabetItemView: View {
                         
                         Spacer()
                         
-                        Image(systemName: soundService.isPlaying ? "stop.circle" : "play.circle")
-                            .resizable()
-                            .foregroundColor(Color("colors/action"))
-                            .frame(width: 30, height: 30)
-                            .onTapGesture {
-                                soundService.speach(language: language, text: example.example)
-                            }
+                        SpeakButtonView(language: language, text: example.example)
+                        
                     }
                     .frame(maxWidth: .infinity)
                 }

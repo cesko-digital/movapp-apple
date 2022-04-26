@@ -39,6 +39,9 @@
 		B01279D027F872C3003FB72E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279CF27F872C3003FB72E /* MenuView.swift */; };
 		B01279D327F872CB003FB72E /* ForChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279D227F872CB003FB72E /* ForChildrenView.swift */; };
 		B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279D527F872D2003FB72E /* AlphabetView.swift */; };
+		B03B1BC828186E2E005C62C3 /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BC728186E2E005C62C3 /* PlayButtonView.swift */; };
+		B03B1BCA28186F7A005C62C3 /* SpeakButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BC928186F7A005C62C3 /* SpeakButtonView.swift */; };
+		B03B1BCC28186F8D005C62C3 /* SoundStateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */; };
 		B05FF14327FA14A00046D636 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF14227FA14A00046D636 /* SoundService.swift */; };
 		B066546C27FB7D3C002D5EDD /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066546B27FB7D3C002D5EDD /* Language.swift */; };
 		B066546E27FB7E0C002D5EDD /* SetLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066546D27FB7E0C002D5EDD /* SetLanguage.swift */; };
@@ -141,6 +144,9 @@
 		B01279CF27F872C3003FB72E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		B01279D227F872CB003FB72E /* ForChildrenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenView.swift; sourceTree = "<group>"; };
 		B01279D527F872D2003FB72E /* AlphabetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetView.swift; sourceTree = "<group>"; };
+		B03B1BC728186E2E005C62C3 /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
+		B03B1BC928186F7A005C62C3 /* SpeakButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakButtonView.swift; sourceTree = "<group>"; };
+		B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundStateButtonView.swift; sourceTree = "<group>"; };
 		B05FF13D27F9F19F0046D636 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B05FF14227FA14A00046D636 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		B05FF14427FA28440046D636 /* Movapp--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Movapp--iOS--Info.plist"; sourceTree = "<group>"; };
@@ -424,6 +430,9 @@
 			isa = PBXGroup;
 			children = (
 				B076F0972806011500C1F88F /* CardView.swift */,
+				B03B1BC728186E2E005C62C3 /* PlayButtonView.swift */,
+				B03B1BC928186F7A005C62C3 /* SpeakButtonView.swift */,
+				B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -611,12 +620,14 @@
 				B01279A727F86957003FB72E /* RootContentView.swift in Sources */,
 				B087C89527F8B46A0015E54B /* TranslationsView.swift in Sources */,
 				B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */,
+				B03B1BCA28186F7A005C62C3 /* SpeakButtonView.swift in Sources */,
 				B0ECC1402802FC6F00BF9898 /* AlphabetItemView.swift in Sources */,
 				B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */,
 				B066546C27FB7D3C002D5EDD /* Language.swift in Sources */,
 				B068833627FF92E300E6B831 /* DictionaryDataStore.swift in Sources */,
 				B076F0982806011500C1F88F /* CardView.swift in Sources */,
 				B066546E27FB7E0C002D5EDD /* SetLanguage.swift in Sources */,
+				B03B1BC828186E2E005C62C3 /* PlayButtonView.swift in Sources */,
 				B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */,
 				B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */,
 				5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */,
@@ -643,6 +654,7 @@
 				B068833327FF903000E6B831 /* Dictionary.swift in Sources */,
 				B087C89127F8B41B0015E54B /* TranslationView.swift in Sources */,
 				B01279D327F872CB003FB72E /* ForChildrenView.swift in Sources */,
+				B03B1BCC28186F8D005C62C3 /* SoundStateButtonView.swift in Sources */,
 				B0ECC1422802FD3C00BF9898 /* AlphabetDataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

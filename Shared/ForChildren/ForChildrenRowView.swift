@@ -26,8 +26,6 @@ private extension Text {
 }
 
 struct ForChildrenRowView: View {
-    @EnvironmentObject var soundService: SoundService
-    
     let translation: String
     let transcription: String
     let language: Languages
@@ -50,14 +48,7 @@ struct ForChildrenRowView: View {
                     .foregroundColor(Color("colors/secondary"))
             }
             Spacer()
-            // TODO custom Image (PlayButton)
-            Image(systemName: soundService.isPlaying ? "stop.circle" : "play.circle")
-                .resizable()
-                .foregroundColor(Color("colors/action"))
-                .frame(width: 30, height: 30)
-                .onTapGesture {
-                    soundService.speach(language: language, text: translation)
-                }
+            SpeakButtonView(language: language, text: translation)
         }
     }
 }

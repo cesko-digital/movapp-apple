@@ -18,11 +18,22 @@ class SoundService: NSObject, ObservableObject {
     @Published var isPlaying: Bool = false
     
     var isSpeaking = false
+    private var isSpeakingText: String?
+    
     var isPlayingSound = false
+    private var isPlayingSoundId: String?
     
     override init () {
         super.init()
         synthesizer.delegate = self
+    }
+    
+    func isPlaying (id: String) -> Bool {
+        return isPlayingSoundId?.compare(id) == .orderedSame
+    }
+    
+    func isSpeaking (text: String) -> Bool {
+        return isSpeakingText?.compare(text) == .orderedSame
     }
     
     
@@ -47,46 +58,14 @@ class SoundService: NSObject, ObservableObject {
             player.play()
             
             isPlayingSound = true
+            isPlayingSoundId = id
+            
             on()
             
         } catch {
             print("Failed to play \(id) - \(error.localizedDescription)")
         }
     }
-    
-    /**
-     Plays given sound and expects a file name with extension to correctly find it in bundle.
-     **NOT working!**
-     */
-    func playNotWorking (_ fileName: String, inDirectory: String) {
-        stop()
-        
-        let splitted = fileName.split(separator: ".")
-        
-        if splitted.count != 2 {
-            print("Invalid file - no extension \(fileName)")
-            return
-        }
-        
-        let file = String(splitted.first!)
-        let fileExtension = String(splitted.last!)
-        
-        guard let path = Bundle.main.path(forResource:file , ofType:fileExtension , inDirectory: inDirectory) else {
-            print("File does not exists \(fileName) in \(inDirectory)")
-            return
-        }
-        
-        do {
-            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-            
-            player!.play()
-            isPlayingSound = true
-            on()
-        } catch {
-            print("Failed to play \(fileName) - \(error.localizedDescription)")
-        }
-    }
-    
     
     // https://developer.apple.com/documentation/avfoundation/speech_synthesis#overview
     func speach(language: Languages, text: String) {
@@ -100,6 +79,7 @@ class SoundService: NSObject, ObservableObject {
         // Assign the voice to the utterance.
         utterance.voice = voice
         
+        isSpeakingText = text
         
         // Tell the synthesizer to speak the utterance.
         synthesizer.speak(utterance)
@@ -125,9 +105,14 @@ class SoundService: NSObject, ObservableObject {
     }
     
     private func off () {
-        isPlaying = false
         isSpeaking = false
         isPlayingSound = false
+        
+        isSpeakingText = nil
+        isPlayingSoundId = nil
+        
+        // Trigger change
+        isPlaying = false
         
         try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
     }

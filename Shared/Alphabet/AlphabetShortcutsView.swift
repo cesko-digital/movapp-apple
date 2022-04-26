@@ -19,14 +19,20 @@ struct AlphabetShortcutsView: View {
     var body: some View {
         VStack {
             ForEach(items, id: \.id) { item in
-                Text(item.letters.first!!)
-                    .padding(.trailing, 2)
-                    .padding(.leading, 4)
-                    .font(.system(size: 11).bold())
-                    .foregroundColor(.accentColor)
-                    .background(dragObserver(item: item))
+                HStack(alignment: .center, spacing: 0) {
+                    Text(item.letters.first!!.uppercased())
+                        .font(.system(size: 11).bold())
+                        .foregroundColor(.accentColor)
+                        .padding(.leading, 2)
+                        .frame(width: 20, alignment: .center)
+                }
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .background(dragObserver(item: item))
             }
         }
+        // Prevent scrolling on the side to prevent bad UX
+        .frame(width: 28)
+        .frame(maxHeight: .infinity)
         .gesture(
             DragGesture(minimumDistance: 0, coordinateSpace: .global)
                 .updating($dragLocation) { value, state, _ in

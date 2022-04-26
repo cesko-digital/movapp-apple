@@ -20,24 +20,49 @@ struct RootContentView: View {
     @EnvironmentObject var languageService: LanguageService
     
     var body: some View {
-        TabView {
-            DicitionaryView(selectedLanguage: languageService.currentLanguage)
-                .setTabItem(RootItems.dictionary)
+        ZStack(alignment: .top) {
             
-            AlphabetView()
-                .setTabItem(RootItems.alphabet)
+            TabView {
+                DicitionaryView(selectedLanguage: languageService.currentLanguage)
+                    .setTabItem(RootItems.dictionary)
+                
+                AlphabetView()
+                    .setTabItem(RootItems.alphabet)
+                
+                ForChildrenView()
+                    .setTabItem(RootItems.for_chidlren)
+                
+                MenuView(selectedLanguage: languageService.currentLanguage)
+                    .setTabItem(RootItems.menu)
+            }
             
-            ForChildrenView()
-                .setTabItem(RootItems.for_chidlren)
-            
-            MenuView(selectedLanguage: languageService.currentLanguage)
-                .setTabItem(RootItems.menu)
+            // Add background under the status bar to ensure that status bar can be .lightContent
+            // https://designcode.io/swiftui-handbook-status-bar-background-on-scroll
+            Rectangle()
+                .foregroundColor(Color("colors/primary"))
+                .ignoresSafeArea()
+                .frame(height: 0)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    static let soundService = SoundService()
+    static let favoritesService = TranslationFavoritesService()
+    static let favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
+    static let dictionaryDataStore = DictionaryDataStore()
+    static let alphabetDataStore = AlphabetDataStore()
+    static let forKidsDataStore = ForChildrenDataStore()
+    static let languageService = LanguageService(dictionaryDataStore: dictionaryDataStore)
+    
     static var previews: some View {
         RootContentView()
+            .environmentObject(soundService)
+            .environmentObject(favoritesService)
+            .environmentObject(favoritesProvider)
+            .environmentObject(dictionaryDataStore)
+            .environmentObject(alphabetDataStore)
+            .environmentObject(forKidsDataStore)
+            .environmentObject(languageService)
     }
 }

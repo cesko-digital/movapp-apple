@@ -43,6 +43,7 @@
 		B03B1BCA28186F7A005C62C3 /* SpeakButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BC928186F7A005C62C3 /* SpeakButtonView.swift */; };
 		B03B1BCC28186F8D005C62C3 /* SoundStateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */; };
 		B03B1BD1281889CF005C62C3 /* LanguageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BD0281889CF005C62C3 /* LanguageService.swift */; };
+		B03B1BCF28187F51005C62C3 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = B03B1BCE28187F51005C62C3 /* Introspect */; };
 		B05FF14327FA14A00046D636 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF14227FA14A00046D636 /* SoundService.swift */; };
 		B066546C27FB7D3C002D5EDD /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066546B27FB7D3C002D5EDD /* Language.swift */; };
 		B066546E27FB7E0C002D5EDD /* SetLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066546D27FB7E0C002D5EDD /* SetLanguage.swift */; };
@@ -195,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03B1BCF28187F51005C62C3 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +520,9 @@
 				444E97142812DF8F00DC6F8B /* PBXTargetDependency */,
 			);
 			name = "Movapp (iOS)";
+			packageProductDependencies = (
+				B03B1BCE28187F51005C62C3 /* Introspect */,
+			);
 			productName = "Movapp (iOS)";
 			productReference = B012799C27F86957003FB72E /* Movapp.app */;
 			productType = "com.apple.product-type.application";
@@ -554,6 +559,9 @@
 				Base,
 			);
 			mainGroup = B012798F27F86954003FB72E;
+			packageReferences = (
+				B03B1BCD28187F51005C62C3 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = B012799D27F86957003FB72E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1039,6 +1047,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B03B1BCD28187F51005C62C3 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = exactVersion;
+				version = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B03B1BCE28187F51005C62C3 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B03B1BCD28187F51005C62C3 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B012799027F86954003FB72E /* Project object */;
 }

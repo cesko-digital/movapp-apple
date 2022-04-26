@@ -50,5 +50,6 @@ struct DictionaryHeaderView: View {
 struct DictionaryHeaderView_Previews: PreviewProvider {
     static var previews: some View {
         DictionaryHeaderView(searchString: .constant("Test"))
+            .previewLayout(.sizeThatFits)
     }
 }

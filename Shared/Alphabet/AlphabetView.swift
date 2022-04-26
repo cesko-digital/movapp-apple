@@ -26,14 +26,14 @@ struct AlphabetView: View {
                 ScrollViewReader { proxy in
                     ScrollView(showsIndicators: false) {
                         LazyVStack (spacing: 10) {
-                            ForEach(alphabet.data, id: \.id) { item in
+                            ForEach(alphabet.items, id: \.id) { item in
                                 AlphabetItemView(item: item, language: selectedLanguage.languagePrefix)
                             }
                         }
                     }
                     .overlay {
                         // Based on https://www.fivestars.blog/articles/section-title-index-swiftui/
-                        AlphabetShortcutsView(items: dataStore.alphabet!.data, proxy: proxy)
+                        AlphabetShortcutsView(items: alphabet.cleanItems, proxy: proxy)
                             .frame(maxWidth: .infinity, alignment: .trailing)
                     }
                 }

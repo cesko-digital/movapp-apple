@@ -17,11 +17,6 @@ struct AccordionHeaderView: View {
             if selectedSection != nil {
                 Image(systemName: "chevron.left")
                     .foregroundColor(Color("colors/secondary"))
-                    .onTapGesture {
-                        withAnimation(.spring()) {
-                            selectedSection = nil
-                        }
-                    }
                 
                 
                 let text = selectedSection!.text(language: language)
@@ -31,7 +26,13 @@ struct AccordionHeaderView: View {
                     .lineLimit(1)
                 Spacer()
             }
-        }.frame(maxWidth: .infinity)
+        }
+        .frame(maxWidth: .infinity)
+        .onTapGesture {
+            withAnimation(.spring()) {
+                selectedSection = nil
+            }
+        }
     }
 }
 

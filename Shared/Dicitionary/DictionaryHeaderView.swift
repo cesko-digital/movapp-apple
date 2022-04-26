@@ -11,7 +11,6 @@ import SwiftUI
 
 struct DictionaryHeaderView: View {
     @Binding var searchString: String
-    @Binding var selectedLanguage: SetLanguage
     
     var body: some View {
         HStack (spacing: 5) {
@@ -38,13 +37,6 @@ struct DictionaryHeaderView: View {
                     }
                 )
             }
-            
-            Picker("Select language", selection: $selectedLanguage) {
-                ForEach(SetLanguage.allCases, id: \.self) { value in
-                    Text(value.title)
-                        .tag(value)
-                }
-            }
         }
         .padding(.horizontal, 10)
         .frame(height: 52)
@@ -57,6 +49,6 @@ struct DictionaryHeaderView: View {
 
 struct DictionaryHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        DictionaryHeaderView(searchString: .constant("Test"), selectedLanguage: .constant(.csUk))
+        DictionaryHeaderView(searchString: .constant("Test"))
     }
 }

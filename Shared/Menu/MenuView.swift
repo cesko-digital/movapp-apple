@@ -7,15 +7,56 @@
 
 import SwiftUI
 
-
 struct MenuView: View {
+    @State var selectedLanguage: SetLanguage = .csUk;
+    
+    @EnvironmentObject var languageService: LanguageService
+    
+    init (selectedLanguage: SetLanguage) {
+        self.selectedLanguage = selectedLanguage
+    }
     
     var body: some View {
         
-        List {
-            projectSection
-            appSection
-            partnerSection
+        NavigationView {
+            
+            List {
+                settingsSection
+                projectSection
+                appSection
+                partnerSection
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(true)
+            .navigationTitle("tabbar.menu")
+        }
+    }
+    
+    private var settingsSection: some View {
+        Section {
+            
+            Picker("menu.section.settings.learn", selection: $selectedLanguage) {
+                ForEach(SetLanguage.allCases, id: \.self) { value in
+                    Text(LocalizedStringKey(value.title))
+                        .tag(value)
+                }
+                .navigationTitle("menu.section.settings.learn")
+            }
+            .onChange(of: selectedLanguage) { newLanguage in
+                
+                languageService.currentLanguage = newLanguage
+            }
+            
+            
+        } header: {
+            Image("logo")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(maxWidth: .infinity)
+            
+            Text("menu.section.settings.header")
+        } footer: {
+            Text("Ver: \(Bundle.main.appVersionLong) (\(Bundle.main.appBuild)) ")
         }
     }
     
@@ -41,11 +82,6 @@ struct MenuView: View {
             openLinkButton("Web", url: "https://movapp.cz")
             
         } header: {
-            Image("logo")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(maxWidth: .infinity)
-            
             Text("menu.section.about_project.header")
         }
     }
@@ -57,8 +93,6 @@ struct MenuView: View {
             openLinkButton(String(localized: "menu.section.about_app.license"), url: "https://github.com/cesko-digital/movapp-apple/blob/main/LICENSE")
         } header: {
             Text("menu.section.about_app.header")
-        } footer: {
-            Text("Ver: \(Bundle.main.appVersionLong) (\(Bundle.main.appBuild)) ")
         }
     }
     
@@ -88,6 +122,6 @@ struct MenuView: View {
 struct MenuView_Previews: PreviewProvider {
     
     static var previews: some View {
-        MenuView()
+        MenuView(selectedLanguage: .csUk).environmentObject(LanguageService(dictionaryDataStore: DictionaryDataStore()))
     }
 }

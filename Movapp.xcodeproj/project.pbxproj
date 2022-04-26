@@ -42,6 +42,7 @@
 		B03B1BC828186E2E005C62C3 /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BC728186E2E005C62C3 /* PlayButtonView.swift */; };
 		B03B1BCA28186F7A005C62C3 /* SpeakButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BC928186F7A005C62C3 /* SpeakButtonView.swift */; };
 		B03B1BCC28186F8D005C62C3 /* SoundStateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */; };
+		B03B1BD1281889CF005C62C3 /* LanguageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BD0281889CF005C62C3 /* LanguageService.swift */; };
 		B05FF14327FA14A00046D636 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF14227FA14A00046D636 /* SoundService.swift */; };
 		B066546C27FB7D3C002D5EDD /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066546B27FB7D3C002D5EDD /* Language.swift */; };
 		B066546E27FB7E0C002D5EDD /* SetLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066546D27FB7E0C002D5EDD /* SetLanguage.swift */; };
@@ -147,6 +148,7 @@
 		B03B1BC728186E2E005C62C3 /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
 		B03B1BC928186F7A005C62C3 /* SpeakButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakButtonView.swift; sourceTree = "<group>"; };
 		B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundStateButtonView.swift; sourceTree = "<group>"; };
+		B03B1BD0281889CF005C62C3 /* LanguageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageService.swift; sourceTree = "<group>"; };
 		B05FF13D27F9F19F0046D636 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B05FF14227FA14A00046D636 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
 		B05FF14427FA28440046D636 /* Movapp--iOS--Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Movapp--iOS--Info.plist"; sourceTree = "<group>"; };
@@ -401,6 +403,7 @@
 				B0E140DB27FCCF2F008BBBB4 /* TranslationMatchService.swift */,
 				B0E140E027FCE1DD008BBBB4 /* TranslationFavoritesService.swift */,
 				25A2397E2808883400750977 /* TranslationFavoritesProvider.swift */,
+				B03B1BD0281889CF005C62C3 /* LanguageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				B066546E27FB7E0C002D5EDD /* SetLanguage.swift in Sources */,
 				B03B1BC828186E2E005C62C3 /* PlayButtonView.swift in Sources */,
 				B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */,
+				B03B1BD1281889CF005C62C3 /* LanguageService.swift in Sources */,
 				B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */,
 				5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */,
 				250E55E628072591004511EC /* Dictionary+UIExamples.swift in Sources */,

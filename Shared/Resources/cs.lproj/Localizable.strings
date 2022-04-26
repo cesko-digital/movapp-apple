@@ -10,9 +10,16 @@
 /* TabBar Menu */
 "tabbar.menu" = "Menu";
 
+"language.cs-uk" = "Ukrajinštinu";
+"language.uk-cs" = "Češtinu";
+
+"menu.section.settings.header" = "Nastavení";
+
+"menu.section.settings.learn" = "Chci se naučit";
+
 "menu.section.about_project.header" = "O projektu";
 
-"menu.section.about_app.header" = "O applikaci";
+"menu.section.about_app.header" = "O aplikaci";
 
 "menu.section.about_app.want_help" = "Přidat se k vývoji";
 

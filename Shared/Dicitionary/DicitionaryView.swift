@@ -20,6 +20,13 @@ struct DicitionaryView: View {
     var body: some View {
         VStack (spacing: 0) {
             DictionaryHeaderView(searchString: $searchString)
+                .onChange(of: searchString) { newValue in
+                    // Search only in
+                    // This forces header view to hide header
+                    if newValue != "" && selectedSection != nil {
+                        selectedSection = nil
+                    }
+                }
             
             if let dictionary = dataStore.dictionary {
                 DictionaryContentView(

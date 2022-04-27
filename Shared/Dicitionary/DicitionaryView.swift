@@ -34,12 +34,19 @@ struct DicitionaryView: View {
                 errorOrLoadView
             }
         }
-        #if canImport(UIKit)
+#if canImport(UIKit)
         // Discard keyboard
-        .gesture(DragGesture().onChanged{_ in UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)})
-        #endif
-        
-       
+        .simultaneousGesture(DragGesture().onChanged { gesture in
+            let forcing = false
+            let keyWindow = UIApplication.shared.connectedScenes
+                .filter({$0.activationState == .foregroundActive})
+                .map({$0 as? UIWindowScene})
+                .compactMap({$0})
+                .first?.windows
+                .filter({$0.isKeyWindow}).first
+            keyWindow?.endEditing(forcing)
+        })
+#endif
     }
     
     var errorOrLoadView: some View {

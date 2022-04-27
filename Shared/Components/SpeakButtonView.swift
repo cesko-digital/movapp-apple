@@ -14,8 +14,10 @@ struct SpeakButtonView: View {
     let text: String
     
     var body: some View {
-        SoundStateButtonView(isPlaying: soundService.isSpeaking(text: text)) {
-            soundService.speach(language: language, text: text)
+        if language != .uk {
+            SoundStateButtonView(isPlaying: soundService.isSpeaking(text: text)) {
+                soundService.speach(language: language, text: text)
+            }
         }
     }
 }

@@ -48,12 +48,13 @@ struct RootContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static let soundService = SoundService()
-    static let favoritesService = TranslationFavoritesService()
+    static let userDefaultsStore = UserDefaultsStore()
+    static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore)
     static let favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
     static let dictionaryDataStore = DictionaryDataStore()
     static let alphabetDataStore = AlphabetDataStore()
     static let forKidsDataStore = ForChildrenDataStore()
-    static let languageService = LanguageService(dictionaryDataStore: dictionaryDataStore)
+    static let languageService = LanguageService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
     
     static var previews: some View {
         RootContentView()

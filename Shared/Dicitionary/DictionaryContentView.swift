@@ -108,7 +108,8 @@ struct DictionaryContentView: View {
 struct DictionaryContentView_Previews: PreviewProvider {
     
     static let soundService = SoundService()
-    static let favoritesService = TranslationFavoritesService()
+    static let userDefaultsStore = UserDefaultsStore()
+    static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore)
     static let favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
     
     static let translations: [Dictionary.TranslationID: Dictionary.Translation] = [

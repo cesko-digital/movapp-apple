@@ -10,13 +10,15 @@ import SwiftUI
 @main
 struct MovappApp: App {
     
-    let langaugeService: LanguageService
-    let soundService = SoundService()
-    let favoritesService = TranslationFavoritesService()
-    let favoritesProvider: TranslationFavoritesProvider
     let dictionaryDataStore = DictionaryDataStore()
     let alphabetDataStore = AlphabetDataStore()
     let forKidsDataStore = ForChildrenDataStore()
+    let userDefaultsStore = UserDefaultsStore()
+    
+    let langaugeService: LanguageService
+    let soundService = SoundService()
+    let favoritesProvider: TranslationFavoritesProvider
+    let favoritesService: TranslationFavoritesService
     
     init() {
         let appearance = UINavigationBarAppearance()
@@ -29,10 +31,11 @@ struct MovappApp: App {
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         
-        self.langaugeService = LanguageService(dictionaryDataStore: dictionaryDataStore)
+        self.langaugeService = LanguageService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
+        self.favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore)
         self.favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
     }
-
+    
     var body: some Scene {
         WindowGroup {
             RootContentView()

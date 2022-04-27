@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.0.6] - 2022-04-27Z
+
 - Změna barev (pozadí, oblíbené)
 - Úprava logiky hledání - hledá se v obou jazycích
 - Nastavení jazyku - přesunout do menu K potvrzení #46

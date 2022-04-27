@@ -7,11 +7,9 @@
 
 import Foundation
 
-typealias FavoritesTranslationsStore = [String: [String: String]]
-
 class TranslationFavoritesService: ObservableObject {
     
-    private let userDefaultsKey = "favorite.translations"
+    let userDefaultsStore: UserDefaultsStore
     
     /**
      A map of favorited translations by language pack and translation id
@@ -19,15 +17,17 @@ class TranslationFavoritesService: ObservableObject {
     */
     @Published private(set) var favoritedTranslationsByLanguage: FavoritesTranslationsStore = [:] {
         didSet {
-            UserDefaults.standard.setValue(favoritedTranslationsByLanguage, forKey: userDefaultsKey)
+            userDefaultsStore.storeFavorites(favoritedTranslationsByLanguage)
         }
     }
     
     /**
     In near future we can provide interface for storing favorites, now we are using UserDefaults (we could do a wrapper that hooks on changes and sends to to backend, etc)
      */
-    init () {
-        if let favoritesFromUserDefaults = UserDefaults.standard.object(forKey: userDefaultsKey) as? FavoritesTranslationsStore {
+    init (userDefaultsStore: UserDefaultsStore) {
+        self.userDefaultsStore = userDefaultsStore
+        
+        if let favoritesFromUserDefaults = userDefaultsStore.getFavorites() {
             favoritedTranslationsByLanguage = favoritesFromUserDefaults
         }
     }

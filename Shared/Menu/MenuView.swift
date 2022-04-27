@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MenuView: View {
-    @State var selectedLanguage: SetLanguage = .csUk;
+    @State var selectedLanguage: SetLanguage;
     
     @EnvironmentObject var languageService: LanguageService
     
@@ -74,12 +74,11 @@ struct MenuView: View {
     
     private var projectSection: some View {
         Section {
-            openLinkButton("Web", url: "https://movapp.cz")
+            openLinkButton("movapp.cz", url: "https://movapp.cz")
             openLinkButton("Twitter", url: "https://twitter.com/movappcz")
             openLinkButton("Facebook", url: "https://www.facebook.com/movappcz")
             openLinkButton("Instagram", url: "https://www.instagram.com/movappcz/")
             openLinkButton("LinkedIn", url: "https://www.linkedin.com/company/movapp-cz")
-            openLinkButton("Web", url: "https://movapp.cz")
             
         } header: {
             Text("menu.section.about_project.header")
@@ -120,8 +119,11 @@ struct MenuView: View {
 }
 
 struct MenuView_Previews: PreviewProvider {
+    static let userDefaultsStore = UserDefaultsStore()
+    static let dictionaryDataStore = DictionaryDataStore()
+    static let languageService = LanguageService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
     
     static var previews: some View {
-        MenuView(selectedLanguage: .csUk).environmentObject(LanguageService(dictionaryDataStore: DictionaryDataStore()))
+        MenuView(selectedLanguage: .csUk).environmentObject(languageService)
     }
 }

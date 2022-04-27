@@ -4,6 +4,17 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 - Změna barev (pozadí, oblíbené)
 - Úprava logiky hledání - hledá se v obou jazycích
+- Nastavení jazyku - přesunout do menu K potvrzení #46
+- Pro děti: přehrání prokliknutí na obrázek K potvrzení #44
+- Slovníček - vyhledávat ve všech kategoriích a ne ve vybranné #43
+- Úprava hlavičky aplikace - modrá barva #42
+- Zavřít vybranou sekci i při kliknutí na název #41
+- Odkazy v menu s indikací, že vedou pryč z applikace. #40
+- Stav přehrávání jenom na vybraném přehrávaném slovíčku #39
+- Vylepšení rychlé navigace v abecedě #31
+- Vylepšení detekce kdy schovat klávesnici při hledání #29
+- Zapamatovat si nastavení "jazyku"  #18 
+- Upravění řazení výsledku vyhledávání #2
 
 ## [1.0.5] - 2022-04-21Z
 

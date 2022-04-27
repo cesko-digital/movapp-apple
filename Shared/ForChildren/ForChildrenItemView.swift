@@ -10,6 +10,9 @@ import SwiftUI
 
 struct ForChildrenItemView: View {
     let item: ForChildrenItem
+    let selectedLanguage: SetLanguage
+    
+    @EnvironmentObject var soundService: SoundService
     
     var body: some View {
         
@@ -21,6 +24,12 @@ struct ForChildrenItemView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(maxHeight: 300)
                     .padding(20)
+                    .onTapGesture {
+                        // I want to learn czech language
+                        if selectedLanguage.flipFromWithTo == true {
+                            soundService.speach(language: Languages.cs, text: item.translationFrom)
+                        }
+                    }
             }
             
             Footer {
@@ -37,7 +46,7 @@ struct ForChildrenItem_Previews: PreviewProvider {
     static let soundService = SoundService()
     
     static var previews: some View {
-        ForChildrenItemView(item: ForChildrenItem.example)
+        ForChildrenItemView(item: ForChildrenItem.example, selectedLanguage: .csUk)
             .environmentObject(soundService)
     }
 }

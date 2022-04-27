@@ -10,13 +10,15 @@ import SwiftUI
 struct ForChildrenView: View {
     @EnvironmentObject var dataStore: ForChildrenDataStore
     
+    let selectedLanguage: SetLanguage
+    
     var body: some View {
         VStack {
             if let forKids = dataStore.forKids {
                     ScrollView {
                         LazyVStack (spacing: 10) {
                             ForEach(forKids) { item in
-                                ForChildrenItemView(item: item)
+                                ForChildrenItemView(item: item, selectedLanguage: selectedLanguage)
                             }
                         }
                     }
@@ -51,7 +53,7 @@ struct ForChildrenView_Previews: PreviewProvider {
     static let dataStore = ForChildrenDataStore()
     
     static var previews: some View {
-        ForChildrenView()
+        ForChildrenView(selectedLanguage: .csUk)
             .environmentObject(dataStore)
     }
 }

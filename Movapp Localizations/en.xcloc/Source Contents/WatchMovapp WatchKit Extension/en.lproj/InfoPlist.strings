@@ -1,0 +1,6 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "WatchMovapp WatchKit Extension";
+/* Bundle name */
+"CFBundleName" = "WatchMovapp WatchKit Extension";
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "";

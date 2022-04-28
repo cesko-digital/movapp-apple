@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Doplnění překladových klíčů
+
 ## [1.0.6] - 2022-04-27Z
 
 - Změna barev (pozadí, oblíbené)

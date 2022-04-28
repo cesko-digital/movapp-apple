@@ -1,32 +1,45 @@
+/* (No Comment) */
+"About the app" = "About the app";
+
+/* Menu */
+"About the project" = "About the project";
+
 /* TabBar A-Z */
-"tabbar.alphabet" = "A-Z";
+"Alphabet" = "A-Z";
 
 /* TabBar dictionary */
-"tabbar.dictionary" = "Dictionary";
+"Dictionary" = "Dictionary";
 
 /* TabBar For kids */
-"tabbar.for_kids" = "For kids";
+"For Kids" = "For kids";
+
+/* (No Comment) */
+"I want to help" = "I want to help";
+
+/* (No Comment) */
+"language.cs-uk" = "Ukraine";
+
+/* (No Comment) */
+"language.uk-cs" = "Czech";
+
+/* (No Comment) */
+"License" = "License";
 
 /* TabBar Menu */
-"tabbar.menu" = "Menu";
+"Menu" = "Menu";
 
-"language.cs-uk" = "Ukrajinštinu";
-"language.uk-cs" = "Češtinu";
+/* (No Comment) */
+"Partner project" = "Partner project";
 
-"menu.section.settings.header" = "Settings";
+/* (No Comment) */
+"Settings" = "Settings";
 
-"menu.section.settings.learn" = "Want to learn";
+/* Link */
+"Stand by Ukraine" = "Stojíme za Ukrajinou";
 
-"menu.section.about_project.header" = "About the project";
+/* Link */
+"Umapa" = "Umapa";
 
-"menu.section.about_app.header" = "About the app";
+/* (No Comment) */
+"Want to learn" = "Want to learn";
 
-"menu.section.about_app.want_help" = "I want to help";
-
-"menu.section.about_app.license" = "License";
-
-"menu.section.partner_projects.header" = "Partner project";
-
-"menu.section.partner_projects.stojime_za_ukrajinou" = "Stojíme za Ukrajinou";
-
-"menu.section.partner_projects.umapa" = "Umapa";

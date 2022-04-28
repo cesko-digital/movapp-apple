@@ -1,7 +1,7 @@
 {
   "developmentRegion" : "en",
   "project" : "Movapp.xcodeproj",
-  "targetLocale" : "en",
+  "targetLocale" : "cs",
   "toolInfo" : {
     "toolBuildNumber" : "13E500a",
     "toolID" : "com.apple.dt.xcode",

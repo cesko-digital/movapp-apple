@@ -1,12 +1,32 @@
 /* TabBar A-Z */
-"tabbar.alphabet" = "A-Z";
+"Alphabet" = "A-Z";
 
 /* TabBar dictionary */
-"tabbar.dictionary" = "Dictionary\n";
+"Dictionary" = "Dictionary";
 
 /* TabBar For kids */
-"tabbar.for_kids" = "For kids";
+"For Kids" = "For kids";
 
 /* TabBar Menu */
-"tabbar.menu" = "Menu";
+"Menu" = "Menu";
 
+"language.cs-uk" = "Ukrajinštinu";
+"language.uk-cs" = "Češtinu";
+
+"Settings" = "Settings";
+
+"Want to learn" = "Want to learn";
+
+"About the project" = "About the project";
+
+"About the app" = "About the app";
+
+"I want to help" = "I want to help";
+
+"License" = "License";
+
+"Partner project" = "Partner project";
+
+"Stand by Ukraine" = "Stojíme za Ukrajinou";
+
+"Umapa" = "Umapa";

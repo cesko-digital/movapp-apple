@@ -1,32 +1,63 @@
+/* (No Comment) */
+"About the app" = "O aplikaci";
+
+/* Menu */
+"About the project" = "O projektu";
+
 /* TabBar A-Z */
-"tabbar.alphabet" = "A-Z";
+"Alphabet" = "A-Z";
+
+/* No comment provided by engineer. */
+"Czech alphabet" = "Česká abeceda";
 
 /* TabBar dictionary */
-"tabbar.dictionary" = "Slovníček";
+"Dictionary" = "Slovníček";
+
+/* Favorites list */
+"Favorites" = "Oblíbené";
 
 /* TabBar For kids */
-"tabbar.for_kids" = "Pro děti";
+"For Kids" = "Pro děti";
 
-/* TabBar Menu */
-"tabbar.menu" = "Menu";
+/* (No Comment) */
+"I want to help" = "Přidat se k vývoji";
 
+/* (No Comment) */
 "language.cs-uk" = "Ukrajinštinu";
+
+/* (No Comment) */
 "language.uk-cs" = "Češtinu";
 
-"menu.section.settings.header" = "Nastavení";
+/* (No Comment) */
+"License" = "Licence";
 
-"menu.section.settings.learn" = "Chci se naučit";
+/* TabBar Menu */
+"Menu" = "Menu";
 
-"menu.section.about_project.header" = "O projektu";
+/* (No Comment) */
+"Partner project" = "Partnerské projekty";
 
-"menu.section.about_app.header" = "O aplikaci";
+/* No comment provided by engineer. */
+"Search" = "Hledat slovíčko";
 
-"menu.section.about_app.want_help" = "Přidat se k vývoji";
+/* No comment provided by engineer. */
+"Select alphabet language" = "Vyber abecedu";
 
-"menu.section.about_app.license" = "Licence";
+/* No comment provided by engineer. */
+"Select phrases" = "Vyber co chceš vidět";
 
-"menu.section.partner_projects.header" = "Partnerské projekty";
+/* (No Comment) */
+"Settings" = "Nastavení";
 
-"menu.section.partner_projects.stojime_za_ukrajinou" = "Stojíme za Ukrajinou";
+/* Link */
+"Stand by Ukraine" = "Stojíme za Ukrajinou";
 
-"menu.section.partner_projects.umapa" = "Umapa";
+/* No comment provided by engineer. */
+"Ukraine alphabet" = "Ukrainská abeceda";
+
+/* Link */
+"Umapa" = "Umapa";
+
+/* (No Comment) */
+"Want to learn" = "Chci se naučit";
+

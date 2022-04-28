@@ -4,24 +4,23 @@ lane :release do |options|
     # Make sure we don't commit any work-in-progress with the release
     ensure_git_status_clean
 
-    # Bump version number
-    increment_version_number_in_xcodeproj(bump_type: release_type, target: "Movapp (iOS)")
-    increment_version_number_in_xcodeproj(bump_type: release_type, target: "WatchMovapp")
-    increment_version_number_in_xcodeproj(bump_type: release_type, target: "WatchMovapp WatchKit Extension")
+    # Bump build number
+    increment_build_number()
     version_number = get_version_number(target: "Movapp (iOS)")
+    build_number = get_build_number()
 
     # Update changelog with the version number and release date
-    stamp_changelog(section_identifier: version_number)
+    stamp_changelog(section_identifier: "#{version_number}, build #{build_number}")
 
     # Commit the stamped changelog as a part of the release
     git_add(path: 'CHANGELOG.md')
 
     # Commit and tag the release
     commit_version_bump(
-        message: "Release #{version_number}",
+        message: "Release #{version_number}, build #{build_number}",
         xcodeproj: "Movapp.xcodeproj",
         force: true)
-    add_git_tag(tag: "v#{version_number}")
+    add_git_tag(tag: "v#{version_number}-#{build_number}")
 end
 
 desc "Bump marketing version"

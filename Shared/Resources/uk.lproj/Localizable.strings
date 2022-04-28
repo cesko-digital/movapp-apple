@@ -1,3 +1,9 @@
+/* (No Comment) */
+"About the app" = "Про додаток";
+
+/* Menu */
+"About the project" = "Про проект";
+
 /* TabBar A-Z */
 "Alphabet" = "Алфавіт";
 
@@ -7,8 +13,11 @@
 /* TabBar dictionary */
 "Dictionary" = "Словник";
 
+/* Favorites list */
+"Favorites" = "Улюблене";
+
 /* TabBar For kids */
-"For Kids" = "для дітей";
+"For Kids" = "Для дітей";
 
 /* No comment provided by engineer. */
 "Search" = "Знайти слово";
@@ -16,3 +25,38 @@
 /* No comment provided by engineer. */
 "Ukraine alphabet" = "Український алфавіт";
 
+/* (No Comment) */
+"I want to help" = "Я хочу допомогти";
+
+/* (No Comment) */
+"language.cs-uk" = "Український";
+
+/* (No Comment) */
+"language.uk-cs" = "Чеський";
+
+/* (No Comment) */
+"License" = "Ліцензія";
+
+/* TabBar Menu */
+"Menu" = "Меню";
+
+/* (No Comment) */
+"Partner project" = "Партнерські проекти";
+
+/* No comment provided by engineer. */
+"Select alphabet language" = "Виберіть алфавіт";
+
+/* No comment provided by engineer. */
+"Select phrases" = "Виберіть те, що ви хочете побачити";
+
+/* (No Comment) */
+"Settings" = "Налаштування";
+
+/* Link */
+"Stand by Ukraine" = "Stojíme za Ukrajinou";
+
+/* Link */
+"Umapa" = "Umapa";
+
+/* (No Comment) */
+"Want to learn" = "Хочу вчити";

@@ -83,5 +83,20 @@ Každý jazykový překlad (například: čeština -> ukrajinština) je v aplika
     - Aplikace automaticky přenačte jiný jazykový soubor pokud dojde ke změně výchozího jazyka za jiný. Jinak přehazuje "from" -> "to".
     - Přidej obě proměné do .allCases
 - V Assets musí existovat soubor `translations-{filePrefix}` a `sections-{filePrefix}`
+- Přidej překlad jazyku do `Localizable` -> `language.{x-x}`. 
 
+
+## Lokalizace aplikace
+
+- Používej anglický text (zjednodušená forma)
+- Vyexportuj překlad `Product` -> `Export localizations` a nech výsledek (dej to součástí repozitáře v rootu)
+- Nezapomínej používat `comment` pro upřesnění kde se text nachází. Například: `Text("About us", comment: "About us in menu")` nebo `String(localized: "About us", comment" About us in menu")`
+- Překladatel pak překladá / upravue soubory v `Movapp Localizations/X.xcloc`
+    - Movapp--iOS--InfoPlist
+        - CFBundleDisplayName -> zde je název aplikace co se zobrazuje uživateli na ploše apod
+        - NSHumanReadableCopyright -> Copyright
+    - Shared -> Resources -> Localizable -> Zde jsou všechny použíté řetezce v aplikaci
+    - WatchMovapp WatchKit Extension -> stejné parametry jako v Movapp--iOS--InfoPlist ale pro Watch aplikaci
+- Po přeložení vložit do repozitáře a následně programátor importuje přes `Product -> Import localizations`.
+- Lze taky lokalizovat bez exportu lokalizací přímo v Shared -> Resources -> x.lproj -> X 
 

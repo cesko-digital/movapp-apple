@@ -28,19 +28,19 @@ struct MenuView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
-            .navigationTitle("tabbar.menu")
+            .navigationTitle("Menu")
         }
     }
     
     private var settingsSection: some View {
         Section {
             
-            Picker("menu.section.settings.learn", selection: $selectedLanguage) {
+            Picker("Want to learn", selection: $selectedLanguage) {
                 ForEach(SetLanguage.allCases, id: \.self) { value in
                     Text(LocalizedStringKey(value.title))
                         .tag(value)
                 }
-                .navigationTitle("menu.section.settings.learn")
+                .navigationTitle("Want to learn")
             }
             .onChange(of: selectedLanguage) { newLanguage in
                 
@@ -54,7 +54,7 @@ struct MenuView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
             
-            Text("menu.section.settings.header")
+            Text("Settings")
         } footer: {
             Text("Ver: \(Bundle.main.appVersionLong) (\(Bundle.main.appBuild)) ")
         }
@@ -81,28 +81,28 @@ struct MenuView: View {
             openLinkButton("LinkedIn", url: "https://www.linkedin.com/company/movapp-cz")
             
         } header: {
-            Text("menu.section.about_project.header")
+            Text("About the project", comment: "Menu")
         }
     }
     
     private var appSection: some View {
         Section {
-            openLinkButton(String(localized: "menu.section.about_app.want_help"), url: "https://github.com/cesko-digital/movapp-apple")
+            openLinkButton(String(localized: "I want to help"), url: "https://github.com/cesko-digital/movapp-apple")
             
-            openLinkButton(String(localized: "menu.section.about_app.license"), url: "https://github.com/cesko-digital/movapp-apple/blob/main/LICENSE")
+            openLinkButton(String(localized: "License"), url: "https://github.com/cesko-digital/movapp-apple/blob/main/LICENSE")
         } header: {
-            Text("menu.section.about_app.header")
+            Text("About the app")
         }
     }
     
     private var partnerSection: some View {
         Section {
-            openLinkButton("Stojíme za Ukrajinou", url: "https://www.stojimezaukrajinou.cz/")
+            openLinkButton(String(localized: "Stand by Ukraine", comment: "Link"), url: "https://www.stojimezaukrajinou.cz/")
             
-            openLinkButton("Umapa", url: "https://www.umapa.eu/")
+            openLinkButton(String(localized: "Umapa", comment: "Link"), url: "https://www.umapa.eu/")
             
         } header: {
-            Text("menu.section.partner_projects.header")
+            Text("Partner project")
         }
     }
     

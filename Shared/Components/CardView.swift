@@ -45,10 +45,10 @@ struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView {
             Content {
-                Text("Content")
+                Text("Content", comment: "No need to translate")
             }
             Footer {
-                Text("Footer")
+                Text("Footer", comment: "No need to translate")
             }
         }
         

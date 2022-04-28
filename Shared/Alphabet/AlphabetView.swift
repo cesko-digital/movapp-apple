@@ -15,9 +15,9 @@ struct AlphabetView: View {
     
     var body: some View {
         VStack (spacing: 0) {
-            Picker("Select view", selection: $selectedLanguage) {
-                Text("Česká abeceda").tag(SetLanguage.csUk)
-                Text("Ukrajinská abeceda").tag(SetLanguage.ukCs)
+            Picker("Select alphabet language", selection: $selectedLanguage) {
+                Text("Czech alphabet").tag(SetLanguage.csUk)
+                Text("Ukraine alphabet").tag(SetLanguage.ukCs)
             }
             .pickerStyle(.segmented)
             .padding()

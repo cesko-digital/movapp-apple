@@ -27,10 +27,10 @@ enum RootItems: Int, Hashable {
     
     var title: String {
         switch self {
-        case .dictionary: return String(localized: "tabbar.dictionary", comment: "TabBar dictionary")
-        case .alphabet: return String(localized: "tabbar.alphabet", comment: "TabBar aklphabet - use shortcut A-Z")
-        case .for_chidlren: return String(localized: "tabbar.for_kids", comment: "TabBar For kids")
-        case .menu: return String(localized: "tabbar.menu", comment: "TabBar Menu")
+        case .dictionary: return String(localized: "Dictionary", comment: "TabBar dictionary")
+        case .alphabet: return String(localized: "Alphabet", comment: "TabBar aklphabet - use shortcut A-Z")
+        case .for_chidlren: return String(localized: "For Kids", comment: "TabBar For kids")
+        case .menu: return String(localized: "Menu", comment: "TabBar Menu")
         }
     }
 }

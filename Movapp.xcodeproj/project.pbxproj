@@ -63,6 +63,7 @@
 		B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140DE27FCD2E5008BBBB4 /* String+Levenshtein.swift */; };
 		B0E140E127FCE1DD008BBBB4 /* TranslationFavoritesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140E027FCE1DD008BBBB4 /* TranslationFavoritesService.swift */; };
 		B0E140E327FCE24F008BBBB4 /* DictionaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E140E227FCE24F008BBBB4 /* DictionaryHeaderView.swift */; };
+		B0EC5AA2281ABB8A008747D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B0EC5AA0281ABB8A008747D4 /* InfoPlist.strings */; };
 		B0ECC1402802FC6F00BF9898 /* AlphabetItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC13F2802FC6F00BF9898 /* AlphabetItemView.swift */; };
 		B0ECC1422802FD3C00BF9898 /* AlphabetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1412802FD3C00BF9898 /* AlphabetDataStore.swift */; };
 		B0ECC1442802FDCC00BF9898 /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1432802FDCC00BF9898 /* Alphabet.swift */; };
@@ -175,6 +176,9 @@
 		B0E140DE27FCD2E5008BBBB4 /* String+Levenshtein.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Levenshtein.swift"; sourceTree = "<group>"; };
 		B0E140E027FCE1DD008BBBB4 /* TranslationFavoritesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationFavoritesService.swift; sourceTree = "<group>"; };
 		B0E140E227FCE24F008BBBB4 /* DictionaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryHeaderView.swift; sourceTree = "<group>"; };
+		B0EC5AA1281ABB8A008747D4 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B0EC5AA3281ABB90008747D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B0EC5AA4281ABC88008747D4 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B0ECC13F2802FC6F00BF9898 /* AlphabetItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetItemView.swift; sourceTree = "<group>"; };
 		B0ECC1412802FD3C00BF9898 /* AlphabetDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetDataStore.swift; sourceTree = "<group>"; };
 		B0ECC1432802FDCC00BF9898 /* Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
@@ -224,6 +228,7 @@
 				444E970B2812DF8E00DC6F8B /* ComplicationController.swift */,
 				444E970D2812DF8F00DC6F8B /* Assets.xcassets */,
 				444E97122812DF8F00DC6F8B /* Info.plist */,
+				B0EC5AA0281ABB8A008747D4 /* InfoPlist.strings */,
 				444E970F2812DF8F00DC6F8B /* Preview Content */,
 			);
 			path = "WatchMovapp WatchKit Extension";
@@ -593,6 +598,7 @@
 				444E972D2812E23E00DC6F8B /* Localizable.strings in Resources */,
 				444E972F2812E28900DC6F8B /* Assets.xcassets in Resources */,
 				444E970E2812DF8F00DC6F8B /* Assets.xcassets in Resources */,
+				B0EC5AA2281ABB8A008747D4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,8 +702,18 @@
 			children = (
 				B087C88827F8A3BD0015E54B /* en */,
 				B05FF13D27F9F19F0046D636 /* cs */,
+				B0EC5AA4281ABC88008747D4 /* uk */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B0EC5AA0281ABB8A008747D4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0EC5AA1281ABB8A008747D4 /* cs */,
+				B0EC5AA3281ABB90008747D4 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

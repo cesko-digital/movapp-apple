@@ -14,7 +14,7 @@ struct WordView: View {
     let transcription: String
     
     func formatTranscription (_ string: String) -> String {
-        return String(format: "[ %@ ]", string)
+        return "[ \(string) ]"
     }
     
     var body: some View {

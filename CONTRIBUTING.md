@@ -2,21 +2,17 @@
 
 - [Správa slovíček](translations/README.md)
 
-# Git
+## Git
 
 - Používejte rebase politiku (vždy vycházejte z `main`)
 - Před mergem vždy rebasnete nad `main` a vyřešíte konflitky
 - Pro vložení do `main` se provede squash commit a nebo si lokálně upravte komity
 
-# Verzování
-
-Používáme schéme `x.y.z`, kde změny `z` znamenají pouze interní releasy, například nové testovací verze pro interní tým, `y` se zvedá při posílání nové verze do App Storu a `x` si necháváme v záloze pro zásadnější změny.
-
-# Fastlane
+## Fastlane
 
 Pro automatizaci releasů a souvisejících procesů používáme [Fastlane](https://fastlane.tools). Samotnou Fastlane můžete nainstalovat buď přes `brew install fastlane`, nebo lépe přímo v repository příkazem `bundle`. Ta lokální instalace v repu je lepší v tom, že všichni používáme stejnou verzi. Dál počítáme s tím, že jste Fastlane nainstalovali takhle. Pokud ne, pište místo `bundle exec fastlane` prostě jen `fastlane`.
 
-# Podepisování
+## Podepisování
 
 Pro podepsání kódu jsou potřeba certifikáty a profily, které se dají stáhnout přes Fastlane:
 
@@ -24,21 +20,25 @@ Pro podepsání kódu jsou potřeba certifikáty a profily, které se dají stá
 bundle exec fastlane match development --readonly
 ```
 
-# Releasing
+## Releasing
 
-Během vývoje přidávejte informace o novinkách do souboru `CHANGELOG.md` do sekce `[Unreleased]`. Pokud v ní před releasem ještě něco chybí, doplňte a commitněte. Pak vyrobíte nový release přes Fastlane:
+Během vývoje přidávejte informace o novinkách do souboru `CHANGELOG.md` do sekce `[Unreleased]`. Pokud v ní před releasem ještě něco chybí, doplňte a commitněte.
 
-```
-bundle exec fastlane release # 1.2.1 → 1.2.2
-```
-
-Tohle standardně vyrobí „patch release“, tedy zvedne poslední číslo verze. Pokud chcete zvýšit prostředí číslo verze, vypadá to takhle:
+Pak vyrobíte nový release přes Fastlane:
 
 ```
-bundle exec fastlane release type:minor # 1.2.1 → 1.3.0
+bundle exec fastlane release
 ```
 
-Fastlane zvýší číslo verze všude, kde je potřeba, aktualizuje changelog a vyrobí nový tag v Gitu.
+Tohle zvýší číslo buildu, aktualizuje changelog, commitne všechno do repa a otaguje release.
+
+Pokud chcete zvýšit marketingové číslo verze, dělá se to takhle:
+
+```
+bundle exec fastlane bump_version
+```
+
+Fastlane zvýší číslo verze všude, kde je potřeba, a commitne.
 
 ## Assets
 

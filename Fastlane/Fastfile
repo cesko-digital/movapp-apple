@@ -1,11 +1,8 @@
-desc "Make a new release: Bump version number, update changelog and commit & tag the changes"
+desc "Make a new release: Bump build number, update changelog and commit & tag the changes"
 lane :release do |options|
 
     # Make sure we don't commit any work-in-progress with the release
     ensure_git_status_clean
-
-    # Read the release type from command-line arguments, default to patch
-    release_type = options[:type] ? options[:type] : "patch"
 
     # Bump version number
     increment_version_number_in_xcodeproj(bump_type: release_type, target: "Movapp (iOS)")
@@ -25,6 +22,28 @@ lane :release do |options|
         xcodeproj: "Movapp.xcodeproj",
         force: true)
     add_git_tag(tag: "v#{version_number}")
+end
+
+desc "Bump marketing version"
+lane :bump_version do |options|
+
+    # Make sure we don't commit any work-in-progress with the release
+    ensure_git_status_clean
+
+    # Read the release type from command-line arguments, default to patch
+    component = options[:type] ? options[:type] : "minor"
+
+    # Bump version number
+    increment_version_number_in_xcodeproj(bump_type: component, target: "Movapp (iOS)")
+    increment_version_number_in_xcodeproj(bump_type: component, target: "WatchMovapp")
+    increment_version_number_in_xcodeproj(bump_type: component, target: "WatchMovapp WatchKit Extension")
+    version_number = get_version_number(target: "Movapp (iOS)")
+
+    # Commit changes
+    commit_version_bump(
+        message: "Bump marketing version to #{version_number}",
+        xcodeproj: "Movapp.xcodeproj",
+        force: true)
 end
 
 # Create a clean temporary keychain

@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.1.0, build 2] - 2022-04-28Z
+
 - Doplnění překladových klíčů
 
 ## [1.0.6] - 2022-04-27Z

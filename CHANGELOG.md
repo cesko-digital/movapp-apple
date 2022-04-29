@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Žádné funkční změny, ladíme release proces
+
 ## [1.1.0, build 5] - 2022-04-29Z
 
 - Žádné funkční změny, ladíme release proces

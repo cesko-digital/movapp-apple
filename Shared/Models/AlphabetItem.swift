@@ -10,16 +10,16 @@ import Foundation
 
 
 private func buildLetter(_ letters: [String?]) -> String {
-    var builtLetter = ""
+    var validLetters: [String] = []
     
     for letter in letters {
         if letter != nil {
-            builtLetter.append(letter!)
+            validLetters.append(letter!)
         }
         
     }
     
-    return builtLetter
+    return validLetters.joined(separator: " ")
 }
 
 

@@ -730,6 +730,7 @@
 				DEVELOPMENT_TEAM = 8495ZSK6A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WatchMovapp_WatchKit_Extension;
+				INFOPLIST_FILE = WatchMovapp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchMovapp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = cz.movapp.app;
@@ -757,6 +758,7 @@
 				DEVELOPMENT_TEAM = 8495ZSK6A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IBSC_MODULE = WatchMovapp_WatchKit_Extension;
+				INFOPLIST_FILE = WatchMovapp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchMovapp;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = cz.movapp.app;

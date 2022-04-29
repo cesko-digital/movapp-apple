@@ -188,6 +188,7 @@
 		B0ECC14A28033A9E00BF9898 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		B0ECC14B2803431A00BF9898 /* Bundle+version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+version.swift"; sourceTree = "<group>"; };
 		B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetShortcutsView.swift; sourceTree = "<group>"; };
+		B0F16DE1281BE6B300867D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +213,7 @@
 		444E96FB2812DF8C00DC6F8B /* WatchMovapp */ = {
 			isa = PBXGroup;
 			children = (
+				B0F16DE1281BE6B300867D7C /* Info.plist */,
 				444E96FC2812DF8E00DC6F8B /* Assets.xcassets */,
 			);
 			path = WatchMovapp;

@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.1.0, build 9] - 2022-05-02Z
+
 - Oprava automatického vygenerování screenshotů
 - (1.1.0, build 8) Přidání týmu do menu aplikace
 

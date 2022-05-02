@@ -44,6 +44,11 @@
 		B08B0DF5281FD0F2000EAEF1 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DF4281FD0F2000EAEF1 /* Team.swift */; };
 		B08B0DF7281FD1D8000EAEF1 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DF6281FD1D8000EAEF1 /* TeamView.swift */; };
 		B08B0DF9281FD49B000EAEF1 /* TeamDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DF8281FD49B000EAEF1 /* TeamDataStore.swift */; };
+		B08B0DE5281FBB28000EAEF1 /* MovappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DE4281FBB28000EAEF1 /* MovappUITests.swift */; };
+		B08B0DE7281FBB28000EAEF1 /* MovappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DE6281FBB28000EAEF1 /* MovappUITestsLaunchTests.swift */; };
+		B08B0DEE281FBBFC000EAEF1 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DED281FBBFC000EAEF1 /* SnapshotHelper.swift */; };
+		B08B0DF0281FBF5B000EAEF1 /* FastlaneSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DEF281FBF5B000EAEF1 /* FastlaneSnapshot.swift */; };
+		B08B0DF1281FC161000EAEF1 /* RootItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279C527F870BF003FB72E /* RootItems.swift */; };
 		B0C0F8E528060A310036441E /* ForChildrenRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E428060A310036441E /* ForChildrenRowView.swift */; };
 		B0C0F8E828060B750036441E /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E728060B750036441E /* Flags.swift */; };
 		B0C9F40A27FCBF5500B075EB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C9F40927FCBF5500B075EB /* Launch Screen.storyboard */; };
@@ -59,6 +64,16 @@
 		B0ECC14C2803431A00BF9898 /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14B2803431A00BF9898 /* Bundle+version.swift */; };
 		B0ECC1502803485B00BF9898 /* AlphabetShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B08B0DE8281FBB28000EAEF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B012799027F86954003FB72E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B012799B27F86957003FB72E;
+			remoteInfo = "Movapp (iOS)";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		444E97162812DF8F00DC6F8B /* Embed Watch Content */ = {
@@ -127,6 +142,11 @@
 		B08B0DF4281FD0F2000EAEF1 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		B08B0DF6281FD1D8000EAEF1 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
 		B08B0DF8281FD49B000EAEF1 /* TeamDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataStore.swift; sourceTree = "<group>"; };
+		B08B0DE2281FBB28000EAEF1 /* MovappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B08B0DE4281FBB28000EAEF1 /* MovappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappUITests.swift; sourceTree = "<group>"; };
+		B08B0DE6281FBB28000EAEF1 /* MovappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B08B0DED281FBBFC000EAEF1 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = Fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		B08B0DEF281FBF5B000EAEF1 /* FastlaneSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastlaneSnapshot.swift; sourceTree = "<group>"; };
 		B0C0F8E428060A310036441E /* ForChildrenRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenRowView.swift; sourceTree = "<group>"; };
 		B0C0F8E728060B750036441E /* Flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags.swift; sourceTree = "<group>"; };
 		B0C0F8E928060BE60036441E /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
@@ -155,6 +175,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B03B1BCF28187F51005C62C3 /* Introspect in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B08B0DDF281FBB28000EAEF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +279,7 @@
 				B01279A327F86957003FB72E /* macOS */,
 				444E96FB2812DF8C00DC6F8B /* WatchMovapp */,
 				444E97062812DF8E00DC6F8B /* WatchMovapp WatchKit Extension */,
+				B08B0DE3281FBB28000EAEF1 /* MovappUITests */,
 				B012799D27F86957003FB72E /* Products */,
 				B01279E027F88504003FB72E /* Frameworks */,
 			);
@@ -283,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				B012799C27F86957003FB72E /* Movapp.app */,
+				B08B0DE2281FBB28000EAEF1 /* MovappUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -411,6 +440,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B08B0DE3281FBB28000EAEF1 /* MovappUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B08B0DED281FBBFC000EAEF1 /* SnapshotHelper.swift */,
+				B08B0DE4281FBB28000EAEF1 /* MovappUITests.swift */,
+				B08B0DEF281FBF5B000EAEF1 /* FastlaneSnapshot.swift */,
+				B08B0DE6281FBB28000EAEF1 /* MovappUITestsLaunchTests.swift */,
+			);
+			path = MovappUITests;
+			sourceTree = "<group>";
+		};
 		B0C0F8E628060B6C0036441E /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +493,24 @@
 			productReference = B012799C27F86957003FB72E /* Movapp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B08B0DE1281FBB28000EAEF1 /* MovappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B08B0DEC281FBB28000EAEF1 /* Build configuration list for PBXNativeTarget "MovappUITests" */;
+			buildPhases = (
+				B08B0DDE281FBB28000EAEF1 /* Sources */,
+				B08B0DDF281FBB28000EAEF1 /* Frameworks */,
+				B08B0DE0281FBB28000EAEF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B08B0DE9281FBB28000EAEF1 /* PBXTargetDependency */,
+			);
+			name = MovappUITests;
+			productName = MovappUITests;
+			productReference = B08B0DE2281FBB28000EAEF1 /* MovappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -460,11 +518,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					B012799B27F86957003FB72E = {
 						CreatedOnToolsVersion = 13.3;
+					};
+					B08B0DE1281FBB28000EAEF1 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = B012799B27F86957003FB72E;
 					};
 				};
 			};
@@ -487,6 +549,7 @@
 			projectRoot = "";
 			targets = (
 				B012799B27F86957003FB72E /* Movapp (iOS) */,
+				B08B0DE1281FBB28000EAEF1 /* MovappUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -499,6 +562,13 @@
 				B0C9F40A27FCBF5500B075EB /* Launch Screen.storyboard in Resources */,
 				B01279A927F86957003FB72E /* Assets.xcassets in Resources */,
 				B087C88927F8A3BD0015E54B /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B08B0DE0281FBB28000EAEF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,7 +629,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B08B0DDE281FBB28000EAEF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B08B0DE5281FBB28000EAEF1 /* MovappUITests.swift in Sources */,
+				B08B0DE7281FBB28000EAEF1 /* MovappUITestsLaunchTests.swift in Sources */,
+				B08B0DF1281FC161000EAEF1 /* RootItems.swift in Sources */,
+				B08B0DEE281FBBFC000EAEF1 /* SnapshotHelper.swift in Sources */,
+				B08B0DF0281FBF5B000EAEF1 /* FastlaneSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B08B0DE9281FBB28000EAEF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B012799B27F86957003FB72E /* Movapp (iOS) */;
+			targetProxy = B08B0DE8281FBB28000EAEF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B087C88727F8A3BD0015E54B /* Localizable.strings */ = {
@@ -768,6 +858,49 @@
 			};
 			name = Release;
 		};
+		B08B0DEA281FBB28000EAEF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8495ZSK6A6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.movapp.MovappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Movapp (iOS)";
+			};
+			name = Debug;
+		};
+		B08B0DEB281FBB28000EAEF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8495ZSK6A6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.movapp.MovappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Movapp (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -785,6 +918,15 @@
 			buildConfigurations = (
 				B01279AE27F86957003FB72E /* Debug */,
 				B01279AF27F86957003FB72E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B08B0DEC281FBB28000EAEF1 /* Build configuration list for PBXNativeTarget "MovappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B08B0DEA281FBB28000EAEF1 /* Debug */,
+				B08B0DEB281FBB28000EAEF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

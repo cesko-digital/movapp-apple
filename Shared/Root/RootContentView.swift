@@ -30,7 +30,7 @@ struct RootContentView: View {
                     .setTabItem(RootItems.alphabet)
                 
                 ForChildrenView(selectedLanguage: languageService.currentLanguage)
-                    .setTabItem(RootItems.for_chidlren)
+                    .setTabItem(RootItems.for_children)
                 
                 MenuView(selectedLanguage: languageService.currentLanguage)
                     .setTabItem(RootItems.menu)

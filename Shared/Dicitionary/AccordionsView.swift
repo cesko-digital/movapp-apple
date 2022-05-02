@@ -22,6 +22,7 @@ struct AccordionsView: View {
                     let text = section.text(language: language)
                     
                     AccordionView(isOdd: isOdd, text:  text)
+                        .accessibilityIdentifier("dictionary_\(index)")
                         .onTapGesture {
                             withAnimation(.spring()) {
                                 selectedSection = section

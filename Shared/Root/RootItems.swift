@@ -13,14 +13,14 @@ enum RootItems: Int, Hashable {
     
     case dictionary = 0
     case alphabet
-    case for_chidlren
+    case for_children
     case menu
     
     var icon: String {
         switch self {
         case .dictionary: return "icons/dictionary"
         case .alphabet: return "icons/alphabet"
-        case .for_chidlren: return "icons/child"
+        case .for_children: return "icons/child"
         case .menu: return "icons/menu"
         }
     }
@@ -29,7 +29,7 @@ enum RootItems: Int, Hashable {
         switch self {
         case .dictionary: return String(localized: "Dictionary", comment: "TabBar dictionary")
         case .alphabet: return String(localized: "Alphabet", comment: "TabBar aklphabet - use shortcut A-Z")
-        case .for_chidlren: return String(localized: "For Kids", comment: "TabBar For kids")
+        case .for_children: return String(localized: "For Kids", comment: "TabBar For kids")
         case .menu: return String(localized: "Menu", comment: "TabBar Menu")
         }
     }

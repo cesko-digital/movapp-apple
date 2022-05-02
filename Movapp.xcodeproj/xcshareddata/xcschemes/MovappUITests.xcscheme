@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B012799B27F86957003FB72E"
-               BuildableName = "Movapp.app"
-               BlueprintName = "Movapp (iOS)"
+               BlueprintIdentifier = "B08B0DE1281FBB28000EAEF1"
+               BuildableName = "MovappUITests.xctest"
+               BlueprintName = "MovappUITests"
                ReferencedContainer = "container:Movapp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -37,6 +37,11 @@
                BlueprintName = "MovappUITests"
                ReferencedContainer = "container:Movapp.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "FastlaneSnapshot">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>
@@ -44,7 +49,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      region = "UA"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -68,16 +72,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B012799B27F86957003FB72E"
-            BuildableName = "Movapp.app"
-            BlueprintName = "Movapp (iOS)"
-            ReferencedContainer = "container:Movapp.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

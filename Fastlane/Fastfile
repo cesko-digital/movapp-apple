@@ -75,6 +75,7 @@ lane :upload do
     ensure_temp_keychain 'fastlane'
     sync_code_signing(type: "appstore", readonly: true, keychain_password: "temppassword", keychain_name: "fastlane")
     build_app(configuration: "Release")
+    capture_screenshots
     upload_to_app_store(
         username: "apple-code-signing@cesko.digital",
         team_id: "8495ZSK6A6",
@@ -82,6 +83,10 @@ lane :upload do
         precheck_include_in_app_purchases: false,
         force: true,
         skip_metadata: true,
-        skip_screenshots: true
+        skip_screenshots: false
     )
+end
+
+lane :tests do
+  run_tests(scheme: "MovappUITests")
 end

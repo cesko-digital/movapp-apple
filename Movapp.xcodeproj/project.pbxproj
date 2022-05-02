@@ -41,14 +41,14 @@
 		B087C89127F8B41B0015E54B /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89027F8B41B0015E54B /* TranslationView.swift */; };
 		B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89227F8B4610015E54B /* AccordionsView.swift */; };
 		B087C89527F8B46A0015E54B /* TranslationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89427F8B46A0015E54B /* TranslationsView.swift */; };
-		B08B0DF5281FD0F2000EAEF1 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DF4281FD0F2000EAEF1 /* Team.swift */; };
-		B08B0DF7281FD1D8000EAEF1 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DF6281FD1D8000EAEF1 /* TeamView.swift */; };
-		B08B0DF9281FD49B000EAEF1 /* TeamDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DF8281FD49B000EAEF1 /* TeamDataStore.swift */; };
 		B08B0DE5281FBB28000EAEF1 /* MovappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DE4281FBB28000EAEF1 /* MovappUITests.swift */; };
 		B08B0DE7281FBB28000EAEF1 /* MovappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DE6281FBB28000EAEF1 /* MovappUITestsLaunchTests.swift */; };
 		B08B0DEE281FBBFC000EAEF1 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DED281FBBFC000EAEF1 /* SnapshotHelper.swift */; };
 		B08B0DF0281FBF5B000EAEF1 /* FastlaneSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DEF281FBF5B000EAEF1 /* FastlaneSnapshot.swift */; };
 		B08B0DF1281FC161000EAEF1 /* RootItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279C527F870BF003FB72E /* RootItems.swift */; };
+		B08B0DF5281FD0F2000EAEF1 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DF4281FD0F2000EAEF1 /* Team.swift */; };
+		B08B0DF7281FD1D8000EAEF1 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DF6281FD1D8000EAEF1 /* TeamView.swift */; };
+		B08B0DF9281FD49B000EAEF1 /* TeamDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DF8281FD49B000EAEF1 /* TeamDataStore.swift */; };
 		B0C0F8E528060A310036441E /* ForChildrenRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E428060A310036441E /* ForChildrenRowView.swift */; };
 		B0C0F8E828060B750036441E /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E728060B750036441E /* Flags.swift */; };
 		B0C9F40A27FCBF5500B075EB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C9F40927FCBF5500B075EB /* Launch Screen.storyboard */; };
@@ -139,14 +139,14 @@
 		B087C89027F8B41B0015E54B /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 		B087C89227F8B4610015E54B /* AccordionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionsView.swift; sourceTree = "<group>"; };
 		B087C89427F8B46A0015E54B /* TranslationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationsView.swift; sourceTree = "<group>"; };
-		B08B0DF4281FD0F2000EAEF1 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		B08B0DF6281FD1D8000EAEF1 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
-		B08B0DF8281FD49B000EAEF1 /* TeamDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataStore.swift; sourceTree = "<group>"; };
 		B08B0DE2281FBB28000EAEF1 /* MovappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08B0DE4281FBB28000EAEF1 /* MovappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappUITests.swift; sourceTree = "<group>"; };
 		B08B0DE6281FBB28000EAEF1 /* MovappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B08B0DED281FBBFC000EAEF1 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = Fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		B08B0DEF281FBF5B000EAEF1 /* FastlaneSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastlaneSnapshot.swift; sourceTree = "<group>"; };
+		B08B0DF4281FD0F2000EAEF1 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		B08B0DF6281FD1D8000EAEF1 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		B08B0DF8281FD49B000EAEF1 /* TeamDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataStore.swift; sourceTree = "<group>"; };
 		B0C0F8E428060A310036441E /* ForChildrenRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenRowView.swift; sourceTree = "<group>"; };
 		B0C0F8E728060B750036441E /* Flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags.swift; sourceTree = "<group>"; };
 		B0C0F8E928060BE60036441E /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
@@ -862,11 +862,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 8495ZSK6A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cz.movapp.MovappUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -883,11 +883,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = 8495ZSK6A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cz.movapp.MovappUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

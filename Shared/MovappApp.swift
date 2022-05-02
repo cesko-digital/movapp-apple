@@ -14,6 +14,7 @@ struct MovappApp: App {
     let alphabetDataStore = AlphabetDataStore()
     let forKidsDataStore = ForChildrenDataStore()
     let userDefaultsStore = UserDefaultsStore()
+    let teamDataStore = TeamDataStore()
     
     let langaugeService: LanguageService
     let soundService = SoundService()
@@ -46,6 +47,7 @@ struct MovappApp: App {
                 .environmentObject(dictionaryDataStore)
                 .environmentObject(alphabetDataStore)
                 .environmentObject(forKidsDataStore)
+                .environmentObject(teamDataStore)
         }
     }
 }

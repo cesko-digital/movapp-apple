@@ -54,6 +54,7 @@ struct ContentView_Previews: PreviewProvider {
     static let dictionaryDataStore = DictionaryDataStore()
     static let alphabetDataStore = AlphabetDataStore()
     static let forKidsDataStore = ForChildrenDataStore()
+    static let teamDataStore = TeamDataStore()
     static let languageService = LanguageService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
     
     static var previews: some View {
@@ -65,5 +66,6 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(alphabetDataStore)
             .environmentObject(forKidsDataStore)
             .environmentObject(languageService)
+            .environmentObject(teamDataStore)
     }
 }

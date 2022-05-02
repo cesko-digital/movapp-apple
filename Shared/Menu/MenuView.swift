@@ -42,6 +42,7 @@ struct MenuView: View {
                 }
                 .navigationTitle("Want to learn")
             }
+            .foregroundColor(Color("colors/text"))
             .onChange(of: selectedLanguage) { newLanguage in
                 
                 languageService.currentLanguage = newLanguage
@@ -66,8 +67,13 @@ struct MenuView: View {
         } label: {
             HStack {
                 Text(title)
+                    .foregroundColor(Color("colors/text"))
                 Spacer()
                 Image(systemName: "chevron.right")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 12)
+                    .foregroundColor(Color("colors/primary"))
             }
         }
     }
@@ -75,6 +81,12 @@ struct MenuView: View {
     private var projectSection: some View {
         Section {
             openLinkButton("movapp.cz", url: "https://movapp.cz")
+            
+            NavigationLink("Team") {
+                TeamView()
+                    .navigationTitle("Team")
+            }
+            
             openLinkButton("Twitter", url: "https://twitter.com/movappcz")
             openLinkButton("Facebook", url: "https://www.facebook.com/movappcz")
             openLinkButton("Instagram", url: "https://www.instagram.com/movappcz/")
@@ -121,9 +133,12 @@ struct MenuView: View {
 struct MenuView_Previews: PreviewProvider {
     static let userDefaultsStore = UserDefaultsStore()
     static let dictionaryDataStore = DictionaryDataStore()
+    static let teamDataStore = TeamDataStore()
     static let languageService = LanguageService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
     
     static var previews: some View {
-        MenuView(selectedLanguage: .csUk).environmentObject(languageService)
+        MenuView(selectedLanguage: .csUk)
+            .environmentObject(languageService)
+            .environmentObject(teamDataStore)
     }
 }

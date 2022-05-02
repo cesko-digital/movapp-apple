@@ -41,6 +41,9 @@
 		B087C89127F8B41B0015E54B /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89027F8B41B0015E54B /* TranslationView.swift */; };
 		B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89227F8B4610015E54B /* AccordionsView.swift */; };
 		B087C89527F8B46A0015E54B /* TranslationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89427F8B46A0015E54B /* TranslationsView.swift */; };
+		B08B0DF5281FD0F2000EAEF1 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DF4281FD0F2000EAEF1 /* Team.swift */; };
+		B08B0DF7281FD1D8000EAEF1 /* TeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DF6281FD1D8000EAEF1 /* TeamView.swift */; };
+		B08B0DF9281FD49B000EAEF1 /* TeamDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DF8281FD49B000EAEF1 /* TeamDataStore.swift */; };
 		B0C0F8E528060A310036441E /* ForChildrenRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E428060A310036441E /* ForChildrenRowView.swift */; };
 		B0C0F8E828060B750036441E /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E728060B750036441E /* Flags.swift */; };
 		B0C9F40A27FCBF5500B075EB /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0C9F40927FCBF5500B075EB /* Launch Screen.storyboard */; };
@@ -121,6 +124,9 @@
 		B087C89027F8B41B0015E54B /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 		B087C89227F8B4610015E54B /* AccordionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionsView.swift; sourceTree = "<group>"; };
 		B087C89427F8B46A0015E54B /* TranslationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationsView.swift; sourceTree = "<group>"; };
+		B08B0DF4281FD0F2000EAEF1 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		B08B0DF6281FD1D8000EAEF1 /* TeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamView.swift; sourceTree = "<group>"; };
+		B08B0DF8281FD49B000EAEF1 /* TeamDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataStore.swift; sourceTree = "<group>"; };
 		B0C0F8E428060A310036441E /* ForChildrenRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenRowView.swift; sourceTree = "<group>"; };
 		B0C0F8E728060B750036441E /* Flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags.swift; sourceTree = "<group>"; };
 		B0C0F8E928060BE60036441E /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
@@ -228,6 +234,7 @@
 				B066546B27FB7D3C002D5EDD /* Language.swift */,
 				B066546D27FB7E0C002D5EDD /* SetLanguage.swift */,
 				B0ECC1432802FDCC00BF9898 /* Alphabet.swift */,
+				B08B0DF4281FD0F2000EAEF1 /* Team.swift */,
 				B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */,
 				B0ECC1452802FDD200BF9898 /* AlphabetItem.swift */,
 				4410E96C28044BD300688E9F /* ForChildrenItem.swift */,
@@ -338,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				B01279CF27F872C3003FB72E /* MenuView.swift */,
+				B08B0DF6281FD1D8000EAEF1 /* TeamView.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -379,6 +387,7 @@
 				B0ECC1412802FD3C00BF9898 /* AlphabetDataStore.swift */,
 				4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */,
 				B0320920281998AA001203BF /* UserDefaultsStore.swift */,
+				B08B0DF8281FD49B000EAEF1 /* TeamDataStore.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -513,11 +522,13 @@
 				B068833627FF92E300E6B831 /* DictionaryDataStore.swift in Sources */,
 				B076F0982806011500C1F88F /* CardView.swift in Sources */,
 				B066546E27FB7E0C002D5EDD /* SetLanguage.swift in Sources */,
+				B08B0DF7281FD1D8000EAEF1 /* TeamView.swift in Sources */,
 				B03B1BC828186E2E005C62C3 /* PlayButtonView.swift in Sources */,
 				B0320921281998AA001203BF /* UserDefaultsStore.swift in Sources */,
 				B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */,
 				B03B1BD1281889CF005C62C3 /* LanguageService.swift in Sources */,
 				B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */,
+				B08B0DF5281FD0F2000EAEF1 /* Team.swift in Sources */,
 				5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */,
 				250E55E628072591004511EC /* Dictionary+UIExamples.swift in Sources */,
 				250E55E4280723E0004511EC /* Languages.swift in Sources */,
@@ -535,6 +546,7 @@
 				B01279C627F870BF003FB72E /* RootItems.swift in Sources */,
 				B0ECC1442802FDCC00BF9898 /* Alphabet.swift in Sources */,
 				4410E96D28044BD300688E9F /* ForChildrenItem.swift in Sources */,
+				B08B0DF9281FD49B000EAEF1 /* TeamDataStore.swift in Sources */,
 				B0E140E127FCE1DD008BBBB4 /* TranslationFavoritesService.swift in Sources */,
 				B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */,
 				B0E140DC27FCCF2F008BBBB4 /* TranslationMatchService.swift in Sources */,

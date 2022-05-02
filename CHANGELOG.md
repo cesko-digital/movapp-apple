@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Přidání týmu do menu aplikace
+
 ## [1.1.0, build 7] - 2022-04-29Z
 
 - Odebrání rozpracované Apple Watch aplikace 

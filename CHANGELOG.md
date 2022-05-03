@@ -2,6 +2,9 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Oprava sekce pro děti
+- Před nastavení sekce Chci se naučit dle nastavení telefonu
+
 ## [1.1.0, build 9] - 2022-05-02Z
 
 - Oprava automatického vygenerování screenshotů

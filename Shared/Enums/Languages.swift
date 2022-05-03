@@ -16,17 +16,16 @@ enum Languages: String {
         case .cs:
             return Flags.cs
         case .uk:
-            return Flags.cs
+            return Flags.uk
         }
     }
     
-    // TODO translate
     var title: String {
         switch(self) {
         case .cs:
-            return "česky"
+            return String(localized: "czech")
         case .uk:
-            return "ukrainsky"
+            return String(localized: "ukraine")
         }
     }
 }

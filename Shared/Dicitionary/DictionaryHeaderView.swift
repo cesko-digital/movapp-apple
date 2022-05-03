@@ -42,7 +42,7 @@ struct DictionaryHeaderView: View {
         .frame(height: 52)
         .background(Color("colors/input/background"))
         .cornerRadius(13)
-        .padding()
+        .padding(16)
         .background(Color("colors/primary"))
     }
 }

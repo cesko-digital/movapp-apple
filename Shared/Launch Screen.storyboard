@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -13,30 +13,40 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wa8-Gr-y9E">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="131"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzC-pt-SJ9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                 <color key="backgroundColor" name="AccentColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="131" id="o4J-BN-O1n"/>
-                                </constraints>
                             </view>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ryx-ev-BWG">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ryx-ev-BWG">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items/>
                                 <tabBarAppearance key="scrollEdgeAppearance"/>
                             </tabBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wa8-Gr-y9E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="o4J-BN-O1n"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" name="colors/background"/>
                         <constraints>
-                            <constraint firstItem="wa8-Gr-y9E" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="0ZY-H0-so8"/>
+                            <constraint firstItem="wa8-Gr-y9E" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" id="0ZY-H0-so8"/>
                             <constraint firstItem="wa8-Gr-y9E" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="EPZ-VK-W1J"/>
+                            <constraint firstItem="qzC-pt-SJ9" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="FB0-gK-xWG"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="Ryx-ev-BWG" secondAttribute="trailing" id="Ig2-tM-nAO"/>
+                            <constraint firstItem="qzC-pt-SJ9" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="PLG-VJ-djO"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="Ryx-ev-BWG" secondAttribute="bottom" id="SW6-3c-RqA"/>
+                            <constraint firstAttribute="top" secondItem="qzC-pt-SJ9" secondAttribute="top" id="cdi-Zl-1fZ"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="top" secondItem="qzC-pt-SJ9" secondAttribute="bottom" id="icX-TP-gf4"/>
                             <constraint firstItem="wa8-Gr-y9E" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="mPT-4P-uXL"/>
+                            <constraint firstItem="Ryx-ev-BWG" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="vNM-w0-kpU"/>
                         </constraints>
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -49,7 +59,7 @@
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <namedColor name="AccentColor">
-            <color red="0.0039215686274509803" green="0.22745098039215686" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0040000001899898052" green="0.22699999809265137" blue="0.74099999666213989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="colors/background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

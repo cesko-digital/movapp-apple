@@ -21,7 +21,7 @@ final class LanguageService: ObservableObject {
             
             print("Setting language \(language)")
         } else {
-            currentLanguage = .csUk // TODO detect based on phone settings
+            currentLanguage = Locale.current.languageCode == "uk" ? .ukCs : .csUk
         }
         
     }

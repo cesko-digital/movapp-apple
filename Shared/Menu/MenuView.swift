@@ -28,7 +28,7 @@ struct MenuView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
-            .navigationTitle("Menu")
+            .navigationTitle("Settings")
         }
     }
     
@@ -93,7 +93,7 @@ struct MenuView: View {
             openLinkButton("LinkedIn", url: "https://www.linkedin.com/company/movapp-cz")
             
         } header: {
-            Text("About the project", comment: "Menu")
+            Text("About the project", comment: "Settings")
         }
     }
     

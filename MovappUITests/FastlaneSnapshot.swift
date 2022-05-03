@@ -26,6 +26,10 @@ class FastlaneSnapshot: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         setupSnapshot(app)
+        
+        
+        app.setSeenOnBoarding(true)
+        
         app.launch()
         
         

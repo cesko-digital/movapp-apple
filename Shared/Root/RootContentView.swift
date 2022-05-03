@@ -11,7 +11,14 @@ import SwiftUI
 extension View {
     func setTabItem (_ item: RootItems) -> some View {
         self.tabItem {
-            Label(item.title, image: item.icon)
+            let icon = item.icon
+            
+            if icon.contains("icons/"){
+                Label(item.title, image: icon)
+            } else {
+                Label(item.title, systemImage: icon)
+            }
+            
         }.tag(item)
     }
 }
@@ -33,7 +40,7 @@ struct RootContentView: View {
                     .setTabItem(RootItems.for_children)
                 
                 MenuView(selectedLanguage: languageService.currentLanguage)
-                    .setTabItem(RootItems.menu)
+                    .setTabItem(RootItems.settings)
             }
             
             // Add background under the status bar to ensure that status bar can be .lightContent

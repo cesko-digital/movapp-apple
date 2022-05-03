@@ -5,7 +5,7 @@
 "About the project" = "O projektu";
 
 /* TabBar A-Z */
-"Alphabet" = "A-Z";
+"Alphabet" = "Abeceda";
 
 /* No comment provided by engineer. */
 "Czech alphabet" = "Česká abeceda";
@@ -35,7 +35,7 @@
 "License" = "Licence";
 
 /* TabBar Menu */
-"Menu" = "Menu";
+"Settings" = "Nastavení";
 
 /* (No Comment) */
 "Partner project" = "Partnerské projekty";
@@ -66,3 +66,13 @@
 
 "Team" = "Tým";
 
+
+
+"boarding-1-title" = "Slovníček";
+"boarding-1-sub-title" = "Naučte se stovky základních slovíček a frází čtením i poslechem. Slovíčka třídíme dle životních situací.";
+
+"boarding-2-title" = "Pro děti";
+"boarding-2-sub-title" = "Ilustrovaný ukrajinsko-český slovníček s desítkami tisknutelných karet.";
+
+"boarding-3-title" = "Ukrajinská abeceda";
+"boarding-3-sub-title" = "Naučte se všechny znaky ukrajinské cyrilice. Pomohou vám ukázková slova.";

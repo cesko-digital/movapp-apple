@@ -12,6 +12,7 @@ typealias FavoritesTranslationsStore = [String: [String: String]]
 
 struct UserDefaultsStore {
     
+    private let onBoardingCompleteKey = "onboarding.complete"
     private let favoritesKey = "favorite.translations"
     private let languageKey = "language"
     
@@ -19,6 +20,15 @@ struct UserDefaultsStore {
     
     init () {
         userDefaults = UserDefaults(suiteName: "group.cz.movapp.app")!
+    }
+    
+    func getOnBoardingComplete() -> Bool {
+        return userDefaults.bool(forKey: onBoardingCompleteKey)
+    }
+    
+    func storeOnBoardingComplete(_ value: Bool = true) {
+        print("Storing onboarding completion")
+        userDefaults.set(value, forKey: onBoardingCompleteKey)
     }
     
     func getLanguage() -> SetLanguage? {

@@ -16,10 +16,12 @@ struct MovappApp: App {
     let userDefaultsStore = UserDefaultsStore()
     let teamDataStore = TeamDataStore()
     
-    let langaugeService: LanguageService
+    let languageService: LanguageService
     let soundService = SoundService()
     let favoritesProvider: TranslationFavoritesProvider
     let favoritesService: TranslationFavoritesService
+    
+    @State var isBoardingCompleted: Bool
     
     init() {
         let appearance = UINavigationBarAppearance()
@@ -32,22 +34,30 @@ struct MovappApp: App {
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         
-        self.langaugeService = LanguageService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
+        self.languageService = LanguageService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
         self.favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore)
         self.favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
+        
+        isBoardingCompleted = userDefaultsStore.getOnBoardingComplete()
     }
     
     var body: some Scene {
         WindowGroup {
-            RootContentView()
-                .environmentObject(langaugeService)
-                .environmentObject(soundService)
-                .environmentObject(favoritesService)
-                .environmentObject(favoritesProvider)
-                .environmentObject(dictionaryDataStore)
-                .environmentObject(alphabetDataStore)
-                .environmentObject(forKidsDataStore)
-                .environmentObject(teamDataStore)
+            if isBoardingCompleted {
+                RootContentView()
+                    .environmentObject(languageService)
+                    .environmentObject(soundService)
+                    .environmentObject(favoritesService)
+                    .environmentObject(favoritesProvider)
+                    .environmentObject(dictionaryDataStore)
+                    .environmentObject(alphabetDataStore)
+                    .environmentObject(forKidsDataStore)
+                    .environmentObject(teamDataStore)
+            } else {
+                OnBoardingRootView(isBoardingCompleted: $isBoardingCompleted, userDefaultsStore: userDefaultsStore)
+                    .environmentObject(languageService)
+            }
+            
         }
     }
 }

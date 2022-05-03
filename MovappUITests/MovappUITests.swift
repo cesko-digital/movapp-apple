@@ -22,12 +22,14 @@ class MovappUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testHomescreen() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         
+        app.setSeenOnBoarding(true)
+                
         app.launch()
-
+        
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         app.tabBars.buttons.element(boundBy: 0).tap()
@@ -38,6 +40,26 @@ class MovappUITests: XCTestCase {
         app.tabBars.buttons.element(boundBy: 1).tap()
         app.tabBars.buttons.element(boundBy: 2).tap()
         app.tabBars.buttons.element(boundBy: 3).tap()
+    }
+    
+    
+
+    func testOnBoarding() throws {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        
+        app.setSeenOnBoarding(false)
+                
+        app.launch()
+        
+        app.otherElements.staticTexts["welcome-ukraine"].tap()
+        
+                                        
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        app.tabBars.buttons.element(boundBy: 0).tap()
+        
+        app.scrollViews.otherElements/*@START_MENU_TOKEN@*/.staticTexts["dictionary_0"]/*[[".staticTexts[\"Základní fráze - Основні фрази\"]",".staticTexts[\"dictionary_0\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
 
     func testLaunchPerformance() throws {

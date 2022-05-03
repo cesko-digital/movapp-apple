@@ -2,6 +2,9 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Přejmenování Menu na nastavení
+- Přidání on boarding obrazovky
+
 ## [1.1.0, build 11] - 2022-05-03Z
 
 - Oprava sekce pro děti

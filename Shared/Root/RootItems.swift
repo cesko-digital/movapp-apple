@@ -11,26 +11,26 @@ let NO_ICON = "none"
 
 enum RootItems: Int, Hashable {
     
-    case dictionary = 0
+    case dictionary
     case alphabet
     case for_children
-    case menu
+    case settings
     
     var icon: String {
         switch self {
         case .dictionary: return "icons/dictionary"
         case .alphabet: return "icons/alphabet"
         case .for_children: return "icons/child"
-        case .menu: return "icons/menu"
+        case .settings: return "gearshape"
         }
     }
     
     var title: String {
         switch self {
         case .dictionary: return String(localized: "Dictionary", comment: "TabBar dictionary")
-        case .alphabet: return String(localized: "Alphabet", comment: "TabBar aklphabet - use shortcut A-Z")
+        case .alphabet: return String(localized: "Alphabet", comment: "TabBar aklphabet")
         case .for_children: return String(localized: "For Kids", comment: "TabBar For kids")
-        case .menu: return String(localized: "Menu", comment: "TabBar Menu")
+        case .settings: return String(localized: "Settings", comment: "TabBar Menu")
         }
     }
 }

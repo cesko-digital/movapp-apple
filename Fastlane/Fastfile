@@ -83,7 +83,7 @@ lane :upload do
         api_key: api_key,
         precheck_include_in_app_purchases: false,
         force: true,
-        skip_metadata: true,
+        skip_metadata: false,
         skip_screenshots: false
     )
 end

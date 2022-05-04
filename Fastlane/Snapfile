@@ -7,8 +7,8 @@ devices([
 ])
 
 languages([
-   "en-US",
    "cs",
+   "en-US",
    "uk",
  ])
 

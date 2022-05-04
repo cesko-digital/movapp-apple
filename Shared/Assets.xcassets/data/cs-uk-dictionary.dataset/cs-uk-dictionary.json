@@ -952,9 +952,7 @@
 				"e430e54723f4d954d211000dd61f7d8a",
 				"e226009b6a41c53b98bc30c49afa4e91",
 				"56978a6b1901d5b152926c0ef0a32d12",
-				"7d005f76f52aea6e61c246b2ba5769d6",
-				"2377ca02b74517eb84b0b5f605a4d098",
-				"fcf189ab1dd804340ecf7390b9812f8c"
+				"7d005f76f52aea6e61c246b2ba5769d6"
 			]
 		}
 	],
@@ -6705,20 +6703,6 @@
 			"transcription_from": "раковина",
 			"translation_to": "рак",
 			"transcription_to": "rak"
-		},
-		"2377ca02b74517eb84b0b5f605a4d098": {
-			"id": "2377ca02b74517eb84b0b5f605a4d098",
-			"translation_from": "hledat",
-			"transcription_from": "гледат",
-			"translation_to": "шукати",
-			"transcription_to": "šukaty"
-		},
-		"fcf189ab1dd804340ecf7390b9812f8c": {
-			"id": "fcf189ab1dd804340ecf7390b9812f8c",
-			"translation_from": "šukat",
-			"transcription_from": "шукат",
-			"translation_to": "трахати",
-			"transcription_to": "trachaty"
 		}
 	}
 }

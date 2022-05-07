@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.1.0, build 12] - 2022-05-07Z
+
 - Přejmenování Menu na nastavení
 - Přidání on boarding obrazovky
 - Ve vývojové verzi přidání možnosti znova spustit on boarding

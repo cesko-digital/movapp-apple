@@ -16,13 +16,15 @@ struct OnBoardingWelcomeView: View {
         VStack {
             VStack {
                 
-                Text("Vítejte v MOVAPP!")
+                Text("Welcome")
                     .foregroundColor(Color("colors/primary"))
                     .font(.system(size: 25))
+                    .multilineTextAlignment(.center)
                     .padding()
                 
-                Text("Vyberte jazyk, který se chcete naučit")
+                Text("Choose language to learn")
                     .foregroundColor(Color("colors/primary"))
+                    .multilineTextAlignment(.center)
                     .padding(.horizontal, 16)
             }
             .padding(.bottom, 40)

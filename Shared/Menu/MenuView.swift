@@ -10,7 +10,8 @@ import SwiftUI
 struct MenuView: View {
     @State var selectedLanguage: SetLanguage;
     
-    @EnvironmentObject var languageService: LanguageService
+    @EnvironmentObject var languageStore: LanguageStore
+    @EnvironmentObject var onBoardingStore: OnBoardingStore
     
     init (selectedLanguage: SetLanguage) {
         self.selectedLanguage = selectedLanguage
@@ -45,8 +46,16 @@ struct MenuView: View {
             .foregroundColor(Color("colors/text"))
             .onChange(of: selectedLanguage) { newLanguage in
                 
-                languageService.currentLanguage = newLanguage
+                languageStore.currentLanguage = newLanguage
             }
+            
+            #if DEBUG
+            Button("Znova spustit on boarding") {
+                withAnimation {
+                    onBoardingStore.isBoardingCompleted.toggle()
+                }
+            }
+            #endif
             
             
         } header: {
@@ -134,11 +143,13 @@ struct MenuView_Previews: PreviewProvider {
     static let userDefaultsStore = UserDefaultsStore()
     static let dictionaryDataStore = DictionaryDataStore()
     static let teamDataStore = TeamDataStore()
-    static let languageService = LanguageService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
+    static let languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
+    static let onBoardingStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
     
     static var previews: some View {
         MenuView(selectedLanguage: .csUk)
-            .environmentObject(languageService)
+            .environmentObject(languageStore)
             .environmentObject(teamDataStore)
+            .environmentObject(onBoardingStore)
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct TeamView: View {
     
     @EnvironmentObject var dataStore: TeamDataStore
+    @EnvironmentObject var onBoardingDataStore: OnBoardingStore
     
     var body: some View {
         
@@ -51,9 +52,11 @@ struct TeamView: View {
 
 struct TeamView_Previews: PreviewProvider {
     static let dataStore = TeamDataStore()
+    static let onBoardingStore = OnBoardingStore(userDefaultsStore: UserDefaultsStore())
     
     static var previews: some View {
         TeamView()
             .environmentObject(dataStore)
+            .environmentObject(onBoardingStore)
     }
 }

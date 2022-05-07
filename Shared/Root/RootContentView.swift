@@ -24,22 +24,22 @@ extension View {
 }
 
 struct RootContentView: View {
-    @EnvironmentObject var languageService: LanguageService
+    @EnvironmentObject var languageStore: LanguageStore
     
     var body: some View {
         ZStack(alignment: .top) {
             
             TabView {
-                DicitionaryView(selectedLanguage: languageService.currentLanguage)
+                DicitionaryView(selectedLanguage: languageStore.currentLanguage)
                     .setTabItem(RootItems.dictionary)
                 
                 AlphabetView()
                     .setTabItem(RootItems.alphabet)
                 
-                ForChildrenView(selectedLanguage: languageService.currentLanguage)
+                ForChildrenView(selectedLanguage: languageStore.currentLanguage)
                     .setTabItem(RootItems.for_children)
                 
-                MenuView(selectedLanguage: languageService.currentLanguage)
+                MenuView(selectedLanguage: languageStore.currentLanguage)
                     .setTabItem(RootItems.settings)
             }
             
@@ -62,7 +62,7 @@ struct ContentView_Previews: PreviewProvider {
     static let alphabetDataStore = AlphabetDataStore()
     static let forKidsDataStore = ForChildrenDataStore()
     static let teamDataStore = TeamDataStore()
-    static let languageService = LanguageService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
+    static let languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
     
     static var previews: some View {
         RootContentView()
@@ -72,7 +72,7 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(dictionaryDataStore)
             .environmentObject(alphabetDataStore)
             .environmentObject(forKidsDataStore)
-            .environmentObject(languageService)
+            .environmentObject(languageStore)
             .environmentObject(teamDataStore)
     }
 }

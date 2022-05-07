@@ -1,5 +1,5 @@
 //
-//  LanguageService.swift
+//  LanguageStore.swift
 //  Movapp (iOS)
 //
 //  Created by Martin Kluska on 26.04.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class LanguageService: ObservableObject {
+final class LanguageStore: ObservableObject {
     
     let userDefaultsStore: UserDefaultsStore
     let dictionaryDataStore: DictionaryDataStore

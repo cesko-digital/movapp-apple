@@ -49,11 +49,16 @@
 
 "Team" = "Team";
 
+"Back" = "Back";
+
+"Start learning" = "Start learning";
+"Choose language to learn" = "Choose language you want to learn";
+
 "boarding-1-title" = "Slovníček";
-"boarding-1-sub-title" = "Naučte se stovky základních slovíček a frází čtením i poslechem. Slovíčka třídíme dle životních situací.";
+"boarding-1-sub-title" = "Learn hundreds of basic words and phrases by reading and listening. We sort words according to life situations.";
 
 "boarding-2-title" = "Pro děti";
-"boarding-2-sub-title" = "Ilustrovaný ukrajinsko-český slovníček s desítkami tisknutelných karet.";
+"boarding-2-sub-title" = "Illustrated Ukrainian-Czech dictionary with dozens of printable cards.";
 
 "boarding-3-title" = "Ukrajinská abeceda";
-"boarding-3-sub-title" = "Naučte se všechny znaky ukrajinské cyrilice. Pomohou vám ukázková slova.";
+"boarding-3-sub-title" = "Learn all the characters of the Ukrainian Cyrillic. Sample words will help you.";

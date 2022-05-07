@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 typealias FavoritesTranslationsStore = [String: [String: String]]
 
 struct UserDefaultsStore {
@@ -27,7 +26,7 @@ struct UserDefaultsStore {
     }
     
     func storeOnBoardingComplete(_ value: Bool = true) {
-        print("Storing onboarding completion")
+        print("Storing onboarding completion \(value)")
         userDefaults.set(value, forKey: onBoardingCompleteKey)
     }
     

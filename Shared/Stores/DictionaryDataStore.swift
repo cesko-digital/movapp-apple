@@ -5,8 +5,7 @@
 //  Created by Martin Kluska on 07.04.2022.
 //
 
-import Foundation
-import UIKit
+import SwiftUI
 
 class DictionaryDataStore: ObservableObject {
     

@@ -8,26 +8,26 @@
 import XCTest
 
 class MovappUITests: XCTestCase {
-
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-
+        
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
+        
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
+    
     func testHomescreen() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         
         app.setSeenOnBoarding(true)
-                
+        
         app.launch()
         
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -43,31 +43,47 @@ class MovappUITests: XCTestCase {
     }
     
     
-
-    func testOnBoarding() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        
+    
+    func assertOnBoarding(_ app: XCUIApplication) throws {
         app.setSeenOnBoarding(false)
-                
+        
         app.launch()
         
-        app.otherElements.staticTexts["welcome-ukraine"].tap()
+        app/*@START_MENU_TOKEN@*/.buttons["welcome-ukraine"]/*[[".buttons[\"Я хочу вивчити Чеський\"]",".buttons[\"welcome-ukraine\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
-                                        
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        app.collectionViews["tutorial-tab-view"].swipeLeft()
+        
+        app/*@START_MENU_TOKEN@*/.buttons["welcome-go-start"]/*[[".buttons[\"Zpět\"]",".buttons[\"welcome-go-start\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app/*@START_MENU_TOKEN@*/.buttons["welcome-czech"]/*[[".buttons[\"Chci se naučit ukrajinsky\"]",".buttons[\"welcome-czech\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        
+        app.collectionViews["tutorial-tab-view"].swipeLeft()
+        
+        app/*@START_MENU_TOKEN@*/.buttons["start-learning-button"]/*[[".buttons[\"Začít s účením\"]",".buttons[\"start-learning-button\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
         app.tabBars.buttons.element(boundBy: 0).tap()
         
         app.scrollViews.otherElements/*@START_MENU_TOKEN@*/.staticTexts["dictionary_0"]/*[[".staticTexts[\"Základní fráze - Основні фрази\"]",".staticTexts[\"dictionary_0\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
+    
+    func testOnBoardingUk() throws {
+        let app = XCUIApplication()
+        app.setLanguageToUk()
+        
+        try assertOnBoarding(app)
+    }
+    
+    func testOnBoardingCs() throws {
+        let app = XCUIApplication()
+        app.setLanguageToCs()
+        
+        try assertOnBoarding(app)
+    }
+    
+    func testOnBoardingEn() throws {
+        let app = XCUIApplication()
+        app.setLanguageToEn()
+        
+        try assertOnBoarding(app)
     }
 }

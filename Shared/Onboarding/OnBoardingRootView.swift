@@ -11,16 +11,12 @@ import SwiftUI
 
 struct OnBoardingRootView: View {
     
-    @EnvironmentObject var languageService: LanguageService
+    @EnvironmentObject var languageStore: LanguageStore
+    @EnvironmentObject var onBoardingStore: OnBoardingStore
+    
     @State var setLanguage: SetLanguage?
-    @State var languageSet: Bool = false
-    
-    @Binding var isBoardingCompleted: Bool
-    
-    let userDefaultsStore: UserDefaultsStore
     
     var body: some View {
-        
         
         if let setLanguage = self.setLanguage {
             OnBoardingTutorialsPagerView  {
@@ -29,11 +25,11 @@ struct OnBoardingRootView: View {
                 }
             } onStart: {
                 withAnimation {
-                    languageService.currentLanguage = setLanguage
                     
-                    userDefaultsStore.storeOnBoardingComplete()
+                    languageStore.currentLanguage = setLanguage
+                    onBoardingStore.isBoardingCompleted.toggle()
                     
-                    isBoardingCompleted.toggle()
+                    self.setLanguage = nil
                 }
             }
         } else {
@@ -48,11 +44,13 @@ struct OnBoardingRootView: View {
 
 struct OnBoardingRootView_Previews: PreviewProvider {
     static let userDefaultsStore = UserDefaultsStore()
-    static let languageService = LanguageService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
+    static let languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
+    static let onBoardingStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
     
     static var previews: some View {
-        OnBoardingRootView(isBoardingCompleted: .constant(false), userDefaultsStore: userDefaultsStore)
-            .environmentObject(languageService)
+        OnBoardingRootView()
+            .environmentObject(languageStore)
+            .environmentObject(onBoardingStore)
         
     }
 }

@@ -17,21 +17,23 @@ struct OnBoardingTutorialsPagerView: View {
             VStack {
                 TabView {
                     
-                    OnBoardingTutorialView(title: "Slovníček", subTitle: "Naučte se stovky základních slovíček a frází čtením i poslechem. Slovíčka třídíme dle životních situací.", image: "icons/tutorial-dictionary")
+                    OnBoardingTutorialView(title: "boarding-1-title", subTitle: "boarding-1-sub-title", image: "icons/tutorial-dictionary")
                     
-                    OnBoardingTutorialView(title: "Pro děti", subTitle: "Ilustrovaný ukrajinsko-český slovníček s desítkami tisknutelných karet.", image: "icons/tutorial-child")
+                    OnBoardingTutorialView(title: "boarding-2-title", subTitle: "boarding-2-sub-title", image: "icons/tutorial-child")
                     
-                    OnBoardingTutorialView(title: "Ukrajinská abeceda", subTitle: "Naučte se všechny znaky ukrajinské cyrilice. Pomohou vám ukázková slova.", image: "icons/tutorial-alphabet")
+                    OnBoardingTutorialView(title: "boarding-3-title", subTitle: "boarding-3-sub-title", image: "icons/tutorial-alphabet")
                     
                 }
                 .tabViewStyle(.page)
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
+                .accessibilityIdentifier("tutorial-tab-view")
                 
                 
-                Button("Začít s účením", action: onStart)
+                Button("Start learning", action: onStart)
                     .buttonStyle(PrimaryButtonStyle())
                     .frame(maxWidth: .infinity)
                     .padding()
+                    .accessibilityIdentifier("start-learning-button")
             }
             
             Button {
@@ -41,7 +43,7 @@ struct OnBoardingTutorialsPagerView: View {
                 
                 Text("Back")
             }
-            .accessibilityIdentifier("welcome-start")
+            .accessibilityIdentifier("welcome-go-start")
             .padding()
         }
     }

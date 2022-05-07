@@ -5,8 +5,8 @@
 //  Created by Daryna Polevyk on 11.04.2022.
 //
 
-import Foundation
-import UIKit
+
+import SwiftUI
 
 class ForChildrenDataStore: ObservableObject {
     

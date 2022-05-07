@@ -66,7 +66,12 @@
 
 "Team" = "Tým";
 
+"Back" = "Zpět";
 
+"Welcome" = "Vítejte v MOVAPP!";
+"Choose language to learn" = "Vyberte jazyk, který se chcete naučit";
+
+"Start learning" = "Začít s účením";
 
 "boarding-1-title" = "Slovníček";
 "boarding-1-sub-title" = "Naučte se stovky základních slovíček a frází čtením i poslechem. Slovíčka třídíme dle životních situací.";

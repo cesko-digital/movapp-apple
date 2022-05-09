@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Zakázání iPad aplikace
+
 ## [1.1.0, build 15] - 2022-05-09Z
 
 - Aktualizace Appstore textů

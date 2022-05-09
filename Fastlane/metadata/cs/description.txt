@@ -1,19 +1,21 @@
 Mова [mova] znamená ukrajinsky jazyk. Cílem Movapp.cz je usnadnit dorozumění mezi Čechy a Ukrajinci během současné humanitární krize. 
 
 Jsme tu pro případy, když potřebujete…
+
 • zjistit, jak vypadá česká nebo ukrajinská abeceda
-• vyřešit situaci s učitelkou ve školce, školce
+• vyřešit situaci s učitelkou ve škole, školce
 • domluvit se u lékaře
 • zajít na úřad práce
 • …řešit další podobné situace
 
 Proč používat naši aplikaci?
-Protože aplikace funguje bez připojení k internetu. Ve slovníku najdete více než 1000 komunikačních frází v češtině a ukrajinštině, přizpůsobené dle životních situací (doktor, škola, úřad práce…). Sekce pro děti obsahuje slovníček s obrázky, aby pro ně učení bylo zábavné. Naučte se všechny znaky ukrajinské cyrilice. Pomohou vám ukázková slova.
+
+Protože aplikace funguje bez připojení k internetu. Ve slovníku najdete více než 1000 komunikačních frází v češtině a ukrajinštině, přizpůsobených dle životních situací (doktor, škola, úřad práce…). Sekce pro děti obsahuje slovníček s obrázky, aby bylo učení pro děti zábavné. Naučte se všechny znaky ukrajinské cyrilice -  pomohou vám ukázková slova.
 
 Na co se můžete těšit v dalších verzích?
+
 Přidání zvuku u ukrajinských frází, vytváření nástrojů pro jejich procvičování. Budujeme rozcestník s dalšími materiály, které vám pomohou s učením ukrajinštiny a češtiny.
 
 Za vývojem této aplikace stojí tým dobrovolníků z Čech, Ukrajiny, Polska a Slovenska.
 
-Movapp je k dispozici zdarma a je vytvořen jako otevřený software pod licencí MIT, to znamená, že ho můžete zdarma nejen používat, ale také si ho upravit a výsledek dále šířit. 
-
+Movapp je k dispozici zdarma a je vytvořen jako otevřený software pod licencí MIT. To znamená, že ho můžete zdarma nejen používat, ale také si ho upravit a výsledek dále šířit. 

@@ -13,9 +13,10 @@
 		4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */; };
 		5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77295C280443B00087F582 /* ForChildrenItemView.swift */; };
 		B0065D0C2831730300EE84D8 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065D0B2831730300EE84D8 /* String+MD5.swift */; };
+		B0065D0E28319D3300EE84D8 /* PlayTranslationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065D0D28319D3300EE84D8 /* PlayTranslationButtonView.swift */; };
 		B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2427F9999C0073611C /* DictionaryContentView.swift */; };
 		B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */; };
-		B00D1B2E27F9DEC20073611C /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2D27F9DEC20073611C /* WordView.swift */; };
+		B00D1B2E27F9DEC20073611C /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2D27F9DEC20073611C /* TranslationView.swift */; };
 		B01279A527F86957003FB72E /* MovappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012799527F86954003FB72E /* MovappApp.swift */; };
 		B01279A727F86957003FB72E /* RootContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012799627F86954003FB72E /* RootContentView.swift */; };
 		B01279A927F86957003FB72E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B012799727F86957003FB72E /* Assets.xcassets */; };
@@ -47,9 +48,9 @@
 		B076F0982806011500C1F88F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B076F0972806011500C1F88F /* CardView.swift */; };
 		B087C88927F8A3BD0015E54B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B087C88727F8A3BD0015E54B /* Localizable.strings */; };
 		B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C88E27F8B4080015E54B /* AccordionView.swift */; };
-		B087C89127F8B41B0015E54B /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89027F8B41B0015E54B /* TranslationView.swift */; };
+		B087C89127F8B41B0015E54B /* PhraseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89027F8B41B0015E54B /* PhraseView.swift */; };
 		B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89227F8B4610015E54B /* AccordionsView.swift */; };
-		B087C89527F8B46A0015E54B /* TranslationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89427F8B46A0015E54B /* TranslationsView.swift */; };
+		B087C89527F8B46A0015E54B /* PhrasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B087C89427F8B46A0015E54B /* PhrasesView.swift */; };
 		B08B0DE5281FBB28000EAEF1 /* MovappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DE4281FBB28000EAEF1 /* MovappUITests.swift */; };
 		B08B0DEE281FBBFC000EAEF1 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DED281FBBFC000EAEF1 /* SnapshotHelper.swift */; };
 		B08B0DF0281FBF5B000EAEF1 /* FastlaneSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DEF281FBF5B000EAEF1 /* FastlaneSnapshot.swift */; };
@@ -113,9 +114,10 @@
 		444E972A2812E12F00DC6F8B /* ForChildrenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenView.swift; sourceTree = "<group>"; };
 		5B77295C280443B00087F582 /* ForChildrenItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenItemView.swift; sourceTree = "<group>"; };
 		B0065D0B2831730300EE84D8 /* String+MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
+		B0065D0D28319D3300EE84D8 /* PlayTranslationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTranslationButtonView.swift; sourceTree = "<group>"; };
 		B00D1B2427F9999C0073611C /* DictionaryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryContentView.swift; sourceTree = "<group>"; };
 		B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionHeaderView.swift; sourceTree = "<group>"; };
-		B00D1B2D27F9DEC20073611C /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
+		B00D1B2D27F9DEC20073611C /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
 		B012799527F86954003FB72E /* MovappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappApp.swift; sourceTree = "<group>"; };
 		B012799627F86954003FB72E /* RootContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContentView.swift; sourceTree = "<group>"; };
 		B012799727F86957003FB72E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,9 +154,9 @@
 		B076F0972806011500C1F88F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B087C88827F8A3BD0015E54B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B087C88E27F8B4080015E54B /* AccordionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionView.swift; sourceTree = "<group>"; };
-		B087C89027F8B41B0015E54B /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
+		B087C89027F8B41B0015E54B /* PhraseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseView.swift; sourceTree = "<group>"; };
 		B087C89227F8B4610015E54B /* AccordionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionsView.swift; sourceTree = "<group>"; };
-		B087C89427F8B46A0015E54B /* TranslationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationsView.swift; sourceTree = "<group>"; };
+		B087C89427F8B46A0015E54B /* PhrasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesView.swift; sourceTree = "<group>"; };
 		B08B0DE2281FBB28000EAEF1 /* MovappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08B0DE4281FBB28000EAEF1 /* MovappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappUITests.swift; sourceTree = "<group>"; };
 		B08B0DED281FBBFC000EAEF1 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = Fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
@@ -358,9 +360,9 @@
 				B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */,
 				B087C88E27F8B4080015E54B /* AccordionView.swift */,
 				B087C89227F8B4610015E54B /* AccordionsView.swift */,
-				B087C89027F8B41B0015E54B /* TranslationView.swift */,
-				B087C89427F8B46A0015E54B /* TranslationsView.swift */,
-				B00D1B2D27F9DEC20073611C /* WordView.swift */,
+				B087C89027F8B41B0015E54B /* PhraseView.swift */,
+				B087C89427F8B46A0015E54B /* PhrasesView.swift */,
+				B00D1B2D27F9DEC20073611C /* TranslationView.swift */,
 			);
 			path = Dicitionary;
 			sourceTree = "<group>";
@@ -456,6 +458,7 @@
 				B03B1BC728186E2E005C62C3 /* PlayButtonView.swift */,
 				B03B1BC928186F7A005C62C3 /* SpeakButtonView.swift */,
 				B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */,
+				B0065D0D28319D3300EE84D8 /* PlayTranslationButtonView.swift */,
 				B04021CD2822E27000B756FB /* PrimaryButtonStyle.swift */,
 				B04021CF2822E48700B756FB /* ScaleButtonStyle.swift */,
 			);
@@ -616,7 +619,7 @@
 				B0ECC1502803485B00BF9898 /* AlphabetShortcutsView.swift in Sources */,
 				B01279D027F872C3003FB72E /* MenuView.swift in Sources */,
 				B01279A727F86957003FB72E /* RootContentView.swift in Sources */,
-				B087C89527F8B46A0015E54B /* TranslationsView.swift in Sources */,
+				B087C89527F8B46A0015E54B /* PhrasesView.swift in Sources */,
 				B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */,
 				B03B1BCA28186F7A005C62C3 /* SpeakButtonView.swift in Sources */,
 				B0ECC1402802FC6F00BF9898 /* AlphabetItemView.swift in Sources */,
@@ -648,6 +651,7 @@
 				B04021CA2822D6C600B756FB /* OnBoardingTutorialView.swift in Sources */,
 				4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */,
 				B05FF14327FA14A00046D636 /* SoundService.swift in Sources */,
+				B0065D0E28319D3300EE84D8 /* PlayTranslationButtonView.swift in Sources */,
 				B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */,
 				B0C0F8E528060A310036441E /* ForChildrenRowView.swift in Sources */,
 				B04021C82822D46700B756FB /* OnBoardingRootView.swift in Sources */,
@@ -658,10 +662,10 @@
 				B0E140E127FCE1DD008BBBB4 /* TranslationFavoritesService.swift in Sources */,
 				B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */,
 				B0E140DC27FCCF2F008BBBB4 /* TranslationMatchService.swift in Sources */,
-				B00D1B2E27F9DEC20073611C /* WordView.swift in Sources */,
+				B00D1B2E27F9DEC20073611C /* TranslationView.swift in Sources */,
 				B068833327FF903000E6B831 /* Dictionary.swift in Sources */,
 				B0065D0C2831730300EE84D8 /* String+MD5.swift in Sources */,
-				B087C89127F8B41B0015E54B /* TranslationView.swift in Sources */,
+				B087C89127F8B41B0015E54B /* PhraseView.swift in Sources */,
 				B01279D327F872CB003FB72E /* ForChildrenView.swift in Sources */,
 				B03B1BCC28186F8D005C62C3 /* SoundStateButtonView.swift in Sources */,
 				B0ECC1422802FD3C00BF9898 /* AlphabetDataStore.swift in Sources */,

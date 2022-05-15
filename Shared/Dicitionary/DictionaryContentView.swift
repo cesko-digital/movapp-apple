@@ -26,21 +26,21 @@ extension View {
 struct DictionaryContentView: View {
     let searchString: String
     let language: SetLanguage
-    let sections: [Dictionary.Section]
-    let translations: [Dictionary.TranslationID: Dictionary.Translation]
-    let sectionTranslations: Array<Dictionary.Translation>?
+    let sections: [Dictionary.Category]
+    let translations: [Dictionary.TranslationID: Dictionary.Phrase]
+    let sectionTranslations: Array<Dictionary.Phrase>?
     
     @EnvironmentObject var favoritesProvider: TranslationFavoritesProvider
    
-    @Binding var selectedSection: Dictionary.Section?
+    @Binding var selectedSection: Dictionary.Category?
     @State private var view: DictionaryContentSubView = .dictionary;
     
     init(
         searchString: String,
         language: SetLanguage,
-        sections: [Dictionary.Section],
-        translations: [Dictionary.TranslationID: Dictionary.Translation],
-        selectedSection: Binding<Dictionary.Section?>
+        sections: [Dictionary.Category],
+        translations: [Dictionary.TranslationID: Dictionary.Phrase],
+        selectedSection: Binding<Dictionary.Category?>
     ) {
         self.searchString = searchString
         self.language = language
@@ -86,7 +86,7 @@ struct DictionaryContentView: View {
     
     var translationsView: some View {
         
-        let visibleTranslations: [Dictionary.Translation]
+        let visibleTranslations: [Dictionary.Phrase]
         
         switch (view) {
         case .dictionary:
@@ -95,7 +95,7 @@ struct DictionaryContentView: View {
             visibleTranslations = translations.filter(identifiers: favoritesProvider.getFavorites(language: language))
         }
         
-        return TranslationsView(
+        return PhrasesView(
             language: language,
             searchString: searchString,
             translations: visibleTranslations,
@@ -112,8 +112,8 @@ struct DictionaryContentView_Previews: PreviewProvider {
     static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
     static let favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
     
-    static let translations: [Dictionary.TranslationID: Dictionary.Translation] = [
-        exampleTranslation.id: exampleTranslation
+    static let translations: [Dictionary.TranslationID: Dictionary.Phrase] = [
+        examplePhrase.id: examplePhrase
     ]
     
     static var previews: some View {

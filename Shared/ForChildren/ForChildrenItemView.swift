@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct ForChildrenItemView: View {
-    let item: Dictionary.Translation
+    let item: Dictionary.Phrase
     let selectedLanguage: SetLanguage
     
     @EnvironmentObject var soundService: SoundService
@@ -39,9 +39,8 @@ struct ForChildrenItemView: View {
             }
             
             Footer {
-                ForChildrenRowView(translation: item.main.translation, transcription: item.main.transcription, language: selectedLanguage.language.main)
-                
-                ForChildrenRowView(translation: item.source.translation, transcription: item.source.transcription, language: selectedLanguage.language.source)
+                ForChildrenRowView(translation: item.main, language: selectedLanguage.language.main)
+                ForChildrenRowView(translation: item.source, language: selectedLanguage.language.source)
             }
             
         }, spacing: 0)
@@ -52,7 +51,7 @@ struct ForChildrenItem_Previews: PreviewProvider {
     static let soundService = SoundService()
     
     static var previews: some View {
-        ForChildrenItemView(item: exampleTranslation, selectedLanguage: .csUk)
+        ForChildrenItemView(item: examplePhrase, selectedLanguage: .csUk)
             .environmentObject(soundService)
     }
 }

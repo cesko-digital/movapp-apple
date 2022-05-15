@@ -67,7 +67,7 @@ struct UserDefaultsStore {
     }
     
     func getDataVersion () -> DataVersion {
-        // 0 - First initial version of translation keys -> md5
+        // 0 - First initial version of phrase keys -> md5
         // 1 - New keys from AirTable
         if let version =  DataVersion.init(rawValue: userDefaults.integer(forKey: favoritesVersionKey)) {
             return version

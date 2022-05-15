@@ -32,15 +32,32 @@ class SoundService: NSObject, ObservableObject {
         return isPlayingSoundId?.compare(id) == .orderedSame
     }
     
+    func isPlaying (translation: Dictionary.Phrase.Translation) -> Bool {
+        return isSpeaking(text: translation.translation)
+    }
+    
     func isSpeaking (text: String) -> Bool {
         return isSpeakingText?.compare(text) == .orderedSame
     }
     
+    func canPlayTranslation(language: Languages, translation: Dictionary.Phrase.Translation) -> Bool {
+        if language == .cs {
+            return true
+        } else if translation.soundFileName != nil {
+            return true
+        } else {
+            return false
+        }
+    }
     
-    func playTranslation(language: Languages, translation: Dictionary.Translation.Value) {
+    
+    func playTranslation(language: Languages, translation: Dictionary.Phrase.Translation) {
         if language == .cs {
             speach(language: language, text: translation.translation)
         } else if let soundFileName = translation.soundFileName {
+            // Act as speaking
+            isSpeakingText = translation.translation
+            
             play(soundFileName, inDirectory: "data/\(language.rawValue)-dictionary")
         } else {
             print("Cant play sound, missing sound or un-suported language", language, translation)

@@ -26,8 +26,7 @@ private extension Text {
 }
 
 struct ForChildrenRowView: View {
-    let translation: String
-    let transcription: String
+    let translation: Dictionary.Phrase.Translation
     let language: Languages
     
     var body: some View {
@@ -42,13 +41,13 @@ struct ForChildrenRowView: View {
         }
         HStack {
             VStack(alignment: .leading) {
-                Text(translation)
+                Text(translation.translation)
                     .foregroundColor(Color("colors/text"))
-                Text("[\(transcription)]")
+                Text("[\(translation.transcription)]")
                     .foregroundColor(Color("colors/secondary"))
             }
             Spacer()
-            SpeakButtonView(language: language, text: translation)
+            PlayTranslationButtonView(language: language, translation: translation)
         }
     }
 }
@@ -58,9 +57,16 @@ struct ForChildrenRowView_Previews: PreviewProvider {
     
     static var previews: some View {
         ForChildrenRowView(
-            translation: exampleTranslation.main.translation,
-            transcription: exampleTranslation.main.transcription,
+            translation: examplePhrase.main,
             language: Languages.cs
         ).environmentObject(soundService)
+            .previewLayout(.sizeThatFits)
+        
+        
+        ForChildrenRowView(
+            translation: examplePhrase.source,
+            language: Languages.uk
+        ).environmentObject(soundService)
+            .previewLayout(.sizeThatFits)
     }
 }

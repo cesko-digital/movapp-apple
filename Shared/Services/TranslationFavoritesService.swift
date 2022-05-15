@@ -50,12 +50,12 @@ class TranslationFavoritesService: ObservableObject {
     let userDefaultsStore: UserDefaultsStore
     
     /**
-     A map of favorited translations by language pack and translation id
-     [language pack][translationId] = translation id
+     A map of favorited translations by language pack and phrase id
+     [language pack][translationId] = phrase id
     */
-    @Published private(set) var favoritedTranslationsByLanguage: FavoritesTranslationsStore = [:] {
+    @Published private(set) var favoritedPhrasesByLanguage: FavoritesTranslationsStore = [:] {
         didSet {
-            userDefaultsStore.storeFavorites(favoritedTranslationsByLanguage)
+            userDefaultsStore.storeFavorites(favoritedPhrasesByLanguage)
         }
     }
     
@@ -68,14 +68,14 @@ class TranslationFavoritesService: ObservableObject {
             // Migrate from md5
             if userDefaultsStore.getDataVersion() == .initial {
                 if let migrated =  migrateFromInitialVersionToAirtable(favoritesFromUserDefaults, dictionaryDataStore: dictionaryDataStore) {
-                    favoritedTranslationsByLanguage = migrated
+                    favoritedPhrasesByLanguage = migrated
                     userDefaultsStore.storeDataVersion(.airtable)
                     userDefaultsStore.storeFavorites(migrated)
                 } else {
-                    favoritedTranslationsByLanguage = favoritesFromUserDefaults
+                    favoritedPhrasesByLanguage = favoritesFromUserDefaults
                 }
             } else {
-                favoritedTranslationsByLanguage = favoritesFromUserDefaults
+                favoritedPhrasesByLanguage = favoritesFromUserDefaults
             }
         }
         
@@ -84,7 +84,7 @@ class TranslationFavoritesService: ObservableObject {
     }
     
     func getFavorites( language: SetLanguage) -> [Dictionary.TranslationID] {
-        guard let favorites = favoritedTranslationsByLanguage[language.language.main.rawValue] else {
+        guard let favorites = favoritedPhrasesByLanguage[language.language.main.rawValue] else {
             return []
         }
         
@@ -92,8 +92,8 @@ class TranslationFavoritesService: ObservableObject {
         return Array(favorites.values)
     }
     
-    func isFavorited(_ translation: Dictionary.Translation, language: SetLanguage) -> Bool {
-        let isFavorited = favoritedTranslationsByLanguage[language.language.main.rawValue]?[translation.id]
+    func isFavorited(_ phrase: Dictionary.Phrase, language: SetLanguage) -> Bool {
+        let isFavorited = favoritedPhrasesByLanguage[language.language.main.rawValue]?[phrase.id]
         guard isFavorited != nil else {
             return false
         }
@@ -102,17 +102,17 @@ class TranslationFavoritesService: ObservableObject {
     }
 
     /**
-     Sets favorte state by given id - will not update translation object (UI will not be updated)
+     Sets favorte state by given id - will not update phrase object (UI will not be updated)
      */
     func setIsFavorited(_ isFavorited: Bool, translationId: Dictionary.TranslationID, language: SetLanguage) {
-        if favoritedTranslationsByLanguage[language.language.main.rawValue] == nil {
-            favoritedTranslationsByLanguage[language.language.main.rawValue] = [:]
+        if favoritedPhrasesByLanguage[language.language.main.rawValue] == nil {
+            favoritedPhrasesByLanguage[language.language.main.rawValue] = [:]
         }
         
         if isFavorited == true {
-            favoritedTranslationsByLanguage[language.language.main.rawValue]![translationId] = translationId
+            favoritedPhrasesByLanguage[language.language.main.rawValue]![translationId] = translationId
         } else {
-            favoritedTranslationsByLanguage[language.language.main.rawValue]!.removeValue(forKey:translationId)
+            favoritedPhrasesByLanguage[language.language.main.rawValue]!.removeValue(forKey:translationId)
         }
     }
 }

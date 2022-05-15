@@ -17,7 +17,7 @@ class ForChildrenDataStore: ObservableObject {
     
     @Published var loading: Bool = false
     
-    var forChildren: [Dictionary.Translation]?
+    var forChildren: [Dictionary.Phrase]?
     var error: String? // TODO enum?
     
     func reset() {

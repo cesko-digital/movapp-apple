@@ -1,5 +1,5 @@
 //
-//  WordsView.swift
+//  PhrasesView.swift
 //  Movapp (iOS)
 //
 //  Created by Martin Kluska on 02.04.2022.
@@ -7,34 +7,34 @@
 
 import SwiftUI
 
-struct TranslationsView: View {
+struct PhrasesView: View {
     
-    var showTranslations: [Dictionary.Translation]
+    var showPhrases: [Dictionary.Phrase]
     let language: SetLanguage
     
     init (
         language: SetLanguage,
         searchString: String,
-        translations: [Dictionary.Translation],
+        translations: [Dictionary.Phrase],
         matchService: TranslationMatchService
     )
     {
         self.language = language
         
         if searchString.isEmpty {
-            showTranslations = translations
+            showPhrases = translations
         } else {
-            showTranslations = matchService.matchTranslations(translations, searchString: searchString, language: language)
+            showPhrases = matchService.matchTranslations(translations, searchString: searchString, language: language)
         }
     }
     
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 16) {
-                ForEach(showTranslations)  { translation in
-                    TranslationView(
+                ForEach(showPhrases)  { phrase in
+                    PhraseView(
                         language: language,
-                        translation: translation
+                        phrase: phrase
                     )
                 }
             }
@@ -44,29 +44,29 @@ struct TranslationsView: View {
     }
 }
 
-struct TranslationsView_Previews: PreviewProvider {
+struct PhrasesView_Previews: PreviewProvider {
     static let soundService = SoundService()
     static let userDefaultsStore = UserDefaultsStore()
     static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
     static let matchService = TranslationMatchService(favoritesService: favoritesService)
     
     static var previews: some View {
-        TranslationsView(
+        PhrasesView(
             language: .csUk,
             searchString: "",
             translations: [
-                exampleTranslation,
+                examplePhrase,
             ],
             matchService: matchService
         )
         .environmentObject(soundService)
         .environmentObject(favoritesService)
         
-        TranslationsView(
+        PhrasesView(
             language: .ukCs,
             searchString: "",
             translations: [
-                exampleTranslation
+                examplePhrase
             ],
             matchService: matchService
         )

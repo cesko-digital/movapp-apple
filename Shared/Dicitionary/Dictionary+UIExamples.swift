@@ -1,22 +1,20 @@
 
 let exampleTranslation = Dictionary.Translation(
     id: "a4a7d64448a624da27c3026686ec9140",
-    translationFrom: "V neděli chci odpočívat.",
-    transcriptionFrom: "В недєли хци отпочіват",
-    translationTo: "В неділю я хочу відпочити.",
-    transcriptionTo: "V nedilju ja choču vidpočyty"
+    source: Dictionary.Translation.Value(soundUrl: nil, translation: "В неділю я хочу відпочити.", transcription: "V nedilju ja choču vidpočyty"),
+    main: Dictionary.Translation.Value(soundUrl: nil, translation: "V neděli chci odpočívat.", transcription: "В недєли хци отпочіват"),
+    imageUrl: nil
 )
 
 let exampleSection = Dictionary.Section(
     id: "bd4e4bfdf11933d9b65e18eace65a3ad",
-    nameFrom: "Čas",
-    nameTo: "Час",
-    translations: ["a4a7d64448a624da27c3026686ec9140"]
+    name: Dictionary.Section.Name(source:  "Час", main: "Čas"),
+    phrases: ["a4a7d64448a624da27c3026686ec9140"]
 )
 
 let exampleDictionary = Dictionary(
-    from: "cs",
-    to: "uk",
-    sections: [exampleSection],
-    translations: ["a4a7d64448a624da27c3026686ec9140": exampleTranslation]
+    main: "cs",
+    source: "uk",
+    categories: [exampleSection],
+    phrases: ["a4a7d64448a624da27c3026686ec9140": exampleTranslation]
 )

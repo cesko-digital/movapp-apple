@@ -14,6 +14,7 @@ class OnBoardingStore: ObservableObject {
     @Published var isBoardingCompleted: Bool {
         didSet {
             userDefaultsStore.storeOnBoardingComplete(isBoardingCompleted)
+            print("Set boarding state \(isBoardingCompleted)")
         }
     }
     
@@ -21,7 +22,7 @@ class OnBoardingStore: ObservableObject {
         self.userDefaultsStore = userDefaultsStore
         self.isBoardingCompleted = userDefaultsStore.getOnBoardingComplete()
         
-        print("Set boarding state \(self.isBoardingCompleted)")
+        print("Boarding state \(self.isBoardingCompleted)")
         
     }
     

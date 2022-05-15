@@ -56,13 +56,13 @@ struct RootContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static let soundService = SoundService()
     static let userDefaultsStore = UserDefaultsStore()
-    static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore)
-    static let favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
     static let dictionaryDataStore = DictionaryDataStore()
+    static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
+    static let favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
     static let alphabetDataStore = AlphabetDataStore()
-    static let forKidsDataStore = ForChildrenDataStore()
+    static let forChildrenDataStore = ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore)
     static let teamDataStore = TeamDataStore()
-    static let languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
+    static let languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore, forChildrenDataStore: forChildrenDataStore)
     
     static var previews: some View {
         RootContentView()
@@ -71,7 +71,7 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(favoritesProvider)
             .environmentObject(dictionaryDataStore)
             .environmentObject(alphabetDataStore)
-            .environmentObject(forKidsDataStore)
+            .environmentObject(forChildrenDataStore)
             .environmentObject(languageStore)
             .environmentObject(teamDataStore)
     }

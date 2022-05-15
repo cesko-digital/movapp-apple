@@ -78,8 +78,8 @@ struct TranslationMatchService {
         
         for translation in translations {
             let source = [
-                translation.translationFrom,
-                translation.translationTo
+                translation.main.translation,
+                translation.source.translation
             ]
             
             // First rank - exact word match

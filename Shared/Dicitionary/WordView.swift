@@ -46,8 +46,8 @@ struct WordView_Previews: PreviewProvider {
     static var previews: some View {
         WordView(
             language: Languages.cs,
-            text: exampleTranslation.translationFrom,
-            transcription: exampleTranslation.transcriptionFrom
+            text: exampleTranslation.main.translation,
+            transcription: exampleTranslation.main.transcription
         ).environmentObject(soundService)
         
         WordView(

@@ -47,7 +47,7 @@ struct TranslationsView: View {
 struct TranslationsView_Previews: PreviewProvider {
     static let soundService = SoundService()
     static let userDefaultsStore = UserDefaultsStore()
-    static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore)
+    static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
     static let matchService = TranslationMatchService(favoritesService: favoritesService)
     
     static var previews: some View {

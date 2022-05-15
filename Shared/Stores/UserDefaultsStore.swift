@@ -9,10 +9,16 @@ import Foundation
 
 typealias FavoritesTranslationsStore = [String: [String: String]]
 
+enum DataVersion: Int {
+    case initial = 0
+    case airtable = 1
+}
+
 struct UserDefaultsStore {
     
     private let onBoardingCompleteKey = "onboarding.complete"
     private let favoritesKey = "favorite.translations"
+    private let favoritesVersionKey = "favorite.translations.version"
     private let languageKey = "language"
     
     let userDefaults: UserDefaults
@@ -54,6 +60,20 @@ struct UserDefaultsStore {
     
     func getFavorites () -> FavoritesTranslationsStore? {
         return userDefaults.object(forKey: favoritesKey) as? FavoritesTranslationsStore
+    }
+    
+    func storeDataVersion(_ version: DataVersion) {
+        userDefaults.setValue(version.rawValue, forKey: favoritesVersionKey)
+    }
+    
+    func getDataVersion () -> DataVersion {
+        // 0 - First initial version of translation keys -> md5
+        // 1 - New keys from AirTable
+        if let version =  DataVersion.init(rawValue: userDefaults.integer(forKey: favoritesVersionKey)) {
+            return version
+        }
+        
+        return DataVersion.initial
     }
 }
 

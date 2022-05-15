@@ -34,12 +34,12 @@ struct TranslationView: View {
         self.translation = translation
         
         let displayableTranslation = DisplayableTranslation(
-            translationFrom: translation.translationFrom,
-            translationTo: translation.translationTo,
-            transcriptionFrom: translation.transcriptionFrom,
-            transcriptionTo: translation.transcriptionTo,
-            ttsLanguageFrom: language.language.from,
-            ttsLanguageTo: language.language.to
+            translationFrom: translation.main.translation,
+            translationTo: translation.source.translation,
+            transcriptionFrom: translation.main.transcription,
+            transcriptionTo: translation.source.transcription,
+            ttsLanguageFrom: language.language.main,
+            ttsLanguageTo: language.language.source
         )
         
         self.displayableTranslation = language.flipFromWithTo
@@ -112,7 +112,7 @@ extension TranslationView.DisplayableTranslation {
 struct TranslationView_Previews: PreviewProvider {
     static let soundService = SoundService()
     static let userDefaultsStore = UserDefaultsStore()
-    static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore)
+    static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
     
     static var previews: some View {
         TranslationView(language: SetLanguage.csUk, translation: exampleTranslation)

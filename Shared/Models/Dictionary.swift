@@ -12,29 +12,55 @@ struct Dictionary: Decodable {
     typealias TranslationID = String
     
     struct Section: Decodable, Identifiable {
+        struct Name: Decodable {
+            let source: String
+            let main: String
+        }
+        
         let id: String
-        let nameFrom: String
-        let nameTo: String
-        let translations: [TranslationID]
+        let name: Name
+        let phrases: [TranslationID]
         
         func text(language: SetLanguage) -> String {
-            let arguments = [nameFrom , nameTo]
+            let arguments = [name.main , name.source]
             return String(format: "%@ - %@", arguments: language.flipFromWithTo ? arguments.reversed() : arguments)
         }
     }
     
     struct Translation: Decodable, Identifiable {
+        
+        struct Value: Decodable {
+            let soundUrl: String?
+            let translation: String
+            let transcription: String
+            
+            var soundFileName: String?  {
+                if soundUrl == nil {
+                    return nil
+                }
+                
+                return translation.md5Hash()
+            }
+        }
+        
         let id: String
-        let translationFrom: String
-        let transcriptionFrom: String
-        let translationTo: String
-        let transcriptionTo: String
+        let source: Value
+        let main: Value
+        let imageUrl: String?
+        
+        var imageName: String? {
+            if imageUrl == nil {
+                return nil
+            }
+            
+            return "images/\(id)"
+        }
     }
     
-    let from: String
-    let to: String
-    let sections: [Section]
-    let translations: [TranslationID: Translation]
+    let main: String
+    let source: String
+    let categories: [Section]
+    let phrases: [TranslationID: Translation]
 }
 
 extension Swift.Dictionary where Key == Dictionary.TranslationID, Value == Dictionary.Translation {

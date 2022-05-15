@@ -143,7 +143,7 @@ struct MenuView_Previews: PreviewProvider {
     static let userDefaultsStore = UserDefaultsStore()
     static let dictionaryDataStore = DictionaryDataStore()
     static let teamDataStore = TeamDataStore()
-    static let languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
+    static let languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore, forChildrenDataStore: ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore))
     static let onBoardingStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
     
     static var previews: some View {

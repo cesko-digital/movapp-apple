@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct ForChildrenItemView: View {
-    let item: ForChildrenItem
+    let item: Dictionary.Translation
     let selectedLanguage: SetLanguage
     
     @EnvironmentObject var soundService: SoundService
@@ -18,24 +18,30 @@ struct ForChildrenItemView: View {
         
         CardView({
             Content {
-                // Ensure that the image is not stretched to wide and to big
-                Image("for-children/\(item.imageName)")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxHeight: 300)
-                    .padding(20)
-                    .onTapGesture {
-                        // I want to learn czech language
-                        if selectedLanguage.flipFromWithTo == true {
-                            soundService.speach(language: Languages.cs, text: item.translationFrom)
+                if let imageName = item.imageName {
+                    // Ensure that the image is not stretched to wide and to big
+                    Image(imageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(maxHeight: 300)
+                        .padding(20)
+                        .onTapGesture {
+                            
+                            // I want to learn czech language
+                            if selectedLanguage.flipFromWithTo == true {
+                                soundService.playTranslation(language: selectedLanguage.language.main, translation: item.main)
+                            } else {
+                                soundService.playTranslation(language: selectedLanguage.language.source, translation: item.source)
+                            }
                         }
-                    }
+                }
+                
             }
             
             Footer {
-                ForChildrenRowView(translation: item.translationFrom, transcription: item.transcriptionFrom, language: Languages.cs)
+                ForChildrenRowView(translation: item.main.translation, transcription: item.main.transcription, language: selectedLanguage.language.main)
                 
-                ForChildrenRowView(translation: item.translationTo, transcription: item.transcriptionTo, language: Languages.uk)
+                ForChildrenRowView(translation: item.source.translation, transcription: item.source.transcription, language: selectedLanguage.language.source)
             }
             
         }, spacing: 0)
@@ -46,7 +52,7 @@ struct ForChildrenItem_Previews: PreviewProvider {
     static let soundService = SoundService()
     
     static var previews: some View {
-        ForChildrenItemView(item: ForChildrenItem.example, selectedLanguage: .csUk)
+        ForChildrenItemView(item: exampleTranslation, selectedLanguage: .csUk)
             .environmentObject(soundService)
     }
 }

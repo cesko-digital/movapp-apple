@@ -58,8 +58,8 @@ struct ForChildrenRowView_Previews: PreviewProvider {
     
     static var previews: some View {
         ForChildrenRowView(
-            translation: ForChildrenItem.example.translationFrom,
-            transcription: ForChildrenItem.example.transcriptionFrom,
+            translation: exampleTranslation.main.translation,
+            transcription: exampleTranslation.main.transcription,
             language: Languages.cs
         ).environmentObject(soundService)
     }

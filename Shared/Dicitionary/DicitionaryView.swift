@@ -32,8 +32,8 @@ struct DicitionaryView: View {
                 DictionaryContentView(
                     searchString: searchString,
                     language: selectedLanguage,
-                    sections: dictionary.sections,
-                    translations: dictionary.translations,
+                    sections: dictionary.categories,
+                    translations: dictionary.phrases,
                     selectedSection: $selectedSection
                 )
                 

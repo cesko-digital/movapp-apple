@@ -8,7 +8,7 @@
 import Foundation
 
 struct MatchedTranslation {
-    let translation: Dictionary.Translation
+    let translation: Dictionary.Phrase
     let distance: Int
 }
 
@@ -68,7 +68,7 @@ struct TranslationMatchService {
     /**
      Returns translations that contains given string in all translations (all languages) and sorts by levenshtein distance.
      */
-    func matchTranslations(_ translations: [Dictionary.Translation], searchString: String, language: SetLanguage) -> [Dictionary.Translation] {
+    func matchTranslations(_ translations: [Dictionary.Phrase], searchString: String, language: SetLanguage) -> [Dictionary.Phrase] {
         
         let start = CFAbsoluteTimeGetCurrent()
         

@@ -11,7 +11,7 @@ struct Dictionary: Decodable {
 
     typealias TranslationID = String
     
-    struct Section: Decodable, Identifiable {
+    struct Category: Decodable, Identifiable {
         struct Name: Decodable {
             let source: String
             let main: String
@@ -27,9 +27,9 @@ struct Dictionary: Decodable {
         }
     }
     
-    struct Translation: Decodable, Identifiable {
+    struct Phrase: Decodable, Identifiable {
         
-        struct Value: Decodable {
+        struct Translation: Decodable {
             let soundUrl: String?
             let translation: String
             let transcription: String
@@ -44,8 +44,8 @@ struct Dictionary: Decodable {
         }
         
         let id: String
-        let source: Value
-        let main: Value
+        let source: Translation
+        let main: Translation
         let imageUrl: String?
         
         var imageName: String? {
@@ -59,11 +59,11 @@ struct Dictionary: Decodable {
     
     let main: String
     let source: String
-    let categories: [Section]
-    let phrases: [TranslationID: Translation]
+    let categories: [Category]
+    let phrases: [TranslationID: Phrase]
 }
 
-extension Swift.Dictionary where Key == Dictionary.TranslationID, Value == Dictionary.Translation {
+extension Swift.Dictionary where Key == Dictionary.TranslationID, Value == Dictionary.Phrase {
    
     func filter(identifiers: [Key]) -> [Value] {
         

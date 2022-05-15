@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.2.0, build 17] - 2022-05-15Z
+
 - Aktualizace datové sady slovníčku na nový formát z AirTable
 - Přidání možnosti přehrát ukrajinštinu (formát AirTable)
 - Předělání sekce Pro děti -> bere se ze slovníčku

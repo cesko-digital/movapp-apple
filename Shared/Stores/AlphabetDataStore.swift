@@ -32,7 +32,7 @@ class AlphabetDataStore: ObservableObject {
         
         let decoder = JSONDecoder()
         
-        let prefix = language.flipFromWithTo ? language.language.to : language.language.from
+        let prefix = language.flipFromWithTo ? language.language.source : language.language.main
         
         do {
             guard let asset = NSDataAsset(name:  "data/\(prefix)-alphabet") else {

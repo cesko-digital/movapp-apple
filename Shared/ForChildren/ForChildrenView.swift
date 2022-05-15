@@ -14,10 +14,10 @@ struct ForChildrenView: View {
     
     var body: some View {
         VStack {
-            if let forKids = dataStore.forKids {
+            if let forChildren = dataStore.forChildren {
                     ScrollView {
                         LazyVStack (spacing: 10) {
-                            ForEach(forKids) { item in
+                            ForEach(forChildren) { item in
                                 ForChildrenItemView(item: item, selectedLanguage: selectedLanguage)
                             }
                         }
@@ -42,6 +42,7 @@ struct ForChildrenView: View {
             }
             Spacer()
         }
+        .frame(maxWidth: .infinity)
     }
     
     func loadData() {
@@ -50,7 +51,7 @@ struct ForChildrenView: View {
 }
 
 struct ForChildrenView_Previews: PreviewProvider {
-    static let dataStore = ForChildrenDataStore()
+    static let dataStore = ForChildrenDataStore(dictionaryDataStore: DictionaryDataStore())
     
     static var previews: some View {
         ForChildrenView(selectedLanguage: .csUk)

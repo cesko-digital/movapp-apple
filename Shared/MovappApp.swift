@@ -12,7 +12,7 @@ struct MovappApp: App {
     
     let dictionaryDataStore = DictionaryDataStore()
     let alphabetDataStore = AlphabetDataStore()
-    let forKidsDataStore = ForChildrenDataStore()
+    let forChildrenDataStore: ForChildrenDataStore
     let userDefaultsStore = UserDefaultsStore()
     let teamDataStore = TeamDataStore()
     
@@ -34,9 +34,10 @@ struct MovappApp: App {
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         
-        self.languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
+        self.forChildrenDataStore = ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore)
+        self.languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore, forChildrenDataStore: forChildrenDataStore)
         self.onBoardingDataStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
-        self.favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore)
+        self.favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
         self.favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
     }
     
@@ -50,7 +51,7 @@ struct MovappApp: App {
                     .environmentObject(favoritesProvider)
                     .environmentObject(dictionaryDataStore)
                     .environmentObject(alphabetDataStore)
-                    .environmentObject(forKidsDataStore)
+                    .environmentObject(forChildrenDataStore)
                     .environmentObject(teamDataStore)
                     .environmentObject(onBoardingDataStore)
             } else {

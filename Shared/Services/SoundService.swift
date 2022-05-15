@@ -37,6 +37,16 @@ class SoundService: NSObject, ObservableObject {
     }
     
     
+    func playTranslation(language: Languages, translation: Dictionary.Translation.Value) {
+        if language == .cs {
+            speach(language: language, text: translation.translation)
+        } else if let soundFileName = translation.soundFileName {
+            play(soundFileName, inDirectory: "data/\(language.rawValue)-dictionary")
+        } else {
+            print("Cant play sound, missing sound or un-suported language", language, translation)
+        }
+    }
+    
     /**
      Plays given sound in assets (only for small sizes)
      */

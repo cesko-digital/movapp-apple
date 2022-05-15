@@ -64,7 +64,7 @@ struct AlphabetItemView_Previews: PreviewProvider {
     static let soundService = SoundService()
     
     static var previews: some View {
-        AlphabetItemView(item: AlphabetItem.example, language: SetLanguage.ukCs.language.from)
+        AlphabetItemView(item: AlphabetItem.example, language: SetLanguage.ukCs.language.main)
             .environmentObject(soundService)
     }
 }

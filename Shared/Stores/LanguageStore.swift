@@ -11,10 +11,12 @@ final class LanguageStore: ObservableObject {
     
     let userDefaultsStore: UserDefaultsStore
     let dictionaryDataStore: DictionaryDataStore
+    let forChildrenDataStore: ForChildrenDataStore
     
-    init(userDefaultsStore: UserDefaultsStore, dictionaryDataStore: DictionaryDataStore) {
+    init(userDefaultsStore: UserDefaultsStore, dictionaryDataStore: DictionaryDataStore, forChildrenDataStore: ForChildrenDataStore) {
         self.dictionaryDataStore = dictionaryDataStore
         self.userDefaultsStore = userDefaultsStore
+        self.forChildrenDataStore = forChildrenDataStore
         
         if let language = userDefaultsStore.getLanguage() {
             currentLanguage = language
@@ -29,7 +31,8 @@ final class LanguageStore: ObservableObject {
     @Published var currentLanguage: SetLanguage {
         didSet {
             if currentLanguage.language.dictionaryFilePrefix != oldValue.language.dictionaryFilePrefix {
-                dictionaryDataStore.reload()
+                dictionaryDataStore.reset()
+                forChildrenDataStore.reset()
             }
             
             userDefaultsStore.storeLanguage(currentLanguage)

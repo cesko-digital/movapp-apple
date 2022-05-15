@@ -13,7 +13,7 @@ class DictionaryDataStore: ObservableObject {
     var dictionary: Dictionary?
     var error: String? // TODO enum?
     
-    func reload () {
+    func reset () {
         dictionary = nil
         error = nil
         loading = false // Force reload data
@@ -42,6 +42,7 @@ class DictionaryDataStore: ObservableObject {
             
         } catch {
             self.error = error.localizedDescription
+            print("Failed to load data", error)
         }
         
         loading = false

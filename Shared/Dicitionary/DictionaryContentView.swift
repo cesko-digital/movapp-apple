@@ -50,7 +50,7 @@ struct DictionaryContentView: View {
         
         // Optimize the view
         if let selectedSection = selectedSection.wrappedValue {
-            sectionTranslations = translations.filter(identifiers: selectedSection.translations)
+            sectionTranslations = translations.filter(identifiers: selectedSection.phrases)
         } else {
             sectionTranslations = nil
         }
@@ -109,7 +109,7 @@ struct DictionaryContentView_Previews: PreviewProvider {
     
     static let soundService = SoundService()
     static let userDefaultsStore = UserDefaultsStore()
-    static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore)
+    static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
     static let favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
     
     static let translations: [Dictionary.TranslationID: Dictionary.Translation] = [

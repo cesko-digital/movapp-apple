@@ -9,14 +9,19 @@
 import SwiftUI
 
 class ForChildrenDataStore: ObservableObject {
+    let dictionaryDataStore: DictionaryDataStore
+    
+    init(dictionaryDataStore: DictionaryDataStore) {
+        self.dictionaryDataStore = dictionaryDataStore
+    }
     
     @Published var loading: Bool = false
     
-    var forKids: [ForChildrenItem]?
+    var forChildren: [Dictionary.Translation]?
     var error: String? // TODO enum?
     
     func reset() {
-        forKids = nil
+        forChildren = nil
         error = nil
         loading = false
     }
@@ -28,21 +33,27 @@ class ForChildrenDataStore: ObservableObject {
         
         loading = true
         
-        let decoder = JSONDecoder()
-        do {
-            guard let asset = NSDataAsset(name: "data/pro-deti") else {
-                error = "Invalid data file name"
-                loading = false
-                return
+        if let dictionary = dictionaryDataStore.dictionary {
+            
+            for category in dictionary.categories {
+                
+                if category.id == "recSHyEn6N0hAqUBp" {
+                    self.forChildren = dictionary.phrases.filter(identifiers: category.phrases)
+                    break;
+                }
             }
             
-            let data = asset.data
-
-            self.forKids = try decoder.decode([ForChildrenItem].self, from: data)
+            if forChildren == nil {
+               error = "Could not find the for kids in data source"
+               print(error!)
+           }
             
-        } catch {
-            self.error = error.localizedDescription
+        } else {
+            error = "Dictionary not loaded"
+            print(error!)
         }
+       
+        
         
         loading = false
     }

@@ -2,6 +2,10 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Aktualizace datové sady slovníčku na nový formát z AirTable
+- Přidání možnosti přehrát ukrajinštinu (formát AirTable)
+- Předělání sekce Pro děti -> bere se ze slovníčku
+
 ## [1.1.0, build 16] - 2022-05-09Z
 
 - Zakázání iPad aplikace

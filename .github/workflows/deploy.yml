@@ -2,8 +2,9 @@ name: Deploy
 
 on:
   push:
-    branches: [release]
-  workflow_dispatch:
+    branches: [main]
+    tags:
+      - "v*"
 
 jobs:
   app_store:

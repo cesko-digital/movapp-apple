@@ -49,13 +49,15 @@ struct MenuView: View {
                 languageStore.currentLanguage = newLanguage
             }
             
-            #if DEBUG
-            Button("Znova spustit on boarding") {
-                withAnimation {
-                    onBoardingStore.isBoardingCompleted.toggle()
+#if DEBUG
+            if CommandLine.arguments.contains("allow-onboarding-reset") {
+                Button("Znova spustit on boarding") {
+                    withAnimation {
+                        onBoardingStore.isBoardingCompleted.toggle()
+                    }
                 }
             }
-            #endif
+#endif
             
             
         } header: {

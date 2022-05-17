@@ -84,7 +84,8 @@ lane :upload do
         precheck_include_in_app_purchases: false,
         force: true,
         skip_metadata: false,
-        skip_screenshots: false
+        skip_screenshots: false,
+        overwrite_screenshots: true
     )
 end
 

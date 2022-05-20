@@ -7,8 +7,6 @@
 /* TabBar A-Z */
 "Alphabet" = "Abeceda";
 
-/* No comment provided by engineer. */
-"Czech alphabet" = "Česká abeceda";
 
 /* TabBar dictionary */
 "Dictionary" = "Slovníček";
@@ -28,8 +26,14 @@
 /* (No Comment) */
 "language.uk-cs" = "Češtinu";
 
-"czech" = "česky";
-"ukraine" = "Ukrajinsky";
+"language.cs" = "Česky";
+"language.uk" = "Ukrajinsky";
+
+/* No comment provided by engineer. */
+"language.cs-alphabet" = "Česká abeceda";
+
+/* No comment provided by engineer. */
+"language.uk-alphabet" = "Ukrajinská abeceda";
 
 /* (No Comment) */
 "License" = "Licence";
@@ -55,8 +59,6 @@
 /* Link */
 "Stand by Ukraine" = "Stojíme za Ukrajinou";
 
-/* No comment provided by engineer. */
-"Ukraine alphabet" = "Ukrajinská abeceda";
 
 /* Link */
 "Umapa" = "Umapa";

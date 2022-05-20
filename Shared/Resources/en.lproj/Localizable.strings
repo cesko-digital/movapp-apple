@@ -22,9 +22,14 @@
 /* (No Comment) */
 "language.uk-cs" = "Czech";
 
-"czech" = "Czech";
-"ukraine" = "Ukraine";
+"language.cs" = "Czech";
+"language.uk" = "Ukraine";
 
+/* No comment provided by engineer. */
+"language.cs-alphabet" = "Czech alphabet";
+
+/* No comment provided by engineer. */
+"language.uk-alphabet" = "Ukraine alphabet";
 
 /* (No Comment) */
 "License" = "License";
@@ -39,7 +44,7 @@
 "Settings" = "Settings";
 
 /* Link */
-"Stand by Ukraine" = "Stojíme za Ukrajinou";
+"Stand by Ukraine" = "Stand by Ukraine";
 
 /* Link */
 "Umapa" = "Umapa";
@@ -54,11 +59,11 @@
 "Start learning" = "Start learning";
 "Choose language to learn" = "Choose language you want to learn";
 
-"boarding-1-title" = "Slovníček";
+"boarding-1-title" = "Dictionary";
 "boarding-1-sub-title" = "Learn hundreds of basic words and phrases by reading and listening. We sort words according to life situations.";
 
-"boarding-2-title" = "Pro děti";
+"boarding-2-title" = "For kids";
 "boarding-2-sub-title" = "Illustrated Ukrainian-Czech dictionary with dozens of printable cards.";
 
-"boarding-3-title" = "Ukrajinská abeceda";
+"boarding-3-title" = "Ukraine alphabet";
 "boarding-3-sub-title" = "Learn all the characters of the Ukrainian Cyrillic. Sample words will help you.";

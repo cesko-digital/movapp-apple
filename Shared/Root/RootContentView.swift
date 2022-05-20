@@ -33,7 +33,7 @@ struct RootContentView: View {
                 DicitionaryView(selectedLanguage: languageStore.currentLanguage)
                     .setTabItem(RootItems.dictionary)
                 
-                AlphabetView()
+                AlphabetView(selectedLanguage: languageStore.currentLanguage)
                     .setTabItem(RootItems.alphabet)
                 
                 ForChildrenView(selectedLanguage: languageStore.currentLanguage)

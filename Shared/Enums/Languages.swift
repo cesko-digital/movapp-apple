@@ -21,11 +21,11 @@ enum Languages: String {
     }
     
     var title: String {
-        switch(self) {
-        case .cs:
-            return String(localized: "czech")
-        case .uk:
-            return String(localized: "ukraine")
-        }
+        return String(localized: "language.\(self.rawValue)")
+    }
+    
+    var alphabetTitle: String {
+        return String("language.\(self.rawValue)-alphabet")
+        
     }
 }

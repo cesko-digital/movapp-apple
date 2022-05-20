@@ -7,8 +7,6 @@
 /* TabBar A-Z */
 "Alphabet" = "Алфавіт";
 
-/* No comment provided by engineer. */
-"Czech alphabet" = "Чеський алфавіт";
 
 /* TabBar dictionary */
 "Dictionary" = "Словник";
@@ -22,9 +20,6 @@
 /* No comment provided by engineer. */
 "Search" = "Знайти слово";
 
-/* No comment provided by engineer. */
-"Ukraine alphabet" = "Український алфавіт";
-
 /* (No Comment) */
 "I want to help" = "Я хочу допомогти";
 
@@ -34,8 +29,14 @@
 /* (No Comment) */
 "language.uk-cs" = "Чеський";
 
-"czech" = "еський";
-"ukraine" = "Український";
+"language.cs" = "еський";
+"language.uk" = "Український";
+
+/* No comment provided by engineer. */
+"language.cs-alphabet" = "Чеський алфавіт";
+
+/* No comment provided by engineer. */
+"language.uk-alphabet" = "Український алфавіт";
 
 /* (No Comment) */
 "License" = "Ліцензія";

@@ -34,7 +34,7 @@ struct ForChildrenRowView: View {
             Image("icons/flags/\(language.flag.rawValue)")
                 .flagStyle()
             
-            Text(language.title)
+            Text(LocalizedStringKey(language.title))
                 .languageStyle()
             
             Spacer()

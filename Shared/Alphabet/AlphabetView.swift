@@ -11,13 +11,32 @@ import Introspect
 struct AlphabetView: View {
     @EnvironmentObject var dataStore: AlphabetDataStore
     
-    @State private var selectedLanguage: SetLanguage = .csUk
+    let selectedLanguage: SetLanguage
+    
+    @State private var selectedAlphabet: Languages
+    
+    let languages: [Languages]
+    
+    init (selectedLanguage: SetLanguage) {
+        self.selectedLanguage = selectedLanguage
+        
+        let languagesList = [
+            selectedLanguage.language.main,
+            selectedLanguage.language.source
+        ]
+        
+        // Always show the alphabet of a language im learning
+        languages = selectedLanguage.flipFromWithTo ? languagesList : languagesList.reversed()
+        
+        selectedAlphabet = languages.first!
+    }
     
     var body: some View {
         VStack (spacing: 0) {
-            Picker("Select alphabet language", selection: $selectedLanguage) {
-                Text("Czech alphabet").tag(SetLanguage.csUk)
-                Text("Ukraine alphabet").tag(SetLanguage.ukCs)
+            Picker("Select alphabet language", selection: $selectedAlphabet) {
+                ForEach(languages, id: \.rawValue) { language in
+                    Text(LocalizedStringKey(language.alphabetTitle)).tag(language)
+                }
             }
             .pickerStyle(.segmented)
             .padding()
@@ -33,7 +52,7 @@ struct AlphabetView: View {
                     ScrollView(showsIndicators: false) {
                         LazyVStack (spacing: 10) {
                             ForEach(alphabet.items, id: \.id) { item in
-                                AlphabetItemView(item: item, language: selectedLanguage.languagePrefix)
+                                AlphabetItemView(item: item, language: selectedAlphabet)
                             }
                         }
                     }
@@ -50,7 +69,7 @@ struct AlphabetView: View {
             Spacer(minLength: 0)
         }
         .background(Color("colors/item"))
-        .onChange(of: selectedLanguage) { _ in
+        .onChange(of: selectedAlphabet) { _ in
             dataStore.reset()
         }
     }
@@ -69,7 +88,7 @@ struct AlphabetView: View {
     }
     
     func loadData() {
-        dataStore.load(language: selectedLanguage)
+        dataStore.load(language: selectedLanguage, alphabet: selectedAlphabet)
     }
 }
 
@@ -78,7 +97,7 @@ struct AlphabetView_Previews: PreviewProvider {
     static let soundService = SoundService()
     
     static var previews: some View {
-        AlphabetView()
+        AlphabetView(selectedLanguage: .csUk)
             .environmentObject(dataStore)
             .environmentObject(soundService)
     }

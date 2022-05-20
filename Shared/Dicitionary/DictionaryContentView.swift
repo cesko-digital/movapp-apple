@@ -14,7 +14,7 @@ enum DictionaryContentSubView: Equatable {
 
 extension View {
     /**
-     We want to setup same size for picker / section header to prevent any scroll view movements while
+     We want to setup same size for picker / category header to prevent any scroll view movements while
      animating.
      */
     func styleSubHeaderContent () -> some View {
@@ -26,41 +26,41 @@ extension View {
 struct DictionaryContentView: View {
     let searchString: String
     let language: SetLanguage
-    let sections: [Dictionary.Category]
-    let translations: [Dictionary.TranslationID: Dictionary.Phrase]
-    let sectionTranslations: Array<Dictionary.Phrase>?
+    let categories: [Dictionary.Category]
+    let phrases: [Dictionary.PhraseID: Dictionary.Phrase]
+    let categoryPhrases: Array<Dictionary.Phrase>?
     
-    @EnvironmentObject var favoritesProvider: TranslationFavoritesProvider
+    @EnvironmentObject var favoritesProvider: PhrasesFavoritesProvider
    
-    @Binding var selectedSection: Dictionary.Category?
+    @Binding var selectedCategory: Dictionary.Category?
     @State private var view: DictionaryContentSubView = .dictionary;
     
     init(
         searchString: String,
         language: SetLanguage,
-        sections: [Dictionary.Category],
-        translations: [Dictionary.TranslationID: Dictionary.Phrase],
-        selectedSection: Binding<Dictionary.Category?>
+        categories: [Dictionary.Category],
+        phrases: [Dictionary.PhraseID: Dictionary.Phrase],
+        selectedCategory: Binding<Dictionary.Category?>
     ) {
         self.searchString = searchString
         self.language = language
-        self.sections = sections
-        self.translations = translations
-        self._selectedSection = selectedSection
+        self.categories = categories
+        self.phrases = phrases
+        self._selectedCategory = selectedCategory
         
         // Optimize the view
-        if let selectedSection = selectedSection.wrappedValue {
-            sectionTranslations = translations.filter(identifiers: selectedSection.phrases)
+        if let selected = selectedCategory.wrappedValue {
+            categoryPhrases = phrases.filter(identifiers: selected.phrases)
         } else {
-            sectionTranslations = nil
+            categoryPhrases = nil
         }
     }
     
     var body: some View {
         VStack(spacing: 0) {
-            // If section is selected show translations
-            if selectedSection != nil {
-                AccordionHeaderView(language: language, selectedSection: $selectedSection)
+            // If category is selected show phases
+            if selectedCategory != nil {
+                AccordionHeaderView(language: language, selectedCategory: $selectedCategory)
                     .styleSubHeaderContent()
                 
             } else {
@@ -72,34 +72,34 @@ struct DictionaryContentView: View {
                 .styleSubHeaderContent()
             }
             
-            if view == .dictionary && searchString == "" && selectedSection == nil {
+            if view == .dictionary && searchString == "" && selectedCategory == nil {
                 AccordionsView(
                     language: language,
-                    sections: sections,
-                    selectedSection: $selectedSection
+                    categories: categories,
+                    selectedCategory: $selectedCategory
                 )
             } else {
-                translationsView
+                phrasesView
             }
         }
     }
     
-    var translationsView: some View {
+    var phrasesView: some View {
         
-        let visibleTranslations: [Dictionary.Phrase]
+        let visiblePhrases: [Dictionary.Phrase]
         
         switch (view) {
         case .dictionary:
-            visibleTranslations = sectionTranslations ?? Array(translations.values)
+            visiblePhrases = categoryPhrases ?? Array(phrases.values)
         case .favorites:
-            visibleTranslations = translations.filter(identifiers: favoritesProvider.getFavorites(language: language))
+            visiblePhrases = phrases.filter(identifiers: favoritesProvider.getFavorites(language: language))
         }
         
         return PhrasesView(
             language: language,
             searchString: searchString,
-            translations: visibleTranslations,
-            matchService: TranslationMatchService(favoritesService: self.favoritesProvider.favoritesService)
+            phrases: visiblePhrases,
+            matchService: PhraseMatchService(favoritesService: self.favoritesProvider.favoritesService)
         )
     }
     
@@ -109,10 +109,10 @@ struct DictionaryContentView_Previews: PreviewProvider {
     
     static let soundService = SoundService()
     static let userDefaultsStore = UserDefaultsStore()
-    static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
-    static let favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
+    static let favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
+    static let favoritesProvider = PhrasesFavoritesProvider(favoritesService: favoritesService)
     
-    static let translations: [Dictionary.TranslationID: Dictionary.Phrase] = [
+    static let phrases: [Dictionary.PhraseID: Dictionary.Phrase] = [
         examplePhrase.id: examplePhrase
     ]
     
@@ -120,9 +120,9 @@ struct DictionaryContentView_Previews: PreviewProvider {
         DictionaryContentView(
             searchString: "",
             language: SetLanguage.csUk,
-            sections: [exampleSection],
-            translations: translations,
-            selectedSection: .constant(nil)
+            categories: [exampleCategory],
+            phrases: phrases,
+            selectedCategory: .constant(nil)
         )
         .environmentObject(soundService)
         .environmentObject(favoritesService)
@@ -131,9 +131,9 @@ struct DictionaryContentView_Previews: PreviewProvider {
         DictionaryContentView(
             searchString: "",
             language: SetLanguage.ukCs,
-            sections: [exampleSection, exampleSection],
-            translations: translations,
-            selectedSection: .constant(exampleSection)
+            categories: [exampleCategory, exampleCategory],
+            phrases: phrases,
+            selectedCategory: .constant(exampleCategory)
         )
         .environmentObject(soundService)
         .environmentObject(favoritesService)

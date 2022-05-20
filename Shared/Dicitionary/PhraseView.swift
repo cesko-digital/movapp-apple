@@ -9,21 +9,21 @@ import SwiftUI
 
 struct PhraseView: View {
     
-    struct DisplayableTranslation {
+    struct DisplayablePhrase {
         let main: Dictionary.Phrase.Translation
         let source: Dictionary.Phrase.Translation
         let languageMain: Languages
         let languageSource: Languages
     }
     
-    @EnvironmentObject var favoritesService: TranslationFavoritesService
+    @EnvironmentObject var favoritesService: PhraseFavoritesService
     
     let language: SetLanguage
     let phrase: Dictionary.Phrase
     
-    let displayableTranslation: DisplayableTranslation
+    let displayablePhrase: DisplayablePhrase
     
-    var isTranslationFavorited: Bool {
+    var isPhraseFavorited: Bool {
         favoritesService.isFavorited(phrase, language: language)
     }
     
@@ -31,16 +31,16 @@ struct PhraseView: View {
         self.language = language
         self.phrase = phrase
         
-        let displayableTranslation = DisplayableTranslation(
+        let displayablePhrase = DisplayablePhrase(
             main: phrase.main,
             source: phrase.source,
             languageMain: language.language.main,
             languageSource: language.language.source
         )
         
-        self.displayableTranslation = language.flipFromWithTo
-        ? displayableTranslation.flipped
-        : displayableTranslation
+        self.displayablePhrase = language.flipFromWithTo
+        ? displayablePhrase.flipped
+        : displayablePhrase
     }
     
     var body: some View {
@@ -51,8 +51,8 @@ struct PhraseView: View {
             VStack (alignment: .leading, spacing: spacing) {
                 
                 TranslationView(
-                    language: displayableTranslation.languageMain,
-                    translation: displayableTranslation.main
+                    language: displayablePhrase.languageMain,
+                    translation: displayablePhrase.main
                 )
                 
                 Rectangle()
@@ -60,8 +60,8 @@ struct PhraseView: View {
                     .frame(height: 1)
                 
                 TranslationView(
-                    language: displayableTranslation.languageSource,
-                    translation: displayableTranslation.source
+                    language: displayablePhrase.languageSource,
+                    translation: displayablePhrase.source
                 )
             }
             .padding(.horizontal, spacing * 2)
@@ -77,21 +77,21 @@ struct PhraseView: View {
     var favoriteState: some View {
         let starSize = 30.0
         
-        return Image(systemName: isTranslationFavorited ? "star.fill" : "star")
+        return Image(systemName: isPhraseFavorited ? "star.fill" : "star")
             .foregroundColor(Color("colors/primary"))
             .frame(width: starSize, height: starSize)
             .background(Color("colors/background"))
             .cornerRadius(starSize / 2)
             .offset(x: starSize / -2, y: 0)
             .onTapGesture {
-                favoritesService.setIsFavorited(!isTranslationFavorited, translationId: phrase.id, language: language)
+                favoritesService.setIsFavorited(!isPhraseFavorited, translationId: phrase.id, language: language)
             }
     }
 }
 
-extension PhraseView.DisplayableTranslation {
+extension PhraseView.DisplayablePhrase {
     
-    var flipped: PhraseView.DisplayableTranslation {
+    var flipped: PhraseView.DisplayablePhrase {
         .init(
             main: source,
             source: main,
@@ -104,7 +104,7 @@ extension PhraseView.DisplayableTranslation {
 struct PhraseView_Previews: PreviewProvider {
     static let soundService = SoundService()
     static let userDefaultsStore = UserDefaultsStore()
-    static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
+    static let favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
     
     static var previews: some View {
         PhraseView(language: SetLanguage.csUk, phrase: examplePhrase)

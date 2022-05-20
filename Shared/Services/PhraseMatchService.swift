@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct MatchedTranslation {
+struct MatchedPhrase {
     let translation: Dictionary.Phrase
     let distance: Int
 }
 
-struct TranslationMatchService {
-    let favoritesService: TranslationFavoritesService
+struct PhraseMatchService {
+    let favoritesService: PhraseFavoritesService
     
     func containsExact(_ findString: String, _ inString: String) -> Bool {
         let expression = "\\b\(findString)\\b"
@@ -66,20 +66,20 @@ struct TranslationMatchService {
     }
     
     /**
-     Returns translations that contains given string in all translations (all languages) and sorts by levenshtein distance.
+     Returns phases that contains given string in all phases (all languages) and sorts by levenshtein distance.
      */
-    func matchTranslations(_ translations: [Dictionary.Phrase], searchString: String, language: SetLanguage) -> [Dictionary.Phrase] {
+    func matchPhrases(_ phrases: [Dictionary.Phrase], searchString: String, language: SetLanguage) -> [Dictionary.Phrase] {
         
         let start = CFAbsoluteTimeGetCurrent()
         
-        var matchedTranslations: [MatchedTranslation] = []
+        var matchedPhrases: [MatchedPhrase] = []
         
         let languagePrefix = language.languagePrefix.rawValue
         
-        for translation in translations {
+        for phrase in phrases {
             let source = [
-                translation.main.translation,
-                translation.source.translation
+                phrase.main.translation,
+                phrase.source.translation
             ]
             
             // First rank - exact word match
@@ -93,18 +93,18 @@ struct TranslationMatchService {
             }
             
             let scores = [
-                favoritesService.isFavorited(translation, language: language) ? 1 : 10,
+                favoritesService.isFavorited(phrase, language: language) ? 1 : 10,
                 score,
             ]
             
-            let matchedTranslation = MatchedTranslation(translation: translation, distance: scores.reduce(.zero, {$0 + $1}))
-            matchedTranslations.append(matchedTranslation)
+            let matchedPhrase = MatchedPhrase(translation: phrase, distance: scores.reduce(.zero, {$0 + $1}))
+            matchedPhrases.append(matchedPhrase)
         }
         
-        let result = matchedTranslations.sorted { t1, t2 in
+        let result = matchedPhrases.sorted { t1, t2 in
             return t1.distance < t2.distance;
-        }.map({ translation in
-            translation.translation
+        }.map({ phrase in
+            phrase.translation
         })
         
         let diff = CFAbsoluteTimeGetCurrent() - start

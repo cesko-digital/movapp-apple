@@ -11,7 +11,7 @@ import SwiftUI
 struct DicitionaryView: View {
     
     @State private var searchString: String = ""
-    @State private var selectedSection: Dictionary.Category? = nil
+    @State private var selectedCategory: Dictionary.Category? = nil
     
     let selectedLanguage: SetLanguage
     
@@ -23,8 +23,8 @@ struct DicitionaryView: View {
                 .onChange(of: searchString) { newValue in
                     // Search only in
                     // This forces header view to hide header
-                    if newValue != "" && selectedSection != nil {
-                        selectedSection = nil
+                    if newValue != "" && selectedCategory != nil {
+                        selectedCategory = nil
                     }
                 }
             
@@ -32,9 +32,9 @@ struct DicitionaryView: View {
                 DictionaryContentView(
                     searchString: searchString,
                     language: selectedLanguage,
-                    sections: dictionary.categories,
-                    translations: dictionary.phrases,
-                    selectedSection: $selectedSection
+                    categories: dictionary.categories,
+                    phrases: dictionary.phrases,
+                    selectedCategory: $selectedCategory
                 )
                 
             } else {

@@ -9,7 +9,7 @@ import Foundation
 
 struct Language {
     /**
-     Indicates which file should be loaded (files are stored in assets with translations-{prefix}, sections-{prefix} name)
+     Indicates which file should be loaded
      */
     var dictionaryFilePrefix: String {
         return "\(source.rawValue)-\(main.rawValue)"

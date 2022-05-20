@@ -18,8 +18,8 @@ struct MovappApp: App {
     
     let languageStore: LanguageStore
     let soundService = SoundService()
-    let favoritesProvider: TranslationFavoritesProvider
-    let favoritesService: TranslationFavoritesService
+    let favoritesProvider: PhrasesFavoritesProvider
+    let favoritesService: PhraseFavoritesService
     
     @ObservedObject var onBoardingDataStore: OnBoardingStore
     
@@ -37,8 +37,8 @@ struct MovappApp: App {
         self.forChildrenDataStore = ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore)
         self.languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore, forChildrenDataStore: forChildrenDataStore)
         self.onBoardingDataStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
-        self.favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
-        self.favoritesProvider = TranslationFavoritesProvider(favoritesService: favoritesService)
+        self.favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
+        self.favoritesProvider = PhrasesFavoritesProvider(favoritesService: favoritesService)
     }
     
     var body: some Scene {

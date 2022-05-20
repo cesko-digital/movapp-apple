@@ -9,7 +9,7 @@ import Foundation
 
 struct Dictionary: Decodable {
 
-    typealias TranslationID = String
+    typealias PhraseID = String
     
     struct Category: Decodable, Identifiable {
         struct Name: Decodable {
@@ -19,7 +19,7 @@ struct Dictionary: Decodable {
         
         let id: String
         let name: Name
-        let phrases: [TranslationID]
+        let phrases: [PhraseID]
         
         func text(language: SetLanguage) -> String {
             let arguments = [name.main , name.source]
@@ -60,10 +60,10 @@ struct Dictionary: Decodable {
     let main: String
     let source: String
     let categories: [Category]
-    let phrases: [TranslationID: Phrase]
+    let phrases: [PhraseID: Phrase]
 }
 
-extension Swift.Dictionary where Key == Dictionary.TranslationID, Value == Dictionary.Phrase {
+extension Swift.Dictionary where Key == Dictionary.PhraseID, Value == Dictionary.Phrase {
    
     func filter(identifiers: [Key]) -> [Value] {
         

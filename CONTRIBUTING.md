@@ -1,7 +1,5 @@
 # Přidej se k vývoji Movapp na Apple zařízení
 
-- [Správa slovíček](translations/README.md)
-
 ## Git
 
 - Používejte rebase politiku (vždy vycházejte z `main`)

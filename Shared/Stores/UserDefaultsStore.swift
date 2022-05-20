@@ -7,7 +7,7 @@
 
 import Foundation
 
-typealias FavoritesTranslationsStore = [String: [String: String]]
+typealias FavoritesPhrasesStore = [String: [String: String]]
 
 enum DataVersion: Int {
     case initial = 0
@@ -54,12 +54,12 @@ struct UserDefaultsStore {
         userDefaults.set(language.id, forKey: languageKey)
     }
     
-    func storeFavorites(_ favoritedTranslationsByLanguage: FavoritesTranslationsStore) {
-        userDefaults.setValue(favoritedTranslationsByLanguage, forKey: favoritesKey)
+    func storeFavorites(_ favoritedPhrasesByLanguage: FavoritesPhrasesStore) {
+        userDefaults.setValue(favoritedPhrasesByLanguage, forKey: favoritesKey)
     }
     
-    func getFavorites () -> FavoritesTranslationsStore? {
-        return userDefaults.object(forKey: favoritesKey) as? FavoritesTranslationsStore
+    func getFavorites () -> FavoritesPhrasesStore? {
+        return userDefaults.object(forKey: favoritesKey) as? FavoritesPhrasesStore
     }
     
     func storeDataVersion(_ version: DataVersion) {

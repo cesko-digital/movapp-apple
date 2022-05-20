@@ -6,7 +6,7 @@ let examplePhrase = Dictionary.Phrase(
     imageUrl: nil
 )
 
-let exampleSection = Dictionary.Category(
+let exampleCategory = Dictionary.Category(
     id: "bd4e4bfdf11933d9b65e18eace65a3ad",
     name: Dictionary.Category.Name(source:  "Час", main: "Čas"),
     phrases: ["a4a7d64448a624da27c3026686ec9140"]
@@ -15,6 +15,6 @@ let exampleSection = Dictionary.Category(
 let exampleDictionary = Dictionary(
     main: "cs",
     source: "uk",
-    categories: [exampleSection],
+    categories: [exampleCategory],
     phrases: ["a4a7d64448a624da27c3026686ec9140": examplePhrase]
 )

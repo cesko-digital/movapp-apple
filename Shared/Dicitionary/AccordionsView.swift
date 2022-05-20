@@ -10,22 +10,22 @@ import SwiftUI
 struct AccordionsView: View {
     
     let language: SetLanguage
-    let sections: [Dictionary.Category]
+    let categories: [Dictionary.Category]
     
-    @Binding var selectedSection: Dictionary.Category?
+    @Binding var selectedCategory: Dictionary.Category?
     
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 16) {
-                ForEach(Array(sections.enumerated()), id: \.0)  { index, section in
+                ForEach(Array(categories.enumerated()), id: \.0)  { index, category in
                     let isOdd = (index % 2) != 0
-                    let text = section.text(language: language)
+                    let text = category.text(language: language)
                     
                     AccordionView(isOdd: isOdd, text:  text)
                         .accessibilityIdentifier("dictionary_\(index)")
                         .onTapGesture {
                             withAnimation(.spring()) {
-                                selectedSection = section
+                                selectedCategory = category
                             }
                         }
                 }
@@ -38,13 +38,13 @@ struct AccordionsView: View {
 
 struct AccordionsView_Previews: PreviewProvider {
     
-    @State static var emptySection: Dictionary.Category? = nil
-    @State static var section: Dictionary.Category? = exampleSection
+    @State static var emptyCategory: Dictionary.Category? = nil
+    @State static var category: Dictionary.Category? = exampleCategory
     
     static var previews: some View {
         
-        AccordionsView(language: .csUk, sections: [], selectedSection: $emptySection)
+        AccordionsView(language: .csUk, categories: [], selectedCategory: $emptyCategory)
         
-        AccordionsView(language: .ukCs, sections: [], selectedSection: $section)
+        AccordionsView(language: .ukCs, categories: [], selectedCategory: $category)
     }
 }

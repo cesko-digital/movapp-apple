@@ -15,16 +15,16 @@ struct PhrasesView: View {
     init (
         language: SetLanguage,
         searchString: String,
-        translations: [Dictionary.Phrase],
-        matchService: TranslationMatchService
+        phrases: [Dictionary.Phrase],
+        matchService: PhraseMatchService
     )
     {
         self.language = language
         
         if searchString.isEmpty {
-            showPhrases = translations
+            showPhrases = phrases
         } else {
-            showPhrases = matchService.matchTranslations(translations, searchString: searchString, language: language)
+            showPhrases = matchService.matchPhrases(phrases, searchString: searchString, language: language)
         }
     }
     
@@ -47,14 +47,14 @@ struct PhrasesView: View {
 struct PhrasesView_Previews: PreviewProvider {
     static let soundService = SoundService()
     static let userDefaultsStore = UserDefaultsStore()
-    static let favoritesService = TranslationFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
-    static let matchService = TranslationMatchService(favoritesService: favoritesService)
+    static let favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
+    static let matchService = PhraseMatchService(favoritesService: favoritesService)
     
     static var previews: some View {
         PhrasesView(
             language: .csUk,
             searchString: "",
-            translations: [
+            phrases: [
                 examplePhrase,
             ],
             matchService: matchService
@@ -65,7 +65,7 @@ struct PhrasesView_Previews: PreviewProvider {
         PhrasesView(
             language: .ukCs,
             searchString: "",
-            translations: [
+            phrases: [
                 examplePhrase
             ],
             matchService: matchService

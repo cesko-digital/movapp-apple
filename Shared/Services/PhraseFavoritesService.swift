@@ -7,20 +7,20 @@
 
 import Foundation
 
-private func migrateFromInitialVersionToAirtable (_ favoritedTranslationsByLanguage: FavoritesTranslationsStore, dictionaryDataStore: DictionaryDataStore) -> FavoritesTranslationsStore? {
+private func migrateFromInitialVersionToAirtable (_ favoritedPhrasesByLanguage: FavoritesPhrasesStore, dictionaryDataStore: DictionaryDataStore) -> FavoritesPhrasesStore? {
     
-    if favoritedTranslationsByLanguage.isEmpty {
+    if favoritedPhrasesByLanguage.isEmpty {
         return nil
     }
     
     // Initial version had only one language -- CS
-    for (language, favoritedTranslations) in favoritedTranslationsByLanguage {
+    for (language, favoritedPhrases) in favoritedPhrasesByLanguage {
         
-        if favoritedTranslations.isEmpty {
-            return favoritedTranslationsByLanguage
+        if favoritedPhrases.isEmpty {
+            return favoritedPhrasesByLanguage
         }
         
-        var newFavorites: FavoritesTranslationsStore = [:]
+        var newFavorites: FavoritesPhrasesStore = [:]
         newFavorites[language] = [:]
         
         dictionaryDataStore.load(language: .csUk)
@@ -29,7 +29,7 @@ private func migrateFromInitialVersionToAirtable (_ favoritedTranslationsByLangu
             for (id, translation) in dictionary.phrases {
                 let newHash = translation.main.translation.md5Hash()
                 
-                if favoritedTranslations[newHash] != nil {
+                if favoritedPhrases[newHash] != nil {
                     newFavorites[language]![id] = id
                     print("Migrated favorite \(newHash) - \(id)")
                 }
@@ -45,15 +45,15 @@ private func migrateFromInitialVersionToAirtable (_ favoritedTranslationsByLangu
     return nil
 }
 
-class TranslationFavoritesService: ObservableObject {
+class PhraseFavoritesService: ObservableObject {
     
     let userDefaultsStore: UserDefaultsStore
     
     /**
-     A map of favorited translations by language pack and phrase id
+     A map of favorited phases by language pack and phrase id
      [language pack][translationId] = phrase id
     */
-    @Published private(set) var favoritedPhrasesByLanguage: FavoritesTranslationsStore = [:] {
+    @Published private(set) var favoritedPhrasesByLanguage: FavoritesPhrasesStore = [:] {
         didSet {
             userDefaultsStore.storeFavorites(favoritedPhrasesByLanguage)
         }
@@ -79,11 +79,11 @@ class TranslationFavoritesService: ObservableObject {
             }
         }
         
-        // Set as last to prevent didSet on favoritedTranslationsByLanguage
+        // Set as last to prevent didSet on favoritedPhrasesByLanguage
         self.userDefaultsStore = userDefaultsStore
     }
     
-    func getFavorites( language: SetLanguage) -> [Dictionary.TranslationID] {
+    func getFavorites( language: SetLanguage) -> [Dictionary.PhraseID] {
         guard let favorites = favoritedPhrasesByLanguage[language.language.main.rawValue] else {
             return []
         }
@@ -104,7 +104,7 @@ class TranslationFavoritesService: ObservableObject {
     /**
      Sets favorte state by given id - will not update phrase object (UI will not be updated)
      */
-    func setIsFavorited(_ isFavorited: Bool, translationId: Dictionary.TranslationID, language: SetLanguage) {
+    func setIsFavorited(_ isFavorited: Bool, translationId: Dictionary.PhraseID, language: SetLanguage) {
         if favoritedPhrasesByLanguage[language.language.main.rawValue] == nil {
             favoritedPhrasesByLanguage[language.language.main.rawValue] = [:]
         }

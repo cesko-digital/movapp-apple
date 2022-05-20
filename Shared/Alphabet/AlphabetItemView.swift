@@ -26,7 +26,7 @@ struct AlphabetItemView: View {
                     .font(.system(size: 100))
                     .foregroundColor(Color("colors/text"))
                 
-                if item.fileName != nil {
+                if item.soundUrl != nil {
                     PlayButtonView(id: item.id, inDirectory: soundsDirectory)
                 }
                 

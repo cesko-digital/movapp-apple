@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Oprava přehrávání písmenka v abecedě
+
 ## [1.2.0, build 18] - 2022-05-20Z
 
 - Aktualizace datové sady abecedy na nový formát z AirTable

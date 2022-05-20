@@ -58,7 +58,7 @@ class SoundService: NSObject, ObservableObject {
             // Act as speaking
             isSpeakingText = translation.translation
             
-            play(soundFileName, inDirectory: "data/\(language.rawValue)-dictionary")
+            play(soundFileName, inDirectory: "data/\(language.rawValue)-sounds")
         } else {
             print("Cant play sound, missing sound or un-suported language", language, translation)
         }

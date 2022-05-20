@@ -31,11 +31,14 @@ class AlphabetDataStore: ObservableObject {
         loading = true
         
         let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         
-        let prefix = language.flipFromWithTo ? language.language.source : language.language.main
+        let prefixes = [language.language.source, language.language.main]
+        let prefixesOrder = language.flipFromWithTo ? prefixes : prefixes.reversed()
         
         do {
-            guard let asset = NSDataAsset(name:  "data/\(prefix)-alphabet") else {
+            let fileName = "data/\(prefixesOrder.first!)-\(prefixesOrder.last!)-alphabet"
+            guard let asset = NSDataAsset(name:  fileName) else {
                 error = "Invalid data file name"
                 loading = false
                 return
@@ -46,6 +49,7 @@ class AlphabetDataStore: ObservableObject {
             self.alphabet = try decoder.decode(Alphabet.self, from: data)
             
         } catch {
+            print("Failed to load alphabet \(error)")
             self.error = error.localizedDescription
         }
         

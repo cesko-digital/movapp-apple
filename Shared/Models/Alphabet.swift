@@ -13,7 +13,6 @@ struct Alphabet: Decodable {
         case data, language
     }
     
-    let language: String
     let items: [AlphabetItem]
     /**
         A list of AlphabetItem without diactritic
@@ -23,7 +22,6 @@ struct Alphabet: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        language = try container.decode(String.self, forKey: .language)
         items = try container.decode([AlphabetItem].self, forKey: .data)
         
         /**
@@ -33,7 +31,7 @@ struct Alphabet: Decodable {
         var cleanItems: [AlphabetItem] = []
         
         for item in items {
-            let cleanLetter = item.letters.first!!.uppercased().folding(options: .diacriticInsensitive, locale: .current)
+            let cleanLetter = item.letters.first!.uppercased().folding(options: .diacriticInsensitive, locale: .current)
             
             if (cleanItemsUniqueMap[cleanLetter] != nil) {
                 continue

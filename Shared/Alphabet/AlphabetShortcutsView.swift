@@ -20,7 +20,7 @@ struct AlphabetShortcutsView: View {
         VStack {
             ForEach(items, id: \.id) { item in
                 HStack(alignment: .center, spacing: 0) {
-                    Text(item.letters.first!!.uppercased())
+                    Text(item.letters.first!.uppercased())
                         .font(.system(size: 11).bold())
                         .foregroundColor(.accentColor)
                         .padding(.leading, 2)

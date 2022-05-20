@@ -35,9 +35,9 @@ struct AlphabetItemView: View {
                     .foregroundColor(Color("colors/text"))
             }
             Footer {
-                ForEach(item.examples, id: \.example) { example in
+                ForEach(item.examples, id: \.translation) { example in
                     HStack {
-                        Text(example.example)
+                        Text(example.translation)
                             .foregroundColor(Color("colors/text"))
                         
                         Spacer()
@@ -47,7 +47,7 @@ struct AlphabetItemView: View {
                         
                         Spacer()
                         
-                        SpeakButtonView(language: language, text: example.example)
+                        PlayTranslationButtonView(language: language, translation: example)
                         
                     }
                     .frame(maxWidth: .infinity)

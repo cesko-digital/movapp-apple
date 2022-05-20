@@ -89,8 +89,12 @@ Každý jazykový překlad (například: čeština -> ukrajinština) je v aplika
     - V podstatě se podívej jak vypadá `csUk` a `ukCs` a udělej to stejně.
     - Aplikace automaticky přenačte jiný jazykový soubor pokud dojde ke změně výchozího jazyka za jiný. Jinak přehazuje "from" -> "to".
     - Přidej obě proměné do .allCases
-- V Assets musí existovat soubor `translations-{filePrefix}` a `sections-{filePrefix}`
 - Přidej překlad jazyku do `Localizable` -> `language.{x-x}`. 
+
+### Dictionary and alphabet updates
+
+- Copy generated data from [movap-data repository](https://github.com/cesko-digital/movapp-data/tree/main/data) to Assets and `data` directory.
+- For copied folders always mark the "root" directory as provide namespace (this will separate the data to `data/uk-cs-alphabet/soundfile` path)
 
 
 ## Lokalizace aplikace

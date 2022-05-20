@@ -2,6 +2,9 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Aktualizace datové sady abecedy na nový formát z AirTable
+- Zobrazení "první" abecedy na základě jaký jazyk se učím
+
 ## [1.2.0, build 17] - 2022-05-15Z
 
 - Aktualizace datové sady slovníčku na nový formát z AirTable

@@ -9,35 +9,71 @@ import Foundation
 import AVFoundation
 import UIKit
 
+struct Playback {
+    enum PlaybackType: Int {
+        case speaking
+        case playing
+    }
+    let type: Playback.PlaybackType
+    
+    let soundIdOrText: String
+    let languageOrDirectory: String
+}
+
 class SoundService: NSObject, ObservableObject {
     
     // Create a speech synthesizer.
     let synthesizer = AVSpeechSynthesizer()
     var player: AVAudioPlayer? = nil
     
+    var playbackPipe: [Playback] = []
+    
     @Published var isPlaying: Bool = false
     
-    var isSpeaking = false
-    private var isSpeakingText: String?
-    
-    var isPlayingSound = false
-    private var isPlayingSoundId: String?
     
     override init () {
         super.init()
         synthesizer.delegate = self
     }
     
+    func getCurrentPlayback () -> Playback? {
+        return playbackPipe.first
+    }
+    
     func isPlaying (id: String) -> Bool {
-        return isPlayingSoundId?.compare(id) == .orderedSame
+        guard let currentPlayback = getCurrentPlayback() else {
+            return false
+        }
+        
+        guard currentPlayback.type == .playing else {
+            return false
+        }
+        
+        return currentPlayback.soundIdOrText.compare(id) == .orderedSame
     }
     
     func isPlaying (translation: Dictionary.Phrase.Translation) -> Bool {
-        return isSpeaking(text: translation.translation)
+        if isSpeaking(text: translation.translation) {
+            return true
+        }
+        
+        if let soundFileName = translation.soundFileName, isPlaying(id: soundFileName) {
+            return true
+        }
+        
+        return false
     }
     
     func isSpeaking (text: String) -> Bool {
-        return isSpeakingText?.compare(text) == .orderedSame
+        guard let currentPlayback = getCurrentPlayback() else {
+            return false
+        }
+        
+        guard currentPlayback.type == .speaking else {
+            return false
+        }
+        
+        return currentPlayback.soundIdOrText.compare(text) == .orderedSame
     }
     
     func canPlayTranslation(language: Languages, translation: Dictionary.Phrase.Translation) -> Bool {
@@ -52,12 +88,15 @@ class SoundService: NSObject, ObservableObject {
     
     
     func playTranslation(language: Languages, translation: Dictionary.Phrase.Translation) {
+        
+        if isPlaying(translation: translation) {
+            stopAndPlayNext()
+            return
+        }
+        
         if language == .cs {
             speach(language: language, text: translation.translation)
         } else if let soundFileName = translation.soundFileName {
-            // Act as speaking
-            isSpeakingText = translation.translation
-            
             play(soundFileName, inDirectory: "data/\(language.rawValue)-sounds")
         } else {
             print("Cant play sound, missing sound or un-suported language", language, translation)
@@ -68,8 +107,48 @@ class SoundService: NSObject, ObservableObject {
      Plays given sound in assets (only for small sizes)
      */
     func play (_ id: String, inDirectory: String) {
-        stop()
+        playbackPipe.append(Playback(type: .playing, soundIdOrText: id, languageOrDirectory: inDirectory))
         
+        stopAndPlayNext()
+    }
+    
+    
+    // https://developer.apple.com/documentation/avfoundation/speech_synthesis#overview
+    private func speach(language: Languages, text: String) {
+        playbackPipe.append(Playback(type: .speaking, soundIdOrText: text, languageOrDirectory: language.rawValue))
+        
+        stopAndPlayNext()
+    }
+    
+    private func tryToPlayNext () {
+        guard let currentPlayback = getCurrentPlayback() else {
+            return
+        }
+        
+        switch (currentPlayback.type) {
+        case .playing:
+            playSound(currentPlayback.soundIdOrText, inDirectory: currentPlayback.languageOrDirectory)
+            break
+        case .speaking:
+            playSpeach(currentPlayback.soundIdOrText, language: currentPlayback.languageOrDirectory)
+            break;
+        }
+    }
+    
+    private func playSpeach(_ text: String, language: String) {
+        // Create an utterance.
+        let utterance = AVSpeechUtterance(string: text)
+        
+        let voice = AVSpeechSynthesisVoice(language: language)
+        
+        // Assign the voice to the utterance.
+        utterance.voice = voice
+        
+        // Tell the synthesizer to speak the utterance.
+        synthesizer.speak(utterance)
+    }
+    
+    private func playSound(_ id: String, inDirectory: String) {
         let assetName = "\(inDirectory)/\(id)"
         
         guard let data = NSDataAsset(name: assetName) else {
@@ -84,9 +163,6 @@ class SoundService: NSObject, ObservableObject {
             player.delegate = self
             player.play()
             
-            isPlayingSound = true
-            isPlayingSoundId = id
-            
             on()
             
         } catch {
@@ -94,35 +170,23 @@ class SoundService: NSObject, ObservableObject {
         }
     }
     
-    // https://developer.apple.com/documentation/avfoundation/speech_synthesis#overview
-    func speach(language: Languages, text: String) {
-        stop()
-        
-        // Create an utterance.
-        let utterance = AVSpeechUtterance(string: text)
-        
-        let voice = AVSpeechSynthesisVoice(language: language.rawValue)
-        
-        // Assign the voice to the utterance.
-        utterance.voice = voice
-        
-        isSpeakingText = text
-        
-        // Tell the synthesizer to speak the utterance.
-        synthesizer.speak(utterance)
-    }
-    
-    func stop () {
+    func stopAndPlayNext () {
         if isPlaying == false {
+            tryToPlayNext()
             return
         }
         
-        if isSpeaking == true {
+        guard let currentPlayback = getCurrentPlayback() else {
+            return
+        }
+        
+        if currentPlayback.type == .speaking {
             self.synthesizer.stopSpeaking(at: .immediate)
         }
         
-        if isPlayingSound == true, let player = self.player {
+        if currentPlayback.type == .playing, let player = self.player {
             player.stop()
+            off() // Sound is not triggering delegate event.
         }
     }
     
@@ -132,36 +196,42 @@ class SoundService: NSObject, ObservableObject {
     }
     
     private func off () {
-        isSpeaking = false
-        isPlayingSound = false
+        guard playbackPipe.isEmpty == false else {
+            return
+        }
         
-        isSpeakingText = nil
-        isPlayingSoundId = nil
+        playbackPipe.remove(at: 0)
         
         // Trigger change
         isPlaying = false
         
         try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+        
+        tryToPlayNext()
     }
 }
 
 extension SoundService: AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
-        isSpeaking = true
+        print("Speach started")
+        
         on()
     }
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        print("Speach has been cancelled")
         off()
     }
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        print("Speach has finished")
         off()
     }
 }
 
 extension SoundService: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        print("Audio player has finished")
         off()
     }
     

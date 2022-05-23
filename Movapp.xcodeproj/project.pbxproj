@@ -28,7 +28,6 @@
 		B01D84D32822ECDD002FE351 /* XCUIApplication+arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01D84D22822ECDD002FE351 /* XCUIApplication+arguments.swift */; };
 		B0320921281998AA001203BF /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0320920281998AA001203BF /* UserDefaultsStore.swift */; };
 		B03B1BC828186E2E005C62C3 /* PlayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BC728186E2E005C62C3 /* PlayButtonView.swift */; };
-		B03B1BCA28186F7A005C62C3 /* SpeakButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BC928186F7A005C62C3 /* SpeakButtonView.swift */; };
 		B03B1BCC28186F8D005C62C3 /* SoundStateButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */; };
 		B03B1BCF28187F51005C62C3 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = B03B1BCE28187F51005C62C3 /* Introspect */; };
 		B03B1BD1281889CF005C62C3 /* LanguageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B1BD0281889CF005C62C3 /* LanguageStore.swift */; };
@@ -131,7 +130,6 @@
 		B01D84D22822ECDD002FE351 /* XCUIApplication+arguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+arguments.swift"; sourceTree = "<group>"; };
 		B0320920281998AA001203BF /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
 		B03B1BC728186E2E005C62C3 /* PlayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonView.swift; sourceTree = "<group>"; };
-		B03B1BC928186F7A005C62C3 /* SpeakButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakButtonView.swift; sourceTree = "<group>"; };
 		B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundStateButtonView.swift; sourceTree = "<group>"; };
 		B03B1BD0281889CF005C62C3 /* LanguageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageStore.swift; sourceTree = "<group>"; };
 		B04021C32822D43B00B756FB /* OnBoardingWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingWelcomeView.swift; sourceTree = "<group>"; };
@@ -456,7 +454,6 @@
 			children = (
 				B076F0972806011500C1F88F /* CardView.swift */,
 				B03B1BC728186E2E005C62C3 /* PlayButtonView.swift */,
-				B03B1BC928186F7A005C62C3 /* SpeakButtonView.swift */,
 				B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */,
 				B0065D0D28319D3300EE84D8 /* PlayTranslationButtonView.swift */,
 				B04021CD2822E27000B756FB /* PrimaryButtonStyle.swift */,
@@ -621,7 +618,6 @@
 				B01279A727F86957003FB72E /* RootContentView.swift in Sources */,
 				B087C89527F8B46A0015E54B /* PhrasesView.swift in Sources */,
 				B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */,
-				B03B1BCA28186F7A005C62C3 /* SpeakButtonView.swift in Sources */,
 				B0ECC1402802FC6F00BF9898 /* AlphabetItemView.swift in Sources */,
 				B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */,
 				B066546C27FB7D3C002D5EDD /* Language.swift in Sources */,

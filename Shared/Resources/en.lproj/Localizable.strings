@@ -22,8 +22,8 @@
 /* (No Comment) */
 "language.uk-cs" = "Czech";
 
-"language.cs" = "Czech";
-"language.uk" = "Ukraine";
+"language.cs" = "czech";
+"language.uk" = "ukraine";
 
 /* No comment provided by engineer. */
 "language.cs-alphabet" = "Czech alphabet";

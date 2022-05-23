@@ -26,8 +26,8 @@
 /* (No Comment) */
 "language.uk-cs" = "Češtinu";
 
-"language.cs" = "Česky";
-"language.uk" = "Ukrajinsky";
+"language.cs" = "česky";
+"language.uk" = "ukrajinsky";
 
 /* No comment provided by engineer. */
 "language.cs-alphabet" = "Česká abeceda";

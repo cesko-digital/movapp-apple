@@ -2,7 +2,9 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
-- Oprava přehrávání písmenka v abecedě
+- Oprava přehrávání písmenka v abecedě.
+- Oprava velkého písmena u textu "česky" nebo "ukrajinsky".
+- Vylepšili jsme pozastavení přehrávání zvuku a nebo jeho přepínání během přehrávání.
 
 ## [1.2.0, build 18] - 2022-05-20Z
 

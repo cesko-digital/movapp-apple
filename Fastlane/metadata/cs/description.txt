@@ -14,7 +14,7 @@ Protože aplikace funguje bez připojení k internetu. Ve slovníku najdete víc
 
 Na co se můžete těšit v dalších verzích?
 
-Přidání zvuku u ukrajinských frází, vytváření nástrojů pro jejich procvičování. Budujeme rozcestník s dalšími materiály, které vám pomohou s učením ukrajinštiny a češtiny.
+Procvičování frází. Rozcestník s materiály, které vám pomohou s učením ukrajinštiny a češtiny.
 
 Za vývojem této aplikace stojí tým dobrovolníků z Čech, Ukrajiny, Polska a Slovenska.
 

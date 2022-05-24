@@ -14,7 +14,7 @@ The application works even offline. You will find more than 1,000 communication 
 
 What can you look for in the future?
 
-We will add a recording of each of the Ukrainian phrases and create tools to help you learn them. In addition, we are working on a guide to the other materials that will help you with learning both Ukrainian and Czech.
+Learning tools, guide with the materials that will help you with learning both Ukrainian and Czech.
 
 The application is being developed by a team of volunteers from the Czech Republic, Ukraine, Poland and Slovakia.
 

@@ -17,19 +17,19 @@
 "I want to help" = "I want to help";
 
 /* (No Comment) */
-"language.cs-uk" = "Ukraine";
+"language.cs-uk" = "Ukrainian";
 
 /* (No Comment) */
 "language.uk-cs" = "Czech";
 
-"language.cs" = "czech";
-"language.uk" = "ukraine";
+"language.cs" = "Czech";
+"language.uk" = "Ukrainian";
 
 /* No comment provided by engineer. */
 "language.cs-alphabet" = "Czech alphabet";
 
 /* No comment provided by engineer. */
-"language.uk-alphabet" = "Ukraine alphabet";
+"language.uk-alphabet" = "Ukrainian alphabet";
 
 /* (No Comment) */
 "License" = "License";
@@ -38,7 +38,7 @@
 "Settings" = "Settings";
 
 /* (No Comment) */
-"Partner project" = "Partner project";
+"Partner project" = "Partner projects";
 
 /* (No Comment) */
 "Settings" = "Settings";
@@ -50,7 +50,7 @@
 "Umapa" = "Umapa";
 
 /* (No Comment) */
-"Want to learn" = "Want to learn";
+"Want to learn" = "I want to learn";
 
 "Team" = "Team";
 
@@ -65,5 +65,5 @@
 "boarding-2-title" = "For kids";
 "boarding-2-sub-title" = "Illustrated Ukrainian-Czech dictionary with dozens of printable cards.";
 
-"boarding-3-title" = "Ukraine alphabet";
+"boarding-3-title" = "Ukrainian alphabet";
 "boarding-3-sub-title" = "Learn all the characters of the Ukrainian Cyrillic. Sample words will help you.";

@@ -21,10 +21,10 @@
 "I want to help" = "Přidat se k vývoji";
 
 /* (No Comment) */
-"language.cs-uk" = "Ukrajinštinu";
+"language.cs-uk" = "ukrajinsky";
 
 /* (No Comment) */
-"language.uk-cs" = "Češtinu";
+"language.uk-cs" = "česky";
 
 "language.cs" = "česky";
 "language.uk" = "ukrajinsky";
@@ -51,7 +51,7 @@
 "Select alphabet language" = "Vyber abecedu";
 
 /* No comment provided by engineer. */
-"Select phrases" = "Vyber co chceš vidět";
+"Select phrases" = "Vyber, co chceš vidět";
 
 /* (No Comment) */
 "Settings" = "Nastavení";
@@ -73,7 +73,7 @@
 "Welcome" = "Vítejte v MOVAPP!";
 "Choose language to learn" = "Vyberte jazyk, který se chcete naučit";
 
-"Start learning" = "Začít s účením";
+"Start learning" = "Začít s učením";
 
 "boarding-1-title" = "Slovníček";
 "boarding-1-sub-title" = "Naučte se stovky základních slovíček a frází čtením i poslechem. Slovíčka třídíme dle životních situací.";

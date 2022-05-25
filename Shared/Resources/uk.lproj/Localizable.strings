@@ -24,13 +24,13 @@
 "I want to help" = "Я хочу допомогти";
 
 /* (No Comment) */
-"language.cs-uk" = "Український";
+"language.cs-uk" = "українську";
 
 /* (No Comment) */
-"language.uk-cs" = "Чеський";
+"language.uk-cs" = "чеську";
 
-"language.cs" = "еський";
-"language.uk" = "український";
+"language.cs" = "чеську";
+"language.uk" = "українську";
 
 /* No comment provided by engineer. */
 "language.cs-alphabet" = "Чеський алфавіт";
@@ -70,13 +70,13 @@
 "Back" = "Назад";
 
 "Welcome" = "Ласкаво просимо до MOVAPP!";
-"Start learning" = "Почніть вчитися";
+"Start learning" = "Почати навчання";
 "Choose language to learn" = "Виберіть мову, яку хочете вивчити";
 
 "boarding-1-title" = "Словник";
 "boarding-1-sub-title" = "Вивчіть сотні базових слів та фраз, читаючи й слухаючи. Слова та фрази розділені на категорії відповідно до життєвих ситуацій.";
 
-"boarding-2-title" = "для дітей";
+"boarding-2-title" = "Для дітей";
 "boarding-2-sub-title" = "Ілюстрований чесько-український словник із десятками карток для друку.";
 
 "boarding-3-title" = "Чеський алфавіт";

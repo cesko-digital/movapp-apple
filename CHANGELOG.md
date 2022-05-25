@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Oprava lokalizací by @met
+
 ## [1.2.0, build 19] - 2022-05-23Z
 
 - Oprava přehrávání písmenka v abecedě.

@@ -83,3 +83,8 @@
 
 "boarding-3-title" = "Ukrajinská abeceda";
 "boarding-3-sub-title" = "Naučte se všechny znaky ukrajinské cyrilice. Pomohou vám ukázková slova.";
+
+/* Boarding button select ukraine to czech */
+"boarding_ukrainian_to_czech" = "Я хочу вивчити чеську";
+/* Boarding button select czech to ukrainian */
+"boarding_czech_to_ukrainian" = "Chci se naučit ukrajinsky";

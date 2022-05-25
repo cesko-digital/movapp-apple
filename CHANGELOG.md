@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Oprava překladů na boarding obrazovce
+
 ## [1.2.0, build 20] - 2022-05-25Z
 
 - Oprava lokalizací by @met

@@ -81,3 +81,8 @@
 
 "boarding-3-title" = "Чеський алфавіт";
 "boarding-3-sub-title" = "Вивчіть всі літери чеського алфавіту. Вам допоможуть приклади слів.";
+
+/* Boarding button select ukraine to czech */
+"boarding_ukrainian_to_czech" = "Я хочу вивчити чеську";
+/* Boarding button select czech to ukrainian */
+"boarding_czech_to_ukrainian" = "Chci se naučit ukrajinsky";

@@ -67,3 +67,8 @@
 
 "boarding-3-title" = "Ukrainian alphabet";
 "boarding-3-sub-title" = "Learn all the characters of the Ukrainian Cyrillic. Sample words will help you.";
+
+/* Boarding button select ukraine to czech */
+"boarding_ukrainian_to_czech" = "Я хочу вивчити чеську";
+/* Boarding button select czech to ukrainian */
+"boarding_czech_to_ukrainian" = "Chci se naučit ukrajinsky";

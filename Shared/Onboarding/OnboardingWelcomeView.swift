@@ -32,12 +32,12 @@ struct OnBoardingWelcomeView: View {
             VStack() {
                 // These buttons should not be translated - sets the correct language
                 // At this moment, later it will be changed when we have more languages
-                OnBoardingWelcomeButton(text: "Я хочу вивчити Чеський", backgroundColor: Color("colors/primary"), textColor: .white) {
+                OnBoardingWelcomeButton(text: String(localized: "boarding_ukrainian_to_czech", comment: "Boarding button select ukraine to czech"), backgroundColor: Color("colors/primary"), textColor: .white) {
                     onLanguageSelected(.ukCs)
                 }
                 .accessibilityIdentifier("welcome-ukraine")
                 
-                OnBoardingWelcomeButton(text: "Chci se naučit ukrajinsky", backgroundColor: Color("colors/yellow"), textColor: Color("colors/primary"))  {
+                OnBoardingWelcomeButton(text: String(localized: "boarding_czech_to_ukrainian", comment: "Boarding button select czech to ukrainian"), backgroundColor: Color("colors/yellow"), textColor: Color("colors/primary"))  {
                     onLanguageSelected(.csUk)
                 }
                 .accessibilityIdentifier("welcome-czech")

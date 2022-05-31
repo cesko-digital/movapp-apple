@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Aktualizace abecedy / slovníčku na stav z 31.5 17:50
+
 ## [1.2.0, build 21] - 2022-05-25Z
 
 - Oprava překladů na boarding obrazovce

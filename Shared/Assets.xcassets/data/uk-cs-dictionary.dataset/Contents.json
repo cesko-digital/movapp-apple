@@ -2,7 +2,8 @@
   "data" : [
     {
       "filename" : "uk-cs-dictionary.json",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "universal-type-identifier" : "public.json"
     }
   ],
   "info" : {

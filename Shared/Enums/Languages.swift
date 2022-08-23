@@ -10,6 +10,8 @@ import Foundation
 enum Languages: String {
     case cs = "cs"
     case uk = "uk"
+    case pl = "pl"
+    case sk = "sk"
     
     var flag: Flags {
         switch(self) {
@@ -17,6 +19,10 @@ enum Languages: String {
             return Flags.cs
         case .uk:
             return Flags.uk
+        case .pl:
+            return Flags.pl
+        case .sk:
+            return Flags.sk
         }
     }
     

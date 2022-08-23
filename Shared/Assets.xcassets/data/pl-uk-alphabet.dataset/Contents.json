@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "pl-uk-alphabet.json",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

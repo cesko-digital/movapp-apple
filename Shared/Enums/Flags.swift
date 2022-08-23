@@ -10,4 +10,6 @@ import Foundation
 enum Flags: String {
     case cs = "czech"
     case uk = "ukraine"
+    case pl = "polish"
+    case sk = "slovakia"
 }

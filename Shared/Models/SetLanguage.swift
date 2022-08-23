@@ -62,13 +62,21 @@ extension SetLanguage: Hashable {
  */
 
 let csUkLanguage = Language(main: Languages.cs, source: Languages.uk)
+let plUkLanguage = Language(main: Languages.pl, source: Languages.uk)
+let skUkLanguage = Language(main: Languages.sk, source: Languages.uk)
 
 extension SetLanguage {
 
     static let csUk = SetLanguage(language: csUkLanguage, flipFromWithTo: false)
     static let ukCs = SetLanguage(language: csUkLanguage, flipFromWithTo: true)
     
-    static let allCases = [csUk, ukCs]
+    static let plUk = SetLanguage(language: plUkLanguage, flipFromWithTo: false)
+    static let ukPl = SetLanguage(language: plUkLanguage, flipFromWithTo: true)
+    
+    static let skUk = SetLanguage(language: skUkLanguage, flipFromWithTo: false)
+    static let ukSk = SetLanguage(language: skUkLanguage, flipFromWithTo: true)
+    
+    static let allCases = [csUk, ukCs, plUk, ukPl, skUk, ukSk]
 }
 
 typealias SetLanguages = [SetLanguage]

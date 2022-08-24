@@ -10,50 +10,50 @@ import SwiftUI
 
 
 struct OnBoardingWelcomeView: View {
-    let onLanguageSelected: (_ language: SetLanguage) -> Void
-    
+    let onLanguageSelected: (_ language: Languages) -> Void
+
+    private let gridLayout: [GridItem] = [GridItem(.adaptive(minimum: 113.42)), GridItem(.adaptive(minimum: 113.42))]
+
     var body: some View {
         VStack {
             VStack {
-                
-                Text("Welcome")
+                Text("on_boarding_welcome")
                     .foregroundColor(Color("colors/primary"))
-                    .font(.system(size: 25))
+                    .font(.system(size: 32))
                     .multilineTextAlignment(.center)
                     .padding()
                 
-                Text("Choose language to learn")
-                    .foregroundColor(Color("colors/primary"))
+                Text("on_boarding_choice_native")
+                    .foregroundColor(Color("colors/text"))
+                    .font(.system(size: 16))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 16)
             }
-            .padding(.bottom, 40)
-            
-            VStack() {
-                // These buttons should not be translated - sets the correct language
-                // At this moment, later it will be changed when we have more languages
-                OnBoardingWelcomeButton(text: String(localized: "boarding_ukrainian_to_czech", comment: "Boarding button select ukraine to czech"), backgroundColor: Color("colors/primary"), textColor: .white) {
-                    onLanguageSelected(.ukCs)
+            .padding(.bottom, 72)
+
+            LazyVGrid(columns: gridLayout, alignment: .center, spacing: 48) {
+                ForEach(Languages.allCases, id: \.title) { item in
+                    OnBoardingWelcomeButton(language: item) {
+                        onLanguageSelected(item)
+                    }
                 }
-                .accessibilityIdentifier("welcome-ukraine")
-                
-                OnBoardingWelcomeButton(text: String(localized: "boarding_czech_to_ukrainian", comment: "Boarding button select czech to ukrainian"), backgroundColor: Color("colors/yellow"), textColor: Color("colors/primary"))  {
-                    onLanguageSelected(.csUk)
-                }
-                .accessibilityIdentifier("welcome-czech")
             }
         }
         .padding()
     }
 }
 
-struct OnBoardingWelcomeView_Previews: PreviewProvider {
-    @State static var language: SetLanguage?
-    
+struct OnBoardingWelcomeView_Previews: PreviewProvider {   
     static var previews: some View {
         
         OnBoardingWelcomeView { language in
             print(language)
         }
+        .previewDevice(PreviewDevice(rawValue: "iPhone 13 Pro"))
+
+        OnBoardingWelcomeView { language in
+            print(language)
+        }
+        .previewDevice(PreviewDevice(rawValue: "iPhone SE 3rd generation)"))
     }
 }

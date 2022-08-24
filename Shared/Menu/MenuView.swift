@@ -66,7 +66,7 @@ struct MenuView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
             
-            Text("Settings")
+            Text("settings")
         } footer: {
             Text("Ver: \(Bundle.main.appVersionLong) (\(Bundle.main.appBuild)) ")
         }
@@ -93,39 +93,39 @@ struct MenuView: View {
         Section {
             openLinkButton("movapp.cz", url: "https://movapp.cz")
             
-            NavigationLink("Team") {
+            NavigationLink("about_team") {
                 TeamView()
-                    .navigationTitle("Team")
+                    .navigationTitle("about_team")
             }
-            
-            openLinkButton("Twitter", url: "https://twitter.com/movappcz")
-            openLinkButton("Facebook", url: "https://www.facebook.com/movappcz")
-            openLinkButton("Instagram", url: "https://www.instagram.com/movappcz/")
-            openLinkButton("LinkedIn", url: "https://www.linkedin.com/company/movapp-cz")
-            
+
+            openLinkButton(String(localized:"about_twitter"), url: "https://twitter.com/movappcz")
+            openLinkButton(String(localized:"facebook"), url: "https://www.facebook.com/movappcz")
+            openLinkButton(String(localized:"about_instagram"), url: "https://www.instagram.com/movappcz/")
+            openLinkButton(String(localized:"linkedin"), url: "https://www.linkedin.com/company/movapp-cz")
+
         } header: {
-            Text("About the project", comment: "Settings")
+            Text("about_project", comment: "Settings")
         }
     }
     
     private var appSection: some View {
         Section {
-            openLinkButton(String(localized: "I want to help"), url: "https://github.com/cesko-digital/movapp-apple")
+            openLinkButton(String(localized: "i_want_help"), url: "https://github.com/cesko-digital/movapp-apple")
             
-            openLinkButton(String(localized: "License"), url: "https://github.com/cesko-digital/movapp-apple/blob/main/LICENSE")
+            openLinkButton(String(localized: "about_license"), url: "https://github.com/cesko-digital/movapp-apple/blob/main/LICENSE")
         } header: {
-            Text("About the app")
+            Text("about_application")
         }
     }
     
     private var partnerSection: some View {
         Section {
-            openLinkButton(String(localized: "Stand by Ukraine", comment: "Link"), url: "https://www.stojimezaukrajinou.cz/")
+            openLinkButton(String(localized: "about_stand_by_ukraine", comment: "Link"), url: "https://www.stojimezaukrajinou.cz/")
             
-            openLinkButton(String(localized: "Umapa", comment: "Link"), url: "https://www.umapa.eu/")
+            openLinkButton(String(localized: "about_umapa", comment: "Link"), url: "https://www.umapa.eu/")
             
         } header: {
-            Text("Partner project")
+            Text("about_partners")
         }
     }
     
@@ -153,5 +153,7 @@ struct MenuView_Previews: PreviewProvider {
             .environmentObject(languageStore)
             .environmentObject(teamDataStore)
             .environmentObject(onBoardingStore)
+            .previewLayout(.sizeThatFits)
+            .frame(height: 950)
     }
 }

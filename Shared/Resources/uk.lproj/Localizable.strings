@@ -1,88 +1,41 @@
-/* (No Comment) */
-"About the app" = "Про додаток";
-
-/* Menu */
-"About the project" = "Про проект";
-
-/* TabBar A-Z */
-"Alphabet" = "Алфавіт";
-
-
-/* TabBar dictionary */
-"Dictionary" = "Словник";
-
-/* Favorites list */
-"Favorites" = "Улюблене";
-
-/* TabBar For kids */
-"For Kids" = "Для дітей";
-
-/* No comment provided by engineer. */
-"Search" = "Знайти слово";
-
-/* (No Comment) */
-"I want to help" = "Я хочу допомогти";
-
-/* (No Comment) */
-"language.cs-uk" = "українську";
-
-/* (No Comment) */
-"language.uk-cs" = "чеську";
-
-"language.cs" = "чеську";
-"language.uk" = "українську";
-
-/* No comment provided by engineer. */
-"language.cs-alphabet" = "Чеський алфавіт";
-
-/* No comment provided by engineer. */
-"language.uk-alphabet" = "Український алфавіт";
-
-/* (No Comment) */
-"License" = "Ліцензія";
-
-/* TabBar Menu */
-"Settings" = "Налаштування";
-
-/* (No Comment) */
-"Partner project" = "Партнерські проекти";
-
-/* No comment provided by engineer. */
-"Select alphabet language" = "Виберіть алфавіт";
-
-/* No comment provided by engineer. */
-"Select phrases" = "Виберіть те, що ви хочете побачити";
-
-/* (No Comment) */
-"Settings" = "Налаштування";
-
-/* Link */
-"Stand by Ukraine" = "Stojíme za Ukrajinou";
-
-/* Link */
-"Umapa" = "Umapa";
-
-/* (No Comment) */
-"Want to learn" = "Хочу вчити";
-
-"Team" = "Команда";
-
-"Back" = "Назад";
-
-"Welcome" = "Ласкаво просимо до MOVAPP!";
-"Start learning" = "Почати навчання";
-"Choose language to learn" = "Виберіть мову, яку хочете вивчити";
-
-"boarding-1-title" = "Словник";
-"boarding-1-sub-title" = "Вивчіть сотні базових слів та фраз, читаючи й слухаючи. Слова та фрази розділені на категорії відповідно до життєвих ситуацій.";
-
-"boarding-2-title" = "Для дітей";
-"boarding-2-sub-title" = "Ілюстрований чесько-український словник із десятками карток для друку.";
-
-"boarding-3-title" = "Чеський алфавіт";
-"boarding-3-sub-title" = "Вивчіть всі літери чеського алфавіту. Вам допоможуть приклади слів.";
-
-/* Boarding button select ukraine to czech */
-"boarding_ukrainian_to_czech" = "Я хочу вивчити чеську";
-/* Boarding button select czech to ukrainian */
-"boarding_czech_to_ukrainian" = "Chci se naučit ukrajinsky";
+"title_children" = "Для дітей";
+"title_alphabet" = "Алфавіт";
+"title_dictionary" = "Словник";
+"title_favorites" = "Улюблене";
+"about_project" = "Про проект";
+"about_team" = "Команда";
+"about_application" = "Про додаток";
+"i_want_help" = "Я хочу допомогти";
+"about_license" = "Ліцензія";
+"about_version" = "Версія: %1$s (%2$s)";
+"country_flag" = "прапор країни";
+"play_transcription" = "відтворити звук";
+"settings" = "Налаштування";
+"i_want_learn" = "Хочу вчити";
+"ukrainian" = "українська";
+"czech" = "чеська";
+"alphabet_ukrainian" = "Український алфавіт";
+"alphabet_czech" = "Чеський алфавіт";
+"search_word" = "Знайти слово";
+"title_settings" = "Налаштування";
+"on_boarding_welcome" = "Ласкаво просимо до MOVAPP!";
+"on_boarding_exit" = "Почати навчання";
+"on_boarding_choice" = "Виберіть мову, яку хочете вивчити";
+"on_boarding_info_1_title" = "Словник";
+"on_boarding_info_1_description" = "Вивчите сотні основних слів та фраз за допомогою читання та прослуховування. Слова згруповані за життєвими ситуаціями.";
+"on_boarding_info_2_title" = "Алфавіт";
+"on_boarding_info_2_description" = "Вивчите всі літери. Допоможуть слова-приклади.";
+"about_partners" = "Партнерські проекти";
+"about_stand_by_ukraine" = "Stojime za Ukrajinou";
+"on_boarding_info_0_title" = "Відмінно!";
+"on_boarding_info_0_description" = "Йдемо вивчати %@. Додатком можете скористатися і офлайн, якщо не маєте підключення до інтернету.";
+"slovak" = "словацька";
+"polish" = "польська";
+"on_boarding_skip" = "Пропустити";
+"on_boarding_back" = "Назад";
+"on_boarding_info_3_title" = "Для дітей";
+"on_boarding_info_3_description" = "Ілюстрований двомовний словник з десятками карток для дітей.";
+"i_know" = "Рідна мова";
+"alphabet_slovak" = "Словацький алфавіт";
+"alphabet_polish" = "Польський алфавіт";
+"on_boarding_choice_native" = "Виберіть мову, якою вмієте говорити";

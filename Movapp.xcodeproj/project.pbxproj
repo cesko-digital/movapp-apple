@@ -70,6 +70,7 @@
 		B0ECC1482802FF2500BF9898 /* AlphabetExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */; };
 		B0ECC14C2803431A00BF9898 /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14B2803431A00BF9898 /* Bundle+version.swift */; };
 		B0ECC1502803485B00BF9898 /* AlphabetShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */; };
+		B439F07228B64FEF002B270B /* OnBoardingToLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439F07128B64FEF002B270B /* OnBoardingToLearnView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +183,7 @@
 		B0ECC14A28033A9E00BF9898 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		B0ECC14B2803431A00BF9898 /* Bundle+version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+version.swift"; sourceTree = "<group>"; };
 		B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetShortcutsView.swift; sourceTree = "<group>"; };
+		B439F07128B64FEF002B270B /* OnBoardingToLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoardingToLearnView.swift; path = Shared/Onboarding/OnBoardingToLearnView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -405,10 +407,11 @@
 			isa = PBXGroup;
 			children = (
 				B04021C72822D46700B756FB /* OnBoardingRootView.swift */,
-				B04021C32822D43B00B756FB /* OnBoardingWelcomeView.swift */,
-				B04021C52822D44F00B756FB /* OnBoardingWelcomeButton.swift */,
+				B439F07128B64FEF002B270B /* OnBoardingToLearnView.swift */,
 				B04021CB2822D6E300B756FB /* OnBoardingTutorialsPagerView.swift */,
 				B04021C92822D6C600B756FB /* OnBoardingTutorialView.swift */,
+				B04021C52822D44F00B756FB /* OnBoardingWelcomeButton.swift */,
+				B04021C32822D43B00B756FB /* OnBoardingWelcomeView.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -619,6 +622,7 @@
 				B087C89527F8B46A0015E54B /* PhrasesView.swift in Sources */,
 				B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */,
 				B0ECC1402802FC6F00BF9898 /* AlphabetItemView.swift in Sources */,
+				B439F07228B64FEF002B270B /* OnBoardingToLearnView.swift in Sources */,
 				B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */,
 				B066546C27FB7D3C002D5EDD /* Language.swift in Sources */,
 				B068833627FF92E300E6B831 /* DictionaryDataStore.swift in Sources */,

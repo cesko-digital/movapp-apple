@@ -27,9 +27,9 @@ enum RootItems: Int, Hashable {
     
     var title: String {
         switch self {
-        case .dictionary: return String(localized: "Dictionary", comment: "TabBar dictionary")
-        case .alphabet: return String(localized: "Alphabet", comment: "TabBar aklphabet")
-        case .for_children: return String(localized: "For Kids", comment: "TabBar For kids")
+        case .dictionary: return String(localized: "title_dictionary", comment: "TabBar dictionary")
+        case .alphabet: return String(localized: "title_alphabet", comment: "TabBar alphabet")
+        case .for_children: return String(localized: "title_children", comment: "TabBar For kids")
         case .settings: return String(localized: "Settings", comment: "TabBar Menu")
         }
     }

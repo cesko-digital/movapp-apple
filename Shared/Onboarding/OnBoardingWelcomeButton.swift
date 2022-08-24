@@ -8,37 +8,25 @@
 import SwiftUI
 
 struct OnBoardingWelcomeButton: View {
-    let text: String
-    let backgroundColor: Color
-    let textColor: Color
-    
+    let language: Languages
+
     let action: () -> Void
-    
+
     var body: some View {
         Button {
             action()
         } label: {
-            HStack {
-                Text(text)
-                    .foregroundColor(textColor)
-                    .font(.system(size: 25))
-                
-                Spacer()
-                
-                Image(systemName: "chevron.right")
+            VStack {
+                Image("icons/flags/\(language.flag.rawValue)")
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 20)
-                    .foregroundColor(textColor)
+                    .frame(width: 113.42, height: 74.31)
+                    .shadow(color: .black.opacity(0.4), radius: 6, x: 0, y: 4)
+
+                Text(language.title)
+                    .foregroundColor(Color("colors/primary"))
+                    .font(.system(size: 25))
             }
-            .foregroundColor(textColor)
-            .padding(.horizontal)
-            .padding(.vertical, 50)
-            .frame(maxWidth: .infinity)
-            .background(backgroundColor)
         }
-        .buttonStyle(ScaleButtonStyle())
-        
     }
 }
 
@@ -47,13 +35,13 @@ struct OnBoardingWelcomeButton: View {
 struct OnBoardingWelcomeButton_Previews: PreviewProvider {
     
     static var previews: some View {
-        OnBoardingWelcomeButton(text: "Я хочу вивчити Чеський", backgroundColor: Color("colors/primary"), textColor: .white) {
+        OnBoardingWelcomeButton(language: .cs) {
             
         }
         .previewLayout(.sizeThatFits)
         
-        OnBoardingWelcomeButton(text: "Chci se naučit ukrajinsky", backgroundColor: Color("colors/yellow"), textColor: Color("colors/primary")) {
-            
+        OnBoardingWelcomeButton(language: .uk) {
+
         }
         .previewLayout(.sizeThatFits)
         

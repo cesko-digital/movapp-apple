@@ -14,7 +14,7 @@ struct DictionaryHeaderView: View {
     
     var body: some View {
         HStack (spacing: 5) {
-            TextField("Search", text: $searchString)
+            TextField("search_word", text: $searchString)
                 .disableAutocorrection(true)
                 .foregroundColor(Color("colors/text"))
                 .padding(.trailing, 10)

@@ -8,43 +8,60 @@
 import SwiftUI
 
 struct OnBoardingTutorialsPagerView: View {
+    let selectedToLearnLanguage: Languages
     let onBack: () -> Void
     let onStart: () -> Void
-    
+
+    @State private var selected = 0
+    private let tabLastElementIndex = 3
+    @State private var isLastIndexSelected = false
+
     var body: some View {
         ZStack(alignment: .topLeading) {
              
             VStack {
-                TabView {
+                TabView(selection: $selected) {
+                    OnBoardingTutorialView(title: "on_boarding_info_0_title",
+                                           subTitle: String(format: String(localized: "on_boarding_info_0_description"), selectedToLearnLanguage.title))
                     
-                    OnBoardingTutorialView(title: "boarding-1-title", subTitle: "boarding-1-sub-title", image: "icons/tutorial-dictionary")
+                    OnBoardingTutorialView(title: "on_boarding_info_1_title",
+                                           subTitle: String(localized: "on_boarding_info_1_description"))
                     
-                    OnBoardingTutorialView(title: "boarding-2-title", subTitle: "boarding-2-sub-title", image: "icons/tutorial-child")
-                    
-                    OnBoardingTutorialView(title: "boarding-3-title", subTitle: "boarding-3-sub-title", image: "icons/tutorial-alphabet")
-                    
+                    OnBoardingTutorialView(title: "on_boarding_info_2_title",
+                                           subTitle: String(localized: "on_boarding_info_2_description"))
+
+                    OnBoardingTutorialView(title: "on_boarding_info_3_title",
+                                           subTitle: String(localized: "on_boarding_info_3_description"))
                 }
+                .onChange(of: selected, perform: { newValue in
+                    //TODO: nefunguje to :/
+                    isLastIndexSelected = newValue == tabLastElementIndex
+                })
                 .tabViewStyle(.page)
-                .indexViewStyle(.page(backgroundDisplayMode: .always))
+                .indexViewStyle(.page(backgroundDisplayMode: isLastIndexSelected ? .never : .always))
                 .accessibilityIdentifier("tutorial-tab-view")
-                
-                
-                Button("Start learning", action: onStart)
-                    .buttonStyle(PrimaryButtonStyle())
-                    .frame(maxWidth: .infinity)
+
+                if isLastIndexSelected {
+                    Button("Start learning", action: onStart)
+                        .buttonStyle(PrimaryButtonStyle())
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .accessibilityIdentifier("start-learning-button")
+                }
+            }
+            HStack {
+                Button("on_boarding_back", action: onBack)
+                    .accessibilityIdentifier("welcome-go-start")
                     .padding()
-                    .accessibilityIdentifier("start-learning-button")
+
+                Spacer()
+
+                if !isLastIndexSelected {
+                    Button("on_boarding_skip", action: onStart)
+                        .accessibilityIdentifier("start-learning-button")
+                        .padding()
+                }
             }
-            
-            Button {
-                onBack()
-            } label: {
-                Image(systemName: "chevron.left")
-                
-                Text("Back")
-            }
-            .accessibilityIdentifier("welcome-go-start")
-            .padding()
         }
     }
     
@@ -52,7 +69,7 @@ struct OnBoardingTutorialsPagerView: View {
 
 struct OnBoardingTutorialsPagerView_Previews: PreviewProvider {
     static var previews: some View {
-        OnBoardingTutorialsPagerView {
+        OnBoardingTutorialsPagerView(selectedToLearnLanguage: .cs) {
             print("Back")
         } onStart: {
             print("Start")

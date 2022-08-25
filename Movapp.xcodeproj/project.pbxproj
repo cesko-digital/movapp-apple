@@ -21,7 +21,7 @@
 		B01279A727F86957003FB72E /* RootContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012799627F86954003FB72E /* RootContentView.swift */; };
 		B01279A927F86957003FB72E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B012799727F86957003FB72E /* Assets.xcassets */; };
 		B01279C627F870BF003FB72E /* RootItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279C527F870BF003FB72E /* RootItems.swift */; };
-		B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279C927F872A9003FB72E /* DicitionaryView.swift */; };
+		B01279CA27F872A9003FB72E /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279C927F872A9003FB72E /* DictionaryView.swift */; };
 		B01279D027F872C3003FB72E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279CF27F872C3003FB72E /* MenuView.swift */; };
 		B01279D327F872CB003FB72E /* ForChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279D227F872CB003FB72E /* ForChildrenView.swift */; };
 		B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279D527F872D2003FB72E /* AlphabetView.swift */; };
@@ -125,7 +125,7 @@
 		B012799C27F86957003FB72E /* Movapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01279A427F86957003FB72E /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		B01279C527F870BF003FB72E /* RootItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootItems.swift; sourceTree = "<group>"; };
-		B01279C927F872A9003FB72E /* DicitionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicitionaryView.swift; sourceTree = "<group>"; };
+		B01279C927F872A9003FB72E /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
 		B01279CF27F872C3003FB72E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		B01279D227F872CB003FB72E /* ForChildrenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenView.swift; sourceTree = "<group>"; };
 		B01279D527F872D2003FB72E /* AlphabetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetView.swift; sourceTree = "<group>"; };
@@ -321,7 +321,7 @@
 				B01279CE27F872BB003FB72E /* Menu */,
 				B01279CD27F872B4003FB72E /* ForChildren */,
 				B01279CC27F872AC003FB72E /* Alphabet */,
-				B01279C827F8729C003FB72E /* Dicitionary */,
+				B01279C827F8729C003FB72E /* Dictionary */,
 				B01279C427F87086003FB72E /* Root */,
 				B012799527F86954003FB72E /* MovappApp.swift */,
 				B0C9F40927FCBF5500B075EB /* Launch Screen.storyboard */,
@@ -356,11 +356,11 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
-		B01279C827F8729C003FB72E /* Dicitionary */ = {
+		B01279C827F8729C003FB72E /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
 				250E55E528072591004511EC /* Dictionary+UIExamples.swift */,
-				B01279C927F872A9003FB72E /* DicitionaryView.swift */,
+				B01279C927F872A9003FB72E /* DictionaryView.swift */,
 				B0E140E227FCE24F008BBBB4 /* DictionaryHeaderView.swift */,
 				B00D1B2427F9999C0073611C /* DictionaryContentView.swift */,
 				B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */,
@@ -370,7 +370,7 @@
 				B087C89427F8B46A0015E54B /* PhrasesView.swift */,
 				B00D1B2D27F9DEC20073611C /* TranslationView.swift */,
 			);
-			path = Dicitionary;
+			path = Dictionary;
 			sourceTree = "<group>";
 		};
 		B01279CC27F872AC003FB72E /* Alphabet */ = {
@@ -654,7 +654,7 @@
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
 				B0ECC1482802FF2500BF9898 /* AlphabetExample.swift in Sources */,
 				25A2397F2808883400750977 /* PhrasesFavoritesProvider.swift in Sources */,
-				B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */,
+				B01279CA27F872A9003FB72E /* DictionaryView.swift in Sources */,
 				B04021CE2822E27000B756FB /* PrimaryButtonStyle.swift in Sources */,
 				B0ECC14C2803431A00BF9898 /* Bundle+version.swift in Sources */,
 				B0E140E327FCE24F008BBBB4 /* DictionaryHeaderView.swift in Sources */,

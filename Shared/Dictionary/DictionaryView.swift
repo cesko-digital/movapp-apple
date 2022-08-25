@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct DicitionaryView: View {
+struct DictionaryView: View {
     
     @State private var searchString: String = ""
     @State private var selectedCategory: Dictionary.Category? = nil
@@ -78,7 +78,7 @@ struct DicitionaryView_Previews: PreviewProvider {
     static let dataStore = DictionaryDataStore()
     
     static var previews: some View {
-        DicitionaryView(selectedLanguage: .csUk)
+        DictionaryView(selectedLanguage: .csUk)
             .environmentObject(dataStore)
     }
 }

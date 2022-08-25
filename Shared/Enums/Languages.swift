@@ -28,10 +28,10 @@ enum Languages: String {
 
     var title: String {
         switch self {
-        case .cs: return "czech"
-        case .uk: return "ukrainian"
-        case .pl: return "polish"
-        case .sk: return "slovakia"
+        case .cs: return String(localized: "czech")
+        case .uk: return String(localized: "ukrainian")
+        case .pl: return String(localized: "polish")
+        case .sk: return String(localized: "slovak")
         }
     }
 

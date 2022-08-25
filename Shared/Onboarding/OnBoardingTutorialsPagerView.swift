@@ -23,18 +23,21 @@ struct OnBoardingTutorialsPagerView: View {
                 TabView(selection: $selected) {
                     OnBoardingTutorialView(title: "on_boarding_info_0_title",
                                            subTitle: String(format: String(localized: "on_boarding_info_0_description"), selectedToLearnLanguage.title))
+                    .tag(0)
                     
                     OnBoardingTutorialView(title: "on_boarding_info_1_title",
                                            subTitle: String(localized: "on_boarding_info_1_description"))
+                    .tag(1)
                     
                     OnBoardingTutorialView(title: "on_boarding_info_2_title",
                                            subTitle: String(localized: "on_boarding_info_2_description"))
+                    .tag(2)
 
                     OnBoardingTutorialView(title: "on_boarding_info_3_title",
                                            subTitle: String(localized: "on_boarding_info_3_description"))
+                    .tag(3)
                 }
                 .onChange(of: selected, perform: { newValue in
-                    //TODO: nefunguje to :/
                     isLastIndexSelected = newValue == tabLastElementIndex
                 })
                 .tabViewStyle(.page)

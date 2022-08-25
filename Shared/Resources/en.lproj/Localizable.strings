@@ -19,7 +19,7 @@
 "i_want_help" = "I want to help";
 "about_license" = "License";
 /* unused */
-"about_version" = "Version: %1$s (%2$s)";
+"about_version" = "Version: %@ (%@)";
 "about_partners" = "Partner project";
 "about_stand_by_ukraine" = "Stand by Ukraine";
 "about_umapa" = "Umapa";

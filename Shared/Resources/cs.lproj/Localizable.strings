@@ -7,7 +7,7 @@
 "about_application" = "O aplikaci";
 "i_want_help" = "Přidat se k vývoji";
 "about_license" = "Licence";
-"about_version" = "Verze: %1$s (%2$s)";
+"about_version" = "Verze: %@ (%@)";
 "country_flag" = "vlajka";
 "play_transcription" = "přehrát zvuk";
 "i_want_learn" = "Chci se naučit";

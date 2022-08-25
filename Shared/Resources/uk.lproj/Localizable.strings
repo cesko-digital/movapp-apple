@@ -7,7 +7,7 @@
 "about_application" = "Про додаток";
 "i_want_help" = "Я хочу допомогти";
 "about_license" = "Ліцензія";
-"about_version" = "Версія: %1$s (%2$s)";
+"about_version" = "Версія: %@ (%@)";
 "country_flag" = "прапор країни";
 "play_transcription" = "відтворити звук";
 "settings" = "Налаштування";

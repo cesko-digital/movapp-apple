@@ -4,6 +4,10 @@
 "title_favorites" = "Oblíbené";
 "about_project" = "O projektu";
 "about_team" = "Tým";
+"about_twitter" = "Twitter";
+"about_instagram" = "Instagram";
+"facebook" = "Facebook";
+"linkedin" = "LinkedIn";
 "about_application" = "O aplikaci";
 "i_want_help" = "Přidat se k vývoji";
 "about_license" = "Licence";
@@ -28,6 +32,7 @@
 "on_boarding_info_3_title" = "Pro děti";
 "about_partners" = "Partnerské projekty";
 "about_stand_by_ukraine" = "Stojíme za Ukrajinou";
+"about_umapa" = "Umapa";
 "slovak" = "slovensky";
 "polish" = "polsky";
 "alphabet_slovak" = "Slovenská abeceda";

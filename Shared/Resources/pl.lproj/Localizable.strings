@@ -4,6 +4,10 @@
 "title_favorites" = "Ulubione";
 "about_project" = "O projekcie";
 "about_team" = "Zespół";
+"about_twitter" = "Twitter";
+"about_instagram" = "Instagram";
+"facebook" = "Facebook";
+"linkedin" = "LinkedIn";
 "about_application" = "O aplikacji";
 "i_want_help" = "Dołącz do nas";
 "about_license" = "Licencja";
@@ -29,6 +33,7 @@
 "on_boarding_info_3_description" = "Ilustrowany dwujęzyczny słownik dla dzieci z kilkudziesięcioma kartami.";
 "about_partners" = "Projekty partnerskie";
 "about_stand_by_ukraine" = "Stojíme za Ukrajinou (Murem za Ukrainą)";
+"about_umapa" = "Umapa";
 "slovak" = "słowacki";
 "polish" = "polski";
 "alphabet_slovak" = "Alfabet słowacki";

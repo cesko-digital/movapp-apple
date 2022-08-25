@@ -27,16 +27,20 @@ enum Languages: String {
     }
 
     var title: String {
-        switch self {
-        case .cs: return String(localized: "czech")
-        case .uk: return String(localized: "ukrainian")
-        case .pl: return String(localized: "polish")
-        case .sk: return String(localized: "slovak")
-        }
+        String(localized: "\(self.translationKey)")
     }
 
     var alphabetTitle: String {
-        return String("alphabet_\(self.rawValue)")
+        String(localized: "alphabet_\(self.translationKey)")
+    }
+
+    private var translationKey: String {
+        switch self {
+        case .cs: return "czech"
+        case .uk: return "ukrainian"
+        case .pl: return "polish"
+        case .sk: return "slovak"
+        }
     }
 
     static let allCases: [Languages] = [.uk, .sk, .cs, .pl]

@@ -4,6 +4,10 @@
 "title_favorites" = "Улюблене";
 "about_project" = "Про проект";
 "about_team" = "Команда";
+"about_twitter" = "Twitter";
+"about_instagram" = "Instagram";
+"facebook" = "Facebook";
+"linkedin" = "LinkedIn";
 "about_application" = "Про додаток";
 "i_want_help" = "Я хочу допомогти";
 "about_license" = "Ліцензія";
@@ -27,6 +31,7 @@
 "on_boarding_info_2_description" = "Вивчите всі літери. Допоможуть слова-приклади.";
 "about_partners" = "Партнерські проекти";
 "about_stand_by_ukraine" = "Stojime za Ukrajinou";
+"about_umapa" = "Umapa";
 "on_boarding_info_0_title" = "Відмінно!";
 "on_boarding_info_0_description" = "Йдемо вивчати %@. Додатком можете скористатися і офлайн, якщо не маєте підключення до інтернету.";
 "slovak" = "словацька";

@@ -33,7 +33,7 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
             // FIXME: navigation titles corrupts all other titles in Settings section.
             Picker("i_know", selection: $viewModel.nativePicker.selection) {
                 ForEach(viewModel.nativePicker.languages, id: \.self ) { value in
-                    Text(LocalizedStringKey(value.title))
+                    Text(LocalizedStringKey(value.titleAccusative))
                         .tag(value)
                 }
             }
@@ -44,7 +44,7 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
 
             Picker("i_want_learn", selection: $viewModel.toLearnPicker.selection) {
                 ForEach(viewModel.toLearnPicker.languages, id: \.self ) { value in
-                    Text(LocalizedStringKey(value.title))
+                    Text(LocalizedStringKey(value.titleAccusative))
                         .tag(value)
                 }
             }

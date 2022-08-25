@@ -44,3 +44,7 @@
 "alphabet_slovak" = "Словацький алфавіт";
 "alphabet_polish" = "Польський алфавіт";
 "on_boarding_choice_native" = "Виберіть мову, якою вмієте говорити";
+"czech_accusative" = "чеську";
+"ukrainian_accusative" = "українську";
+"polish_accusative" = "польську";
+"slovak_accusative" = "словацьку";

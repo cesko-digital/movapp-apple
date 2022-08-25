@@ -30,6 +30,10 @@ enum Languages: String {
         String(localized: "\(self.translationKey)")
     }
 
+    var titleAccusative: String {
+        "\(self.translationKey)_accusative"
+    }
+
     var alphabetTitle: String {
         String(localized: "alphabet_\(self.translationKey)")
     }

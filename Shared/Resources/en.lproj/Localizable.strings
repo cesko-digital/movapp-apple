@@ -53,3 +53,7 @@
 "on_boarding_back" = "Back";
 "on_boarding_exit" = "Start learning";
 "on_boarding_info_3_description" = "Illustrated bilingual dictionary with dozens of printable cards.";
+"czech_accusative" = "Czech";
+"ukrainian_accusative" = "Ukrainian";
+"polish_accusative" = "Polish";
+"slovak_accusative" = "Slovak";

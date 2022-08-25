@@ -5,6 +5,7 @@
 //  Created by Martin Kluska on 04.05.2022.
 //
 
+import Foundation
 import SwiftUI
 
 struct OnBoardingTutorialsPagerView: View {
@@ -22,7 +23,8 @@ struct OnBoardingTutorialsPagerView: View {
             VStack {
                 TabView(selection: $selected) {
                     OnBoardingTutorialView(title: "on_boarding_info_0_title",
-                                           subTitle: String(format: String(localized: "on_boarding_info_0_description"), selectedToLearnLanguage.title))
+                                           subTitle: String(format: NSLocalizedString("on_boarding_info_0_description", comment: ""),
+                                                            NSLocalizedString(selectedToLearnLanguage.titleAccusative, comment: "")))
                     .tag(0)
                     
                     OnBoardingTutorialView(title: "on_boarding_info_1_title",

@@ -7,15 +7,10 @@
 
 import SwiftUI
 
-struct MenuView: View {
-    @State var selectedLanguage: SetLanguage;
-    
-    @EnvironmentObject var languageStore: LanguageStore
+struct MenuView<ViewModel: MenuViewModeling>: View {
+    @StateObject var viewModel: ViewModel
+
     @EnvironmentObject var onBoardingStore: OnBoardingStore
-    
-    init (selectedLanguage: SetLanguage) {
-        self.selectedLanguage = selectedLanguage
-    }
     
     var body: some View {
         
@@ -29,24 +24,39 @@ struct MenuView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
-            .navigationTitle("Settings")
+            .navigationBarTitle("settings")
         }
     }
     
     private var settingsSection: some View {
         Section {
-            
-            Picker("Want to learn", selection: $selectedLanguage) {
-                ForEach(SetLanguage.allCases, id: \.self) { value in
-                    Text(LocalizedStringKey(value.title))
-                        .tag(value)
+            // TODO: fix navigation title
+            Picker("i_know", selection: $viewModel.nativePicker.selection) {
+                Group {
+                    ForEach(viewModel.nativePicker.languages, id: \.self) { value in
+                        Text(LocalizedStringKey(value.title))
+                            .tag(value)
+                    }
                 }
-                .navigationTitle("Want to learn")
+                .navigationBarTitle("i_know")
             }
             .foregroundColor(Color("colors/text"))
-            .onChange(of: selectedLanguage) { newLanguage in
-                
-                languageStore.currentLanguage = newLanguage
+            .onChange(of: viewModel.nativePicker.selection) { newLanguage in
+                self.viewModel.nativeLanguageChanged()
+            }
+
+            Picker("i_want_learn", selection: $viewModel.toLearnPicker.selection) {
+                Group {
+                    ForEach(viewModel.toLearnPicker.languages, id: \.self) { value in
+                        Text(LocalizedStringKey(value.title))
+                            .tag(value)
+                    }
+                }
+                .navigationBarTitle("i_want_learn")
+            }
+            .foregroundColor(Color("colors/text"))
+            .onChange(of: viewModel.toLearnPicker.selection) { newLanguage in
+                self.viewModel.toLearnLanguageChanged()
             }
             
 #if DEBUG
@@ -95,7 +105,7 @@ struct MenuView: View {
             
             NavigationLink("about_team") {
                 TeamView()
-                    .navigationTitle("about_team")
+                    .navigationBarTitle("about_team")
             }
 
             openLinkButton(String(localized:"about_twitter"), url: "https://twitter.com/movappcz")
@@ -149,8 +159,7 @@ struct MenuView_Previews: PreviewProvider {
     static let onBoardingStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
     
     static var previews: some View {
-        MenuView(selectedLanguage: .csUk)
-            .environmentObject(languageStore)
+        MenuView(viewModel: MenuViewModel(selectedLanguage: .csUk, languageStore: languageStore))
             .environmentObject(teamDataStore)
             .environmentObject(onBoardingStore)
             .previewLayout(.sizeThatFits)

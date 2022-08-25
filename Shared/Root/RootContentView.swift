@@ -39,7 +39,7 @@ struct RootContentView: View {
                 ForChildrenView(selectedLanguage: languageStore.currentLanguage)
                     .setTabItem(RootItems.for_children)
                 
-                MenuView(selectedLanguage: languageStore.currentLanguage)
+                MenuView(viewModel: MenuViewModel(selectedLanguage: languageStore.currentLanguage, languageStore: languageStore))
                     .setTabItem(RootItems.settings)
             }
             

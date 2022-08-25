@@ -71,6 +71,7 @@
 		B0ECC14C2803431A00BF9898 /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14B2803431A00BF9898 /* Bundle+version.swift */; };
 		B0ECC1502803485B00BF9898 /* AlphabetShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */; };
 		B439F07228B64FEF002B270B /* OnBoardingToLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439F07128B64FEF002B270B /* OnBoardingToLearnView.swift */; };
+		B453C5D028B7A0C60015A815 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +189,7 @@
 		B453C5CC28B777040015A815 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B453C5CD28B7775E0015A815 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B453C5CE28B7775F0015A815 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				B01279CF27F872C3003FB72E /* MenuView.swift */,
+				B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */,
 				B08B0DF6281FD1D8000EAEF1 /* TeamView.swift */,
 			);
 			path = Menu;
@@ -622,6 +625,7 @@
 				B04021D02822E48700B756FB /* ScaleButtonStyle.swift in Sources */,
 				B04021C42822D43B00B756FB /* OnBoardingWelcomeView.swift in Sources */,
 				B0ECC1462802FDD200BF9898 /* AlphabetItem.swift in Sources */,
+				B453C5D028B7A0C60015A815 /* MenuViewModel.swift in Sources */,
 				B0ECC1502803485B00BF9898 /* AlphabetShortcutsView.swift in Sources */,
 				B01279D027F872C3003FB72E /* MenuView.swift in Sources */,
 				B01279A727F86957003FB72E /* RootContentView.swift in Sources */,

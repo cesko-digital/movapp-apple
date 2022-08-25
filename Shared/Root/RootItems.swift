@@ -30,7 +30,7 @@ enum RootItems: Int, Hashable {
         case .dictionary: return String(localized: "title_dictionary", comment: "TabBar dictionary")
         case .alphabet: return String(localized: "title_alphabet", comment: "TabBar alphabet")
         case .for_children: return String(localized: "title_children", comment: "TabBar For kids")
-        case .settings: return String(localized: "Settings", comment: "TabBar Menu")
+        case .settings: return String(localized: "settings", comment: "TabBar Menu")
         }
     }
 }

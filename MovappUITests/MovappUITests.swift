@@ -48,13 +48,16 @@ class MovappUITests: XCTestCase {
         app.setSeenOnBoarding(false)
         
         app.launch()
-        
-        app/*@START_MENU_TOKEN@*/.buttons["welcome-ukraine"]/*[[".buttons[\"Я хочу вивчити Чеський\"]",".buttons[\"welcome-ukraine\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+
+        app.buttons["welcome-ukrainian"].tap()
+        app.buttons["toLearn-czech"].tap()
         
         app.collectionViews["tutorial-tab-view"].swipeLeft()
         
         app/*@START_MENU_TOKEN@*/.buttons["welcome-go-start"]/*[[".buttons[\"Zpět\"]",".buttons[\"welcome-go-start\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app/*@START_MENU_TOKEN@*/.buttons["welcome-czech"]/*[[".buttons[\"Chci se naučit ukrajinsky\"]",".buttons[\"welcome-czech\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.buttons["on_boarding_back"].tap()
+
+        app.buttons["welcome-czech"].tap()
         
         
         app.collectionViews["tutorial-tab-view"].swipeLeft()

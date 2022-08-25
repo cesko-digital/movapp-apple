@@ -34,7 +34,7 @@ enum Languages: String {
         String(localized: "alphabet_\(self.translationKey)")
     }
 
-    private var translationKey: String {
+    var translationKey: String {
         switch self {
         case .cs: return "czech"
         case .uk: return "ukrainian"

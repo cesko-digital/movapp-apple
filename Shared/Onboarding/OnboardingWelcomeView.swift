@@ -36,6 +36,7 @@ struct OnBoardingWelcomeView: View {
                     OnBoardingWelcomeButton(language: item) {
                         onLanguageSelected(item)
                     }
+                    .accessibilityIdentifier("welcome-\(item.translationKey)")
                 }
             }
         }

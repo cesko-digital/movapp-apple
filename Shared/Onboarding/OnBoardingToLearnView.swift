@@ -36,6 +36,7 @@ struct OnBoardingToLearnView: View {
                         OnBoardingWelcomeButton(language: item) {
                             onLanguageSelected(item)
                         }
+                        .accessibilityIdentifier("toLearn-\(item.translationKey)")
                     }
                 }
                 Spacer()

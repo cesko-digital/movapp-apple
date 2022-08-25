@@ -11,11 +11,11 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
     @StateObject var viewModel: ViewModel
 
     @EnvironmentObject var onBoardingStore: OnBoardingStore
-    
+
     var body: some View {
-        
+
         NavigationView {
-            
+
             List {
                 settingsSection
                 projectSection
@@ -24,41 +24,35 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
-            .navigationBarTitle("settings")
+            .navigationTitle("settings")
         }
     }
     
     private var settingsSection: some View {
         Section {
-            // TODO: fix navigation title
+            // FIXME: navigation titles corrupts all other titles in Settings section.
             Picker("i_know", selection: $viewModel.nativePicker.selection) {
-                Group {
-                    ForEach(viewModel.nativePicker.languages, id: \.self) { value in
-                        Text(LocalizedStringKey(value.title))
-                            .tag(value)
-                    }
+                ForEach(viewModel.nativePicker.languages, id: \.self ) { value in
+                    Text(LocalizedStringKey(value.title))
+                        .tag(value)
                 }
-                .navigationBarTitle("i_know")
             }
             .foregroundColor(Color("colors/text"))
-            .onChange(of: viewModel.nativePicker.selection) { newLanguage in
+            .onChange(of: viewModel.nativePicker.selection) { _ in
                 self.viewModel.nativeLanguageChanged()
             }
 
             Picker("i_want_learn", selection: $viewModel.toLearnPicker.selection) {
-                Group {
-                    ForEach(viewModel.toLearnPicker.languages, id: \.self) { value in
-                        Text(LocalizedStringKey(value.title))
-                            .tag(value)
-                    }
+                ForEach(viewModel.toLearnPicker.languages, id: \.self ) { value in
+                    Text(LocalizedStringKey(value.title))
+                        .tag(value)
                 }
-                .navigationBarTitle("i_want_learn")
             }
             .foregroundColor(Color("colors/text"))
-            .onChange(of: viewModel.toLearnPicker.selection) { newLanguage in
+            .onChange(of: viewModel.toLearnPicker.selection) { _ in
                 self.viewModel.toLearnLanguageChanged()
             }
-            
+
 #if DEBUG
             if CommandLine.arguments.contains("allow-onboarding-reset") {
                 Button("Znova spustit on boarding") {
@@ -68,20 +62,19 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
                 }
             }
 #endif
-            
-            
+
         } header: {
             Image("logo")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
-            
+
             Text("settings")
         } footer: {
             Text("Ver: \(Bundle.main.appVersionLong) (\(Bundle.main.appBuild)) ")
         }
     }
-    
+
     func openLinkButton (_ title: String, url: String) -> some View {
         Button {
             openUrl(url)
@@ -98,14 +91,14 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
             }
         }
     }
-    
+
     private var projectSection: some View {
         Section {
             openLinkButton("movapp.cz", url: "https://movapp.cz")
-            
+
             NavigationLink("about_team") {
                 TeamView()
-                    .navigationBarTitle("about_team")
+                    .navigationTitle("about_team")
             }
 
             openLinkButton(String(localized:"about_twitter"), url: "https://twitter.com/movappcz")
@@ -117,7 +110,7 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
             Text("about_project", comment: "Settings")
         }
     }
-    
+
     private var appSection: some View {
         Section {
             openLinkButton(String(localized: "i_want_help"), url: "https://github.com/cesko-digital/movapp-apple")
@@ -127,12 +120,12 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
             Text("about_application")
         }
     }
-    
+
     private var partnerSection: some View {
         Section {
-            openLinkButton(String(localized: "about_stand_by_ukraine", comment: "Link"), url: "https://www.stojimezaukrajinou.cz/")
+            openLinkButton(String(localized: "about_stand_by_ukraine"), url: "https://www.stojimezaukrajinou.cz/")
             
-            openLinkButton(String(localized: "about_umapa", comment: "Link"), url: "https://www.umapa.eu/")
+            openLinkButton(String(localized: "about_umapa"), url: "https://www.umapa.eu/")
             
         } header: {
             Text("about_partners")
@@ -140,11 +133,10 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
     }
     
     private func openUrl(_ urlString: String)  {
-        
         guard let url = URL(string: urlString) else {
             return
         }
-        
+
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
@@ -157,7 +149,7 @@ struct MenuView_Previews: PreviewProvider {
     static let teamDataStore = TeamDataStore()
     static let languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore, forChildrenDataStore: ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore))
     static let onBoardingStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
-    
+
     static var previews: some View {
         MenuView(viewModel: MenuViewModel(selectedLanguage: .csUk, languageStore: languageStore))
             .environmentObject(teamDataStore)

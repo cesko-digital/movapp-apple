@@ -22,7 +22,7 @@ struct OnBoardingWelcomeButton: View {
                     .frame(width: 113.42, height: 74.31)
                     .shadow(color: .black.opacity(0.4), radius: 6, x: 0, y: 4)
 
-                Text(LocalizedStringKey(language.titleAccusative))
+                Text(LocalizedStringKey(language.title))
                     .foregroundColor(Color("colors/primary"))
                     .font(.system(size: 25))
             }

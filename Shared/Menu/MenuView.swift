@@ -30,27 +30,36 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
     
     private var settingsSection: some View {
         Section {
-            // FIXME: navigation titles corrupts all other titles in Settings section.
-            Picker("i_know", selection: $viewModel.nativePicker.selection) {
-                ForEach(viewModel.nativePicker.languages, id: \.self ) { value in
-                    Text(LocalizedStringKey(value.titleAccusative))
-                        .tag(value)
+            NavigationLink {
+                PickerView(selectedItem: viewModel.nativePicker.selection,
+                           items: viewModel.nativePicker.languages,
+                           titleKeyPath: \.title) { value in
+                    viewModel.nativePicker.selection = value
+                    viewModel.nativeLanguageChanged()
                 }
-            }
-            .foregroundColor(Color("colors/text"))
-            .onChange(of: viewModel.nativePicker.selection) { _ in
-                self.viewModel.nativeLanguageChanged()
+                           .navigationTitle("i_know")
+            } label: {
+                HStack {
+                    Text("i_know")
+                    Spacer()
+                    Text(LocalizedStringKey(viewModel.nativePicker.selection.title))
+                }
             }
 
-            Picker("i_want_learn", selection: $viewModel.toLearnPicker.selection) {
-                ForEach(viewModel.toLearnPicker.languages, id: \.self ) { value in
-                    Text(LocalizedStringKey(value.titleAccusative))
-                        .tag(value)
+            NavigationLink {
+                PickerView(selectedItem: viewModel.toLearnPicker.selection,
+                           items: viewModel.toLearnPicker.languages,
+                           titleKeyPath: \.titleAccusative) { value in
+                    viewModel.toLearnPicker.selection = value
+                    viewModel.toLearnLanguageChanged()
                 }
-            }
-            .foregroundColor(Color("colors/text"))
-            .onChange(of: viewModel.toLearnPicker.selection) { _ in
-                self.viewModel.toLearnLanguageChanged()
+                           .navigationTitle("i_want_learn")
+            } label: {
+                HStack {
+                    Text("i_want_learn")
+                    Spacer()
+                    Text(LocalizedStringKey(viewModel.toLearnPicker.selection.titleAccusative))
+                }
             }
 
 #if DEBUG

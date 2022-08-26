@@ -19,6 +19,7 @@ struct OnBoardingToLearnView: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             Button("on_boarding_back", action: onBack)
+                .frame(height: 44)
                 .accessibilityIdentifier("on_boarding_back")
                 .padding()
 

@@ -20,7 +20,7 @@ struct OnBoardingTutorialsPagerView: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
              
-            VStack {
+            ZStack(alignment: .bottom) {
                 TabView(selection: $selected) {
                     OnBoardingTutorialView(title: "on_boarding_info_0_title",
                                            subTitle: String(format: NSLocalizedString("on_boarding_info_0_description", comment: ""),
@@ -40,36 +40,45 @@ struct OnBoardingTutorialsPagerView: View {
                     .tag(3)
                 }
                 .onChange(of: selected, perform: { newValue in
-                    isLastIndexSelected = newValue == tabLastElementIndex
+                    withAnimation {
+                        isLastIndexSelected = newValue == tabLastElementIndex
+                    }
                 })
                 .tabViewStyle(.page)
-                .indexViewStyle(.page(backgroundDisplayMode: isLastIndexSelected ? .never : .always))
+                .indexViewStyle(.page(backgroundDisplayMode: .always))
                 .accessibilityIdentifier("tutorial-tab-view")
 
                 if isLastIndexSelected {
-                    Button("Start learning", action: onStart)
+                    Button("on_boarding_exit", action: start)
                         .buttonStyle(PrimaryButtonStyle())
-                        .frame(maxWidth: .infinity)
+                        .frame(maxWidth: .infinity, alignment: .bottom)
                         .padding()
                         .accessibilityIdentifier("start-learning-button")
                 }
             }
+
             HStack {
                 Button("on_boarding_back", action: onBack)
+                    .frame(height: 44)
                     .accessibilityIdentifier("welcome-go-start")
                     .padding()
 
                 Spacer()
 
                 if !isLastIndexSelected {
-                    Button("on_boarding_skip", action: onStart)
+                    Button("on_boarding_skip", action: start)
+                        .frame(height: 44)
                         .accessibilityIdentifier("start-learning-button")
                         .padding()
                 }
             }
         }
     }
-    
+
+    private func start() {
+        onStart()
+        selected = 0
+    }
 }
 
 struct OnBoardingTutorialsPagerView_Previews: PreviewProvider {

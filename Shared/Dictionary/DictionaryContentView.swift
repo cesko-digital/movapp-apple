@@ -65,8 +65,8 @@ struct DictionaryContentView: View {
                 
             } else {
                 Picker("Select phrases", selection: $view) {
-                    Text("Dictionary", comment: "Dictionary list").tag(DictionaryContentSubView.dictionary)
-                    Text("Favorites", comment: "Favorites list").tag(DictionaryContentSubView.favorites)
+                    Text("title_dictionary", comment: "Dictionary list").tag(DictionaryContentSubView.dictionary)
+                    Text("title_favorites", comment: "Favorites list").tag(DictionaryContentSubView.favorites)
                 }
                 .pickerStyle(.segmented)
                 .styleSubHeaderContent()

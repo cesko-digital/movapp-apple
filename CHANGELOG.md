@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Přidání podpory PL a SK
+
 ## [1.3.0, build 22] - 2022-05-31Z
 
 - Aktualizace abecedy / slovníčku na stav z 31.5 17:50

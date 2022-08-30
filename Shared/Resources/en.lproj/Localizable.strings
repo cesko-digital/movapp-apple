@@ -2,73 +2,58 @@
 "About the app" = "About the app";
 
 /* Menu */
-"About the project" = "About the project";
-
-/* TabBar A-Z */
-"Alphabet" = "Alphabet";
-
-/* TabBar dictionary */
-"Dictionary" = "Dictionary";
-
-/* TabBar For kids */
-"For Kids" = "For kids";
-
-/* (No Comment) */
-"I want to help" = "I want to help";
-
-/* (No Comment) */
-"language.cs-uk" = "Ukrainian";
-
-/* (No Comment) */
-"language.uk-cs" = "Czech";
-
-"language.cs" = "Czech";
-"language.uk" = "Ukrainian";
-
-/* No comment provided by engineer. */
-"language.cs-alphabet" = "Czech alphabet";
-
-/* No comment provided by engineer. */
-"language.uk-alphabet" = "Ukrainian alphabet";
-
-/* (No Comment) */
-"License" = "License";
-
-/* TabBar Menu */
-"Settings" = "Settings";
-
-/* (No Comment) */
-"Partner project" = "Partner projects";
-
-/* (No Comment) */
-"Settings" = "Settings";
-
-/* Link */
-"Stand by Ukraine" = "Stand by Ukraine";
-
-/* Link */
-"Umapa" = "Umapa";
-
-/* (No Comment) */
-"Want to learn" = "I want to learn";
-
-"Team" = "Team";
-
-"Back" = "Back";
-
-"Start learning" = "Start learning";
-"Choose language to learn" = "Choose language you want to learn";
-
-"boarding-1-title" = "Dictionary";
-"boarding-1-sub-title" = "Learn hundreds of basic words and phrases by reading and listening. We sort words according to life situations.";
-
-"boarding-2-title" = "For kids";
-"boarding-2-sub-title" = "Illustrated Ukrainian-Czech dictionary with dozens of printable cards.";
-
-"boarding-3-title" = "Ukrainian alphabet";
-"boarding-3-sub-title" = "Learn all the characters of the Ukrainian Cyrillic. Sample words will help you.";
-
-/* Boarding button select ukraine to czech */
-"boarding_ukrainian_to_czech" = "Я хочу вивчити чеську";
-/* Boarding button select czech to ukrainian */
-"boarding_czech_to_ukrainian" = "Chci se naučit ukrajinsky";
+"title_dictionary" = "Dictionary";
+"title_alphabet" = "Alphabet";
+"title_children" = "For kids";
+/* unused */
+"title_favorites" = "Favourites";
+"about_project" = "About the project";
+/* unused */
+"about_web" = "movapp.cz";
+"about_team" = "Team";
+"about_twitter" = "Twitter";
+"about_instagram" = "Instagram";
+"facebook" = "Facebook";
+"linkedin" = "LinkedIn";
+"about_application" = "About the app";
+"i_want_help" = "I want to help";
+"about_license" = "License";
+/* unused */
+"about_version" = "Version: %@ (%@)";
+"about_partners" = "Partner project";
+"about_stand_by_ukraine" = "Stand by Ukraine";
+"about_umapa" = "Umapa";
+"country_flag" = "country flag";
+"play_transcription" = "play transcription";
+"i_know" = "Native language";
+"i_want_learn" = "Want to learn";
+"settings" = "Settings";
+"ukrainian" = "Ukrainian";
+"czech" = "Czech";
+"slovak" = "Slovak";
+"polish" = "Polish";
+"alphabet_ukrainian" = "Ukrainian alphabet";
+"alphabet_czech" = "Czech alphabet";
+"alphabet_slovak" = "Slovak alphabet";
+"alphabet_polish" = "Polish alphabet";
+"search_word" = "Search for a word";
+/* unused */
+"title_settings" = "Settings";
+"on_boarding_welcome" = "Welcome to MOVAPP!";
+"on_boarding_choice_native" = "Choose the language you know";
+"on_boarding_choice" = "Choose the language you want to learn";
+"on_boarding_info_0_title" = "Excellent!";
+"on_boarding_info_0_description" = "Let\'s learn %@. The application can be used offline without internet connection.";
+"on_boarding_info_1_title" = "Dictionary";
+"on_boarding_info_1_description" = "Learn hundreds of basic words and phrases by reading and listening. We sort words according to life situations.";
+"on_boarding_info_2_title" = "Alphabet";
+"on_boarding_info_2_description" = "Learn all the characters of the Ukrainian Cyrillic. Sample words will help you.";
+"on_boarding_info_3_title" = "For kids";
+"on_boarding_skip" = "Skip";
+"on_boarding_back" = "Back";
+"on_boarding_exit" = "Start learning";
+"on_boarding_info_3_description" = "Illustrated bilingual dictionary with dozens of printable cards.";
+"czech_accusative" = "Czech";
+"ukrainian_accusative" = "Ukrainian";
+"polish_accusative" = "Polish";
+"slovak_accusative" = "Slovak";

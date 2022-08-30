@@ -7,20 +7,15 @@
 
 import SwiftUI
 
-struct MenuView: View {
-    @State var selectedLanguage: SetLanguage;
-    
-    @EnvironmentObject var languageStore: LanguageStore
+struct MenuView<ViewModel: MenuViewModeling>: View {
+    @StateObject var viewModel: ViewModel
+
     @EnvironmentObject var onBoardingStore: OnBoardingStore
-    
-    init (selectedLanguage: SetLanguage) {
-        self.selectedLanguage = selectedLanguage
-    }
-    
+
     var body: some View {
-        
+
         NavigationView {
-            
+
             List {
                 settingsSection
                 projectSection
@@ -29,26 +24,44 @@ struct MenuView: View {
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarHidden(true)
-            .navigationTitle("Settings")
+            .navigationTitle("settings")
         }
     }
     
     private var settingsSection: some View {
         Section {
-            
-            Picker("Want to learn", selection: $selectedLanguage) {
-                ForEach(SetLanguage.allCases, id: \.self) { value in
-                    Text(LocalizedStringKey(value.title))
-                        .tag(value)
+            NavigationLink {
+                PickerView(selectedItem: viewModel.nativePicker.selection,
+                           items: viewModel.nativePicker.languages,
+                           titleKeyPath: \.title) { value in
+                    viewModel.nativePicker.selection = value
+                    viewModel.nativeLanguageChanged()
                 }
-                .navigationTitle("Want to learn")
+                           .navigationTitle("i_know")
+            } label: {
+                HStack {
+                    Text("i_know")
+                    Spacer()
+                    Text(LocalizedStringKey(viewModel.nativePicker.selection.title))
+                }
             }
-            .foregroundColor(Color("colors/text"))
-            .onChange(of: selectedLanguage) { newLanguage in
-                
-                languageStore.currentLanguage = newLanguage
+
+            NavigationLink {
+                PickerView(selectedItem: viewModel.toLearnPicker.selection,
+                           items: viewModel.toLearnPicker.languages,
+                           titleKeyPath: \.titleAccusative) { value in
+                    viewModel.toLearnPicker.selection = value
+                    viewModel.toLearnLanguageChanged()
+                }
+                           .navigationTitle("i_want_learn")
+            } label: {
+                HStack {
+                    Text("i_want_learn")
+                    Spacer()
+                    Text(LocalizedStringKey(viewModel.toLearnPicker.selection.titleAccusative))
+                }
             }
-            
+
 #if DEBUG
             if CommandLine.arguments.contains("allow-onboarding-reset") {
                 Button("Znova spustit on boarding") {
@@ -58,20 +71,19 @@ struct MenuView: View {
                 }
             }
 #endif
-            
-            
+
         } header: {
             Image("logo")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: .infinity)
-            
-            Text("Settings")
+
+            Text("settings")
         } footer: {
             Text("Ver: \(Bundle.main.appVersionLong) (\(Bundle.main.appBuild)) ")
         }
     }
-    
+
     func openLinkButton (_ title: String, url: String) -> some View {
         Button {
             openUrl(url)
@@ -88,53 +100,52 @@ struct MenuView: View {
             }
         }
     }
-    
+
     private var projectSection: some View {
         Section {
             openLinkButton("movapp.cz", url: "https://movapp.cz")
-            
-            NavigationLink("Team") {
+
+            NavigationLink("about_team") {
                 TeamView()
-                    .navigationTitle("Team")
+                    .navigationTitle("about_team")
             }
-            
-            openLinkButton("Twitter", url: "https://twitter.com/movappcz")
-            openLinkButton("Facebook", url: "https://www.facebook.com/movappcz")
-            openLinkButton("Instagram", url: "https://www.instagram.com/movappcz/")
-            openLinkButton("LinkedIn", url: "https://www.linkedin.com/company/movapp-cz")
-            
+
+            openLinkButton(String(localized:"about_twitter"), url: "https://twitter.com/movappcz")
+            openLinkButton(String(localized:"facebook"), url: "https://www.facebook.com/movappcz")
+            openLinkButton(String(localized:"about_instagram"), url: "https://www.instagram.com/movappcz/")
+            openLinkButton(String(localized:"linkedin"), url: "https://www.linkedin.com/company/movapp-cz")
+
         } header: {
-            Text("About the project", comment: "Settings")
+            Text("about_project", comment: "Settings")
         }
     }
-    
+
     private var appSection: some View {
         Section {
-            openLinkButton(String(localized: "I want to help"), url: "https://github.com/cesko-digital/movapp-apple")
+            openLinkButton(String(localized: "i_want_help"), url: "https://github.com/cesko-digital/movapp-apple")
             
-            openLinkButton(String(localized: "License"), url: "https://github.com/cesko-digital/movapp-apple/blob/main/LICENSE")
+            openLinkButton(String(localized: "about_license"), url: "https://github.com/cesko-digital/movapp-apple/blob/main/LICENSE")
         } header: {
-            Text("About the app")
+            Text("about_application")
         }
     }
-    
+
     private var partnerSection: some View {
         Section {
-            openLinkButton(String(localized: "Stand by Ukraine", comment: "Link"), url: "https://www.stojimezaukrajinou.cz/")
+            openLinkButton(String(localized: "about_stand_by_ukraine"), url: "https://www.stojimezaukrajinou.cz/")
             
-            openLinkButton(String(localized: "Umapa", comment: "Link"), url: "https://www.umapa.eu/")
+            openLinkButton(String(localized: "about_umapa"), url: "https://www.umapa.eu/")
             
         } header: {
-            Text("Partner project")
+            Text("about_partners")
         }
     }
     
     private func openUrl(_ urlString: String)  {
-        
         guard let url = URL(string: urlString) else {
             return
         }
-        
+
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
@@ -147,11 +158,12 @@ struct MenuView_Previews: PreviewProvider {
     static let teamDataStore = TeamDataStore()
     static let languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore, forChildrenDataStore: ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore))
     static let onBoardingStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
-    
+
     static var previews: some View {
-        MenuView(selectedLanguage: .csUk)
-            .environmentObject(languageStore)
+        MenuView(viewModel: MenuViewModel(selectedLanguage: .csUk, languageStore: languageStore))
             .environmentObject(teamDataStore)
             .environmentObject(onBoardingStore)
+            .previewLayout(.sizeThatFits)
+            .frame(height: 950)
     }
 }

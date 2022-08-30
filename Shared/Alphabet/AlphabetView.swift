@@ -11,24 +11,24 @@ import Introspect
 struct AlphabetView: View {
     @EnvironmentObject var dataStore: AlphabetDataStore
     
-    let selectedLanguage: SetLanguage
+    private let selectedLanguage: SetLanguage
     
     @State private var selectedAlphabet: Languages
     
-    let languages: [Languages]
-    
+    private let languages: [Languages]
+
     init (selectedLanguage: SetLanguage) {
         self.selectedLanguage = selectedLanguage
-        
+
         let languagesList = [
             selectedLanguage.language.main,
             selectedLanguage.language.source
         ]
-        
+
         // Always show the alphabet of a language im learning
         languages = selectedLanguage.flipFromWithTo ? languagesList : languagesList.reversed()
-        
-        selectedAlphabet = languages.first!
+
+        self.selectedAlphabet = languages.first!
     }
     
     var body: some View {
@@ -75,7 +75,7 @@ struct AlphabetView: View {
     }
     
     var errorOrLoadView: some View {
-        // Allign middle
+        // Align middle
         VStack {
             Spacer()
             if let error = dataStore.error {

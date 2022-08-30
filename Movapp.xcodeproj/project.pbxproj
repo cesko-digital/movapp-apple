@@ -21,7 +21,7 @@
 		B01279A727F86957003FB72E /* RootContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012799627F86954003FB72E /* RootContentView.swift */; };
 		B01279A927F86957003FB72E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B012799727F86957003FB72E /* Assets.xcassets */; };
 		B01279C627F870BF003FB72E /* RootItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279C527F870BF003FB72E /* RootItems.swift */; };
-		B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279C927F872A9003FB72E /* DicitionaryView.swift */; };
+		B01279CA27F872A9003FB72E /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279C927F872A9003FB72E /* DictionaryView.swift */; };
 		B01279D027F872C3003FB72E /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279CF27F872C3003FB72E /* MenuView.swift */; };
 		B01279D327F872CB003FB72E /* ForChildrenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279D227F872CB003FB72E /* ForChildrenView.swift */; };
 		B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01279D527F872D2003FB72E /* AlphabetView.swift */; };
@@ -70,6 +70,9 @@
 		B0ECC1482802FF2500BF9898 /* AlphabetExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */; };
 		B0ECC14C2803431A00BF9898 /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14B2803431A00BF9898 /* Bundle+version.swift */; };
 		B0ECC1502803485B00BF9898 /* AlphabetShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */; };
+		B40177F028B8F30D000374D2 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40177EF28B8F30D000374D2 /* PickerView.swift */; };
+		B439F07228B64FEF002B270B /* OnBoardingToLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439F07128B64FEF002B270B /* OnBoardingToLearnView.swift */; };
+		B453C5D028B7A0C60015A815 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +126,7 @@
 		B012799C27F86957003FB72E /* Movapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01279A427F86957003FB72E /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		B01279C527F870BF003FB72E /* RootItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootItems.swift; sourceTree = "<group>"; };
-		B01279C927F872A9003FB72E /* DicitionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicitionaryView.swift; sourceTree = "<group>"; };
+		B01279C927F872A9003FB72E /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
 		B01279CF27F872C3003FB72E /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		B01279D227F872CB003FB72E /* ForChildrenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenView.swift; sourceTree = "<group>"; };
 		B01279D527F872D2003FB72E /* AlphabetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetView.swift; sourceTree = "<group>"; };
@@ -182,6 +185,13 @@
 		B0ECC14A28033A9E00BF9898 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		B0ECC14B2803431A00BF9898 /* Bundle+version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+version.swift"; sourceTree = "<group>"; };
 		B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetShortcutsView.swift; sourceTree = "<group>"; };
+		B40177EF28B8F30D000374D2 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		B439F07128B64FEF002B270B /* OnBoardingToLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoardingToLearnView.swift; path = Shared/Onboarding/OnBoardingToLearnView.swift; sourceTree = SOURCE_ROOT; };
+		B453C5CB28B777030015A815 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B453C5CC28B777040015A815 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B453C5CD28B7775E0015A815 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B453C5CE28B7775F0015A815 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,7 +323,7 @@
 				B01279CE27F872BB003FB72E /* Menu */,
 				B01279CD27F872B4003FB72E /* ForChildren */,
 				B01279CC27F872AC003FB72E /* Alphabet */,
-				B01279C827F8729C003FB72E /* Dicitionary */,
+				B01279C827F8729C003FB72E /* Dictionary */,
 				B01279C427F87086003FB72E /* Root */,
 				B012799527F86954003FB72E /* MovappApp.swift */,
 				B0C9F40927FCBF5500B075EB /* Launch Screen.storyboard */,
@@ -348,11 +358,11 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
-		B01279C827F8729C003FB72E /* Dicitionary */ = {
+		B01279C827F8729C003FB72E /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
 				250E55E528072591004511EC /* Dictionary+UIExamples.swift */,
-				B01279C927F872A9003FB72E /* DicitionaryView.swift */,
+				B01279C927F872A9003FB72E /* DictionaryView.swift */,
 				B0E140E227FCE24F008BBBB4 /* DictionaryHeaderView.swift */,
 				B00D1B2427F9999C0073611C /* DictionaryContentView.swift */,
 				B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */,
@@ -362,7 +372,7 @@
 				B087C89427F8B46A0015E54B /* PhrasesView.swift */,
 				B00D1B2D27F9DEC20073611C /* TranslationView.swift */,
 			);
-			path = Dicitionary;
+			path = Dictionary;
 			sourceTree = "<group>";
 		};
 		B01279CC27F872AC003FB72E /* Alphabet */ = {
@@ -389,7 +399,9 @@
 			isa = PBXGroup;
 			children = (
 				B01279CF27F872C3003FB72E /* MenuView.swift */,
+				B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */,
 				B08B0DF6281FD1D8000EAEF1 /* TeamView.swift */,
+				B40177EF28B8F30D000374D2 /* PickerView.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -405,10 +417,11 @@
 			isa = PBXGroup;
 			children = (
 				B04021C72822D46700B756FB /* OnBoardingRootView.swift */,
-				B04021C32822D43B00B756FB /* OnBoardingWelcomeView.swift */,
-				B04021C52822D44F00B756FB /* OnBoardingWelcomeButton.swift */,
+				B439F07128B64FEF002B270B /* OnBoardingToLearnView.swift */,
 				B04021CB2822D6E300B756FB /* OnBoardingTutorialsPagerView.swift */,
 				B04021C92822D6C600B756FB /* OnBoardingTutorialView.swift */,
+				B04021C52822D44F00B756FB /* OnBoardingWelcomeButton.swift */,
+				B04021C32822D43B00B756FB /* OnBoardingWelcomeView.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -570,6 +583,8 @@
 				uk,
 				cs,
 				Base,
+				pl,
+				sk,
 			);
 			mainGroup = B012798F27F86954003FB72E;
 			packageReferences = (
@@ -613,12 +628,14 @@
 				B04021D02822E48700B756FB /* ScaleButtonStyle.swift in Sources */,
 				B04021C42822D43B00B756FB /* OnBoardingWelcomeView.swift in Sources */,
 				B0ECC1462802FDD200BF9898 /* AlphabetItem.swift in Sources */,
+				B453C5D028B7A0C60015A815 /* MenuViewModel.swift in Sources */,
 				B0ECC1502803485B00BF9898 /* AlphabetShortcutsView.swift in Sources */,
 				B01279D027F872C3003FB72E /* MenuView.swift in Sources */,
 				B01279A727F86957003FB72E /* RootContentView.swift in Sources */,
 				B087C89527F8B46A0015E54B /* PhrasesView.swift in Sources */,
 				B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */,
 				B0ECC1402802FC6F00BF9898 /* AlphabetItemView.swift in Sources */,
+				B439F07228B64FEF002B270B /* OnBoardingToLearnView.swift in Sources */,
 				B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */,
 				B066546C27FB7D3C002D5EDD /* Language.swift in Sources */,
 				B068833627FF92E300E6B831 /* DictionaryDataStore.swift in Sources */,
@@ -634,13 +651,14 @@
 				B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */,
 				B08B0DF5281FD0F2000EAEF1 /* Team.swift in Sources */,
 				5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */,
+				B40177F028B8F30D000374D2 /* PickerView.swift in Sources */,
 				B05FB5F228269834002AA6DE /* OnBoardingStore.swift in Sources */,
 				250E55E628072591004511EC /* Dictionary+UIExamples.swift in Sources */,
 				250E55E4280723E0004511EC /* Languages.swift in Sources */,
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
 				B0ECC1482802FF2500BF9898 /* AlphabetExample.swift in Sources */,
 				25A2397F2808883400750977 /* PhrasesFavoritesProvider.swift in Sources */,
-				B01279CA27F872A9003FB72E /* DicitionaryView.swift in Sources */,
+				B01279CA27F872A9003FB72E /* DictionaryView.swift in Sources */,
 				B04021CE2822E27000B756FB /* PrimaryButtonStyle.swift in Sources */,
 				B0ECC14C2803431A00BF9898 /* Bundle+version.swift in Sources */,
 				B0E140E327FCE24F008BBBB4 /* DictionaryHeaderView.swift in Sources */,
@@ -696,6 +714,8 @@
 				B087C88827F8A3BD0015E54B /* en */,
 				B05FF13D27F9F19F0046D636 /* cs */,
 				B0EC5AA4281ABC88008747D4 /* uk */,
+				B453C5CB28B777030015A815 /* pl */,
+				B453C5CD28B7775E0015A815 /* sk */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -705,6 +725,8 @@
 			children = (
 				B0EC5AA1281ABB8A008747D4 /* cs */,
 				B0EC5AA3281ABB90008747D4 /* en */,
+				B453C5CC28B777040015A815 /* pl */,
+				B453C5CE28B7775F0015A815 /* sk */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

@@ -12,7 +12,7 @@ enum Languages: String {
     case uk = "uk"
     case pl = "pl"
     case sk = "sk"
-    
+
     var flag: Flags {
         switch(self) {
         case .cs:
@@ -25,13 +25,27 @@ enum Languages: String {
             return Flags.sk
         }
     }
-    
+
     var title: String {
-        return String(localized: "language.\(self.rawValue)")
+        String(localized: "\(self.translationKey)")
     }
-    
+
+    var titleAccusative: String {
+        "\(self.translationKey)_accusative"
+    }
+
     var alphabetTitle: String {
-        return String("language.\(self.rawValue)-alphabet")
-        
+        String(localized: "alphabet_\(self.translationKey)")
     }
+
+    var translationKey: String {
+        switch self {
+        case .cs: return "czech"
+        case .uk: return "ukrainian"
+        case .pl: return "polish"
+        case .sk: return "slovak"
+        }
+    }
+
+    static let allCases: [Languages] = [.uk, .sk, .cs, .pl]
 }

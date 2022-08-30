@@ -7,38 +7,87 @@
 
 import SwiftUI
 
-
+enum OnboardingState {
+    case nativeLanguage
+    case toLearnLanguage
+    case onboarding
+}
 
 struct OnBoardingRootView: View {
     
     @EnvironmentObject var languageStore: LanguageStore
     @EnvironmentObject var onBoardingStore: OnBoardingStore
     
-    @State var setLanguage: SetLanguage?
-    
+    @State private var selectedToLearnLanguage: Languages?
+    @State private var selectedNativeLanguage: Languages?
+    @State var state: OnboardingState = .nativeLanguage
+
     var body: some View {
-        
-        if let setLanguage = self.setLanguage {
-            OnBoardingTutorialsPagerView  {
-                withAnimation {
-                    self.setLanguage = nil
-                }
-            } onStart: {
-                withAnimation {
-                    
-                    languageStore.currentLanguage = setLanguage
-                    onBoardingStore.isBoardingCompleted.toggle()
-                    
-                    self.setLanguage = nil
-                }
-            }
-        } else {
-            OnBoardingWelcomeView { language in
-                withAnimation {
-                    self.setLanguage = language
-                }
+        Group {
+            switch state {
+            case .nativeLanguage:
+                initialOnboardingState()
+            case .toLearnLanguage:
+                toLearLanguageView()
+            case .onboarding:
+                onboardingView()
             }
         }
+    }
+
+    private func initialOnboardingState() -> some View {
+        OnBoardingWelcomeView { language in
+            withAnimation {
+                self.selectedNativeLanguage = language
+                self.state = language == .uk ? .toLearnLanguage : .onboarding
+            }
+        }
+    }
+
+    private func toLearLanguageView() -> some View {
+        OnBoardingToLearnView(
+            onLanguageSelected: { language in
+                withAnimation {
+                    self.selectedToLearnLanguage = language
+                    self.state = .onboarding
+                }
+            },
+            onBack: {
+                withAnimation {
+                    self.selectedToLearnLanguage = nil
+                    self.state = .nativeLanguage
+                }
+            }
+        )
+    }
+
+    private func onboardingView() -> some View {
+        guard let selectedNativeLanguage = selectedNativeLanguage else {
+            fatalError("You must select your native language first.")
+        }
+
+        return OnBoardingTutorialsPagerView(
+            selectedToLearnLanguage: selectedToLearnLanguage ?? .uk,
+            onBack: {
+                withAnimation {
+                    let nextState: OnboardingState = selectedToLearnLanguage == nil ? .nativeLanguage : .toLearnLanguage
+                    self.selectedToLearnLanguage = nil
+                    self.state = nextState
+                }
+            },
+            onStart: {
+                languageStore.currentLanguage = getSetLanguage(nativeLanguage: selectedNativeLanguage, toLearnLanguage: selectedToLearnLanguage)
+                onBoardingStore.isBoardingCompleted.toggle()
+            }
+        )
+    }
+
+    private func getSetLanguage(nativeLanguage: Languages, toLearnLanguage: Languages?) -> SetLanguage {
+        guard let toLearnLanguage = toLearnLanguage else {
+            return SetLanguage(language: Language(main: nativeLanguage, source: .uk), flipFromWithTo: false)
+        }
+
+        return SetLanguage(language: Language(main: toLearnLanguage, source: nativeLanguage), flipFromWithTo: true)
     }
 }
 
@@ -50,6 +99,14 @@ struct OnBoardingRootView_Previews: PreviewProvider {
     
     static var previews: some View {
         OnBoardingRootView()
+            .environmentObject(languageStore)
+            .environmentObject(onBoardingStore)
+
+        OnBoardingRootView(state: .toLearnLanguage)
+            .environmentObject(languageStore)
+            .environmentObject(onBoardingStore)
+
+        OnBoardingRootView(state: .onboarding)
             .environmentObject(languageStore)
             .environmentObject(onBoardingStore)
         

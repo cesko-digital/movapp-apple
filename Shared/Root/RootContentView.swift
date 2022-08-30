@@ -30,7 +30,7 @@ struct RootContentView: View {
         ZStack(alignment: .top) {
             
             TabView {
-                DicitionaryView(selectedLanguage: languageStore.currentLanguage)
+                DictionaryView(selectedLanguage: languageStore.currentLanguage)
                     .setTabItem(RootItems.dictionary)
                 
                 AlphabetView(selectedLanguage: languageStore.currentLanguage)
@@ -39,7 +39,7 @@ struct RootContentView: View {
                 ForChildrenView(selectedLanguage: languageStore.currentLanguage)
                     .setTabItem(RootItems.for_children)
                 
-                MenuView(selectedLanguage: languageStore.currentLanguage)
+                MenuView(viewModel: MenuViewModel(selectedLanguage: languageStore.currentLanguage, languageStore: languageStore))
                     .setTabItem(RootItems.settings)
             }
             

@@ -19,3 +19,16 @@ jobs:
         run: |
           bundle install
           bundle exec fastlane build
+
+  tests:
+    runs-on: macos-latest
+    env:
+      MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+      MATCH_GIT_PRIVATE_KEY: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}
+      APP_STORE_API_KEY: ${{ secrets.APP_STORE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build & Upload
+        run: |
+          bundle install
+          bundle exec fastlane tests

@@ -22,7 +22,7 @@ jobs:
 
   screenshots:
     runs-on: macos-latest
-    timeout-minutes: 40
+    timeout-minutes: 120
     env:
       MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
       MATCH_GIT_PRIVATE_KEY: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}

@@ -33,7 +33,7 @@ struct RootContentView: View {
                 DictionaryView(selectedLanguage: languageStore.currentLanguage)
                     .setTabItem(RootItems.dictionary)
                 
-                AlphabetView(selectedLanguage: languageStore.currentLanguage)
+                AlphabetView(viewModel: AlphabetViewModel(dataStore: AlphabetDataStore(), languageStore: languageStore))
                     .setTabItem(RootItems.alphabet)
                 
                 ForChildrenView(selectedLanguage: languageStore.currentLanguage)
@@ -59,7 +59,6 @@ struct ContentView_Previews: PreviewProvider {
     static let dictionaryDataStore = DictionaryDataStore()
     static let favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
     static let favoritesProvider = PhrasesFavoritesProvider(favoritesService: favoritesService)
-    static let alphabetDataStore = AlphabetDataStore()
     static let forChildrenDataStore = ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore)
     static let teamDataStore = TeamDataStore()
     static let languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore, forChildrenDataStore: forChildrenDataStore)
@@ -70,7 +69,6 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(favoritesService)
             .environmentObject(favoritesProvider)
             .environmentObject(dictionaryDataStore)
-            .environmentObject(alphabetDataStore)
             .environmentObject(forChildrenDataStore)
             .environmentObject(languageStore)
             .environmentObject(teamDataStore)

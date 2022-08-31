@@ -72,6 +72,7 @@
 		B0ECC1502803485B00BF9898 /* AlphabetShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */; };
 		B40177F028B8F30D000374D2 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40177EF28B8F30D000374D2 /* PickerView.swift */; };
 		B439F07228B64FEF002B270B /* OnBoardingToLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439F07128B64FEF002B270B /* OnBoardingToLearnView.swift */; };
+		B441606028BFD6A200DAE4A5 /* AlphabetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441605F28BFD6A200DAE4A5 /* AlphabetViewModel.swift */; };
 		B453C5D028B7A0C60015A815 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -187,6 +188,7 @@
 		B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetShortcutsView.swift; sourceTree = "<group>"; };
 		B40177EF28B8F30D000374D2 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		B439F07128B64FEF002B270B /* OnBoardingToLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoardingToLearnView.swift; path = Shared/Onboarding/OnBoardingToLearnView.swift; sourceTree = SOURCE_ROOT; };
+		B441605F28BFD6A200DAE4A5 /* AlphabetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetViewModel.swift; sourceTree = "<group>"; };
 		B453C5CB28B777030015A815 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B453C5CC28B777040015A815 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B453C5CD28B7775E0015A815 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				B01279D527F872D2003FB72E /* AlphabetView.swift */,
 				B0ECC13F2802FC6F00BF9898 /* AlphabetItemView.swift */,
 				B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */,
+				B441605F28BFD6A200DAE4A5 /* AlphabetViewModel.swift */,
 			);
 			path = Alphabet;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				B068833627FF92E300E6B831 /* DictionaryDataStore.swift in Sources */,
 				B076F0982806011500C1F88F /* CardView.swift in Sources */,
 				B04021C62822D44F00B756FB /* OnBoardingWelcomeButton.swift in Sources */,
+				B441606028BFD6A200DAE4A5 /* AlphabetViewModel.swift in Sources */,
 				B066546E27FB7E0C002D5EDD /* SetLanguage.swift in Sources */,
 				B08B0DF7281FD1D8000EAEF1 /* TeamView.swift in Sources */,
 				B03B1BC828186E2E005C62C3 /* PlayButtonView.swift in Sources */,

@@ -7,53 +7,31 @@
 
 import SwiftUI
 
-class AlphabetDataStore: ObservableObject {
-    
-   // TODO load all at once? Cache?
-    
-    @Published var loading: Bool = false
-    
-    var alphabet: Alphabet?
-    var error: String? // TODO enum?
-    
-    func reset () {
-        alphabet = nil
-        error = nil
-        loading = false
-    }
-    
-    func load(language: SetLanguage, alphabet: Languages)  {
-        
-        if loading {
-            return
-        }
-        
-        loading = true
-        
+class AlphabetDataStore {
+
+    func load(with language: SetLanguage, alphabet: Languages) throws -> Alphabet  {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-        
-        // Always build the oposite
+
+        // Always build the opposite
         let to = language.language.source == alphabet ? language.language.main : language.language.source
-        
-        do {
-            let fileName = "data/\(alphabet)-\(to)-alphabet"
-            guard let asset = NSDataAsset(name:  fileName) else {
-                error = "Invalid data file name"
-                loading = false
-                return
-            }
-            
-            let data = asset.data
-            
-            self.alphabet = try decoder.decode(Alphabet.self, from: data)
-            
-        } catch {
-            print("Failed to load alphabet \(error)")
-            self.error = error.localizedDescription
+
+        let fileName = "data/\(alphabet)-\(to)-alphabet"
+        guard let asset = NSDataAsset(name:  fileName) else {
+            throw MissingAssetError("Invalid data file name")
         }
-        
-        loading = false
+
+        let data = asset.data
+
+        return try decoder.decode(Alphabet.self, from: data)
     }
 }
 
+struct MissingAssetError: Error {
+
+    let message: String
+
+    init(_ message: String) {
+        self.message = message
+    }
+}

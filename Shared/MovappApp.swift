@@ -11,7 +11,6 @@ import SwiftUI
 struct MovappApp: App {
     
     let dictionaryDataStore = DictionaryDataStore()
-    let alphabetDataStore = AlphabetDataStore()
     let forChildrenDataStore: ForChildrenDataStore
     let userDefaultsStore = UserDefaultsStore()
     let teamDataStore = TeamDataStore()
@@ -50,7 +49,6 @@ struct MovappApp: App {
                     .environmentObject(favoritesService)
                     .environmentObject(favoritesProvider)
                     .environmentObject(dictionaryDataStore)
-                    .environmentObject(alphabetDataStore)
                     .environmentObject(forChildrenDataStore)
                     .environmentObject(teamDataStore)
                     .environmentObject(onBoardingDataStore)

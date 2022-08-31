@@ -10,7 +10,7 @@ import AVFoundation
 import UIKit
 
 struct Playback {
-    let soundIdOrText: String
+    let soundId: String
     let languageOrDirectory: String
 }
 
@@ -36,7 +36,7 @@ class SoundService: NSObject, ObservableObject {
             return false
         }
         
-        return currentPlayback.soundIdOrText.compare(id) == .orderedSame
+        return currentPlayback.soundId.compare(id) == .orderedSame
     }
     
     func isPlaying(translation: Dictionary.Phrase.Translation) -> Bool {
@@ -74,25 +74,17 @@ class SoundService: NSObject, ObservableObject {
      Plays given sound in assets (only for small sizes)
      */
     func play (_ id: String, inDirectory: String) {
-        playbackPipe.append(Playback(soundIdOrText: id, languageOrDirectory: inDirectory))
+        playbackPipe.append(Playback(soundId: id, languageOrDirectory: inDirectory))
         
         stopAndPlayNext()
     }
-    
-    
-    // https://developer.apple.com/documentation/avfoundation/speech_synthesis#overview
-//    private func speach(language: Languages, text: String) {
-//        playbackPipe.append(Playback(type: .speaking, soundIdOrText: text, languageOrDirectory: language.rawValue))
-//
-//        stopAndPlayNext()
-//    }
-    
+
     private func tryToPlayNext () {
         guard let currentPlayback = getCurrentPlayback() else {
             return
         }
 
-        playSound(currentPlayback.soundIdOrText, inDirectory: currentPlayback.languageOrDirectory)
+        playSound(currentPlayback.soundId, inDirectory: currentPlayback.languageOrDirectory)
     }
 
     

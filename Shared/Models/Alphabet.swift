@@ -9,13 +9,15 @@ import Foundation
 
 
 struct Alphabet: Decodable {
+    static let example = Alphabet(items: [.example], cleanItems: [.example])
+
     enum CodingKeys: CodingKey {
         case data, language
     }
     
     let items: [AlphabetItem]
     /**
-        A list of AlphabetItem without diactritic
+        A list of AlphabetItem without diacritic
      */
     let cleanItems: [AlphabetItem];
     
@@ -41,6 +43,11 @@ struct Alphabet: Decodable {
             }
         }
         
+        self.cleanItems = cleanItems
+    }
+
+    private init(items: [AlphabetItem], cleanItems: [AlphabetItem]) {
+        self.items = items
         self.cleanItems = cleanItems
     }
 }

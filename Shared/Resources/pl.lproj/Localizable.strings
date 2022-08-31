@@ -42,6 +42,7 @@
 "on_boarding_info_0_title" = "Świetnie!";
 "on_boarding_info_0_description" = "Będziemy się uczyć %@. Z aplikacji możesz korzystać też offline, jeśli nie masz połączenia z internetem.";
 "on_boarding_skip" = "Pomiń";
+"on_boarding_back" = "Plecy";
 "on_boarding_choice_native" = "Wybierz język, którym umiesz się posługiwać";
 "czech_accusative" = "czeskiego";
 "ukrainian_accusative" = "ukraińskiego";

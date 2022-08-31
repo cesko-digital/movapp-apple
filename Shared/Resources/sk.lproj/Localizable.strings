@@ -41,6 +41,7 @@
 "on_boarding_info_0_title" = "Výborne!";
 "on_boarding_info_0_description" = "Poďme sa učiť po %@. Aplikáciu môžete používať aj offline pokiaľ nie ste pripojený k internetu.";
 "on_boarding_skip" = "Preskočiť";
+"on_boarding_back" = "Späť";
 "on_boarding_choice_native" = "Vyberte jazyk, ktorým hovoríte";
 "on_boarding_info_3_description" = "Ilustrovaný dvojjazyčný slovníček s desiatkami kariet pre deti.";
 "czech_accusative" = "česky";

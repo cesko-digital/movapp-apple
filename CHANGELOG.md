@@ -2,6 +2,7 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Odebrání Apple TTS přehrávání
 - Přidání podpory PL a SK
 
 ## [1.3.0, build 22] - 2022-05-31Z

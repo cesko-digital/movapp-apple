@@ -2,7 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
-- Nastavení encryption pro Appstore connect. 
+- Nastavení encryption pro Appstore connect.
+- Oprava chyby u abecedy po přepínání jazyků 
 
 ## [1.4.0, build 26] - 2022-08-31Z
 

@@ -2,6 +2,12 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Nastavení encryption pro Appstore connect. 
+
+## [1.4.0, build 26] - 2022-08-31Z
+
+- Oprava abecedy
+
 ## [1.4.0, build 24] - 2022-08-31Z
 
 - Odebrání Apple TTS přehrávání

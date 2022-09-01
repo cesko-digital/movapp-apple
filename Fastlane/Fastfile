@@ -93,7 +93,7 @@ lane :upload do
     build_number = get_build_number()
 
     # Update changelog with the version number and release date
-    changelog = read_changelog(section_identifier: "#{version_number}, build #{build_number}")
+    changelog = read_changelog(section_identifier: "[#{version_number}, build #{build_number}]")
 
     upload_to_testflight(changelog: changelog, distribute_only: true, distribute_external: true, groups: 'Movapp Testers')
 end

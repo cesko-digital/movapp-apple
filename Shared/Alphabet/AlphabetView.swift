@@ -5,24 +5,29 @@
 //  Created by Martin Kluska on 02.04.2022.
 //
 
-import SwiftUI
+import Combine
 import Introspect
+import SwiftUI
 
 struct AlphabetView<ViewModel: AlphabetViewModeling>: View {
     @StateObject var viewModel: ViewModel
     
     var body: some View {
-        Group {
-            switch viewModel.state {
-            case .loading:
-                loadingView
-            case .error(let message):
-                errorView(message: message)
-            case .loaded(let content):
-                loadedContent(content: content)
+        VStack {
+            Group {
+                switch viewModel.state {
+                case .loading:
+                    loadingView
+                case .error(let message):
+                    errorView(message: message)
+                case .loaded(let content):
+                    loadedContent(content: content)
+                }
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("colors/item"))
+        .onAppear(perform: viewModel.viewAppeared.send)
     }
 
     func loadedContent(content: [AlphabetContent]) -> some View {
@@ -76,8 +81,8 @@ struct AlphabetView<ViewModel: AlphabetViewModeling>: View {
 struct AlphabetView_Previews: PreviewProvider {
     class MockViewModel: AlphabetViewModeling {
         var state: AlphabetState
-
         var selectedAlphabet: Languages
+        let viewAppeared = PassthroughSubject<Void, Never>()
 
         init(state: AlphabetState, selectedAlphabet: Languages) {
             self.state = state

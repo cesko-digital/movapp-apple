@@ -1,13 +1,22 @@
 {
   "sections": [
     {
-      "name": "Vývoj Apple aplikace",
+      "name": {
+        "cs": "Vývoj Apple aplikace",
+        "pl": "Tworzenie aplikacji Apple",
+        "uk": "Розробка додатку для Apple",
+        "sk": "Vývoj Apple aplikácie",
+        "en": "iOS development"
+      },
       "members": [
         {
           "name": "Martin Kluska"
         },
         {
-          "name": "Daryna Polevyk"
+          "name": "Jakub Růžička"
+        },
+        {
+          "name": "Daryna Meliš"
         },
         {
           "name": "Radek Pištělák"
@@ -15,7 +24,13 @@
       ]
     },
     {
-      "name": "Vývoj Android aplikace",
+      "name": {
+        "cs": "Vývoj Android aplikace",
+        "pl": "Rozwój aplikacji na Androida",
+        "uk": "Розробка додатку для Android",
+        "sk": "Vývoj Android aplikácie",
+        "en": "Android development"
+      },
       "members": [
         {
           "name": "Václav Chlumský"
@@ -26,7 +41,13 @@
       ]
     },
     {
-      "name": "Vývoj webu",
+      "name": {
+        "cs": "Vývoj webu",
+        "pl": "Tworzenie stron internetowych",
+        "uk": "Веб-розробка",
+        "sk": "Vývoj webu",
+        "en": "Web development"
+      },
       "members": [
         {
           "name": "Oleg Antonyak"
@@ -49,7 +70,13 @@
       ]
     },
     {
-      "name": "Vedení projektu",
+      "name": {
+        "cs": "Vedení projektu",
+        "pl": "Zarządzanie projektem",
+        "uk": "Управління проектом",
+        "sk": "Vedenie projektu",
+        "en": "Leadership"
+      },
       "members": [
         {
           "name": "Martin Hassman"
@@ -63,7 +90,13 @@
       ]
     },
     {
-      "name": "Marketing",
+      "name": {
+        "cs": "Marketing",
+        "pl": "Marketing",
+        "uk": "Маркетинг",
+        "sk": "Marketing",
+        "en": "Marketing"
+      },
       "members": [
         {
           "name": "Kateřina Strakošová"
@@ -76,11 +109,20 @@
         },
         {
           "name": "Lenka Kolisnyk"
+        },
+        {
+          "name": "Monika Fabryová"
         }
       ]
     },
     {
-      "name": "Tvorba obsahu",
+      "name": {
+        "cs": "Tvorba obsahu",
+        "pl": "Tworzenie treści",
+        "uk": "Створення контенту",
+        "sk": "Tvorba obsahu",
+        "en": "Content creation"
+      },
       "members": [
         {
           "name": "Tereza Javornická"
@@ -112,7 +154,13 @@
       ]
     },
     {
-      "name": "UX tým",
+      "name": {
+        "cs": "UX tým",
+        "pl": "Zespół UX",
+        "uk": "Команда UX",
+        "sk": "UX tím",
+        "en": "UX team"
+      },
       "members": [
         {
           "name": "Valeriia Kuna"
@@ -123,7 +171,13 @@
       ]
     },
     {
-      "name": "Testování",
+      "name": {
+        "cs": "Testování",
+        "pl": "Testowanie",
+        "uk": "Тестування",
+        "sk": "Testovanie",
+        "en": "Testing"
+      },
       "members": [
         {
           "name": "Anna Popelková"
@@ -140,7 +194,13 @@
       ]
     },
     {
-      "name": "Děkujeme týmu z České spořitelny",
+      "name": {
+        "cs": "Děkujeme týmu z České spořitelny",
+        "pl": "Podziękowania dla zespołu Česká spořitelna",
+        "uk": "Дякуємо команді банку Česká spořitelna",
+        "sk": "Ďakujeme tímu z Českej sporiteľne",
+        "en": "Thank you to the team from Česká spořitelna"
+      },
       "members": [
         {
           "name": "Ema Dolejšková"

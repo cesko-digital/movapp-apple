@@ -57,7 +57,7 @@ struct DictionaryView: View {
     }
     
     var errorOrLoadView: some View {
-        // Allign middle
+        // Align middle
         VStack {
             Spacer()
             if let error = dataStore.error{

@@ -16,6 +16,8 @@ protocol MenuViewModeling: ObservableObject {
     var nativePicker: PickerState { get set }
     var toLearnPicker: PickerState { get set }
 
+    var selectedLanguage: SetLanguage { get }
+
     func nativeLanguageChanged()
     func toLearnLanguageChanged()
 }
@@ -23,6 +25,10 @@ protocol MenuViewModeling: ObservableObject {
 class MenuViewModel: MenuViewModeling {
     @Published var nativePicker: PickerState
     @Published var toLearnPicker: PickerState
+
+    var selectedLanguage: SetLanguage {
+        languageStore.currentLanguage
+    }
 
     let languageStore: LanguageStore
 

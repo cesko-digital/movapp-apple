@@ -24,7 +24,7 @@ struct AlphabetShortcutsView: View {
                         .font(.system(size: 11).bold())
                         .foregroundColor(.accentColor)
                         .padding(.leading, 2)
-                        .frame(width: 20, alignment: .center)
+                        .frame(width: 24, alignment: .center)
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .background(dragObserver(item: item))

@@ -28,7 +28,7 @@ struct Team: Decodable {
         }
         
         var id = UUID()
-        let name: String
+        let name: [String: String]
         let members: [Member]
     }
     

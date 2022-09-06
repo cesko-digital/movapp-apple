@@ -11,7 +11,13 @@ struct TeamView: View {
     
     @EnvironmentObject var dataStore: TeamDataStore
     @EnvironmentObject var onBoardingDataStore: OnBoardingStore
-    
+
+    private let languageKey: String
+
+    init(selectedLanguage: SetLanguage) {
+        self.languageKey = selectedLanguage.language.main.rawValue
+    }
+
     var body: some View {
         
         if let team = dataStore.team {
@@ -22,7 +28,7 @@ struct TeamView: View {
                             Text(member.name)
                         }
                     } header: {
-                        Text(section.name)
+                        Text(section.name[languageKey] ?? "Default value")
                     }
                 }
             }
@@ -33,7 +39,7 @@ struct TeamView: View {
     }
     
     var errorOrLoadView: some View {
-        // Allign middle
+        // Align middle
         VStack {
             Spacer()
             if let error = dataStore.error {
@@ -53,9 +59,9 @@ struct TeamView: View {
 struct TeamView_Previews: PreviewProvider {
     static let dataStore = TeamDataStore()
     static let onBoardingStore = OnBoardingStore(userDefaultsStore: UserDefaultsStore())
-    
+
     static var previews: some View {
-        TeamView()
+        TeamView(selectedLanguage: .csUk)
             .environmentObject(dataStore)
             .environmentObject(onBoardingStore)
     }

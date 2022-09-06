@@ -106,7 +106,7 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
             openLinkButton("movapp.cz", url: "https://movapp.cz")
 
             NavigationLink("about_team") {
-                TeamView()
+                TeamView(selectedLanguage: viewModel.selectedLanguage)
                     .navigationTitle("about_team")
             }
 

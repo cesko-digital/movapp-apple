@@ -67,6 +67,8 @@ class AlphabetViewModel: AlphabetViewModeling {
     private func load(selectedLanguage: SetLanguage) {
         if self.selectedLanguage == selectedLanguage, case .loaded(let content) = state, !content.isEmpty { return }
 
+        self.selectedLanguage = selectedLanguage
+
         let languagesList = [
             selectedLanguage.language.main,
             selectedLanguage.language.source

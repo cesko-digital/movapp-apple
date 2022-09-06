@@ -79,6 +79,8 @@ struct AlphabetView<ViewModel: AlphabetViewModeling>: View {
 }
 
 struct AlphabetView_Previews: PreviewProvider {
+    static let soundService = SoundService()
+
     class MockViewModel: AlphabetViewModeling {
         var state: AlphabetState
         var selectedAlphabet: Languages
@@ -92,7 +94,10 @@ struct AlphabetView_Previews: PreviewProvider {
     
     static var previews: some View {
         AlphabetView(viewModel: MockViewModel(state: .loading, selectedAlphabet: .uk))
+            .environmentObject(soundService)
         AlphabetView(viewModel: MockViewModel(state: .error("Not loaded content"), selectedAlphabet: .uk))
+            .environmentObject(soundService)
         AlphabetView(viewModel: MockViewModel(state: .loaded([AlphabetContent(language: .uk, alphabet: .example), AlphabetContent(language: .cs, alphabet: .example)]), selectedAlphabet: .uk))
+            .environmentObject(soundService)
     }
 }

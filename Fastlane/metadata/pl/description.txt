@@ -1,11 +1,11 @@
 Mова [mova] to znaczy po ukraińsku język. Celem Movapp jest ułatwienie komunikacji między Polakami i Ukraińcami podczas obecnego kryzysu humanitarnego.
 
 Movapp przydaje się w różnych sytuacjach, takich jak...
-dowiedz się, jak wygląda i czym różni się alfabet ukraiński od polskiego
-wymiana informacji z nauczycielem/nauczycielką w szkole i przedszkolu
-komunikacja w przychodni lekarskiej
-dogadanie sie na urzędzie pracy
-... i w różnych innych przypadkach
+• dowiedz się, jak wygląda i czym różni się alfabet ukraiński od polskiego
+• wymiana informacji z nauczycielem/nauczycielką w szkole i przedszkolu
+• komunikacja w przychodni lekarskiej
+• dogadanie sie na urzędzie pracy
+• ... i w różnych innych przypadkach
 
 Dlaczego warto korzystać z naszej aplikacji?
 

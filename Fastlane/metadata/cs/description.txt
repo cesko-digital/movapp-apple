@@ -1,4 +1,4 @@
-Potřebujete se naučit česky nebo ukrajinsky? Mова [mova] znamená ukrajinsky jazyk. Cílem Movapp.cz je usnadnit dorozumění mezi Čechy a Ukrajinci během současné humanitární krize. 
+Mова [mova] znamená ukrajinsky jazyk. Cílem Movapp.cz je usnadnit dorozumění mezi Čechy a Ukrajinci během současné humanitární krize. 
 
 Jsme tu pro případy, když potřebujete…
 • zjistit, jak vypadá česká nebo ukrajinská abeceda
@@ -8,10 +8,12 @@ Jsme tu pro případy, když potřebujete…
 • …řešit další podobné situace
 
 Proč používat naši aplikaci?
+
 Protože aplikace funguje bez připojení k internetu. Ve slovníku najdete více než 1000 komunikačních frází v češtině a ukrajinštině, přizpůsobených dle životních situací (doktor, škola, úřad práce…). Sekce pro děti obsahuje slovníček s obrázky, aby bylo učení pro děti zábavné. Naučte se všechny znaky ukrajinské cyrilice -  pomohou vám ukázková slova.
 
 Na co se můžete těšit v dalších verzích?
-Přidání zvuku u ukrajinských frází, vytváření nástrojů pro jejich procvičování. Budujeme rozcestník s dalšími materiály, které vám pomohou s učením ukrajinštiny a češtiny.
+
+Procvičování frází. Rozcestník s materiály, které vám pomohou s učením ukrajinštiny a češtiny.
 
 Za vývojem této aplikace stojí tým dobrovolníků z Čech, Ukrajiny, Polska a Slovenska.
 

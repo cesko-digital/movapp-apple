@@ -1,0 +1,19 @@
+Мова (mova) zanamená v ukrajinčine jazyk. Cieľom Movapp je zjednodušiť dorozumievanie sa medzi Slovákmi a Ukrajincami počas súčasnej humanitárnej krízy.
+
+ Sme tu pre prípady kedy potrebujete….
+vyriešiť situáciu s učiteľkou v škole, škôlke
+dohovoriť sa u lekára
+zájsť na úrad práce
+riešiť podobné situácie
+
+Prečo používať našu aplikáciu?
+
+Pretože funguje bez pripojenia k internetu. V slovníku nájdete vyše 1000 komunikačných fráz v slovenčine a ukrajinčine, prispôsobených životným situáciám (lekár, škola, úrad práce a podobne). Sekcia pre deti obsahuje slovníček s obrázkami, aby bolo učenie pre deti zábavné. Naučte sa všetky znaky ukrajinskej cyriliky- pomôžu vám ukážkové slová.
+
+Na čo sa môžete tešiť v novších verziách?
+
+Precvičovanie fráz. Rázcestník s materiálmi, ktoré vám pomôžu s učením sa ukrajinčiny a slovenčiny.
+
+Za vývojom tejto aplikácie stojí tím dobrovoľníkov zo Slovenska, Česka, Poľska a Ukrajiny.
+
+Movapp je k dispozícií zdarma a je vytvorený ako otvorený software pod licenciou MIT. To znamená, že ho môžete zdarma nielen používať, ale taktiež si ho upraviť a následne šíriť ďalej.

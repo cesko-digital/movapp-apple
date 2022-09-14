@@ -1,7 +1,6 @@
 Do you need to learn Czech or Ukrainian? Mова [mova] means language in Ukrainian. The idea behind Movapp.cz is to ease communication between Czechs and Ukrainians during the current humanitarian crisis.
 
 We are here if you need to…
-
 • learn what the Czech and Ukrainian alphabets look like
 • solve a situation with your kid’s teacher in a play group or at school
 • make an appointment with a doctor
@@ -9,13 +8,11 @@ We are here if you need to…
 • … solve other similar problems
 
 Why use our application?
-
 The application works even offline. You will find more than 1,000 communication phrases in both Czech and Ukrainian sorted according to real-life situations (doctor, school, the job center…). The children’s section contains vocabulary followed-up by pictures which makes learning fun. Try and learn all the characters of Ukrainian Cyrillic - example words will help you.
 
 What can you look for in the future?
+We will add a recording of each of the Ukrainian phrases and create tools to help you learn them. In addition, we are working on a guide to the other materials that will help you with learning both Ukrainian and Czech.
 
-Learning tools, guide with the materials that will help you with learning both Ukrainian and Czech.
-
-The application is being developed by a team of volunteers from the Czech Republic, Ukraine, Poland and Slovakia.
+The application is being developed by a team of volunteers from the Czech Republic, Ukraine, Poland, and Slovakia.
 
 Movapp is available for free and is created as open-source software under the MIT license. This means that you can not just use it for free, but adapt it and share the result. 

@@ -1,0 +1,20 @@
+Mова [mova] to znaczy po ukraińsku język. Celem Movapp jest ułatwienie komunikacji między Polakami i Ukraińcami podczas obecnego kryzysu humanitarnego.
+
+Movapp przydaje się w różnych sytuacjach, takich jak...
+dowiedz się, jak wygląda i czym różni się alfabet ukraiński od polskiego
+wymiana informacji z nauczycielem/nauczycielką w szkole i przedszkolu
+komunikacja w przychodni lekarskiej
+dogadanie sie na urzędzie pracy
+... i w różnych innych przypadkach
+
+Dlaczego warto korzystać z naszej aplikacji?
+
+Ponieważ aplikacja działa bez połączenia z internetem. W słowniku znajdziesz ponad 1000 zwrotów w języku polskim i ukraińskim, dostosowanych do sytuacji życiowych (lekarz, szkoła, urząd pracy...). Sekcja dla dzieci zawiera słownik obrazkowy, dzięki któremu nauka jest dla dzieci prostsza i zabawna. Naucz się wszystkich ukraińskich znaków cyrylicy - pomogą Ci słowa przykładowe.
+
+Czego możesz się spodziewać w przyszłości?
+
+Ćwiczenie zwrotów. Poradnik z materiałami ułatwiającymi naukę języka ukraińskiego i polskiego.
+
+Za rozwojem tej aplikacji stoi zespół wolontariuszy z Czech, Ukrainy, Polski i Słowacji.
+
+Movapp jest dostępny za darmo i jest tworzony jako otwarte oprogramowanie na licencji MIT. Oznacza to, że możesz nie tylko używać go za darmo, ale także modyfikować i dalej rozpowszechniać wyniki.

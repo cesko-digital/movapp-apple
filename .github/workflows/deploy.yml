@@ -7,7 +7,7 @@ on:
 
 jobs:
   app_store:
-    runs-on: macos-latest
+    runs-on: macos-12
     timeout-minutes: 40
     env:
       MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
@@ -21,7 +21,7 @@ jobs:
           bundle exec fastlane upload
 
   screenshots:
-    runs-on: macos-latest
+    runs-on: macos-12
     timeout-minutes: 120
     env:
       MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}

@@ -11,11 +11,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run fastlane
         run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
           bundle install
           bundle exec fastlane bump_version
-    
-      - name: Push changes
-        run: |
-            git config user.name 'github-actions[bot]'
-            git config user.email 'github-actions[bot]@users.noreply.github.com'
-            git push --tags
+          git push --tags

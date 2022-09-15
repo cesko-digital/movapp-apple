@@ -5,17 +5,14 @@ on:
 
 jobs:
   release:
-    name: Tag new minor versions
+    name: Tag new minor version
     runs-on: macos-12
     steps:
       - uses: actions/checkout@v2
       - name: Run fastlane
         run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
           bundle install
           bundle exec fastlane release
-    
-      - name: Push changes
-        run: |
-            git config user.name 'github-actions[bot]'
-            git config user.email 'github-actions[bot]@users.noreply.github.com'
-            git push --tags
+          git push --tags

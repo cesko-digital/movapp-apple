@@ -15,4 +15,4 @@ jobs:
           git config user.email 'github-actions[bot]@users.noreply.github.com'
           bundle install
           bundle exec fastlane bump_version
-          git push --tags
+          git push origin --follow-tags

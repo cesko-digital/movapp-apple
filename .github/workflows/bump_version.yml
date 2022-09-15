@@ -1,18 +1,18 @@
-name: Release
+name: Bump version
 
 on:
   workflow_dispatch:
 
 jobs:
-  release:
-    name: Tag new minor versions
+  bump_version:
+    name: Create new major version
     runs-on: macos-12
     steps:
       - uses: actions/checkout@v2
       - name: Run fastlane
         run: |
           bundle install
-          bundle exec fastlane release
+          bundle exec fastlane bump_version
     
       - name: Push changes
         run: |

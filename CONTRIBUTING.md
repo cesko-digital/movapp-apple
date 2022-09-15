@@ -24,13 +24,33 @@ Během vývoje přidávejte informace o novinkách do souboru `CHANGELOG.md` do 
 
 Pak vyrobíte nový release přes **Github Actions** nebo Fastlane:
 
+#### Strategie
+
+> Aktálně main větev není chráněna z důvodu umožnění push práv pro github actions.
+
+- Změny provádějte nad masterem
+- Vždy používejte rebase strategii
+- Aktualizujte `CHANGELOG.md`
+- Vytvořte pull request
+- Po schválení použijte `squash` strategii nebo lokálně si rebasněte commity do "hezčích" komitů
+- Nad main spustě příkazy níže pomocí Github Actions
+
+
+#### Nová testovací verze
+
+[Github Actions](https://github.com/cesko-digital/movapp-apple/actions/workflows/release.yml)
+
 ```
 bundle exec fastlane release
 ```
 
 Tohle zvýší číslo buildu, aktualizuje changelog, commitne všechno do repa a otaguje release.
 
+#### Nová hlavní verze
+
 Pokud chcete zvýšit marketingové číslo verze, dělá se to takhle:
+
+[Github Actions](https://github.com/cesko-digital/movapp-apple/actions/workflows/bump_version.yml)
 
 ```
 bundle exec fastlane bump_version

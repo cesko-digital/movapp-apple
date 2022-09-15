@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: Tag new minor versions
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run fastlane
+        run: |
+          bundle install
+          bundle exec fastlane release
+    
+      - name: Push changes
+        run: |
+            git config user.name 'github-actions[bot]'
+            git config user.email 'github-actions[bot]@users.noreply.github.com'
+            git push --tags
+  
+  bump_version:
+    name: Create new major version
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run fastlane
+        run: |
+          bundle install
+          bundle exec fastlane bump_version
+    
+      - name: Push changes
+        run: |
+            git config user.name 'github-actions[bot]'
+            git config user.email 'github-actions[bot]@users.noreply.github.com'
+            git push --tags

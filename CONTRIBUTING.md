@@ -22,7 +22,7 @@ bundle exec fastlane match development --readonly
 
 Během vývoje přidávejte informace o novinkách do souboru `CHANGELOG.md` do sekce `[Unreleased]`. Pokud v ní před releasem ještě něco chybí, doplňte a commitněte.
 
-Pak vyrobíte nový release přes Fastlane:
+Pak vyrobíte nový release přes **Github Actions** nebo Fastlane:
 
 ```
 bundle exec fastlane release

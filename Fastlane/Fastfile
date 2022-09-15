@@ -95,6 +95,11 @@ lane :upload do
     # Update changelog with the version number and release date
     changelog = read_changelog(section_identifier: "[#{version_number}, build #{build_number}]")
 
+    # Will fail if changelog is empty
+    if changelog === '' || changelog === nil then
+       changelog = 'No changelog provided'
+    end
+
     upload_to_testflight(changelog: changelog, distribute_only: true, distribute_external: true, groups: 'Movapp Testers')
 end
 
@@ -110,6 +115,7 @@ lane :screenshots do
     capture_screenshots
     
     upload_to_app_store(
+        app_identifier: "cz.movapp.app",
         username: "apple-code-signing@cesko.digital",
         team_id: "8495ZSK6A6",
         api_key: api_key,

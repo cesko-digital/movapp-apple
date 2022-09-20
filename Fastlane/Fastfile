@@ -100,7 +100,7 @@ lane :upload do
        changelog = 'No changelog provided'
     end
 
-    upload_to_testflight(changelog: changelog, distribute_only: true, distribute_external: true, groups: 'Movapp Testers')
+    upload_to_testflight(changelog: changelog, distribute_only: true, distribute_external: true, groups: 'Movapp Testers', app_version: version_number, build_number: build_number)
 end
 
 lane :screenshots do
@@ -124,6 +124,7 @@ lane :screenshots do
         skip_metadata: false,
         skip_screenshots: false,
         overwrite_screenshots: true,
+        automatic_release: false,
         skip_binary_upload: true
     )
 end

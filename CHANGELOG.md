@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.4.0, build 31] - 2022-09-20Z
+
 - Úprava textů pro Appstore
 
 ## [1.4.0, build 28] - 2022-09-15Z

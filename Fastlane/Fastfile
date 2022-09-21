@@ -136,3 +136,20 @@ end
 lane :tests do
   run_tests(scheme: "MovappUITests")
 end
+
+lane :check_metadata do
+    api_key = app_store_connect_api_key(
+        key_id: "84CT4W68YN",
+        issuer_id: "3870b8f8-0b22-4ca2-9156-487be7cb55a0",
+        key_content: ENV["APP_STORE_API_KEY"],
+        duration: 1200,
+        in_house: false
+    )
+    
+    precheck(
+        api_key: api_key,
+        app_identifier: "cz.movapp.app",
+        username: "apple-code-signing@cesko.digital",
+        team_id: "8495ZSK6A6"
+    )
+end

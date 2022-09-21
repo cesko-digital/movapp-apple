@@ -9,9 +9,11 @@ on:
 jobs:
   precheck:
     runs-on: macos-12
+    env:
+      APP_STORE_API_KEY: ${{ secrets.APP_STORE_API_KEY }}
     steps:
       - uses: actions/checkout@v2
       - name: Build
         run: |
           bundle install
-          bundle exec fastlane precheck api_key:${{ secrets.APP_STORE_API_KEY }}
+          bundle exec fastlane check_metadata

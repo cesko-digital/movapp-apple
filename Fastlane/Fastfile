@@ -148,6 +148,7 @@ lane :check_metadata do
     
     precheck(
         api_key: api_key,
-        app_identifier: "cz.movapp.app"
+        app_identifier: "cz.movapp.app",
+        include_in_app_purchases: false
     )
 end

@@ -13,7 +13,7 @@ jobs:
       APP_STORE_API_KEY: ${{ secrets.APP_STORE_API_KEY }}
     steps:
       - uses: actions/checkout@v2
-      - name: Build
+      - name: check metadata
         run: |
           bundle install
           bundle exec fastlane check_metadata

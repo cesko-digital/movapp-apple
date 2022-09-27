@@ -25,7 +25,6 @@ final class LanguageStore: ObservableObject {
         } else {
             currentLanguage = Locale.current.languageCode == "uk" ? .ukCs : .csUk
         }
-        
     }
     
     @Published var currentLanguage: SetLanguage {
@@ -37,7 +36,5 @@ final class LanguageStore: ObservableObject {
             
             userDefaultsStore.storeLanguage(currentLanguage)
         }
-        
-        
     }
 }

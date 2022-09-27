@@ -1,5 +1,5 @@
 //
-//  DicitionaryView.swift
+//  DictionaryView.swift
 //  Movapp
 //
 //  Created by Martin Kluska on 02.04.2022.
@@ -20,6 +20,9 @@ struct DictionaryView: View {
     var body: some View {
         VStack (spacing: 0) {
             DictionaryHeaderView(searchString: $searchString)
+                .onChange(of: selectedLanguage) { newValue in
+                    selectedCategory = nil
+                }
                 .onChange(of: searchString) { newValue in
                     // Search only in
                     // This forces header view to hide header
@@ -36,7 +39,7 @@ struct DictionaryView: View {
                     phrases: dictionary.phrases,
                     selectedCategory: $selectedCategory
                 )
-                
+
             } else {
                 errorOrLoadView
             }
@@ -74,7 +77,7 @@ struct DictionaryView: View {
     }
 }
 
-struct DicitionaryView_Previews: PreviewProvider {
+struct DictionaryView_Previews: PreviewProvider {
     static let dataStore = DictionaryDataStore()
     
     static var previews: some View {

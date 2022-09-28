@@ -17,7 +17,8 @@ struct PhraseView: View {
     }
     
     @EnvironmentObject var favoritesService: PhraseFavoritesService
-    
+    @Environment(\.horizontalSizeClass) var sizeClass
+
     let language: SetLanguage
     let phrase: Dictionary.Phrase
     
@@ -48,16 +49,24 @@ struct PhraseView: View {
         
         ZStack (alignment: .leading) {
             
-            VStack (alignment: .leading, spacing: spacing) {
+            AdaptiveStack(horizontalAlignment: .leading, verticalAlignment: .top, spacing: spacing) {
                 
                 TranslationView(
                     language: displayablePhrase.languageMain,
                     translation: displayablePhrase.main
                 )
-                
-                Rectangle()
-                    .fill(Color("colors/inactive"))
-                    .frame(height: 1)
+
+                if sizeClass == .compact {
+                    Rectangle()
+                        .fill(Color("colors/inactive"))
+                        .frame(height: 1)
+                } else {
+                    Spacer()
+                    Rectangle()
+                        .fill(Color("colors/inactive"))
+                        .frame(width: 1)
+                    Spacer()
+                }
                 
                 TranslationView(
                     language: displayablePhrase.languageSource,

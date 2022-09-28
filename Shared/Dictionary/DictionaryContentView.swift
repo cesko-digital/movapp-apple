@@ -127,6 +127,7 @@ struct DictionaryContentView_Previews: PreviewProvider {
         .environmentObject(soundService)
         .environmentObject(favoritesService)
         .environmentObject(favoritesProvider)
+        .previewDisplayName("Categories")
         
         DictionaryContentView(
             searchString: "",
@@ -138,5 +139,6 @@ struct DictionaryContentView_Previews: PreviewProvider {
         .environmentObject(soundService)
         .environmentObject(favoritesService)
         .environmentObject(favoritesProvider)
+        .previewDisplayName("Phrases")
     }
 }

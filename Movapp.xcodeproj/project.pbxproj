@@ -74,6 +74,7 @@
 		B439F07228B64FEF002B270B /* OnBoardingToLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439F07128B64FEF002B270B /* OnBoardingToLearnView.swift */; };
 		B441606028BFD6A200DAE4A5 /* AlphabetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441605F28BFD6A200DAE4A5 /* AlphabetViewModel.swift */; };
 		B453C5D028B7A0C60015A815 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */; };
+		B4AAA85D28E47A730061F9F6 /* AdaptiveStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,6 +195,7 @@
 		B453C5CD28B7775E0015A815 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B453C5CE28B7775F0015A815 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -468,12 +470,13 @@
 		B076F0962805FD7700C1F88F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */,
 				B076F0972806011500C1F88F /* CardView.swift */,
 				B03B1BC728186E2E005C62C3 /* PlayButtonView.swift */,
-				B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */,
 				B0065D0D28319D3300EE84D8 /* PlayTranslationButtonView.swift */,
 				B04021CD2822E27000B756FB /* PrimaryButtonStyle.swift */,
 				B04021CF2822E48700B756FB /* ScaleButtonStyle.swift */,
+				B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -678,6 +681,7 @@
 				B0ECC1442802FDCC00BF9898 /* Alphabet.swift in Sources */,
 				B08B0DF9281FD49B000EAEF1 /* TeamDataStore.swift in Sources */,
 				B0E140E127FCE1DD008BBBB4 /* PhraseFavoritesService.swift in Sources */,
+				B4AAA85D28E47A730061F9F6 /* AdaptiveStack.swift in Sources */,
 				B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */,
 				B0E140DC27FCCF2F008BBBB4 /* PhraseMatchService.swift in Sources */,
 				B00D1B2E27F9DEC20073611C /* TranslationView.swift in Sources */,
@@ -882,9 +886,12 @@
 				PRODUCT_NAME = Movapp;
 				PROVISIONING_PROFILE_SPECIFIER = "match Development cz.movapp.app";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -915,9 +922,12 @@
 				PRODUCT_NAME = Movapp;
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore cz.movapp.app";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

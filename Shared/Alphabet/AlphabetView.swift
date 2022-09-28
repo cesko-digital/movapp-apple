@@ -11,6 +11,8 @@ import SwiftUI
 
 struct AlphabetView<ViewModel: AlphabetViewModeling>: View {
     @StateObject var viewModel: ViewModel
+
+    private let gridLayout: [GridItem] = [GridItem(.adaptive(minimum: 375))]
     
     var body: some View {
         VStack {
@@ -50,7 +52,7 @@ struct AlphabetView<ViewModel: AlphabetViewModeling>: View {
                 ForEach(Array(content.enumerated()), id: \.offset) { _, item in
                     ScrollViewReader { proxy in
                         ScrollView(showsIndicators: false) {
-                            LazyVStack (spacing: 10) {
+                            LazyVGrid(columns: gridLayout, alignment: .center) {
                                 ForEach(item.alphabet.items, id: \.id) { item in
                                     AlphabetItemView(item: item, language: viewModel.selectedAlphabet)
                                 }
@@ -95,9 +97,12 @@ struct AlphabetView_Previews: PreviewProvider {
     static var previews: some View {
         AlphabetView(viewModel: MockViewModel(state: .loading, selectedAlphabet: .uk))
             .environmentObject(soundService)
+            .previewDisplayName("Loading")
         AlphabetView(viewModel: MockViewModel(state: .error("Not loaded content"), selectedAlphabet: .uk))
             .environmentObject(soundService)
+            .previewDisplayName("Error")
         AlphabetView(viewModel: MockViewModel(state: .loaded([AlphabetContent(language: .uk, alphabet: .example), AlphabetContent(language: .cs, alphabet: .example)]), selectedAlphabet: .uk))
             .environmentObject(soundService)
+            .previewDisplayName("Loaded")
     }
 }

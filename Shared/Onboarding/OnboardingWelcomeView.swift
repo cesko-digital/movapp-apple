@@ -12,7 +12,7 @@ import SwiftUI
 struct OnBoardingWelcomeView: View {
     let onLanguageSelected: (_ language: Languages) -> Void
 
-    private let gridLayout: [GridItem] = [GridItem(.adaptive(minimum: 113.42)), GridItem(.adaptive(minimum: 113.42))]
+    private let gridLayout: [GridItem] = [GridItem(.fixed(140)), GridItem(.fixed(140))]
 
     var body: some View {
         VStack {
@@ -55,6 +55,12 @@ struct OnBoardingWelcomeView_Previews: PreviewProvider {
         OnBoardingWelcomeView { language in
             print(language)
         }
-        .previewDevice(PreviewDevice(rawValue: "iPhone SE 3rd generation)"))
+        .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
+
+        OnBoardingWelcomeView { language in
+            print(language)
+        }
+        .previewDevice("iPad Air (5th generation)")
+        .previewDisplayName("iPad Air (5th generation)")
     }
 }

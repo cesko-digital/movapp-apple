@@ -13,7 +13,7 @@ struct OnBoardingToLearnView: View {
     let onLanguageSelected: (_ language: Languages) -> Void
     let onBack: () -> Void
 
-    private let gridLayout: [GridItem] = [GridItem(.adaptive(minimum: 113.42)), GridItem(.adaptive(minimum: 113.42))]
+    private let gridLayout: [GridItem] = [GridItem(.fixed(140)), GridItem(.fixed(140))]
     private let languagesToSelect = Languages.allCases.filter { $0 != .uk }
 
     var body: some View {
@@ -60,6 +60,13 @@ struct OnBoardingToLearnView_Previews: PreviewProvider {
             onLanguageSelected: { _ in },
             onBack: {}
         )
-        .previewDevice(PreviewDevice(rawValue: "iPhone SE 3rd generation)"))
+        .previewDevice(PreviewDevice(rawValue: "iPhone SE (3rd generation)"))
+
+        OnBoardingToLearnView(
+            onLanguageSelected: { _ in },
+            onBack: {}
+        )
+        .previewDevice("iPad Air (5th generation)")
+        .previewDisplayName("iPad Air (5th generation)")
     }
 }

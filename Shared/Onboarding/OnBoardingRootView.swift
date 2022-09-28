@@ -9,17 +9,15 @@ import SwiftUI
 
 enum OnboardingState {
     case nativeLanguage
-    case toLearnLanguage
-    case onboarding
+    case toLearnLanguage(native: Languages)
+    case onboarding(native: Languages, toLearn: Languages)
 }
 
 struct OnBoardingRootView: View {
     
     @EnvironmentObject var languageStore: LanguageStore
     @EnvironmentObject var onBoardingStore: OnBoardingStore
-    
-    @State private var selectedToLearnLanguage: Languages?
-    @State private var selectedNativeLanguage: Languages?
+
     @State var state: OnboardingState = .nativeLanguage
 
     var body: some View {
@@ -27,10 +25,10 @@ struct OnBoardingRootView: View {
             switch state {
             case .nativeLanguage:
                 initialOnboardingState()
-            case .toLearnLanguage:
-                toLearLanguageView()
-            case .onboarding:
-                onboardingView()
+            case let .toLearnLanguage(native):
+                toLearLanguageView(native: native)
+            case let .onboarding(native, toLearn):
+                onboardingView(native: native, toLearn: toLearn)
             }
         }
     }
@@ -38,52 +36,44 @@ struct OnBoardingRootView: View {
     private func initialOnboardingState() -> some View {
         OnBoardingWelcomeView { language in
             withAnimation {
-                self.selectedNativeLanguage = language
-                self.state = language == .uk ? .toLearnLanguage : .onboarding
+                self.state = language == .uk ? .toLearnLanguage(native: language) : .onboarding(native: language, toLearn: .uk)
             }
         }
     }
 
-    private func toLearLanguageView() -> some View {
+    private func toLearLanguageView(native: Languages) -> some View {
         OnBoardingToLearnView(
             onLanguageSelected: { language in
                 withAnimation {
-                    self.selectedToLearnLanguage = language
-                    self.state = .onboarding
+                    self.state = .onboarding(native: native, toLearn: language)
                 }
             },
             onBack: {
                 withAnimation {
-                    self.selectedToLearnLanguage = nil
                     self.state = .nativeLanguage
                 }
             }
         )
     }
 
-    private func onboardingView() -> some View {
-        guard let selectedNativeLanguage = selectedNativeLanguage else {
-            fatalError("You must select your native language first.")
-        }
-
+    private func onboardingView(native: Languages, toLearn: Languages) -> some View {
         return OnBoardingTutorialsPagerView(
-            selectedToLearnLanguage: selectedToLearnLanguage ?? .uk,
+            selectedToLearnLanguage: toLearn,
             onBack: {
                 withAnimation {
-                    let nextState: OnboardingState = selectedToLearnLanguage == nil ? .nativeLanguage : .toLearnLanguage
-                    self.selectedToLearnLanguage = nil
+                    let nextState: OnboardingState = native == .uk ? .toLearnLanguage(native: native) : .nativeLanguage
                     self.state = nextState
                 }
             },
             onStart: {
-                languageStore.currentLanguage = getSetLanguage(nativeLanguage: selectedNativeLanguage, toLearnLanguage: selectedToLearnLanguage)
+                languageStore.currentLanguage = getSetLanguage(nativeLanguage: native, toLearnLanguage: toLearn)
                 onBoardingStore.isBoardingCompleted.toggle()
             }
         )
     }
 
-    private func getSetLanguage(nativeLanguage: Languages, toLearnLanguage: Languages?) -> SetLanguage {
-        guard let toLearnLanguage = toLearnLanguage else {
+    private func getSetLanguage(nativeLanguage: Languages, toLearnLanguage: Languages) -> SetLanguage {
+        if toLearnLanguage == .uk {
             return SetLanguage(language: Language(main: nativeLanguage, source: .uk), flipFromWithTo: false)
         }
 
@@ -102,11 +92,11 @@ struct OnBoardingRootView_Previews: PreviewProvider {
             .environmentObject(languageStore)
             .environmentObject(onBoardingStore)
 
-        OnBoardingRootView(state: .toLearnLanguage)
+        OnBoardingRootView(state: .toLearnLanguage(native: .cs))
             .environmentObject(languageStore)
             .environmentObject(onBoardingStore)
 
-        OnBoardingRootView(state: .onboarding)
+        OnBoardingRootView(state: .onboarding(native: .uk, toLearn: .cs))
             .environmentObject(languageStore)
             .environmentObject(onBoardingStore)
         

@@ -26,6 +26,7 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
             .navigationBarHidden(true)
             .navigationTitle("settings")
         }
+        .navigationViewStyle(.stack)
     }
     
     private var settingsSection: some View {

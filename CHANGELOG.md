@@ -2,6 +2,9 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Add iPad layout #27
+- Fix issue while changing languages with selected phrase category #107
+
 ## [1.4.0, build 31] - 2022-09-20Z
 
 - Úprava textů pro Appstore

@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.5.0, build 33] - 2022-09-28Z
+
 - Add iPad layout #27
 - Fix issue while changing languages with selected phrase category #107
 

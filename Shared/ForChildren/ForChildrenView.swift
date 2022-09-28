@@ -11,12 +11,14 @@ struct ForChildrenView: View {
     @EnvironmentObject var dataStore: ForChildrenDataStore
     
     let selectedLanguage: SetLanguage
-    
+
+    private let gridLayout: [GridItem] = [GridItem(.adaptive(minimum: 375))]
+
     var body: some View {
         VStack {
             if let forChildren = dataStore.forChildren {
                     ScrollView {
-                        LazyVStack (spacing: 10) {
+                        LazyVGrid(columns: gridLayout, alignment: .center) {
                             ForEach(forChildren) { item in
                                 ForChildrenItemView(item: item, selectedLanguage: selectedLanguage)
                             }
@@ -32,7 +34,7 @@ struct ForChildrenView: View {
     }
     
     var errorOrLoadView: some View {
-        // Allign middle
+        // Align middle
         VStack {
             Spacer()
             if let error = dataStore.error {

@@ -128,3 +128,9 @@ Každý jazykový překlad (například: čeština -> ukrajinština) je v aplika
     - Shared -> Resources -> Localizable -> Zde jsou všechny použíté řetezce v aplikaci
     - WatchMovapp WatchKit Extension -> stejné parametry jako v Movapp--iOS--InfoPlist ale pro Watch aplikaci
 - Po přeložení vložit do repozitáře a následně programátor importuje přes `Product -> Import localizations`.
+
+## Kvalita kódu
+
+- Projekt má nakonfigurovaný swiftlint na:
+    - build (nutnost nainstalovaný swiftlint lokálně `brew install swiftlint`)
+    - GitHub Action

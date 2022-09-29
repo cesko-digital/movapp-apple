@@ -28,7 +28,7 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
         }
         .navigationViewStyle(.stack)
     }
-    
+
     private var settingsSection: some View {
         Section {
             NavigationLink {
@@ -111,10 +111,10 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
                     .navigationTitle("about_team")
             }
 
-            openLinkButton(String(localized:"about_twitter"), url: "https://twitter.com/movappcz")
-            openLinkButton(String(localized:"facebook"), url: "https://www.facebook.com/movappcz")
-            openLinkButton(String(localized:"about_instagram"), url: "https://www.instagram.com/movappcz/")
-            openLinkButton(String(localized:"linkedin"), url: "https://www.linkedin.com/company/movapp-cz")
+            openLinkButton(String(localized: "about_twitter"), url: "https://twitter.com/movappcz")
+            openLinkButton(String(localized: "facebook"), url: "https://www.facebook.com/movappcz")
+            openLinkButton(String(localized: "about_instagram"), url: "https://www.instagram.com/movappcz/")
+            openLinkButton(String(localized: "linkedin"), url: "https://www.linkedin.com/company/movapp-cz")
 
         } header: {
             Text("about_project", comment: "Settings")
@@ -124,8 +124,9 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
     private var appSection: some View {
         Section {
             openLinkButton(String(localized: "i_want_help"), url: "https://github.com/cesko-digital/movapp-apple")
-            
-            openLinkButton(String(localized: "about_license"), url: "https://github.com/cesko-digital/movapp-apple/blob/main/LICENSE")
+
+            openLinkButton(String(localized: "about_license"),
+                           url: "https://github.com/cesko-digital/movapp-apple/blob/main/LICENSE")
         } header: {
             Text("about_application")
         }
@@ -134,15 +135,15 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
     private var partnerSection: some View {
         Section {
             openLinkButton(String(localized: "about_stand_by_ukraine"), url: "https://www.stojimezaukrajinou.cz/")
-            
+
             openLinkButton(String(localized: "about_umapa"), url: "https://www.umapa.eu/")
-            
+
         } header: {
             Text("about_partners")
         }
     }
-    
-    private func openUrl(_ urlString: String)  {
+
+    private func openUrl(_ urlString: String) {
         guard let url = URL(string: urlString) else {
             return
         }
@@ -157,7 +158,11 @@ struct MenuView_Previews: PreviewProvider {
     static let userDefaultsStore = UserDefaultsStore()
     static let dictionaryDataStore = DictionaryDataStore()
     static let teamDataStore = TeamDataStore()
-    static let languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore, forChildrenDataStore: ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore))
+    static let languageStore = LanguageStore(
+        userDefaultsStore: userDefaultsStore,
+        dictionaryDataStore: dictionaryDataStore,
+        forChildrenDataStore: ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore)
+    )
     static let onBoardingStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
 
     static var previews: some View {

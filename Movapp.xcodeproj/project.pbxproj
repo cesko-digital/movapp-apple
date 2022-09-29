@@ -526,6 +526,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B01279AD27F86957003FB72E /* Build configuration list for PBXNativeTarget "Movapp (iOS)" */;
 			buildPhases = (
+				B44A6A6528E5F51B0003D5F3 /* Swiftlint */,
 				B012799827F86957003FB72E /* Sources */,
 				B012799927F86957003FB72E /* Frameworks */,
 				B012799A27F86957003FB72E /* Resources */,
@@ -625,6 +626,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B44A6A6528E5F51B0003D5F3 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint --config .swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B012799827F86957003FB72E /* Sources */ = {

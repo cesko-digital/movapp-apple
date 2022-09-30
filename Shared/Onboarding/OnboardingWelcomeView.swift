@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct OnBoardingWelcomeView: View {
     let onLanguageSelected: (_ language: Languages) -> Void
 
@@ -22,7 +20,7 @@ struct OnBoardingWelcomeView: View {
                     .font(.system(size: 32))
                     .multilineTextAlignment(.center)
                     .padding()
-                
+
                 Text("on_boarding_choice_native")
                     .foregroundColor(Color("colors/text"))
                     .font(.system(size: 16))
@@ -40,13 +38,13 @@ struct OnBoardingWelcomeView: View {
                 }
             }
         }
-        .padding()
+        .frame(maxHeight: .infinity)
     }
 }
 
 struct OnBoardingWelcomeView_Previews: PreviewProvider {   
     static var previews: some View {
-        
+
         OnBoardingWelcomeView { language in
             print(language)
         }

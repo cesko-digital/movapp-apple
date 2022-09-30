@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct OnBoardingToLearnView: View {
     let onLanguageSelected: (_ language: Languages) -> Void
     let onBack: () -> Void
@@ -22,7 +20,6 @@ struct OnBoardingToLearnView: View {
                 .frame(height: 44)
                 .accessibilityIdentifier("on_boarding_back")
                 .padding()
-
 
             VStack(alignment: .center) {
                 Spacer()

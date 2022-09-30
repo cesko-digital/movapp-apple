@@ -14,22 +14,31 @@ enum OnboardingState {
 }
 
 struct OnBoardingRootView: View {
-    
+
     @EnvironmentObject var languageStore: LanguageStore
     @EnvironmentObject var onBoardingStore: OnBoardingStore
 
     @State var state: OnboardingState = .nativeLanguage
 
     var body: some View {
-        Group {
-            switch state {
-            case .nativeLanguage:
-                initialOnboardingState()
-            case let .toLearnLanguage(native):
-                toLearLanguageView(native: native)
-            case let .onboarding(native, toLearn):
-                onboardingView(native: native, toLearn: toLearn)
+        ZStack(alignment: .topLeading) {
+            Group {
+                switch state {
+                case .nativeLanguage:
+                    initialOnboardingState()
+                case let .toLearnLanguage(native):
+                    toLearLanguageView(native: native)
+                case let .onboarding(native, toLearn):
+                    onboardingView(native: native, toLearn: toLearn)
+                }
             }
+
+            // Add background under the status bar to ensure that status bar can be .lightContent
+            // https://designcode.io/swiftui-handbook-status-bar-background-on-scroll
+            Rectangle()
+                .foregroundColor(Color("colors/primary"))
+                .ignoresSafeArea()
+                .frame(height: 0)
         }
     }
 

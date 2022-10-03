@@ -17,7 +17,7 @@ struct TranslationView: View {
     }
 
     var body: some View {
-        HStack() {
+        HStack {
             VStack(alignment: .leading, spacing: 10) {
                 Text(translation.translation)
                     .foregroundColor(Color("colors/text"))

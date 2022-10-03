@@ -9,7 +9,7 @@ import SwiftUI
 
 class AlphabetDataStore {
 
-    func load(with language: SetLanguage, alphabet: Languages) throws -> Alphabet  {
+    func load(with language: SetLanguage, alphabet: Languages) throws -> Alphabet {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
 
@@ -17,7 +17,7 @@ class AlphabetDataStore {
         let to = language.language.source == alphabet ? language.language.main : language.language.source
 
         let fileName = "data/\(alphabet)-\(to)-alphabet"
-        guard let asset = NSDataAsset(name:  fileName) else {
+        guard let asset = NSDataAsset(name: fileName) else {
             throw MissingAssetError("Invalid data file name")
         }
 

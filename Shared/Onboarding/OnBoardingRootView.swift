@@ -97,7 +97,7 @@ struct OnBoardingRootView_Previews: PreviewProvider {
                                              dictionaryDataStore: dictionaryDataStore,
                                              forChildrenDataStore: ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore))
     static let onBoardingStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
-    
+
     static var previews: some View {
         OnBoardingRootView()
             .environmentObject(languageStore)
@@ -110,6 +110,6 @@ struct OnBoardingRootView_Previews: PreviewProvider {
         OnBoardingRootView(state: .onboarding(native: .uk, toLearn: .cs))
             .environmentObject(languageStore)
             .environmentObject(onBoardingStore)
-        
+
     }
 }

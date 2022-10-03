@@ -14,7 +14,7 @@ enum Languages: String {
     case sk = "sk"
 
     var flag: Flags {
-        switch(self) {
+        switch self {
         case .cs:
             return Flags.cs
         case .uk:

@@ -42,7 +42,7 @@ struct OnBoardingWelcomeView: View {
     }
 }
 
-struct OnBoardingWelcomeView_Previews: PreviewProvider {   
+struct OnBoardingWelcomeView_Previews: PreviewProvider {
     static var previews: some View {
 
         OnBoardingWelcomeView { language in

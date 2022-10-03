@@ -5,15 +5,13 @@
 //  Created by Martin Kluska on 05.04.2022.
 //
 
-
 import SwiftUI
-
 
 struct DictionaryHeaderView: View {
     @Binding var searchString: String
-    
+
     var body: some View {
-        HStack (spacing: 5) {
+        HStack(spacing: 5) {
             TextField("search_word", text: $searchString)
                 .disableAutocorrection(true)
                 .foregroundColor(Color("colors/text"))
@@ -27,7 +25,7 @@ struct DictionaryHeaderView: View {
                             .padding(.leading, 0)
                     }
                 )
-            
+
             if !searchString.isEmpty {
                 Button(
                     action: { searchString = "" },

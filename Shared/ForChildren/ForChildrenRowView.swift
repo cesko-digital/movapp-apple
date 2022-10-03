@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 private extension Image {
     func flagStyle () -> some View {
         self.resizable()
@@ -16,7 +15,6 @@ private extension Image {
             .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.8), radius: 38, x: 0, y: 19)
     }
 }
-
 
 private extension Text {
     func languageStyle () -> some View {
@@ -28,15 +26,15 @@ private extension Text {
 struct ForChildrenRowView: View {
     let translation: Dictionary.Phrase.Translation
     let language: Languages
-    
+
     var body: some View {
         HStack {
             Image("icons/flags/\(language.flag.rawValue)")
                 .flagStyle()
-            
+
             Text(LocalizedStringKey(language.title))
                 .languageStyle()
-            
+
             Spacer()
         }
         HStack {
@@ -54,15 +52,14 @@ struct ForChildrenRowView: View {
 
 struct ForChildrenRowView_Previews: PreviewProvider {
     static let soundService = SoundService()
-    
+
     static var previews: some View {
         ForChildrenRowView(
             translation: examplePhrase.main,
             language: Languages.cs
         ).environmentObject(soundService)
             .previewLayout(.sizeThatFits)
-        
-        
+
         ForChildrenRowView(
             translation: examplePhrase.source,
             language: Languages.uk

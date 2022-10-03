@@ -10,12 +10,12 @@ import Foundation
 let NO_ICON = "none"
 
 enum RootItems: Int, Hashable {
-    
+
     case dictionary
     case alphabet
     case for_children
     case settings
-    
+
     var icon: String {
         switch self {
         case .dictionary: return "icons/dictionary"
@@ -24,7 +24,7 @@ enum RootItems: Int, Hashable {
         case .settings: return "gearshape"
         }
     }
-    
+
     var title: String {
         switch self {
         case .dictionary: return String(localized: "title_dictionary", comment: "TabBar dictionary")

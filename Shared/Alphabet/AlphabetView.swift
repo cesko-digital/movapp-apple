@@ -13,7 +13,7 @@ struct AlphabetView<ViewModel: AlphabetViewModeling>: View {
     @StateObject var viewModel: ViewModel
 
     private let gridLayout: [GridItem] = [GridItem(.adaptive(minimum: 375))]
-    
+
     var body: some View {
         VStack {
             Group {
@@ -33,7 +33,7 @@ struct AlphabetView<ViewModel: AlphabetViewModeling>: View {
     }
 
     func loadedContent(content: [AlphabetContent]) -> some View {
-        VStack (spacing: 0) {
+        VStack(spacing: 0) {
             Picker("Select alphabet language", selection: $viewModel.selectedAlphabet) {
                 ForEach(content.compactMap { $0.language }, id: \.rawValue) { language in
                     Text(LocalizedStringKey(language.alphabetTitle)).tag(language)
@@ -93,7 +93,7 @@ struct AlphabetView_Previews: PreviewProvider {
             self.selectedAlphabet = selectedAlphabet
         }
     }
-    
+
     static var previews: some View {
         AlphabetView(viewModel: MockViewModel(state: .loading, selectedAlphabet: .uk))
             .environmentObject(soundService)

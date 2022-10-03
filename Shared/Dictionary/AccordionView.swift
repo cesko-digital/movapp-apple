@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct AccordionView: View {
-    let isOdd : Bool
+    let isOdd: Bool
     let text: String
-    
+
     var body: some View {
-        
-        HStack (spacing: 10) {
+
+        HStack(spacing: 10) {
             Text(text)
                 .font(.system(size: 20)).bold()
                 .foregroundColor(Color("colors/primary"))

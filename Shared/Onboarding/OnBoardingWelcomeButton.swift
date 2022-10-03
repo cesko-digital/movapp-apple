@@ -30,20 +30,18 @@ struct OnBoardingWelcomeButton: View {
     }
 }
 
-
-
 struct OnBoardingWelcomeButton_Previews: PreviewProvider {
-    
+
     static var previews: some View {
         OnBoardingWelcomeButton(language: .cs) {
-            
+
         }
         .previewLayout(.sizeThatFits)
-        
+
         OnBoardingWelcomeButton(language: .uk) {
 
         }
         .previewLayout(.sizeThatFits)
-        
+
     }
 }

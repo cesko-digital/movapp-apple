@@ -14,19 +14,15 @@ struct Language {
     var dictionaryFilePrefix: String {
         return "\(source.rawValue)-\(main.rawValue)"
     }
-    
+
     /**
      Language code - defines a language used in `from` key in our data files
      */
     let main: Languages
-    
+
     /**
      Language code - defines a language used in `to` key in our data files
      */
     let source: Languages
 
 }
-
-
-
-

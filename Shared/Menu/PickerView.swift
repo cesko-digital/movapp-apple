@@ -47,7 +47,6 @@ struct PickerView_Previews: PreviewProvider {
         PickerView(
             selectedItem: Languages.uk,
             items: Languages.allCases,
-            titleKeyPath: \.title)  { _ in }
+            titleKeyPath: \.title) { _ in }
     }
 }
-

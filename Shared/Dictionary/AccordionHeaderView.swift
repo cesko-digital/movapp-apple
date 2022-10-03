@@ -10,17 +10,16 @@ import SwiftUI
 struct AccordionHeaderView: View {
     let language: SetLanguage
     @Binding var selectedCategory: Dictionary.Category?
-    
+
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
-            
+
             if selectedCategory != nil {
                 Image(systemName: "chevron.left")
                     .foregroundColor(Color("colors/secondary"))
-                
-                
+
                 let text = selectedCategory!.text(language: language)
-                
+
                 Text(text)
                     .foregroundColor(Color("colors/text"))
                     .lineLimit(1)

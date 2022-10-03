@@ -28,13 +28,13 @@ struct DictionaryContentView: View {
     let language: SetLanguage
     let categories: [Dictionary.Category]
     let phrases: [Dictionary.PhraseID: Dictionary.Phrase]
-    let categoryPhrases: Array<Dictionary.Phrase>?
-    
+    let categoryPhrases: [Dictionary.Phrase]?
+
     @EnvironmentObject var favoritesProvider: PhrasesFavoritesProvider
-   
+
     @Binding var selectedCategory: Dictionary.Category?
-    @State private var view: DictionaryContentSubView = .dictionary;
-    
+    @State private var view: DictionaryContentSubView = .dictionary
+
     init(
         searchString: String,
         language: SetLanguage,
@@ -47,7 +47,7 @@ struct DictionaryContentView: View {
         self.categories = categories
         self.phrases = phrases
         self._selectedCategory = selectedCategory
-        
+
         // Optimize the view
         if let selected = selectedCategory.wrappedValue {
             categoryPhrases = phrases.filter(identifiers: selected.phrases)
@@ -55,14 +55,14 @@ struct DictionaryContentView: View {
             categoryPhrases = nil
         }
     }
-    
+
     var body: some View {
         VStack(spacing: 0) {
             // If category is selected show phases
             if selectedCategory != nil {
                 AccordionHeaderView(language: language, selectedCategory: $selectedCategory)
                     .styleSubHeaderContent()
-                
+
             } else {
                 Picker("Select phrases", selection: $view) {
                     Text("title_dictionary", comment: "Dictionary list").tag(DictionaryContentSubView.dictionary)
@@ -71,7 +71,7 @@ struct DictionaryContentView: View {
                 .pickerStyle(.segmented)
                 .styleSubHeaderContent()
             }
-            
+
             if view == .dictionary && searchString == "" && selectedCategory == nil {
                 AccordionsView(
                     language: language,
@@ -83,18 +83,18 @@ struct DictionaryContentView: View {
             }
         }
     }
-    
+
     var phrasesView: some View {
-        
+
         let visiblePhrases: [Dictionary.Phrase]
-        
-        switch (view) {
+
+        switch view {
         case .dictionary:
             visiblePhrases = categoryPhrases ?? Array(phrases.values)
         case .favorites:
             visiblePhrases = phrases.filter(identifiers: favoritesProvider.getFavorites(language: language))
         }
-        
+
         return PhrasesView(
             language: language,
             searchString: searchString,
@@ -102,20 +102,20 @@ struct DictionaryContentView: View {
             matchService: PhraseMatchService(favoritesService: self.favoritesProvider.favoritesService)
         )
     }
-    
+
 }
 
 struct DictionaryContentView_Previews: PreviewProvider {
-    
+
     static let soundService = SoundService()
     static let userDefaultsStore = UserDefaultsStore()
     static let favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
     static let favoritesProvider = PhrasesFavoritesProvider(favoritesService: favoritesService)
-    
+
     static let phrases: [Dictionary.PhraseID: Dictionary.Phrase] = [
         examplePhrase.id: examplePhrase
     ]
-    
+
     static var previews: some View {
         DictionaryContentView(
             searchString: "",
@@ -128,7 +128,7 @@ struct DictionaryContentView_Previews: PreviewProvider {
         .environmentObject(favoritesService)
         .environmentObject(favoritesProvider)
         .previewDisplayName("Categories")
-        
+
         DictionaryContentView(
             searchString: "",
             language: SetLanguage.ukCs,

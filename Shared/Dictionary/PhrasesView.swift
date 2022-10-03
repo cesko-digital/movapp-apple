@@ -8,30 +8,29 @@
 import SwiftUI
 
 struct PhrasesView: View {
-    
+
     var showPhrases: [Dictionary.Phrase]
     let language: SetLanguage
-    
+
     init (
         language: SetLanguage,
         searchString: String,
         phrases: [Dictionary.Phrase],
         matchService: PhraseMatchService
-    )
-    {
+    ) {
         self.language = language
-        
+
         if searchString.isEmpty {
             showPhrases = phrases
         } else {
             showPhrases = matchService.matchPhrases(phrases, searchString: searchString, language: language)
         }
     }
-    
+
     var body: some View {
         ScrollView {
             LazyVStack(spacing: 16) {
-                ForEach(showPhrases)  { phrase in
+                ForEach(showPhrases) { phrase in
                     PhraseView(
                         language: language,
                         phrase: phrase
@@ -49,19 +48,19 @@ struct PhrasesView_Previews: PreviewProvider {
     static let userDefaultsStore = UserDefaultsStore()
     static let favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
     static let matchService = PhraseMatchService(favoritesService: favoritesService)
-    
+
     static var previews: some View {
         PhrasesView(
             language: .csUk,
             searchString: "",
             phrases: [
-                examplePhrase,
+                examplePhrase
             ],
             matchService: matchService
         )
         .environmentObject(soundService)
         .environmentObject(favoritesService)
-        
+
         PhrasesView(
             language: .ukCs,
             searchString: "",

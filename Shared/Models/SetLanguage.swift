@@ -8,7 +8,8 @@
 import Foundation
 
 /**
- Indicates current language settings displayed to user -> indicates which language want to use and which way should be display (from <- to or to -> from)
+ Indicates current language settings displayed to user -> indicates which language want to use
+ and which way should be display (from <- to or to -> from)
  */
 struct SetLanguage: Identifiable {
 

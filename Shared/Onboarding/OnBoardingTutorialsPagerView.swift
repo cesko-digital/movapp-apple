@@ -23,8 +23,10 @@ struct OnBoardingTutorialsPagerView: View {
             ZStack(alignment: .bottom) {
                 TabView(selection: $selected) {
                     OnBoardingTutorialView(title: "on_boarding_info_0_title",
-                                           subTitle: String(format: NSLocalizedString("on_boarding_info_0_description", comment: ""),
-                                                            NSLocalizedString(selectedToLearnLanguage.titleAccusative, comment: "")))
+                                           subTitle: String(format: NSLocalizedString("on_boarding_info_0_description",
+                                                                                      comment: ""),
+                                                            NSLocalizedString(selectedToLearnLanguage.titleAccusative,
+                                                                              comment: "")))
                     .tag(0)
 
                     OnBoardingTutorialView(title: "on_boarding_info_1_title",

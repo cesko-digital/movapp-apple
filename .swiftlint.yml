@@ -1,7 +1,18 @@
+excluded:
+  - Fastlane/SnapshotHelper.swift
+  - Shared/Extensions/String+Levenshtein.swift
 identifier_name:
   excluded:
     - a
     - b
     - i
     - j
+    - to
+    - id
+    - cs
+    - uk
+    - pl
+    - sk
+    - t1
+    - t2
   allowed_symbols: "_"

@@ -101,7 +101,12 @@ struct AlphabetView_Previews: PreviewProvider {
         AlphabetView(viewModel: MockViewModel(state: .error("Not loaded content"), selectedAlphabet: .uk))
             .environmentObject(soundService)
             .previewDisplayName("Error")
-        AlphabetView(viewModel: MockViewModel(state: .loaded([AlphabetContent(language: .uk, alphabet: .example), AlphabetContent(language: .cs, alphabet: .example)]), selectedAlphabet: .uk))
+        AlphabetView(viewModel: MockViewModel(
+            state: .loaded([
+                AlphabetContent(language: .uk, alphabet: .example),
+                AlphabetContent(language: .cs, alphabet: .example)]),
+            selectedAlphabet: .uk)
+        )
             .environmentObject(soundService)
             .previewDisplayName("Loaded")
     }

@@ -35,6 +35,7 @@ struct OnBoardingTutorialView: View {
 
 struct OnBoardingTutorialView_Previews: PreviewProvider {
     static var previews: some View {
+        // swiftlint:disable:next line_length
         OnBoardingTutorialView(title: "Slovníček", subTitle: "Naučte se stovky základních slovíček a frází čtením i poslechem. Slovíčka třídíme dle životních situací.")
             .previewLayout(.sizeThatFits)
     }

@@ -64,6 +64,7 @@ class MenuViewModel: MenuViewModeling {
         let main = flip ? toLearnPicker.selection : nativePicker.selection
         let source = flip ? nativePicker.selection : toLearnPicker.selection
 
-        languageStore.currentLanguage = SetLanguage(language: Language(main: main, source: source), flipFromWithTo: flip)
+        languageStore.currentLanguage = SetLanguage(language: Language(main: main, source: source),
+                                                    flipFromWithTo: flip)
     }
 }

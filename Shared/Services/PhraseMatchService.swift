@@ -32,7 +32,9 @@ struct PhraseMatchService {
 
         // Increase default levenshtein distance by 10 to make exact match on top
         if cleanString.contains(cleanSearchString) {
-            let score = cleanSearchString.levenshteinDistance(with: string, caseSensitive: true, diacriticSensitive: true)
+            let score = cleanSearchString.levenshteinDistance(with: string,
+                                                              caseSensitive: true,
+                                                              diacriticSensitive: true)
 
             // Increase by 10 to make it last
             return score > 0 ? score + 10 : 0
@@ -68,7 +70,11 @@ struct PhraseMatchService {
     /**
      Returns phases that contains given string in all phases (all languages) and sorts by levenshtein distance.
      */
-    func matchPhrases(_ phrases: [Dictionary.Phrase], searchString: String, language: SetLanguage) -> [Dictionary.Phrase] {
+    func matchPhrases(
+        _ phrases: [Dictionary.Phrase],
+        searchString: String,
+        language: SetLanguage
+    ) -> [Dictionary.Phrase] {
 
         let start = CFAbsoluteTimeGetCurrent()
 

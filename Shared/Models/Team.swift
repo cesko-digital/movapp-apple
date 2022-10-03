@@ -8,19 +8,12 @@
 import Foundation
 
 struct Team: Decodable {
+    let sections: [Section]
+}
 
+extension Team {
     struct Section: Decodable, Identifiable {
-
-        struct Member: Decodable, Identifiable {
-            private enum CodingKeys: String, CodingKey {
-                case name
-
-            }
-
-            var id = UUID()
-            let name: String
-        }
-
+        // swiftlint:disable:next nesting
         private enum CodingKeys: String, CodingKey {
             case name, members
         }
@@ -29,6 +22,17 @@ struct Team: Decodable {
         let name: [String: String]
         let members: [Member]
     }
+}
 
-    let sections: [Section]
+extension Team.Section {
+    struct Member: Decodable, Identifiable {
+        // swiftlint:disable:next nesting
+        private enum CodingKeys: String, CodingKey {
+            case name
+
+        }
+
+        var id = UUID()
+        let name: String
+    }
 }

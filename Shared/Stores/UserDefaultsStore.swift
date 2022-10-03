@@ -39,11 +39,8 @@ struct UserDefaultsStore {
     func getLanguage() -> SetLanguage? {
         if let language =  userDefaults.string(forKey: languageKey) {
             print("Stored language \(language)")
-            for setLanguage in SetLanguage.allCases {
-                if setLanguage.id == language {
-                    return setLanguage
-                }
-            }
+
+            return SetLanguage.allCases.first(where: { $0.id == language })
         }
 
         return nil

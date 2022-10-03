@@ -8,10 +8,10 @@
 import Foundation
 
 enum Languages: String {
-    case cs = "cs"
-    case uk = "uk"
-    case pl = "pl"
-    case sk = "sk"
+    case cs
+    case uk
+    case pl
+    case sk
 
     var flag: Flags {
         switch self {

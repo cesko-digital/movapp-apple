@@ -13,7 +13,11 @@ final class LanguageStore: ObservableObject {
     let dictionaryDataStore: DictionaryDataStore
     let forChildrenDataStore: ForChildrenDataStore
 
-    init(userDefaultsStore: UserDefaultsStore, dictionaryDataStore: DictionaryDataStore, forChildrenDataStore: ForChildrenDataStore) {
+    init(
+        userDefaultsStore: UserDefaultsStore,
+        dictionaryDataStore: DictionaryDataStore,
+        forChildrenDataStore: ForChildrenDataStore
+    ) {
         self.dictionaryDataStore = dictionaryDataStore
         self.userDefaultsStore = userDefaultsStore
         self.forChildrenDataStore = forChildrenDataStore

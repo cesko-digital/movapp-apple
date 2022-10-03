@@ -15,4 +15,4 @@ jobs:
         env:
           DIFF_BASE: ${{ github.base_ref }}
         with:
-          args: --config .swiftlint.yml
+          args: --config .swiftlint.yml --strict

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TeamView: View {
-    
+
     @EnvironmentObject var dataStore: TeamDataStore
     @EnvironmentObject var onBoardingDataStore: OnBoardingStore
 
@@ -19,7 +19,7 @@ struct TeamView: View {
     }
 
     var body: some View {
-        
+
         if let team = dataStore.team {
             List {
                 ForEach(team.sections) { section in
@@ -32,12 +32,12 @@ struct TeamView: View {
                     }
                 }
             }
-            
+
         } else {
             errorOrLoadView
         }
     }
-    
+
     var errorOrLoadView: some View {
         // Align middle
         VStack {
@@ -50,7 +50,7 @@ struct TeamView: View {
             Spacer()
         }
     }
-    
+
     func loadData() {
         dataStore.load()
     }

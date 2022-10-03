@@ -10,15 +10,15 @@ import SwiftUI
 struct OnBoardingTutorialView: View {
     let title: LocalizedStringKey
     let subTitle: String
-    
+
     @State var isVisible: Bool = false
-    
+
     var body: some View {
         VStack(spacing: 30) {
             Text(title)
                 .font(.system(.title))
                 .foregroundColor(Color("colors/primary"))
-            
+
             Text(subTitle)
                 .foregroundColor(Color("colors/text"))
                 .multilineTextAlignment(.center)

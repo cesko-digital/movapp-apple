@@ -15,16 +15,15 @@ struct AlphabetItem: Decodable {
         transcription: "[a]",
         examples: [Dictionary.Phrase.Translation(soundUrl: nil, translation: "abeceda", transcription: "абецеда")]
     )
-    
+
     let id: String
     let soundUrl: String?
-    
+
     let letters: [String]
     let transcription: String
     let examples: [Dictionary.Phrase.Translation]
-    
+
     var letter: String {
         return letters.joined(separator: " ")
     }
 }
-

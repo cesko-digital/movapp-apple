@@ -10,7 +10,7 @@ import SwiftUI
 struct SoundStateButtonView: View {
     let isPlaying: Bool
     let onTap: () -> Void
-    
+
     var body: some View {
         Image(systemName: isPlaying ? "stop.circle" : "play.circle")
             .resizable()
@@ -23,15 +23,14 @@ struct SoundStateButtonView: View {
 }
 
 struct SoundStateButtonView_Previews: PreviewProvider {
-    
+
     static var previews: some View {
         SoundStateButtonView(isPlaying: false) {
             print("Hello")
         }
         .padding()
         .previewLayout(.sizeThatFits)
-        
-        
+
         SoundStateButtonView(isPlaying: true) {
             print("Hello")
         }

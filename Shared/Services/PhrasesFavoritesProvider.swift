@@ -15,13 +15,13 @@ import Foundation
 ///  - When to use `PhraseFavoritesProvider` and when `PhraseFavoritesService`?
 ///     - Use service if you need to re-render your view on each change. Otherwise use provider.
 final class PhrasesFavoritesProvider: ObservableObject {
-    
+
     let favoritesService: PhraseFavoritesService
-    
+
     init(favoritesService: PhraseFavoritesService) {
         self.favoritesService = favoritesService
     }
-    
+
     func getFavorites(language: SetLanguage) -> [Dictionary.PhraseID] {
         favoritesService.getFavorites(language: language)
     }

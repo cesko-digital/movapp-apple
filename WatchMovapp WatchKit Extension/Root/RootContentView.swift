@@ -8,23 +8,23 @@
 import SwiftUI
 
 struct RootContentView: View {
-    
+
     var body: some View {
         ScrollView {
             LazyVStack {
-                NavigationLink  {
+                NavigationLink {
                     DictionaryView()
                 } label: {
                     RootItemView(imageName: RootItems.dictionary.icon, title: RootItems.dictionary.title)
                 }
-                
-                NavigationLink  {
+
+                NavigationLink {
                     AlphabetView()
                 } label: {
                     RootItemView(imageName: RootItems.alphabet.icon, title: RootItems.alphabet.title)
                 }
-                
-                NavigationLink  {
+
+                NavigationLink {
                     ForChildrenView()
                 } label: {
                     RootItemView(imageName: RootItems.for_chidlren.icon, title: RootItems.for_chidlren.title)
@@ -39,4 +39,3 @@ struct RootContentView_Previews: PreviewProvider {
         RootContentView()
     }
 }
-

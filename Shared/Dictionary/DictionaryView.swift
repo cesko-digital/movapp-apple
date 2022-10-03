@@ -7,20 +7,19 @@
 
 import SwiftUI
 
-
 struct DictionaryView: View {
-    
+
     @State private var searchString: String = ""
-    @State private var selectedCategory: Dictionary.Category? = nil
-    
+    @State private var selectedCategory: Dictionary.Category?
+
     let selectedLanguage: SetLanguage
-    
+
     @EnvironmentObject var dataStore: DictionaryDataStore
-    
+
     var body: some View {
-        VStack (spacing: 0) {
+        VStack(spacing: 0) {
             DictionaryHeaderView(searchString: $searchString)
-                .onChange(of: selectedLanguage) { newValue in
+                .onChange(of: selectedLanguage) { _ in
                     selectedCategory = nil
                 }
                 .onChange(of: searchString) { newValue in
@@ -30,7 +29,7 @@ struct DictionaryView: View {
                         selectedCategory = nil
                     }
                 }
-            
+
             if let dictionary = dataStore.dictionary {
                 DictionaryContentView(
                     searchString: searchString,
@@ -58,12 +57,12 @@ struct DictionaryView: View {
         })
 #endif
     }
-    
+
     var errorOrLoadView: some View {
         // Align middle
         VStack {
             Spacer()
-            if let error = dataStore.error{
+            if let error = dataStore.error {
                 Text(error)
             } else {
                 ProgressView().onAppear(perform: loadData)
@@ -71,7 +70,7 @@ struct DictionaryView: View {
             Spacer()
         }
     }
-    
+
     func loadData() {
         dataStore.load(language: selectedLanguage)
     }
@@ -79,7 +78,7 @@ struct DictionaryView: View {
 
 struct DictionaryView_Previews: PreviewProvider {
     static let dataStore = DictionaryDataStore()
-    
+
     static var previews: some View {
         DictionaryView(selectedLanguage: .csUk)
             .environmentObject(dataStore)

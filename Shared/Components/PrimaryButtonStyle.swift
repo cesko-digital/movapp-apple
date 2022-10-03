@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PrimaryButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
-        
+
         configuration.label
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16)

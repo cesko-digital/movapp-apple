@@ -17,7 +17,7 @@ struct RootItemView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 30, height: 30, alignment: .leading)
                 .foregroundColor(Color("colors/yellow"))
-            
+
             Spacer()
             Text(title)
         }

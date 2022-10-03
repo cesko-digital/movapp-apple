@@ -34,9 +34,12 @@ struct MovappApp: App {
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
 
         self.forChildrenDataStore = ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore)
-        self.languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore, forChildrenDataStore: forChildrenDataStore)
+        self.languageStore = LanguageStore(userDefaultsStore: userDefaultsStore,
+                                           dictionaryDataStore: dictionaryDataStore,
+                                           forChildrenDataStore: forChildrenDataStore)
         self.onBoardingDataStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
-        self.favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
+        self.favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore,
+                                                       dictionaryDataStore: dictionaryDataStore)
         self.favoritesProvider = PhrasesFavoritesProvider(favoritesService: favoritesService)
     }
 

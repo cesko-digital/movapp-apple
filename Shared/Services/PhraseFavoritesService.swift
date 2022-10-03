@@ -7,7 +7,10 @@
 
 import Foundation
 
-private func migrateFromInitialVersionToAirtable (_ favoritedPhrasesByLanguage: FavoritesPhrasesStore, dictionaryDataStore: DictionaryDataStore) -> FavoritesPhrasesStore? {
+private func migrateFromInitialVersionToAirtable(
+    _ favoritedPhrasesByLanguage: FavoritesPhrasesStore,
+    dictionaryDataStore: DictionaryDataStore
+) -> FavoritesPhrasesStore? {
 
     if favoritedPhrasesByLanguage.isEmpty {
         return nil
@@ -60,14 +63,16 @@ class PhraseFavoritesService: ObservableObject {
     }
 
     /**
-    In near future we can provide interface for storing favorites, now we are using UserDefaults (we could do a wrapper that hooks on changes and sends to to backend, etc)
+     In near future we can provide interface for storing favorites,
+     now we are using UserDefaults (we could do a wrapper that hooks on changes and sends to to backend, etc)
      */
     init (userDefaultsStore: UserDefaultsStore, dictionaryDataStore: DictionaryDataStore) {
         if let favoritesFromUserDefaults = userDefaultsStore.getFavorites() {
 
             // Migrate from md5
             if userDefaultsStore.getDataVersion() == .initial {
-                if let migrated =  migrateFromInitialVersionToAirtable(favoritesFromUserDefaults, dictionaryDataStore: dictionaryDataStore) {
+                if let migrated =  migrateFromInitialVersionToAirtable(favoritesFromUserDefaults,
+                                                                       dictionaryDataStore: dictionaryDataStore) {
                     favoritedPhrasesByLanguage = migrated
                     userDefaultsStore.storeDataVersion(.airtable)
                     userDefaultsStore.storeFavorites(migrated)

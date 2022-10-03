@@ -17,7 +17,7 @@ class ForChildrenDataStore: ObservableObject {
     @Published var loading: Bool = false
 
     var forChildren: [Dictionary.Phrase]?
-    var error: String? // TODO enum?
+    var error: String?
 
     func reset() {
         forChildren = nil
@@ -34,15 +34,9 @@ class ForChildrenDataStore: ObservableObject {
 
         if let dictionary = dictionaryDataStore.dictionary {
 
-            for category in dictionary.categories {
-
-                if category.id == "recSHyEn6N0hAqUBp" {
-                    self.forChildren = dictionary.phrases.filter(identifiers: category.phrases)
-                    break
-                }
-            }
-
-            if forChildren == nil {
+            if let childrenCategory = dictionary.categories.first(where: { $0.id == "recSHyEn6N0hAqUBp" }) {
+                self.forChildren = dictionary.phrases.filter(identifiers: childrenCategory.phrases)
+            } else {
                error = "Could not find the for kids in data source"
                print(error!)
            }

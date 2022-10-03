@@ -38,7 +38,8 @@ struct RootContentView: View {
                 ForChildrenView(selectedLanguage: languageStore.currentLanguage)
                     .setTabItem(RootItems.for_children)
 
-                MenuView(viewModel: MenuViewModel(selectedLanguage: languageStore.currentLanguage, languageStore: languageStore))
+                MenuView(viewModel: MenuViewModel(selectedLanguage: languageStore.currentLanguage,
+                                                  languageStore: languageStore))
                     .setTabItem(RootItems.settings)
             }
 
@@ -56,11 +57,14 @@ struct ContentView_Previews: PreviewProvider {
     static let soundService = SoundService()
     static let userDefaultsStore = UserDefaultsStore()
     static let dictionaryDataStore = DictionaryDataStore()
-    static let favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore)
+    static let favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore,
+                                                         dictionaryDataStore: dictionaryDataStore)
     static let favoritesProvider = PhrasesFavoritesProvider(favoritesService: favoritesService)
     static let forChildrenDataStore = ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore)
     static let teamDataStore = TeamDataStore()
-    static let languageStore = LanguageStore(userDefaultsStore: userDefaultsStore, dictionaryDataStore: dictionaryDataStore, forChildrenDataStore: forChildrenDataStore)
+    static let languageStore = LanguageStore(userDefaultsStore: userDefaultsStore,
+                                             dictionaryDataStore: dictionaryDataStore,
+                                             forChildrenDataStore: forChildrenDataStore)
 
     static var previews: some View {
         RootContentView()

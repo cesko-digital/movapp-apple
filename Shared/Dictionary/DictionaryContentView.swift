@@ -109,7 +109,8 @@ struct DictionaryContentView_Previews: PreviewProvider {
 
     static let soundService = SoundService()
     static let userDefaultsStore = UserDefaultsStore()
-    static let favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore, dictionaryDataStore: DictionaryDataStore())
+    static let favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore,
+                                                         dictionaryDataStore: DictionaryDataStore())
     static let favoritesProvider = PhrasesFavoritesProvider(favoritesService: favoritesService)
 
     static let phrases: [Dictionary.PhraseID: Dictionary.Phrase] = [

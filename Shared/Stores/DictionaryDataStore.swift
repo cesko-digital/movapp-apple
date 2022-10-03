@@ -11,7 +11,7 @@ class DictionaryDataStore: ObservableObject {
 
     @Published var loading: Bool = false
     var dictionary: Dictionary?
-    var error: String? // TODO enum?
+    var error: String?
 
     func reset () {
         dictionary = nil

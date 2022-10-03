@@ -1,0 +1,7 @@
+identifier_name:
+  excluded:
+    - a
+    - b
+    - i
+    - j
+  allowed_symbols: "_"

@@ -15,7 +15,10 @@ class FastlaneSnapshot: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        // In UI tests it’s important to set the initial state
+        // - such as interface orientation
+        // - required for your tests before they run.
+        // The setUp method is a good place to do this.
     }
 
     override func tearDownWithError() throws {
@@ -26,33 +29,28 @@ class FastlaneSnapshot: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         setupSnapshot(app)
-        
-        
+
         app.setSeenOnBoarding(true)
-        
+
         app.launch()
-        
-        
+
         snapshot("1 - Dictionary")
 
-        
-        app.scrollViews.otherElements/*@START_MENU_TOKEN@*/.staticTexts["dictionary_0"]/*[[".staticTexts[\"Základní fráze - Основні фрази\"]",".staticTexts[\"dictionary_0\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
+        app.scrollViews.otherElements.staticTexts["dictionary_0"].tap()
+
         snapshot("1 - Dictionary detail")
-        
-        
+
         app.tabBars.buttons.element(boundBy: 1).tap()
-        
+
         snapshot("2 - Alphabet")
-        
-        
+
         app.tabBars.buttons.element(boundBy: 2).tap()
-        
+
         snapshot("3 - For Children")
-        
+
         app.tabBars.buttons.element(boundBy: 3).tap()
-        
+
         snapshot("4 - Menu")
-        
+
     }
 }

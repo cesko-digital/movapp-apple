@@ -1,0 +1,15 @@
+[
+    {
+        "title": {
+            "cs": "O perníkové chaloupce",
+            "uk": "Прянична хатинка"
+        },
+        "slug": "pernikova-chaloupka",
+        "duration": 180,
+        "origin": "CZ",
+        "supportedLanguages": [
+            "cs",
+            "uk"
+        ]
+    }
+]

@@ -1,50 +1,52 @@
-[
-    {
-        "cs": {
-            "text": "Byl jednou jeden tatínek, který žil se svou dceruškou Mařenkou a synkem Jeníčkem.",
-            "start": 14.3455,
-            "end": 21.533
+{
+    "timeline": [
+        {
+            "cs": {
+                "text": "Byl jednou jeden tatínek, který žil se svou dceruškou Mařenkou a synkem Jeníčkem.",
+                "start": 14.3455,
+                "end": 21.533
+            },
+            "uk": {
+                "text": "Жив був один тато, який жив з донькою Маренкою та сином Єнічком.",
+                "start": 14.1705,
+                "end": 20.258
+            }
         },
-        "uk": {
-            "text": "Жив був один тато, який жив з донькою Маренкою та сином Єнічком.",
-            "start": 14.1705,
-            "end": 20.258
-        }
-    },
-    {
-        "cs": {
-            "text": "Bydleli v chaloupce uprostřed lesa.",
-            "start": 21.533,
-            "end": 25.5705
+        {
+            "cs": {
+                "text": "Bydleli v chaloupce uprostřed lesa.",
+                "start": 21.533,
+                "end": 25.5705
+            },
+            "uk": {
+                "text": "Жили вони в хатинці посеред лісу.",
+                "start": 20.258,
+                "end": 24.2205
+            }
         },
-        "uk": {
-            "text": "Жили вони в хатинці посеред лісу.",
-            "start": 20.258,
-            "end": 24.2205
-        }
-    },
-    {
-        "cs": {
-            "text": "Tatínek pracoval jako dřevorubec a děti s ním často chodily do lesa, když tatínek pracoval.",
-            "start": 25.5705,
-            "end": 33.183
+        {
+            "cs": {
+                "text": "Tatínek pracoval jako dřevorubec a děti s ním často chodily do lesa, když tatínek pracoval.",
+                "start": 25.5705,
+                "end": 33.183
+            },
+            "uk": {
+                "text": "Татусь працював лісорубом, і діти часто ходили з ним до лісу, коли він працював.",
+                "start": 24.2205,
+                "end": 31.108
+            }
         },
-        "uk": {
-            "text": "Татусь працював лісорубом, і діти часто ходили з ним до лісу, коли він працював.",
-            "start": 24.2205,
-            "end": 31.108
+        {
+            "cs": {
+                "text": "Zatímco kácel stromy, děti si v lese hrály a mlsaly lesní jahody a borůvky.",
+                "start": 33.183,
+                "end": 40.1455
+            },
+            "uk": {
+                "text": "Поки він рубав дерева, діти гралися в лісі і ласували лісовою суницею та чорницею.",
+                "start": 31.108,
+                "end": 38.3455
+            }
         }
-    },
-    {
-        "cs": {
-            "text": "Zatímco kácel stromy, děti si v lese hrály a mlsaly lesní jahody a borůvky.",
-            "start": 33.183,
-            "end": 40.1455
-        },
-        "uk": {
-            "text": "Поки він рубав дерева, діти гралися в лісі і ласували лісовою суницею та чорницею.",
-            "start": 31.108,
-            "end": 38.3455
-        }
-    }
-]
+    ]
+}

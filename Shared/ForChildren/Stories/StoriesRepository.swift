@@ -9,7 +9,7 @@ import SwiftUI
 
 class StoriesRepository {
 
-    func loadStories() -> [StoryMetadata]? {
+    func loadStories() -> StoriesMetadata? {
         guard let asset = NSDataAsset(name: "data/stories/metadata") else {
             return nil
         }
@@ -17,6 +17,17 @@ class StoriesRepository {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
 
-        return try? decoder.decode([StoryMetadata].self, from: asset.data)
+        return try? decoder.decode(StoriesMetadata.self, from: asset.data)
+    }
+
+    func loadStory(slug: String) -> StoryMetadata? {
+        guard let asset = NSDataAsset(name: "data/stories/\(slug)/metadata") else {
+            return nil
+        }
+
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+
+        return try? decoder.decode(StoryMetadata.self, from: asset.data)
     }
 }

@@ -14,16 +14,19 @@ struct ForChildrenRootView<ViewModel: ForChildrenRootViewModeling>: View {
 
     var body: some View {
         NavigationView {
-            Group {
-                switch viewModel.state {
-                case .loading:
-                    loading
-                case .imagesOnly:
-                    images
-                case .imagesWithStories(let content):
-                    imagesWithStories(content: content)
+            ScrollView {
+                Group {
+                    switch viewModel.state {
+                    case .loading:
+                        loading
+                    case .imagesOnly:
+                        images
+                    case .imagesWithStories(let content):
+                        imagesWithStories(content: content)
+                    }
                 }
             }
+            .background(Color("colors/item"))
             .navigationTitle(RootItems.for_children.title)
         }
     }
@@ -44,33 +47,45 @@ struct ForChildrenRootView<ViewModel: ForChildrenRootViewModeling>: View {
 
     func imagesWithStories(content: [ForChildrenRootStoriesSection]) -> some View {
         VStack(alignment: .leading) {
-            // TODO: Localization and styling
             NavigationLink {
                 images
                     .navigationTitle("Obrázky")
             } label: {
-                Text("Obrázky")
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Obrázky")
+                            .bold()
+                            .foregroundColor(Color("colors/text"))
+                    }
+                    Spacer()
+                }
+                .padding()
+                .background(.white)
+                .cornerRadius(8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color("colors/inactive"))
+                )
+                .shadow(color: .black.opacity(0.08), radius: 4, x: 0, y: 2)
             }
+            .padding()
 
             let gridLayout: [GridItem] = [GridItem(.adaptive(minimum: 375))]
 
-            // TODO: Finish the card
             ForEach(content) { section in
-                Text(section.title)
+                Text(LocalizedStringKey(stringLiteral: "stories.list.origin.\(section.title)"))
+                    .fontWeight(.bold)
+                    .padding(.horizontal)
+                    .padding(.top)
                 LazyVGrid(columns: gridLayout, alignment: .center) {
-                    ForEach(section.stories) { item in
-                        CardView {
-                            Content {
-                                Text(item.title)
-                            }
-                            Footer {
-                                Text(item.title)
-                            }
-                        }
+                    ForEach(section.stories, id: \.self) { item in
+                        ForChildrenRootStoryView(item: item,
+                                                 selectedLanguage: languageStore.currentLanguage)
                     }
                 }
             }
         }
+        .padding(.bottom)
     }
 }
 
@@ -108,16 +123,7 @@ struct ForChildrenRootView_Previews: PreviewProvider {
                 MockViewModel(state:
                         .imagesWithStories(content:
                                             [
-                                                .init(
-                                                    title: "České",
-                                                    stories: [
-                                                        .init(
-                                                            title: "Title",
-                                                            image: "image",
-                                                            duration: "3 min"
-                                                        )
-                                                    ]
-                                                )
+                                                .init(title: "CZ", stories: [.mock])
                                             ]
                                           )
                 )

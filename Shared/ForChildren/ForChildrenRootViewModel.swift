@@ -7,12 +7,20 @@
 
 import Foundation
 
-struct ForChildrenRootStoriesSectionItem: Identifiable {
+extension ForChildrenRootStoriesSectionItem {
+    static let mock = ForChildrenRootStoriesSectionItem(title: "O perníkové chaloupce",
+                                                        image: "data/stories/pernikova-chaloupka/thumbnail",
+                                                        duration: "3 min",
+                                                        slug: "pernikova-chaloupka")
+}
+
+struct ForChildrenRootStoriesSectionItem: Identifiable, Hashable {
     var id: UUID { UUID() }
 
     let title: String
     let image: String
     let duration: String
+    let slug: String
 }
 
 struct ForChildrenRootStoriesSection: Identifiable {
@@ -53,22 +61,25 @@ class ForChildrenRootViewModel: ForChildrenRootViewModeling {
     func load() {
         guard
             case .loading = state,
-            let stories = storiesRepository.loadStories(),
-            !stories.isEmpty
+            let storyMetadata = storiesRepository.loadStories(),
+            !storyMetadata.stories.isEmpty
         else {
             state = .imagesOnly
             return
         }
 
-        let countryGroupedStories: [String: [StoryMetadata]] = .init(grouping: stories, by: { $0.origin })
+        let storiesSorted = storyMetadata.stories.sorted { $0.origin < $1.origin }
+        let countryGroupedStories: [String: [Story]] = .init(grouping: storiesSorted,
+                                                             by: { $0.origin })
 
         state = .imagesWithStories(content:
                                     countryGroupedStories.map {
             ForChildrenRootStoriesSection(title: $0.key,
                                           stories: $0.value.map {
                 ForChildrenRootStoriesSectionItem(title: $0.title["cs"] ?? "",
-                                                  image: "\($0.slug)/thumbnail",
-                                                  duration: "\($0.duration)")
+                                                  image: "data/stories/\($0.slug)/thumbnail",
+                                                  duration: "\($0.duration)",
+                                                  slug: $0.slug)
             })
         })
     }

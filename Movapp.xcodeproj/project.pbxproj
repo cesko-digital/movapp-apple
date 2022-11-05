@@ -76,6 +76,9 @@
 		B439F07228B64FEF002B270B /* OnBoardingToLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439F07128B64FEF002B270B /* OnBoardingToLearnView.swift */; };
 		B441606028BFD6A200DAE4A5 /* AlphabetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441605F28BFD6A200DAE4A5 /* AlphabetViewModel.swift */; };
 		B453C5D028B7A0C60015A815 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */; };
+		B475015C2910515B006810D8 /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B475015B2910515B006810D8 /* StoryViewModel.swift */; };
+		B475015E29105166006810D8 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B475015D29105166006810D8 /* StoryView.swift */; };
+		B48E91422916E3EC00965392 /* ForChildrenRootStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E91412916E3EC00965392 /* ForChildrenRootStoryView.swift */; };
 		B4AAA85D28E47A730061F9F6 /* AdaptiveStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */; };
 		B4C8BE83290A6B6500B51377 /* ForChildrenRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8BE82290A6B6500B51377 /* ForChildrenRootView.swift */; };
 		B4C8BE85290A6B7800B51377 /* ForChildrenRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8BE84290A6B7800B51377 /* ForChildrenRootViewModel.swift */; };
@@ -201,6 +204,9 @@
 		B453C5CD28B7775E0015A815 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B453C5CE28B7775F0015A815 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		B475015B2910515B006810D8 /* StoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
+		B475015D29105166006810D8 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		B48E91412916E3EC00965392 /* ForChildrenRootStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenRootStoryView.swift; sourceTree = "<group>"; };
 		B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveStack.swift; sourceTree = "<group>"; };
 		B4C8BE82290A6B6500B51377 /* ForChildrenRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenRootView.swift; sourceTree = "<group>"; };
 		B4C8BE84290A6B7800B51377 /* ForChildrenRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenRootViewModel.swift; sourceTree = "<group>"; };
@@ -405,6 +411,7 @@
 				B4244D61290AADEB00DEC1A9 /* Stories */,
 				B4C8BE82290A6B6500B51377 /* ForChildrenRootView.swift */,
 				B4C8BE84290A6B7800B51377 /* ForChildrenRootViewModel.swift */,
+				B48E91412916E3EC00965392 /* ForChildrenRootStoryView.swift */,
 			);
 			path = ForChildren;
 			sourceTree = "<group>";
@@ -533,6 +540,8 @@
 			children = (
 				B4244D62290AADFF00DEC1A9 /* StoriesRepository.swift */,
 				B4244D64290AB2D700DEC1A9 /* StoryMetadata.swift */,
+				B475015B2910515B006810D8 /* StoryViewModel.swift */,
+				B475015D29105166006810D8 /* StoryView.swift */,
 			);
 			path = Stories;
 			sourceTree = "<group>";
@@ -682,6 +691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B475015E29105166006810D8 /* StoryView.swift in Sources */,
 				B04021D02822E48700B756FB /* ScaleButtonStyle.swift in Sources */,
 				B04021C42822D43B00B756FB /* OnBoardingWelcomeView.swift in Sources */,
 				B4C8BE83290A6B6500B51377 /* ForChildrenRootView.swift in Sources */,
@@ -692,6 +702,7 @@
 				B01279A727F86957003FB72E /* RootContentView.swift in Sources */,
 				B087C89527F8B46A0015E54B /* PhrasesView.swift in Sources */,
 				B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */,
+				B475015C2910515B006810D8 /* StoryViewModel.swift in Sources */,
 				B0ECC1402802FC6F00BF9898 /* AlphabetItemView.swift in Sources */,
 				B439F07228B64FEF002B270B /* OnBoardingToLearnView.swift in Sources */,
 				B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */,
@@ -725,6 +736,7 @@
 				4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */,
 				B05FF14327FA14A00046D636 /* SoundService.swift in Sources */,
 				B0065D0E28319D3300EE84D8 /* PlayTranslationButtonView.swift in Sources */,
+				B48E91422916E3EC00965392 /* ForChildrenRootStoryView.swift in Sources */,
 				B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */,
 				B0C0F8E528060A310036441E /* ForChildrenRowView.swift in Sources */,
 				B04021C82822D46700B756FB /* OnBoardingRootView.swift in Sources */,

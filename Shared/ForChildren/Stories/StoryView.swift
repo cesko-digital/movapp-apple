@@ -45,8 +45,5 @@ struct StoryView_Previews: PreviewProvider {
     static var previews: some View {
         StoryView(viewModel: MockViewModel(.loading))
             .previewDisplayName("Loading")
-
-        StoryView(viewModel: MockViewModel(.loaded(content: .init())))
-            .previewDisplayName("Loaded")
     }
 }

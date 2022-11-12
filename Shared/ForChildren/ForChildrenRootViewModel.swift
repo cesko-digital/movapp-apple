@@ -59,9 +59,12 @@ class ForChildrenRootViewModel: ForChildrenRootViewModeling {
     }
 
     func load() {
+        guard case .loading = state else { return }
+
+        let storyMetadata = storiesRepository.loadStories()
+
         guard
-            case .loading = state,
-            let storyMetadata = storiesRepository.loadStories(),
+            case .success(let storyMetadata) = storyMetadata,
             !storyMetadata.stories.isEmpty
         else {
             state = .imagesOnly

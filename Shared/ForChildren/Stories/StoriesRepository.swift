@@ -9,25 +9,38 @@ import SwiftUI
 
 class StoriesRepository {
 
-    func loadStories() -> StoriesMetadata? {
+    func loadStories() -> Result<StoriesMetadata, Error> {
         guard let asset = NSDataAsset(name: "data/stories/metadata") else {
-            return nil
+            return .failure(AssetError(message: "`data/stories/metadata` not found"))
         }
 
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
 
-        return try? decoder.decode(StoriesMetadata.self, from: asset.data)
+        do {
+            let result = try decoder.decode(StoriesMetadata.self, from: asset.data)
+            return .success(result)
+        } catch {
+            return .failure(error)
+        }
     }
 
-    func loadStory(slug: String) -> StoryMetadata? {
+    func loadStory(slug: String) -> Result<StoryMetadata, Error> {
         guard let asset = NSDataAsset(name: "data/stories/\(slug)/metadata") else {
-            return nil
+            return .failure(AssetError(message: "\(slug) not found"))
         }
 
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-
-        return try? decoder.decode(StoryMetadata.self, from: asset.data)
+        do {
+            let result = try decoder.decode(StoryMetadata.self, from: asset.data)
+            return .success(result)
+        } catch {
+            return .failure(error)
+        }
     }
+}
+
+struct AssetError: Error {
+    let message: String
 }

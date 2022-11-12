@@ -8,12 +8,7 @@
 import Foundation
 
 struct StoryMetadata: Decodable {
-    let timeline: [StoryDetail]
-}
-
-struct StoryDetail: Decodable {
-    let cs: StoryDetailEntry
-    let uk: StoryDetailEntry
+    let timeline: [[String: StoryDetailEntry]]
 }
 
 struct StoryDetailEntry: Decodable {

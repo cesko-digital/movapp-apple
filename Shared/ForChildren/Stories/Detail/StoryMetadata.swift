@@ -24,7 +24,7 @@ struct StoriesMetadata: Decodable {
 struct Story: Decodable {
     let title: [String: String]
     let slug: String
-    let duration: Int
+    let duration: String
     let origin: String
     let supportedLanguages: [String]
 }

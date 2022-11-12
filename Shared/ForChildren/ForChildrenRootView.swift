@@ -7,85 +7,48 @@
 
 import SwiftUI
 
-struct ForChildrenRootView<ViewModel: ForChildrenRootViewModeling>: View {
+struct ForChildrenRootView: View {
 
-    @StateObject var viewModel: ViewModel
     @EnvironmentObject var languageStore: LanguageStore
 
     var body: some View {
         NavigationView {
-            ScrollView {
-                Group {
-                    switch viewModel.state {
-                    case .loading:
-                        loading
-                    case .imagesOnly:
-                        images
-                    case .imagesWithStories(let content):
-                        imagesWithStories(content: content)
-                    }
+            VStack {
+                // remove if when we will have support for all languages
+                if languageStore.currentLanguage == .csUk || languageStore.currentLanguage == .ukCs {
+                    router
+                } else {
+                    images
                 }
             }
-            .background(Color("colors/item"))
             .navigationTitle(RootItems.for_children.title)
         }
+        .background(Color("colors/item"))
     }
 
     var images: some View {
         ForChildrenView(selectedLanguage: languageStore.currentLanguage)
     }
 
-    var loading: some View {
-        // Align middle
-        VStack {
-            Spacer()
-            ProgressView().onAppear(perform: viewModel.load)
-            Spacer()
-        }
-        .frame(maxWidth: .infinity)
+    var storiesList: some View {
+        StoriesListView(viewModel: StoriesListViewModel())
     }
 
-    func imagesWithStories(content: [ForChildrenRootStoriesSection]) -> some View {
-        VStack(alignment: .leading) {
-            NavigationLink {
-                images
-                    .navigationTitle("Obrázky")
-            } label: {
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text("Obrázky")
-                            .bold()
-                            .foregroundColor(Color("colors/text"))
-                    }
-                    Spacer()
+    var router: some View {
+        // TODO: top padding
+        Section {
+            List {
+                NavigationLink("for.children.words") {
+                    images
+                        .navigationTitle("for.children.words")
                 }
-                .padding()
-                .background(.white)
-                .cornerRadius(8)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color("colors/inactive"))
-                )
-                .shadow(color: .black.opacity(0.08), radius: 4, x: 0, y: 2)
-            }
-            .padding()
 
-            let gridLayout: [GridItem] = [GridItem(.adaptive(minimum: 375))]
-
-            ForEach(content) { section in
-                Text(LocalizedStringKey(stringLiteral: "stories.list.origin.\(section.title)"))
-                    .fontWeight(.bold)
-                    .padding(.horizontal)
-                    .padding(.top)
-                LazyVGrid(columns: gridLayout, alignment: .center) {
-                    ForEach(section.stories, id: \.self) { item in
-                        ForChildrenRootStoryView(item: item,
-                                                 selectedLanguage: languageStore.currentLanguage)
-                    }
+                NavigationLink("for.children.stories") {
+                    storiesList
+                        .navigationTitle("for.children.stories")
                 }
             }
         }
-        .padding(.bottom)
     }
 }
 
@@ -97,38 +60,8 @@ struct ForChildrenRootView_Previews: PreviewProvider {
                                              dictionaryDataStore: dictionaryDataStore,
                                              forChildrenDataStore: forChildrenDataStore)
 
-    class MockViewModel: ForChildrenRootViewModeling {
-        var state: ForChildrenRootState
-
-        func load() { }
-
-        init(state: ForChildrenRootState) {
-            self.state = state
-        }
-    }
-
     static var previews: some View {
-        ForChildrenRootView(viewModel: MockViewModel(state: .loading))
-            .previewDisplayName("Loading state")
-            .environmentObject(languageStore)
-            .environmentObject(forChildrenDataStore)
-
-        ForChildrenRootView(viewModel: MockViewModel(state: .imagesOnly))
-            .previewDisplayName("Images only")
-            .environmentObject(languageStore)
-            .environmentObject(forChildrenDataStore)
-
-        ForChildrenRootView(
-            viewModel:
-                MockViewModel(state:
-                        .imagesWithStories(content:
-                                            [
-                                                .init(title: "CZ", stories: [.mock])
-                                            ]
-                                          )
-                )
-        )
-            .previewDisplayName("With stories")
+        ForChildrenRootView()
             .environmentObject(languageStore)
             .environmentObject(forChildrenDataStore)
     }

@@ -6,7 +6,7 @@
                 "uk": "Прянична хатинка"
             },
             "slug": "pernikova-chaloupka",
-            "duration": 180,
+            "duration": "3",
             "origin": "CZ",
             "supportedLanguages": [
                 "cs",
@@ -19,7 +19,7 @@
                 "uk": "Дванадцять місяців"
             },
             "slug": "dvanact-mesicku",
-            "duration": 180,
+            "duration": "3",
             "origin": "CZ",
             "supportedLanguages": [
                 "cs",
@@ -32,7 +32,7 @@
                 "uk": "Червона Шапочка"
             },
             "slug": "cervena-karkulka",
-            "duration": 180,
+            "duration": "3",
             "origin": "CZ",
             "supportedLanguages": [
                 "cs",
@@ -45,7 +45,7 @@
                 "uk": "Івасик-Телесик"
             },
             "slug": "ivasik-telesik",
-            "duration": 240,
+            "duration": "4",
             "origin": "UA",
             "supportedLanguages": [
                 "cs",
@@ -58,7 +58,7 @@
                 "uk": "Колобок"
             },
             "slug": "kolobok",
-            "duration": 180,
+            "duration": "3",
             "origin": "UA",
             "supportedLanguages": [
                 "cs",
@@ -71,7 +71,7 @@
                 "uk": "Гуси-Лебеді"
             },
             "slug": "husy-lebedi",
-            "duration": 180,
+            "duration": "3",
             "origin": "UA",
             "supportedLanguages": [
                 "cs",

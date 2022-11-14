@@ -5,6 +5,7 @@
 //  Created by Jakub Ruzicka on 31.10.2022.
 //
 
+import Combine
 import SwiftUI
 
 struct StoryView<ViewModel: StoryViewModeling>: View {
@@ -15,6 +16,8 @@ struct StoryView<ViewModel: StoryViewModeling>: View {
             switch viewModel.state {
             case .loading:
                 loading
+            case .error(let message):
+                error(message: message)
             case .loaded(let content):
                 loaded(content: content)
             }
@@ -26,13 +29,27 @@ struct StoryView<ViewModel: StoryViewModeling>: View {
             .onAppear(perform: viewModel.load)
     }
 
+    func error(message: String) -> some View {
+        Text("Error 😱: \(message)")
+    }
+
     func loaded(content: StoryContent) -> some View {
-        Text("Loaded")
+        VStack(alignment: .center) {
+            StoryHeadlineView(content: content.headline)
+
+            PlayerView(content: content.player) { button in
+                viewModel.buttonTapped.send(button)
+            }
+
+            Text("Loaded")
+        }
+        .frame(maxWidth: .infinity)
     }
 }
 
 struct StoryView_Previews: PreviewProvider {
     class MockViewModel: StoryViewModeling {
+        let buttonTapped = PassthroughSubject<PlayerButton, Never>()
         var state: StoryState
 
         init(_ state: StoryState) {

@@ -13,9 +13,10 @@ struct StoriesListItemView: View {
 
     var body: some View {
         NavigationLink {
-            StoryView(viewModel: StoryViewModel(slug: item.slug,
+            StoryView(viewModel: StoryViewModel(metadata: item,
                                                 selectedLanguage: selectedLanguage))
                 .navigationTitle(item.title)
+                .navigationBarTitleDisplayMode(.inline) // TODO: check if it doesn't make any issue
         } label: {
             ZStack(alignment: .bottomTrailing) {
                 HStack(spacing: 0) {

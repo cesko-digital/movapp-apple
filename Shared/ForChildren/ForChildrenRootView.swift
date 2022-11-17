@@ -22,8 +22,8 @@ struct ForChildrenRootView: View {
                 }
             }
             .navigationTitle(RootItems.for_children.title)
+            .background(Color("colors/item"))
         }
-        .background(Color("colors/item"))
     }
 
     var images: some View {
@@ -31,11 +31,10 @@ struct ForChildrenRootView: View {
     }
 
     var storiesList: some View {
-        StoriesListView(viewModel: StoriesListViewModel())
+        StoriesListView(viewModel: StoriesListViewModel(selectedLanguage: languageStore.currentLanguage))
     }
 
     var router: some View {
-        // TODO: top padding
         Section {
             List {
                 NavigationLink("for.children.words") {
@@ -49,6 +48,7 @@ struct ForChildrenRootView: View {
                 }
             }
         }
+        .padding(.top, 1)
     }
 }
 

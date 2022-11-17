@@ -53,8 +53,11 @@ class StoriesListViewModel: StoriesListViewModeling {
 
     private var cancellables: [AnyCancellable] = []
     private let storiesRepository = StoriesRepository()
+    private let selectedLanguage: SetLanguage
 
-    init() {
+    init(selectedLanguage: SetLanguage) {
+        self.selectedLanguage = selectedLanguage
+
         bind()
     }
 
@@ -78,20 +81,28 @@ class StoriesListViewModel: StoriesListViewModeling {
     }
 
     private func loaded(storyMetadata: StoriesMetadata) {
-        let storiesSorted = storyMetadata.stories.sorted { $0.origin < $1.origin }
+        let firstLanguage = selectedLanguage.languagePrefix
+        let secondLanguage = selectedLanguage.languageSuffix
+
+        let storiesSorted = storyMetadata.stories
+            .filter {
+                $0.supportedLanguages.contains(firstLanguage.rawValue)
+                || $0.supportedLanguages.contains(secondLanguage.rawValue)
+            }
+            .sorted { $0.origin < $1.origin }
         let countryGroupedStories: [String: [Story]] = .init(grouping: storiesSorted,
                                                              by: { $0.origin })
-        // TODO: dictionary doesn't have the same order all the time
-        state = .loaded(content: countryGroupedStories.map {
-            StoriesSection(title: $0.key,
-                           stories: $0.value.map {
-                // TODO: take language from user preferences
-                StoriesSectionItem(title: $0.title["cs"] ?? "",
-                                   subtitle: $0.title["uk"] ?? "",
-                                   image: "data/stories/\($0.slug)/thumbnail",
-                                   duration: "\($0.duration) min",
-                                   slug: $0.slug)
+        state = .loaded(content: countryGroupedStories
+            .sorted(by: { $0.key < $1.key })
+            .map {
+                StoriesSection(title: $0.key,
+                               stories: $0.value.map {
+                    StoriesSectionItem(title: $0.title[firstLanguage.rawValue] ?? "",
+                                       subtitle: $0.title[secondLanguage.rawValue] ?? "",
+                                       image: "data/stories/\($0.slug)/thumbnail",
+                                       duration: "\($0.duration) min",
+                                       slug: $0.slug)
+                })
             })
-        })
     }
 }

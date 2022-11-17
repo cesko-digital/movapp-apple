@@ -90,7 +90,7 @@ class StoryViewModel: StoryViewModeling {
     init(metadata: StoriesSectionItem, selectedLanguage: SetLanguage) {
         self.metadata = metadata
         self.languages = selectedLanguage
-        self.selectedLanguage = selectedLanguage.languagePrefix
+        self.selectedLanguage = selectedLanguage.languageSuffix
         repository = StoriesRepository()
 
         bind()

@@ -19,8 +19,7 @@ enum PlayerState {
 struct PlayerContent {
     let timer: PlayerTimer
     let state: PlayerState
-    let languages: [Languages]
-    let selectedLanguage: Languages
+    let languages: (selected: Languages, second: Languages)
 }
 
 struct PlayerTimer {
@@ -28,14 +27,14 @@ struct PlayerTimer {
     let maxTime: Double
 }
 
-struct SentenceContent {
+struct SentenceContent: Hashable {
     let text: String
     let isCurrent: Bool
     let start: Double
     let end: Double
 }
 
-struct StoryItemContent {
+struct StoryItemContent: Equatable {
     let sentences: [SentenceContent]
 }
 
@@ -48,8 +47,7 @@ struct StoryHeadline {
 struct StoryContent {
     let headline: StoryHeadline
     let player: PlayerContent
-    // let firstLanguage: StoryItemContent
-    // let secondLanguage: StoryItemContent
+    let story: StoryItemContent
 }
 
 enum StoryState {
@@ -79,8 +77,10 @@ class StoryViewModel: StoryViewModeling {
     let buttonTapped = PassthroughSubject<PlayerButton, Never>()
 
     private let metadata: StoriesSectionItem
-    private let selectedLanguage: SetLanguage
+    private let languages: SetLanguage
+    private var selectedLanguage: Languages
     private let repository: StoriesRepository
+    private var timelineMetadata: StoryMetadata?
 
     private var cancellables: [AnyCancellable] = []
 
@@ -89,7 +89,8 @@ class StoryViewModel: StoryViewModeling {
 
     init(metadata: StoriesSectionItem, selectedLanguage: SetLanguage) {
         self.metadata = metadata
-        self.selectedLanguage = selectedLanguage
+        self.languages = selectedLanguage
+        self.selectedLanguage = selectedLanguage.languagePrefix
         repository = StoriesRepository()
 
         bind()
@@ -106,28 +107,61 @@ class StoryViewModel: StoryViewModeling {
     func load() {
         do {
             try initPlayers()
-            let sentences = try loadSentences()
+            timelineMetadata = try loadSentences()
 
-            // TODO: transform data to reload
-            state = .loaded(content:
-                    .init(
-                        headline: .init(image: metadata.image, title: metadata.title, subtitle: metadata.subtitle),
-                        player: .init(
-                            timer: .init(currentTime: 0, maxTime: player!.duration),
-                            state: .paused,
-                            languages: [selectedLanguage.language.main, selectedLanguage.language.source],
-                            selectedLanguage: selectedLanguage.language.main
-                        )
-                    )
-            )
+            remake()
         } catch {
             state = .error(message: error.localizedDescription)
             return
         }
     }
 
+    private func getLanguages() -> (selected: Languages, second: Languages) {
+        let second: Languages = languages.language.main == selectedLanguage
+        ? languages.language.source
+        : languages.language.main
+        return (selected: selectedLanguage, second: second)
+    }
+
+    private func remake() {
+        state = .loaded(content:
+                .init(
+                    headline: .init(image: metadata.image, title: metadata.title, subtitle: metadata.subtitle),
+                    player: .init(
+                        timer: .init(currentTime: player?.currentTime ?? 0, maxTime: player?.duration ?? 0),
+                        state: player?.isPlaying == true ? .playing : .paused,
+                        languages: getLanguages()
+                    ),
+                    story: mateSentencesContent(timelineMetadata,
+                                                selectedLanguage: selectedLanguage,
+                                                currentTime: player?.currentTime ?? 0)
+                )
+        )
+    }
+
+    private func mateSentencesContent(
+        _ timeline: StoryMetadata?,
+        selectedLanguage: Languages,
+        currentTime: TimeInterval
+    ) -> StoryItemContent {
+        guard let timeline = timeline else { fatalError() }
+
+        let sentencesForLanguage = timeline.timeline
+            .compactMap { $0.first { $0.key == selectedLanguage.rawValue } }
+            .compactMap { $0.value }
+
+        return .init(sentences: sentencesForLanguage.map {
+            return .init(
+                text: $0.text,
+                isCurrent: currentTime >= $0.start && currentTime < $0.end,
+                start: $0.start,
+                end: $0.end
+            )
+        })
+    }
+
     private func initPlayers() throws {
-        player = try StoriesAudioPlayers(slug: metadata.slug, selectedLanguage: selectedLanguage)
+        player = try StoriesAudioPlayers(slug: metadata.slug, selectedLanguage: languages)
     }
 
     private func loadSentences() throws -> StoryMetadata {
@@ -142,28 +176,30 @@ class StoryViewModel: StoryViewModeling {
     }
 
     private func handleButton(action: PlayerButton) {
-        print("button tapped: \(action)")
-
         switch action {
         case .play:
             play()
         case .pause:
-            player?.pause()
+            pause()
         case .forward:
             player?.forward()
         case .backward:
             player?.backward()
         case .language(let selected):
+            selectedLanguage = selected
+            player?.pause()
             player?.switchLanguage()
+            player?.play()
         }
+
+        remake()
     }
 
     private func play() {
         player?.play()
 
         currentTimeTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-            // TODO: update time in view
-            print("\(self?.player?.currentTime)")
+            self?.remake()
         }
     }
 
@@ -187,6 +223,10 @@ class StoriesAudioPlayers {
 
     var currentTime: TimeInterval {
         currentPlayer.currentTime
+    }
+
+    var isPlaying: Bool {
+        currentPlayer.isPlaying
     }
 
     init(slug: String, selectedLanguage: SetLanguage) throws {
@@ -241,6 +281,10 @@ class StoryAudioPlayer: Equatable {
         avPlayer.currentTime
     }
 
+    var isPlaying: Bool {
+        avPlayer.isPlaying
+    }
+
     // MARK: - Initializer
 
     init(suffix: String) throws {
@@ -249,6 +293,10 @@ class StoryAudioPlayer: Equatable {
         }
 
         avPlayer = try AVAudioPlayer(data: data.data)
+        #if DEBUG
+        // REMOVE ME LATER
+        avPlayer.volume = 0
+        #endif
     }
 
     // MARK: - Functions

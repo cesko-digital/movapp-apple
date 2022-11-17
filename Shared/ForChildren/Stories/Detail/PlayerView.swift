@@ -31,7 +31,7 @@ struct PlayerView: View {
                     buttonForward
                 }
             }
-            languageButton(languages: content.languages, selected: content.selectedLanguage)
+            languageButton(languages: content.languages)
         }
     }
 
@@ -93,14 +93,27 @@ struct PlayerView: View {
         }
     }
 
-    func languageButton(languages: [Languages], selected: Languages) -> some View {
-        HStack {
-            ForEach(languages, id: \.self) { item in
-                Button("\(item.flag.rawValue) \(item == selected ? "✅" : "")") {
-                    buttonAction(.language(selected: item))
+    func languageButton(languages: (selected: Languages, second: Languages)) -> some View {
+            Button {
+                buttonAction(.language(selected: languages.second))
+            } label: {
+                ZStack {
+                    flagView(flag: languages.selected.flag)
+                        .padding(.trailing, 20)
+                    flagView(flag: languages.second.flag)
                 }
             }
-        }
+            .padding(.bottom, 8)
+            .padding(.trailing, 8)
+    }
+
+    private func flagView(flag: Flags) -> some View {
+        Image("icons/flags/\(flag.rawValue)")
+            .resizable()
+            .frame(width: 25, height: 25)
+            .clipShape(Circle())
+            .shadow(radius: 8)
+            .overlay(Circle().stroke(Color.black.opacity(0.5), lineWidth: 1))
     }
 
     private func formatTimeInterval(_ value: TimeInterval) -> String {
@@ -116,12 +129,10 @@ struct PlayerView_Previews: PreviewProvider {
     static var previews: some View {
         PlayerView(content: .init(timer: .init(currentTime: 0, maxTime: 180),
                                   state: .paused,
-                                  languages: [.cs, .uk],
-                                  selectedLanguage: .cs)) { _ in }
+                                  languages: (selected: .cs, second: .uk))) { _ in }
 
         PlayerView(content: .init(timer: .init(currentTime: 30, maxTime: 180),
                                   state: .playing,
-                                  languages: [.cs, .uk],
-                                  selectedLanguage: .cs)) { _ in }
+                                  languages: (selected: .uk, second: .cs))) { _ in }
     }
 }

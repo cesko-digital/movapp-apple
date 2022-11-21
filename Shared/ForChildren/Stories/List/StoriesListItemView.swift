@@ -22,10 +22,9 @@ struct StoriesListItemView: View {
                     Image(item.image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .cornerRadius(10)
-                        .padding(.leading, 12)
-                        .padding(.trailing, 6)
-                        .frame(width: 198, height: 140)
+                        .cornerRadius(6)
+                        .padding(6)
+                        .frame(width: 168)
 
                     VStack(alignment: .leading, spacing: 6) {
                         Text(item.title)
@@ -48,10 +47,10 @@ struct StoriesListItemView: View {
                 }
 
                 SoundStateButtonView(isPlaying: false, onTap: { })
-                    .padding(12)
+                    .padding(8)
             }
             .background(Color.white)
-            .cornerRadius(10)
+            .cornerRadius(12)
         }
     }
 }
@@ -61,7 +60,8 @@ struct StoriesListItemView_Previews: PreviewProvider {
         VStack {
             StoriesListItemView(item: .mock(), selectedLanguage: .csUk)
         }
-        .frame(width: 390, height: 800)
+        .padding()
         .background(Color("colors/item"))
+        .previewLayout(.sizeThatFits)
     }
 }

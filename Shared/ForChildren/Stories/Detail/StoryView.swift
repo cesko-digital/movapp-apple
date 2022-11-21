@@ -57,8 +57,8 @@ struct StoryView<ViewModel: StoryViewModeling>: View {
                                 .id(index)
                         }
                         .onChange(of: content.story) { _ in
-                            if let currenItem = content.story.sentences.firstIndex(where: { $0.isCurrent }) {
-                                reader.scrollTo(currenItem, anchor: .bottom)
+                            if let currentItem = content.story.sentences.firstIndex(where: { $0.isCurrent }) {
+                                reader.scrollTo(currentItem, anchor: .center)
                             }
                         }
                     }

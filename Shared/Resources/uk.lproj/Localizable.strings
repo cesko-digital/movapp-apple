@@ -48,3 +48,8 @@
 "ukrainian_accusative" = "українську";
 "polish_accusative" = "польську";
 "slovak_accusative" = "словацьку";
+
+"for.children.words" = "Слова";
+"for.children.stories" = "Казки";
+"stories.list.origin.CZ" = "Чеські народні казки";
+"stories.list.origin.UA" = "Українські народні казки";

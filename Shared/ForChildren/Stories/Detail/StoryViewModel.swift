@@ -161,7 +161,8 @@ class StoryViewModel: StoryViewModeling {
     }
 
     private func initPlayers() throws {
-        player = try StoriesAudioPlayers(slug: metadata.slug, selectedLanguage: languages)
+        let languages = getLanguages()
+        player = try StoriesAudioPlayers(slug: metadata.slug, main: languages.selected, second: languages.second)
     }
 
     private func loadSentences() throws -> StoryMetadata {
@@ -229,10 +230,9 @@ class StoriesAudioPlayers {
         currentPlayer.isPlaying
     }
 
-    init(slug: String, selectedLanguage: SetLanguage) throws {
-        let language = selectedLanguage.language
-        mainPlayer = try StoryAudioPlayer(suffix: "\(slug)/\(language.main.rawValue)")
-        secondPlayer = try StoryAudioPlayer(suffix: "\(slug)/\(language.source.rawValue)")
+    init(slug: String, main: Languages, second: Languages) throws {
+        mainPlayer = try StoryAudioPlayer(suffix: "\(slug)/\(main.rawValue)")
+        secondPlayer = try StoryAudioPlayer(suffix: "\(slug)/\(second.rawValue)")
 
         self.currentPlayer = mainPlayer
     }
@@ -272,6 +272,7 @@ class StoryAudioPlayer: Equatable {
 
     private let avPlayer: AVAudioPlayer
     private var observer: NSKeyValueObservation?
+    private var sessionCategory: AVAudioSession.Category?
 
     var duration: TimeInterval {
         avPlayer.duration
@@ -293,19 +294,22 @@ class StoryAudioPlayer: Equatable {
         }
 
         avPlayer = try AVAudioPlayer(data: data.data)
-        #if DEBUG
-        // REMOVE ME LATER
-        avPlayer.volume = 0
-        #endif
     }
 
     // MARK: - Functions
 
     func play() {
+        sessionCategory = AVAudioSession.sharedInstance().category
+        try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
+
         avPlayer.play()
     }
 
     func pause() {
+        if let sessionCategory = sessionCategory {
+            try? AVAudioSession.sharedInstance().setCategory(sessionCategory)
+        }
+
         avPlayer.pause()
     }
 

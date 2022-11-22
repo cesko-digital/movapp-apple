@@ -45,6 +45,14 @@ struct SetLanguage: Identifiable {
 
         return language.main
     }
+
+    var languageSuffix: Languages {
+        if flipFromWithTo {
+            return language.main
+        }
+
+        return language.source
+    }
 }
 
 extension SetLanguage: Hashable {

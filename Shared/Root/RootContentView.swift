@@ -35,7 +35,7 @@ struct RootContentView: View {
                 AlphabetView(viewModel: AlphabetViewModel(dataStore: AlphabetDataStore(), languageStore: languageStore))
                     .setTabItem(RootItems.alphabet)
 
-                ForChildrenView(selectedLanguage: languageStore.currentLanguage)
+                ForChildrenRootView()
                     .setTabItem(RootItems.for_children)
 
                 MenuView(viewModel: MenuViewModel(selectedLanguage: languageStore.currentLanguage,

@@ -28,6 +28,13 @@ struct MovappApp: App {
         appearance.configureWithTransparentBackground()
         appearance.backgroundColor = UIColor(Color("colors/primary"))
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        // white back text
+        appearance.backButtonAppearance.normal.titleTextAttributes = [.foregroundColor: UIColor.white]
+        // white back arrow
+        let image = UIImage(systemName: "chevron.backward")?
+            .withTintColor(.white, renderingMode: .alwaysOriginal)
+        appearance.setBackIndicatorImage(image, transitionMaskImage: image)
 
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().standardAppearance = appearance

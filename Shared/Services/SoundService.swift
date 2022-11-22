@@ -22,6 +22,8 @@ class SoundService: NSObject, ObservableObject {
 
     @Published var isPlaying: Bool = false
 
+    private var sessionCategory: AVAudioSession.Category?
+
     override init() {
         super.init()
     }
@@ -121,6 +123,8 @@ class SoundService: NSObject, ObservableObject {
 
     private func on () {
         isPlaying = true
+        sessionCategory = AVAudioSession.sharedInstance().category
+        try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
         try? AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
     }
 
@@ -134,6 +138,9 @@ class SoundService: NSObject, ObservableObject {
         // Trigger change
         isPlaying = false
 
+        if let sessionCategory = sessionCategory {
+            try? AVAudioSession.sharedInstance().setCategory(sessionCategory)
+        }
         try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
 
         tryToPlayNext()

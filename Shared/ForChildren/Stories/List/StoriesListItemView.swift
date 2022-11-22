@@ -14,7 +14,8 @@ struct StoriesListItemView: View {
     var body: some View {
         NavigationLink {
             StoryView(viewModel: StoryViewModel(metadata: item,
-                                                selectedLanguage: selectedLanguage))
+                                                selectedLanguage: selectedLanguage,
+                                                repository: StoriesRepository()))
                 .navigationTitle(item.title)
         } label: {
             ZStack(alignment: .bottomTrailing) {

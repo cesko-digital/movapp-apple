@@ -37,7 +37,7 @@ class StoryViewModel: StoryViewModeling {
     private let metadata: StoriesSectionItem
     private let languages: SetLanguage
     private var selectedLanguage: Languages
-    private let repository: StoriesRepository
+    private let repository: StoriesRepositoring
     private var timelineMetadata: StoryMetadata?
 
     private var cancellables: [AnyCancellable] = []
@@ -45,11 +45,11 @@ class StoryViewModel: StoryViewModeling {
     private var player: StoriesAudioPlayers?
     private var currentTimeTimer: Timer?
 
-    init(metadata: StoriesSectionItem, selectedLanguage: SetLanguage) {
+    init(metadata: StoriesSectionItem, selectedLanguage: SetLanguage, repository: StoriesRepositoring) {
         self.metadata = metadata
         self.languages = selectedLanguage
         self.selectedLanguage = selectedLanguage.languageSuffix
-        repository = StoriesRepository()
+        self.repository = repository
 
         bind()
     }

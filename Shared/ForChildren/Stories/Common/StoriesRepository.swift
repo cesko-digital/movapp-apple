@@ -7,7 +7,12 @@
 
 import SwiftUI
 
-class StoriesRepository {
+protocol StoriesRepositoring {
+    func loadStories() -> Result<StoriesMetadata, Error>
+    func loadStory(slug: String) -> Result<StoryMetadata, Error>
+}
+
+class StoriesRepository: StoriesRepositoring {
 
     func loadStories() -> Result<StoriesMetadata, Error> {
         guard let asset = NSDataAsset(name: "data/stories/metadata") else {

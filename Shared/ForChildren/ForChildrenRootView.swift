@@ -31,7 +31,8 @@ struct ForChildrenRootView: View {
     }
 
     var storiesList: some View {
-        StoriesListView(viewModel: StoriesListViewModel(selectedLanguage: languageStore.currentLanguage))
+        StoriesListView(viewModel: StoriesListViewModel(selectedLanguage: languageStore.currentLanguage,
+                                                        repository: StoriesRepository()))
     }
 
     var router: some View {

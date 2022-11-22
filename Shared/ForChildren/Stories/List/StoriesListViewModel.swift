@@ -52,11 +52,12 @@ class StoriesListViewModel: StoriesListViewModeling {
     let viewAppeared = PassthroughSubject<Void, Never>()
 
     private var cancellables: [AnyCancellable] = []
-    private let storiesRepository = StoriesRepository()
+    private let storiesRepository: StoriesRepositoring
     private let selectedLanguage: SetLanguage
 
-    init(selectedLanguage: SetLanguage) {
+    init(selectedLanguage: SetLanguage, repository: StoriesRepositoring) {
         self.selectedLanguage = selectedLanguage
+        self.storiesRepository = repository
 
         bind()
     }

@@ -84,6 +84,8 @@
 		B43C367D292C0FEC00D9AA40 /* StoryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C367C292C0FEC00D9AA40 /* StoryContent.swift */; };
 		B441606028BFD6A200DAE4A5 /* AlphabetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441605F28BFD6A200DAE4A5 /* AlphabetViewModel.swift */; };
 		B453C5D028B7A0C60015A815 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */; };
+		B46A2FC9292D63C0007CF5CB /* Christmas@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46A2FC7292D63BF007CF5CB /* Christmas@2x.png */; };
+		B46A2FCA292D63C0007CF5CB /* Christmas@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46A2FC8292D63C0007CF5CB /* Christmas@3x.png */; };
 		B475015C2910515B006810D8 /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B475015B2910515B006810D8 /* StoryViewModel.swift */; };
 		B475015E29105166006810D8 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B475015D29105166006810D8 /* StoryView.swift */; };
 		B48E91422916E3EC00965392 /* StoriesListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E91412916E3EC00965392 /* StoriesListItemView.swift */; };
@@ -219,6 +221,8 @@
 		B453C5CD28B7775E0015A815 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B453C5CE28B7775F0015A815 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		B46A2FC7292D63BF007CF5CB /* Christmas@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Christmas@2x.png"; sourceTree = "<group>"; };
+		B46A2FC8292D63C0007CF5CB /* Christmas@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Christmas@3x.png"; sourceTree = "<group>"; };
 		B475015B2910515B006810D8 /* StoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
 		B475015D29105166006810D8 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		B48E91412916E3EC00965392 /* StoriesListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListItemView.swift; sourceTree = "<group>"; };
@@ -512,6 +516,7 @@
 		B087C87E27F8A1F20015E54B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B46A2FC5292D632D007CF5CB /* AlternativeIcons */,
 				B087C88727F8A3BD0015E54B /* Localizable.strings */,
 			);
 			path = Resources;
@@ -623,6 +628,23 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		B46A2FC5292D632D007CF5CB /* AlternativeIcons */ = {
+			isa = PBXGroup;
+			children = (
+				B46A2FC6292D6336007CF5CB /* Christmas */,
+			);
+			path = AlternativeIcons;
+			sourceTree = "<group>";
+		};
+		B46A2FC6292D6336007CF5CB /* Christmas */ = {
+			isa = PBXGroup;
+			children = (
+				B46A2FC7292D63BF007CF5CB /* Christmas@2x.png */,
+				B46A2FC8292D63C0007CF5CB /* Christmas@3x.png */,
+			);
+			path = Christmas;
+			sourceTree = "<group>";
+		};
 		B4C8BE81290A6B3800B51377 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -727,8 +749,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0C9F40A27FCBF5500B075EB /* Launch Screen.storyboard in Resources */,
+				B46A2FCA292D63C0007CF5CB /* Christmas@3x.png in Resources */,
 				B01279A927F86957003FB72E /* Assets.xcassets in Resources */,
 				B087C88927F8A3BD0015E54B /* Localizable.strings in Resources */,
+				B46A2FC9292D63C0007CF5CB /* Christmas@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

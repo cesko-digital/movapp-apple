@@ -62,12 +62,55 @@ struct MovappApp: App {
                     .environmentObject(forChildrenDataStore)
                     .environmentObject(teamDataStore)
                     .environmentObject(onBoardingDataStore)
+                    .onAppear {
+                        setChristmasIconIfAvailable()
+                    }
             } else {
                 OnBoardingRootView()
                     .environmentObject(languageStore)
                     .environmentObject(onBoardingDataStore)
             }
+        }
+    }
 
+    private func setChristmasIconIfAvailable() {
+        let app = UIApplication.shared
+        let currentYear = Calendar.current.dateComponents([.year], from: Date()).year ?? 0
+
+        guard
+            app.supportsAlternateIcons,
+            let startDate = Calendar.current.date(from: DateComponents(year: currentYear, month: 12, day: 1)),
+            let endDate = Calendar.current.date(from: DateComponents(year: currentYear + 1, month: 1, day: 10))
+        else {
+            return
+        }
+
+        let christmasIconName = "Christmas"
+        let christmasSeason = DateInterval(start: startDate, end: endDate)
+        let isChristmasSeason = christmasSeason.contains(Date())
+        var shouldChangeIcon = false
+        var newIcon: String?
+
+        if isChristmasSeason, app.alternateIconName == nil {
+            shouldChangeIcon = true
+            newIcon = christmasIconName
+        }
+
+        if !isChristmasSeason, app.alternateIconName == christmasIconName {
+            shouldChangeIcon = true
+        }
+
+        guard shouldChangeIcon else { return }
+
+        // Hack to trigger the change due to dialog
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            Task { @MainActor in
+                do {
+                    try await UIApplication.shared.setAlternateIconName(newIcon)
+                } catch {
+                    print("\(error.localizedDescription)")
+                }
+            }
         }
     }
 }

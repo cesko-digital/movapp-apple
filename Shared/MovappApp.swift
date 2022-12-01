@@ -108,7 +108,7 @@ struct MovappApp: App {
                 do {
                     try await UIApplication.shared.setAlternateIconName(newIcon)
                 } catch {
-                    print("\(error.localizedDescription)")
+                    print("App icon failed to set: \(error.localizedDescription)")
                 }
             }
         }

@@ -144,7 +144,7 @@ def imageset_content_json(path, item)
 end
 
 def main
-    system("git clone git@github.com:cesko-digital/movapp-data.git tmp")
+    system("git clone https://github.com/cesko-digital/movapp-data.git tmp")
 
     puts "data..."
     read_folder("cs-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER, true)

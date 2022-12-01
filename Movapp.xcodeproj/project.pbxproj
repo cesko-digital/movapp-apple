@@ -91,6 +91,8 @@
 		B48E91422916E3EC00965392 /* StoriesListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E91412916E3EC00965392 /* StoriesListItemView.swift */; };
 		B4AAA85D28E47A730061F9F6 /* AdaptiveStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */; };
 		B4C8BE83290A6B6500B51377 /* ForChildrenRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8BE82290A6B6500B51377 /* ForChildrenRootView.swift */; };
+		B4F518E9293937280002D166 /* Christmas@3x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F518E8293937280002D166 /* Christmas@3x~ipad.png */; };
+		B4F518EB293937340002D166 /* Christmas@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F518EA293937340002D166 /* Christmas@2x~ipad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,6 +230,8 @@
 		B48E91412916E3EC00965392 /* StoriesListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListItemView.swift; sourceTree = "<group>"; };
 		B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveStack.swift; sourceTree = "<group>"; };
 		B4C8BE82290A6B6500B51377 /* ForChildrenRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenRootView.swift; sourceTree = "<group>"; };
+		B4F518E8293937280002D166 /* Christmas@3x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Christmas@3x~ipad.png"; sourceTree = "<group>"; };
+		B4F518EA293937340002D166 /* Christmas@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Christmas@2x~ipad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -639,6 +643,8 @@
 		B46A2FC6292D6336007CF5CB /* Christmas */ = {
 			isa = PBXGroup;
 			children = (
+				B4F518EA293937340002D166 /* Christmas@2x~ipad.png */,
+				B4F518E8293937280002D166 /* Christmas@3x~ipad.png */,
 				B46A2FC7292D63BF007CF5CB /* Christmas@2x.png */,
 				B46A2FC8292D63C0007CF5CB /* Christmas@3x.png */,
 			);
@@ -748,6 +754,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F518E9293937280002D166 /* Christmas@3x~ipad.png in Resources */,
+				B4F518EB293937340002D166 /* Christmas@2x~ipad.png in Resources */,
 				B0C9F40A27FCBF5500B075EB /* Launch Screen.storyboard in Resources */,
 				B46A2FCA292D63C0007CF5CB /* Christmas@3x.png in Resources */,
 				B01279A927F86957003FB72E /* Assets.xcassets in Resources */,

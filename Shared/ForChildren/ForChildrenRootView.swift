@@ -24,6 +24,7 @@ struct ForChildrenRootView: View {
             .navigationTitle(RootItems.for_children.title)
             .background(Color("colors/item"))
         }
+        .navigationViewStyle(.stack)
     }
 
     var images: some View {

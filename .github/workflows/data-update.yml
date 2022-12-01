@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: DataUpdate
-      - run: ruby update-data.rb
+        run: ruby update-data.rb

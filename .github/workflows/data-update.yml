@@ -1,6 +1,7 @@
 name: Data update
 
 on:
+  push:
   workflow_dispatch:
 
 jobs:

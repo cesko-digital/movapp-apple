@@ -1,0 +1,12 @@
+name: Data update
+
+on:
+  workflow_dispatch:
+
+jobs:
+  DataUpdate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: DataUpdate
+      - run: ruby update-data.rb

@@ -3,7 +3,7 @@ require 'fileutils'
 ORIGIN_FOLDER="tmp/data"
 DESTINATION_FOLDER="Shared/Assets.xcassets/data"
 
-def read_folder(folder, destination_folder, origin_folder)
+def read_folder(folder, destination_folder, origin_folder, is_in_path)
     folder_path="#{origin_folder}/#{folder}"
     destination_path="#{destination_folder}/#{folder}"
     
@@ -14,7 +14,7 @@ def read_folder(folder, destination_folder, origin_folder)
         if item == "." || item == ".."
             next
         elsif File.directory?("#{folder_path}/#{item}")
-            read_folder(item, destination_path, folder_path)
+            read_folder(item, destination_path, folder_path, false)
         elsif File.extname(item) == ".json"
             copy_dataset(destination_path, folder_path, item)
         elsif File.extname(item) == ".mp3"
@@ -22,7 +22,11 @@ def read_folder(folder, destination_folder, origin_folder)
         end
     }
     
-    folder_content_json(destination_path)
+    if is_in_path
+      folder_content_json(destination_path)
+    else
+      folder_withoutpath_content_json(destination_path)
+    end
 end
 
 def copy_dataset(to_folder, folder_path, file_name)
@@ -67,7 +71,7 @@ def folder_content_json(folder_path)
   }
 end
 
-def image_folder_content_json(folder_path)
+def folder_withoutpath_content_json(folder_path)
   File.open("#{folder_path}/Contents.json", "w") { |f| 
       f.write "{
   \"info\" : {
@@ -93,6 +97,8 @@ def images()
         copy_images(images_folder, destination_folder, item)
     end
   }
+  
+  folder_content_json(destination_folder)
 end
 
 def copy_images(origin, destination, item)
@@ -105,7 +111,7 @@ def copy_images(origin, destination, item)
   FileUtils.cp("#{image_path_prefix}@3x.png", "#{asset_path}/#{item}@3x.png")
   
   imageset_content_json(asset_path, item)
-  image_folder_content_json("#{destination}/#{item}")
+  folder_withoutpath_content_json("#{destination}/#{item}")
 end
 
 def imageset_content_json(path, item)
@@ -141,14 +147,14 @@ def main
     system("git clone git@github.com:cesko-digital/movapp-data.git tmp")
 
     puts "data..."
-    read_folder("cs-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
-    read_folder("cs-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER)
-    read_folder("pl-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
-    read_folder("pl-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER)
-    read_folder("sk-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
-    read_folder("sk-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER)
-    read_folder("uk-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
-    read_folder("uk-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER)
+    read_folder("cs-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER, true)
+    read_folder("cs-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER, true)
+    read_folder("pl-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER, true)
+    read_folder("pl-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER, true)
+    read_folder("sk-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER, true)
+    read_folder("sk-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER, true)
+    read_folder("uk-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER, true)
+    read_folder("uk-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER, true)
     copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "cs-uk-alphabet.json")
     copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "pl-uk-alphabet.json")
     copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "sk-uk-alphabet.json")

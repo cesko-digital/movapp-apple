@@ -1,7 +1,6 @@
 name: Data update
 
 on:
-  push:
   workflow_dispatch:
 
 jobs:
@@ -20,4 +19,4 @@ jobs:
           base: main
           delete-branch: true
           title: '[Automatically created] updated data'
-          reviewers: kubito # pionl
+          reviewers: kubito,pionl

@@ -1,6 +1,8 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+
+## [1.5.0, build 36] - 2022-12-03Z
 - update of data 
 
 ## [1.5.0, build 34] - 2022-11-25Z

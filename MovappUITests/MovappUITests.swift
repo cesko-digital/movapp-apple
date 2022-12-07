@@ -28,8 +28,8 @@ class MovappUITests: XCTestCase {
     func testHomescreen() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
-
         app.setSeenOnBoarding(true)
+        app.disableSetIcon()
 
         app.launch()
 
@@ -46,6 +46,7 @@ class MovappUITests: XCTestCase {
 
     func assertOnBoarding(_ app: XCUIApplication) throws {
         app.setSeenOnBoarding(false)
+        app.disableSetIcon()
 
         app.launch()
 

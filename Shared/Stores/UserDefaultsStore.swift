@@ -17,6 +17,7 @@ enum DataVersion: Int {
 struct UserDefaultsStore {
 
     private let onBoardingCompleteKey = "onboarding.complete"
+    private let canSetIcon = "disable.setIcon"
     private let favoritesKey = "favorite.translations"
     private let favoritesVersionKey = "favorite.translations.version"
     private let languageKey = "language"
@@ -29,6 +30,10 @@ struct UserDefaultsStore {
 
     func getOnBoardingComplete() -> Bool {
         return userDefaults.bool(forKey: onBoardingCompleteKey)
+    }
+    
+    func disableSetIcon() -> Bool {
+        return userDefaults.bool(forKey: canSetIcon)
     }
 
     func storeOnBoardingComplete(_ value: Bool = true) {

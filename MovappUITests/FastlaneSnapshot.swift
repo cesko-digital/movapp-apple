@@ -31,6 +31,9 @@ class FastlaneSnapshot: XCTestCase {
         setupSnapshot(app)
 
         app.setSeenOnBoarding(true)
+        app.disableSetIcon()
+        
+        // TODO get adjust dictionary language based on UI language
 
         app.launch()
 

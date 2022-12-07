@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Generate screenshots for iPad (without christmass icon change)
+
 ## [1.5.0, build 36] - 2022-12-03Z
 - update of data 
 

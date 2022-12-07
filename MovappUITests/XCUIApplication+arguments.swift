@@ -13,6 +13,11 @@ extension XCUIApplication {
         // The key must be se same as user default key
         launchArguments += ["-onboarding.complete", seen ? "true" : "false"]
     }
+    
+    func disableSetIcon(_ disable: Bool = true) {
+        // The key must be se same as user default key
+        launchArguments += ["-disable.setIcon", disable ? "true" : "false"]
+    }
 
     func setLanguageTo(_ languageKey: String) {
         launchArguments += ["-AppleLanguages", "(\(languageKey))"]

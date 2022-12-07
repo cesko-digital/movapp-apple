@@ -74,6 +74,10 @@ struct MovappApp: App {
     }
 
     private func setChristmasIconIfAvailable() {
+        guard userDefaultsStore.disableSetIcon() == false else {
+            return
+        }
+        
         let app = UIApplication.shared
         let currentYear = Calendar.current.dateComponents([.year], from: Date()).year ?? 0
 

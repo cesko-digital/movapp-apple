@@ -143,6 +143,18 @@ def imageset_content_json(path, item)
   }
 end
 
+def update_changelog_if_possible
+  status = `git status -s`
+
+  if status.empty? == false
+      filename = "CHANGELOG.md"
+      text = File.read(filename)
+      puts = text.gsub("## [Unreleased]", "## [Unreleased]
+- Update data from movapp-apple repository at #{Time.new}")
+      File.open(filename, "w") { |file| file << puts }
+  end
+end
+
 def main
     system("git clone https://github.com/cesko-digital/movapp-data.git tmp")
 
@@ -173,6 +185,10 @@ def main
 
     puts "🧹🧹🧹🧹🧹"
     FileUtils.rm_rf("tmp/", :verbose => true)
+    
+    puts "update changelog if possible"
+    update_changelog_if_possible()
+    
     puts "All ✅"
 end
 

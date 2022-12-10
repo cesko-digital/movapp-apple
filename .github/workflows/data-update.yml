@@ -12,16 +12,6 @@ jobs:
       - name: DataUpdate
         run: ruby update-data.rb
 
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.3.22
-          bundler-cache: true
-
-      - name: Update CHANGELOG.md
-        run: |
-          bundle install
-          bundle exec fastlane update_changelog_data_update
-
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:

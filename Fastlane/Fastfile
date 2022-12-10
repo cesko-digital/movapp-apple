@@ -136,3 +136,16 @@ end
 lane :tests do
   run_tests(scheme: "MovappUITests")
 end
+
+desc "Update changelog after data update"
+lane :update_changelog_data_update do
+    status = sh("git status -s")
+
+    if status.empty? == false
+        filename = "../CHANGELOG.md"
+        text = File.read(filename)
+        puts = text.gsub("## [Unreleased]", "## [Unreleased]
+- Update data from movapp-apple repository at #{Time.new}")
+        File.open(filename, "w") { |file| file << puts }
+    end
+end

@@ -14,6 +14,8 @@ jobs:
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
         with:
           commit-message: 'Update data to latest version (from movapp-data repository)'
           committer: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
@@ -23,5 +25,3 @@ jobs:
           delete-branch: true
           title: 'Update data to latest version (from movapp-data repository)'
           reviewers: kubito,pionl
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}

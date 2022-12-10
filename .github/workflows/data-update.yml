@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+
       - name: DataUpdate
         run: ruby update-data.rb
 
-      - name: Install ruby
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.3.22

@@ -12,6 +12,10 @@ jobs:
         run: ruby update-data.rb
         
       - name: Update CHANGELOG.md
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.3.22
+          bundler-cache: true
         run: |
           bundle install
           bundle exec fastlane update_changelog_data_update

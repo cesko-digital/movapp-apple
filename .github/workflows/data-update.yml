@@ -23,3 +23,5 @@ jobs:
           delete-branch: true
           title: 'Update data to latest version (from movapp-data repository)'
           reviewers: kubito,pionl
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}

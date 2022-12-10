@@ -10,12 +10,14 @@ jobs:
       - uses: actions/checkout@v1
       - name: DataUpdate
         run: ruby update-data.rb
-        
-      - name: Update CHANGELOG.md
+
+      - name: Install ruby
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.3.22
           bundler-cache: true
+
+      - name: Update CHANGELOG.md
         run: |
           bundle install
           bundle exec fastlane update_changelog_data_update

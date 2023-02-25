@@ -2,6 +2,9 @@ name: Data update
 
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types:
+      - data-update
 
 jobs:
   DataUpdate:

@@ -291,19 +291,19 @@
 			],
 			"examples": [
 				{
-					"sound_url": "https://data.movapp.eu/sk-sounds/e/e4dde7c303730b37e4e3ad80cb0966bc.mp3",
-					"translation": "lékárna",
-					"transcription": "лекарна"
+					"sound_url": "https://data.movapp.eu/sk-sounds/7/7074d8eb383e942f5c4fc9f44def8fe4.mp3",
+					"translation": "pekné",
+					"transcription": "пекне"
 				},
 				{
-					"sound_url": "https://data.movapp.eu/sk-sounds/b/b8e6b611bba846b5cd4d665b049fb0d2.mp3",
-					"translation": "jméno",
-					"transcription": "ймено"
+					"sound_url": "https://data.movapp.eu/sk-sounds/e/efb05e3c36544ebe196c87236427ff6a.mp3",
+					"translation": "moderné",
+					"transcription": "модерне"
 				},
 				{
-					"sound_url": "https://data.movapp.eu/sk-sounds/7/782983df68edf61b6728ebad9797e362.mp3",
-					"translation": "létat",
-					"transcription": "летат"
+					"sound_url": "https://data.movapp.eu/sk-sounds/8/87ce547460d49bd4830540d7c0abf984.mp3",
+					"translation": "dobré",
+					"transcription": "добре"
 				}
 			],
 			"sound_url": "https://data.movapp.eu/sk-alphabet/recpIeGlaNirLi1ef.mp3",

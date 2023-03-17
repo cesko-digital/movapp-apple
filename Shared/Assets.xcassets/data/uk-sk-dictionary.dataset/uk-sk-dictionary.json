@@ -44,6 +44,8 @@
 				"rec5ESWWEmlhG3B3V",
 				"recNRbY25IwSsoSA1",
 				"recEhGWfM69BfRzh4",
+				"reccrnxFUG6y5EiSY",
+				"recjKY99S4lW8QI4n",
 				"recav4Dd88YtCsOTm",
 				"recCVUTHAKlSx4B5W",
 				"recjmKpH0gEHyTiYK",
@@ -710,24 +712,41 @@
 			},
 			"description": "",
 			"phrases": [
+				"rec6TSNkfP1ZvhIZT",
+				"recBqK8zIW99OwSrU",
+				"recErvwkn15hFNyAU",
+				"recxCSjB46QuirsvF",
+				"rec3sPc11Pjuk75Ee",
 				"rec1dwHGozH6On3tA",
 				"recczDGWkRxxeTTbe",
 				"recIrQ6iM1ji5p12a",
 				"recaKuzJ9gZJ9fWdD",
 				"recuoNn8jqW4yOkAE",
+				"reclJpo7msDuXu4zS",
+				"recS1zduZLUT1MYNR",
+				"recZ5WNaCgKgUK3mB",
+				"recM1issQlcrpnyiU",
 				"rec92ykMlrHPnoNsd",
 				"recb6YIieebY99G8e",
+				"recPyVM0ZJ2ojDeJz",
+				"recJGqDG14sTciHXe",
 				"rec7R2A03pYULkuZz",
 				"recH7Zrk4wdsjvrBO",
 				"rechocEejzAyTDAF1",
+				"recMXDgJabxpcrONR",
+				"recx0ZYK1mTelAqlk",
 				"recOpL4d9N4xU28nw",
 				"recYOvhbgHzUKOHSX",
 				"rec0wOGJZY7g5zfOl",
 				"recebMzjLN90LJRXy",
 				"rec5sDP5l9s28dIfz",
+				"recujnI9pf0pU1IS1",
+				"reclFDRAP29qjFXkk",
+				"recisKk3XrKv8Gzdv",
 				"recREzNbv1QINRig2",
 				"recO5TW9XCtii0I4z",
 				"recWlI1iNeP9jiJ5C",
+				"recBOqz6QwzlgamG1",
 				"recVCJFWEUwm0eM9M",
 				"recLIgJdcDMNfubFO",
 				"recsQcyGpXfz3C9WH",
@@ -1994,6 +2013,20 @@
 			},
 			"image_url": null
 		},
+		"reccrnxFUG6y5EiSY": {
+			"id": "reccrnxFUG6y5EiSY",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/8/8c8bf25bfffa3cd9532dfc214af118ff.mp3",
+				"translation": "Ako si mám vybaviť...",
+				"transcription": "Ако сі мам вибавіть"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/49f655af22ae95837f636696816a1228.mp3",
+				"translation": "Як можна отримати...",
+				"transcription": "Jak možna otrymaty"
+			},
+			"image_url": null
+		},
 		"recfmNWpMKpfXdiKs": {
 			"id": "recfmNWpMKpfXdiKs",
 			"main": {
@@ -2075,6 +2108,20 @@
 				"sound_url": "https://data.movapp.eu/uk-sounds/6/69deecb5dba77551471dc1d6364c2dd4.mp3",
 				"translation": "Який телефонний номер...",
 				"transcription": "Jakyj telefonnyj nomer"
+			},
+			"image_url": null
+		},
+		"recjKY99S4lW8QI4n": {
+			"id": "recjKY99S4lW8QI4n",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/a/a07fff34bc7769e02ae1c5fe15eb3ba2.mp3",
+				"translation": "Kde si môžem vybaviť...",
+				"transcription": "Кде сі мyoжем вибавіть"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/4f800e74300c94b673785da2639a47d2.mp3",
+				"translation": "Де можна отримати...",
+				"transcription": "De možna otrymaty"
 			},
 			"image_url": null
 		},
@@ -2470,6 +2517,104 @@
 			},
 			"image_url": null
 		},
+		"recxCSjB46QuirsvF": {
+			"id": "recxCSjB46QuirsvF",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/9/959dcc9f59a83d8887c1bb2ccf3e5615.mp3",
+				"translation": "zimný",
+				"transcription": "зімни"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/2/27c0a20ee65fd24efcfea36014155092.mp3",
+				"translation": "зимовий",
+				"transcription": "zymovyj"
+			},
+			"image_url": null
+		},
+		"recBqK8zIW99OwSrU": {
+			"id": "recBqK8zIW99OwSrU",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/3/3303569ce979e2ee56c26bcd0689ee39.mp3",
+				"translation": "letný",
+				"transcription": "летни"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/2/255a7fa98c18eff7d5380c2581c12f17.mp3",
+				"translation": "літній",
+				"transcription": "litnij"
+			},
+			"image_url": null
+		},
+		"recErvwkn15hFNyAU": {
+			"id": "recErvwkn15hFNyAU",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/8/8a2cbaf166965b1707f720d6d0bcc234.mp3",
+				"translation": "jesenný",
+				"transcription": "єсенни"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/a/a01adc2a805ac3b74ebe62f5f826d503.mp3",
+				"translation": "осінній",
+				"transcription": "osinnij"
+			},
+			"image_url": null
+		},
+		"rec6TSNkfP1ZvhIZT": {
+			"id": "rec6TSNkfP1ZvhIZT",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/0/0196a08c8b07df27d782b18def4c42c0.mp3",
+				"translation": "jarný",
+				"transcription": "ярни"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/5/5355a05b56def1858bebd72f597ec1e1.mp3",
+				"translation": "весняний",
+				"transcription": "vesnjanyj"
+			},
+			"image_url": null
+		},
+		"recM1issQlcrpnyiU": {
+			"id": "recM1issQlcrpnyiU",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/1/19c6156a0ab2a481c0fb2cb9c00138df.mp3",
+				"translation": "Tmavý. Tmavá",
+				"transcription": "Тмави Тмава"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/402b1b48b573fa89ad51c28e2dc6c142.mp3",
+				"translation": "Темний. Темна",
+				"transcription": "Temnyj Temna"
+			},
+			"image_url": null
+		},
+		"recS1zduZLUT1MYNR": {
+			"id": "recS1zduZLUT1MYNR",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/0/09a796f716c764a566e015d0399be34e.mp3",
+				"translation": "Tenký. Tenká",
+				"transcription": "Тенки Тенка"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/6e10f7457cdf3b2f287578c291367b20.mp3",
+				"translation": "Тонкий. Тонка",
+				"transcription": "Tonkyj Tonka"
+			},
+			"image_url": null
+		},
+		"reclJpo7msDuXu4zS": {
+			"id": "reclJpo7msDuXu4zS",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/b/b3ad4153fd7697ffa158bc70a3ee6bd8.mp3",
+				"translation": "Teplý. Teplá",
+				"transcription": "Тепли Тепла"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/b/b651b4f9bd028142a7a73f8cdfa25199.mp3",
+				"translation": "Теплий. Тепла",
+				"transcription": "Teplyj Tepla"
+			},
+			"image_url": null
+		},
 		"recuoNn8jqW4yOkAE": {
 			"id": "recuoNn8jqW4yOkAE",
 			"main": {
@@ -2498,6 +2643,20 @@
 			},
 			"image_url": null
 		},
+		"recZ5WNaCgKgUK3mB": {
+			"id": "recZ5WNaCgKgUK3mB",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/1/19802728a9bca5cf144f5fc7a7a78330.mp3",
+				"translation": "Svetlý. Svetlá",
+				"transcription": "Светли Светла"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/3/3e31f9c79a537709cbd0ae24c9036023.mp3",
+				"translation": "Світлий. Світла",
+				"transcription": "Svitlyj Svitla"
+			},
+			"image_url": null
+		},
 		"rec1dwHGozH6On3tA": {
 			"id": "rec1dwHGozH6On3tA",
 			"main": {
@@ -2509,6 +2668,20 @@
 				"sound_url": "https://data.movapp.eu/uk-sounds/7/7cd4e431a2bb44e6f1d1daf77d834a08.mp3",
 				"translation": "теплі спортивні штани",
 				"transcription": "tepli sportyvni štany"
+			},
+			"image_url": null
+		},
+		"rec3sPc11Pjuk75Ee": {
+			"id": "rec3sPc11Pjuk75Ee",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/8/8b55c6e2a955c40c795fdbdca6490c9e.mp3",
+				"translation": "športové oblečenie",
+				"transcription": "шпортове облеченіе"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/2/2bd51604220a58ff4c60518548e4d40f.mp3",
+				"translation": "спортивний костюм",
+				"transcription": "sportyvnyj kosťum"
 			},
 			"image_url": null
 		},
@@ -2537,6 +2710,34 @@
 				"sound_url": "https://data.movapp.eu/uk-sounds/b/b1907aa36c78b9eb8ea9225cce66e31b.mp3",
 				"translation": "лосини",
 				"transcription": "losyny"
+			},
+			"image_url": null
+		},
+		"recPyVM0ZJ2ojDeJz": {
+			"id": "recPyVM0ZJ2ojDeJz",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/6/6e1911e1d2195521136787908528345d.mp3",
+				"translation": "pančuchy",
+				"transcription": "панчухи"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/9/94bf7b64412224c69bd1db943659f37c.mp3",
+				"translation": "колготки",
+				"transcription": "kolhotky"
+			},
+			"image_url": null
+		},
+		"recJGqDG14sTciHXe": {
+			"id": "recJGqDG14sTciHXe",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/d/dc7af28619d1cb695fcf23435c7e3a26.mp3",
+				"translation": "podprsenka",
+				"transcription": "подпрсенка"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/a/a37b08d15150f1ead4f1306b9bd62f54.mp3",
+				"translation": "бюстгальтер",
+				"transcription": "bjusthalter"
 			},
 			"image_url": null
 		},
@@ -2582,6 +2783,20 @@
 			},
 			"image_url": null
 		},
+		"recMXDgJabxpcrONR": {
+			"id": "recMXDgJabxpcrONR",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/5/55cf1a0dd0da59c1dbc7a901151a3c5e.mp3",
+				"translation": "halenka",
+				"transcription": "галенка"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/9/904735b9d0d8723e233a910beecbec58.mp3",
+				"translation": "жіноча сорочка",
+				"transcription": "žinoča soročka"
+			},
+			"image_url": null
+		},
 		"recOpL4d9N4xU28nw": {
 			"id": "recOpL4d9N4xU28nw",
 			"main": {
@@ -2593,6 +2808,34 @@
 				"sound_url": "https://data.movapp.eu/uk-sounds/e/e7e18edaeb08b6c0742870fae7e2b99d.mp3",
 				"translation": "толстовка",
 				"transcription": "tolstovka"
+			},
+			"image_url": null
+		},
+		"recujnI9pf0pU1IS1": {
+			"id": "recujnI9pf0pU1IS1",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/4/4e1679d918efb7fda0e3987f0316a154.mp3",
+				"translation": "kraťasy",
+				"transcription": "кратяси"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/6909ba8b15dc5cd906bfee960b458084.mp3",
+				"translation": "шорти",
+				"transcription": "šorty"
+			},
+			"image_url": null
+		},
+		"recx0ZYK1mTelAqlk": {
+			"id": "recx0ZYK1mTelAqlk",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/a/aca61df3ca74fd9862c883449ab9a03f.mp3",
+				"translation": "blúzka",
+				"transcription": "блузка"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/7d738e403567593ceccb09ec57b40d9b.mp3",
+				"translation": "блуза",
+				"transcription": "bluza"
 			},
 			"image_url": null
 		},
@@ -2722,6 +2965,20 @@
 			},
 			"image_url": null
 		},
+		"reclFDRAP29qjFXkk": {
+			"id": "reclFDRAP29qjFXkk",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/a/ade89fe8bdfcea29dfcb056cef3d156d.mp3",
+				"translation": "šaty",
+				"transcription": "шати"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/5/53a6fd67fdc13e8b6657cd245159f68a.mp3",
+				"translation": "сукня",
+				"transcription": "suknja"
+			},
+			"image_url": null
+		},
 		"recsQcyGpXfz3C9WH": {
 			"id": "recsQcyGpXfz3C9WH",
 			"main": {
@@ -2733,6 +2990,20 @@
 				"sound_url": "https://data.movapp.eu/uk-sounds/a/a6a218fe8bfee0f45be2d06f4f27ce95.mp3",
 				"translation": "рукавиці",
 				"transcription": "rukavyci"
+			},
+			"image_url": null
+		},
+		"recBOqz6QwzlgamG1": {
+			"id": "recBOqz6QwzlgamG1",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/7/74dfaa215a6602acf57a104333d9bd0e.mp3",
+				"translation": "kabát",
+				"transcription": "кабат"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/5/5df51995c6e14bbed6e09224baad8218.mp3",
+				"translation": "пальто",
+				"transcription": "palto"
 			},
 			"image_url": null
 		},
@@ -2775,6 +3046,20 @@
 				"sound_url": "https://data.movapp.eu/uk-sounds/a/adc481bbc69df51bccf4b019a61de676.mp3",
 				"translation": "рукавички",
 				"transcription": "rukavyčky"
+			},
+			"image_url": null
+		},
+		"recisKk3XrKv8Gzdv": {
+			"id": "recisKk3XrKv8Gzdv",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/5/531f92f7fc973dcb2bb5aef850a38c2a.mp3",
+				"translation": "sukňa",
+				"transcription": "сукня"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/6838b69a308c8b11fc9d639c12e7e0d2.mp3",
+				"translation": "спідниця",
+				"transcription": "spidnycja"
 			},
 			"image_url": null
 		},

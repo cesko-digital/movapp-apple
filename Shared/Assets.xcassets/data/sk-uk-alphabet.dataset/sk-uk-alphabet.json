@@ -244,9 +244,14 @@
 			],
 			"examples": [
 				{
-					"sound_url": "https://data.movapp.eu/sk-sounds/9/98258caa416b98664154e2b8d7b9ee49.mp3",
-					"translation": "džem. džús",
-					"transcription": "джем джус"
+					"sound_url": "https://data.movapp.eu/sk-sounds/7/7fefdb45933c1ee888a2b08a6ba04684.mp3",
+					"translation": "džem",
+					"transcription": "джем"
+				},
+				{
+					"sound_url": "https://data.movapp.eu/sk-sounds/c/c47a135407c35ca4333a80d7b24a9237.mp3",
+					"translation": "džús",
+					"transcription": "джус"
 				},
 				{
 					"sound_url": "https://data.movapp.eu/sk-sounds/1/1b0332e6115280adbbb01a964370a7bd.mp3",

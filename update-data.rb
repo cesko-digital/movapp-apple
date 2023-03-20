@@ -184,12 +184,11 @@ def main
     puts "images ✅"
     
     puts "stories.."
-    # Je ještě potřeba pak předělat appku aby to mělo správně obrázky
     read_folder("stories", DESTINATION_FOLDER, ORIGIN_FOLDER, true, true)
     puts "stories ✅"
 
     puts "🧹🧹🧹🧹🧹"
-    #FileUtils.rm_rf("tmp/", :verbose => true)
+    FileUtils.rm_rf("tmp/", :verbose => true)
     
     puts "update changelog if possible"
     update_changelog_if_possible()

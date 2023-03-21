@@ -9,6 +9,8 @@ jobs:
     runs-on: macos-12
     steps:
       - uses: actions/checkout@v2
+        with: 
+          token: ${{ secrets.ACTIONS_TOKEN }}
       - name: Run fastlane
         run: |
           git config user.name 'github-actions[bot]'

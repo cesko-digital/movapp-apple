@@ -1,4 +1,5 @@
 name: Bump version
+description: After Appstore deployment this will create a new version for next release.
 
 on:
   workflow_dispatch:
@@ -9,6 +10,8 @@ jobs:
     runs-on: macos-12
     steps:
       - uses: actions/checkout@v2
+        with: 
+          token: ${{ secrets.ACTIONS_TOKEN }}
       - name: Run fastlane
         run: |
           git config user.name 'github-actions[bot]'

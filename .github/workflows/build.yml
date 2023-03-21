@@ -1,4 +1,5 @@
 name: Test
+description: Checks if the project can be built and runs tests
 
 on:
   push:

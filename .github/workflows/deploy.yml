@@ -1,4 +1,5 @@
 name: Deploy
+description: Deploys new version to app_store, generates screenshots and publish them on Github Pages.
 
 on:
   push:

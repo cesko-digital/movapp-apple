@@ -1,3 +1,4 @@
+# Release a new minor version
 name: Release
 
 on:

@@ -1,5 +1,5 @@
+# After Appstore deployment this will create a new version for next release.
 name: Bump version
-description: After Appstore deployment this will create a new version for next release.
 
 on:
   workflow_dispatch:

@@ -1,5 +1,5 @@
+# Fetches new data from movapp-data. Triggered externally.
 name: Data update
-description: Fetches new data from movapp-data. Triggered externally.
 
 on:
   workflow_dispatch:

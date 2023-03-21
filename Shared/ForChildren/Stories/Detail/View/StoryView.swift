@@ -111,7 +111,7 @@ struct StoryView_Previews: PreviewProvider {
 
         StoryView(viewModel: MockViewModel(
             .loaded(content:
-                    .init(headline: .init(image: "data/stories/cervena-karkulka/thumbnail",
+                    .init(headline: .init(image: "images/cervena-karkulka",
                                           title: "O perníkové chaloupce",
                                           subtitle: "Прянична хатинка"),
                           player: .init(timer: .init(currentTime: 0, maxTime: 180),

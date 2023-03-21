@@ -12,7 +12,7 @@ extension StoriesSectionItem {
     static func mock() -> StoriesSectionItem {
         StoriesSectionItem(title: "O perníkové chaloupce",
                            subtitle: "Прянична хатинка",
-                           image: "data/stories/cervena-karkulka/thumbnail",
+                           image: "images/cervena-karkulka",
                            duration: "3 min",
                            slug: "pernikova-chaloupka")
     }
@@ -100,7 +100,7 @@ class StoriesListViewModel: StoriesListViewModeling {
                                stories: $0.value.map {
                     StoriesSectionItem(title: $0.title[firstLanguage.rawValue] ?? "",
                                        subtitle: $0.title[secondLanguage.rawValue] ?? "",
-                                       image: "data/stories/\($0.slug)/thumbnail",
+                                       image: "images/\($0.slug)",
                                        duration: "\($0.duration) min",
                                        slug: $0.slug)
                 })

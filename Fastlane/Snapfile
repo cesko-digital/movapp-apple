@@ -4,9 +4,10 @@
 devices([
   "iPhone 14 Pro Max",
   "iPhone 8 Plus",
-  "iPad Pro (12.9-inch) (2nd generation)",
   "iPad Pro (12.9-inch) (6th generation)"
 ])
+# TODO we need to generate screenshot for iPad but Github is missing this
+#"iPad Pro (12.9-inch) (2nd generation)"
 
 languages([
    "cs",

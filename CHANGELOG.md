@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.6.0, build 43] - 2023-03-22Z
+
 - Improve Github Actions - Publishing screenshots
 
 ## [1.6.0, build 42] - 2023-03-21Z

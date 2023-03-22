@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+- Improve Github Actions - Publishing screenshots
+
 ## [1.6.0, build 42] - 2023-03-21Z
 - Use data for stories from movapp-data
 - Update data from movapp-apple repository at 2023-03-19 12:30:24 +0000

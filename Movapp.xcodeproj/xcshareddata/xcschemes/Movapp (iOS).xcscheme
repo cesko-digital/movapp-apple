@@ -26,7 +26,8 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -35,6 +36,17 @@
                BlueprintIdentifier = "B08B0DE1281FBB28000EAEF1"
                BuildableName = "MovappUITests.xctest"
                BlueprintName = "MovappUITests"
+               ReferencedContainer = "container:Movapp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B4DD701229CF26EB00112F3A"
+               BuildableName = "MovappTests.xctest"
+               BlueprintName = "MovappTests"
                ReferencedContainer = "container:Movapp.xcodeproj">
             </BuildableReference>
          </TestableReference>

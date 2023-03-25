@@ -91,12 +91,22 @@
 		B48E91422916E3EC00965392 /* StoriesListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E91412916E3EC00965392 /* StoriesListItemView.swift */; };
 		B4AAA85D28E47A730061F9F6 /* AdaptiveStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */; };
 		B4C8BE83290A6B6500B51377 /* ForChildrenRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8BE82290A6B6500B51377 /* ForChildrenRootView.swift */; };
+		B4DD701629CF26EB00112F3A /* StoriesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD701529CF26EB00112F3A /* StoriesRepositoryTests.swift */; };
+		B4DD701D29CF2EF300112F3A /* TeamDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD701C29CF2EF300112F3A /* TeamDataStoreTests.swift */; };
+		B4DD701F29CF2FD200112F3A /* DictionaryDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD701E29CF2FD200112F3A /* DictionaryDataStoreTests.swift */; };
 		B4F518E9293937280002D166 /* Christmas@3x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F518E8293937280002D166 /* Christmas@3x~ipad.png */; };
 		B4F518EB293937340002D166 /* Christmas@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F518EA293937340002D166 /* Christmas@2x~ipad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		B08B0DE8281FBB28000EAEF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B012799027F86954003FB72E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B012799B27F86957003FB72E;
+			remoteInfo = "Movapp (iOS)";
+		};
+		B4DD701729CF26EB00112F3A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B012799027F86954003FB72E /* Project object */;
 			proxyType = 1;
@@ -230,6 +240,10 @@
 		B48E91412916E3EC00965392 /* StoriesListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListItemView.swift; sourceTree = "<group>"; };
 		B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveStack.swift; sourceTree = "<group>"; };
 		B4C8BE82290A6B6500B51377 /* ForChildrenRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenRootView.swift; sourceTree = "<group>"; };
+		B4DD701329CF26EB00112F3A /* MovappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4DD701529CF26EB00112F3A /* StoriesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesRepositoryTests.swift; sourceTree = "<group>"; };
+		B4DD701C29CF2EF300112F3A /* TeamDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataStoreTests.swift; sourceTree = "<group>"; };
+		B4DD701E29CF2FD200112F3A /* DictionaryDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataStoreTests.swift; sourceTree = "<group>"; };
 		B4F518E8293937280002D166 /* Christmas@3x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Christmas@3x~ipad.png"; sourceTree = "<group>"; };
 		B4F518EA293937340002D166 /* Christmas@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Christmas@2x~ipad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -244,6 +258,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B08B0DDF281FBB28000EAEF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4DD701029CF26EB00112F3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -344,6 +365,7 @@
 				444E96FB2812DF8C00DC6F8B /* WatchMovapp */,
 				444E97062812DF8E00DC6F8B /* WatchMovapp WatchKit Extension */,
 				B08B0DE3281FBB28000EAEF1 /* MovappUITests */,
+				B4DD701429CF26EB00112F3A /* MovappTests */,
 				B012799D27F86957003FB72E /* Products */,
 				B01279E027F88504003FB72E /* Frameworks */,
 			);
@@ -377,6 +399,7 @@
 			children = (
 				B012799C27F86957003FB72E /* Movapp.app */,
 				B08B0DE2281FBB28000EAEF1 /* MovappUITests.xctest */,
+				B4DD701329CF26EB00112F3A /* MovappTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -661,6 +684,16 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		B4DD701429CF26EB00112F3A /* MovappTests */ = {
+			isa = PBXGroup;
+			children = (
+				B4DD701E29CF2FD200112F3A /* DictionaryDataStoreTests.swift */,
+				B4DD701529CF26EB00112F3A /* StoriesRepositoryTests.swift */,
+				B4DD701C29CF2EF300112F3A /* TeamDataStoreTests.swift */,
+			);
+			path = MovappTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -704,6 +737,24 @@
 			productReference = B08B0DE2281FBB28000EAEF1 /* MovappUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B4DD701229CF26EB00112F3A /* MovappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4DD701B29CF26EB00112F3A /* Build configuration list for PBXNativeTarget "MovappTests" */;
+			buildPhases = (
+				B4DD700F29CF26EB00112F3A /* Sources */,
+				B4DD701029CF26EB00112F3A /* Frameworks */,
+				B4DD701129CF26EB00112F3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4DD701829CF26EB00112F3A /* PBXTargetDependency */,
+			);
+			name = MovappTests;
+			productName = MovappTests;
+			productReference = B4DD701329CF26EB00112F3A /* MovappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -711,7 +762,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					B012799B27F86957003FB72E = {
@@ -719,6 +770,10 @@
 					};
 					B08B0DE1281FBB28000EAEF1 = {
 						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = B012799B27F86957003FB72E;
+					};
+					B4DD701229CF26EB00112F3A = {
+						CreatedOnToolsVersion = 14.2;
 						TestTargetID = B012799B27F86957003FB72E;
 					};
 				};
@@ -745,6 +800,7 @@
 			targets = (
 				B012799B27F86957003FB72E /* Movapp (iOS) */,
 				B08B0DE1281FBB28000EAEF1 /* MovappUITests */,
+				B4DD701229CF26EB00112F3A /* MovappTests */,
 			);
 		};
 /* End PBXProject section */
@@ -765,6 +821,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B08B0DE0281FBB28000EAEF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4DD701129CF26EB00112F3A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -888,6 +951,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B4DD700F29CF26EB00112F3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4DD701F29CF2FD200112F3A /* DictionaryDataStoreTests.swift in Sources */,
+				B4DD701D29CF2EF300112F3A /* TeamDataStoreTests.swift in Sources */,
+				B4DD701629CF26EB00112F3A /* StoriesRepositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -895,6 +968,11 @@
 			isa = PBXTargetDependency;
 			target = B012799B27F86957003FB72E /* Movapp (iOS) */;
 			targetProxy = B08B0DE8281FBB28000EAEF1 /* PBXContainerItemProxy */;
+		};
+		B4DD701829CF26EB00112F3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B012799B27F86957003FB72E /* Movapp (iOS) */;
+			targetProxy = B4DD701729CF26EB00112F3A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1158,6 +1236,51 @@
 			};
 			name = Release;
 		};
+		B4DD701929CF26EB00112F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.movapp.app.MovappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Movapp";
+			};
+			name = Debug;
+		};
+		B4DD701A29CF26EB00112F3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.movapp.app.MovappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Movapp";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1184,6 +1307,15 @@
 			buildConfigurations = (
 				B08B0DEA281FBB28000EAEF1 /* Debug */,
 				B08B0DEB281FBB28000EAEF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4DD701B29CF26EB00112F3A /* Build configuration list for PBXNativeTarget "MovappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4DD701929CF26EB00112F3A /* Debug */,
+				B4DD701A29CF26EB00112F3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

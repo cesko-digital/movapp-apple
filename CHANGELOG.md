@@ -1,6 +1,7 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+- Added unit tests for checking data correction and fixed issue with some sounds
 - Update data from movapp-apple repository at 2023-03-23 14:49:53 +0000
 
 ## [1.6.0, build 43] - 2023-03-22Z

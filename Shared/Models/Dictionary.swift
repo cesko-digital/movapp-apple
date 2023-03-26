@@ -59,11 +59,10 @@ extension Dictionary.Phrase {
         let transcription: String
 
         var soundFileName: String? {
-            if soundUrl == nil {
-                return nil
-            }
+            guard let soundUrl = soundUrl, let soundUri = URL(string: soundUrl) else { return nil }
 
-            return translation.md5Hash()
+            let relativePath = soundUri.deletingPathExtension().relativePath.dropFirst()
+            return String(relativePath)
         }
     }
 }

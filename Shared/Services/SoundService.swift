@@ -64,9 +64,9 @@ class SoundService: NSObject, ObservableObject {
         }
 
         if let soundFileName = translation.soundFileName {
-            play(soundFileName, inDirectory: "data/\(language.rawValue)-sounds")
+            play(soundFileName, inDirectory: "data")
         } else {
-            print("Cant play sound, missing sound or un-suported language", language, translation)
+            print("Cant play sound, missing sound or unsupported language", language, translation)
         }
     }
 

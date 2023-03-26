@@ -54,12 +54,12 @@ extension Dictionary.Category {
 
 extension Dictionary.Phrase {
     struct Translation: Decodable {
-        let soundUrl: String?
+        let soundUrl: String
         let translation: String
         let transcription: String
 
         var soundFileName: String? {
-            guard let soundUrl = soundUrl, let soundUri = URL(string: soundUrl) else { return nil }
+            guard let soundUri = URL(string: soundUrl) else { return nil }
 
             let relativePath = soundUri.deletingPathExtension().relativePath.dropFirst()
             return String(relativePath)

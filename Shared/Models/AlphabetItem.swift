@@ -13,7 +13,7 @@ struct AlphabetItem: Decodable {
         soundUrl: "https://data.movapp.eu/data/CS-alphabet/recOMNxm02MGy3r7I.mp3",
         letters: ["A", "a"],
         transcription: "[a]",
-        examples: [Dictionary.Phrase.Translation(soundUrl: nil, translation: "abeceda", transcription: "абецеда")]
+        examples: [Dictionary.Phrase.Translation(soundUrl: "nil", translation: "abeceda", transcription: "абецеда")]
     )
 
     let id: String

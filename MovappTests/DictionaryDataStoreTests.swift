@@ -10,78 +10,36 @@ import XCTest
 
 final class DictionaryDataStoreTests: XCTestCase {
 
-    func testLoadCsUk() throws {
-        let dataStore = DictionaryDataStore()
+    private func loadTest(dataStore: DictionaryDataStore, language: SetLanguage) {
+        dataStore.load(language: language)
 
-        dataStore.load(language: .csUk)
-
-        XCTAssertFalse(dataStore.loading)
-        XCTAssertNil(dataStore.error)
-        XCTAssertNotNil(dataStore.dictionary)
+        XCTAssertFalse(dataStore.loading, "DataStore should be finished loading.")
+        XCTAssertNil(dataStore.error, "DataStore should not have an error.")
+        XCTAssertNotNil(dataStore.dictionary, "DataStore has empty dictionary.")
 
         dataStore.dictionary?.phrases.values.forEach { phrase in
             if let soundFileName = phrase.source.soundFileName {
-                let sound = NSDataAsset(name: "data/uk-sounds/\(soundFileName)")
-                XCTAssertNotNil(sound, "\(soundFileName) not found \(soundFileName)")
+                let sound = NSDataAsset(name: "data/\(soundFileName)")
+                XCTAssertNotNil(sound, "\(soundFileName) not found at data/\(soundFileName)")
+            } else {
+                XCTFail("There is issue with phrase: \(phrase.source.soundUrl)")
             }
-        }
 
-        dataStore.dictionary?.phrases.values.forEach { phrase in
             if let soundFileName = phrase.main.soundFileName {
-                let sound = NSDataAsset(name: "data/cs-sounds/\(soundFileName)")
-                XCTAssertNotNil(sound, "\(soundFileName) not found \(soundFileName)")
+                let sound = NSDataAsset(name: "data/\(soundFileName)")
+                XCTAssertNotNil(sound, "\(soundFileName) not found at data/\(soundFileName)")
+            } else {
+                XCTFail("There is issue with phrase: \(phrase.main.soundUrl)")
             }
         }
     }
 
-    func testLoadPlUk() throws {
+    func testLoadingOfAllLanguages() throws {
         let dataStore = DictionaryDataStore()
 
-        dataStore.load(language: .plUk)
-
-        XCTAssertFalse(dataStore.loading)
-        XCTAssertNil(dataStore.error)
-        XCTAssertNotNil(dataStore.dictionary)
-    }
-
-    func testLoadSkUk() throws {
-        let dataStore = DictionaryDataStore()
-
-        dataStore.load(language: .skUk)
-
-        XCTAssertFalse(dataStore.loading)
-        XCTAssertNil(dataStore.error)
-        XCTAssertNotNil(dataStore.dictionary)
-    }
-
-    func testLoadUkCs() throws {
-        let dataStore = DictionaryDataStore()
-
-        dataStore.load(language: .ukCs)
-
-        XCTAssertFalse(dataStore.loading)
-        XCTAssertNil(dataStore.error)
-        XCTAssertNotNil(dataStore.dictionary)
-    }
-
-    func testLoadUkPl() throws {
-        let dataStore = DictionaryDataStore()
-
-        dataStore.load(language: .ukPl)
-
-        XCTAssertFalse(dataStore.loading)
-        XCTAssertNil(dataStore.error)
-        XCTAssertNotNil(dataStore.dictionary)
-    }
-
-    func testLoadUkSk() throws {
-        let dataStore = DictionaryDataStore()
-
-        dataStore.load(language: .ukSk)
-
-        XCTAssertFalse(dataStore.loading)
-        XCTAssertNil(dataStore.error)
-        XCTAssertNotNil(dataStore.dictionary)
+        SetLanguage.allCases.forEach { language in
+            loadTest(dataStore: dataStore, language: language)
+        }
     }
 
     func testSoundUri() throws {

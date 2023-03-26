@@ -54,16 +54,15 @@ extension Dictionary.Category {
 
 extension Dictionary.Phrase {
     struct Translation: Decodable {
-        let soundUrl: String?
+        let soundUrl: String
         let translation: String
         let transcription: String
 
         var soundFileName: String? {
-            if soundUrl == nil {
-                return nil
-            }
+            guard let soundUri = URL(string: soundUrl) else { return nil }
 
-            return translation.md5Hash()
+            let relativePath = soundUri.deletingPathExtension().relativePath.dropFirst()
+            return String(relativePath)
         }
     }
 }

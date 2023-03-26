@@ -43,6 +43,17 @@
                </Test>
             </SkippedTests>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B4DD701229CF26EB00112F3A"
+               BuildableName = "MovappTests.xctest"
+               BlueprintName = "MovappTests"
+               ReferencedContainer = "container:Movapp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

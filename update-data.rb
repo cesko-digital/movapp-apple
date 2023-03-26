@@ -3,7 +3,7 @@ require 'fileutils'
 ORIGIN_FOLDER="tmp/data"
 DESTINATION_FOLDER="Shared/Assets.xcassets/data"
 
-def read_folder(folder, destination_folder, origin_folder, is_in_path, second_level_path)
+def read_folder(folder, destination_folder, origin_folder)
     folder_path="#{origin_folder}/#{folder}"
     destination_path="#{destination_folder}/#{folder}"
     
@@ -14,7 +14,7 @@ def read_folder(folder, destination_folder, origin_folder, is_in_path, second_le
         if item == "." || item == ".."
             next
         elsif File.directory?("#{folder_path}/#{item}")
-            read_folder(item, destination_path, folder_path, second_level_path, second_level_path)
+            read_folder(item, destination_path, folder_path)
         elsif File.extname(item) == ".json"
             copy_dataset(destination_path, folder_path, item)
         elsif File.extname(item) == ".mp3"
@@ -22,11 +22,7 @@ def read_folder(folder, destination_folder, origin_folder, is_in_path, second_le
         end
     }
     
-    if is_in_path
-      folder_content_json(destination_path)
-    else
-      folder_withoutpath_content_json(destination_path)
-    end
+    folder_content_json(destination_path)
 end
 
 def copy_dataset(to_folder, folder_path, file_name)
@@ -159,14 +155,14 @@ def main
     system("git clone https://github.com/cesko-digital/movapp-data.git tmp")
 
     puts "data..."
-    read_folder("cs-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER, true, false)
-    read_folder("cs-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER, true, false)
-    read_folder("pl-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER, true, false)
-    read_folder("pl-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER, true, false)
-    read_folder("sk-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER, true, false)
-    read_folder("sk-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER, true, false)
-    read_folder("uk-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER, true, false)
-    read_folder("uk-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER, true, false)
+    read_folder("cs-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
+    read_folder("cs-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER)
+    read_folder("pl-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
+    read_folder("pl-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER)
+    read_folder("sk-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
+    read_folder("sk-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER)
+    read_folder("uk-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
+    read_folder("uk-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER)
     copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "cs-uk-alphabet.json")
     copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "pl-uk-alphabet.json")
     copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "sk-uk-alphabet.json")
@@ -184,7 +180,7 @@ def main
     puts "images ✅"
     
     puts "stories.."
-    read_folder("stories", DESTINATION_FOLDER, ORIGIN_FOLDER, true, true)
+    read_folder("stories", DESTINATION_FOLDER, ORIGIN_FOLDER)
     puts "stories ✅"
 
     puts "🧹🧹🧹🧹🧹"

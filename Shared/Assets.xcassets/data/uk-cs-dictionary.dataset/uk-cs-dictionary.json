@@ -383,7 +383,7 @@
 			"phrases": [
 				"recr1qgET9nd7yt9M",
 				"recdogFuAhuTCho58",
-				"recSYiEmTuPAfAVXQ",
+				"recqtLT372bupblsY",
 				"reccA1NLVG0Oh1Vl9",
 				"recu4S0iN203xcy7B",
 				"recOHGly6JHjrRQ5n",
@@ -4923,20 +4923,6 @@
 			},
 			"image_url": null
 		},
-		"recSYiEmTuPAfAVXQ": {
-			"id": "recSYiEmTuPAfAVXQ",
-			"main": {
-				"sound_url": "https://data.movapp.eu/cs-sounds/9/9be941ca17aea8f59e626a8720cd14df.mp3",
-				"translation": "vajíčko",
-				"transcription": "ваїчко"
-			},
-			"source": {
-				"sound_url": "https://data.movapp.eu/uk-sounds/2/2dd7976f20017669cf4d10509ef34054.mp3",
-				"translation": "яєчко",
-				"transcription": "jaječko"
-			},
-			"image_url": null
-		},
 		"recTxQ4q6kc9LNdGA": {
 			"id": "recTxQ4q6kc9LNdGA",
 			"main": {
@@ -6494,14 +6480,14 @@
 		"recqtLT372bupblsY": {
 			"id": "recqtLT372bupblsY",
 			"main": {
-				"sound_url": "https://data.movapp.eu/cs-sounds/9/9be941ca17aea8f59e626a8720cd14df.mp3",
-				"translation": "vajíčko",
-				"transcription": "ваїчко"
+				"sound_url": "https://data.movapp.eu/cs-sounds/9/9e7837ed3e268f33cf8d38a2ce2b4c6c.mp3",
+				"translation": "kraslice",
+				"transcription": "красліце"
 			},
 			"source": {
-				"sound_url": "https://data.movapp.eu/uk-sounds/2/2dd7976f20017669cf4d10509ef34054.mp3",
-				"translation": "яєчко",
-				"transcription": "jaječko"
+				"sound_url": "https://data.movapp.eu/uk-sounds/9/970ed0bda3a3ce39b661640fd07bf7a3.mp3",
+				"translation": "писанка",
+				"transcription": "pysanka"
 			},
 			"image_url": "https://data.movapp.eu/images/source/recqtLT372bupblsY/recqtLT372bupblsY.svg"
 		},

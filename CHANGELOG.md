@@ -1,8 +1,6 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
-
-## [1.6.0, build 2] - 2023-03-31Z
 - Update data from movapp-apple repository at 2023-03-28 10:16:05 +0000
 - Update data from movapp-apple repository at 2023-03-27 14:15:41 +0000
 - Update data from movapp-apple repository at 2023-03-26 21:08:57 +0000

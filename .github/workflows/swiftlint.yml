@@ -10,9 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+        with:
+          args: --global --add safe.directory /github/workspace
+          
       - name: GitHub Action for SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
         env:
           DIFF_BASE: ${{ github.base_ref }}
         with:
-          args: --config .swiftlint.yml --strict --global --add safe.directory /github/workspace
+          args: --config .swiftlint.yml --strict

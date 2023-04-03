@@ -22,6 +22,18 @@ extension Dictionary {
         let id: String
         let name: Name
         let phrases: [PhraseID]
+        private let hidden: Bool?
+
+        var isHidden: Bool {
+            return hidden == true
+        }
+
+        init(id: String, name: Dictionary.Category.Name, phrases: [Dictionary.PhraseID], hidden: Bool = false) {
+            self.id = id
+            self.name = name
+            self.phrases = phrases
+            self.hidden = hidden
+        }
 
         func text(language: SetLanguage) -> String {
             let arguments = [name.main, name.source]

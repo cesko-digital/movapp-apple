@@ -38,7 +38,12 @@ class DictionaryDataStore: ObservableObject {
                 return
             }
 
-            self.dictionary = try decoder.decode(Dictionary.self, from: asset.data)
+            let loadedDictionary = try decoder.decode(Dictionary.self, from: asset.data)
+            let visibleCategories = loadedDictionary.categories.filter { $0.isHidden == false }
+            self.dictionary = Dictionary(main: loadedDictionary.main,
+                                         source: loadedDictionary.source,
+                                         categories: visibleCategories,
+                                         phrases: loadedDictionary.phrases)
 
         } catch {
             self.error = error.localizedDescription

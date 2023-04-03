@@ -1,6 +1,7 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+- Hide hidden categories
 
 ## [1.6.0, build 44] - 2023-03-31Z
 - Update data from movapp-apple repository at 2023-03-28 10:16:05 +0000

@@ -71,4 +71,18 @@ final class DictionaryDataStoreTests: XCTestCase {
         XCTAssertEqual(decodedPhrase.main.soundFileName, "cs-sounds/e/e3b41247a6db5f4844cb4d31d66994e7")
         XCTAssertEqual(decodedPhrase.source.soundFileName, "uk-sounds/5/5bfad1e5b1a51d4623f286d325b37649")
     }
+
+    func testHiddenExcludedCategories() throws {
+        let dataStore = DictionaryDataStore()
+
+        dataStore.load(language: .csUk)
+
+        dataStore.dictionary?.categories.forEach { category in
+            XCTAssertFalse(category.isHidden, "Category with name: \(category.name) should not be visible")
+        }
+
+        XCTAssertNotNil(dataStore.dictionary)
+        XCTAssertNotEqual(dataStore.dictionary?.categories.count, 0)
+        XCTAssertNotEqual(dataStore.dictionary?.phrases.count, 0)
+    }
 }

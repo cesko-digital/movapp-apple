@@ -106,6 +106,7 @@
 		B4B90EBF29E14AB600134849 /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E728060B750036441E /* Flags.swift */; };
 		B4B90EC029E15D6C00134849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B012799727F86957003FB72E /* Assets.xcassets */; };
 		B4B90EC129E15E4700134849 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0320920281998AA001203BF /* UserDefaultsStore.swift */; };
+		B4B90EC429E1661D00134849 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B90EC329E1661D00134849 /* Provider.swift */; };
 		B4C8BE83290A6B6500B51377 /* ForChildrenRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C8BE82290A6B6500B51377 /* ForChildrenRootView.swift */; };
 		B4DD701629CF26EB00112F3A /* StoriesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD701529CF26EB00112F3A /* StoriesRepositoryTests.swift */; };
 		B4DD701D29CF2EF300112F3A /* TeamDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD701C29CF2EF300112F3A /* TeamDataStoreTests.swift */; };
@@ -282,6 +283,7 @@
 		B4B90EAF29E146E900134849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4B90EB129E146E900134849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4B90EC229E1616900134849 /* WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetExtension.entitlements; sourceTree = "<group>"; };
+		B4B90EC329E1661D00134849 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		B4C8BE82290A6B6500B51377 /* ForChildrenRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenRootView.swift; sourceTree = "<group>"; };
 		B4DD701329CF26EB00112F3A /* MovappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4DD701529CF26EB00112F3A /* StoriesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesRepositoryTests.swift; sourceTree = "<group>"; };
@@ -734,11 +736,12 @@
 		B4B90EA929E146E700134849 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				B4B90EAA29E146E700134849 /* WidgetBundle.swift */,
-				B4B90EAC29E146E700134849 /* Widget.swift */,
-				B4B90EAE29E146E800134849 /* Widget.intentdefinition */,
 				B4B90EAF29E146E900134849 /* Assets.xcassets */,
 				B4B90EB129E146E900134849 /* Info.plist */,
+				B4B90EC329E1661D00134849 /* Provider.swift */,
+				B4B90EAE29E146E800134849 /* Widget.intentdefinition */,
+				B4B90EAC29E146E700134849 /* Widget.swift */,
+				B4B90EAA29E146E700134849 /* WidgetBundle.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -1064,6 +1067,7 @@
 				B4B90EBD29E14A7B00134849 /* Language.swift in Sources */,
 				B4B90EBA29E1498E00134849 /* DictionaryDataStore.swift in Sources */,
 				B4B90EC129E15E4700134849 /* UserDefaultsStore.swift in Sources */,
+				B4B90EC429E1661D00134849 /* Provider.swift in Sources */,
 				B4B90EBF29E14AB600134849 /* Flags.swift in Sources */,
 				B4B90EAD29E146E700134849 /* Widget.swift in Sources */,
 				B4B90EB229E146E900134849 /* Widget.intentdefinition in Sources */,

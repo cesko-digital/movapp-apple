@@ -1,25 +1,55 @@
-/* TabBar A-Z */
-"tabbar.alphabet" = "A-Z";
+"title_dictionary" = "Slovníček";
+"title_alphabet" = "Abeceda";
+"title_children" = "Pro děti";
+"title_favorites" = "Oblíbené";
+"about_project" = "O projektu";
+"about_team" = "Tým";
+"about_twitter" = "Twitter";
+"about_instagram" = "Instagram";
+"facebook" = "Facebook";
+"linkedin" = "LinkedIn";
+"about_application" = "O aplikaci";
+"i_want_help" = "Přidat se k vývoji";
+"about_license" = "Licence";
+"about_version" = "Verze: %@ (%@)";
+"country_flag" = "vlajka";
+"play_transcription" = "přehrát zvuk";
+"i_want_learn" = "Chci se naučit";
+"settings" = "Nastavení";
+"ukrainian" = "ukrajinština";
+"czech" = "čeština";
+"alphabet_ukrainian" = "Ukrajinská abeceda";
+"alphabet_czech" = "Česká abeceda";
+"search_word" = "Hledat slovíčko";
+"title_settings" = "Nastavení";
+"on_boarding_welcome" = "Vítejte v MOVAPP!";
+"on_boarding_exit" = "Začít s učením";
+"on_boarding_choice" = "Vyberte jazyk, který se chcete naučit";
+"on_boarding_info_1_title" = "Slovníček";
+"on_boarding_info_1_description" = "Naučte se stovky základních slovíček a frází čtením i poslechem. Slovíčka třídíme dle životních situací.";
+"on_boarding_info_2_title" = "Abeceda";
+"on_boarding_info_2_description" = "Naučte se všechny znaky ukrajinské cyrilice. Pomohou vám ukázková slova.";
+"on_boarding_info_3_title" = "Pro děti";
+"about_partners" = "Partnerské projekty";
+"about_stand_by_ukraine" = "Stojíme za Ukrajinou";
+"about_umapa" = "Umapa";
+"slovak" = "slovenština";
+"polish" = "polština";
+"alphabet_slovak" = "Slovenská abeceda";
+"alphabet_polish" = "Polská abeceda";
+"i_know" = "Rodný jazyk";
+"on_boarding_info_0_title" = "Výborně!";
+"on_boarding_info_0_description" = "Pojd\'me se učit %@. Aplikaci můžete používat i offline pokud nejste připojeni k internetu.";
+"on_boarding_skip" = "Přeskočit";
+"on_boarding_back" = "Zpět";
+"on_boarding_choice_native" = "Vyberte jazyk, kterým umíte mluvit";
+"on_boarding_info_3_description" = "Ilustrovaný dvojjazyčný slovníček s desítkami karet pro děti.";
+"czech_accusative" = "česky";
+"ukrainian_accusative" = "ukrajinsky";
+"polish_accusative" = "polsky";
+"slovak_accusative" = "slovensky";
 
-/* TabBar dictionary */
-"tabbar.dictionary" = "Slovníček";
-
-/* TabBar For kids */
-"tabbar.for_kids" = "Pro děti";
-
-/* TabBar Menu */
-"tabbar.menu" = "Menu";
-
-"menu.section.about_project.header" = "O projektu";
-
-"menu.section.about_app.header" = "O applikaci";
-
-"menu.section.about_app.want_help" = "Chci vylepšit aplikaci";
-
-"menu.section.about_app.license" = "Licence";
-
-"menu.section.partner_projects.header" = "Partnerské projekty";
-
-"menu.section.partner_projects.stojime_za_ukrajinou" = "Stojíme za Ukrajinou";
-
-"menu.section.partner_projects.umapa" = "Umapa";
+"for.children.words" = "Slovíčka";
+"for.children.stories" = "Pohádky";
+"stories.list.origin.CZ" = "České lidové pohádky";
+"stories.list.origin.UA" = "Ukrajinské lidové pohádky";

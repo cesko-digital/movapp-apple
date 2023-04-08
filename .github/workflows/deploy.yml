@@ -1,13 +1,16 @@
+# Deploys new version to app_store, generates screenshots and publish them on Github Pages.
 name: Deploy
 
 on:
   push:
-    branches: [release]
+    tags:
+      - "v*"
   workflow_dispatch:
 
 jobs:
   app_store:
-    runs-on: macos-latest
+    runs-on: macos-12
+    timeout-minutes: 40
     env:
       MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
       MATCH_GIT_PRIVATE_KEY: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}
@@ -18,3 +21,37 @@ jobs:
         run: |
           bundle install
           bundle exec fastlane upload
+
+  screenshots:
+    runs-on: macos-12
+    timeout-minutes: 180
+    env:
+      MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+      MATCH_GIT_PRIVATE_KEY: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}
+      APP_STORE_API_KEY: ${{ secrets.APP_STORE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build & Upload
+        run: |
+          bundle install
+          bundle exec fastlane uploadScreenshots
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: Fastlane/screenshots
+
+  # Deployment job
+  pages:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: screenshots
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

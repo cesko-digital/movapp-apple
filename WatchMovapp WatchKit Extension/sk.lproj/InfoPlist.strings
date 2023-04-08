@@ -1,0 +1,9 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "Movapp";
+
+/* Bundle name */
+"CFBundleName" = "Movapp";
+
+/* Copyright (human-readable) */
+"NSHumanReadableCopyright" = "Copyright Movapp";
+

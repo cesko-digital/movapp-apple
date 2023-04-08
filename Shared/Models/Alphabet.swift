@@ -7,21 +7,46 @@
 
 import Foundation
 
-
 struct Alphabet: Decodable {
+    static let example = Alphabet(items: [.example], cleanItems: [.example])
+
     enum CodingKeys: CodingKey {
         case data, language
     }
-    
-    let language: String
-    let data: [AlphabetItem]
-    
+
+    let items: [AlphabetItem]
+    /**
+        A list of AlphabetItem without diacritic
+     */
+    let cleanItems: [AlphabetItem]
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        
-        language = try container.decode(String.self, forKey: .language)
-        data = try container.decode([AlphabetItem].self, forKey: .data)
+
+        items = try container.decode([AlphabetItem].self, forKey: .data)
+
+        /**
+         Build items only from non-diacritic letters. Use map and an array to ensure that order is same.
+         */
+        var cleanItemsUniqueMap: [String: String] = [:]
+        var cleanItems: [AlphabetItem] = []
+
+        for item in items {
+            let cleanLetter = item.letters.first!.uppercased().folding(options: .diacriticInsensitive, locale: .current)
+
+            if cleanItemsUniqueMap[cleanLetter] != nil {
+                continue
+            } else {
+                cleanItemsUniqueMap[cleanLetter] = cleanLetter
+                cleanItems.append(item)
+            }
+        }
+
+        self.cleanItems = cleanItems
+    }
+
+    private init(items: [AlphabetItem], cleanItems: [AlphabetItem]) {
+        self.items = items
+        self.cleanItems = cleanItems
     }
 }
-
-

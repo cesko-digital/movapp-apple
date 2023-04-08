@@ -9,23 +9,20 @@ import Foundation
 
 struct Language {
     /**
-     Indicates which file should be loaded (files are stored in assets with translations-{prefix}, sections-{prefix} name)
+     Indicates which file should be loaded
      */
     var dictionaryFilePrefix: String {
-        return "\(from.rawValue)-\(to.rawValue)"
+        return "\(source.rawValue)-\(main.rawValue)"
     }
-    
+
     /**
      Language code - defines a language used in `from` key in our data files
      */
-    let from: Languages
-    
+    let main: Languages
+
     /**
      Language code - defines a language used in `to` key in our data files
      */
-    let to: Languages
+    let source: Languages
+
 }
-
-
-
-

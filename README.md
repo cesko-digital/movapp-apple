@@ -33,4 +33,5 @@ Další informace najdete v souboru [CONTRIBUTING](CONTRIBUTING.md).
 
 - [Scope of Work](https://docs.google.com/document/d/1r7OdwaUiGZKd2qcHHMGeqtTYHlOB6zOzfW9K1sxuY6s/edit?usp=sharing)
 - [Dočasná grafika](https://www.sketch.com/s/5d264dba-950d-4169-8a59-9c048c9183a5/a/3OwLoqG/play)
+- [Aktuální sada screenshotů](https://cesko-digital.github.io/movapp-apple/screenshots.html)
 

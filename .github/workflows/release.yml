@@ -1,0 +1,21 @@
+# Release a new minor version
+name: Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+    name: Tag new minor version
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v2
+        with: 
+          token: ${{ secrets.ACTIONS_TOKEN }}
+      - name: Run fastlane
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          bundle install
+          bundle exec fastlane release
+          git push origin --follow-tags

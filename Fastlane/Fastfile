@@ -1,28 +1,49 @@
-desc "Make a new release: Bump version number, update changelog and commit & tag the changes"
+desc "Make a new release: Bump build number, update changelog and commit & tag the changes"
 lane :release do |options|
 
     # Make sure we don't commit any work-in-progress with the release
     ensure_git_status_clean
 
-    # Read the release type from command-line arguments, default to patch
-    release_type = options[:type] ? options[:type] : "patch"
-
-    # Bump version number
-    increment_version_number_in_xcodeproj(bump_type: release_type, target: "Movapp (iOS)")
+    # Bump build number
+    increment_build_number()
     version_number = get_version_number(target: "Movapp (iOS)")
+    build_number = get_build_number()
 
     # Update changelog with the version number and release date
-    stamp_changelog(section_identifier: version_number)
+    stamp_changelog(section_identifier: "#{version_number}, build #{build_number}")
 
     # Commit the stamped changelog as a part of the release
     git_add(path: 'CHANGELOG.md')
 
     # Commit and tag the release
     commit_version_bump(
-        message: "Release #{version_number}",
+        message: "Release #{version_number}, build #{build_number}",
         xcodeproj: "Movapp.xcodeproj",
         force: true)
-    add_git_tag(tag: "v#{version_number}")
+    add_git_tag(tag: "v#{version_number}-#{build_number}")
+end
+
+desc "Bump marketing version"
+lane :bump_version do |options|
+
+    # Make sure we don't commit any work-in-progress with the release
+    ensure_git_status_clean
+
+    # Read the release type from command-line arguments, default to patch
+    component = options[:type] ? options[:type] : "minor"
+
+    # Bump version number
+    increment_version_number_in_xcodeproj(bump_type: component, target: "Movapp (iOS)")
+    increment_version_number_in_xcodeproj(bump_type: component, target: "MovappUITests")
+    #increment_version_number_in_xcodeproj(bump_type: component, target: "WatchMovapp")
+    #increment_version_number_in_xcodeproj(bump_type: component, target: "WatchMovapp WatchKit Extension")
+    version_number = get_version_number(target: "Movapp (iOS)")
+
+    # Commit changes
+    commit_version_bump(
+        message: "Bump marketing version to #{version_number}",
+        xcodeproj: "Movapp.xcodeproj",
+        force: true)
 end
 
 # Create a clean temporary keychain
@@ -40,7 +61,7 @@ lane :build do
     # This makes sure all code signing runs with a temporary, unlocked keychain
     ensure_temp_keychain 'fastlane'
     sync_code_signing(type: "development", readonly: true, keychain_password: "temppassword", keychain_name: "fastlane")
-    build_app(skip_archive: true, configuration: "Debug")
+    build_app(skip_archive: true, configuration: "Debug", scheme: "Movapp (iOS)")
 end
 
 lane :upload do
@@ -54,7 +75,8 @@ lane :upload do
     # This makes sure all code signing runs with a temporary, unlocked keychain
     ensure_temp_keychain 'fastlane'
     sync_code_signing(type: "appstore", readonly: true, keychain_password: "temppassword", keychain_name: "fastlane")
-    build_app(configuration: "Release")
+    
+    build_app(configuration: "Release", scheme: "Movapp (iOS)")
     upload_to_app_store(
         username: "apple-code-signing@cesko.digital",
         team_id: "8495ZSK6A6",
@@ -62,6 +84,55 @@ lane :upload do
         precheck_include_in_app_purchases: false,
         force: true,
         skip_metadata: true,
-        skip_screenshots: true
+        skip_screenshots: true,
     )
+
+    # Testflight
+
+    version_number = get_version_number(target: "Movapp (iOS)")
+    build_number = get_build_number()
+
+    # Update changelog with the version number and release date
+    changelog = read_changelog(section_identifier: "[#{version_number}, build #{build_number}]")
+
+    # Will fail if changelog is empty
+    if changelog === '' || changelog === nil then
+       changelog = 'No changelog provided'
+    end
+
+    upload_to_testflight(changelog: changelog, distribute_only: true, distribute_external: true, groups: 'Movapp Testers', app_version: version_number, build_number: build_number)
+end
+
+lane :screenshots do 
+    capture_screenshots(skip_open_summary: false)
+end
+
+lane :uploadScreenshots do
+    api_key = app_store_connect_api_key(
+        key_id: "84CT4W68YN",
+        issuer_id: "3870b8f8-0b22-4ca2-9156-487be7cb55a0",
+        key_content: ENV["APP_STORE_API_KEY"],
+        duration: 1200,
+        in_house: false
+    )
+    
+    capture_screenshots(skip_open_summary: false)
+    
+    upload_to_app_store(
+        app_identifier: "cz.movapp.app",
+        username: "apple-code-signing@cesko.digital",
+        team_id: "8495ZSK6A6",
+        api_key: api_key,
+        precheck_include_in_app_purchases: false,
+        force: true,
+        skip_metadata: false,
+        skip_screenshots: false,
+        overwrite_screenshots: true,
+        automatic_release: false,
+        skip_binary_upload: true
+    )
+end
+
+lane :tests do
+  run_tests(scheme: "MovappUITests")
 end

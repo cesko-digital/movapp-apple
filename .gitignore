@@ -1,5 +1,8 @@
 .DS_Store
 .vscode
 xcuserdata
+Package.resolved
 Fastlane/report.xml
+Fastlane/screenshots
 Fastlane/README.md
+tmp/

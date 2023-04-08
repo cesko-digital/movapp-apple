@@ -1,0 +1,21 @@
+# After Appstore deployment this will create a new version for next release.
+name: Bump version
+
+on:
+  workflow_dispatch:
+
+jobs:
+  bump_version:
+    name: Create new major version
+    runs-on: macos-12
+    steps:
+      - uses: actions/checkout@v2
+        with: 
+          token: ${{ secrets.ACTIONS_TOKEN }}
+      - name: Run fastlane
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          bundle install
+          bundle exec fastlane bump_version
+          git push origin --follow-tags

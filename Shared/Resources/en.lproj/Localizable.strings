@@ -1,25 +1,64 @@
-/* TabBar A-Z */
-"tabbar.alphabet" = "A-Z";
+/* (No Comment) */
+"About the app" = "About the app";
 
-/* TabBar dictionary */
-"tabbar.dictionary" = "Dictionary";
+/* Menu */
+"title_dictionary" = "Dictionary";
+"title_alphabet" = "Alphabet";
+"title_children" = "For kids";
+/* unused */
+"title_favorites" = "Favourites";
+"about_project" = "About the project";
+/* unused */
+"about_web" = "movapp.cz";
+"about_team" = "Team";
+"about_twitter" = "Twitter";
+"about_instagram" = "Instagram";
+"facebook" = "Facebook";
+"linkedin" = "LinkedIn";
+"about_application" = "About the app";
+"i_want_help" = "I want to help";
+"about_license" = "License";
+/* unused */
+"about_version" = "Version: %@ (%@)";
+"about_partners" = "Partner project";
+"about_stand_by_ukraine" = "Stand by Ukraine";
+"about_umapa" = "Umapa";
+"country_flag" = "country flag";
+"play_transcription" = "play transcription";
+"i_know" = "Native language";
+"i_want_learn" = "Want to learn";
+"settings" = "Settings";
+"ukrainian" = "Ukrainian";
+"czech" = "Czech";
+"slovak" = "Slovak";
+"polish" = "Polish";
+"alphabet_ukrainian" = "Ukrainian alphabet";
+"alphabet_czech" = "Czech alphabet";
+"alphabet_slovak" = "Slovak alphabet";
+"alphabet_polish" = "Polish alphabet";
+"search_word" = "Search for a word";
+/* unused */
+"title_settings" = "Settings";
+"on_boarding_welcome" = "Welcome to MOVAPP!";
+"on_boarding_choice_native" = "Choose the language you know";
+"on_boarding_choice" = "Choose the language you want to learn";
+"on_boarding_info_0_title" = "Excellent!";
+"on_boarding_info_0_description" = "Let\'s learn %@. The application can be used offline without internet connection.";
+"on_boarding_info_1_title" = "Dictionary";
+"on_boarding_info_1_description" = "Learn hundreds of basic words and phrases by reading and listening. We sort words according to life situations.";
+"on_boarding_info_2_title" = "Alphabet";
+"on_boarding_info_2_description" = "Learn all the characters of the Ukrainian Cyrillic. Sample words will help you.";
+"on_boarding_info_3_title" = "For kids";
+"on_boarding_skip" = "Skip";
+"on_boarding_back" = "Back";
+"on_boarding_exit" = "Start learning";
+"on_boarding_info_3_description" = "Illustrated bilingual dictionary with dozens of printable cards.";
+"czech_accusative" = "Czech";
+"ukrainian_accusative" = "Ukrainian";
+"polish_accusative" = "Polish";
+"slovak_accusative" = "Slovak";
 
-/* TabBar For kids */
-"tabbar.for_kids" = "For kids";
-
-/* TabBar Menu */
-"tabbar.menu" = "Menu";
-
-"menu.section.about_project.header" = "About the project";
-
-"menu.section.about_app.header" = "About the app";
-
-"menu.section.about_app.want_help" = "I want to help";
-
-"menu.section.about_app.license" = "License";
-
-"menu.section.partner_projects.header" = "Partner project";
-
-"menu.section.partner_projects.stojime_za_ukrajinou" = "Stojíme za Ukrajinou";
-
-"menu.section.partner_projects.umapa" = "Umapa";
+"for.children.words" = "Words";
+"for.children.stories" = "Stories";
+"stories.list.origin.CZ" = "Czech folk tales";
+"stories.list.origin.UA" = "Ukrainian folk tales";

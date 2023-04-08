@@ -9,150 +9,150 @@ import Foundation
 import AVFoundation
 import UIKit
 
+struct Playback {
+    let soundId: String
+    let languageOrDirectory: String
+}
+
 class SoundService: NSObject, ObservableObject {
-    
-    // Create a speech synthesizer.
-    let synthesizer = AVSpeechSynthesizer()
-    var player: AVAudioPlayer? = nil
-    
+
+    var player: AVAudioPlayer?
+
+    var playbackPipe: [Playback] = []
+
     @Published var isPlaying: Bool = false
-    
-    var isSpeaking = false
-    var isPlayingSound = false
-    
-    override init () {
+
+    private var sessionCategory: AVAudioSession.Category?
+
+    override init() {
         super.init()
-        synthesizer.delegate = self
     }
-    
-    
+
+    func getCurrentPlayback() -> Playback? {
+        return playbackPipe.first
+    }
+
+    func isPlaying(id: String) -> Bool {
+        guard let currentPlayback = getCurrentPlayback() else {
+            return false
+        }
+
+        return currentPlayback.soundId.compare(id) == .orderedSame
+    }
+
+    func isPlaying(translation: Dictionary.Phrase.Translation) -> Bool {
+        if let soundFileName = translation.soundFileName, isPlaying(id: soundFileName) {
+            return true
+        }
+
+        return false
+    }
+
+    func canPlayTranslation(language: Languages, translation: Dictionary.Phrase.Translation) -> Bool {
+        if translation.soundFileName != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    func playTranslation(language: Languages, translation: Dictionary.Phrase.Translation) {
+
+        if isPlaying(translation: translation) {
+            stopAndPlayNext()
+            return
+        }
+
+        if let soundFileName = translation.soundFileName {
+            play(soundFileName, inDirectory: "data")
+        } else {
+            print("Cant play sound, missing sound or unsupported language", language, translation)
+        }
+    }
+
     /**
      Plays given sound in assets (only for small sizes)
      */
     func play (_ id: String, inDirectory: String) {
-        stop()
-        
+        playbackPipe.append(Playback(soundId: id, languageOrDirectory: inDirectory))
+
+        stopAndPlayNext()
+    }
+
+    private func tryToPlayNext () {
+        guard let currentPlayback = getCurrentPlayback() else {
+            return
+        }
+
+        playSound(currentPlayback.soundId, inDirectory: currentPlayback.languageOrDirectory)
+    }
+
+    private func playSound(_ id: String, inDirectory: String) {
         let assetName = "\(inDirectory)/\(id)"
-        
+
         guard let data = NSDataAsset(name: assetName) else {
             print("File does not exists \(assetName)")
             return
         }
-        
+
         do {
             let player = try AVAudioPlayer(data: data.data)
             self.player = player
-            
+
             player.delegate = self
             player.play()
-            
-            isPlayingSound = true
+
             on()
-            
+
         } catch {
             print("Failed to play \(id) - \(error.localizedDescription)")
         }
     }
-    
-    /**
-     Plays given sound and expects a file name with extension to correctly find it in bundle.
-     **NOT working!**
-     */
-    func playNotWorking (_ fileName: String, inDirectory: String) {
-        stop()
-        
-        let splitted = fileName.split(separator: ".")
-        
-        if splitted.count != 2 {
-            print("Invalid file - no extension \(fileName)")
-            return
-        }
-        
-        let file = String(splitted.first!)
-        let fileExtension = String(splitted.last!)
-        
-        guard let path = Bundle.main.path(forResource:file , ofType:fileExtension , inDirectory: inDirectory) else {
-            print("File does not exists \(fileName) in \(inDirectory)")
-            return
-        }
-        
-        do {
-            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
-            
-            player!.play()
-            isPlayingSound = true
-            on()
-        } catch {
-            print("Failed to play \(fileName) - \(error.localizedDescription)")
-        }
-    }
-    
-    
-    // https://developer.apple.com/documentation/avfoundation/speech_synthesis#overview
-    func speach(language: Languages, text: String) {
-        stop()
-        
-        // Create an utterance.
-        let utterance = AVSpeechUtterance(string: text)
-        
-        let voice = AVSpeechSynthesisVoice(language: language.rawValue)
-        
-        // Assign the voice to the utterance.
-        utterance.voice = voice
-        
-        
-        // Tell the synthesizer to speak the utterance.
-        synthesizer.speak(utterance)
-    }
-    
-    func stop () {
+
+    func stopAndPlayNext () {
         if isPlaying == false {
+            tryToPlayNext()
             return
         }
-        
-        if isSpeaking == true {
-            self.synthesizer.stopSpeaking(at: .immediate)
-        }
-        
-        if isPlayingSound == true, let player = self.player {
+
+        if let player = self.player {
             player.stop()
+            off() // Sound is not triggering delegate event.
         }
     }
-    
+
     private func on () {
         isPlaying = true
+        sessionCategory = AVAudioSession.sharedInstance().category
+        try? AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback)
         try? AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
     }
-    
-    private func off () {
-        isPlaying = false
-        isSpeaking = false
-        isPlayingSound = false
-        
-        try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
-    }
-}
 
-extension SoundService: AVSpeechSynthesizerDelegate {
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
-        isSpeaking = true
-        on()
-    }
-    
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
-        off()
-    }
-    
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        off()
+    private func off () {
+        guard playbackPipe.isEmpty == false else {
+            return
+        }
+
+        playbackPipe.remove(at: 0)
+
+        // Trigger change
+        isPlaying = false
+
+        if let sessionCategory = sessionCategory {
+            try? AVAudioSession.sharedInstance().setCategory(sessionCategory)
+        }
+        try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+
+        tryToPlayNext()
     }
 }
 
 extension SoundService: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        print("Audio player has finished")
         off()
     }
-    
+
     func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
         print("Error while playing \(error?.localizedDescription ?? "")")
         off()

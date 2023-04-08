@@ -2,44 +2,51 @@ import WidgetKit
 import SwiftUI
 import Intents
 
+// swiftlint:disable void_return
+
 struct Provider: IntentTimelineProvider {
-    
+
     let store = DictionaryDataStore()
-    
+    let userDefaults = UserDefaultsStore()
+
     init() {
-        store.load(language: .csUk)
+        let language = userDefaults.getLanguage() ?? .csUk
+        store.load(language: language)
     }
-    
+
     func placeholder(in context: Context) -> FavoritePhraseEntry {
         FavoritePhraseEntry.example()
     }
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (FavoritePhraseEntry) -> ()) {
+    func getSnapshot(for configuration: ConfigurationIntent,
+                     in context: Context,
+                     completion: @escaping (FavoritePhraseEntry) -> ()) {
         completion(FavoritePhraseEntry.example())
     }
 
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        
-        guard let phrases = store.dictionary?.translations.values else {
+    func getTimeline(for configuration: ConfigurationIntent,
+                     in context: Context,
+                     completion: @escaping (Timeline<FavoritePhraseEntry>) -> ()) {
+
+        guard let phrases = store.dictionary?.phrases.values else {
             let timeline = Timeline(entries: [FavoritePhraseEntry.example(intent: configuration)], policy: .atEnd)
             return completion(timeline)
         }
-        
+
         var entries: [FavoritePhraseEntry] = []
         let currentDate = Date()
-        
-        for hourOffset in 0 ..< 2 {
-            
+
+        for hourOffset in 0 ..< 12 {
+
             if let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate),
-               let phrase = phrases.randomElement()
-            {
+               let phrase = phrases.randomElement() {
                 entries.append(
                     .init(
                         date: entryDate,
-                        translationFrom: phrase.translationFrom,
-                        translationTo: phrase.translationTo,
-                        transcriptionFrom: phrase.transcriptionFrom,
-                        transcriptionTo: phrase.transcriptionTo,
+                        translationFrom: phrase.main.translation,
+                        translationTo: phrase.source.translation,
+                        transcriptionFrom: phrase.main.transcription,
+                        transcriptionTo: phrase.source.transcription,
                         configuration: configuration
                     )
                 )
@@ -51,6 +58,8 @@ struct Provider: IntentTimelineProvider {
     }
 }
 
+// swiftlint:enable void_return
+
 struct FavoritePhraseEntry: TimelineEntry {
     let date: Date
     let translationFrom: String
@@ -58,7 +67,7 @@ struct FavoritePhraseEntry: TimelineEntry {
     let transcriptionFrom: String
     let transcriptionTo: String
     let configuration: ConfigurationIntent
-    
+
     static func example(intent: ConfigurationIntent = ConfigurationIntent()) -> FavoritePhraseEntry {
         .init(
             date: Date(),
@@ -72,52 +81,42 @@ struct FavoritePhraseEntry: TimelineEntry {
 }
 
 struct HairlineSeparator: View {
-    
+
     var body: some View {
         Color.gray
             .frame(height: 1.0 / UIScreen.main.scale)
     }
 }
 
-struct Movapp_WidgetEntryView : View {
+struct MovappWidgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            
+
             Text("\(entry.translationFrom)")
                 .foregroundColor(.black)
+                .fixedSize(horizontal: false, vertical: true)
             Text("[ \(entry.transcriptionFrom) ]")
                 .foregroundColor(.gray)
-            
+                .fixedSize(horizontal: false, vertical: true)
+
             HairlineSeparator()
-            
+
             Text("\(entry.translationTo)")
                 .foregroundColor(.black)
+                .fixedSize(horizontal: false, vertical: true)
             Text("[ \(entry.transcriptionTo) ]")
                 .foregroundColor(.gray)
+                .fixedSize(horizontal: false, vertical: true)
         }
         .padding()
     }
 }
 
-@main
-struct Movapp_Widget: Widget {
-    let kind: String = "Movapp_Widget"
-
-    var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            Movapp_WidgetEntryView(entry: entry)
-        }
-        .supportedFamilies([.systemMedium])
-        .configurationDisplayName("Movapp Widget")
-        .description("Every hour it displays one of phrases.")
-    }
-}
-
-struct Movapp_Widget_Previews: PreviewProvider {
+struct MovappWidgetPreviews: PreviewProvider {
     static var previews: some View {
-        Movapp_WidgetEntryView(entry: FavoritePhraseEntry.example())
+        MovappWidgetEntryView(entry: FavoritePhraseEntry.example())
             .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }

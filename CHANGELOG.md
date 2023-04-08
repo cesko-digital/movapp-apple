@@ -2,6 +2,7 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 - Update data from movapp-apple repository at 2023-04-04 10:24:48 +0000
+- Widget with random phrase
 
 ## [1.6.0, build 45] - 2023-04-04Z
 - Hide hidden categories

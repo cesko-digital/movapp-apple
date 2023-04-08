@@ -45,7 +45,7 @@ struct DictionaryView: View {
         }
 #if canImport(UIKit)
         // Discard keyboard
-        .simultaneousGesture(DragGesture().onChanged { gesture in
+        .simultaneousGesture(DragGesture().onChanged { _ in
             let forcing = false
             let keyWindow = UIApplication.shared.connectedScenes
                 .filter({$0.activationState == .foregroundActive})

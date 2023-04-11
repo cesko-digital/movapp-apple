@@ -25,7 +25,7 @@ struct FavoritePhraseEntry: TimelineEntry {
 struct HairlineSeparator: View {
 
     var body: some View {
-        Color.gray
+        Color.secondary
             .frame(height: 1.0 / UIScreen.main.scale)
     }
 }
@@ -37,19 +37,19 @@ struct MovappWidgetEntryView: View {
         VStack(alignment: .leading, spacing: 8) {
 
             Text("\(entry.translationFrom)")
-                .foregroundColor(.black)
+                .foregroundColor(.primary)
                 .fixedSize(horizontal: false, vertical: true)
             Text("[ \(entry.transcriptionFrom) ]")
-                .foregroundColor(.gray)
+                .foregroundColor(.secondary)
                 .fixedSize(horizontal: false, vertical: true)
 
             HairlineSeparator()
 
             Text("\(entry.translationTo)")
-                .foregroundColor(.black)
+                .foregroundColor(.primary)
                 .fixedSize(horizontal: false, vertical: true)
             Text("[ \(entry.transcriptionTo) ]")
-                .foregroundColor(.gray)
+                .foregroundColor(.secondary)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .padding()

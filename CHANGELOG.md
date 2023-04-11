@@ -2,6 +2,7 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 - Fixed #153, story timer and tracking were not working correctly
+- Update data from movapp-apple repository at 2023-04-05 11:28:53 +0000
 - Update data from movapp-apple repository at 2023-04-04 10:24:48 +0000
 
 ## [1.6.0, build 45] - 2023-04-04Z

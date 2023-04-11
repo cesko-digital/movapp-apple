@@ -8,16 +8,14 @@ struct FavoritePhraseEntry: TimelineEntry {
     let translationTo: String
     let transcriptionFrom: String
     let transcriptionTo: String
-    let configuration: ConfigurationIntent
 
-    static func example(intent: ConfigurationIntent = ConfigurationIntent()) -> FavoritePhraseEntry {
+    static var example: FavoritePhraseEntry {
         .init(
             date: Date(),
             translationFrom: "Dobrý den",
             translationTo: "Добрий день.",
             transcriptionFrom: "Dobrý den",
-            transcriptionTo: "Dobryj deň",
-            configuration: intent
+            transcriptionTo: "Dobryj deň"
         )
     }
 }
@@ -58,7 +56,7 @@ struct MovappWidgetEntryView: View {
 
 struct MovappWidgetPreviews: PreviewProvider {
     static var previews: some View {
-        MovappWidgetEntryView(entry: FavoritePhraseEntry.example())
+        MovappWidgetEntryView(entry: FavoritePhraseEntry.example)
             .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
 }

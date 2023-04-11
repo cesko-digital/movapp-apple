@@ -10,7 +10,7 @@ import WidgetKit
 
 // swiftlint:disable void_return
 
-struct Provider: IntentTimelineProvider {
+struct Provider: TimelineProvider {
 
     let store = DictionaryDataStore()
     let userDefaults = UserDefaultsStore()
@@ -21,21 +21,19 @@ struct Provider: IntentTimelineProvider {
     }
 
     func placeholder(in context: Context) -> FavoritePhraseEntry {
-        FavoritePhraseEntry.example()
+        FavoritePhraseEntry.example
     }
 
-    func getSnapshot(for configuration: ConfigurationIntent,
-                     in context: Context,
+    func getSnapshot(in context: Context,
                      completion: @escaping (FavoritePhraseEntry) -> ()) {
-        completion(FavoritePhraseEntry.example())
+        completion(FavoritePhraseEntry.example)
     }
 
-    func getTimeline(for configuration: ConfigurationIntent,
-                     in context: Context,
+    func getTimeline(in context: Context,
                      completion: @escaping (Timeline<FavoritePhraseEntry>) -> ()) {
 
         guard let phrases = store.dictionary?.phrases.values else {
-            let timeline = Timeline(entries: [FavoritePhraseEntry.example(intent: configuration)], policy: .atEnd)
+            let timeline = Timeline(entries: [FavoritePhraseEntry.example], policy: .atEnd)
             return completion(timeline)
         }
 
@@ -52,8 +50,7 @@ struct Provider: IntentTimelineProvider {
                         translationFrom: phrase.main.translation,
                         translationTo: phrase.source.translation,
                         transcriptionFrom: phrase.main.transcription,
-                        transcriptionTo: phrase.source.transcription,
-                        configuration: configuration
+                        transcriptionTo: phrase.source.transcription
                     )
                 )
             }

@@ -146,9 +146,9 @@ class StoryViewModel: StoryViewModeling {
             player?.backward()
         case .language(let selected):
             selectedLanguage = selected
-            player?.pause()
+            pause()
             player?.switchLanguage()
-            player?.play()
+            play()
         }
 
         remake()

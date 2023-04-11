@@ -16,7 +16,7 @@ jobs:
       MATCH_GIT_PRIVATE_KEY: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}
       APP_STORE_API_KEY: ${{ secrets.APP_STORE_API_KEY }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Build & Upload
         run: |
           bundle install
@@ -30,7 +30,7 @@ jobs:
       MATCH_GIT_PRIVATE_KEY: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}
       APP_STORE_API_KEY: ${{ secrets.APP_STORE_API_KEY }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Build & Upload
         run: |
           bundle install
@@ -49,8 +49,8 @@ jobs:
     needs: screenshots
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

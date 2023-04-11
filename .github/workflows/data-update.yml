@@ -11,7 +11,7 @@ jobs:
   DataUpdate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: DataUpdate
         run: ruby update-data.rb
@@ -20,11 +20,11 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.ACTIONS_TOKEN }}
-          commit-message: 'Update data to latest version (from movapp-data repository)'
+          commit-message: "Update data to latest version (from movapp-data repository)"
           committer: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
           author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
           branch: data-update
           base: main
           delete-branch: true
-          title: 'Update data to latest version (from movapp-data repository)'
+          title: "Update data to latest version (from movapp-data repository)"
           reviewers: kubito,pionl

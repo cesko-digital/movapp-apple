@@ -31,7 +31,7 @@ struct UserDefaultsStore {
     func getOnBoardingComplete() -> Bool {
         return userDefaults.bool(forKey: onBoardingCompleteKey)
     }
-    
+
     func disableSetIcon() -> Bool {
         return userDefaults.bool(forKey: canSetIcon)
     }

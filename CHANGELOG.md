@@ -1,6 +1,7 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+- Update data from movapp-apple repository at 2023-04-11 13:58:35 +0000
 
 ## [1.6.0, build 46] - 2023-04-11Z
 - Fixed #153, story timer and tracking were not working correctly

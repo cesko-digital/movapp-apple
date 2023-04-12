@@ -13,7 +13,7 @@ struct MovappWidget: Widget {
     let kind: String = "Movapp_Widget"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
             MovappWidgetEntryView(entry: entry)
         }
         .supportedFamilies([.systemMedium])

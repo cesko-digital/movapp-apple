@@ -2,6 +2,8 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 - Update data from movapp-apple repository at 2023-04-11 13:58:35 +0000
+- Widget for iOS 15+
+- Widget is now working with dark mode
 
 ## [1.6.0, build 46] - 2023-04-11Z
 - Fixed #153, story timer and tracking were not working correctly

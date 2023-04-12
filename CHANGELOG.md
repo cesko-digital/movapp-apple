@@ -1,6 +1,8 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+
+## [1.6.0, build 47] - 2023-04-12Z
 - Update data from movapp-apple repository at 2023-04-11 13:58:35 +0000
 - Widget for iOS 15+
 - Widget is now working with dark mode

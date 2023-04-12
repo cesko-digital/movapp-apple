@@ -41,7 +41,6 @@ struct Provider: TimelineProvider {
         let currentDate = Date()
 
         for hourOffset in 0 ..< 12 {
-
             if let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate),
                let phrase = phrases.randomElement() {
                 entries.append(
@@ -55,6 +54,9 @@ struct Provider: TimelineProvider {
                 )
             }
         }
+
+        // clear data in data store
+        store.reset()
 
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)

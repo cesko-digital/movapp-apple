@@ -7,6 +7,10 @@ on:
       - "v*"
   workflow_dispatch:
 
+concurrency:
+  group: movapp-apple-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   app_store:
     runs-on: macos-12

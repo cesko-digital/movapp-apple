@@ -8,6 +8,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
+concurrency:
+  group: movapp-apple-build-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check_build:
     runs-on: macos-12

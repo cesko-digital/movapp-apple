@@ -7,6 +7,10 @@ on:
     types:
       - data-update
 
+concurrency:
+  group: movapp-apple-data-update-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   DataUpdate:
     runs-on: ubuntu-latest

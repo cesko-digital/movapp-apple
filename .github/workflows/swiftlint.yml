@@ -5,6 +5,10 @@ on:
     paths:
       - "**/*.swift"
 
+concurrency:
+  group: movapp-apple-swiftlint-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   SwiftLint:
     runs-on: ubuntu-latest

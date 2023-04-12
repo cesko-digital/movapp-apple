@@ -64,8 +64,6 @@ struct MovappApp: App {
                     .environmentObject(onBoardingDataStore)
                     .onAppear {
                         setChristmasIconIfAvailable()
-                    }.onOpenURL { url in
-                        print("url: \(url)")
                     }
             } else {
                 OnBoardingRootView()

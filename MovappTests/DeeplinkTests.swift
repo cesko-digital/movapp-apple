@@ -18,7 +18,7 @@ final class DeeplinkTests: XCTestCase {
     }
 
     func testInit() throws {
-        let given = "phrase/recwA7uQYnXczMqOb"
+        let given = "movapp://phrase/recwA7uQYnXczMqOb"
 
         let deeplink = Deeplink(from: URL(string: given))
 
@@ -26,4 +26,11 @@ final class DeeplinkTests: XCTestCase {
         XCTAssertEqual(deeplink?.url?.absoluteString, "movapp://phrase/recwA7uQYnXczMqOb", "Deserialization failed")
     }
 
+    func testInvalid() throws {
+        let given = "movp://phrase/recwA7uQYnXczMqOb"
+
+        let deeplink = Deeplink(from: URL(string: given))
+
+        XCTAssertNil(deeplink, "Deeplink url should be nil")
+    }
 }

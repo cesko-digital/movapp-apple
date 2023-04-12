@@ -71,6 +71,9 @@
 		B0ECC14C2803431A00BF9898 /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14B2803431A00BF9898 /* Bundle+version.swift */; };
 		B0ECC1502803485B00BF9898 /* AlphabetShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */; };
 		B40177F028B8F30D000374D2 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40177EF28B8F30D000374D2 /* PickerView.swift */; };
+		B4081D9B29E7329B00B66D8E /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4081D9A29E7329B00B66D8E /* Deeplink.swift */; };
+		B4081D9C29E7329B00B66D8E /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4081D9A29E7329B00B66D8E /* Deeplink.swift */; };
+		B4081D9E29E734B100B66D8E /* DeeplinkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4081D9D29E734B100B66D8E /* DeeplinkTests.swift */; };
 		B4244D63290AADFF00DEC1A9 /* StoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4244D62290AADFF00DEC1A9 /* StoriesRepository.swift */; };
 		B4244D65290AB2D700DEC1A9 /* StoryMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4244D64290AB2D700DEC1A9 /* StoryMetadata.swift */; };
 		B425D327291FF02C0050EBEE /* StoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425D326291FF02C0050EBEE /* StoriesListView.swift */; };
@@ -250,6 +253,8 @@
 		B0ECC14B2803431A00BF9898 /* Bundle+version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+version.swift"; sourceTree = "<group>"; };
 		B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetShortcutsView.swift; sourceTree = "<group>"; };
 		B40177EF28B8F30D000374D2 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		B4081D9A29E7329B00B66D8E /* Deeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
+		B4081D9D29E734B100B66D8E /* DeeplinkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkTests.swift; sourceTree = "<group>"; };
 		B4244D62290AADFF00DEC1A9 /* StoriesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesRepository.swift; sourceTree = "<group>"; };
 		B4244D64290AB2D700DEC1A9 /* StoryMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMetadata.swift; sourceTree = "<group>"; };
 		B425D326291FF02C0050EBEE /* StoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListView.swift; sourceTree = "<group>"; };
@@ -433,6 +438,7 @@
 		B012799427F86954003FB72E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B4081D9929E7328100B66D8E /* Deeplink */,
 				B04021C02822D42B00B756FB /* OnBoarding */,
 				B0C0F8E628060B6C0036441E /* Enums */,
 				B076F0962805FD7700C1F88F /* Components */,
@@ -641,6 +647,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B4081D9929E7328100B66D8E /* Deeplink */ = {
+			isa = PBXGroup;
+			children = (
+				B4081D9A29E7329B00B66D8E /* Deeplink.swift */,
+			);
+			path = Deeplink;
+			sourceTree = "<group>";
+		};
 		B4244D61290AADEB00DEC1A9 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
@@ -765,6 +779,7 @@
 				B4DD701E29CF2FD200112F3A /* DictionaryDataStoreTests.swift */,
 				B4DD701529CF26EB00112F3A /* StoriesRepositoryTests.swift */,
 				B4DD701C29CF2EF300112F3A /* TeamDataStoreTests.swift */,
+				B4081D9D29E734B100B66D8E /* DeeplinkTests.swift */,
 			);
 			path = MovappTests;
 			sourceTree = "<group>";
@@ -1006,6 +1021,7 @@
 				5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */,
 				B40177F028B8F30D000374D2 /* PickerView.swift in Sources */,
 				B05FB5F228269834002AA6DE /* OnBoardingStore.swift in Sources */,
+				B4081D9B29E7329B00B66D8E /* Deeplink.swift in Sources */,
 				250E55E628072591004511EC /* Dictionary+UIExamples.swift in Sources */,
 				250E55E4280723E0004511EC /* Languages.swift in Sources */,
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
@@ -1072,6 +1088,7 @@
 				B4B90EC129E15E4700134849 /* UserDefaultsStore.swift in Sources */,
 				B4B90EC429E1661D00134849 /* Provider.swift in Sources */,
 				B4B90EBF29E14AB600134849 /* Flags.swift in Sources */,
+				B4081D9C29E7329B00B66D8E /* Deeplink.swift in Sources */,
 				B4B90EAD29E146E700134849 /* Widget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1081,6 +1098,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4DD701F29CF2FD200112F3A /* DictionaryDataStoreTests.swift in Sources */,
+				B4081D9E29E734B100B66D8E /* DeeplinkTests.swift in Sources */,
 				B4DD701D29CF2EF300112F3A /* TeamDataStoreTests.swift in Sources */,
 				B4DD701629CF26EB00112F3A /* StoriesRepositoryTests.swift in Sources */,
 			);

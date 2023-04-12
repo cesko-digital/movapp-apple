@@ -46,6 +46,7 @@ struct Provider: TimelineProvider {
                 entries.append(
                     .init(
                         date: entryDate,
+                        id: phrase.id,
                         translationFrom: phrase.main.translation,
                         translationTo: phrase.source.translation,
                         transcriptionFrom: phrase.main.transcription,

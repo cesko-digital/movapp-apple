@@ -4,6 +4,7 @@ import WidgetKit
 
 struct FavoritePhraseEntry: TimelineEntry {
     let date: Date
+    let id: String
     let translationFrom: String
     let translationTo: String
     let transcriptionFrom: String
@@ -12,6 +13,7 @@ struct FavoritePhraseEntry: TimelineEntry {
     static var example: FavoritePhraseEntry {
         .init(
             date: Date(),
+            id: "recwA7uQYnXczMqOb",
             translationFrom: "Dobrý den",
             translationTo: "Добрий день.",
             transcriptionFrom: "Dobrý den",
@@ -42,6 +44,7 @@ struct MovappWidgetEntryView: View {
             primaryText("\(entry.translationTo)")
             secondaryText("[ \(entry.transcriptionTo) ]")
         }
+        .widgetURL(Deeplink.phrase(entry.id).url)
         .padding()
     }
 

@@ -4,6 +4,10 @@ name: Release
 on:
   workflow_dispatch:
 
+concurrency:
+  group: movapp-apple-release-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   release:
     name: Tag new minor version

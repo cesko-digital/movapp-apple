@@ -17,7 +17,7 @@ struct MovappWidget: Widget {
             MovappWidgetEntryView(entry: entry)
         }
         .supportedFamilies([.systemMedium])
-        .configurationDisplayName("Movapp Widget")
-        .description("Every hour it displays one of phrases.")
+        .configurationDisplayName("widget.configuration.title")
+        .description("widget.configuration.description")
     }
 }

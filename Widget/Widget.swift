@@ -34,23 +34,27 @@ struct MovappWidgetEntryView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
 
-            Text("\(entry.translationFrom)")
-                .foregroundColor(.primary)
-                .fixedSize(horizontal: false, vertical: true)
-            Text("[ \(entry.transcriptionFrom) ]")
-                .foregroundColor(.secondary)
-                .fixedSize(horizontal: false, vertical: true)
+            primaryText("\(entry.translationFrom)")
+            secondaryText("[ \(entry.transcriptionFrom) ]")
 
             HairlineSeparator()
 
-            Text("\(entry.translationTo)")
-                .foregroundColor(.primary)
-                .fixedSize(horizontal: false, vertical: true)
-            Text("[ \(entry.transcriptionTo) ]")
-                .foregroundColor(.secondary)
-                .fixedSize(horizontal: false, vertical: true)
+            primaryText("\(entry.translationTo)")
+            secondaryText("[ \(entry.transcriptionTo) ]")
         }
         .padding()
+    }
+
+    func primaryText(_ text: String) -> some View {
+        Text("\(text)")
+            .foregroundColor(.primary)
+            .minimumScaleFactor(0.1)
+    }
+
+    func secondaryText(_ text: String) -> some View {
+        Text("\(text)")
+            .foregroundColor(.secondary)
+            .minimumScaleFactor(0.5)
     }
 }
 

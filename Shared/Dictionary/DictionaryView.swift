@@ -43,6 +43,15 @@ struct DictionaryView: View {
                 errorOrLoadView
             }
         }
+        .onOpenURL { url in
+            guard
+                let deeplink = Deeplink(from: url),
+                case let .phrase(phraseId) = deeplink,
+                let phrase = dataStore.dictionary?.phrases[phraseId]
+            else { return }
+
+            searchString = phrase.main.translation
+        }
 #if canImport(UIKit)
         // Discard keyboard
         .simultaneousGesture(DragGesture().onChanged { _ in

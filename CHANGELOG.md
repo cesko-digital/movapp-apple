@@ -1,6 +1,7 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+- Widget, UK localization, fixed issue with 12 hours rotation
 
 ## [1.6.0, build 47] - 2023-04-12Z
 - Update data from movapp-apple repository at 2023-04-11 13:58:35 +0000

@@ -56,9 +56,6 @@ struct Provider: TimelineProvider {
             }
         }
 
-        // clear data in data store
-        store.reset()
-
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }

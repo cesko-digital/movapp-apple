@@ -119,6 +119,11 @@
 		B4B6D43529EAAF6F000FE1A3 /* PhrasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D43429EAAF6F000FE1A3 /* PhrasesView.swift */; };
 		B4B6D43729EAC3F3000FE1A3 /* ForChildrenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */; };
 		B4B6D43929EAC45D000FE1A3 /* ForChildrenViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D43829EAC45D000FE1A3 /* ForChildrenViewModeling.swift */; };
+		B4B6D43D29EAD3F9000FE1A3 /* AlphabetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D43C29EAD3F9000FE1A3 /* AlphabetViewModel.swift */; };
+		B4B6D43E29EAD4B3000FE1A3 /* AlphabetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1412802FD3C00BF9898 /* AlphabetDataStore.swift */; };
+		B4B6D43F29EAD4B9000FE1A3 /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1432802FDCC00BF9898 /* Alphabet.swift */; };
+		B4B6D44029EAD4BF000FE1A3 /* AlphabetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1452802FDD200BF9898 /* AlphabetItem.swift */; };
+		B4B6D44229EAD741000FE1A3 /* AlphabetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D44129EAD741000FE1A3 /* AlphabetDetailView.swift */; };
 		B4B90EA729E146E700134849 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B90E8F29E1451800134849 /* WidgetKit.framework */; };
 		B4B90EA829E146E700134849 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B90E9129E1451800134849 /* SwiftUI.framework */; };
 		B4B90EAB29E146E700134849 /* WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B90EAA29E146E700134849 /* WidgetBundle.swift */; };
@@ -314,6 +319,8 @@
 		B4B6D42F29EAA8B9000FE1A3 /* DictionaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewModel.swift; sourceTree = "<group>"; };
 		B4B6D43429EAAF6F000FE1A3 /* PhrasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesView.swift; sourceTree = "<group>"; };
 		B4B6D43829EAC45D000FE1A3 /* ForChildrenViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenViewModeling.swift; sourceTree = "<group>"; };
+		B4B6D43C29EAD3F9000FE1A3 /* AlphabetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphabetViewModel.swift; sourceTree = "<group>"; };
+		B4B6D44129EAD741000FE1A3 /* AlphabetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetDetailView.swift; sourceTree = "<group>"; };
 		B4B90E8F29E1451800134849 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B4B90E9129E1451800134849 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		B4B90EA629E146E700134849 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -397,6 +404,8 @@
 			isa = PBXGroup;
 			children = (
 				444E97282812E11D00DC6F8B /* AlphabetView.swift */,
+				B4B6D43C29EAD3F9000FE1A3 /* AlphabetViewModel.swift */,
+				B4B6D44129EAD741000FE1A3 /* AlphabetDetailView.swift */,
 			);
 			path = Alphabet;
 			sourceTree = "<group>";
@@ -1155,9 +1164,11 @@
 				B4B6D42629EAA667000FE1A3 /* RootItems.swift in Sources */,
 				B4B6D41F29EAA5E8000FE1A3 /* MovappApp.swift in Sources */,
 				B4B6D42129EAA63B000FE1A3 /* RootItemView.swift in Sources */,
+				B4B6D43E29EAD4B3000FE1A3 /* AlphabetDataStore.swift in Sources */,
 				B4B6D42229EAA63B000FE1A3 /* RootContentView.swift in Sources */,
 				B4B6D43729EAC3F3000FE1A3 /* ForChildrenDataStore.swift in Sources */,
 				B4B6D43929EAC45D000FE1A3 /* ForChildrenViewModeling.swift in Sources */,
+				B4B6D43D29EAD3F9000FE1A3 /* AlphabetViewModel.swift in Sources */,
 				B4B6D42029EAA5E8000FE1A3 /* ComplicationController.swift in Sources */,
 				B4B6D43129EAA960000FE1A3 /* UserDefaultsStore.swift in Sources */,
 				B4B6D42B29EAA7E2000FE1A3 /* Languages.swift in Sources */,
@@ -1169,7 +1180,10 @@
 				B4B6D43229EAAEA7000FE1A3 /* Dictionary+UIExamples.swift in Sources */,
 				B4B6D42C29EAA7E7000FE1A3 /* Flags.swift in Sources */,
 				B4B6D42D29EAA7F4000FE1A3 /* Dictionary.swift in Sources */,
+				B4B6D43F29EAD4B9000FE1A3 /* Alphabet.swift in Sources */,
+				B4B6D44029EAD4BF000FE1A3 /* AlphabetItem.swift in Sources */,
 				B4B6D42529EAA647000FE1A3 /* ForChildrenView.swift in Sources */,
+				B4B6D44229EAD741000FE1A3 /* AlphabetDetailView.swift in Sources */,
 				B4B6D42A29EAA7DD000FE1A3 /* Language.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

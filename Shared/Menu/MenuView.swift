@@ -156,7 +156,7 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
 
 struct MenuView_Previews: PreviewProvider {
     static let userDefaultsStore = UserDefaultsStore()
-    static let dictionaryDataStore = DictionaryDataStore()
+    static let dictionaryDataStore = DictionaryDataStore.shared
     static let teamDataStore = TeamDataStore()
     static let languageStore = LanguageStore(
         userDefaultsStore: userDefaultsStore,

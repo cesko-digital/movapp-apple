@@ -117,6 +117,8 @@
 		B4B6D43129EAA960000FE1A3 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0320920281998AA001203BF /* UserDefaultsStore.swift */; };
 		B4B6D43229EAAEA7000FE1A3 /* Dictionary+UIExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250E55E528072591004511EC /* Dictionary+UIExamples.swift */; };
 		B4B6D43529EAAF6F000FE1A3 /* PhrasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D43429EAAF6F000FE1A3 /* PhrasesView.swift */; };
+		B4B6D43729EAC3F3000FE1A3 /* ForChildrenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */; };
+		B4B6D43929EAC45D000FE1A3 /* ForChildrenViewModeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B6D43829EAC45D000FE1A3 /* ForChildrenViewModeling.swift */; };
 		B4B90EA729E146E700134849 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B90E8F29E1451800134849 /* WidgetKit.framework */; };
 		B4B90EA829E146E700134849 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B90E9129E1451800134849 /* SwiftUI.framework */; };
 		B4B90EAB29E146E700134849 /* WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B90EAA29E146E700134849 /* WidgetBundle.swift */; };
@@ -311,6 +313,7 @@
 		B4B6D41729EAA562000FE1A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4B6D42F29EAA8B9000FE1A3 /* DictionaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewModel.swift; sourceTree = "<group>"; };
 		B4B6D43429EAAF6F000FE1A3 /* PhrasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesView.swift; sourceTree = "<group>"; };
+		B4B6D43829EAC45D000FE1A3 /* ForChildrenViewModeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenViewModeling.swift; sourceTree = "<group>"; };
 		B4B90E8F29E1451800134849 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		B4B90E9129E1451800134849 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		B4B90EA629E146E700134849 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -402,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				444E972A2812E12F00DC6F8B /* ForChildrenView.swift */,
+				B4B6D43829EAC45D000FE1A3 /* ForChildrenViewModeling.swift */,
 			);
 			path = ForChildren;
 			sourceTree = "<group>";
@@ -1152,6 +1156,8 @@
 				B4B6D41F29EAA5E8000FE1A3 /* MovappApp.swift in Sources */,
 				B4B6D42129EAA63B000FE1A3 /* RootItemView.swift in Sources */,
 				B4B6D42229EAA63B000FE1A3 /* RootContentView.swift in Sources */,
+				B4B6D43729EAC3F3000FE1A3 /* ForChildrenDataStore.swift in Sources */,
+				B4B6D43929EAC45D000FE1A3 /* ForChildrenViewModeling.swift in Sources */,
 				B4B6D42029EAA5E8000FE1A3 /* ComplicationController.swift in Sources */,
 				B4B6D43129EAA960000FE1A3 /* UserDefaultsStore.swift in Sources */,
 				B4B6D42B29EAA7E2000FE1A3 /* Languages.swift in Sources */,
@@ -1375,7 +1381,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "Movapp (iOS).entitlements";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Movapp--iOS--Info.plist";
@@ -1412,7 +1418,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = "Movapp (iOS).entitlements";
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Movapp--iOS--Info.plist";
@@ -1446,7 +1452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 49;
 				DEVELOPMENT_TEAM = 8495ZSK6A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1467,7 +1473,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 49;
 				DEVELOPMENT_TEAM = 8495ZSK6A6;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -1494,7 +1500,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 49;
 				DEVELOPMENT_ASSET_PATHS = "\"MovappWatch Watch App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1526,7 +1532,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 49;
 				DEVELOPMENT_ASSET_PATHS = "\"MovappWatch Watch App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1559,7 +1565,7 @@
 				CODE_SIGN_ENTITLEMENTS = WidgetExtension.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 49;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8495ZSK6A6;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1594,7 +1600,7 @@
 				CODE_SIGN_ENTITLEMENTS = WidgetExtension.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 49;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8495ZSK6A6;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1627,7 +1633,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 49;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
@@ -1649,7 +1655,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 49;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;

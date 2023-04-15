@@ -12,7 +12,7 @@ import WidgetKit
 
 struct Provider: TimelineProvider {
 
-    let store = DictionaryDataStore()
+    let store = DictionaryDataStore.shared
     let userDefaults = UserDefaultsStore()
 
     init() {

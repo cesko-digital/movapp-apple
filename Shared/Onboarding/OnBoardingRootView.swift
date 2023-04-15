@@ -94,7 +94,7 @@ struct OnBoardingRootView: View {
 
 struct OnBoardingRootView_Previews: PreviewProvider {
     static let userDefaultsStore = UserDefaultsStore()
-    static let dictionaryDataStore = DictionaryDataStore()
+    static let dictionaryDataStore = DictionaryDataStore.shared
     static let languageStore = LanguageStore(
         userDefaultsStore: userDefaultsStore,
         dictionaryDataStore: dictionaryDataStore,

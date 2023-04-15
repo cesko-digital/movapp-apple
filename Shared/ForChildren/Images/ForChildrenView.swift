@@ -53,7 +53,7 @@ struct ForChildrenView: View {
 }
 
 struct ForChildrenView_Previews: PreviewProvider {
-    static let dataStore = ForChildrenDataStore(dictionaryDataStore: DictionaryDataStore())
+    static let dataStore = ForChildrenDataStore(dictionaryDataStore: DictionaryDataStore.shared)
 
     static var previews: some View {
         ForChildrenView(selectedLanguage: .csUk)

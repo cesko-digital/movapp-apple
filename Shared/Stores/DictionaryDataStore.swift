@@ -9,6 +9,8 @@ import SwiftUI
 
 class DictionaryDataStore: ObservableObject {
 
+    static var shared: DictionaryDataStore = DictionaryDataStore()
+
     @Published var loading: Bool = false
     var dictionary: Dictionary?
     var error: String?

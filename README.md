@@ -12,9 +12,10 @@ Chcete-li nám pomáhat na dalším rozvoji projektu, vyplňte formulář na [ce
 
 - SwiftUI + Swift Packages
 - iOS 15+
-- iPad (TODO)
+- iPad (15+)
+- Widget (15+)
 - Mac Catalyst (TODO)
-- Apple Watch (TODO)
+- Apple Watch (8+)
 
 # Hacking
 

@@ -13,23 +13,31 @@ struct RootContentView: View {
         ScrollView {
             LazyVStack {
                 NavigationLink {
-                    DictionaryView()
+                    DictionaryView(viewModel: DictionaryViewModel(
+                        dataStore: DictionaryDataStore(),
+                        userDefaults: UserDefaultsStore())
+                    )
+                    .navigationTitle(RootItems.dictionary.title)
                 } label: {
                     RootItemView(imageName: RootItems.dictionary.icon, title: RootItems.dictionary.title)
                 }
-
+                #if DEBUG
                 NavigationLink {
                     AlphabetView()
+                        .navigationTitle(RootItems.alphabet.title)
                 } label: {
                     RootItemView(imageName: RootItems.alphabet.icon, title: RootItems.alphabet.title)
                 }
 
                 NavigationLink {
                     ForChildrenView()
+                        .navigationTitle(RootItems.for_children.title)
                 } label: {
-                    RootItemView(imageName: RootItems.for_chidlren.icon, title: RootItems.for_chidlren.title)
+                    RootItemView(imageName: RootItems.for_children.icon, title: RootItems.for_children.title)
                 }
+                #endif
             }
+            .padding(8)
         }
     }
 }

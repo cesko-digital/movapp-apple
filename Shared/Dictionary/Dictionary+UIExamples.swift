@@ -1,12 +1,12 @@
 let examplePhrase = Dictionary.Phrase(
-    id: "a4a7d64448a624da27c3026686ec9140",
+    id: "rec00jYJm8WGf61L3",
     source: Dictionary.Phrase.Translation(soundUrl: "nil",
                                           translation: "В неділю я хочу відпочити.",
                                           transcription: "V nedilju ja choču vidpočyty"),
     main: Dictionary.Phrase.Translation(soundUrl: "nil",
                                         translation: "V neděli chci odpočívat.",
                                         transcription: "В недєли хци отпочіват"),
-    imageUrl: nil
+    imageUrl: "rec00jYJm8WGf61L3"
 )
 
 let exampleCategory = Dictionary.Category(

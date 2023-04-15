@@ -114,7 +114,7 @@ struct PhraseView_Previews: PreviewProvider {
     static let soundService = SoundService()
     static let userDefaultsStore = UserDefaultsStore()
     static let favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore,
-                                                         dictionaryDataStore: DictionaryDataStore())
+                                                         dictionaryDataStore: DictionaryDataStore.shared)
 
     static var previews: some View {
         PhraseView(language: SetLanguage.csUk, phrase: examplePhrase)

@@ -86,7 +86,7 @@ struct DictionaryView: View {
 }
 
 struct DictionaryView_Previews: PreviewProvider {
-    static let dataStore = DictionaryDataStore()
+    static let dataStore = DictionaryDataStore.shared
 
     static var previews: some View {
         DictionaryView(selectedLanguage: .csUk)

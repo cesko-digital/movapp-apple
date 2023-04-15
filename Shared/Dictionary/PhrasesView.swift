@@ -47,7 +47,7 @@ struct PhrasesView_Previews: PreviewProvider {
     static let soundService = SoundService()
     static let userDefaultsStore = UserDefaultsStore()
     static let favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore,
-                                                         dictionaryDataStore: DictionaryDataStore())
+                                                         dictionaryDataStore: DictionaryDataStore.shared)
     static let matchService = PhraseMatchService(favoritesService: favoritesService)
 
     static var previews: some View {

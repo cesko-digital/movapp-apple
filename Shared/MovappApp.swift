@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct MovappApp: App {
 
-    let dictionaryDataStore = DictionaryDataStore()
+    let dictionaryDataStore = DictionaryDataStore.shared
     let forChildrenDataStore: ForChildrenDataStore
     let userDefaultsStore = UserDefaultsStore()
     let teamDataStore = TeamDataStore()

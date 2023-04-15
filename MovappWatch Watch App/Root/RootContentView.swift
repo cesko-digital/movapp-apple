@@ -14,7 +14,7 @@ struct RootContentView: View {
             LazyVStack {
                 NavigationLink {
                     DictionaryView(viewModel: DictionaryViewModel(
-                        dataStore: DictionaryDataStore(),
+                        dataStore: DictionaryDataStore.shared,
                         userDefaults: UserDefaultsStore())
                     )
                     .navigationTitle(RootItems.dictionary.title)
@@ -28,14 +28,17 @@ struct RootContentView: View {
                 } label: {
                     RootItemView(imageName: RootItems.alphabet.icon, title: RootItems.alphabet.title)
                 }
-
+                #endif
                 NavigationLink {
-                    ForChildrenView()
+                    ForChildrenView(viewModel: ForChildrenViewModel(
+                        dataStore: ForChildrenDataStore(dictionaryDataStore: DictionaryDataStore.shared),
+                        dictionaryDataStore: DictionaryDataStore.shared,
+                        userDefaults: UserDefaultsStore())
+                    )
                         .navigationTitle(RootItems.for_children.title)
                 } label: {
                     RootItemView(imageName: RootItems.for_children.icon, title: RootItems.for_children.title)
                 }
-                #endif
             }
             .padding(8)
         }

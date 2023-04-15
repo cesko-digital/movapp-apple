@@ -1,6 +1,8 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+
+## [1.6.0, build 50] - 2023-04-15Z
 - Apple Watch app Kids
 - Apple Watch PoC
 

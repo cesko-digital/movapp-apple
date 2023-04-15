@@ -21,21 +21,24 @@ struct RootContentView: View {
                 } label: {
                     RootItemView(imageName: RootItems.dictionary.icon, title: RootItems.dictionary.title)
                 }
-                #if DEBUG
+
                 NavigationLink {
-                    AlphabetView()
-                        .navigationTitle(RootItems.alphabet.title)
+                    AlphabetView(viewModel: AlphabetViewModel(
+                        dataStore: AlphabetDataStore(),
+                        userDefaults: UserDefaultsStore())
+                    )
+                    .navigationTitle(RootItems.alphabet.title)
                 } label: {
                     RootItemView(imageName: RootItems.alphabet.icon, title: RootItems.alphabet.title)
                 }
-                #endif
+
                 NavigationLink {
                     ForChildrenView(viewModel: ForChildrenViewModel(
                         dataStore: ForChildrenDataStore(dictionaryDataStore: DictionaryDataStore.shared),
                         dictionaryDataStore: DictionaryDataStore.shared,
                         userDefaults: UserDefaultsStore())
                     )
-                        .navigationTitle(RootItems.for_children.title)
+                    .navigationTitle(RootItems.for_children.title)
                 } label: {
                     RootItemView(imageName: RootItems.for_children.icon, title: RootItems.for_children.title)
                 }

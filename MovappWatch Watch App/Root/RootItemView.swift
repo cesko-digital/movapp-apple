@@ -10,6 +10,7 @@ import SwiftUI
 struct RootItemView: View {
     let imageName: String
     let title: String
+
     var body: some View {
         HStack {
             Image(imageName)

@@ -96,7 +96,10 @@ struct PexesoView_Previews: PreviewProvider {
             .previewDisplayName("Error state")
 
         PexesoView(viewModel: MockViewModel(state:
-                .loaded(content: Array(repeating: .init(phrase: examplePhrase, selected: false, found: false),
+                .loaded(content: Array(repeating: .init(imageName: "images/rec00jYJm8WGf61L3",
+                                                        translation: examplePhrase.main,
+                                                        selected: false,
+                                                        found: false),
                                        count: 16))
         ))
     }

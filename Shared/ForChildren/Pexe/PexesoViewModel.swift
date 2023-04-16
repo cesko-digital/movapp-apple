@@ -8,7 +8,8 @@
 import Foundation
 
 struct PexesoContent {
-    var phrase: Dictionary.Phrase
+    let imageName: String
+    let translation: Dictionary.Phrase.Translation
     var selected: Bool
     var found: Bool
 }
@@ -32,11 +33,13 @@ class PexesoViewModel: PexesoViewModeling {
 
     @Published var state: PexesoState = .loading
 
-    private var repository: PexesoRepository
+    private let repository: PexesoRepository
+    private let soundService: SoundService
     private let numberOfPairs: Int = 12
 
-    init(repository: PexesoRepository) {
+    init(repository: PexesoRepository, soundService: SoundService) {
         self.repository = repository
+        self.soundService = soundService
     }
 
     func load() {
@@ -45,11 +48,19 @@ class PexesoViewModel: PexesoViewModeling {
             return
         }
 
-        let pexeso = source + source.shuffled()
+        let pexeso = source.map {
+            PexesoContent(imageName: $0.imageName!,
+                          translation: $0.main,
+                          selected: false,
+                          found: false)
+        } + source.shuffled().map {
+            PexesoContent(imageName: $0.imageName!,
+                          translation: $0.source,
+                          selected: false,
+                          found: false)
+        }
 
-        state = .loaded(content: pexeso.shuffled().map {
-            PexesoContent(phrase: $0, selected: false, found: false)
-        })
+        state = .loaded(content: pexeso.shuffled())
     }
 
     func select(phrase: PexesoContent) {

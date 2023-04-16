@@ -42,7 +42,7 @@ struct FlipView: View {
 
     var body: some View {
         ZStack {
-            CardFront(degree: $frontDegree, imageName: content.phrase.imageName!)
+            CardFront(degree: $frontDegree, imageName: content.imageName)
             CardBack(degree: $backDegree)
         }.onTapGesture {
             flipCard()
@@ -52,6 +52,9 @@ struct FlipView: View {
 
 struct FlipView_Previews: PreviewProvider {
     static var previews: some View {
-        FlipView(content: .init(phrase: examplePhrase, selected: false, found: false)) { _ in }
+        FlipView(content: .init(imageName: "images/rec00jYJm8WGf61L3",
+                                translation: examplePhrase.main,
+                                selected: false,
+                                found: false)) { _ in }
     }
 }

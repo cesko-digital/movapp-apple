@@ -1,10 +1,10 @@
 require 'fileutils'
 
 def check_content_length(path, length)
-    data = File.open(path,'rb',&:read)
+    data = File.open(path, :encoding => 'utf-8', &:read)
     
     if data.length > length
-        STDERR.puts("File: #{path} is too long")
+        STDERR.puts("File: #{path} is too long. Expected max #{length} actual: #{data.length}")
         exit(false)
     end
 end

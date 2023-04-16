@@ -4,8 +4,24 @@ name: Test
 on:
   push:
     branches: [main]
+    paths:
+      - "**/*.swift"
+      - "**/*.xcodeproj"
+      - "**/*.xcassets"
+      - "**/*.lproj"
+      - "**/*.entitlements"
+      - "**/*.plist"
+
   pull_request:
     branches: [main]
+    paths:
+      - "**/*.swift"
+      - "**/*.xcodeproj"
+      - "**/*.xcassets"
+      - "**/*.lproj"
+      - "**/*.entitlements"
+      - "**/*.plist"
+
   workflow_dispatch:
 
 concurrency:

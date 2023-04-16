@@ -1,0 +1,32 @@
+name: Precheck
+
+on:
+  push: 
+    branches: [main]
+
+  pull_request:
+    branches: [main]
+    paths:
+      - "Fastlane/metadata/**"
+
+  workflow_dispatch:
+
+concurrency:
+  group: movapp-apple-precheck-${{ github.ref }}
+  cancel-in-progress: true
+  
+jobs:
+  precheck:
+    runs-on: macos-12
+    env:
+      APP_STORE_API_KEY: ${{ secrets.APP_STORE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: check offline metadata
+        run: ruby check-metadata.rb
+      
+      - name: check metadata
+        run: |
+          bundle install
+          bundle exec fastlane check_metadata

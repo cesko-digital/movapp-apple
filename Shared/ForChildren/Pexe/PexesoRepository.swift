@@ -16,11 +16,10 @@ class PexesoRepository {
     }
 
     func load() -> [Dictionary.Phrase]? {
-        guard let dictionary = dataStore.dictionary,
-              let childrenCategory = dictionary.categories.first(where: { $0.id == "recSHyEn6N0hAqUBp" }) else {
+        guard let dictionary = dataStore.dictionary else {
             return nil
         }
 
-        return dictionary.phrases.filter(identifiers: childrenCategory.phrases).filter { $0.imageUrl != nil }
+        return dictionary.phrases.values.filter { $0.imageUrl != nil }
     }
 }

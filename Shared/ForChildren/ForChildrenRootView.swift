@@ -36,6 +36,10 @@ struct ForChildrenRootView: View {
                                                         repository: StoriesRepository()))
     }
 
+    var pexesoView: some View {
+        PexesoView(viewModel: PexesoViewModel(repository: PexesoRepository(dataStore: DictionaryDataStore.shared)))
+    }
+
     var router: some View {
         Section {
             List {
@@ -48,6 +52,12 @@ struct ForChildrenRootView: View {
                     storiesList
                         .navigationTitle("for.children.stories")
                 }
+                #if DEBUG
+                NavigationLink("for.children.pexe") {
+                    pexesoView
+                        .navigationTitle("for.children.pexe")
+                }
+                #endif
             }
         }
         .padding(.top, 1)

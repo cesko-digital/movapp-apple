@@ -32,15 +32,15 @@ protocol DictionaryViewModeling: ObservableObject {
 class DictionaryViewModel: DictionaryViewModeling {
 
     private let dataStore: DictionaryDataStore
-    private let userDefaults: UserDefaultsStore
+    private let language: SetLanguage?
     private var cancellables: [AnyCancellable] = []
 
     @Published var state: DictionaryState = .loading
     let viewAppeared = PassthroughSubject<Void, Never>()
 
-    init(dataStore: DictionaryDataStore, userDefaults: UserDefaultsStore) {
+    init(dataStore: DictionaryDataStore, language: SetLanguage?) {
         self.dataStore = dataStore
-        self.userDefaults = userDefaults
+        self.language = language
 
         bind()
     }
@@ -54,17 +54,12 @@ class DictionaryViewModel: DictionaryViewModeling {
     }
 
     private func load() {
-        // TODO: WatchOS app cannot read iOS app User Defaults, I must use Watch Connectivity
-        // let language = userDefaults.getLanguage() ?? .csUk
-
-        /*
-        guard let language = userDefaults.getLanguage() else {
+        guard let language = language else {
             state = .error
             return
         }
-        */
 
-        dataStore.load(language: .csUk)
+        dataStore.load(language: language)
 
         guard let dictionary = dataStore.dictionary else {
             state = .error

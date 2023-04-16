@@ -28,15 +28,15 @@ protocol AlphabetViewModeling: ObservableObject {
 class AlphabetViewModel: AlphabetViewModeling {
 
     private let dataStore: AlphabetDataStore
-    private let userDefaults: UserDefaultsStore
+    private let language: SetLanguage?
     private var cancellables: [AnyCancellable] = []
 
     @Published var state: AlphabetState = .loading
     let viewAppeared = PassthroughSubject<Void, Never>()
 
-    init(dataStore: AlphabetDataStore, userDefaults: UserDefaultsStore) {
+    init(dataStore: AlphabetDataStore, language: SetLanguage?) {
         self.dataStore = dataStore
-        self.userDefaults = userDefaults
+        self.language = language
 
         bind()
     }
@@ -50,7 +50,10 @@ class AlphabetViewModel: AlphabetViewModeling {
     }
 
     private func load() {
-        let language = SetLanguage.csUk
+        guard let language = language else {
+            state = .error
+            return
+        }
 
         let languages = [
             language.language.main,

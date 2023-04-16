@@ -92,13 +92,14 @@
 		B46A2FCA292D63C0007CF5CB /* Christmas@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46A2FC8292D63C0007CF5CB /* Christmas@3x.png */; };
 		B475015C2910515B006810D8 /* StoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B475015B2910515B006810D8 /* StoryViewModel.swift */; };
 		B475015E29105166006810D8 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B475015D29105166006810D8 /* StoryView.swift */; };
+		B48173EE29EBDCDA0035675E /* LanguageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48173ED29EBDCDA0035675E /* LanguageProvider.swift */; };
+		B48173F129EBDDF40035675E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48173F029EBDDF40035675E /* OnboardingView.swift */; };
 		B48E91422916E3EC00965392 /* StoriesListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E91412916E3EC00965392 /* StoriesListItemView.swift */; };
 		B4AAA85D28E47A730061F9F6 /* AdaptiveStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */; };
 		B4B6D41529EAA562000FE1A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B6D41429EAA562000FE1A3 /* Assets.xcassets */; };
 		B4B6D41829EAA562000FE1A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B6D41729EAA562000FE1A3 /* Preview Assets.xcassets */; };
 		B4B6D41B29EAA562000FE1A3 /* Movapp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B4B6D40E29EAA560000FE1A3 /* Movapp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B4B6D41F29EAA5E8000FE1A3 /* MovappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444E97092812DF8E00DC6F8B /* MovappApp.swift */; };
-		B4B6D42029EAA5E8000FE1A3 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444E970B2812DF8E00DC6F8B /* ComplicationController.swift */; };
 		B4B6D42129EAA63B000FE1A3 /* RootItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444E971F2812E01F00DC6F8B /* RootItemView.swift */; };
 		B4B6D42229EAA63B000FE1A3 /* RootContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444E97212812E06300DC6F8B /* RootContentView.swift */; };
 		B4B6D42329EAA63F000FE1A3 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444E97262812E10900DC6F8B /* DictionaryView.swift */; };
@@ -209,7 +210,6 @@
 		25A2397E2808883400750977 /* PhrasesFavoritesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesFavoritesProvider.swift; sourceTree = "<group>"; };
 		4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenDataStore.swift; sourceTree = "<group>"; };
 		444E97092812DF8E00DC6F8B /* MovappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappApp.swift; sourceTree = "<group>"; };
-		444E970B2812DF8E00DC6F8B /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		444E971F2812E01F00DC6F8B /* RootItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootItemView.swift; sourceTree = "<group>"; };
 		444E97212812E06300DC6F8B /* RootContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContentView.swift; sourceTree = "<group>"; };
 		444E97262812E10900DC6F8B /* DictionaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryView.swift; sourceTree = "<group>"; };
@@ -311,6 +311,8 @@
 		B46A2FC8292D63C0007CF5CB /* Christmas@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Christmas@3x.png"; sourceTree = "<group>"; };
 		B475015B2910515B006810D8 /* StoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewModel.swift; sourceTree = "<group>"; };
 		B475015D29105166006810D8 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		B48173ED29EBDCDA0035675E /* LanguageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageProvider.swift; sourceTree = "<group>"; };
+		B48173F029EBDDF40035675E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		B48E91412916E3EC00965392 /* StoriesListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListItemView.swift; sourceTree = "<group>"; };
 		B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveStack.swift; sourceTree = "<group>"; };
 		B4B6D40E29EAA560000FE1A3 /* Movapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -767,17 +769,26 @@
 			path = Christmas;
 			sourceTree = "<group>";
 		};
+		B48173EF29EBDDE30035675E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B48173F029EBDDF40035675E /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		B4B6D40F29EAA560000FE1A3 /* MovappWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				B48173EF29EBDDE30035675E /* Onboarding */,
 				444E97252812E0E500DC6F8B /* ForChildren */,
 				444E97242812E0CB00DC6F8B /* Alphabet */,
 				444E97232812E0BE00DC6F8B /* Dictionary */,
 				444E971E2812DFF000DC6F8B /* Root */,
 				444E97092812DF8E00DC6F8B /* MovappApp.swift */,
-				444E970B2812DF8E00DC6F8B /* ComplicationController.swift */,
 				B4B6D41429EAA562000FE1A3 /* Assets.xcassets */,
 				B4B6D41629EAA562000FE1A3 /* Preview Content */,
+				B48173ED29EBDCDA0035675E /* LanguageProvider.swift */,
 			);
 			path = "MovappWatch Watch App";
 			sourceTree = "<group>";
@@ -1169,9 +1180,10 @@
 				B4B6D43729EAC3F3000FE1A3 /* ForChildrenDataStore.swift in Sources */,
 				B4B6D43929EAC45D000FE1A3 /* ForChildrenViewModeling.swift in Sources */,
 				B4B6D43D29EAD3F9000FE1A3 /* AlphabetViewModel.swift in Sources */,
-				B4B6D42029EAA5E8000FE1A3 /* ComplicationController.swift in Sources */,
 				B4B6D43129EAA960000FE1A3 /* UserDefaultsStore.swift in Sources */,
 				B4B6D42B29EAA7E2000FE1A3 /* Languages.swift in Sources */,
+				B48173F129EBDDF40035675E /* OnboardingView.swift in Sources */,
+				B48173EE29EBDCDA0035675E /* LanguageProvider.swift in Sources */,
 				B4B6D42329EAA63F000FE1A3 /* DictionaryView.swift in Sources */,
 				B4B6D42829EAA7D2000FE1A3 /* DictionaryDataStore.swift in Sources */,
 				B4B6D42429EAA642000FE1A3 /* AlphabetView.swift in Sources */,
@@ -1533,7 +1545,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -1566,7 +1578,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};

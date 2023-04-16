@@ -3,9 +3,15 @@ name: Precheck
 on:
   pull_request:
     branches: [main]
+    paths:
+      - "Fastlane/metadata/**"
 
   workflow_dispatch:
 
+concurrency:
+  group: movapp-apple-precheck-${{ github.ref }}
+  cancel-in-progress: true
+  
 jobs:
   precheck:
     runs-on: macos-12

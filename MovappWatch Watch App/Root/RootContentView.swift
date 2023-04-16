@@ -15,7 +15,7 @@ struct RootContentView: View {
                 NavigationLink {
                     DictionaryView(viewModel: DictionaryViewModel(
                         dataStore: DictionaryDataStore.shared,
-                        userDefaults: UserDefaultsStore())
+                        language: LanguageProvider.shared.language)
                     )
                     .navigationTitle(RootItems.dictionary.title)
                 } label: {
@@ -25,7 +25,7 @@ struct RootContentView: View {
                 NavigationLink {
                     AlphabetView(viewModel: AlphabetViewModel(
                         dataStore: AlphabetDataStore(),
-                        userDefaults: UserDefaultsStore())
+                        language: LanguageProvider.shared.language)
                     )
                     .navigationTitle(RootItems.alphabet.title)
                 } label: {
@@ -36,7 +36,7 @@ struct RootContentView: View {
                     ForChildrenView(viewModel: ForChildrenViewModel(
                         dataStore: ForChildrenDataStore(dictionaryDataStore: DictionaryDataStore.shared),
                         dictionaryDataStore: DictionaryDataStore.shared,
-                        userDefaults: UserDefaultsStore())
+                        language: LanguageProvider.shared.language)
                     )
                     .navigationTitle(RootItems.for_children.title)
                 } label: {

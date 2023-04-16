@@ -15,7 +15,7 @@ Chcete-li nám pomáhat na dalším rozvoji projektu, vyplňte formulář na [ce
 - iPad (15+)
 - Widget (15+)
 - Mac Catalyst (TODO)
-- Apple Watch (8+)
+- Apple Watch (9+)
 
 # Hacking
 

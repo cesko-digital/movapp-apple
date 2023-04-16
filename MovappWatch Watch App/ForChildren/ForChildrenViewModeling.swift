@@ -28,16 +28,16 @@ class ForChildrenViewModel: ForChildrenViewModeling {
 
     private let dataStore: ForChildrenDataStore
     private let dictionaryDataStore: DictionaryDataStore
-    private let userDefaults: UserDefaultsStore
+    private let language: SetLanguage?
     private var cancellables: [AnyCancellable] = []
 
     @Published var state: ForChildrenState = .loading
     let viewAppeared = PassthroughSubject<Void, Never>()
 
-    init(dataStore: ForChildrenDataStore, dictionaryDataStore: DictionaryDataStore, userDefaults: UserDefaultsStore) {
+    init(dataStore: ForChildrenDataStore, dictionaryDataStore: DictionaryDataStore, language: SetLanguage?) {
         self.dataStore = dataStore
         self.dictionaryDataStore = dictionaryDataStore
-        self.userDefaults = userDefaults
+        self.language = language
 
         bind()
     }
@@ -51,8 +51,12 @@ class ForChildrenViewModel: ForChildrenViewModeling {
     }
 
     private func load() {
-        // TODO: WatchOS app cannot read iOS app User Defaults, I must use Watch Connectivity
-        dictionaryDataStore.load(language: .csUk)
+        guard let language = language else {
+            state = .error
+            return
+        }
+
+        dictionaryDataStore.load(language: language)
 
         dataStore.load()
 

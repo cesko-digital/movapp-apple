@@ -9,10 +9,20 @@ import SwiftUI
 
 @main
 struct MovappApp: App {
+
+    @State private var language: SetLanguage?
+
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                RootContentView()
+                if language == nil {
+                    OnboardingView()
+                } else {
+                    RootContentView()
+                }
+            }
+            .onReceive(LanguageProvider.shared.$language) { language in
+                self.language = language
             }
         }
     }

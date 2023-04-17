@@ -39,13 +39,6 @@ struct DictionaryView<ViewModel: DictionaryViewModeling>: View {
         }
     }
 
-    private func categoryView(content: Dictionary.Category.Name) -> some View {
-        VStack {
-            Text(content.main)
-            Text(content.source)
-        }
-    }
-
     private var loadingView: some View {
         ProgressView()
     }

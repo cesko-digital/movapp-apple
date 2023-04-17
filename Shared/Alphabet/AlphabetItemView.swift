@@ -9,14 +9,9 @@ import SwiftUI
 
 struct AlphabetItemView: View {
     let item: AlphabetItem
-    let language: Languages
 
-    private let soundsDirectory: String
-
-    init (item: AlphabetItem, language: Languages) {
+    init (item: AlphabetItem) {
         self.item = item
-        self.language = language
-        soundsDirectory = "data/\(language.rawValue)-alphabet"
     }
 
     var body: some View {
@@ -26,8 +21,8 @@ struct AlphabetItemView: View {
                     .font(.system(size: 100))
                     .foregroundColor(Color("colors/text"))
 
-                if item.soundUrl != nil {
-                    PlayButtonView(id: item.id, inDirectory: soundsDirectory)
+                if let soundFileName = item.soundFileName {
+                    PlayButtonView(soundFileName: soundFileName)
                 }
 
                 Text(item.transcription)
@@ -47,7 +42,7 @@ struct AlphabetItemView: View {
 
                         Spacer()
 
-                        PlayTranslationButtonView(language: language, translation: example)
+                        PlayTranslationButtonView(translation: example)
 
                     }
                     .frame(maxWidth: .infinity)
@@ -62,7 +57,7 @@ struct AlphabetItemView_Previews: PreviewProvider {
     static let soundService = SoundService()
 
     static var previews: some View {
-        AlphabetItemView(item: AlphabetItem.example, language: SetLanguage.ukCs.language.main)
+        AlphabetItemView(item: AlphabetItem.example)
             .environmentObject(soundService)
     }
 }

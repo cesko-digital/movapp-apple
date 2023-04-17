@@ -26,4 +26,13 @@ struct AlphabetItem: Decodable {
     var letter: String {
         return letters.joined(separator: " ")
     }
+
+    var soundFileName: String? {
+        guard let soundUrl = soundUrl,
+              let soundUri = URL(string: soundUrl)
+        else { return nil }
+
+        let relativePath = soundUri.deletingPathExtension().relativePath.dropFirst()
+        return String("data/\(relativePath)")
+    }
 }

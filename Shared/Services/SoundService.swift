@@ -10,13 +10,12 @@ import AVFoundation
 import UIKit
 
 struct Playback {
-    let soundId: String
-    let languageOrDirectory: String
+    let soundFileName: String
 }
 
-class SoundService: NSObject, ObservableObject {
+final class SoundService: NSObject, ObservableObject {
 
-    var player: AVAudioPlayer?
+    private var player: AVAudioPlayer?
 
     var playbackPipe: [Playback] = []
 
@@ -28,53 +27,26 @@ class SoundService: NSObject, ObservableObject {
         super.init()
     }
 
-    func getCurrentPlayback() -> Playback? {
+    private func getCurrentPlayback() -> Playback? {
         return playbackPipe.first
     }
 
-    func isPlaying(id: String) -> Bool {
-        guard let currentPlayback = getCurrentPlayback() else {
+    func isPlaying(path: String?) -> Bool {
+        guard let path = path else {
+            print("nil cannot be played.")
             return false
         }
 
-        return currentPlayback.soundId.compare(id) == .orderedSame
+        return getCurrentPlayback()?.soundFileName == path
     }
 
-    func isPlaying(translation: Dictionary.Phrase.Translation) -> Bool {
-        if let soundFileName = translation.soundFileName, isPlaying(id: soundFileName) {
-            return true
-        }
-
-        return false
-    }
-
-    func canPlayTranslation(language: Languages, translation: Dictionary.Phrase.Translation) -> Bool {
-        if translation.soundFileName != nil {
-            return true
-        } else {
-            return false
-        }
-    }
-
-    func playTranslation(language: Languages, translation: Dictionary.Phrase.Translation) {
-
-        if isPlaying(translation: translation) {
-            stopAndPlayNext()
+    func play(path: String?) {
+        guard let path = path else {
+            print("nil cannot be played.")
             return
         }
 
-        if let soundFileName = translation.soundFileName {
-            play(soundFileName, inDirectory: "data")
-        } else {
-            print("Cant play sound, missing sound or unsupported language", language, translation)
-        }
-    }
-
-    /**
-     Plays given sound in assets (only for small sizes)
-     */
-    func play (_ id: String, inDirectory: String) {
-        playbackPipe.append(Playback(soundId: id, languageOrDirectory: inDirectory))
+        playbackPipe.append(Playback(soundFileName: path))
 
         stopAndPlayNext()
     }
@@ -84,12 +56,10 @@ class SoundService: NSObject, ObservableObject {
             return
         }
 
-        playSound(currentPlayback.soundId, inDirectory: currentPlayback.languageOrDirectory)
+        playSound(currentPlayback.soundFileName)
     }
 
-    private func playSound(_ id: String, inDirectory: String) {
-        let assetName = "\(inDirectory)/\(id)"
-
+    private func playSound(_ assetName: String) {
         guard let data = NSDataAsset(name: assetName) else {
             print("File does not exists \(assetName)")
             return
@@ -105,7 +75,7 @@ class SoundService: NSObject, ObservableObject {
             on()
 
         } catch {
-            print("Failed to play \(id) - \(error.localizedDescription)")
+            print("Failed to play \(assetName) - \(error.localizedDescription)")
         }
     }
 

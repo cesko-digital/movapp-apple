@@ -10,12 +10,11 @@ import SwiftUI
 struct PlayButtonView: View {
     @EnvironmentObject var soundService: SoundService
 
-    let id: String
-    let inDirectory: String
+    let soundFileName: String
 
     var body: some View {
-        SoundStateButtonView(isPlaying: soundService.isPlaying(id: id)) {
-            soundService.play(id, inDirectory: inDirectory)
+        SoundStateButtonView(isPlaying: soundService.isPlaying(path: soundFileName)) {
+            soundService.play(path: soundFileName)
         }
     }
 }
@@ -24,7 +23,7 @@ struct PlayButtonView_Previews: PreviewProvider {
     static let soundService = SoundService()
 
     static var previews: some View {
-        PlayButtonView(id: AlphabetItem.example.id, inDirectory: "data/cs-alphabet")
+        PlayButtonView(soundFileName: "data/cs-alphabet/\(AlphabetItem.example.id)")
             .padding()
             .environmentObject(soundService)
             .previewLayout(.sizeThatFits)

@@ -10,13 +10,12 @@ import SwiftUI
 struct PlayTranslationButtonView: View {
     @EnvironmentObject var soundService: SoundService
 
-    let language: Languages
     let translation: Dictionary.Phrase.Translation
 
     var body: some View {
-        if soundService.canPlayTranslation(language: language, translation: translation) {
-            SoundStateButtonView(isPlaying: soundService.isPlaying(translation: translation)) {
-                soundService.playTranslation(language: language, translation: translation)
+        if let soundFileName = translation.soundFileName {
+            SoundStateButtonView(isPlaying: soundService.isPlaying(path: soundFileName)) {
+                soundService.play(path: soundFileName)
             }
         }
     }
@@ -25,7 +24,7 @@ struct PlayTranslationButtonView: View {
 struct PlayTranslationButtonView_Previews: PreviewProvider {
 
     static var previews: some View {
-        PlayTranslationButtonView(language: .cs, translation: examplePhrase.main)
+        PlayTranslationButtonView(translation: examplePhrase.main)
             .environmentObject(SoundService())
     }
 }

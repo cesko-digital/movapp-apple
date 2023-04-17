@@ -54,7 +54,7 @@ struct AlphabetView<ViewModel: AlphabetViewModeling>: View {
                         ScrollView(showsIndicators: false) {
                             LazyVGrid(columns: gridLayout, alignment: .center) {
                                 ForEach(item.alphabet.items, id: \.id) { item in
-                                    AlphabetItemView(item: item, language: viewModel.selectedAlphabet)
+                                    AlphabetItemView(item: item)
                                 }
                             }
                         }

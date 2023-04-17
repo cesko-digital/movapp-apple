@@ -27,11 +27,9 @@ struct ForChildrenItemView: View {
 
                             // I want to learn czech language
                             if selectedLanguage.flipFromWithTo == true {
-                                soundService.playTranslation(language: selectedLanguage.language.main,
-                                                             translation: item.main)
+                                soundService.play(path: item.main.soundFileName)
                             } else {
-                                soundService.playTranslation(language: selectedLanguage.language.source,
-                                                             translation: item.source)
+                                soundService.play(path: item.source.soundFileName)
                             }
                         }
                 }

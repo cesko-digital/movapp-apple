@@ -79,7 +79,7 @@ final class SoundService: NSObject, ObservableObject {
         }
     }
 
-    func stopAndPlayNext () {
+    private func stopAndPlayNext () {
         if isPlaying == false {
             tryToPlayNext()
             return

@@ -10,11 +10,13 @@ import SwiftUI
 struct PlayButtonView: View {
     @EnvironmentObject var soundService: SoundService
 
-    let soundFileName: String
+    let soundFileName: String?
 
     var body: some View {
-        SoundStateButtonView(isPlaying: soundService.isPlaying(path: soundFileName)) {
-            soundService.play(path: soundFileName)
+        if let soundFileName = soundFileName {
+            SoundStateButtonView(isPlaying: soundService.isPlaying(path: soundFileName)) {
+                soundService.play(path: soundFileName)
+            }
         }
     }
 }

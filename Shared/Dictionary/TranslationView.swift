@@ -32,7 +32,7 @@ struct TranslationView: View {
 
             Spacer()
 
-            PlayTranslationButtonView(translation: translation)
+            PlayButtonView(soundFileName: translation.soundFileName)
 
         }.frame(maxWidth: .infinity)
     }

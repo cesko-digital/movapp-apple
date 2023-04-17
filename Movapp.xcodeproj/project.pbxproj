@@ -13,7 +13,6 @@
 		4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */; };
 		5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77295C280443B00087F582 /* ForChildrenItemView.swift */; };
 		B0065D0C2831730300EE84D8 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065D0B2831730300EE84D8 /* String+MD5.swift */; };
-		B0065D0E28319D3300EE84D8 /* PlayTranslationButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065D0D28319D3300EE84D8 /* PlayTranslationButtonView.swift */; };
 		B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2427F9999C0073611C /* DictionaryContentView.swift */; };
 		B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */; };
 		B00D1B2E27F9DEC20073611C /* TranslationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D1B2D27F9DEC20073611C /* TranslationView.swift */; };
@@ -217,7 +216,6 @@
 		444E972A2812E12F00DC6F8B /* ForChildrenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenView.swift; sourceTree = "<group>"; };
 		5B77295C280443B00087F582 /* ForChildrenItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenItemView.swift; sourceTree = "<group>"; };
 		B0065D0B2831730300EE84D8 /* String+MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
-		B0065D0D28319D3300EE84D8 /* PlayTranslationButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayTranslationButtonView.swift; sourceTree = "<group>"; };
 		B00D1B2427F9999C0073611C /* DictionaryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryContentView.swift; sourceTree = "<group>"; };
 		B00D1B2627F99BEA0073611C /* AccordionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordionHeaderView.swift; sourceTree = "<group>"; };
 		B00D1B2D27F9DEC20073611C /* TranslationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationView.swift; sourceTree = "<group>"; };
@@ -619,7 +617,6 @@
 				B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */,
 				B076F0972806011500C1F88F /* CardView.swift */,
 				B03B1BC728186E2E005C62C3 /* PlayButtonView.swift */,
-				B0065D0D28319D3300EE84D8 /* PlayTranslationButtonView.swift */,
 				B04021CD2822E27000B756FB /* PrimaryButtonStyle.swift */,
 				B04021CF2822E48700B756FB /* ScaleButtonStyle.swift */,
 				B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */,
@@ -1128,7 +1125,6 @@
 				B04021CA2822D6C600B756FB /* OnBoardingTutorialView.swift in Sources */,
 				4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */,
 				B05FF14327FA14A00046D636 /* SoundService.swift in Sources */,
-				B0065D0E28319D3300EE84D8 /* PlayTranslationButtonView.swift in Sources */,
 				B48E91422916E3EC00965392 /* StoriesListItemView.swift in Sources */,
 				B0E140DF27FCD2E5008BBBB4 /* String+Levenshtein.swift in Sources */,
 				B425D32C2920214B0050EBEE /* StoryHeadlineView.swift in Sources */,

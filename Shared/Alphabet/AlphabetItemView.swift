@@ -21,9 +21,7 @@ struct AlphabetItemView: View {
                     .font(.system(size: 100))
                     .foregroundColor(Color("colors/text"))
 
-                if let soundFileName = item.soundFileName {
-                    PlayButtonView(soundFileName: soundFileName)
-                }
+                PlayButtonView(soundFileName: item.soundFileName)
 
                 Text(item.transcription)
                     .font(.system(size: 25))
@@ -42,7 +40,7 @@ struct AlphabetItemView: View {
 
                         Spacer()
 
-                        PlayTranslationButtonView(translation: example)
+                        PlayButtonView(soundFileName: example.soundFileName)
 
                     }
                     .frame(maxWidth: .infinity)

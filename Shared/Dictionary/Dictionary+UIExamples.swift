@@ -1,10 +1,8 @@
 let examplePhrase = Dictionary.Phrase(
     id: "rec00jYJm8WGf61L3",
-    source: Dictionary.Phrase.Translation(soundUrl: "nil",
-                                          translation: "В неділю я хочу відпочити.",
+    source: Dictionary.Phrase.Translation(translation: "В неділю я хочу відпочити.",
                                           transcription: "V nedilju ja choču vidpočyty"),
-    main: Dictionary.Phrase.Translation(soundUrl: "nil",
-                                        translation: "V neděli chci odpočívat.",
+    main: Dictionary.Phrase.Translation(translation: "V neděli chci odpočívat.",
                                         transcription: "В недєли хци отпочіват"),
     imageUrl: "rec00jYJm8WGf61L3"
 )

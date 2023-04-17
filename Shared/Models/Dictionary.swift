@@ -66,7 +66,7 @@ extension Dictionary.Category {
 
 extension Dictionary.Phrase {
     struct Translation: Decodable {
-        let soundUrl: String
+        private let soundUrl: String
         let translation: String
         let transcription: String
 
@@ -75,6 +75,12 @@ extension Dictionary.Phrase {
 
             let relativePath = soundUri.deletingPathExtension().relativePath.dropFirst()
             return String("data/\(relativePath)")
+        }
+
+        init(translation: String, transcription: String) {
+            self.soundUrl = "nil"
+            self.translation = translation
+            self.transcription = transcription
         }
     }
 }

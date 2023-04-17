@@ -45,7 +45,7 @@ struct ForChildrenRowView: View {
                     .foregroundColor(Color("colors/secondary"))
             }
             Spacer()
-            PlayTranslationButtonView(translation: translation)
+            PlayButtonView(soundFileName: translation.soundFileName)
         }
     }
 }

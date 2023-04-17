@@ -22,14 +22,14 @@ final class DictionaryDataStoreTests: XCTestCase {
                 let sound = NSDataAsset(name: soundFileName)
                 XCTAssertNotNil(sound, "\(soundFileName) not found at data/\(soundFileName)")
             } else {
-                XCTFail("There is issue with phrase: \(phrase.source.soundUrl)")
+                XCTFail("There is issue with phrase: \(phrase.source.translation)")
             }
 
             if let soundFileName = phrase.main.soundFileName {
                 let sound = NSDataAsset(name: soundFileName)
                 XCTAssertNotNil(sound, "\(soundFileName) not found at data/\(soundFileName)")
             } else {
-                XCTFail("There is issue with phrase: \(phrase.main.soundUrl)")
+                XCTFail("There is issue with phrase: \(phrase.main.transcription)")
             }
         }
     }

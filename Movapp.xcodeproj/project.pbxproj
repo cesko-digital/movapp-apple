@@ -36,7 +36,6 @@
 		B04021CA2822D6C600B756FB /* OnBoardingTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04021C92822D6C600B756FB /* OnBoardingTutorialView.swift */; };
 		B04021CC2822D6E300B756FB /* OnBoardingTutorialsPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04021CB2822D6E300B756FB /* OnBoardingTutorialsPagerView.swift */; };
 		B04021CE2822E27000B756FB /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04021CD2822E27000B756FB /* PrimaryButtonStyle.swift */; };
-		B04021D02822E48700B756FB /* ScaleButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04021CF2822E48700B756FB /* ScaleButtonStyle.swift */; };
 		B05FB5F228269834002AA6DE /* OnBoardingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FB5F128269834002AA6DE /* OnBoardingStore.swift */; };
 		B05FF14327FA14A00046D636 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF14227FA14A00046D636 /* SoundService.swift */; };
 		B066546C27FB7D3C002D5EDD /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B066546B27FB7D3C002D5EDD /* Language.swift */; };
@@ -66,7 +65,6 @@
 		B0ECC1422802FD3C00BF9898 /* AlphabetDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1412802FD3C00BF9898 /* AlphabetDataStore.swift */; };
 		B0ECC1442802FDCC00BF9898 /* Alphabet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1432802FDCC00BF9898 /* Alphabet.swift */; };
 		B0ECC1462802FDD200BF9898 /* AlphabetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1452802FDD200BF9898 /* AlphabetItem.swift */; };
-		B0ECC1482802FF2500BF9898 /* AlphabetExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */; };
 		B0ECC14C2803431A00BF9898 /* Bundle+version.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14B2803431A00BF9898 /* Bundle+version.swift */; };
 		B0ECC1502803485B00BF9898 /* AlphabetShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ECC14F2803485B00BF9898 /* AlphabetShortcutsView.swift */; };
 		B40177F028B8F30D000374D2 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40177EF28B8F30D000374D2 /* PickerView.swift */; };
@@ -240,7 +238,6 @@
 		B04021C92822D6C600B756FB /* OnBoardingTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingTutorialView.swift; sourceTree = "<group>"; };
 		B04021CB2822D6E300B756FB /* OnBoardingTutorialsPagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingTutorialsPagerView.swift; sourceTree = "<group>"; };
 		B04021CD2822E27000B756FB /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
-		B04021CF2822E48700B756FB /* ScaleButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleButtonStyle.swift; sourceTree = "<group>"; };
 		B05FB5F128269834002AA6DE /* OnBoardingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingStore.swift; sourceTree = "<group>"; };
 		B05FF13D27F9F19F0046D636 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B05FF14227FA14A00046D636 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
@@ -277,7 +274,6 @@
 		B0ECC1412802FD3C00BF9898 /* AlphabetDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetDataStore.swift; sourceTree = "<group>"; };
 		B0ECC1432802FDCC00BF9898 /* Alphabet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabet.swift; sourceTree = "<group>"; };
 		B0ECC1452802FDD200BF9898 /* AlphabetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetItem.swift; sourceTree = "<group>"; };
-		B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetExample.swift; sourceTree = "<group>"; };
 		B0ECC14928033A8F00BF9898 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		B0ECC14A28033A9E00BF9898 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		B0ECC14B2803431A00BF9898 /* Bundle+version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+version.swift"; sourceTree = "<group>"; };
@@ -427,7 +423,6 @@
 				B066546D27FB7E0C002D5EDD /* SetLanguage.swift */,
 				B0ECC1432802FDCC00BF9898 /* Alphabet.swift */,
 				B08B0DF4281FD0F2000EAEF1 /* Team.swift */,
-				B0ECC1472802FF2500BF9898 /* AlphabetExample.swift */,
 				B0ECC1452802FDD200BF9898 /* AlphabetItem.swift */,
 			);
 			path = Models;
@@ -618,7 +613,6 @@
 				B076F0972806011500C1F88F /* CardView.swift */,
 				B03B1BC728186E2E005C62C3 /* PlayButtonView.swift */,
 				B04021CD2822E27000B756FB /* PrimaryButtonStyle.swift */,
-				B04021CF2822E48700B756FB /* ScaleButtonStyle.swift */,
 				B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */,
 			);
 			path = Components;
@@ -1076,7 +1070,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B475015E29105166006810D8 /* StoryView.swift in Sources */,
-				B04021D02822E48700B756FB /* ScaleButtonStyle.swift in Sources */,
 				B04021C42822D43B00B756FB /* OnBoardingWelcomeView.swift in Sources */,
 				B4C8BE83290A6B6500B51377 /* ForChildrenRootView.swift in Sources */,
 				B0ECC1462802FDD200BF9898 /* AlphabetItem.swift in Sources */,
@@ -1114,7 +1107,6 @@
 				250E55E628072591004511EC /* Dictionary+UIExamples.swift in Sources */,
 				250E55E4280723E0004511EC /* Languages.swift in Sources */,
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
-				B0ECC1482802FF2500BF9898 /* AlphabetExample.swift in Sources */,
 				B425D327291FF02C0050EBEE /* StoriesListView.swift in Sources */,
 				25A2397F2808883400750977 /* PhrasesFavoritesProvider.swift in Sources */,
 				B01279CA27F872A9003FB72E /* DictionaryView.swift in Sources */,

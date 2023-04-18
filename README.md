@@ -1,3 +1,7 @@
+[![Test](https://github.com/cesko-digital/movapp-apple/actions/workflows/build.yml/badge.svg)](https://github.com/cesko-digital/movapp-apple/actions/workflows/build.yml)
+[![Precheck](https://github.com/cesko-digital/movapp-apple/actions/workflows/precheck.yml/badge.svg)](https://github.com/cesko-digital/movapp-apple/actions/workflows/precheck.yml)
+
+
 ![](./.github/banner.jpg)
 
 Cílem [Movapp.cz](Movapp.cz) je usnadnit dorozumění mezi Čechy a Ukrajinci. Mова [mova] znamená ukrajinsky jazyk. Movapp je aplikace pro trénink jazyků. 

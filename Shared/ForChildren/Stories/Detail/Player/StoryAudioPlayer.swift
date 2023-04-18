@@ -13,7 +13,6 @@ class StoryAudioPlayer: Equatable {
     private let seekingStep: TimeInterval = 10
 
     private let avPlayer: AVAudioPlayer
-    private var observer: NSKeyValueObservation?
     private var sessionCategory: AVAudioSession.Category?
 
     var duration: TimeInterval {

@@ -13,7 +13,7 @@ struct AlphabetItem: Decodable {
         soundUrl: "https://data.movapp.eu/data/CS-alphabet/recOMNxm02MGy3r7I.mp3",
         letters: ["A", "a"],
         transcription: "[a]",
-        examples: [Dictionary.Phrase.Translation(soundUrl: "nil", translation: "abeceda", transcription: "абецеда")]
+        examples: [Dictionary.Phrase.Translation(translation: "abeceda", transcription: "абецеда")]
     )
 
     let id: String
@@ -25,5 +25,14 @@ struct AlphabetItem: Decodable {
 
     var letter: String {
         return letters.joined(separator: " ")
+    }
+
+    var soundFileName: String? {
+        guard let soundUrl = soundUrl,
+              let soundUri = URL(string: soundUrl)
+        else { return nil }
+
+        let relativePath = soundUri.deletingPathExtension().relativePath.dropFirst()
+        return String("data/\(relativePath)")
     }
 }

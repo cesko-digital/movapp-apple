@@ -19,17 +19,17 @@ final class DictionaryDataStoreTests: XCTestCase {
 
         dataStore.dictionary?.phrases.values.forEach { phrase in
             if let soundFileName = phrase.source.soundFileName {
-                let sound = NSDataAsset(name: "data/\(soundFileName)")
+                let sound = NSDataAsset(name: soundFileName)
                 XCTAssertNotNil(sound, "\(soundFileName) not found at data/\(soundFileName)")
             } else {
-                XCTFail("There is issue with phrase: \(phrase.source.soundUrl)")
+                XCTFail("There is issue with phrase: \(phrase.source.translation)")
             }
 
             if let soundFileName = phrase.main.soundFileName {
-                let sound = NSDataAsset(name: "data/\(soundFileName)")
+                let sound = NSDataAsset(name: soundFileName)
                 XCTAssertNotNil(sound, "\(soundFileName) not found at data/\(soundFileName)")
             } else {
-                XCTFail("There is issue with phrase: \(phrase.main.soundUrl)")
+                XCTFail("There is issue with phrase: \(phrase.main.transcription)")
             }
         }
     }
@@ -68,8 +68,8 @@ final class DictionaryDataStoreTests: XCTestCase {
 
         let decodedPhrase = try decoder.decode(Dictionary.Phrase.self, from: data)
 
-        XCTAssertEqual(decodedPhrase.main.soundFileName, "cs-sounds/e/e3b41247a6db5f4844cb4d31d66994e7")
-        XCTAssertEqual(decodedPhrase.source.soundFileName, "uk-sounds/5/5bfad1e5b1a51d4623f286d325b37649")
+        XCTAssertEqual(decodedPhrase.main.soundFileName, "data/cs-sounds/e/e3b41247a6db5f4844cb4d31d66994e7")
+        XCTAssertEqual(decodedPhrase.source.soundFileName, "data/uk-sounds/5/5bfad1e5b1a51d4623f286d325b37649")
     }
 
     func testHiddenExcludedCategories() throws {

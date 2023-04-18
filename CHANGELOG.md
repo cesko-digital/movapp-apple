@@ -1,6 +1,8 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+
+## [1.6.0, build 53] - 2023-04-18Z
 - Refactor SoundService - retest all sounds needed
 
 ## [1.6.0, build 52] - 2023-04-16Z

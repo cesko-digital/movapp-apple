@@ -135,9 +135,7 @@ end
 
 lane :tests do
     run_tests(
-        scheme: "Movapp (iOS)",
-        skip_testing: "FastlaneSnapshot",
-        disable_concurrent_testing: true
+        scheme: "Movapp (iOS)"
     )
 end
 

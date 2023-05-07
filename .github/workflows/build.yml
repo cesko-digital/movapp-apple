@@ -29,18 +29,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  check_build:
-    runs-on: macos-12
-    env:
-      MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-      MATCH_GIT_PRIVATE_KEY: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}
-    steps:
-      - uses: actions/checkout@v3
-      - name: Build
-        run: |
-          bundle install
-          bundle exec fastlane build
-
   tests:
     runs-on: macos-12
     env:
@@ -48,8 +36,11 @@ jobs:
       MATCH_GIT_PRIVATE_KEY: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}
       APP_STORE_API_KEY: ${{ secrets.APP_STORE_API_KEY }}
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: bundle install
+      - name: Build
+        run: bundle exec fastlane build
       - name: Tests
-        run: |
-          bundle install
-          bundle exec fastlane tests
+        run: bundle exec fastlane tests

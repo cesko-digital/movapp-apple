@@ -85,4 +85,19 @@ final class DictionaryDataStoreTests: XCTestCase {
         XCTAssertNotEqual(dataStore.dictionary?.categories.count, 0)
         XCTAssertNotEqual(dataStore.dictionary?.phrases.count, 0)
     }
+
+    func testNonEmptyPhrases() throws {
+        let dataStore = DictionaryDataStore()
+
+        dataStore.load(language: .csUk)
+
+        dataStore.dictionary?.categories.forEach { category in
+            XCTAssertFalse(category.isMetaCategory, "Category with name: \(category.name) should not be visible")
+            XCTAssertFalse(category.phrases.isEmpty, "Category with name: \(category.name) should not be visible")
+        }
+
+        XCTAssertNotNil(dataStore.dictionary)
+        XCTAssertNotEqual(dataStore.dictionary?.categories.count, 0)
+        XCTAssertNotEqual(dataStore.dictionary?.phrases.count, 0)
+    }
 }

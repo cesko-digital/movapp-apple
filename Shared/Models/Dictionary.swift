@@ -23,16 +23,28 @@ extension Dictionary {
         let name: Name
         let phrases: [PhraseID]
         private let hidden: Bool?
+        private let metaOnly: Bool?
 
         var isHidden: Bool {
             return hidden == true
         }
 
-        init(id: String, name: Dictionary.Category.Name, phrases: [Dictionary.PhraseID], hidden: Bool = false) {
+        var isMetaCategory: Bool {
+            return metaOnly == true
+        }
+
+        init(
+            id: String,
+            name: Dictionary.Category.Name,
+            phrases: [Dictionary.PhraseID],
+            hidden: Bool = false,
+            metaOnly: Bool = false
+        ) {
             self.id = id
             self.name = name
             self.phrases = phrases
             self.hidden = hidden
+            self.metaOnly = metaOnly
         }
 
         func text(language: SetLanguage) -> String {

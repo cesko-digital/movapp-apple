@@ -41,7 +41,9 @@ class DictionaryDataStore: ObservableObject {
             }
 
             let loadedDictionary = try decoder.decode(Dictionary.self, from: asset.data)
-            let visibleCategories = loadedDictionary.categories.filter { $0.isHidden == false }
+            let visibleCategories = loadedDictionary.categories.filter {
+                $0.isHidden == false && $0.isMetaCategory == false
+            }
             self.dictionary = Dictionary(main: loadedDictionary.main,
                                          source: loadedDictionary.source,
                                          categories: visibleCategories,

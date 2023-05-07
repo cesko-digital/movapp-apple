@@ -134,7 +134,8 @@ lane :uploadScreenshots do
 end
 
 lane :tests do
-  run_tests(scheme: "MovappUITests")
+    run_tests(scheme: "Movapp (iOS)")
+    run_tests(scheme: "MovappUITests")
 end
 
 lane :check_metadata do

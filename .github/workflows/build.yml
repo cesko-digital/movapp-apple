@@ -49,7 +49,7 @@ jobs:
       APP_STORE_API_KEY: ${{ secrets.APP_STORE_API_KEY }}
     steps:
       - uses: actions/checkout@v3
-      - name: Build & Upload
+      - name: Tests
         run: |
           bundle install
           bundle exec fastlane tests

@@ -37,17 +37,14 @@
                BlueprintName = "MovappUITests"
                ReferencedContainer = "container:Movapp.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
+            <SelectedTests>
                <Test
-                  Identifier = "MovappUITests">
+                  Identifier = "FastlaneSnapshot/testExample()">
                </Test>
-               <Test
-                  Identifier = "MovappUITestsLaunchTests">
-               </Test>
-            </SkippedTests>
+            </SelectedTests>
          </TestableReference>
          <TestableReference
-            skipped = "NO"
+            skipped = "YES"
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"

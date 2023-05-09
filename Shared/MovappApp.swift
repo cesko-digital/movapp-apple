@@ -11,14 +11,17 @@ import SwiftUI
 struct MovappApp: App {
 
     let dictionaryDataStore = DictionaryDataStore.shared
-    let forChildrenDataStore: ForChildrenDataStore
+    var forChildrenDataStore: ForChildrenDataStore { ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore) }
     let userDefaultsStore = UserDefaultsStore()
     let teamDataStore = TeamDataStore()
 
-    let languageStore: LanguageStore
+    var languageStore: LanguageStore { LanguageStore(userDefaultsStore: userDefaultsStore,
+                                                      dictionaryDataStore: dictionaryDataStore,
+                                                      forChildrenDataStore: forChildrenDataStore) }
     let soundService = SoundService()
-    let favoritesProvider: PhrasesFavoritesProvider
-    let favoritesService: PhraseFavoritesService
+    var favoritesProvider: PhrasesFavoritesProvider { PhrasesFavoritesProvider(favoritesService: favoritesService) }
+    var favoritesService: PhraseFavoritesService { PhraseFavoritesService(userDefaultsStore: userDefaultsStore,
+                                                                          dictionaryDataStore: dictionaryDataStore) }
 
     @ObservedObject var onBoardingDataStore: OnBoardingStore
 
@@ -40,14 +43,13 @@ struct MovappApp: App {
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
 
-        self.forChildrenDataStore = ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore)
-        self.languageStore = LanguageStore(userDefaultsStore: userDefaultsStore,
-                                           dictionaryDataStore: dictionaryDataStore,
-                                           forChildrenDataStore: forChildrenDataStore)
         self.onBoardingDataStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
-        self.favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore,
-                                                       dictionaryDataStore: dictionaryDataStore)
-        self.favoritesProvider = PhrasesFavoritesProvider(favoritesService: favoritesService)
+
+        // Restoring application language from locale based on Fastlane snapshots
+        if let appleLocale = UserDefaults.standard.string(forKey: "AppleLocale") {
+            userDefaultsStore.storeLanguage(getSetLanguage(for: appleLocale))
+            NSLog("Restored language from arguments: \(appleLocale)")
+        }
     }
 
     var body: some Scene {
@@ -115,6 +117,21 @@ struct MovappApp: App {
                     print("App icon failed to set: \(error.localizedDescription)")
                 }
             }
+        }
+    }
+
+    private func getSetLanguage(for locale: String) -> SetLanguage {
+        let language = Languages(rawValue: locale) ?? .cs
+
+        return preferredSetLanguage(for: language)
+    }
+
+    private func preferredSetLanguage(for language: Languages) -> SetLanguage {
+        switch language {
+        case .cs, .pl, .sk:
+            return SetLanguage(language: Language(main: language, source: .uk), flipFromWithTo: false)
+        case .uk:
+            return .ukCs
         }
     }
 }

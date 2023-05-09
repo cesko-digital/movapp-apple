@@ -6,8 +6,8 @@ on:
     branches: [main]
     paths:
       - "**/*.swift"
-      - "**/*.xcodeproj"
-      - "**/*.xcassets"
+      - "**/*.xcodeproj/**"
+      - "**/*.xcassets/**"
       - "**/*.lproj"
       - "**/*.entitlements"
       - "**/*.plist"
@@ -16,8 +16,8 @@ on:
     branches: [main]
     paths:
       - "**/*.swift"
-      - "**/*.xcodeproj"
-      - "**/*.xcassets"
+      - "**/*.xcodeproj/**"
+      - "**/*.xcassets/**"
       - "**/*.lproj"
       - "**/*.entitlements"
       - "**/*.plist"

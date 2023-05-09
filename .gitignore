@@ -6,3 +6,4 @@ Fastlane/report.xml
 Fastlane/screenshots
 Fastlane/README.md
 tmp/
+Fastlane/test_output/

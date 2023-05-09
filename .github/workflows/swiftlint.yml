@@ -1,9 +1,9 @@
 name: SwiftLint
 
-on:
-  pull_request:
-    paths:
-      - "**/*.swift"
+on: push
+#  pull_request:
+#    paths:
+#      - "**/*.swift"
 
 concurrency:
   group: movapp-apple-swiftlint-${{ github.ref }}
@@ -13,10 +13,12 @@ jobs:
   SwiftLint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: GitHub Action for SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
-        env:
-          DIFF_BASE: ${{ github.base_ref }}
+#        env:
+#          DIFF_BASE: ${{ github.base_ref }}
         with:
           args: --config .swiftlint.yml --strict

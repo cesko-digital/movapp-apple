@@ -2,9 +2,10 @@
 
 # A list of devices you want to take the screenshots from
 devices([
-  "iPhone 14 Pro Max",
-  "iPhone 8 Plus",
-  "iPad Pro (12.9-inch) (6th generation)"
+  "iPhone 14 Pro Max", # Optional for Apple review
+  "iPhone 13 Pro Max", # Mandatory for Apple review
+  "iPhone 8 Plus", # Mandatory for Apple review
+  "iPad Pro (12.9-inch) (6th generation)" # Mandatory for Apple review
 ])
 # TODO we need to generate screenshot for iPad but Github is missing this
 #"iPad Pro (12.9-inch) (2nd generation)"

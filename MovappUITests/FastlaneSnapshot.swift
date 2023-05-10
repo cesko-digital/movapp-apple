@@ -33,8 +33,6 @@ class FastlaneSnapshot: XCTestCase {
         app.setSeenOnBoarding(true)
         app.disableSetIcon()
 
-        // TODO: get adjust dictionary language based on UI language
-
         app.launch()
 
         snapshot("1 - Dictionary")
@@ -54,6 +52,5 @@ class FastlaneSnapshot: XCTestCase {
         app.tabBars.buttons.element(boundBy: 3).tap()
 
         snapshot("4 - Menu")
-
     }
 }

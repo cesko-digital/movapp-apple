@@ -34,23 +34,31 @@ class FastlaneSnapshot: XCTestCase {
         app.disableSetIcon()
 
         app.launch()
-
         snapshot("1 - Dictionary")
 
         app.scrollViews.otherElements.staticTexts["dictionary_0"].tap()
-
         snapshot("1 - Dictionary detail")
 
         app.tabBars.buttons.element(boundBy: 1).tap()
-
         snapshot("2 - Alphabet")
 
         app.tabBars.buttons.element(boundBy: 2).tap()
-
         snapshot("3 - For Children")
 
-        app.tabBars.buttons.element(boundBy: 3).tap()
+        app.collectionViews.buttons.element(boundBy: 0).tap()
+        snapshot("3.1 - For Children - Alphabet")
 
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        app.collectionViews.buttons.element(boundBy: 1).tap()
+        snapshot("3.2 - For Children - Pexeso")
+
+        app.navigationBars.buttons.element(boundBy: 0).tap()
+        if app.collectionViews.buttons.element(boundBy: 2).exists {
+            app.collectionViews.buttons.element(boundBy: 2).tap()
+            snapshot("3.3 - For Children - Stories")
+        }
+
+        app.tabBars.buttons.element(boundBy: 3).tap()
         snapshot("4 - Menu")
     }
 }

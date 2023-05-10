@@ -44,16 +44,16 @@ struct ForChildrenRootView: View {
                         .navigationTitle("for.children.words")
                 }
 
+                NavigationLink("for.children.pexe") {
+                    pexesoView
+                        .navigationTitle("for.children.pexe")
+                }
+
                 if languageStore.currentLanguage == .csUk || languageStore.currentLanguage == .ukCs {
                     NavigationLink("for.children.stories") {
                         storiesList
                             .navigationTitle("for.children.stories")
                     }
-                }
-
-                NavigationLink("for.children.pexe") {
-                    pexesoView
-                        .navigationTitle("for.children.pexe")
                 }
             }
         }

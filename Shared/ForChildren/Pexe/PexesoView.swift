@@ -5,6 +5,7 @@
 //  Created by Jakub Ruzicka on 17.10.2022.
 //
 
+import Combine
 import SwiftUI
 
 struct PexesoView<ViewModel: PexesoViewModeling>: View {
@@ -30,12 +31,12 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
             newGameButton
 
             let numberOfColumns = Int(sqrt(Double(content.count)))
-            let gridLayout: [GridItem] = Array(repeating:
-                                                GridItem(.adaptive(minimum: CGFloat(375/numberOfColumns))),
+            let minimumWidth = CGFloat(UIScreen.main.bounds.width/CGFloat(numberOfColumns))
+            let gridLayout: [GridItem] = Array(repeating: GridItem(.adaptive(minimum: minimumWidth)),
                                                count: numberOfColumns)
 
             LazyVGrid(columns: gridLayout, alignment: .center, spacing: 8) {
-                ForEach(Array(content.enumerated()), id: \.offset) { _, item in
+                ForEach(content) { item in
                     FlipView(content: item) { content in
                         viewModel.select(phrase: content)
                     }
@@ -53,7 +54,7 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
         VStack {
             Text("Loading...")
         }
-        .onAppear(perform: viewModel.load)
+        .onAppear(perform: viewModel.viewAppeared.send)
     }
 
     private var wonState: some View {
@@ -74,15 +75,15 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
 struct PexesoView_Previews: PreviewProvider {
 
     class MockViewModel: PexesoViewModeling {
-        func load() { }
-        func reset() { }
-        func select(phrase: PexesoContent) { }
-
+        let viewAppeared = PassthroughSubject<Void, Never>()
         var state: PexesoState
 
         init(state: PexesoState) {
             self.state = state
         }
+
+        func reset() { }
+        func select(phrase: PexesoContent) { }
     }
 
     static var previews: some View {

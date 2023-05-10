@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CardBack: View {
-    @Binding var degree: Double
 
     var body: some View {
         ZStack {
@@ -20,12 +19,11 @@ struct CardBack: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
         }
-        .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }
 }
 
 struct CardBack_Previews: PreviewProvider {
     static var previews: some View {
-        CardBack(degree: .constant(0))
+        CardBack()
     }
 }

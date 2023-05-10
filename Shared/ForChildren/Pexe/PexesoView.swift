@@ -50,6 +50,9 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
 
     private var newGameButton: some View {
         Button("pexeso.new.game", action: viewModel.reset)
+            .buttonStyle(.borderedProminent)
+            .tint(Color("colors/primary"))
+            .padding(.bottom, 16)
     }
 
     private var loadingState: some View {

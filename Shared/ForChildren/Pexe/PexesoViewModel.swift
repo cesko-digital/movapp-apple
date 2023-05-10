@@ -162,5 +162,6 @@ class PexesoViewModel: PexesoViewModeling {
         state = .won(content: content.map {
             .init(imageName: $0.imageName, translation: $0.translation, selected: true, found: true)
         })
+        soundService.play(path: "pexeso/win_music")
     }
 }

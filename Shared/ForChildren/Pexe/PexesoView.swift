@@ -79,7 +79,7 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
             }
         }
         .onAppear {
-            withAnimation(.easeInOut(duration: 2).repeatCount(2)) {
+            withAnimation(.easeInOut(duration: 2.5).repeatCount(4)) {
                 isWon.toggle()
             }
         }

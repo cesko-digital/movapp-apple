@@ -15,7 +15,7 @@ struct CardBack: View {
                 .fill(.white)
                 .shadow(color: .gray, radius: 2, x: 0, y: 0)
 
-            Image("PexesoCardBackground")
+            Image("pexeso/cardBackground")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(8)

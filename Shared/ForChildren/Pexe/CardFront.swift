@@ -18,8 +18,8 @@ struct CardFront: View {
 
             Image(imageName)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(maxWidth: 375)
+                .aspectRatio(1, contentMode: .fit)
+                .frame(alignment: .center)
                 .padding(4)
         }
     }

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct PexesoView<ViewModel: PexesoViewModeling>: View {
     @StateObject var viewModel: ViewModel
+    @State private var isWon: Bool = false
 
     var body: some View {
         Group {
@@ -18,12 +19,14 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
                 loadingState
             case .error:
                 errorState
-            case .won:
-                wonState
+            case .won(let content):
+                wonState(with: content)
             case .loaded(let content):
                 pexeso(with: content)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color("colors/item"))
     }
 
     private func pexeso(with content: [PexesoContent]) -> some View {
@@ -31,8 +34,7 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
             newGameButton
 
             let numberOfColumns = Int(sqrt(Double(content.count)))
-            let minimumWidth = CGFloat(UIScreen.main.bounds.width/CGFloat(numberOfColumns))
-            let gridLayout: [GridItem] = Array(repeating: GridItem(.adaptive(minimum: minimumWidth)),
+            let gridLayout: [GridItem] = Array(repeating: GridItem(.flexible()),
                                                count: numberOfColumns)
 
             LazyVGrid(columns: gridLayout, alignment: .center, spacing: 8) {
@@ -57,12 +59,28 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
         .onAppear(perform: viewModel.viewAppeared.send)
     }
 
-    private var wonState: some View {
+    private func wonState(with content: [PexesoContent]) -> some View {
         VStack {
             newGameButton
 
-            Text("Won 🎉")
+            let numberOfColumns = Int(sqrt(Double(content.count)))
+            let gridLayout: [GridItem] = Array(repeating: GridItem(.flexible()),
+                                               count: numberOfColumns)
+
+            LazyVGrid(columns: gridLayout, alignment: .center, spacing: 8) {
+                ForEach(content) { item in
+                    FlipView(content: item) { _ in }
+                        .border(.conicGradient(colors: [.green, .red, .cyan, .orange], center: .center))
+                        .rotationEffect(Angle(degrees: isWon ? 360 : 0), anchor: .center)
+                }
+            }
         }
+        .onAppear {
+            withAnimation(.easeInOut(duration: 2).repeatCount(2)) {
+                isWon.toggle()
+            }
+        }
+        .padding()
     }
 
     private var errorState: some View {
@@ -90,18 +108,27 @@ struct PexesoView_Previews: PreviewProvider {
         PexesoView(viewModel: MockViewModel(state: .loading))
             .previewDisplayName("Loading state")
 
-        PexesoView(viewModel: MockViewModel(state: .won))
+        PexesoView(viewModel: MockViewModel(state:
+                .won(content: (0...15).map { _ in
+                        .init(imageName: "\(UUID())",
+                              translation: examplePhrase.main,
+                              selected: true,
+                              found: true)
+
+                })
+        ))
             .previewDisplayName("Won state")
 
         PexesoView(viewModel: MockViewModel(state: .error))
             .previewDisplayName("Error state")
 
         PexesoView(viewModel: MockViewModel(state:
-                .loaded(content: Array(repeating: .init(imageName: "images/rec00jYJm8WGf61L3",
-                                                        translation: examplePhrase.main,
-                                                        selected: false,
-                                                        found: false),
-                                       count: 16))
+                .loaded(content: (0...15).map { _ in
+                        .init(imageName: "\(UUID())",
+                              translation: examplePhrase.main,
+                              selected: false,
+                              found: false)
+                })
         ))
     }
 }

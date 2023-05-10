@@ -19,7 +19,7 @@ struct PexesoContent: Identifiable {
 enum PexesoState {
     case loading
     case loaded(content: [PexesoContent])
-    case won
+    case won(content: [PexesoContent])
     case error
 }
 
@@ -39,7 +39,7 @@ class PexesoViewModel: PexesoViewModeling {
 
     private let repository: PexesoRepository
     private let soundService: SoundService
-    private let numberOfPairs: Int = 12
+    private let numberOfPairs: Int = 8
     private var cancellables: [AnyCancellable] = []
     private var selectedPhrases: [PexesoContent] = []
     private var canRotate: Bool = true
@@ -91,6 +91,7 @@ class PexesoViewModel: PexesoViewModeling {
 
     func select(phrase: PexesoContent) {
         guard canRotate else { return }
+        guard !phrase.selected else { return }
 
         guard case .loaded(let content) = state else {
             return
@@ -99,7 +100,7 @@ class PexesoViewModel: PexesoViewModeling {
         let notFoundYet = content.filter({ !$0.found })
 
         guard notFoundYet.count != 0 else {
-            won()
+            won(content)
             return
         }
 
@@ -139,7 +140,7 @@ class PexesoViewModel: PexesoViewModeling {
         let notFoundYet = content.filter({ !$0.found })
 
         guard notFoundYet.count != 0 else {
-            won()
+            won(content)
             return
         }
     }
@@ -157,7 +158,9 @@ class PexesoViewModel: PexesoViewModeling {
         })
     }
 
-    private func won() {
-        state = .won
+    private func won(_ content: [PexesoContent]) {
+        state = .won(content: content.map {
+            .init(imageName: $0.imageName, translation: $0.translation, selected: true, found: true)
+        })
     }
 }

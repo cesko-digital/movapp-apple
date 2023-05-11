@@ -89,6 +89,7 @@
 		B43C367B292C0FB100D9AA40 /* StoriesAudioPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C367A292C0FB100D9AA40 /* StoriesAudioPlayers.swift */; };
 		B43C367D292C0FEC00D9AA40 /* StoryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C367C292C0FEC00D9AA40 /* StoryContent.swift */; };
 		B441606028BFD6A200DAE4A5 /* AlphabetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441605F28BFD6A200DAE4A5 /* AlphabetViewModel.swift */; };
+		B45335B02A0CFBD00037BC3E /* Stories.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45335AF2A0CFBD00037BC3E /* Stories.xcassets */; };
 		B453C5D028B7A0C60015A815 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */; };
 		B45F83FE29E68C5B003D14B0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B45F83FB29E68C5B003D14B0 /* Localizable.strings */; };
 		B46A2FC9292D63C0007CF5CB /* Christmas@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B46A2FC7292D63BF007CF5CB /* Christmas@2x.png */; };
@@ -306,6 +307,7 @@
 		B43C367A292C0FB100D9AA40 /* StoriesAudioPlayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesAudioPlayers.swift; sourceTree = "<group>"; };
 		B43C367C292C0FEC00D9AA40 /* StoryContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryContent.swift; sourceTree = "<group>"; };
 		B441605F28BFD6A200DAE4A5 /* AlphabetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetViewModel.swift; sourceTree = "<group>"; };
+		B45335AF2A0CFBD00037BC3E /* Stories.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stories.xcassets; sourceTree = "<group>"; };
 		B453C5CB28B777030015A815 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B453C5CD28B7775E0015A815 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B453C5CF28B7A0C60015A815 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
@@ -867,6 +869,7 @@
 			isa = PBXGroup;
 			children = (
 				B4DF161A2A0CF197007DB4CA /* Sounds.xcassets */,
+				B45335AF2A0CFBD00037BC3E /* Stories.xcassets */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -1035,6 +1038,7 @@
 				B4F518E9293937280002D166 /* Christmas@3x~ipad.png in Resources */,
 				B4F518EB293937340002D166 /* Christmas@2x~ipad.png in Resources */,
 				B0C9F40A27FCBF5500B075EB /* Launch Screen.storyboard in Resources */,
+				B45335B02A0CFBD00037BC3E /* Stories.xcassets in Resources */,
 				B46A2FCA292D63C0007CF5CB /* Christmas@3x.png in Resources */,
 				B01279A927F86957003FB72E /* Assets.xcassets in Resources */,
 				B087C88927F8A3BD0015E54B /* Localizable.strings in Resources */,

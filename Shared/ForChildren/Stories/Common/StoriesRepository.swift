@@ -15,8 +15,8 @@ protocol StoriesRepositoring {
 class StoriesRepository: StoriesRepositoring {
 
     func loadStories() -> Result<StoriesMetadata, Error> {
-        guard let asset = NSDataAsset(name: "data/stories/metadata") else {
-            return .failure(AssetError(message: "`data/stories/metadata` not found"))
+        guard let asset = NSDataAsset(name: "stories/metadata") else {
+            return .failure(AssetError(message: "`stories/metadata` not found"))
         }
 
         let decoder = JSONDecoder()
@@ -31,7 +31,7 @@ class StoriesRepository: StoriesRepositoring {
     }
 
     func loadStory(slug: String) -> Result<StoryMetadata, Error> {
-        guard let asset = NSDataAsset(name: "data/stories/\(slug)/metadata") else {
+        guard let asset = NSDataAsset(name: "stories/\(slug)/metadata") else {
             return .failure(AssetError(message: "\(slug) not found"))
         }
 

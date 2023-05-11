@@ -28,7 +28,7 @@ jobs:
 
   screenshots:
     runs-on: macos-12
-    timeout-minutes: 180
+    timeout-minutes: 240
     env:
       MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
       MATCH_GIT_PRIVATE_KEY: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}
@@ -38,6 +38,7 @@ jobs:
       - name: Build & Upload
         run: |
           bundle install
+          bundle exec fastlane create_missing_devices
           bundle exec fastlane uploadScreenshots
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1

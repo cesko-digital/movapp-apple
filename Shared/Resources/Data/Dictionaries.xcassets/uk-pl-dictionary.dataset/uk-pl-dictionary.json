@@ -1937,9 +1937,9 @@
 				"transcription": "Мам сєн добже"
 			},
 			"source": {
-				"sound_url": "https://data.movapp.eu/uk-sounds/4/4d24e198ba7622f6cac080289d7a8a01.mp3",
-				"translation": "Добре.",
-				"transcription": "Dobre"
+				"sound_url": "https://data.movapp.eu/uk-sounds/1/198341ff26214cdfe4ec7b8c6b0c970d.mp3",
+				"translation": "У мене все гаразд.",
+				"transcription": "U mene wse harazd"
 			},
 			"image_url": null
 		},
@@ -2021,9 +2021,9 @@
 				"transcription": "Нє мам сєн добже"
 			},
 			"source": {
-				"sound_url": "https://data.movapp.eu/uk-sounds/0/014861d9dbbec0357fcd31458eda123a.mp3",
-				"translation": "Погано.",
-				"transcription": "Pohano"
+				"sound_url": "https://data.movapp.eu/uk-sounds/f/fa84be9da28f2418c9b7c454c43ad63f.mp3",
+				"translation": "Не дуже добре.",
+				"transcription": "Ne duże dobre"
 			},
 			"image_url": null
 		},

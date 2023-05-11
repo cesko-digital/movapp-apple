@@ -34,7 +34,7 @@ class DictionaryDataStore: ObservableObject {
         let prefix = language.language.dictionaryFilePrefix
 
         do {
-            guard let asset = NSDataAsset(name: "data/\(prefix)-dictionary") else {
+            guard let asset = NSDataAsset(name: "\(prefix)-dictionary") else {
                 error = "Invalid data file name"
                 loading = false
                 return

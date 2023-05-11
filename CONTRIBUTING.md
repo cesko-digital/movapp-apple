@@ -111,8 +111,7 @@ Každý jazykový překlad (například: čeština -> ukrajinština) je v aplika
 
 ### Dictionary and alphabet updates
 
-- Copy generated data from [movap-data repository](https://github.com/cesko-digital/movapp-data/tree/main/data) to Assets and `data` directory.
-- For copied folders always mark the "root" directory as provide namespace (this will separate the data to `data/uk-cs-alphabet/soundfile` path)
+- There is script `update-data.rb` that will do this magic for you. It is used by GitHub Actions that is triggered everytime is movapp-data changed.
 
 
 ## Lokalizace aplikace

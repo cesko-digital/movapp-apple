@@ -25,7 +25,7 @@ struct PlayButtonView_Previews: PreviewProvider {
     static let soundService = SoundService()
 
     static var previews: some View {
-        PlayButtonView(soundFileName: "data/cs-alphabet/\(AlphabetItem.example.id)")
+        PlayButtonView(soundFileName: "cs-alphabet/\(AlphabetItem.example.id)")
             .padding()
             .environmentObject(soundService)
             .previewLayout(.sizeThatFits)

@@ -1,9 +1,11 @@
 require 'fileutils'
 
 ORIGIN_FOLDER="tmp/data"
-DESTINATION_FOLDER="Shared/Assets.xcassets/data"
 SOUNDS_FOLDER="Shared/Resources/Data/Sounds.xcassets"
 STORIES_FOLDER="Shared/Resources/Data/Stories.xcassets"
+ALPHABETS_FOLDER="Shared/Resources/Data/Alphabets.xcassets"
+DICTIONARIES_FOLDER="Shared/Resources/Data/Dictionaries.xcassets"
+TEAM_FOLDER="Shared/Resources/Data/Team.xcassets"
 
 def read_folder(folder, destination_folder, origin_folder)
     folder_path="#{origin_folder}/#{folder}"
@@ -157,24 +159,38 @@ def main
     system("git clone https://github.com/cesko-digital/movapp-data.git tmp")
 
     puts "data..."
-    read_folder("cs-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
+
+    puts "alphabets..."  
+    copy_dataset(ALPHABETS_FOLDER, ORIGIN_FOLDER, "cs-uk-alphabet.json")
+    copy_dataset(ALPHABETS_FOLDER, ORIGIN_FOLDER, "pl-uk-alphabet.json")
+    copy_dataset(ALPHABETS_FOLDER, ORIGIN_FOLDER, "sk-uk-alphabet.json")
+    copy_dataset(ALPHABETS_FOLDER, ORIGIN_FOLDER, "uk-cs-alphabet.json")
+    copy_dataset(ALPHABETS_FOLDER, ORIGIN_FOLDER, "uk-pl-alphabet.json")
+    copy_dataset(ALPHABETS_FOLDER, ORIGIN_FOLDER, "uk-sk-alphabet.json")
+    puts "alphabets ✅"
+
+    puts "sounds..."
+    read_folder("cs-alphabet", SOUNDS_FOLDER, ORIGIN_FOLDER)
+    read_folder("pl-alphabet", SOUNDS_FOLDER, ORIGIN_FOLDER)
+    read_folder("sk-alphabet", SOUNDS_FOLDER, ORIGIN_FOLDER)
+    read_folder("uk-alphabet", SOUNDS_FOLDER, ORIGIN_FOLDER)
+    
     read_folder("cs-sounds", SOUNDS_FOLDER, ORIGIN_FOLDER)
-    read_folder("pl-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
     read_folder("pl-sounds", SOUNDS_FOLDER, ORIGIN_FOLDER)
-    read_folder("sk-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
     read_folder("sk-sounds", SOUNDS_FOLDER, ORIGIN_FOLDER)
-    read_folder("uk-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
     read_folder("uk-sounds", SOUNDS_FOLDER, ORIGIN_FOLDER)
-    copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "cs-uk-alphabet.json")
-    copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "pl-uk-alphabet.json")
-    copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "sk-uk-alphabet.json")
-    copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "team.v1.json")
-    copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "uk-cs-alphabet.json")
-    copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "uk-cs-dictionary.json")
-    copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "uk-pl-alphabet.json")
-    copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "uk-pl-dictionary.json")
-    copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "uk-sk-alphabet.json")
-    copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "uk-sk-dictionary.json")
+    puts "sounds ✅"
+    
+    puts "dictionaries..."
+    copy_dataset(DICTIONARIES_FOLDER, ORIGIN_FOLDER, "uk-cs-dictionary.json")
+    copy_dataset(DICTIONARIES_FOLDER, ORIGIN_FOLDER, "uk-pl-dictionary.json")
+    copy_dataset(DICTIONARIES_FOLDER, ORIGIN_FOLDER, "uk-sk-dictionary.json")
+    puts "dictionaries ✅"
+
+    puts "team..."
+    copy_dataset(TEAM_FOLDER, ORIGIN_FOLDER, "team.v1.json")
+    puts "team ✅"
+
     puts "data ✅"
 
     puts "images.."

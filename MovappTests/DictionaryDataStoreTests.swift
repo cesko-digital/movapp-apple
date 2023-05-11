@@ -20,7 +20,7 @@ final class DictionaryDataStoreTests: XCTestCase {
         dataStore.dictionary?.phrases.values.forEach { phrase in
             if let soundFileName = phrase.source.soundFileName {
                 let sound = NSDataAsset(name: soundFileName)
-                XCTAssertNotNil(sound, "\(soundFileName) not found at data/\(soundFileName)")
+                XCTAssertNotNil(sound, "\(soundFileName) not found at \(soundFileName)")
             } else {
                 XCTFail("There is issue with phrase: \(phrase.source.translation)")
             }

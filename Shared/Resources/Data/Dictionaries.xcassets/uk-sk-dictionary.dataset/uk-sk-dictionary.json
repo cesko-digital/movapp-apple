@@ -2251,9 +2251,9 @@
 				"transcription": "Мам са добре"
 			},
 			"source": {
-				"sound_url": "https://data.movapp.eu/uk-sounds/4/4d24e198ba7622f6cac080289d7a8a01.mp3",
-				"translation": "Добре.",
-				"transcription": "Dobre"
+				"sound_url": "https://data.movapp.eu/uk-sounds/1/198341ff26214cdfe4ec7b8c6b0c970d.mp3",
+				"translation": "У мене все гаразд.",
+				"transcription": "U mene vse harazd"
 			},
 			"image_url": null
 		},
@@ -2330,14 +2330,14 @@
 		"recZPYINEi1VUr9to": {
 			"id": "recZPYINEi1VUr9to",
 			"main": {
-				"sound_url": "https://data.movapp.eu/sk-sounds/2/2e5c16f2a8220cc17bc0686ef438e781.mp3",
-				"translation": "Nemám sa dobre.",
-				"transcription": "Немам са добре"
+				"sound_url": "https://data.movapp.eu/sk-sounds/c/cdbf4a0fc3666e387368425781c2b9c0.mp3",
+				"translation": "Nemám sa veľmi dobre.",
+				"transcription": "Немам са вельмі добре"
 			},
 			"source": {
-				"sound_url": "https://data.movapp.eu/uk-sounds/0/014861d9dbbec0357fcd31458eda123a.mp3",
-				"translation": "Погано.",
-				"transcription": "Pohano"
+				"sound_url": "https://data.movapp.eu/uk-sounds/f/fa84be9da28f2418c9b7c454c43ad63f.mp3",
+				"translation": "Не дуже добре.",
+				"transcription": "Ne duže dobre"
 			},
 			"image_url": null
 		},

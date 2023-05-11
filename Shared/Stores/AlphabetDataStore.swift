@@ -16,7 +16,7 @@ class AlphabetDataStore {
         // Always build the opposite
         let to = language.language.source == alphabet ? language.language.main : language.language.source
 
-        let fileName = "data/\(alphabet)-\(to)-alphabet"
+        let fileName = "\(alphabet)-\(to)-alphabet"
         guard let asset = NSDataAsset(name: fileName) else {
             throw MissingAssetError("Invalid data file name")
         }

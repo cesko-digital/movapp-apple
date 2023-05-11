@@ -35,8 +35,9 @@ lane :bump_version do |options|
     # Bump version number
     increment_version_number_in_xcodeproj(bump_type: component, target: "Movapp (iOS)")
     increment_version_number_in_xcodeproj(bump_type: component, target: "MovappUITests")
-    #increment_version_number_in_xcodeproj(bump_type: component, target: "WatchMovapp")
-    #increment_version_number_in_xcodeproj(bump_type: component, target: "WatchMovapp WatchKit Extension")
+    increment_version_number_in_xcodeproj(bump_type: component, target: "MovappTests")
+    increment_version_number_in_xcodeproj(bump_type: component, target: "WidgetExtension")
+    increment_version_number_in_xcodeproj(bump_type: component, target: "MovappWatch Watch App")
     version_number = get_version_number(target: "Movapp (iOS)")
 
     # Commit changes

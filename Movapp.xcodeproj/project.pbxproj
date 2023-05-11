@@ -147,6 +147,7 @@
 		B4DD701629CF26EB00112F3A /* StoriesRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD701529CF26EB00112F3A /* StoriesRepositoryTests.swift */; };
 		B4DD701D29CF2EF300112F3A /* TeamDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD701C29CF2EF300112F3A /* TeamDataStoreTests.swift */; };
 		B4DD701F29CF2FD200112F3A /* DictionaryDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DD701E29CF2FD200112F3A /* DictionaryDataStoreTests.swift */; };
+		B4DF161B2A0CF197007DB4CA /* Sounds.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4DF161A2A0CF197007DB4CA /* Sounds.xcassets */; };
 		B4F518E9293937280002D166 /* Christmas@3x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F518E8293937280002D166 /* Christmas@3x~ipad.png */; };
 		B4F518EB293937340002D166 /* Christmas@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F518EA293937340002D166 /* Christmas@2x~ipad.png */; };
 /* End PBXBuildFile section */
@@ -343,6 +344,7 @@
 		B4DD701529CF26EB00112F3A /* StoriesRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesRepositoryTests.swift; sourceTree = "<group>"; };
 		B4DD701C29CF2EF300112F3A /* TeamDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDataStoreTests.swift; sourceTree = "<group>"; };
 		B4DD701E29CF2FD200112F3A /* DictionaryDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataStoreTests.swift; sourceTree = "<group>"; };
+		B4DF161A2A0CF197007DB4CA /* Sounds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Sounds.xcassets; sourceTree = "<group>"; };
 		B4F518E8293937280002D166 /* Christmas@3x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Christmas@3x~ipad.png"; sourceTree = "<group>"; };
 		B4F518EA293937340002D166 /* Christmas@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Christmas@2x~ipad.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -634,6 +636,7 @@
 		B087C87E27F8A1F20015E54B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B4DF16192A0CF174007DB4CA /* Data */,
 				B46A2FC5292D632D007CF5CB /* AlternativeIcons */,
 				B087C88727F8A3BD0015E54B /* Localizable.strings */,
 			);
@@ -860,6 +863,14 @@
 			path = MovappTests;
 			sourceTree = "<group>";
 		};
+		B4DF16192A0CF174007DB4CA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B4DF161A2A0CF197007DB4CA /* Sounds.xcassets */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1028,6 +1039,7 @@
 				B01279A927F86957003FB72E /* Assets.xcassets in Resources */,
 				B087C88927F8A3BD0015E54B /* Localizable.strings in Resources */,
 				B46A2FC9292D63C0007CF5CB /* Christmas@2x.png in Resources */,
+				B4DF161B2A0CF197007DB4CA /* Sounds.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

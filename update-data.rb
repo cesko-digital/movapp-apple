@@ -2,6 +2,7 @@ require 'fileutils'
 
 ORIGIN_FOLDER="tmp/data"
 DESTINATION_FOLDER="Shared/Assets.xcassets/data"
+SOUNDS_FOLDER="Shared/Resources/Data/Sounds.xcassets"
 
 def read_folder(folder, destination_folder, origin_folder)
     folder_path="#{origin_folder}/#{folder}"
@@ -156,13 +157,13 @@ def main
 
     puts "data..."
     read_folder("cs-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
-    read_folder("cs-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER)
+    read_folder("cs-sounds", SOUNDS_FOLDER, ORIGIN_FOLDER)
     read_folder("pl-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
-    read_folder("pl-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER)
+    read_folder("pl-sounds", SOUNDS_FOLDER, ORIGIN_FOLDER)
     read_folder("sk-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
-    read_folder("sk-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER)
+    read_folder("sk-sounds", SOUNDS_FOLDER, ORIGIN_FOLDER)
     read_folder("uk-alphabet", DESTINATION_FOLDER, ORIGIN_FOLDER)
-    read_folder("uk-sounds", DESTINATION_FOLDER, ORIGIN_FOLDER)
+    read_folder("uk-sounds", SOUNDS_FOLDER, ORIGIN_FOLDER)
     copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "cs-uk-alphabet.json")
     copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "pl-uk-alphabet.json")
     copy_dataset(DESTINATION_FOLDER, ORIGIN_FOLDER, "sk-uk-alphabet.json")

@@ -488,8 +488,6 @@
 				B01279C827F8729C003FB72E /* Dictionary */,
 				B01279C427F87086003FB72E /* Root */,
 				B012799527F86954003FB72E /* MovappApp.swift */,
-				B0C9F40927FCBF5500B075EB /* Launch Screen.storyboard */,
-				B012799727F86957003FB72E /* Assets.xcassets */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -646,8 +644,10 @@
 		B087C87E27F8A1F20015E54B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B4DF16192A0CF174007DB4CA /* Data */,
 				B46A2FC5292D632D007CF5CB /* AlternativeIcons */,
+				B012799727F86957003FB72E /* Assets.xcassets */,
+				B4DF16192A0CF174007DB4CA /* Data */,
+				B0C9F40927FCBF5500B075EB /* Launch Screen.storyboard */,
 				B087C88727F8A3BD0015E54B /* Localizable.strings */,
 			);
 			path = Resources;

@@ -85,7 +85,7 @@ end
 
 def images()
   images_folder="#{ORIGIN_FOLDER}/images/apple"
-  destination_folder="Shared/Assets.xcassets/images"
+  destination_folder="Shared/Resources/Assets.xcassets/images"
   
   FileUtils.rm_rf(destination_folder)
   FileUtils.mkdir_p(destination_folder)

@@ -30,7 +30,7 @@ class StoryAudioPlayer: Equatable {
     // MARK: - Initializer
 
     init(suffix: String) throws {
-        guard let data = NSDataAsset(name: "data/stories/\(suffix)") else {
+        guard let data = NSDataAsset(name: "stories/\(suffix)") else {
             throw AudioError(message: "File does not exists \(suffix)")
         }
 

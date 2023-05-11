@@ -3,6 +3,7 @@ require 'fileutils'
 ORIGIN_FOLDER="tmp/data"
 DESTINATION_FOLDER="Shared/Assets.xcassets/data"
 SOUNDS_FOLDER="Shared/Resources/Data/Sounds.xcassets"
+STORIES_FOLDER="Shared/Resources/Data/Stories.xcassets"
 
 def read_folder(folder, destination_folder, origin_folder)
     folder_path="#{origin_folder}/#{folder}"
@@ -181,7 +182,7 @@ def main
     puts "images ✅"
     
     puts "stories.."
-    read_folder("stories", DESTINATION_FOLDER, ORIGIN_FOLDER)
+    read_folder("stories", STORIES_FOLDER, ORIGIN_FOLDER)
     puts "stories ✅"
 
     puts "🧹🧹🧹🧹🧹"

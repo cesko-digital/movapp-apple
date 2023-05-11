@@ -27,9 +27,9 @@ final class StoriesRepositoryTests: XCTestCase {
                     break
                 }
 
-                let firstLanguage = NSDataAsset(name: "data/stories/\(story.slug)/\(story.supportedLanguages[0])")
+                let firstLanguage = NSDataAsset(name: "stories/\(story.slug)/\(story.supportedLanguages[0])")
                 XCTAssertNotNil(firstLanguage, "First supported sound for \(story.slug) not found")
-                let secondLanguage = NSDataAsset(name: "data/stories/\(story.slug)/\(story.supportedLanguages[1])")
+                let secondLanguage = NSDataAsset(name: "stories/\(story.slug)/\(story.supportedLanguages[1])")
                 XCTAssertNotNil(secondLanguage, "Second supported sound for \(story.slug) not found")
                 let image = UIImage(named: "images/\(story.slug)")
                 XCTAssertNotNil(image, "Missing image for story \(story.slug)")

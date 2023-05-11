@@ -14,12 +14,7 @@ struct ForChildrenRootView: View {
     var body: some View {
         NavigationView {
             VStack {
-                // remove if when we will have support for all languages
-                if languageStore.currentLanguage == .csUk || languageStore.currentLanguage == .ukCs {
-                    router
-                } else {
-                    images
-                }
+               router
             }
             .navigationTitle(RootItems.for_children.title)
             .background(Color("colors/item"))
@@ -36,6 +31,11 @@ struct ForChildrenRootView: View {
                                                         repository: StoriesRepository()))
     }
 
+    var pexesoView: some View {
+        PexesoView(viewModel: PexesoViewModel(repository: PexesoRepository(dataStore: DictionaryDataStore.shared),
+                                             soundService: SoundService()))
+    }
+
     var router: some View {
         Section {
             List {
@@ -44,9 +44,16 @@ struct ForChildrenRootView: View {
                         .navigationTitle("for.children.words")
                 }
 
-                NavigationLink("for.children.stories") {
-                    storiesList
-                        .navigationTitle("for.children.stories")
+                NavigationLink("for.children.pexe") {
+                    pexesoView
+                        .navigationTitle("for.children.pexe")
+                }
+
+                if languageStore.currentLanguage == .csUk || languageStore.currentLanguage == .ukCs {
+                    NavigationLink("for.children.stories") {
+                        storiesList
+                            .navigationTitle("for.children.stories")
+                    }
                 }
             }
         }

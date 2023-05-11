@@ -77,6 +77,12 @@
 		B425D32A291FF81E0050EBEE /* StoriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425D329291FF81E0050EBEE /* StoriesListViewModel.swift */; };
 		B425D32C2920214B0050EBEE /* StoryHeadlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425D32B2920214B0050EBEE /* StoryHeadlineView.swift */; };
 		B425D32E292023D30050EBEE /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425D32D292023D30050EBEE /* PlayerView.swift */; };
+		B42A3DF729EC515F009FA9F1 /* PexesoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A3DEB29EC515F009FA9F1 /* PexesoViewModel.swift */; };
+		B42A3DF829EC515F009FA9F1 /* CardFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A3DEC29EC515F009FA9F1 /* CardFront.swift */; };
+		B42A3DF929EC515F009FA9F1 /* CardBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A3DED29EC515F009FA9F1 /* CardBack.swift */; };
+		B42A3DFA29EC515F009FA9F1 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A3DEE29EC515F009FA9F1 /* FlipView.swift */; };
+		B42A3DFB29EC515F009FA9F1 /* PexesoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A3DEF29EC515F009FA9F1 /* PexesoView.swift */; };
+		B42A3DFC29EC515F009FA9F1 /* PexesoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A3DF029EC515F009FA9F1 /* PexesoRepository.swift */; };
 		B439F07228B64FEF002B270B /* OnBoardingToLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B439F07128B64FEF002B270B /* OnBoardingToLearnView.swift */; };
 		B43C3677292C0F5200D9AA40 /* AudioError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C3676292C0F5200D9AA40 /* AudioError.swift */; };
 		B43C3679292C0F7700D9AA40 /* StoryAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43C3678292C0F7700D9AA40 /* StoryAudioPlayer.swift */; };
@@ -287,6 +293,12 @@
 		B425D329291FF81E0050EBEE /* StoriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListViewModel.swift; sourceTree = "<group>"; };
 		B425D32B2920214B0050EBEE /* StoryHeadlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHeadlineView.swift; sourceTree = "<group>"; };
 		B425D32D292023D30050EBEE /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		B42A3DEB29EC515F009FA9F1 /* PexesoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PexesoViewModel.swift; sourceTree = "<group>"; };
+		B42A3DEC29EC515F009FA9F1 /* CardFront.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFront.swift; sourceTree = "<group>"; };
+		B42A3DED29EC515F009FA9F1 /* CardBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBack.swift; sourceTree = "<group>"; };
+		B42A3DEE29EC515F009FA9F1 /* FlipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
+		B42A3DEF29EC515F009FA9F1 /* PexesoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PexesoView.swift; sourceTree = "<group>"; };
+		B42A3DF029EC515F009FA9F1 /* PexesoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PexesoRepository.swift; sourceTree = "<group>"; };
 		B439F07128B64FEF002B270B /* OnBoardingToLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnBoardingToLearnView.swift; path = Shared/Onboarding/OnBoardingToLearnView.swift; sourceTree = SOURCE_ROOT; };
 		B43C3676292C0F5200D9AA40 /* AudioError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioError.swift; sourceTree = "<group>"; };
 		B43C3678292C0F7700D9AA40 /* StoryAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryAudioPlayer.swift; sourceTree = "<group>"; };
@@ -530,6 +542,7 @@
 		B01279CD27F872B4003FB72E /* ForChildren */ = {
 			isa = PBXGroup;
 			children = (
+				B42A3DEA29EC515F009FA9F1 /* Pexe */,
 				B4C8BE81290A6B3800B51377 /* Images */,
 				B4244D61290AADEB00DEC1A9 /* Stories */,
 				B4C8BE82290A6B6500B51377 /* ForChildrenRootView.swift */,
@@ -694,6 +707,19 @@
 				B425D329291FF81E0050EBEE /* StoriesListViewModel.swift */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		B42A3DEA29EC515F009FA9F1 /* Pexe */ = {
+			isa = PBXGroup;
+			children = (
+				B42A3DEB29EC515F009FA9F1 /* PexesoViewModel.swift */,
+				B42A3DEC29EC515F009FA9F1 /* CardFront.swift */,
+				B42A3DED29EC515F009FA9F1 /* CardBack.swift */,
+				B42A3DEE29EC515F009FA9F1 /* FlipView.swift */,
+				B42A3DEF29EC515F009FA9F1 /* PexesoView.swift */,
+				B42A3DF029EC515F009FA9F1 /* PexesoRepository.swift */,
+			);
+			path = Pexe;
 			sourceTree = "<group>";
 		};
 		B43C367E292C105000D9AA40 /* View */ = {
@@ -1081,6 +1107,7 @@
 				B087C89327F8B4610015E54B /* AccordionsView.swift in Sources */,
 				B475015C2910515B006810D8 /* StoryViewModel.swift in Sources */,
 				B0ECC1402802FC6F00BF9898 /* AlphabetItemView.swift in Sources */,
+				B42A3DFA29EC515F009FA9F1 /* FlipView.swift in Sources */,
 				B439F07228B64FEF002B270B /* OnBoardingToLearnView.swift in Sources */,
 				B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */,
 				B43C3677292C0F5200D9AA40 /* AudioError.swift in Sources */,
@@ -1100,10 +1127,12 @@
 				B03B1BD1281889CF005C62C3 /* LanguageStore.swift in Sources */,
 				B00D1B2727F99BEA0073611C /* AccordionHeaderView.swift in Sources */,
 				B08B0DF5281FD0F2000EAEF1 /* Team.swift in Sources */,
+				B42A3DFC29EC515F009FA9F1 /* PexesoRepository.swift in Sources */,
 				5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */,
 				B40177F028B8F30D000374D2 /* PickerView.swift in Sources */,
 				B05FB5F228269834002AA6DE /* OnBoardingStore.swift in Sources */,
 				B4081D9B29E7329B00B66D8E /* Deeplink.swift in Sources */,
+				B42A3DFB29EC515F009FA9F1 /* PexesoView.swift in Sources */,
 				250E55E628072591004511EC /* Dictionary+UIExamples.swift in Sources */,
 				250E55E4280723E0004511EC /* Languages.swift in Sources */,
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
@@ -1111,6 +1140,7 @@
 				25A2397F2808883400750977 /* PhrasesFavoritesProvider.swift in Sources */,
 				B01279CA27F872A9003FB72E /* DictionaryView.swift in Sources */,
 				B43C3679292C0F7700D9AA40 /* StoryAudioPlayer.swift in Sources */,
+				B42A3DF729EC515F009FA9F1 /* PexesoViewModel.swift in Sources */,
 				B04021CE2822E27000B756FB /* PrimaryButtonStyle.swift in Sources */,
 				B0ECC14C2803431A00BF9898 /* Bundle+version.swift in Sources */,
 				B0E140E327FCE24F008BBBB4 /* DictionaryHeaderView.swift in Sources */,
@@ -1123,6 +1153,7 @@
 				B0C0F8E528060A310036441E /* ForChildrenRowView.swift in Sources */,
 				B04021C82822D46700B756FB /* OnBoardingRootView.swift in Sources */,
 				B425D32A291FF81E0050EBEE /* StoriesListViewModel.swift in Sources */,
+				B42A3DF829EC515F009FA9F1 /* CardFront.swift in Sources */,
 				B0C0F8E828060B750036441E /* Flags.swift in Sources */,
 				B01279C627F870BF003FB72E /* RootItems.swift in Sources */,
 				B4244D65290AB2D700DEC1A9 /* StoryMetadata.swift in Sources */,
@@ -1133,6 +1164,7 @@
 				B4244D63290AADFF00DEC1A9 /* StoriesRepository.swift in Sources */,
 				B4AAA85D28E47A730061F9F6 /* AdaptiveStack.swift in Sources */,
 				B01279D627F872D2003FB72E /* AlphabetView.swift in Sources */,
+				B42A3DF929EC515F009FA9F1 /* CardBack.swift in Sources */,
 				B0E140DC27FCCF2F008BBBB4 /* PhraseMatchService.swift in Sources */,
 				B00D1B2E27F9DEC20073611C /* TranslationView.swift in Sources */,
 				B068833327FF903000E6B831 /* Dictionary.swift in Sources */,

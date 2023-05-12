@@ -40,7 +40,7 @@ struct StoryHeadlineView: View {
 
 struct StoryHeadlineView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryHeadlineView(content: .init(image: "data/stories/cervena-karkulka/thumbnail",
+        StoryHeadlineView(content: .init(image: "stories/cervena-karkulka/thumbnail",
                                          title: "O perníkové chaloupce",
                                          subtitle: "Прянична хатинка"))
     }

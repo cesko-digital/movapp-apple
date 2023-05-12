@@ -86,7 +86,7 @@ extension Dictionary.Phrase {
             guard let soundUri = URL(string: soundUrl) else { return nil }
 
             let relativePath = soundUri.deletingPathExtension().relativePath.dropFirst()
-            return String("data/\(relativePath)")
+            return String("\(relativePath)")
         }
 
         init(translation: String, transcription: String) {

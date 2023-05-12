@@ -1,6 +1,9 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+- Pexeso
+- Improved build time
+- Update data from movapp-apple repository at 2023-05-11 11:04:13 +0000
 
 ## [1.7.0, build 57] - 2023-05-11Z
 - Update data from movapp-apple repository at 2023-05-08 10:12:07 +0000

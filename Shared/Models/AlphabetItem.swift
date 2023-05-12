@@ -10,7 +10,7 @@ import Foundation
 struct AlphabetItem: Decodable {
     static let example = AlphabetItem(
         id: "7fc56270e7a70fa81a5935b72eacbe29",
-        soundUrl: "https://data.movapp.eu/data/CS-alphabet/recOMNxm02MGy3r7I.mp3",
+        soundUrl: "https://data.movapp.eu/cs-alphabet/recOMNxm02MGy3r7I.mp3",
         letters: ["A", "a"],
         transcription: "[a]",
         examples: [Dictionary.Phrase.Translation(translation: "abeceda", transcription: "абецеда")]
@@ -33,6 +33,6 @@ struct AlphabetItem: Decodable {
         else { return nil }
 
         let relativePath = soundUri.deletingPathExtension().relativePath.dropFirst()
-        return String("data/\(relativePath)")
+        return String("\(relativePath)")
     }
 }

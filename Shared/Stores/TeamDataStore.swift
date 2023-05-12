@@ -30,7 +30,7 @@ class TeamDataStore: ObservableObject {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
 
         do {
-            guard let asset = NSDataAsset(name: "data/team.v1") else {
+            guard let asset = NSDataAsset(name: "team.v1") else {
                 error = "Invalid data file name"
                 loading = false
                 return

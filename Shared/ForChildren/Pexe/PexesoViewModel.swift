@@ -59,6 +59,7 @@ class PexesoViewModel: PexesoViewModeling {
             .store(in: &cancellables)
 
         soundService.$isPlaying
+            .receive(on: RunLoop.main)
             .sink { [weak self] isPlaying in
                 self?.canRotate = !isPlaying
                 if isPlaying == false {

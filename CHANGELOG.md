@@ -1,6 +1,7 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+- Added Telegram
 
 ## [1.7.0, build 58] - 2023-05-12Z
 - Pexeso

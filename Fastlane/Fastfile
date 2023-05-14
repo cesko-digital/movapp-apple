@@ -155,3 +155,9 @@ lane :check_metadata do
         include_in_app_purchases: false
     )
 end
+
+lane :create_missing_devices do
+    if FastlaneCore::DeviceManager.simulators(requested_os_type: simulator_name).empty? == true
+        system("xcrun simctl create \"iPad Pro (12.9-inch) (2nd generation)\" com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---2nd-generation- com.apple.CoreSimulator.SimRuntime.iOS-16-4")
+    end
+end

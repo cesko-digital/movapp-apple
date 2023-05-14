@@ -33,14 +33,19 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
         VStack {
             newGameButton
 
-            let numberOfColumns = Int(sqrt(Double(content.count)))
-            let gridLayout: [GridItem] = Array(repeating: GridItem(.flexible()),
-                                               count: numberOfColumns)
+            GeometryReader { geometry in
+                let numberOfColumns = Int(sqrt(Double(content.count)))
+                let smallerSide = min(geometry.size.width, geometry.size.height)
+                // Cell width without spacing
+                let cellWidth = (smallerSide - (CGFloat(numberOfColumns-1)) * 8) / CGFloat(numberOfColumns)
+                let gridLayout: [GridItem] = Array(repeating: GridItem(.flexible(minimum: 0, maximum: cellWidth)),
+                                                   count: numberOfColumns)
 
-            LazyVGrid(columns: gridLayout, alignment: .center, spacing: 8) {
-                ForEach(content) { item in
-                    FlipView(content: item) { content in
-                        viewModel.select(phrase: content)
+                LazyVGrid(columns: gridLayout, alignment: .center, spacing: 8) {
+                    ForEach(content) { item in
+                        FlipView(content: item) { content in
+                            viewModel.select(phrase: content)
+                        }
                     }
                 }
             }
@@ -133,5 +138,6 @@ struct PexesoView_Previews: PreviewProvider {
                               found: false)
                 })
         ))
+        .previewDisplayName("Initial state")
     }
 }

@@ -115,6 +115,7 @@ struct MenuView<ViewModel: MenuViewModeling>: View {
             openLinkButton(String(localized: "facebook"), url: "https://www.facebook.com/movappcz")
             openLinkButton(String(localized: "about_instagram"), url: "https://www.instagram.com/movappcz/")
             openLinkButton(String(localized: "linkedin"), url: "https://www.linkedin.com/company/movapp-cz")
+            openLinkButton(String(localized: "telegram"), url: "https://t.me/movappcz")
 
         } header: {
             Text("about_project", comment: "Settings")

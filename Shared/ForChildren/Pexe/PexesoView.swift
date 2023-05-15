@@ -46,6 +46,7 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
                         FlipView(content: item) { content in
                             viewModel.select(phrase: content)
                         }
+                        .frame(minWidth: cellWidth, minHeight: cellWidth)
                     }
                 }
             }
@@ -71,15 +72,21 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
         VStack {
             newGameButton
 
-            let numberOfColumns = Int(sqrt(Double(content.count)))
-            let gridLayout: [GridItem] = Array(repeating: GridItem(.flexible()),
-                                               count: numberOfColumns)
+            GeometryReader { geometry in
+                let numberOfColumns = Int(sqrt(Double(content.count)))
+                let smallerSide = min(geometry.size.width, geometry.size.height)
+                // Cell width without spacing
+                let cellWidth = (smallerSide - (CGFloat(numberOfColumns-1)) * 8) / CGFloat(numberOfColumns)
+                let gridLayout: [GridItem] = Array(repeating: GridItem(.flexible(minimum: 0, maximum: cellWidth)),
+                                                   count: numberOfColumns)
 
-            LazyVGrid(columns: gridLayout, alignment: .center, spacing: 8) {
-                ForEach(content) { item in
-                    FlipView(content: item) { _ in }
-                        .border(.conicGradient(colors: [.green, .red, .cyan, .orange], center: .center))
-                        .rotationEffect(Angle(degrees: isWon ? 360 : 0), anchor: .center)
+                LazyVGrid(columns: gridLayout, alignment: .center, spacing: 8) {
+                    ForEach(content) { item in
+                        FlipView(content: item) { _ in }
+                            .frame(minWidth: cellWidth, minHeight: cellWidth)
+                            .border(.conicGradient(colors: [.green, .red, .cyan, .orange], center: .center))
+                            .rotationEffect(Angle(degrees: isWon ? 360 : 0), anchor: .center)
+                    }
                 }
             }
         }

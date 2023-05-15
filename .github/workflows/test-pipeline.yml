@@ -1,7 +1,7 @@
 name: TestPipeline
 
-on:
-  workflow_dispatch:
+on: 
+  - push
 
 concurrency:
   group: movapp-apple-test-pipeline-${{ github.ref }}

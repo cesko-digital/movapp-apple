@@ -20,38 +20,13 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
             case .error:
                 errorState
             case .won(let content):
-                wonState(with: content)
+                pexeso(with: content, won: true)
             case .loaded(let content):
                 pexeso(with: content)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("colors/item"))
-    }
-
-    private func pexeso(with content: [PexesoContent]) -> some View {
-        VStack {
-            newGameButton
-
-            GeometryReader { geometry in
-                let numberOfColumns = Int(sqrt(Double(content.count)))
-                let smallerSide = min(geometry.size.width, geometry.size.height)
-                // Cell width without spacing
-                let cellWidth = (smallerSide - (CGFloat(numberOfColumns-1)) * 8) / CGFloat(numberOfColumns)
-                let gridLayout: [GridItem] = Array(repeating: GridItem(.flexible(minimum: 0, maximum: cellWidth)),
-                                                   count: numberOfColumns)
-
-                LazyVGrid(columns: gridLayout, alignment: .center, spacing: 8) {
-                    ForEach(content) { item in
-                        FlipView(content: item) { content in
-                            viewModel.select(phrase: content)
-                        }
-                        .frame(minWidth: cellWidth, minHeight: cellWidth)
-                    }
-                }
-            }
-        }
-        .padding()
     }
 
     private var newGameButton: some View {
@@ -68,7 +43,7 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
         .onAppear(perform: viewModel.viewAppeared.send)
     }
 
-    private func wonState(with content: [PexesoContent]) -> some View {
+    private func pexeso(with content: [PexesoContent], won: Bool = false) -> some View {
         VStack {
             newGameButton
 
@@ -82,17 +57,32 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
 
                 LazyVGrid(columns: gridLayout, alignment: .center, spacing: 8) {
                     ForEach(content) { item in
-                        FlipView(content: item) { _ in }
-                            .frame(minWidth: cellWidth, minHeight: cellWidth)
-                            .border(.conicGradient(colors: [.green, .red, .cyan, .orange], center: .center))
-                            .rotationEffect(Angle(degrees: isWon ? 360 : 0), anchor: .center)
+                        ZStack {
+                            FlipView(content: item) { phrase in
+                                viewModel.select(phrase: phrase)
+                            }
+
+                            if won {
+                                RoundedRectangle(cornerRadius: 8)
+                                    .strokeBorder(
+                                        .conicGradient(
+                                            colors: [.green, .red, .cyan, .orange],
+                                            center: .center
+                                        )
+                                    )
+                            }
+                        }
+                        .frame(minWidth: cellWidth, minHeight: cellWidth)
+                        .rotationEffect(Angle(degrees: isWon ? 360 : 0), anchor: .center)
                     }
                 }
             }
         }
         .onAppear {
-            withAnimation(.easeInOut(duration: 2.5).repeatCount(4)) {
-                isWon.toggle()
+            if won {
+                withAnimation(.easeInOut(duration: 2.5).repeatCount(4)) {
+                    isWon.toggle()
+                }
             }
         }
         .padding()

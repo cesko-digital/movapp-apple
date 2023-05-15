@@ -12,6 +12,14 @@ struct MovappApp: App {
 
     @State private var language: SetLanguage?
 
+    init() {
+        // Restoring application language from locale based on Fastlane snapshots
+        if let appleLocale = UserDefaults.standard.string(forKey: "AppleLocale") {
+            LanguageProvider.shared.language = getSetLanguage(for: appleLocale)
+            NSLog("Restored language from arguments: \(appleLocale)")
+        }
+    }
+
     var body: some Scene {
         WindowGroup {
             NavigationView {

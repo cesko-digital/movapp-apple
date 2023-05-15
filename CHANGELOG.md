@@ -1,6 +1,7 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+- Pexeso fixes (Card back style)
 
 ## [1.7.0, build 61] - 2023-05-14Z
 - Pexeso fixes (iPad layout)

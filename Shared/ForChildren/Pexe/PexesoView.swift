@@ -83,6 +83,7 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
                 LazyVGrid(columns: gridLayout, alignment: .center, spacing: 8) {
                     ForEach(content) { item in
                         FlipView(content: item) { _ in }
+                            .frame(minWidth: cellWidth, minHeight: cellWidth)
                             .border(.conicGradient(colors: [.green, .red, .cyan, .orange], center: .center))
                             .rotationEffect(Angle(degrees: isWon ? 360 : 0), anchor: .center)
                     }

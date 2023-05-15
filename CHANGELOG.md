@@ -1,6 +1,8 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+
+## [1.7.0, build 62] - 2023-05-15Z
 - Pexeso fixes (Card back style)
 
 ## [1.7.0, build 61] - 2023-05-14Z

@@ -119,19 +119,4 @@ struct MovappApp: App {
             }
         }
     }
-
-    private func getSetLanguage(for locale: String) -> SetLanguage {
-        let language = Languages(rawValue: locale) ?? .cs
-
-        return preferredSetLanguage(for: language)
-    }
-
-    private func preferredSetLanguage(for language: Languages) -> SetLanguage {
-        switch language {
-        case .cs, .pl, .sk:
-            return SetLanguage(language: Language(main: language, source: .uk), flipFromWithTo: false)
-        case .uk:
-            return .ukCs
-        }
-    }
 }

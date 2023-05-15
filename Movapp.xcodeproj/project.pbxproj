@@ -156,6 +156,8 @@
 		B4DF161B2A0CF197007DB4CA /* Sounds.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4DF161A2A0CF197007DB4CA /* Sounds.xcassets */; };
 		B4F518E9293937280002D166 /* Christmas@3x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F518E8293937280002D166 /* Christmas@3x~ipad.png */; };
 		B4F518EB293937340002D166 /* Christmas@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B4F518EA293937340002D166 /* Christmas@2x~ipad.png */; };
+		B4FE7DC92A125F33009AE03F /* MovappWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE7DC82A125F33009AE03F /* MovappWatchUITests.swift */; };
+		B4FE7DD12A126064009AE03F /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B0DED281FBBFC000EAEF1 /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +188,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B012799B27F86957003FB72E;
 			remoteInfo = "Movapp (iOS)";
+		};
+		B4FE7DCC2A125F33009AE03F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B012799027F86954003FB72E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4B6D40D29EAA560000FE1A3;
+			remoteInfo = "MovappWatch Watch App";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -359,6 +368,8 @@
 		B4DF161A2A0CF197007DB4CA /* Sounds.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Sounds.xcassets; sourceTree = "<group>"; };
 		B4F518E8293937280002D166 /* Christmas@3x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Christmas@3x~ipad.png"; sourceTree = "<group>"; };
 		B4F518EA293937340002D166 /* Christmas@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Christmas@2x~ipad.png"; sourceTree = "<group>"; };
+		B4FE7DC62A125F33009AE03F /* MovappWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovappWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4FE7DC82A125F33009AE03F /* MovappWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappWatchUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +405,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B4DD701029CF26EB00112F3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4FE7DC32A125F33009AE03F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -467,6 +485,7 @@
 				B4DD701429CF26EB00112F3A /* MovappTests */,
 				B4B90EA929E146E700134849 /* Widget */,
 				B4B6D40F29EAA560000FE1A3 /* MovappWatch Watch App */,
+				B4FE7DC72A125F33009AE03F /* MovappWatchUITests */,
 				B012799D27F86957003FB72E /* Products */,
 				B01279E027F88504003FB72E /* Frameworks */,
 			);
@@ -502,6 +521,7 @@
 				B4DD701329CF26EB00112F3A /* MovappTests.xctest */,
 				B4B90EA629E146E700134849 /* WidgetExtension.appex */,
 				B4B6D40E29EAA560000FE1A3 /* Movapp.app */,
+				B4FE7DC62A125F33009AE03F /* MovappWatchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -887,6 +907,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		B4FE7DC72A125F33009AE03F /* MovappWatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B4FE7DC82A125F33009AE03F /* MovappWatchUITests.swift */,
+			);
+			path = MovappWatchUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -985,6 +1013,24 @@
 			productReference = B4DD701329CF26EB00112F3A /* MovappTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B4FE7DC52A125F33009AE03F /* MovappWatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4FE7DD02A125F33009AE03F /* Build configuration list for PBXNativeTarget "MovappWatchUITests" */;
+			buildPhases = (
+				B4FE7DC22A125F33009AE03F /* Sources */,
+				B4FE7DC32A125F33009AE03F /* Frameworks */,
+				B4FE7DC42A125F33009AE03F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4FE7DCD2A125F33009AE03F /* PBXTargetDependency */,
+			);
+			name = MovappWatchUITests;
+			productName = MovappWatchUITests;
+			productReference = B4FE7DC62A125F33009AE03F /* MovappWatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1011,6 +1057,10 @@
 					B4DD701229CF26EB00112F3A = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = B012799B27F86957003FB72E;
+					};
+					B4FE7DC52A125F33009AE03F = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = B4B6D40D29EAA560000FE1A3;
 					};
 				};
 			};
@@ -1040,6 +1090,7 @@
 				B4DD701229CF26EB00112F3A /* MovappTests */,
 				B4B90EA529E146E700134849 /* WidgetExtension */,
 				B4B6D40D29EAA560000FE1A3 /* MovappWatch Watch App */,
+				B4FE7DC52A125F33009AE03F /* MovappWatchUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1095,6 +1146,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B4DD701129CF26EB00112F3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4FE7DC42A125F33009AE03F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1284,6 +1342,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B4FE7DC22A125F33009AE03F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4FE7DC92A125F33009AE03F /* MovappWatchUITests.swift in Sources */,
+				B4FE7DD12A126064009AE03F /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1306,6 +1373,11 @@
 			isa = PBXTargetDependency;
 			target = B012799B27F86957003FB72E /* Movapp (iOS) */;
 			targetProxy = B4DD701729CF26EB00112F3A /* PBXContainerItemProxy */;
+		};
+		B4FE7DCD2A125F33009AE03F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4B6D40D29EAA560000FE1A3 /* MovappWatch Watch App */;
+			targetProxy = B4FE7DCC2A125F33009AE03F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1757,6 +1829,45 @@
 			};
 			name = Release;
 		};
+		B4FE7DCE2A125F33009AE03F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.movapp.app.watchkitapp.MovappWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "MovappWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		B4FE7DCF2A125F33009AE03F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cz.movapp.app.watchkitapp.MovappWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "MovappWatch Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1810,6 +1921,15 @@
 			buildConfigurations = (
 				B4DD701929CF26EB00112F3A /* Debug */,
 				B4DD701A29CF26EB00112F3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4FE7DD02A125F33009AE03F /* Build configuration list for PBXNativeTarget "MovappWatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4FE7DCE2A125F33009AE03F /* Debug */,
+				B4FE7DCF2A125F33009AE03F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

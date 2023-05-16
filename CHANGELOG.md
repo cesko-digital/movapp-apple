@@ -1,6 +1,7 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+- Update data from movapp-apple repository at 2023-05-16 11:31:29 +0000
 
 ## [1.7.0, build 63] - 2023-05-15Z
 - Pexeso fixes (rounded border of won state)

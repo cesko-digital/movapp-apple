@@ -6902,7 +6902,7 @@
 		"recaVt57fTgXahd1C": {
 			"id": "recaVt57fTgXahd1C",
 			"main": {
-				"sound_url": "https://data.movapp.eu/cs-sounds/2/2d8aa42a0347c2d66cc86a0138dc9664.mp3",
+				"sound_url": "https://data.movapp.eu/cs-sounds/f/fd621f749d95958314c59809aa402005.mp3",
 				"translation": "puzzle",
 				"transcription": "пуззле"
 			},
@@ -8484,7 +8484,7 @@
 		"recML0abOMrVWWREQ": {
 			"id": "recML0abOMrVWWREQ",
 			"main": {
-				"sound_url": "https://data.movapp.eu/cs-sounds/b/bd0a14c4a19785ca52653b584d612d5c.mp3",
+				"sound_url": "https://data.movapp.eu/cs-sounds/6/69a78d3e610247ade48d2318458b4265.mp3",
 				"translation": "Potřebuješ čůrat?",
 				"transcription": "Потршебуєш чурат"
 			},
@@ -12054,7 +12054,7 @@
 		"recf57gB4M2qt2lYk": {
 			"id": "recf57gB4M2qt2lYk",
 			"main": {
-				"sound_url": "https://data.movapp.eu/cs-sounds/d/dbb27a78d5cf815d7b246892423a2730.mp3",
+				"sound_url": "https://data.movapp.eu/cs-sounds/0/02ecb07fba99e31f3cf4284e7ada0218.mp3",
 				"translation": "Najdi 10 rozdílů.",
 				"transcription": "Найді 10 розділу"
 			},
@@ -20669,9 +20669,9 @@
 				"transcription": "ваночні мше"
 			},
 			"source": {
-				"sound_url": "https://data.movapp.eu/uk-sounds/c/c21626b39583d268d6543f91ca67b751.mp3",
-				"translation": "Різдвяна служба",
-				"transcription": "Rizdvjana služba"
+				"sound_url": "https://data.movapp.eu/uk-sounds/5/5477fdee8b73ec9a4d5b289d14976a4c.mp3",
+				"translation": "різдвяна служба",
+				"transcription": "rizdvjana služba"
 			},
 			"image_url": null
 		},
@@ -20697,9 +20697,9 @@
 				"transcription": "Йдете до костела на ваночні мші"
 			},
 			"source": {
-				"sound_url": "https://data.movapp.eu/uk-sounds/b/b00b654dc1dfb9b83077889fcf4873a8.mp3",
-				"translation": "Ви йдете до костелу на Різдвяну службу?",
-				"transcription": "Vy jdete do kostelu na Rizdvjanu službu"
+				"sound_url": "https://data.movapp.eu/uk-sounds/f/f5b2278dac562c4724936a282d2b3297.mp3",
+				"translation": "Ви йдете до костелу на різдвяну службу?",
+				"transcription": "Vy jdete do kostelu na rizdvjanu službu"
 			},
 			"image_url": null
 		},

@@ -2707,7 +2707,7 @@
 				"transcription": "цєпуи, цєпуа"
 			},
 			"source": {
-				"sound_url": "https://data.movapp.eu/uk-sounds/f/f5dbe7abec57323ef980547f67fd40dd.mp3",
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/6c3450ac72a9aa70fa863dc4d44f8943.mp3",
 				"translation": "теплий, тепла",
 				"transcription": "teplyj, tepla"
 			},
@@ -12152,8 +12152,8 @@
 		"rec3VwXRoRD4erUPh": {
 			"id": "rec3VwXRoRD4erUPh",
 			"main": {
-				"sound_url": "https://data.movapp.eu/pl-sounds/d/d54fe0114ea1883f30c147f684a40547.mp3",
-				"translation": "Dwieście gram sera poproszę",
+				"sound_url": "https://data.movapp.eu/pl-sounds/0/0a9949fcb38059971ea326f67fbb969d.mp3",
+				"translation": "Dwieście gram sera poproszę.",
 				"transcription": "Двєсьцє ґрам сера попрошен"
 			},
 			"source": {
@@ -12180,8 +12180,8 @@
 		"rec9ZXVNmHpVz4haJ": {
 			"id": "rec9ZXVNmHpVz4haJ",
 			"main": {
-				"sound_url": "https://data.movapp.eu/pl-sounds/2/2f248824d31d52a226e8962290d44487.mp3",
-				"translation": "Sto gramów salami poproszę",
+				"sound_url": "https://data.movapp.eu/pl-sounds/6/6e2b43b5145883df2a3e7f651ca36d8b.mp3",
+				"translation": "Sto gramów salami poproszę.",
 				"transcription": "Сто ґрамув салямі попрошен"
 			},
 			"source": {

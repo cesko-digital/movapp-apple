@@ -104,6 +104,7 @@
 		B475015E29105166006810D8 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B475015D29105166006810D8 /* StoryView.swift */; };
 		B48173EE29EBDCDA0035675E /* LanguageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48173ED29EBDCDA0035675E /* LanguageProvider.swift */; };
 		B48173F129EBDDF40035675E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48173F029EBDDF40035675E /* OnboardingView.swift */; };
+		B48E12C22A20F72D00905C7A /* ExerciseRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E12C12A20F72D00905C7A /* ExerciseRootView.swift */; };
 		B48E91422916E3EC00965392 /* StoriesListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E91412916E3EC00965392 /* StoriesListItemView.swift */; };
 		B4AAA85D28E47A730061F9F6 /* AdaptiveStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */; };
 		B4B6D41529EAA562000FE1A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B6D41429EAA562000FE1A3 /* Assets.xcassets */; };
@@ -341,6 +342,7 @@
 		B475015D29105166006810D8 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
 		B48173ED29EBDCDA0035675E /* LanguageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageProvider.swift; sourceTree = "<group>"; };
 		B48173F029EBDDF40035675E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		B48E12C12A20F72D00905C7A /* ExerciseRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRootView.swift; sourceTree = "<group>"; };
 		B48E91412916E3EC00965392 /* StoriesListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListItemView.swift; sourceTree = "<group>"; };
 		B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveStack.swift; sourceTree = "<group>"; };
 		B4B6D40E29EAA560000FE1A3 /* Movapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -494,6 +496,7 @@
 		B012799427F86954003FB72E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B48E12C02A20F6DB00905C7A /* Exercise */,
 				B4081D9929E7328100B66D8E /* Deeplink */,
 				B04021C02822D42B00B756FB /* OnBoarding */,
 				B0C0F8E628060B6C0036441E /* Enums */,
@@ -827,6 +830,14 @@
 				B48173F029EBDDF40035675E /* OnboardingView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B48E12C02A20F6DB00905C7A /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+				B48E12C12A20F72D00905C7A /* ExerciseRootView.swift */,
+			);
+			path = Exercise;
 			sourceTree = "<group>";
 		};
 		B4B6D40F29EAA560000FE1A3 /* MovappWatch Watch App */ = {
@@ -1203,6 +1214,7 @@
 				B42A3DFA29EC515F009FA9F1 /* FlipView.swift in Sources */,
 				B439F07228B64FEF002B270B /* OnBoardingToLearnView.swift in Sources */,
 				B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */,
+				B48E12C22A20F72D00905C7A /* ExerciseRootView.swift in Sources */,
 				B43C3677292C0F5200D9AA40 /* AudioError.swift in Sources */,
 				B066546C27FB7D3C002D5EDD /* Language.swift in Sources */,
 				B068833627FF92E300E6B831 /* DictionaryDataStore.swift in Sources */,

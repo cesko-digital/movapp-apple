@@ -32,6 +32,9 @@ struct RootContentView: View {
                 DictionaryView(selectedLanguage: languageStore.currentLanguage)
                     .setTabItem(RootItems.dictionary)
 
+                ExerciseRootView()
+                    .setTabItem(RootItems.exercise)
+
                 AlphabetView(viewModel: AlphabetViewModel(dataStore: AlphabetDataStore(), languageStore: languageStore))
                     .setTabItem(RootItems.alphabet)
 

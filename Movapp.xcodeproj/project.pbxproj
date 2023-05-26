@@ -77,6 +77,15 @@
 		B425D32A291FF81E0050EBEE /* StoriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425D329291FF81E0050EBEE /* StoriesListViewModel.swift */; };
 		B425D32C2920214B0050EBEE /* StoryHeadlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425D32B2920214B0050EBEE /* StoryHeadlineView.swift */; };
 		B425D32E292023D30050EBEE /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B425D32D292023D30050EBEE /* PlayerView.swift */; };
+		B42923712A20FC8800E87B2F /* ExerciseRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42923702A20FC8800E87B2F /* ExerciseRootViewModel.swift */; };
+		B42923732A20FFE700E87B2F /* ExerciseConfigurationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42923722A20FFE700E87B2F /* ExerciseConfigurationRepository.swift */; };
+		B42923752A2101CF00E87B2F /* ExerciseConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42923742A2101CF00E87B2F /* ExerciseConfigurationTests.swift */; };
+		B42923772A2109E300E87B2F /* DictionaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42923762A2109E300E87B2F /* DictionaryRepository.swift */; };
+		B42923782A210B4F00E87B2F /* DictionaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42923762A2109E300E87B2F /* DictionaryRepository.swift */; };
+		B42923792A210B5000E87B2F /* DictionaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42923762A2109E300E87B2F /* DictionaryRepository.swift */; };
+		B429237B2A210B7300E87B2F /* MissingAssetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429237A2A210B7300E87B2F /* MissingAssetError.swift */; };
+		B429237C2A210B7300E87B2F /* MissingAssetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429237A2A210B7300E87B2F /* MissingAssetError.swift */; };
+		B429237D2A210B7300E87B2F /* MissingAssetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429237A2A210B7300E87B2F /* MissingAssetError.swift */; };
 		B42A3DF729EC515F009FA9F1 /* PexesoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A3DEB29EC515F009FA9F1 /* PexesoViewModel.swift */; };
 		B42A3DF829EC515F009FA9F1 /* CardFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A3DEC29EC515F009FA9F1 /* CardFront.swift */; };
 		B42A3DF929EC515F009FA9F1 /* CardBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42A3DED29EC515F009FA9F1 /* CardBack.swift */; };
@@ -310,6 +319,11 @@
 		B425D329291FF81E0050EBEE /* StoriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListViewModel.swift; sourceTree = "<group>"; };
 		B425D32B2920214B0050EBEE /* StoryHeadlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHeadlineView.swift; sourceTree = "<group>"; };
 		B425D32D292023D30050EBEE /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		B42923702A20FC8800E87B2F /* ExerciseRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRootViewModel.swift; sourceTree = "<group>"; };
+		B42923722A20FFE700E87B2F /* ExerciseConfigurationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseConfigurationRepository.swift; sourceTree = "<group>"; };
+		B42923742A2101CF00E87B2F /* ExerciseConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseConfigurationTests.swift; sourceTree = "<group>"; };
+		B42923762A2109E300E87B2F /* DictionaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryRepository.swift; sourceTree = "<group>"; };
+		B429237A2A210B7300E87B2F /* MissingAssetError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingAssetError.swift; sourceTree = "<group>"; };
 		B42A3DEB29EC515F009FA9F1 /* PexesoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PexesoViewModel.swift; sourceTree = "<group>"; };
 		B42A3DEC29EC515F009FA9F1 /* CardFront.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardFront.swift; sourceTree = "<group>"; };
 		B42A3DED29EC515F009FA9F1 /* CardBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBack.swift; sourceTree = "<group>"; };
@@ -650,6 +664,8 @@
 				B0320920281998AA001203BF /* UserDefaultsStore.swift */,
 				B08B0DF8281FD49B000EAEF1 /* TeamDataStore.swift */,
 				B05FB5F128269834002AA6DE /* OnBoardingStore.swift */,
+				B42923762A2109E300E87B2F /* DictionaryRepository.swift */,
+				B429237A2A210B7300E87B2F /* MissingAssetError.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -835,9 +851,43 @@
 		B48E12C02A20F6DB00905C7A /* Exercise */ = {
 			isa = PBXGroup;
 			children = (
-				B48E12C12A20F72D00905C7A /* ExerciseRootView.swift */,
+				B48E12C62A20FBE500905C7A /* Finish */,
+				B48E12C52A20FBDC00905C7A /* Exercise */,
+				B48E12C42A20FBD400905C7A /* Configuration */,
+				B48E12C32A20FBC600905C7A /* Root */,
 			);
 			path = Exercise;
+			sourceTree = "<group>";
+		};
+		B48E12C32A20FBC600905C7A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				B48E12C12A20F72D00905C7A /* ExerciseRootView.swift */,
+				B42923702A20FC8800E87B2F /* ExerciseRootViewModel.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		B48E12C42A20FBD400905C7A /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				B42923722A20FFE700E87B2F /* ExerciseConfigurationRepository.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		B48E12C52A20FBDC00905C7A /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		B48E12C62A20FBE500905C7A /* Finish */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Finish;
 			sourceTree = "<group>";
 		};
 		B4B6D40F29EAA560000FE1A3 /* MovappWatch Watch App */ = {
@@ -902,6 +952,7 @@
 				B4DD701529CF26EB00112F3A /* StoriesRepositoryTests.swift */,
 				B4DD701C29CF2EF300112F3A /* TeamDataStoreTests.swift */,
 				B4081D9D29E734B100B66D8E /* DeeplinkTests.swift */,
+				B42923742A2101CF00E87B2F /* ExerciseConfigurationTests.swift */,
 			);
 			path = MovappTests;
 			sourceTree = "<group>";
@@ -1213,6 +1264,7 @@
 				B0ECC1402802FC6F00BF9898 /* AlphabetItemView.swift in Sources */,
 				B42A3DFA29EC515F009FA9F1 /* FlipView.swift in Sources */,
 				B439F07228B64FEF002B270B /* OnBoardingToLearnView.swift in Sources */,
+				B42923712A20FC8800E87B2F /* ExerciseRootViewModel.swift in Sources */,
 				B087C88F27F8B4080015E54B /* AccordionView.swift in Sources */,
 				B48E12C22A20F72D00905C7A /* ExerciseRootView.swift in Sources */,
 				B43C3677292C0F5200D9AA40 /* AudioError.swift in Sources */,
@@ -1225,7 +1277,9 @@
 				B08B0DF7281FD1D8000EAEF1 /* TeamView.swift in Sources */,
 				B03B1BC828186E2E005C62C3 /* PlayButtonView.swift in Sources */,
 				B425D32E292023D30050EBEE /* PlayerView.swift in Sources */,
+				B42923732A20FFE700E87B2F /* ExerciseConfigurationRepository.swift in Sources */,
 				B04021CC2822D6E300B756FB /* OnBoardingTutorialsPagerView.swift in Sources */,
+				B429237B2A210B7300E87B2F /* MissingAssetError.swift in Sources */,
 				B0320921281998AA001203BF /* UserDefaultsStore.swift in Sources */,
 				B43C367D292C0FEC00D9AA40 /* StoryContent.swift in Sources */,
 				B00D1B2527F9999C0073611C /* DictionaryContentView.swift in Sources */,
@@ -1234,6 +1288,7 @@
 				B08B0DF5281FD0F2000EAEF1 /* Team.swift in Sources */,
 				B42A3DFC29EC515F009FA9F1 /* PexesoRepository.swift in Sources */,
 				5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */,
+				B42923772A2109E300E87B2F /* DictionaryRepository.swift in Sources */,
 				B40177F028B8F30D000374D2 /* PickerView.swift in Sources */,
 				B05FB5F228269834002AA6DE /* OnBoardingStore.swift in Sources */,
 				B4081D9B29E7329B00B66D8E /* Deeplink.swift in Sources */,
@@ -1306,6 +1361,7 @@
 				B4B6D43929EAC45D000FE1A3 /* ForChildrenViewModeling.swift in Sources */,
 				B4B6D43D29EAD3F9000FE1A3 /* AlphabetViewModel.swift in Sources */,
 				B4B6D43129EAA960000FE1A3 /* UserDefaultsStore.swift in Sources */,
+				B429237D2A210B7300E87B2F /* MissingAssetError.swift in Sources */,
 				B4B6D42B29EAA7E2000FE1A3 /* Languages.swift in Sources */,
 				B48173F129EBDDF40035675E /* OnboardingView.swift in Sources */,
 				B48173EE29EBDCDA0035675E /* LanguageProvider.swift in Sources */,
@@ -1319,6 +1375,7 @@
 				B4B6D42D29EAA7F4000FE1A3 /* Dictionary.swift in Sources */,
 				B4B6D43F29EAD4B9000FE1A3 /* Alphabet.swift in Sources */,
 				B4B6D44029EAD4BF000FE1A3 /* AlphabetItem.swift in Sources */,
+				B42923792A210B5000E87B2F /* DictionaryRepository.swift in Sources */,
 				B4B6D42529EAA647000FE1A3 /* ForChildrenView.swift in Sources */,
 				B4B6D44229EAD741000FE1A3 /* AlphabetDetailView.swift in Sources */,
 				B4B6D42A29EAA7DD000FE1A3 /* Language.swift in Sources */,
@@ -1331,6 +1388,7 @@
 			files = (
 				B4B90EAB29E146E700134849 /* WidgetBundle.swift in Sources */,
 				B4B90EBE29E14A8000134849 /* Languages.swift in Sources */,
+				B429237C2A210B7300E87B2F /* MissingAssetError.swift in Sources */,
 				B4B90EBB29E1499E00134849 /* Dictionary.swift in Sources */,
 				B4B90EBC29E149D600134849 /* SetLanguage.swift in Sources */,
 				B4B90EBD29E14A7B00134849 /* Language.swift in Sources */,
@@ -1340,6 +1398,7 @@
 				B4B90EBF29E14AB600134849 /* Flags.swift in Sources */,
 				B4081D9C29E7329B00B66D8E /* Deeplink.swift in Sources */,
 				B4B90EAD29E146E700134849 /* Widget.swift in Sources */,
+				B42923782A210B4F00E87B2F /* DictionaryRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1348,6 +1407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4DD701F29CF2FD200112F3A /* DictionaryDataStoreTests.swift in Sources */,
+				B42923752A2101CF00E87B2F /* ExerciseConfigurationTests.swift in Sources */,
 				B4081D9E29E734B100B66D8E /* DeeplinkTests.swift in Sources */,
 				B4DD701D29CF2EF300112F3A /* TeamDataStoreTests.swift in Sources */,
 				B4DD701629CF26EB00112F3A /* StoriesRepositoryTests.swift in Sources */,

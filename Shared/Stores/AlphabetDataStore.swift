@@ -26,12 +26,3 @@ class AlphabetDataStore {
         return try decoder.decode(Alphabet.self, from: data)
     }
 }
-
-struct MissingAssetError: Error {
-
-    let message: String
-
-    init(_ message: String) {
-        self.message = message
-    }
-}

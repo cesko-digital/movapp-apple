@@ -7,14 +7,22 @@
 
 import SwiftUI
 
-struct ExerciseRootView: View {
+struct ExerciseRootView<ViewModel: ExerciseRootViewModeling>: View {
+
+    @StateObject var viewModel: ViewModel
+
     var body: some View {
         Text("Hello, World!")
     }
 }
 
 struct ExerciseRootView_Previews: PreviewProvider {
+
+    class MockViewModel: ExerciseRootViewModeling {
+
+    }
+
     static var previews: some View {
-        ExerciseRootView()
+        ExerciseRootView(viewModel: MockViewModel())
     }
 }

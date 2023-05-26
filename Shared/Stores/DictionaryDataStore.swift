@@ -28,21 +28,11 @@ class DictionaryDataStore: ObservableObject {
 
         loading = true
 
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-
-        let prefix = language.language.dictionaryFilePrefix
-
         do {
-            guard let asset = NSDataAsset(name: "\(prefix)-dictionary") else {
-                error = "Invalid data file name"
-                loading = false
-                return
-            }
+            let loadedDictionary = try DictionaryRepository().load(language: language)
 
-            let loadedDictionary = try decoder.decode(Dictionary.self, from: asset.data)
             let visibleCategories = loadedDictionary.categories.filter {
-                $0.isHidden == false && $0.isMetaCategory == false
+                $0.isMetaCategory == false
             }
             self.dictionary = Dictionary(main: loadedDictionary.main,
                                          source: loadedDictionary.source,

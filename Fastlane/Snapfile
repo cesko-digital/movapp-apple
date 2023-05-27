@@ -14,7 +14,8 @@ languages([
    "en-US",
    "uk",
    "pl",
-   "sk"
+   "sk",
+   "ru"
  ])
 
 # The name of the scheme which contains the UI Tests

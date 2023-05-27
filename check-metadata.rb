@@ -27,6 +27,9 @@ def main
     
     check_content_length("Fastlane/metadata/uk/keywords.txt", keywords_length)
     check_content_length("Fastlane/metadata/uk/subtitle.txt", keywords_length)
+    
+    check_content_length("Fastlane/metadata/ru/keywords.txt", keywords_length)
+    check_content_length("Fastlane/metadata/ru/subtitle.txt", keywords_length)
 end
 
 main()

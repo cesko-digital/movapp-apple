@@ -162,13 +162,15 @@ lane :create_missing_devices do
     
     # iPhone 13 Pro Max
     iphone_13_pro_max_uuid = FastlaneCore::DeviceManager.simulators(requested_os_type: "iPhone 13 Pro Max")
+    puts "iPhone 13 Pro Max 1: #{iphone_13_pro_max_uuid}"
     if iphone_13_pro_max_uuid.empty? == true
-        iphone_13_pro_max_uuid = system("xcrun simctl create \"iPhone 13 Pro Max\" com.apple.CoreSimulator.SimDeviceType.iPhone-13-Pro-Max #{ios_runtime}")
-        puts "iPhone 13 Pro Max: #{iphone_13_pro_max_uuid}"
+        system("xcrun simctl create \"iPhone 13 Pro Max\" com.apple.CoreSimulator.SimDeviceType.iPhone-13-Pro-Max #{ios_runtime}")
+        iphone_13_pro_max_uuid = FastlaneCore::DeviceManager.simulators(requested_os_type: "iPhone 13 Pro Max")
+        puts "iPhone 13 Pro Max 2: #{iphone_13_pro_max_uuid}"
     end
     # Apple Watch Series 8 (45mm)
     watch_series_8 = FastlaneCore::DeviceManager.simulators(requested_os_type: "Apple Watch Series 8 (45mm)")
-    if iphone_13_pro_max_uuid.empty? == true
+    if watch_series_8.empty? == true
         watch_series_8 = system("xcrun simctl create \"Apple Watch Series 8 (45mm)\" com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-8-45mm #{watch_runtime}")
         puts "Watch 8: #{watch_series_8}"
     end

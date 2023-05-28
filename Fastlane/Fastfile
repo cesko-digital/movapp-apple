@@ -159,24 +159,20 @@ end
 lane :create_missing_devices do
     ios_runtime = "com.apple.CoreSimulator.SimRuntime.iOS-16-2"
     watch_runtime = "com.apple.CoreSimulator.SimRuntime.watchOS-9-1"
-    
-    system("xcrun simctl list")
-    
+
     # iPhone 13 Pro Max
     iphone_13_pro_max_uuid = create_device_if_needed(device_name: "iPhone 13 Pro Max (snapshot)", device_type: "com.apple.CoreSimulator.SimDeviceType.iPhone-13-Pro-Max", device_runtime: ios_runtime)
     # Apple Watch Series 8 (45mm)
     watch_series_8 = create_device_if_needed_watch(device_name: "Apple Watch Series 8 (45mm) (snapshot)", device_type: "com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-8-45mm", device_runtime: watch_runtime)
     # pair watch_series_8 with iphone_13_pro_max_uuid
     system("xcrun simctl pair #{watch_series_8} #{iphone_13_pro_max_uuid}")
-    
+
     # iPhone 8 Plus
     create_device_if_needed(device_name: "iPhone 8 Plus", device_type: "com.apple.CoreSimulator.SimDeviceType.iPhone-8-Plus", device_runtime: ios_runtime)
     # iPad Pro (12.9-inch) (6th generation)
     create_device_if_needed(device_name: "iPad Pro (12.9-inch) (6th generation)", device_type: "com.apple.CoreSimulator.SimDeviceType.iPad-Pro-12-9-inch-6th-generation-8GB", device_runtime: ios_runtime)
     # iPad Pro (12.9-inch) (2nd generation
     create_device_if_needed(device_name: "iPad Pro (12.9-inch) (2nd generation)", device_type: "com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---2nd-generation-", device_runtime: ios_runtime)
-    
-    system("xcrun simctl list")
 end
 
 lane :create_device_if_needed do |options|

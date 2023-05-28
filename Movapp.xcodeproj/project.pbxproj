@@ -1844,7 +1844,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = "MovappWatch Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -1864,7 +1864,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_TARGET_NAME = "MovappWatch Watch App";
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};

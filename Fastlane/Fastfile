@@ -163,9 +163,9 @@ lane :create_missing_devices do
     system("xcrun simctl list")
     
     # iPhone 13 Pro Max
-    iphone_13_pro_max_uuid = create_device_if_needed(device_name: "iPhone 13 Pro Max", device_type: "com.apple.CoreSimulator.SimDeviceType.iPhone-13-Pro-Max", device_runtime: ios_runtime)
+    iphone_13_pro_max_uuid = create_device_if_needed(device_name: "iPhone 13 Pro Max (snapshot)", device_type: "com.apple.CoreSimulator.SimDeviceType.iPhone-13-Pro-Max", device_runtime: ios_runtime)
     # Apple Watch Series 8 (45mm)
-    watch_series_8 = create_device_if_needed_watch(device_name: "Apple Watch Series 8 (45mm)", device_type: "com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-8-45mm", device_runtime: watch_runtime)
+    watch_series_8 = create_device_if_needed_watch(device_name: "Apple Watch Series 8 (45mm) (snapshot)", device_type: "com.apple.CoreSimulator.SimDeviceType.Apple-Watch-Series-8-45mm", device_runtime: watch_runtime)
     # pair watch_series_8 with iphone_13_pro_max_uuid
     system("xcrun simctl pair #{watch_series_8} #{iphone_13_pro_max_uuid}")
     

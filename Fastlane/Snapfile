@@ -2,7 +2,7 @@
 
 # A list of devices you want to take the screenshots from
 devices([
-  "iPhone 13 Pro Max", # Mandatory for Apple review
+  "iPhone 13 Pro Max (snapshot)", # Mandatory for Apple review
   "iPhone 8 Plus", # Mandatory for Apple review
   "iPad Pro (12.9-inch) (6th generation)", # Mandatory for Apple review
   # iPad Pro (12.9-inch) (2nd generation) is set up by fastlane on Github Actions see lane create_missing_devices

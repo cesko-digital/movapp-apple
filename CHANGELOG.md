@@ -1,6 +1,7 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+- Update data from movapp-apple repository at 2023-05-28 12:30:40 +0000
 
 ## [1.7.0, build 66] - 2023-05-27Z
 - Added support for RU (just copied UK translations)

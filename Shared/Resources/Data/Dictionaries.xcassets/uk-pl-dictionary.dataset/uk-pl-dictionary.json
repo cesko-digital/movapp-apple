@@ -1649,6 +1649,34 @@
 			"metaOnly": true
 		},
 		{
+			"id": "rec3PjGjNinujiOjc",
+			"name": {
+				"source": "Освіта",
+				"main": "Edukacja"
+			},
+			"description": "",
+			"phrases": [],
+			"metacategories": [
+				"recO2uaSglx7nq8O8",
+				"recZ6Kit2fVBf4LmR"
+			],
+			"metaOnly": true
+		},
+		{
+			"id": "rec5CyU5OvVOmnXuB",
+			"name": {
+				"source": "Здоров'я",
+				"main": "Zdrowie"
+			},
+			"description": "",
+			"phrases": [],
+			"metacategories": [
+				"recyhAgynSzxiasGt",
+				"rec0Web8t9flE9V4Y"
+			],
+			"metaOnly": true
+		},
+		{
 			"id": "recf0uqwveprzjeBc",
 			"name": {
 				"source": "Робота",

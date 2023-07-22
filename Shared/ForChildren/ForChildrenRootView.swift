@@ -49,7 +49,7 @@ struct ForChildrenRootView: View {
                         .navigationTitle("for.children.pexe")
                 }
 
-                if languageStore.currentLanguage == .csUk || languageStore.currentLanguage == .ukCs {
+                if isStoryAvailable(for: languageStore.currentLanguage) {
                     NavigationLink("for.children.stories") {
                         storiesList
                             .navigationTitle("for.children.stories")
@@ -58,6 +58,11 @@ struct ForChildrenRootView: View {
             }
         }
         .padding(.top, 1)
+    }
+
+    private func isStoryAvailable(for currentLanguage: SetLanguage) -> Bool {
+        let languages: [SetLanguage] = [.csUk, .ukCs, .skUk, .ukSk]
+        return languages.contains(currentLanguage)
     }
 }
 

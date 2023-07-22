@@ -88,7 +88,7 @@ class StoriesListViewModel: StoriesListViewModeling {
         let storiesSorted = storyMetadata.stories
             .filter {
                 $0.supportedLanguages.contains(firstLanguage.rawValue)
-                || $0.supportedLanguages.contains(secondLanguage.rawValue)
+                && $0.supportedLanguages.contains(secondLanguage.rawValue)
             }
             .sorted { $0.origin < $1.origin }
         let countryGroupedStories: [String: [Story]] = .init(grouping: storiesSorted,

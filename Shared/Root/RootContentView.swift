@@ -32,7 +32,13 @@ struct RootContentView: View {
                 DictionaryView(selectedLanguage: languageStore.currentLanguage)
                     .setTabItem(RootItems.dictionary)
 
-                ExerciseRootView(viewModel: ExerciseRootViewModel())
+                ExerciseRootView(
+                    viewModel: ExerciseRootViewModel(
+                        language: languageStore.currentLanguage,
+                        exerciseConfigurationRepository:
+                            ExerciseConfigurationRepository(dictionaryRepository: DictionaryRepository())
+                    )
+                )
                     .setTabItem(RootItems.exercise)
 
                 AlphabetView(viewModel: AlphabetViewModel(dataStore: AlphabetDataStore(), languageStore: languageStore))

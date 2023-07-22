@@ -67,3 +67,6 @@
 
 "for.children.pexe" = "Memory";
 "pexeso.new.game" = "New game";
+
+"exercise.configuration.title" = "Procvičte si slovíčka a fráze na nejrůznější témata. Nejprve si vyberte tematické okruhy, a můžete začít!";
+"exercise.configuration.startButton" = "Start";

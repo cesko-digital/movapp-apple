@@ -116,6 +116,7 @@
 		B48E12C22A20F72D00905C7A /* ExerciseRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E12C12A20F72D00905C7A /* ExerciseRootView.swift */; };
 		B48E91422916E3EC00965392 /* StoriesListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E91412916E3EC00965392 /* StoriesListItemView.swift */; };
 		B4AAA85D28E47A730061F9F6 /* AdaptiveStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */; };
+		B4B537312A3F5BED00CCEB00 /* CategoryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B537302A3F5BED00CCEB00 /* CategoryButtonStyle.swift */; };
 		B4B6D41529EAA562000FE1A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B6D41429EAA562000FE1A3 /* Assets.xcassets */; };
 		B4B6D41829EAA562000FE1A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B6D41729EAA562000FE1A3 /* Preview Assets.xcassets */; };
 		B4B6D41B29EAA562000FE1A3 /* Movapp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B4B6D40E29EAA560000FE1A3 /* Movapp.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -359,6 +360,7 @@
 		B48E12C12A20F72D00905C7A /* ExerciseRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseRootView.swift; sourceTree = "<group>"; };
 		B48E91412916E3EC00965392 /* StoriesListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesListItemView.swift; sourceTree = "<group>"; };
 		B4AAA85C28E47A730061F9F6 /* AdaptiveStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveStack.swift; sourceTree = "<group>"; };
+		B4B537302A3F5BED00CCEB00 /* CategoryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButtonStyle.swift; sourceTree = "<group>"; };
 		B4B6D40E29EAA560000FE1A3 /* Movapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4B6D41429EAA562000FE1A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4B6D41729EAA562000FE1A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -864,6 +866,7 @@
 			children = (
 				B48E12C12A20F72D00905C7A /* ExerciseRootView.swift */,
 				B42923702A20FC8800E87B2F /* ExerciseRootViewModel.swift */,
+				B4B537302A3F5BED00CCEB00 /* CategoryButtonStyle.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -1297,6 +1300,7 @@
 				250E55E4280723E0004511EC /* Languages.swift in Sources */,
 				B01279A527F86957003FB72E /* MovappApp.swift in Sources */,
 				B425D327291FF02C0050EBEE /* StoriesListView.swift in Sources */,
+				B4B537312A3F5BED00CCEB00 /* CategoryButtonStyle.swift in Sources */,
 				25A2397F2808883400750977 /* PhrasesFavoritesProvider.swift in Sources */,
 				B01279CA27F872A9003FB72E /* DictionaryView.swift in Sources */,
 				B43C3679292C0F7700D9AA40 /* StoryAudioPlayer.swift in Sources */,

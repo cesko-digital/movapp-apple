@@ -1,6 +1,8 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+
+## [1.8.0, build 72] - 2023-07-23Z
 - #211 Fixed adding to favourite phrases
 - Fixed stories list item play button action
 

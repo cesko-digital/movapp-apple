@@ -100,7 +100,7 @@ class PexesoViewModel: PexesoViewModeling {
 
         let notFoundYet = content.filter({ !$0.found })
 
-        guard notFoundYet.count != 0 else {
+        guard !notFoundYet.isEmpty else {
             won(content)
             return
         }
@@ -140,7 +140,7 @@ class PexesoViewModel: PexesoViewModeling {
 
         let notFoundYet = content.filter({ !$0.found })
 
-        guard notFoundYet.count != 0 else {
+        guard !notFoundYet.isEmpty else {
             won(content)
             return
         }

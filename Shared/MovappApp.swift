@@ -20,8 +20,7 @@ struct MovappApp: App {
                                                       forChildrenDataStore: forChildrenDataStore) }
     let soundService = SoundService()
     var favoritesProvider: PhrasesFavoritesProvider { PhrasesFavoritesProvider(favoritesService: favoritesService) }
-    var favoritesService: PhraseFavoritesService { PhraseFavoritesService(userDefaultsStore: userDefaultsStore,
-                                                                          dictionaryDataStore: dictionaryDataStore) }
+    let favoritesService: PhraseFavoritesService
 
     @ObservedObject var onBoardingDataStore: OnBoardingStore
 
@@ -44,6 +43,8 @@ struct MovappApp: App {
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
 
         self.onBoardingDataStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
+        self.favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore,
+                                                       dictionaryDataStore: dictionaryDataStore)
 
         // Restoring application language from locale based on Fastlane snapshots
         if let appleLocale = UserDefaults.standard.string(forKey: "AppleLocale") {

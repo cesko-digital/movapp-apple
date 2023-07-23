@@ -47,7 +47,10 @@ struct StoriesListItemView: View {
                     Spacer()
                 }
 
-                SoundStateButtonView(isPlaying: false, onTap: { })
+                Image(systemName: "play.circle")
+                    .resizable()
+                    .foregroundColor(Color("colors/action"))
+                    .frame(width: 30, height: 30)
                     .padding(8)
             }
             .background(Color.white)

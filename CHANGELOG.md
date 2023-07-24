@@ -1,6 +1,8 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+
+## [1.8.0, build 73] - 2023-07-24Z
 - Fix language switching
 
 ## [1.8.0, build 72] - 2023-07-23Z

@@ -51,8 +51,9 @@ struct MovappApp: App {
         // Restoring application language from locale based on Fastlane snapshots
         if UserDefaults.standard.value(forKey: "FASTLANE_SNAPSHOT") != nil,
             let appleLocale = UserDefaults.standard.string(forKey: "AppleLocale") {
-            userDefaultsStore.storeLanguage(getSetLanguage(for: appleLocale))
-            NSLog("Restored language from arguments: \(appleLocale)")
+            let languageByLocale = getSetLanguage(for: appleLocale)
+            languageStore.currentLanguage = languageByLocale
+            NSLog("Restored language \(languageByLocale.id) from arguments: \(appleLocale)")
         }
     }
 

@@ -28,22 +28,43 @@ jobs:
 
   screenshots:
     runs-on: macos-12
-    timeout-minutes: 240
-    env:
-      MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-      MATCH_GIT_PRIVATE_KEY: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}
-      APP_STORE_API_KEY: ${{ secrets.APP_STORE_API_KEY }}
+    timeout-minutes: 270 # 4,5 hours
     steps:
       - uses: actions/checkout@v3
       - name: Build & Upload
         run: |
           bundle install
           bundle exec fastlane create_missing_devices
-          bundle exec fastlane uploadScreenshots
+          bundle exec fastlane screenshots
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
+          name: pages
           path: Fastlane/screenshots
+      - uses: actions/upload-artifact@v3
+        with:
+          name: screenshots
+          path: Fastlane/screenshots
+          retention-days: 1
+
+  upload_metadata:
+    runs-on: macos-12
+    env:
+      MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+      MATCH_GIT_PRIVATE_KEY: ${{ secrets.MATCH_GIT_PRIVATE_KEY }}
+      APP_STORE_API_KEY: ${{ secrets.APP_STORE_API_KEY }}
+    needs: screenshots
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v3
+        with:
+          name: screenshots
+          path: Fastlane/screenshots
+      - name: Build & Upload
+        run: |
+          bundle install
+          bundle exec fastlane create_missing_devices
+          bundle exec fastlane upload_metadata
 
   # Deployment job
   pages:

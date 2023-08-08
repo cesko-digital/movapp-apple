@@ -39,7 +39,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          name: pages
+          name: github-pages # default name using `actions/deploy-pages`
           path: Fastlane/screenshots
       - uses: actions/upload-artifact@v3
         with:

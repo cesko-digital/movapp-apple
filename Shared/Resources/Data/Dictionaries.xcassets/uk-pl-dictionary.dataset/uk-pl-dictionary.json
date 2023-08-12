@@ -11782,9 +11782,9 @@
 		"recCsOt7NLKfdCTIb": {
 			"id": "recCsOt7NLKfdCTIb",
 			"main": {
-				"sound_url": "https://data.movapp.eu/pl-sounds/7/786d44d17de3ebbb0bef0546f966222f.mp3",
-				"translation": "jedzienie",
-				"transcription": "єдзєнє"
+				"sound_url": "https://data.movapp.eu/pl-sounds/6/65c16500e64f573bbc24fed40b0f0569.mp3",
+				"translation": "jedzenie",
+				"transcription": "єдзенє"
 			},
 			"source": {
 				"sound_url": "https://data.movapp.eu/uk-sounds/8/860ea80e5f2ad515c15dfdbb1087b015.mp3",
@@ -22772,9 +22772,9 @@
 		"reci18uj8nw8XQ8Yl": {
 			"id": "reci18uj8nw8XQ8Yl",
 			"main": {
-				"sound_url": "https://data.movapp.eu/pl-sounds/3/3758a316a0adb067ebdd18d0b0095dae.mp3",
-				"translation": "Czy prychodzicie tu często?",
-				"transcription": "Чи приходзіцє ту ченсто"
+				"sound_url": "https://data.movapp.eu/pl-sounds/e/e184bd4202d5bc4a39d608db9705027d.mp3",
+				"translation": "Czy przychodzicie tu często?",
+				"transcription": "Чи пжиходзіцє ту ченсто"
 			},
 			"source": {
 				"sound_url": "https://data.movapp.eu/uk-sounds/4/466e5c0db0fcafe8a070fa23876d7262.mp3",

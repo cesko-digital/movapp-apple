@@ -92,7 +92,12 @@ class PexesoViewModel: PexesoViewModeling {
 
     func select(phrase: PexesoContent) {
         guard canRotate else { return }
-        guard !phrase.selected else { return }
+        guard !phrase.selected else {
+            if case .won = state {
+                soundService.play(path: phrase.translation.soundFileName)
+            }
+            return
+        }
 
         guard case .loaded(let content) = state else {
             return

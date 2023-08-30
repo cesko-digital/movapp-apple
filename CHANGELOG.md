@@ -2,6 +2,13 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 - Play phrases after pexeso game is finished
+- Fixed incorrect flags order in stories
+
+## [1.9.0, build 83] - 2023-08-28Z
+- Update data from movapp-apple repository at 2023-08-27 23:27:32 +0000
+
+## [1.9.0, build 82] - 2023-08-24Z
+- Update data from movapp-apple repository at 2023-08-23 22:14:49 +0000
 
 ## [1.9.0, build 81] - 2023-08-21Z
 - Update data from movapp-apple repository at 2023-08-20 14:56:41 +0000

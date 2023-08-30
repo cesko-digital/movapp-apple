@@ -1,6 +1,8 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+
+## [1.9.0, build 84] - 2023-08-30Z
 - Play phrases after pexeso game is finished
 - Fixed incorrect flags order in stories
 

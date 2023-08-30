@@ -1,6 +1,7 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+- Fixed incorrect flags order in stories
 
 ## [1.9.0, build 83] - 2023-08-28Z
 - Update data from movapp-apple repository at 2023-08-27 23:27:32 +0000

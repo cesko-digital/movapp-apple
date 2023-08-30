@@ -51,7 +51,7 @@ struct PexesoView<ViewModel: PexesoViewModeling>: View {
                 let numberOfColumns = Int(sqrt(Double(content.count)))
                 let smallerSide = min(geometry.size.width, geometry.size.height)
                 // Cell width without spacing
-                let cellWidth = (smallerSide - (CGFloat(numberOfColumns-1)) * 8) / CGFloat(numberOfColumns)
+                let cellWidth = (smallerSide - (CGFloat(numberOfColumns - 1)) * 8) / CGFloat(numberOfColumns)
                 let gridLayout: [GridItem] = Array(repeating: GridItem(.flexible(minimum: 0, maximum: cellWidth)),
                                                    count: numberOfColumns)
 

@@ -5,8 +5,8 @@
 //  Created by Jakub Ruzicka on 17.10.2022.
 //
 
-import Foundation
 import Combine
+import Foundation
 
 struct PexesoContent: Identifiable {
     var id: String { "\(imageName)+\(translation.translation)" }
@@ -61,10 +61,7 @@ class PexesoViewModel: PexesoViewModeling {
         soundService.$isPlaying
             .receive(on: RunLoop.main)
             .sink { [weak self] isPlaying in
-                self?.canRotate = !isPlaying
-                if isPlaying == false {
-                    self?.validateSelected()
-                }
+                self?.handleSoundServiceEndPlaying(isPlaying)
             }
             .store(in: &cancellables)
     }
@@ -122,6 +119,17 @@ class PexesoViewModel: PexesoViewModeling {
         state = .loading
 
         load()
+    }
+
+    private func handleSoundServiceEndPlaying(_ isPlaying: Bool) {
+        if case .won = state {
+            return
+        }
+
+        canRotate = !isPlaying
+        if isPlaying == false {
+            validateSelected()
+        }
     }
 
     private func validateSelected() {

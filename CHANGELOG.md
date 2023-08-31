@@ -2,6 +2,54 @@ Details about this file’s format at <http://keepachangelog.com/>. The change l
 
 ## [Unreleased]
 
+## [1.9.0, build 84] - 2023-08-30Z
+- Play phrases after pexeso game is finished
+- Fixed incorrect flags order in stories
+
+## [1.9.0, build 83] - 2023-08-28Z
+- Update data from movapp-apple repository at 2023-08-27 23:27:32 +0000
+
+## [1.9.0, build 82] - 2023-08-24Z
+- Update data from movapp-apple repository at 2023-08-23 22:14:49 +0000
+
+## [1.9.0, build 81] - 2023-08-21Z
+- Update data from movapp-apple repository at 2023-08-20 14:56:41 +0000
+
+## [1.9.0, build 80] - 2023-08-12Z
+- Update data from movapp-apple repository at 2023-08-11 14:06:54 +0000
+
+## [1.9.0, build 79] - 2023-08-09Z
+- Update data from movapp-apple repository at 2023-08-09 12:55:45 +0000
+
+## [1.9.0, build 76] - 2023-08-04Z
+- Update data from movapp-apple repository at 2023-08-03 22:42:20 +0000
+
+## [1.9.0, build 75] - 2023-08-01Z
+- Fixed screenshots for appstore
+
+## [1.8.0, build 74] - 2023-07-28Z
+- Update data from movapp-apple repository at 2023-07-27 16:46:41 +0000
+
+## [1.8.0, build 73] - 2023-07-24Z
+- Fix language switching
+
+## [1.8.0, build 72] - 2023-07-23Z
+- #211 Fixed adding to favourite phrases
+- Fixed stories list item play button action
+
+## [1.8.0, build 71] - 2023-07-22Z
+- Fixed SK story
+
+## [1.8.0, build 70] - 2023-07-22Z
+- Update data from movapp-apple repository at 2023-07-22 10:29:52 +0000
+
+## [1.8.0, build 69] - 2023-07-21Z
+- Update data from movapp-apple repository at 2023-07-21 10:46:09 +0000
+
+## [1.8.0, build 68] - 2023-07-17Z
+- Update data from movapp-apple repository at 2023-06-17 10:13:39 +0000
+- Update data from movapp-apple repository at 2023-06-04 21:28:02 +0000
+
 ## [1.7.0, build 67] - 2023-05-29Z
 - Update data from movapp-apple repository at 2023-05-28 12:30:40 +0000
 

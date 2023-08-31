@@ -11,17 +11,14 @@ import SwiftUI
 struct MovappApp: App {
 
     let dictionaryDataStore = DictionaryDataStore.shared
-    var forChildrenDataStore: ForChildrenDataStore { ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore) }
+    let forChildrenDataStore: ForChildrenDataStore
     let userDefaultsStore = UserDefaultsStore()
     let teamDataStore = TeamDataStore()
 
-    var languageStore: LanguageStore { LanguageStore(userDefaultsStore: userDefaultsStore,
-                                                      dictionaryDataStore: dictionaryDataStore,
-                                                      forChildrenDataStore: forChildrenDataStore) }
+    let languageStore: LanguageStore
     let soundService = SoundService()
     var favoritesProvider: PhrasesFavoritesProvider { PhrasesFavoritesProvider(favoritesService: favoritesService) }
-    var favoritesService: PhraseFavoritesService { PhraseFavoritesService(userDefaultsStore: userDefaultsStore,
-                                                                          dictionaryDataStore: dictionaryDataStore) }
+    let favoritesService: PhraseFavoritesService
 
     @ObservedObject var onBoardingDataStore: OnBoardingStore
 
@@ -44,11 +41,19 @@ struct MovappApp: App {
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
 
         self.onBoardingDataStore = OnBoardingStore(userDefaultsStore: userDefaultsStore)
+        self.favoritesService = PhraseFavoritesService(userDefaultsStore: userDefaultsStore,
+                                                       dictionaryDataStore: dictionaryDataStore)
+        self.forChildrenDataStore = ForChildrenDataStore(dictionaryDataStore: dictionaryDataStore)
+        self.languageStore = LanguageStore(userDefaultsStore: userDefaultsStore,
+                                           dictionaryDataStore: dictionaryDataStore,
+                                           forChildrenDataStore: forChildrenDataStore)
 
         // Restoring application language from locale based on Fastlane snapshots
-        if let appleLocale = UserDefaults.standard.string(forKey: "AppleLocale") {
-            userDefaultsStore.storeLanguage(getSetLanguage(for: appleLocale))
-            NSLog("Restored language from arguments: \(appleLocale)")
+        if UserDefaults.standard.value(forKey: "FASTLANE_SNAPSHOT") != nil,
+            let appleLocale = UserDefaults.standard.string(forKey: "AppleLocale") {
+            let languageByLocale = getSetLanguage(for: appleLocale)
+            languageStore.currentLanguage = languageByLocale
+            NSLog("Restored language \(languageByLocale.id) from arguments: \(appleLocale)")
         }
     }
 

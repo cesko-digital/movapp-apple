@@ -98,9 +98,9 @@ struct PlayerView: View {
                 buttonAction(.language(selected: languages.second))
             } label: {
                 ZStack {
-                    flagView(flag: languages.selected.flag)
-                        .padding(.trailing, 20)
                     flagView(flag: languages.second.flag)
+                        .padding(.trailing, 20)
+                    flagView(flag: languages.selected.flag)
                 }
             }
             .padding(.bottom, 8)

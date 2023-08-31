@@ -60,11 +60,7 @@ struct PhraseMatchService {
             }
         }
 
-        if scores.count == 0 {
-            return 0
-        }
-
-        return scores.min()!
+        return scores.min() ?? 0
     }
 
     /**
@@ -103,7 +99,7 @@ struct PhraseMatchService {
                 score
             ]
 
-            let matchedPhrase = MatchedPhrase(translation: phrase, distance: scores.reduce(.zero, {$0 + $1}))
+            let matchedPhrase = MatchedPhrase(translation: phrase, distance: scores.reduce(.zero, { $0 + $1 }))
             matchedPhrases.append(matchedPhrase)
         }
 

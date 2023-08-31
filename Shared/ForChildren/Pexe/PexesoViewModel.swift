@@ -5,8 +5,8 @@
 //  Created by Jakub Ruzicka on 17.10.2022.
 //
 
-import Foundation
 import Combine
+import Foundation
 
 struct PexesoContent: Identifiable {
     var id: String { "\(imageName)+\(translation.translation)" }
@@ -61,10 +61,7 @@ class PexesoViewModel: PexesoViewModeling {
         soundService.$isPlaying
             .receive(on: RunLoop.main)
             .sink { [weak self] isPlaying in
-                self?.canRotate = !isPlaying
-                if isPlaying == false {
-                    self?.validateSelected()
-                }
+                self?.handleSoundServiceEndPlaying(isPlaying)
             }
             .store(in: &cancellables)
     }
@@ -92,7 +89,12 @@ class PexesoViewModel: PexesoViewModeling {
 
     func select(phrase: PexesoContent) {
         guard canRotate else { return }
-        guard !phrase.selected else { return }
+        guard !phrase.selected else {
+            if case .won = state {
+                soundService.play(path: phrase.translation.soundFileName)
+            }
+            return
+        }
 
         guard case .loaded(let content) = state else {
             return
@@ -100,7 +102,7 @@ class PexesoViewModel: PexesoViewModeling {
 
         let notFoundYet = content.filter({ !$0.found })
 
-        guard notFoundYet.count != 0 else {
+        guard !notFoundYet.isEmpty else {
             won(content)
             return
         }
@@ -117,6 +119,17 @@ class PexesoViewModel: PexesoViewModeling {
         state = .loading
 
         load()
+    }
+
+    private func handleSoundServiceEndPlaying(_ isPlaying: Bool) {
+        if case .won = state {
+            return
+        }
+
+        canRotate = !isPlaying
+        if isPlaying == false {
+            validateSelected()
+        }
     }
 
     private func validateSelected() {
@@ -140,7 +153,7 @@ class PexesoViewModel: PexesoViewModeling {
 
         let notFoundYet = content.filter({ !$0.found })
 
-        guard notFoundYet.count != 0 else {
+        guard !notFoundYet.isEmpty else {
             won(content)
             return
         }

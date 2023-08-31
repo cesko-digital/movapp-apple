@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FlipView: View {
+    @State private var scale: CGFloat = 1.0
+
     private let durationAndDelay: CGFloat = 0.3
 
     var content: PexesoContent
@@ -17,11 +19,17 @@ struct FlipView: View {
         ZStack {
             if content.selected || content.found {
                 CardFront(imageName: content.imageName)
+                    .scaleEffect(scale)
             } else {
                 CardBack()
+                    .scaleEffect(scale)
             }
         }.onTapGesture {
+            scale = 0.9
             flipped(content)
+            withAnimation {
+                scale = 1.0
+            }
         }
     }
 }

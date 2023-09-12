@@ -24,7 +24,9 @@ If you wish to help us with further development of the project, please fill out 
 
 At first if you want to add new features or have ideas, join us on Slack.
 
-Basic usage is simple:
+### Basic usage is simple
+
+Then just clone the repository and open the project in XCODE and start hacking
 
 ```bash
 git clone git@github.com:cesko-digital/movapp-apple.git movapp-apple

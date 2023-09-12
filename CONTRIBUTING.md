@@ -1,4 +1,6 @@
-# Before you continue reading this content please read first our [Movapp CONTRIBUTING.MD](https://github.com/cesko-digital/movapp/blob/ed0d95a196568e9055c5f4ca347647cfed790aae/CONTRIBUTING.md)
+# How to contribute to iOS version of Movapp
+
+As first step, read our general guidelines for all [movapp.cz](https://movapp.cz) projects by reading this [CONTRIBUTION.md file](https://github.com/cesko-digital/movapp/blob/main/CONTRIBUTING.md)
 
 
 # Additional information specific to this repository
@@ -23,7 +25,7 @@ Install it locally
 brew install swiftlint
 ```
 #### Quality gate for pull requests
-- Swiftlint runs as [Github Action](./.github/workflows/swiftlint.yml) that inform you in PR about issues in your changes.
+- Swiftlint runs as [GitHub Action](./.github/workflows/swiftlint.yml) which informs you in PR about issues in your changes.
 
 ## Automatization
 
@@ -45,7 +47,7 @@ brew install fastlane
 
 ### Updating content (Dictionary, Alphabet, Stories, etc.)
 
-The content of the application is defined in [movapp-data](https://github.com/cesko-digital/movapp-data) repository. Every time somebody make a change it will trigger [Github Action data update](.github/workflows/data-update.yml) that will create a pull request with changes. This pull request is handed as pull request from anybody else.
+The content of the application is defined in [movapp-data](https://github.com/cesko-digital/movapp-data) repository. Every time somebody make a change it will trigger [GitHub Action data update](.github/workflows/data-update.yml) that will create a pull request with changes. This pull request is handed as pull request from anybody else.
 
 ## Signing
 
@@ -73,16 +75,16 @@ bundle exec fastlane match development
 ### Releasing
 #### Releasing to TestFlight
 
-The release process is almost all automatized via fastlane. You just need to run [Github Action Release](.github/workflows/release.yml) manually. This action will:
+The release process is almost all automatized via fastlane. You just need to run [GitHub Action Release](.github/workflows/release.yml) manually. This action will:
 - increase the app version
 - mark `[UNREALEASED]` changes as released in [CHANGELOG.md](/CHANGELOG.md)
 - commit those changes to `main` and tag it with correct version
 
-Tagging a main will trigger [Github Action Deploy](.github/workflows/deploy.yml). This action will:
+Tagging a main will trigger [GitHub Action Deploy](.github/workflows/deploy.yml). This action will:
 - build the application and upload it to the TestFlight
 - capcure screenshots via [Fastlane Snapfile](Fastlane/Snapfile)
 - upload screenshots and metadata to AppStore
-- upload screenshots to [Github Pages](https://cesko-digital.github.io/movapp-apple/screenshots.html)
+- upload screenshots to [GitHub Pages](https://cesko-digital.github.io/movapp-apple/screenshots.html)
 
 #### Releasing to AppStore
 
@@ -92,5 +94,5 @@ Once the team agrees on releasing the application to the AppStore we follow foll
     - add release notes
     - select the latest version uploaded to TestFlight
     - send to Apple Review with automatically releasing
-- Increase the version of the application via [Github Action Bump version](.github/workflows/bump_version.yml)
+- Increase the version of the application via [GitHub Action Bump version](.github/workflows/bump_version.yml)
 

@@ -32,7 +32,14 @@ struct Alphabet: Decodable {
         var cleanItems: [AlphabetItem] = []
 
         for item in items {
-            let cleanLetter = item.letters.first!.uppercased().folding(options: .diacriticInsensitive, locale: .current)
+            guard
+                let cleanLetter = item.letters
+                    .first?
+                    .uppercased()
+                    .folding(options: .diacriticInsensitive, locale: .current)
+            else {
+                continue
+            }
 
             if cleanItemsUniqueMap[cleanLetter] != nil {
                 continue

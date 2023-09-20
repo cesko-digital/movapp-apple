@@ -5,8 +5,8 @@
 //  Created by Jakub Ruzicka on 31.08.2022.
 //
 
-import Foundation
 import Combine
+import Foundation
 
 struct AlphabetContent {
     let language: Languages

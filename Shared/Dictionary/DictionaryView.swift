@@ -25,7 +25,7 @@ struct DictionaryView: View {
                 .onChange(of: searchString) { newValue in
                     // Search only in
                     // This forces header view to hide header
-                    if newValue != "" && selectedCategory != nil {
+                    if newValue.isEmpty && selectedCategory != nil {
                         selectedCategory = nil
                     }
                 }
@@ -57,11 +57,11 @@ struct DictionaryView: View {
         .simultaneousGesture(DragGesture().onChanged { _ in
             let forcing = false
             let keyWindow = UIApplication.shared.connectedScenes
-                .filter({$0.activationState == .foregroundActive})
-                .map({$0 as? UIWindowScene})
-                .compactMap({$0})
+                .filter({ $0.activationState == .foregroundActive })
+                .map({ $0 as? UIWindowScene })
+                .compactMap({ $0 })
                 .first?.windows
-                .filter({$0.isKeyWindow}).first
+                .filter({ $0.isKeyWindow }).first
             keyWindow?.endEditing(forcing)
         })
 #endif

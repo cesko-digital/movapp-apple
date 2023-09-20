@@ -13,10 +13,10 @@ struct CardBack: View {
         GeometryReader { geometry in
 
             let startPoint = CGPoint(x: 0, y: 0)
-            let topMiddlePoint = CGPoint(x: (geometry.size.width * (2/3)), y: 0)
+            let topMiddlePoint = CGPoint(x: (geometry.size.width * (2 / 3)), y: 0)
             let topEndPoint = CGPoint(x: geometry.size.width, y: 0)
             let bottomEndPoint = CGPoint(x: geometry.size.width, y: geometry.size.height)
-            let bottomMiddlePoint = CGPoint(x: (geometry.size.width * (1/3)), y: geometry.size.height)
+            let bottomMiddlePoint = CGPoint(x: (geometry.size.width * (1 / 3)), y: geometry.size.height)
             let bottomStartPoint = CGPoint(x: 0, y: geometry.size.height)
 
             Path { path in

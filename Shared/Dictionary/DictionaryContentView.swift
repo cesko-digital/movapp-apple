@@ -72,7 +72,7 @@ struct DictionaryContentView: View {
                 .styleSubHeaderContent()
             }
 
-            if view == .dictionary && searchString == "" && selectedCategory == nil {
+            if view == .dictionary && searchString.isEmpty && selectedCategory == nil {
                 AccordionsView(
                     language: language,
                     categories: categories,

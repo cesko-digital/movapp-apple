@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct AdaptiveStack<Content: View>: View {
-    @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.horizontalSizeClass)
+    var sizeClass
     let horizontalAlignment: HorizontalAlignment
     let verticalAlignment: VerticalAlignment
     let spacing: CGFloat?

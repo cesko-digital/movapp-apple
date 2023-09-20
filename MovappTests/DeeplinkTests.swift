@@ -5,8 +5,8 @@
 //  Created by Jakub Ruzicka on 12.04.2023.
 //
 
-import XCTest
 @testable import Movapp
+import XCTest
 
 final class DeeplinkTests: XCTestCase {
 

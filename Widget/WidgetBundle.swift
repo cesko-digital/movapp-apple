@@ -5,8 +5,8 @@
 //  Created by Jakub Ruzicka on 08.04.2023.
 //
 
-import WidgetKit
 import SwiftUI
+import WidgetKit
 
 @main
 struct MovappWidget: Widget {

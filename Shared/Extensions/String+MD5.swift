@@ -5,8 +5,8 @@
 //  Created by Martin Kluska on 15.05.2022.
 //
 
-import Foundation
 import CryptoKit
+import Foundation
 
 extension String {
     func md5Hash() -> String {

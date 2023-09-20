@@ -103,7 +103,7 @@ class StoriesListViewModel: StoriesListViewModeling {
                                        image: "images/\($0.slug)",
                                        duration: "\($0.duration) min",
                                        slug: $0.slug)
-                })
+                               })
             })
     }
 }

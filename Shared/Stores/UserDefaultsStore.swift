@@ -42,7 +42,7 @@ struct UserDefaultsStore {
     }
 
     func getLanguage() -> SetLanguage? {
-        if let language =  userDefaults.string(forKey: languageKey) {
+        if let language = userDefaults.string(forKey: languageKey) {
             print("Stored language \(language)")
 
             return SetLanguage.allCases.first(where: { $0.id == language })
@@ -71,7 +71,7 @@ struct UserDefaultsStore {
     func getDataVersion () -> DataVersion {
         // 0 - First initial version of phrase keys -> md5
         // 1 - New keys from AirTable
-        if let version =  DataVersion.init(rawValue: userDefaults.integer(forKey: favoritesVersionKey)) {
+        if let version = DataVersion(rawValue: userDefaults.integer(forKey: favoritesVersionKey)) {
             return version
         }
 

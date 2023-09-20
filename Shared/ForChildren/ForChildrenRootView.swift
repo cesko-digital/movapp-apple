@@ -33,7 +33,7 @@ struct ForChildrenRootView: View {
 
     var pexesoView: some View {
         PexesoView(viewModel: PexesoViewModel(repository: PexesoRepository(dataStore: DictionaryDataStore.shared),
-                                             soundService: SoundService()))
+                                              soundService: SoundService()))
     }
 
     var router: some View {

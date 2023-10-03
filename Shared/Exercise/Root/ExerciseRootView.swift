@@ -37,9 +37,7 @@ struct ExerciseRootView<ViewModel: ExerciseRootViewModeling>: View {
                     Button(item.name) {
                         viewModel.selectCategory(id: item.id)
                     }
-                    // Result values in '? :' expression have mismatching types 'CategoryButtonSelectedStyle' and 'CategoryButtonStyle'
-                    //.buttonStyle(item.selected ? CategoryButtonSelectedStyle() : CategoryButtonStyle())
-
+                    .buttonStyle(CategoryButtonStyle(selected: item.selected))
                 }
             }
 
@@ -106,5 +104,27 @@ struct ExerciseRootView_Previews: PreviewProvider {
             )
         )
         .previewDisplayName("Configuration")
+    }
+}
+
+extension View {
+    func conditionalModifier<M1: ViewModifier, M2: ViewModifier>
+        (on condition: Bool, trueCase: M1, falseCase: M2) -> some View {
+        Group {
+            if condition {
+                self.modifier(trueCase)
+            } else {
+                self.modifier(falseCase)
+            }
+        }
+    }
+
+    func conditionalModifier<M: ViewModifier>
+        (on condition: Bool, trueCase: M) -> some View {
+        Group {
+            if condition {
+                self.modifier(trueCase)
+            }
+        }
     }
 }

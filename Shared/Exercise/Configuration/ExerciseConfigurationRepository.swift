@@ -51,8 +51,8 @@ final class ExerciseConfigurationRepository: ExerciseConfigurationRepositoryType
         }
 
         return ExerciseConfiguration(categories: categories.map { ExerciseCategory(id: $0.id,
-                                                                                     name: $0.name.main) },
-                                     configuration: getProperties())
+                                                                                   name: $0.name.main)
+        }, configuration: getProperties())
     }
 
     private func getProperties() -> ExerciseConfigurationProperties {

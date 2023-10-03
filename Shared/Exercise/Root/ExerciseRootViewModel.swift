@@ -69,7 +69,7 @@ final class ExerciseRootViewModel: ExerciseRootViewModeling {
 
         state = ExerciseRootState.loaded(
             ExerciseRootContent(
-                categories: configuration.categories.map { .init(id: $0.id, name: $0.name, selected: false)},
+                categories: configuration.categories.map { .init(id: $0.id, name: $0.name, selected: false) },
                 configuration: .init(sizeList: configuration.configuration.sizeList,
                                      sizeDefault: configuration.configuration.sizeDefault)
             )
@@ -77,6 +77,15 @@ final class ExerciseRootViewModel: ExerciseRootViewModeling {
     }
 
     func selectCategory(id: String) {
-        // TODO: implement this
+        guard case let .loaded(configuration) = state else { return }
+
+        let content = ExerciseRootContent(categories: configuration.categories.map {
+            .init(id: $0.id,
+                  name: $0.name,
+                  selected: $0.id == id ? !$0.selected : $0.selected)
+        }, configuration: .init(sizeList: configuration.configuration.sizeList,
+                                sizeDefault: configuration.configuration.sizeDefault))
+
+        state = ExerciseRootState.loaded(content)
     }
 }

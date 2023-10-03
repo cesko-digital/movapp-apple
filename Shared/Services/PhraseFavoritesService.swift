@@ -71,8 +71,8 @@ class PhraseFavoritesService: ObservableObject {
 
             // Migrate from md5
             if userDefaultsStore.getDataVersion() == .initial {
-                if let migrated =  migrateFromInitialVersionToAirtable(favoritesFromUserDefaults,
-                                                                       dictionaryDataStore: dictionaryDataStore) {
+                if let migrated = migrateFromInitialVersionToAirtable(favoritesFromUserDefaults,
+                                                                      dictionaryDataStore: dictionaryDataStore) {
                     favoritedPhrasesByLanguage = migrated
                     userDefaultsStore.storeDataVersion(.airtable)
                     userDefaultsStore.storeFavorites(migrated)

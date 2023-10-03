@@ -5,8 +5,8 @@
 //  Created by Martin Kluska on 03.04.2022.
 //
 
-import Foundation
 import AVFoundation
+import Foundation
 import UIKit
 
 struct Playback {

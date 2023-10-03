@@ -1,6 +1,7 @@
 Details about this file’s format at <http://keepachangelog.com/>. The change log is parsed automatically when minting releases through Fastlane, see `Fastlane/Fastfile`.
 
 ## [Unreleased]
+- removed few swiftlint warnings 
 - Update data from movapp-apple repository at 2023-10-03 18:19:11 +0000
 
 ## [1.9.0, build 87] - 2023-09-16Z

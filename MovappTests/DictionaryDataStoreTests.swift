@@ -5,8 +5,8 @@
 //  Created by Jakub Ruzicka on 25.03.2023.
 //
 
-import XCTest
 @testable import Movapp
+import XCTest
 
 final class DictionaryDataStoreTests: XCTestCase {
 

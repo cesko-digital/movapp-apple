@@ -17,7 +17,8 @@ struct PhraseView: View {
     }
 
     @EnvironmentObject var favoritesService: PhraseFavoritesService
-    @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.horizontalSizeClass)
+    var sizeClass
 
     let language: SetLanguage
     let phrase: Dictionary.Phrase

@@ -14,11 +14,11 @@ struct AccordionHeaderView: View {
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
 
-            if selectedCategory != nil {
+            if let selectedCategory = selectedCategory {
                 Image(systemName: "chevron.left")
                     .foregroundColor(Color("colors/secondary"))
 
-                let text = selectedCategory!.text(language: language)
+                let text = selectedCategory.text(language: language)
 
                 Text(text)
                     .foregroundColor(Color("colors/text"))

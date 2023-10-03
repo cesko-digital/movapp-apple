@@ -35,6 +35,7 @@ protocol ExerciseRootViewModeling: ObservableObject {
     var viewAppeared: PassthroughSubject<Void, Never> { get }
 
     func selectCategory(id: String)
+    func selectSize(_ size: Int)
 }
 
 final class ExerciseRootViewModel: ExerciseRootViewModeling {
@@ -85,6 +86,16 @@ final class ExerciseRootViewModel: ExerciseRootViewModeling {
                   selected: $0.id == id ? !$0.selected : $0.selected)
         }, configuration: .init(sizeList: configuration.configuration.sizeList,
                                 sizeDefault: configuration.configuration.sizeDefault))
+
+        state = ExerciseRootState.loaded(content)
+    }
+
+    func selectSize(_ size: Int) {
+        guard case let .loaded(configuration) = state else { return }
+
+        let content = ExerciseRootContent(categories: configuration.categories,
+                                          configuration: .init(sizeList: configuration.configuration.sizeList,
+                                                               sizeDefault: size))
 
         state = ExerciseRootState.loaded(content)
     }

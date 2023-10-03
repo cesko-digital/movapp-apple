@@ -11,6 +11,7 @@ import SwiftUI
 struct ExerciseRootView<ViewModel: ExerciseRootViewModeling>: View {
 
     @StateObject var viewModel: ViewModel
+    @State var sliderValue: Double = 10
 
     var body: some View {
         Group {
@@ -30,6 +31,9 @@ struct ExerciseRootView<ViewModel: ExerciseRootViewModeling>: View {
             Text("exercise.configuration.title")
                 .font(.title2)
 
+            Text("exercise.configuration.categories")
+                .font(.title3)
+
             let gridLayout = [GridItem(.adaptive(minimum: 100))]
 
             LazyVGrid(columns: gridLayout) {
@@ -39,6 +43,17 @@ struct ExerciseRootView<ViewModel: ExerciseRootViewModeling>: View {
                     }
                     .buttonStyle(CategoryButtonStyle(selected: item.selected))
                 }
+            }
+
+            Text("exercise.configuration.size")
+                .font(.title3)
+
+            HStack {
+                Slider(value: $sliderValue, in: 10...30, step: 10)
+                    .onChange(of: sliderValue) { value in
+                        viewModel.selectSize(Int(value))
+                    }
+                Text("\(Int(sliderValue))")
             }
 
             Button("exercise.configuration.startButton") {
@@ -78,6 +93,7 @@ struct ExerciseRootView_Previews: PreviewProvider {
         }
 
         func selectCategory(id: String) { }
+        func selectSize(_ size: Int) { }
     }
 
     static var previews: some View {

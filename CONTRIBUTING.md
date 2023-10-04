@@ -1,135 +1,98 @@
-# Přidej se k vývoji Movapp na Apple zařízení
+# How to contribute to iOS version of Movapp
 
-## Git
+As first step, read our general guidelines for all [movapp.cz](https://movapp.cz) projects by reading this [CONTRIBUTION.md file](https://github.com/cesko-digital/movapp/blob/main/CONTRIBUTING.md)
 
-- Používejte rebase politiku (vždy vycházejte z `main`)
-- Před mergem vždy rebasnete nad `main` a vyřešíte konflitky
-- Pro vložení do `main` se provede squash commit a nebo si lokálně upravte komity
 
-## Fastlane
+# Additional information specific to this repository
 
-Pro automatizaci releasů a souvisejících procesů používáme [Fastlane](https://fastlane.tools). Samotnou Fastlane můžete nainstalovat buď přes `brew install fastlane`, nebo lépe přímo v repository příkazem `bundle`. Ta lokální instalace v repu je lepší v tom, že všichni používáme stejnou verzi. Dál počítáme s tím, že jste Fastlane nainstalovali takhle. Pokud ne, pište místo `bundle exec fastlane` prostě jen `fastlane`.
+## Table of Contents
+- [Your First Code Contribution](#your-first-code-contribution)
+- [Styleguides](#styleguides)
+- [Automatization](#automatization)
+- [Signing](#signing)
+- [Releasing](#releasing)
 
-### Podepisování
+## Your First Code Contribution
+> Inherited from [Movapp CONTRIBUTING.MD Your First Code Contribution](https://github.com/cesko-digital/movapp/blob/ed0d95a196568e9055c5f4ca347647cfed790aae/CONTRIBUTING.md#your-first-code-contribution)
+- During development, add information about the updates to the [CHANGELOG.md](CHANGELOG.md) file in the `[Unreleased]` section. If something is missing in it before the release, please complete and commit it.
 
-Pro podepsání kódu jsou potřeba certifikáty a profily, které se dají stáhnout přes Fastlane:
+## Styleguides
+### Code quality
+We are using the [swiftlint](https://github.com/realm/SwiftLint) in build phase of the project and as quality gate for pull requests. 
 
+Install it locally 
+```bash 
+brew install swiftlint
 ```
+#### Quality gate for pull requests
+- Swiftlint runs as [GitHub Action](./.github/workflows/swiftlint.yml) which informs you in PR about issues in your changes.
+
+## Automatization
+
+For automatization we are using [Fastlane](https://fastlane.tools) that save us a lot of time 🕕. You don't need it run locally.
+<details>
+  <summary>Installation guide</summary>
+
+- Installation via `bundle` (Recommended because everyone will use the same version)
+```bash
+cd movapp-apple
+bundle install
+```
+
+- Installation via `brew`
+```bash
+brew install fastlane
+```
+</details>
+
+### Updating content (Dictionary, Alphabet, Stories, etc.)
+
+The content of the application is defined in [movapp-data](https://github.com/cesko-digital/movapp-data) repository. Every time somebody make a change it will trigger [GitHub Action data update](.github/workflows/data-update.yml) that will create a pull request with changes. This pull request is handed as pull request from anybody else.
+
+## Signing
+
+You don't need to worry about it locally.
+<details>
+    <summary>If you need it locally</summary>
+
+```bash
 bundle exec fastlane match development --readonly
 ```
+</details>
+
+<details>
+    <summary>Certificate expired</summary>
+
+- You need to have access to repository defined in [Matchfile](/Fastlane/Matchfile)
+- Then run
+
+```bash
+bundle exec fastlane nuke
+bundle exec fastlane match development
+```
+</details>
 
 ### Releasing
+#### Releasing to TestFlight
 
-Během vývoje přidávejte informace o novinkách do souboru `CHANGELOG.md` do sekce `[Unreleased]`. Pokud v ní před releasem ještě něco chybí, doplňte a commitněte.
+The release process is almost all automatized via fastlane. You just need to run [GitHub Action Release](.github/workflows/release.yml) manually. This action will:
+- increase the app version
+- mark `[UNREALEASED]` changes as released in [CHANGELOG.md](/CHANGELOG.md)
+- commit those changes to `main` and tag it with correct version
 
-Pak vyrobíte nový release přes **Github Actions** nebo Fastlane:
+Tagging a main will trigger [GitHub Action Deploy](.github/workflows/deploy.yml). This action will:
+- build the application and upload it to the TestFlight
+- capcure screenshots via [Fastlane Snapfile](Fastlane/Snapfile)
+- upload screenshots and metadata to AppStore
+- upload screenshots to [GitHub Pages](https://cesko-digital.github.io/movapp-apple/screenshots.html)
 
-#### Strategie
+#### Releasing to AppStore
 
-> Aktálně main větev není chráněna z důvodu umožnění push práv pro github actions.
+Once the team agrees on releasing the application to the AppStore we follow following steps:
+- Get a release notes from Slack
+- AppStore Connect
+    - add release notes
+    - select the latest version uploaded to TestFlight
+    - send to Apple Review with automatically releasing
+- Increase the version of the application via [GitHub Action Bump version](.github/workflows/bump_version.yml)
 
-- Změny provádějte nad masterem
-- Vždy používejte rebase strategii
-- Aktualizujte `CHANGELOG.md`
-- Vytvořte pull request
-- Po schválení použijte `squash` strategii nebo lokálně si rebasněte commity do "hezčích" komitů
-- Nad main spustě příkazy níže pomocí Github Actions
-
-
-#### Nová testovací verze
-
-[Github Actions](https://github.com/cesko-digital/movapp-apple/actions/workflows/release.yml)
-
-```
-bundle exec fastlane release
-```
-
-Tohle zvýší číslo buildu, aktualizuje changelog, commitne všechno do repa a otaguje release.
-
-#### Nová hlavní verze
-
-Pokud chcete zvýšit marketingové číslo verze, dělá se to takhle:
-
-[Github Actions](https://github.com/cesko-digital/movapp-apple/actions/workflows/bump_version.yml)
-
-```
-bundle exec fastlane bump_version
-```
-
-Fastlane zvýší číslo verze všude, kde je potřeba, a commitne.
-
-### Generováná screenshotů
-
-- `bundle exec fastlane snapshot` - vygeneruje screenshoty
-- Screenshoty jsou v fastlane/screenshots
-- Po vygenerování se udělá i pěkný "view" na screenshoty fastlane/screenshots/screenshots.html
-
-
-## Assets
-
-- Barvy jsou v `colors/{name}` namespace.
-- Ikony vkládejte do `icons/{name}` namespace.
-    - pod složky vytvářejte, nezapomenou zaškrnout `Provide namespace`.
-    - Použijte SVG. 
-    - Nastavte canvas 24x24, aby se ikony dobře vykreslovali (https://stackoverflow.com/a/67430823/740949)
-    - Pri vložení nastavit `Render As: Template` a `Scales: Single Scale`.
-    - Barvu pak změníte v SwiftUI.
-    
-    ```swift
-    Image("icons/play")
-        .foregroundColor(Color("colors/inactive"))
-    ```
-
-## Obrazovky
-
-- Každá oblast má vlastní složku (Slovníček = Dictionary).
-- Všechny "views" seskupuje `RootContentView` v `Root` složce (zde je Tabview).
-
-### Přidání nového tabu
-
-- Přidej `case` do `RootItems`.
-- Přidej ikonku do assets.
-- Vytvoř novou složku pro view (název tvé tabu)
-- Vykresli obrazovku v `RootContentView`
-
-
-## Jazyky
-
-Každý jazykový překlad (například: čeština -> ukrajinština) je v aplikaci:
-
-- definována pomocí `Language` structu. Zde se definuje
-    - Výchozí jazyk
-    - Cílový jazyk
-    - Prefix souborů pro načtení `json`. Dále jako `filePrefix`.
-- Následně interpretována jako `SetLanguage` (umožnuje prohození jazyku).
-    - Toto nastavíš v `SetLanguage`, podívej se na konec souboru kde najdeš `extension SetLanguage` a deklaraci `SetLanguage` proměnných.
-    - Deklaruješ si lokálně proměnou svého jazyku a vytvoříš 2 statické proměnné (pro použití v preview apod), která bude obsahovat `SetLanguage`. 
-    - V podstatě se podívej jak vypadá `csUk` a `ukCs` a udělej to stejně.
-    - Aplikace automaticky přenačte jiný jazykový soubor pokud dojde ke změně výchozího jazyka za jiný. Jinak přehazuje "from" -> "to".
-    - Přidej obě proměné do .allCases
-- Přidej překlad jazyku do `Localizable` -> `language.{x-x}`. 
-
-### Dictionary and alphabet updates
-
-- There is script `update-data.rb` that will do this magic for you. It is used by GitHub Actions that is triggered everytime is movapp-data changed.
-
-
-## Lokalizace aplikace
-
-- Používej anglický text (zjednodušená forma)
-- Lze taky lokalizovat bez exportu lokalizací přímo v Shared -> Resources -> x.lproj -> X. Vždy se překládá pravá strana "Tady je klíč" = "Tady se dělá překlad";
-- Nezapomínej používat `comment` pro upřesnění kde se text nachází. Například: `Text("About us", comment: "About us in menu")` nebo `String(localized: "About us", comment" About us in menu")`
-- Vyexportuj překlad `Product` -> `Export localizations` a nech výsledek (dej to součástí repozitáře v rootu)
-- Překladatel pak překladá / upravue soubory v `Movapp Localizations/X.xcloc`
-    - Movapp--iOS--InfoPlist
-        - CFBundleDisplayName -> zde je název aplikace co se zobrazuje uživateli na ploše apod
-        - NSHumanReadableCopyright -> Copyright
-    - Shared -> Resources -> Localizable -> Zde jsou všechny použíté řetezce v aplikaci
-    - WatchMovapp WatchKit Extension -> stejné parametry jako v Movapp--iOS--InfoPlist ale pro Watch aplikaci
-- Po přeložení vložit do repozitáře a následně programátor importuje přes `Product -> Import localizations`.
-
-## Kvalita kódu
-
-- Projekt má nakonfigurovaný swiftlint na:
-    - build (nutnost nainstalovaný swiftlint lokálně `brew install swiftlint`)
-    - GitHub Action

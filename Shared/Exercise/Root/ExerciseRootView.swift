@@ -11,7 +11,7 @@ import SwiftUI
 struct ExerciseRootView<ViewModel: ExerciseRootViewModeling>: View {
 
     @StateObject var viewModel: ViewModel
-    @State var sliderValue: Double = 10
+    @State private var selectedSize: Int = 10
 
     var body: some View {
         Group {
@@ -33,6 +33,7 @@ struct ExerciseRootView<ViewModel: ExerciseRootViewModeling>: View {
 
             Text("exercise.configuration.categories")
                 .font(.title3)
+                .padding(.vertical)
 
             let gridLayout = [GridItem(.adaptive(minimum: 100))]
 
@@ -44,17 +45,25 @@ struct ExerciseRootView<ViewModel: ExerciseRootViewModeling>: View {
                     .buttonStyle(CategoryButtonStyle(selected: item.selected))
                 }
             }
+            .padding(.vertical)
 
             Text("exercise.configuration.size")
                 .font(.title3)
 
             HStack {
-                Slider(value: $sliderValue, in: 10...30, step: 10)
-                    .onChange(of: sliderValue) { value in
-                        viewModel.selectSize(Int(value))
+                HStack(spacing: 16) {
+                    ForEach(content.configuration.sizeList, id: \.self) { size in
+                        HStack {
+                            RadioButton(isSelected: selectedSize == size)
+                            Text("\(size)")
+                        }
+                        .onTapGesture {
+                            withAnimation { selectedSize = size }
+                        }
                     }
-                Text("\(Int(sliderValue))")
+                }
             }
+            .padding()
 
             Button("exercise.configuration.startButton") {
                 // TODO: start the flow
@@ -66,6 +75,10 @@ struct ExerciseRootView<ViewModel: ExerciseRootViewModeling>: View {
             .disabled(content.categories.contains(where: { $0.selected }) == false)
         }
         .padding()
+
+        .onAppear {
+            selectedSize = content.configuration.sizeDefault
+        }
     }
 
     private var loadingState: some View {
@@ -120,27 +133,5 @@ struct ExerciseRootView_Previews: PreviewProvider {
             )
         )
         .previewDisplayName("Configuration")
-    }
-}
-
-extension View {
-    func conditionalModifier<M1: ViewModifier, M2: ViewModifier>
-        (on condition: Bool, trueCase: M1, falseCase: M2) -> some View {
-        Group {
-            if condition {
-                self.modifier(trueCase)
-            } else {
-                self.modifier(falseCase)
-            }
-        }
-    }
-
-    func conditionalModifier<M: ViewModifier>
-        (on condition: Bool, trueCase: M) -> some View {
-        Group {
-            if condition {
-                self.modifier(trueCase)
-            }
-        }
     }
 }

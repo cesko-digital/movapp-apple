@@ -10,6 +10,7 @@
 		250E55E4280723E0004511EC /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0F8E928060BE60036441E /* Languages.swift */; };
 		250E55E628072591004511EC /* Dictionary+UIExamples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250E55E528072591004511EC /* Dictionary+UIExamples.swift */; };
 		25A2397F2808883400750977 /* PhrasesFavoritesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A2397E2808883400750977 /* PhrasesFavoritesProvider.swift */; };
+		2BB8A1382ACDC2C8002208BB /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB8A1372ACDC2C8002208BB /* RadioButton.swift */; };
 		4410E96F28044D8E00688E9F /* ForChildrenDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */; };
 		5B77295D280443B00087F582 /* ForChildrenItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77295C280443B00087F582 /* ForChildrenItemView.swift */; };
 		B0065D0C2831730300EE84D8 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0065D0B2831730300EE84D8 /* String+MD5.swift */; };
@@ -238,6 +239,7 @@
 		0D9BEC7C281814D700C1636B /* Movapp (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Movapp (iOS).entitlements"; sourceTree = "<group>"; };
 		250E55E528072591004511EC /* Dictionary+UIExamples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+UIExamples.swift"; sourceTree = "<group>"; };
 		25A2397E2808883400750977 /* PhrasesFavoritesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhrasesFavoritesProvider.swift; sourceTree = "<group>"; };
+		2BB8A1372ACDC2C8002208BB /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		4410E96E28044D8E00688E9F /* ForChildrenDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForChildrenDataStore.swift; sourceTree = "<group>"; };
 		444E97092812DF8E00DC6F8B /* MovappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovappApp.swift; sourceTree = "<group>"; };
 		444E971F2812E01F00DC6F8B /* RootItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootItemView.swift; sourceTree = "<group>"; };
@@ -680,6 +682,7 @@
 				B03B1BC728186E2E005C62C3 /* PlayButtonView.swift */,
 				B04021CD2822E27000B756FB /* PrimaryButtonStyle.swift */,
 				B03B1BCB28186F8D005C62C3 /* SoundStateButtonView.swift */,
+				2BB8A1372ACDC2C8002208BB /* RadioButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1280,6 +1283,7 @@
 				B08B0DF7281FD1D8000EAEF1 /* TeamView.swift in Sources */,
 				B03B1BC828186E2E005C62C3 /* PlayButtonView.swift in Sources */,
 				B425D32E292023D30050EBEE /* PlayerView.swift in Sources */,
+				2BB8A1382ACDC2C8002208BB /* RadioButton.swift in Sources */,
 				B42923732A20FFE700E87B2F /* ExerciseConfigurationRepository.swift in Sources */,
 				B04021CC2822D6E300B756FB /* OnBoardingTutorialsPagerView.swift in Sources */,
 				B429237B2A210B7300E87B2F /* MissingAssetError.swift in Sources */,

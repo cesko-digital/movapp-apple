@@ -25202,9 +25202,9 @@
 		"rec8MtOwxNKsFMJ0w": {
 			"id": "rec8MtOwxNKsFMJ0w",
 			"main": {
-				"sound_url": "https://data.movapp.eu/sk-sounds/a/a7d1dde6d9138f283808163b4531ffcc.mp3",
-				"translation": "Sčítaj čísla",
-				"transcription": "Счітай чісла"
+				"sound_url": "https://data.movapp.eu/sk-sounds/f/f8a3eeeabc24a11c1ffb484dc80e6874.mp3",
+				"translation": "Sčítaj čísla.",
+				"transcription": "Счітай чісла."
 			},
 			"source": {
 				"sound_url": "https://data.movapp.eu/uk-sounds/d/db37ab60d45cfee897324ade93402029.mp3",
@@ -25356,9 +25356,9 @@
 		"recRILEaxuiZjrQE0": {
 			"id": "recRILEaxuiZjrQE0",
 			"main": {
-				"sound_url": "https://data.movapp.eu/sk-sounds/7/72ea046cb4908a6cbb8b7fd1e627f0ce.mp3",
-				"translation": "Vypočítaj rozdiel čísel dvanásť a šesť.",
-				"transcription": "Випочітай роздіел чісел дванасть а шесть."
+				"sound_url": "https://data.movapp.eu/sk-sounds/9/9aa8d23dee684e400c0e2d86c912a3bf.mp3",
+				"translation": "Vypočítaj rozdiel čísel dvanásť a šesť..",
+				"transcription": "Випочітай роздіел чісел дванасть а шесть.."
 			},
 			"source": {
 				"sound_url": "https://data.movapp.eu/uk-sounds/9/9b381bb8bf319d6f7f6b885f7c8fe762.mp3",
@@ -25370,9 +25370,9 @@
 		"recnDmYetMMsLif1c": {
 			"id": "recnDmYetMMsLif1c",
 			"main": {
-				"sound_url": "https://data.movapp.eu/sk-sounds/4/45b640b53d59921cadff45d690298235.mp3",
-				"translation": "Menšenec mínus menšiteľ rovná sa rozdiel.",
-				"transcription": "Меншенец мінус меншітель ровна са роздіел."
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/e68212108bf511d29d11527131064b2f.mp3",
+				"translation": "Menšenec mínus menšiteľ rovná sa rozdiel..",
+				"transcription": "Меншенец мінус меншітель ровна са роздіел.."
 			},
 			"source": {
 				"sound_url": "https://data.movapp.eu/uk-sounds/0/0cd025c0f4910e444be0cadbf84ff5c7.mp3",
@@ -25384,9 +25384,9 @@
 		"recIoP9uRzz6vtfRl": {
 			"id": "recIoP9uRzz6vtfRl",
 			"main": {
-				"sound_url": "https://data.movapp.eu/sk-sounds/a/a8e4d02aac4a470d6be004d28d5f2b28.mp3",
-				"translation": "Dvanásť mínus šesť sa rovná šesť.",
-				"transcription": "Дванасть мінус шесть са ровна шесть."
+				"sound_url": "https://data.movapp.eu/sk-sounds/8/8d629c7538a079dec8ffefc6d7b00fd9.mp3",
+				"translation": "Dvanásť mínus šesť sa rovná šesť..",
+				"transcription": "Дванасть мінус шесть са ровна шесть.."
 			},
 			"source": {
 				"sound_url": "https://data.movapp.eu/uk-sounds/3/31c29604db83a1c8eb9cc8a3603fc787.mp3",
@@ -25454,14 +25454,14 @@
 		"recqROX5N7NFF987Y": {
 			"id": "recqROX5N7NFF987Y",
 			"main": {
-				"sound_url": "https://data.movapp.eu/sk-sounds/0/023a67eb66e63285fb8d78b48add7f93.mp3",
-				"translation": "vynásob čísla",
-				"transcription": "винасоб чісла"
+				"sound_url": "https://data.movapp.eu/sk-sounds/1/12bb89c80a67f8fc63e1c1f67b464c0a.mp3",
+				"translation": "Vynásob čísla.",
+				"transcription": "Винасоб чісла."
 			},
 			"source": {
-				"sound_url": "https://data.movapp.eu/uk-sounds/d/d4bd3dffdaf6d81cbdde09e05aa53a5e.mp3",
-				"translation": "помнож числа",
-				"transcription": "pomnož čysla"
+				"sound_url": "https://data.movapp.eu/uk-sounds/d/d5a24eeb01451a14c46b95522444294d.mp3",
+				"translation": "Помнож числа.",
+				"transcription": "Pomnož čysla."
 			},
 			"image_url": null
 		},
@@ -25538,14 +25538,14 @@
 		"rec56s483N86Lgsj5": {
 			"id": "rec56s483N86Lgsj5",
 			"main": {
-				"sound_url": "https://data.movapp.eu/sk-sounds/c/c5e23d84deded77e64c023b62ff6a336.mp3",
-				"translation": "vydeľ čísla",
-				"transcription": "видель чісла"
+				"sound_url": "https://data.movapp.eu/sk-sounds/0/0ed84653ff56431d8ccfd05429d6ebd2.mp3",
+				"translation": "Vydeľ čísla.",
+				"transcription": "Видель чісла."
 			},
 			"source": {
-				"sound_url": "https://data.movapp.eu/uk-sounds/2/275fe29a188b9764236e312ba7bf407c.mp3",
-				"translation": "поділи числа",
-				"transcription": "podily čysla"
+				"sound_url": "https://data.movapp.eu/uk-sounds/a/aaa52d991bc8774874a7b4348a44f320.mp3",
+				"translation": "Поділи числа.",
+				"transcription": "Podily čysla."
 			},
 			"image_url": null
 		},
@@ -26336,7 +26336,7 @@
 		"recntzFElkkamnpIK": {
 			"id": "recntzFElkkamnpIK",
 			"main": {
-				"sound_url": "https://data.movapp.eu/sk-sounds/d/dd302f94682dbd2a114d63b0433602e0.mp3",
+				"sound_url": "https://data.movapp.eu/sk-sounds/7/7bb42ced6758fa761e7208da9c86cf76.mp3",
 				"translation": "os",
 				"transcription": "ос"
 			},
@@ -26350,7 +26350,7 @@
 		"recxocP5PWso6txTp": {
 			"id": "recxocP5PWso6txTp",
 			"main": {
-				"sound_url": "https://data.movapp.eu/sk-sounds/e/e3cf6630fdfc0b773fddc22079043e20.mp3",
+				"sound_url": "https://data.movapp.eu/sk-sounds/c/ce43c703e2dd6dc82fa057e2ddff8de6.mp3",
 				"translation": "os súmernosti",
 				"transcription": "ос сумерності"
 			},

@@ -25356,7 +25356,7 @@
 		"recUrkgbbFOr6zSR8": {
 			"id": "recUrkgbbFOr6zSR8",
 			"main": {
-				"sound_url": "https://data.movapp.eu/cs-sounds/9/9538f1b3767e5526e8a46393d8cafe40.mp3",
+				"sound_url": "https://data.movapp.eu/cs-sounds/f/f4efdac6612d0a95eef2b04df446fded.mp3",
 				"translation": "jednociferná čísla",
 				"transcription": "єдноціферна чісла"
 			},
@@ -25706,14 +25706,14 @@
 		"recqROX5N7NFF987Y": {
 			"id": "recqROX5N7NFF987Y",
 			"main": {
-				"sound_url": "https://data.movapp.eu/cs-sounds/0/023a67eb66e63285fb8d78b48add7f93.mp3",
-				"translation": "vynásob čísla",
-				"transcription": "винасоб чісла"
+				"sound_url": "https://data.movapp.eu/cs-sounds/1/12bb89c80a67f8fc63e1c1f67b464c0a.mp3",
+				"translation": "Vynásob čísla.",
+				"transcription": "Винасоб чісла."
 			},
 			"source": {
-				"sound_url": "https://data.movapp.eu/uk-sounds/d/d4bd3dffdaf6d81cbdde09e05aa53a5e.mp3",
-				"translation": "помнож числа",
-				"transcription": "pomnož čysla"
+				"sound_url": "https://data.movapp.eu/uk-sounds/d/d5a24eeb01451a14c46b95522444294d.mp3",
+				"translation": "Помнож числа.",
+				"transcription": "Pomnož čysla."
 			},
 			"image_url": null
 		},
@@ -25790,14 +25790,14 @@
 		"rec56s483N86Lgsj5": {
 			"id": "rec56s483N86Lgsj5",
 			"main": {
-				"sound_url": "https://data.movapp.eu/cs-sounds/2/249985d67838f8e15fd17c5265e1e26d.mp3",
-				"translation": "vyděl čísla",
-				"transcription": "видєл чісла"
+				"sound_url": "https://data.movapp.eu/cs-sounds/5/5729c7506925114ce94c8d5dc1e03fd5.mp3",
+				"translation": "Vyděl čísla.",
+				"transcription": "Видєл чісла."
 			},
 			"source": {
-				"sound_url": "https://data.movapp.eu/uk-sounds/2/275fe29a188b9764236e312ba7bf407c.mp3",
-				"translation": "поділи числа",
-				"transcription": "podily čysla"
+				"sound_url": "https://data.movapp.eu/uk-sounds/a/aaa52d991bc8774874a7b4348a44f320.mp3",
+				"translation": "Поділи числа.",
+				"transcription": "Podily čysla."
 			},
 			"image_url": null
 		},
@@ -26098,7 +26098,7 @@
 		"recNS6WgodQZZCu8W": {
 			"id": "recNS6WgodQZZCu8W",
 			"main": {
-				"sound_url": "https://data.movapp.eu/cs-sounds/d/dc6c1fae5cee1f6a7f71cac88a73adda.mp3",
+				"sound_url": "https://data.movapp.eu/cs-sounds/d/db35f823d7982ea923321e37f753d4bd.mp3",
 				"translation": "geometrie",
 				"transcription": "ґеометріе"
 			},

@@ -1732,6 +1732,60 @@
 			"metacategories": []
 		},
 		{
+			"id": "recqICz7FeDGoAzVs",
+			"name": {
+				"source": "В бібліотеці",
+				"main": "V knižnici"
+			},
+			"description": "",
+			"phrases": [
+				"recQv9LwNTZ8vBq8F",
+				"recH2oCDV8qAEG7JZ",
+				"recOMmxhKffHDCpFc",
+				"recHVrOJYKl0TZr3e",
+				"recfibkBzlZO1fbPz",
+				"recaCVH2QnRLrQjVa",
+				"recIsLrhttQhcBDrL",
+				"rec0HSgBpudZg83so",
+				"recN5eyD5qdFamrCb",
+				"recr9oWljb4v4ktPD",
+				"recDPWrGruGcFErjD",
+				"recIqYBSufFdRhu8t",
+				"recxg9ZCzQV7I25sk",
+				"rec5OKmIu4tsO7H4V",
+				"recsW11SRLnEncc1u",
+				"rec4ht3Ej1z2xHOT1",
+				"recyZ4PGDwWuMwuCN",
+				"recl8gFACx5MXmw8z",
+				"recBCQ5Vgr0RdBtAV",
+				"recEywXftw4PV1is3",
+				"recFuApRi27EWAhJk",
+				"recNwvMqO3XcgbSMm",
+				"recnSwSCATaabJL6D",
+				"recdaZl46F3yzqu0h",
+				"recALaAVRYydbohUd",
+				"recSeSRSDZVa9EKmy",
+				"recp8nSN6t718GgGW",
+				"recObD2mVkRve7MvW",
+				"reczUKgmC6GqF4ePG",
+				"rec8dqrQuvoxkPFer",
+				"rec1kQ13R7UvVXKjL",
+				"rec6J1an6grp8zmR6",
+				"recuQXh6xnAeH8zfK",
+				"rec6OAH1RaQ9k0XbS",
+				"recvh9SRh57kGBmg1",
+				"rec8hMMfhdVxicQMy",
+				"reckrXNnQk5j1bl66",
+				"rec0unVkdKkzHlnPn",
+				"recqLUzUcfvt7avkS",
+				"recwh1f04yVVDFAIM",
+				"recMWXt5hQ5atZO7Q",
+				"recvdm2WG8Jkohb6m",
+				"rec7F4eDLy5F1qRC5"
+			],
+			"metacategories": []
+		},
+		{
 			"id": "recKRFYw4T20ILyvG",
 			"name": {
 				"source": "Добровольці",
@@ -26778,6 +26832,608 @@
 				"sound_url": "https://data.movapp.eu/uk-sounds/3/32a439665ca32d377ef8c67106a086b7.mp3",
 				"translation": "тетраедр",
 				"transcription": "tetraedr"
+			},
+			"image_url": null
+		},
+		"recQv9LwNTZ8vBq8F": {
+			"id": "recQv9LwNTZ8vBq8F",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/d/d569de58e7fb303fd8dbc78593b16246.mp3",
+				"translation": "Chcem si vybaviť čitateľský preukaz.",
+				"transcription": "Хцем сі вибавіть чітательски преуказ."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/b/bb5b5887d6224a89985a5568728ab118.mp3",
+				"translation": "Я хочу замовити читацький квиток.",
+				"transcription": "Ja choču zamovyty čytackyj kvytok."
+			},
+			"image_url": null
+		},
+		"recH2oCDV8qAEG7JZ": {
+			"id": "recH2oCDV8qAEG7JZ",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/b/b33b6d96a4abf850e86e2e60b4e2dde3.mp3",
+				"translation": "Koľko platím za preukaz? ",
+				"transcription": "Колько платім за преуказ? "
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/1/15a182bef6abc278de0c2f95cb98b78c.mp3",
+				"translation": "Скільки мені потрібно заплатити за читацький квиток?",
+				"transcription": "Skilky meni potribno zaplatyty za čytackyj kvytok?"
+			},
+			"image_url": null
+		},
+		"recOMmxhKffHDCpFc": {
+			"id": "recOMmxhKffHDCpFc",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/8/8bbc02303e07e059546416de015263e6.mp3",
+				"translation": "Na ako dlho si môžem vypožičať knihu?",
+				"transcription": "На ако длго сі мyoжем випожічать кнігу?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/d/dff84d7fe29c9cf1e973b7528f8e71a7.mp3",
+				"translation": "На скільки я можу взяти книгу?",
+				"transcription": "Na skilky ja možu vzjaty knyhu?"
+			},
+			"image_url": null
+		},
+		"recHVrOJYKl0TZr3e": {
+			"id": "recHVrOJYKl0TZr3e",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/ed22673e6293959fd4049bac8b332ca5.mp3",
+				"translation": "Na jeden mesiac.",
+				"transcription": "На єден месіац."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/1/1846c8960d3d580628e3d028f803c7e7.mp3",
+				"translation": "На місяць.",
+				"transcription": "Na misjac."
+			},
+			"image_url": null
+		},
+		"recfibkBzlZO1fbPz": {
+			"id": "recfibkBzlZO1fbPz",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/b/bf44d93a835f577af9e36e9262f33409.mp3",
+				"translation": "Kedy musím knihu vrátiť?",
+				"transcription": "Кеди мусім кнігу вратіть?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/f/f450a1101859ce0f598017e003f6a51f.mp3",
+				"translation": "Коли мені потрібно повернути книгу?",
+				"transcription": "Koly meni potribno povernuty knyhu?"
+			},
+			"image_url": null
+		},
+		"recaCVH2QnRLrQjVa": {
+			"id": "recaCVH2QnRLrQjVa",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/9/940deb04a5fa0d87d8d24fb47bfacfe4.mp3",
+				"translation": "Môžem si knihu predĺžiť?",
+				"transcription": "Мyoжем сі кнігу предлжіть?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/8/8fbbd62b050e14d9a5343dcb814714c5.mp3",
+				"translation": "Я можу подовжити книгу?",
+				"transcription": "Ja možu podovžyty knyhu?"
+			},
+			"image_url": null
+		},
+		"recIsLrhttQhcBDrL": {
+			"id": "recIsLrhttQhcBDrL",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/7/75035792e4802f2a36e0273ae1a90f54.mp3",
+				"translation": "Maximálne dvakrát.",
+				"transcription": "Максімалне двакрат."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/b/b6ff1899238637568b4cdd4f35eb9789.mp3",
+				"translation": "Максимально - двічі.",
+				"transcription": "Maksymalno - dviči."
+			},
+			"image_url": null
+		},
+		"rec0HSgBpudZg83so": {
+			"id": "rec0HSgBpudZg83so",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/c/c650f2dd20a1ce3660e6212232dcc9bf.mp3",
+				"translation": "Keď si knihu niekto zarezervuje, nemôžete si ju predĺžiť.",
+				"transcription": "Кедь сі кнігу ніекто зарезервує, немyoжете сі ю предлжіть."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/0/0d9a40fd8b3fba042677f52aa4671da0.mp3",
+				"translation": "Якщо хтось зарезервує книгу, ви не зможете її подовжити.",
+				"transcription": "Jakščo chtos zarezervuje knyhu, vy ne zmožete jiji podovžyty."
+			},
+			"image_url": null
+		},
+		"recN5eyD5qdFamrCb": {
+			"id": "recN5eyD5qdFamrCb",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/c/cb18d19dd1d83ad1bc632e87cc70afc0.mp3",
+				"translation": "Všetky výtlačky sú vypožičané.",
+				"transcription": "Вшетки витлачки су випожічане."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/a/a8dfa1097d7a552ccdf02bd38cc0cd58.mp3",
+				"translation": "Ми не маємо вільних екземплярів.",
+				"transcription": "My ne majemo vilnych ekzempljariv."
+			},
+			"image_url": null
+		},
+		"recr9oWljb4v4ktPD": {
+			"id": "recr9oWljb4v4ktPD",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/5/5a93c6165636c1a3a0f6fbd333662d2f.mp3",
+				"translation": "Knihu si môžete zarezervovať.",
+				"transcription": "Кнігу сі мyoжете зарезервовать."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/76d4a687d94c28f06d86496a63a0317d.mp3",
+				"translation": "Ви можете зарезервувати книгу.",
+				"transcription": "Vy možete zarezervuvaty knyhu."
+			},
+			"image_url": null
+		},
+		"recDPWrGruGcFErjD": {
+			"id": "recDPWrGruGcFErjD",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/b/b1f34c863a1d4fce5c2ebd59845a5252.mp3",
+				"translation": "Koľko stojí rezervácia knihy?",
+				"transcription": "Колько стої резерваціа кніги?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/d/df9fabcad9004acee561934aff0109f6.mp3",
+				"translation": "Скільки коштує зарезервувати книгу?",
+				"transcription": "Skilky koštuje zarezervuvaty knyhu?"
+			},
+			"image_url": null
+		},
+		"recIqYBSufFdRhu8t": {
+			"id": "recIqYBSufFdRhu8t",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/3/33e588fcde108df08f462646fca61689.mp3",
+				"translation": "Čo sa stane, keď knihu vrátim neskoro?",
+				"transcription": "Чо са стане, кедь кнігу вратім нескоро?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/c/cf4b9d0a69f4a74e333838e7f26a6133.mp3",
+				"translation": "Що станеться, якщо я повернену книги із запізненням?",
+				"transcription": "Ščo staneťsja, jakščo ja povernenu knyhy iz zapiznennjam?"
+			},
+			"image_url": null
+		},
+		"recxg9ZCzQV7I25sk": {
+			"id": "recxg9ZCzQV7I25sk",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/3/3b4e91dadfdf8e4af7c1b2e811a9f4fb.mp3",
+				"translation": "Za oneskorené vrátenie zaplatíte 5 centov za deň.",
+				"transcription": "За онескорене вратеніе заплатіте 5 центов за день."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/8/86b0ee51f776f80f6879634515b2d4fd.mp3",
+				"translation": "Ви заплатите за затримку, 5 крон на день.",
+				"transcription": "Vy zaplatyte za zatrymku, 5 kron na deň."
+			},
+			"image_url": null
+		},
+		"rec5OKmIu4tsO7H4V": {
+			"id": "rec5OKmIu4tsO7H4V",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/a/aa7163c15646c979ca69dcfc9d5ad06e.mp3",
+				"translation": "Čo sa stane, keď knihu stratím?",
+				"transcription": "Чо са стане, кедь кнігу стратім?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/5/51cd63b40ce75b4cbb5b14d45ffecb2e.mp3",
+				"translation": "Що станеться, якщо я загублю книгу?",
+				"transcription": "Ščo staneťsja, jakščo ja zahublju knyhu?"
+			},
+			"image_url": null
+		},
+		"recsW11SRLnEncc1u": {
+			"id": "recsW11SRLnEncc1u",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/c/c01b459997451b5bb72ecddad5910130.mp3",
+				"translation": "Čo sa stane, keď knihu poškodím?",
+				"transcription": "Чо са стане, кедь кнігу пошкодім?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/1/1a9b7b872849eb51c34f6743a98efffe.mp3",
+				"translation": "Що станеться, якщо я пошкоджу книгу?",
+				"transcription": "Ščo staneťsja, jakščo ja poškodžu knyhu?"
+			},
+			"image_url": null
+		},
+		"rec4ht3Ej1z2xHOT1": {
+			"id": "rec4ht3Ej1z2xHOT1",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/eca6c6c38e8fc8d0e9e6449cc4805948.mp3",
+				"translation": "Knihu musíte zaplatiť.",
+				"transcription": "Кнігу мусіте заплатіть."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/1/1db8afb16e5c30c855e1dfc2b98e0c54.mp3",
+				"translation": "Ва потрібно буде заплатити за книгу.",
+				"transcription": "Va potribno bude zaplatyty za knyhu."
+			},
+			"image_url": null
+		},
+		"recyZ4PGDwWuMwuCN": {
+			"id": "recyZ4PGDwWuMwuCN",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/ec9c5e8140774e60f3167c9e7b766110.mp3",
+				"translation": "Dajte pozor na vypožičané knihy.",
+				"transcription": "Дайте позор на випожічане кніги."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/6ffd6654515dddc9afcd304c4193a3aa.mp3",
+				"translation": "Поводьтесь обережно із позиченими книгами.",
+				"transcription": "Povoďtes oberežno iz pozyčenymy knyhamy."
+			},
+			"image_url": null
+		},
+		"recl8gFACx5MXmw8z": {
+			"id": "recl8gFACx5MXmw8z",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/4/4d71bb41df3169d61b9b603125a7bdf9.mp3",
+				"translation": "stratiť knihu",
+				"transcription": "стратіть кнігу"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/9/9490ac26becd81b06300130b3e118a8e.mp3",
+				"translation": "загубити книгу",
+				"transcription": "zahubyty knyhu"
+			},
+			"image_url": null
+		},
+		"recBCQ5Vgr0RdBtAV": {
+			"id": "recBCQ5Vgr0RdBtAV",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/d/dd86b4c8d1b5b7657b92561800d93b87.mp3",
+				"translation": "poškodiť knihu",
+				"transcription": "пошкодіть кнігу"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/9/9ca11a5f877bbe4825e7184666d904b3.mp3",
+				"translation": "пошкодити книгу",
+				"transcription": "poškodyty knyhu"
+			},
+			"image_url": null
+		},
+		"recEywXftw4PV1is3": {
+			"id": "recEywXftw4PV1is3",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/ec77481b732bd153dea01e06597904b4.mp3",
+				"translation": "vypožičať si knihu",
+				"transcription": "випожічать сі кнігу"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/e/e5927cddc5d8cb2ccf0fce373c79098b.mp3",
+				"translation": "позичити книгу",
+				"transcription": "pozyčyty knyhu"
+			},
+			"image_url": null
+		},
+		"recFuApRi27EWAhJk": {
+			"id": "recFuApRi27EWAhJk",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/d/d99e6505518ca2511538c71c8722b690.mp3",
+				"translation": "čítať si v knižnici",
+				"transcription": "чітать сі в кніжніці"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/d/d7ba0c86baf7e3b4c7b4e97ef0da50eb.mp3",
+				"translation": "читати в читальному залі",
+				"transcription": "čytaty v čytalnomu zali"
+			},
+			"image_url": null
+		},
+		"recNwvMqO3XcgbSMm": {
+			"id": "recNwvMqO3XcgbSMm",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/3/3752f30097ec6096beb5f17876b44cd8.mp3",
+				"translation": "Máte viac pobočiek?",
+				"transcription": "Мате віац побочіек?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/d/d04f495f631f159cc1f43ea75abe8d5e.mp3",
+				"translation": "У вас є інші відділення?",
+				"transcription": "U vas je inši viddilennja?"
+			},
+			"image_url": null
+		},
+		"recnSwSCATaabJL6D": {
+			"id": "recnSwSCATaabJL6D",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/e776a540c48261e7ddfc49ee410aa85b.mp3",
+				"translation": "V ktorej pobočke môžem knihu vrátiť?",
+				"transcription": "В кторей побочке мyoжем кнігу вратіть?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/7543f5895bd9f7a4c396d3b3b0406ac3.mp3",
+				"translation": "У яку філію я можу повернути книгу?",
+				"transcription": "U jaku filiju ja možu povernuty knyhu?"
+			},
+			"image_url": null
+		},
+		"recdaZl46F3yzqu0h": {
+			"id": "recdaZl46F3yzqu0h",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/2/2f3d4a8b09977432d43834d021582d4e.mp3",
+				"translation": "V hociktorej.",
+				"transcription": "В гоцікторей."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/0/03305f1aedcbf465b426b9138314abac.mp3",
+				"translation": "У будь-яку.",
+				"transcription": "U buď-jaku."
+			},
+			"image_url": null
+		},
+		"recALaAVRYydbohUd": {
+			"id": "recALaAVRYydbohUd",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/1/1c1a7fdc76ff00e430898af576d83a5b.mp3",
+				"translation": "Môžem si čítať knihu v knižnici?",
+				"transcription": "Мyoжем сі чітать кнігу в кніжніці?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/2/248b67670c546f99aaea66b1a140b02c.mp3",
+				"translation": "Я можу читати книгу в бібліотеці?",
+				"transcription": "Ja možu čytaty knyhu v biblioteci?"
+			},
+			"image_url": null
+		},
+		"recSeSRSDZVa9EKmy": {
+			"id": "recSeSRSDZVa9EKmy",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/9/9e709371a00917ff51c784522a9ce2fd.mp3",
+				"translation": "Áno, máme tu študovňu.",
+				"transcription": "Ано, маме ту штудовню."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/6d719d9e4d18011e9a6a17160ca62d90.mp3",
+				"translation": "Так, у нас є читальний зал.",
+				"transcription": "Tak, u nas je čytalnyj zal."
+			},
+			"image_url": null
+		},
+		"recp8nSN6t718GgGW": {
+			"id": "recp8nSN6t718GgGW",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/d/d0fc986a40f0838444cfbcd42cfd8eaf.mp3",
+				"translation": "Na tomto počítači môžete ísť na internet.",
+				"transcription": "На томто почітачі мyoжете ість на інтернет."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/7bcb3b73d4f889b4400b7e2840d92e53.mp3",
+				"translation": "Ви можете тут використовувати комп'ютер з інтернетом.",
+				"transcription": "Vy možete tut vykorystovuvaty komp'juter z internetom."
+			},
+			"image_url": null
+		},
+		"recObD2mVkRve7MvW": {
+			"id": "recObD2mVkRve7MvW",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/8/8b9bee816b04b0c4a820207c82287b89.mp3",
+				"translation": "Tu je detské oddelenie.",
+				"transcription": "Ту є детске одделеніе."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/9/9b96b3a97e18663106a45f0b5e774d7a.mp3",
+				"translation": "Ось дитячий відділ.",
+				"transcription": "Os dyťačyj viddil."
+			},
+			"image_url": null
+		},
+		"reczUKgmC6GqF4ePG": {
+			"id": "reczUKgmC6GqF4ePG",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/0/04013054394aa6823c971c16c1873bef.mp3",
+				"translation": "Tu je beletria.",
+				"transcription": "Ту є белетріа."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/4c71d554cf7aac62434c32953e28c42f.mp3",
+				"translation": "Ось художня література.",
+				"transcription": "Os chudožnja literatura."
+			},
+			"image_url": null
+		},
+		"rec8dqrQuvoxkPFer": {
+			"id": "rec8dqrQuvoxkPFer",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/e9363732c1d23833ca0516144eb5cc1b.mp3",
+				"translation": "Knihy sú zoradené abecedne.",
+				"transcription": "Кніги су зорадене абецедне."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/8/8ffb55bf3f0a2879566edcde60dbc770.mp3",
+				"translation": "Книги стоять за алфавітом.",
+				"transcription": "Knyhy stojať za alfavitom."
+			},
+			"image_url": null
+		},
+		"rec1kQ13R7UvVXKjL": {
+			"id": "rec1kQ13R7UvVXKjL",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/5/5e06cb11cf738ec1e00d6936f7108aaf.mp3",
+				"translation": "Knihy sú zoradené podľa mena autora.",
+				"transcription": "Кніги су зорадене подльа мена аутора."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/5/52f31f859bb449dcdbb138533f987ceb.mp3",
+				"translation": "Книги стоять за іменем автора.",
+				"transcription": "Knyhy stojať za imenem avtora."
+			},
+			"image_url": null
+		},
+		"rec6J1an6grp8zmR6": {
+			"id": "rec6J1an6grp8zmR6",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/5/555744ee5afdd2dcbcc3f0319ddcf57a.mp3",
+				"translation": "Tu je literatúra faktu.",
+				"transcription": "Ту є література факту."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/f/f403b61baf61637c9b4acbd0ad5284bd.mp3",
+				"translation": "Ось нон-фікшн.",
+				"transcription": "Os non-fikšn."
+			},
+			"image_url": null
+		},
+		"recuQXh6xnAeH8zfK": {
+			"id": "recuQXh6xnAeH8zfK",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/7/7ac8fab8792457534de191e0db0d157e.mp3",
+				"translation": "Tu sú knihy pre mládež.",
+				"transcription": "Ту су кніги пре младеж."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/1/1648f7ea6afb9576b33c2dc2626ecfdb.mp3",
+				"translation": "Ось книги для юних читачів.",
+				"transcription": "Os knyhy dlja junych čytačiv."
+			},
+			"image_url": null
+		},
+		"rec6OAH1RaQ9k0XbS": {
+			"id": "rec6OAH1RaQ9k0XbS",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/6/6e2d0d4b8fda0e5bcfea2588ada68a41.mp3",
+				"translation": "Môžete si požičať CD.",
+				"transcription": "Мyoжете сі пожічать ЦД."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/41ec5ba4c9e780894063f6b973e76717.mp3",
+				"translation": "Ви можете позичити компакт диск.",
+				"transcription": "Vy možete pozyčyty kompakt dysk."
+			},
+			"image_url": null
+		},
+		"recvh9SRh57kGBmg1": {
+			"id": "recvh9SRh57kGBmg1",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/2/2db6b7f7d672c5d219d067cdbc43de23.mp3",
+				"translation": "Knihy vraciate tu.",
+				"transcription": "Кніги враціате ту."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/8/8f85ea5ee8e9cfdce050b9a401b74fb3.mp3",
+				"translation": "Книги повертати ось тут.",
+				"transcription": "Knyhy povertaty os tut."
+			},
+			"image_url": null
+		},
+		"rec8hMMfhdVxicQMy": {
+			"id": "rec8hMMfhdVxicQMy",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/7/714d6c663130d0a44fe7b7f58a4bd320.mp3",
+				"translation": "Toto je vaše čitateľské konto.",
+				"transcription": "Тото є ваше чітательске конто."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/5/5bb71f9802669834c15c62e02ee03010.mp3",
+				"translation": "Ось ваш читацький квиток",
+				"transcription": "Os vaš čytackyj kvytok"
+			},
+			"image_url": null
+		},
+		"reckrXNnQk5j1bl66": {
+			"id": "reckrXNnQk5j1bl66",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/f/f55f4cdaeccde4c4010dbb571d101336.mp3",
+				"translation": "Tu vyhľadávate knihy.",
+				"transcription": "Ту вигльадавате кніги."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/4000ca82d92dea12c1cd3f7b49f04e76.mp3",
+				"translation": "Ось тут можна шукати книги.",
+				"transcription": "Os tut možna šukaty knyhy."
+			},
+			"image_url": null
+		},
+		"rec0unVkdKkzHlnPn": {
+			"id": "rec0unVkdKkzHlnPn",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/4/482723a8127f3e82879410037791fda1.mp3",
+				"translation": "Tu si môžete knihu predĺžiť.",
+				"transcription": "Ту сі мyoжете кнігу предлжіть."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/6932819d7336052a5824581fa4af367d.mp3",
+				"translation": "Ось тут можна продовжити книгу.",
+				"transcription": "Os tut možna prodovžyty knyhu."
+			},
+			"image_url": null
+		},
+		"recqLUzUcfvt7avkS": {
+			"id": "recqLUzUcfvt7avkS",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/6/6d26afad82154168a82b91fe11ebb0ff.mp3",
+				"translation": "Toto je vaše prihlasovacie meno.",
+				"transcription": "Тото є ваше прігласоваціе мено."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/8/87c51fac9b70ddaa28fdc79a219fbae0.mp3",
+				"translation": "Ось ваш логін.",
+				"transcription": "Os vaš lohin."
+			},
+			"image_url": null
+		},
+		"recwh1f04yVVDFAIM": {
+			"id": "recwh1f04yVVDFAIM",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/c/ceb9907971192c940cc4cf4da130354d.mp3",
+				"translation": "Toto je vaše heslo.",
+				"transcription": "Тото є ваше гесло."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/685c11333ef87cd70476920061728327.mp3",
+				"translation": "Ось ваш пароль.",
+				"transcription": "Os vaš parol."
+			},
+			"image_url": null
+		},
+		"recMWXt5hQ5atZO7Q": {
+			"id": "recMWXt5hQ5atZO7Q",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/0/0caf7bb8cef2f6796c31cb3de43892f0.mp3",
+				"translation": "Vaše heslo je...",
+				"transcription": "Ваше гесло є..."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/b/b0348d1fc945d93e9a6fefe74cc7543b.mp3",
+				"translation": "Ваш пароль - ...",
+				"transcription": "Vaš parol - ..."
+			},
+			"image_url": null
+		},
+		"recvdm2WG8Jkohb6m": {
+			"id": "recvdm2WG8Jkohb6m",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/a/a2c81f69cf1ae9e9aeee4c8252c6d629.mp3",
+				"translation": "Vymyslite si heslo.",
+				"transcription": "Вимисліте сі гесло."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/a/a1fefa4ecd0f0ca354d6576ca4436e3b.mp3",
+				"translation": "Придумайте свій пароль.",
+				"transcription": "Prydumajte svij parol."
+			},
+			"image_url": null
+		},
+		"rec7F4eDLy5F1qRC5": {
+			"id": "rec7F4eDLy5F1qRC5",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/5/5c3eb845578e09073058471c43e68d60.mp3",
+				"translation": "Podpíšte sa tu.",
+				"transcription": "Подпіште са ту."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/5/54bcbdc3e40fda03ec58da0521003586.mp3",
+				"translation": "Підпишіть тут.",
+				"transcription": "Pidpyšiť tut."
 			},
 			"image_url": null
 		}

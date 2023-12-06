@@ -320,6 +320,101 @@
 			"metacategories": []
 		},
 		{
+			"id": "recXaM9gWiKC6styN",
+			"name": {
+				"source": "Smalltalk",
+				"main": "Smalltalk"
+			},
+			"description": "",
+			"phrases": [
+				"recyEprHkvsj9PlAD",
+				"recp75jYKD2XSp907",
+				"rec1HZ4Lp2LgYzIDN",
+				"recyxbqKH3kcEsLSa",
+				"recnACzSlAsI2bX2N",
+				"rec36SFb5OuBf6AT5",
+				"rec2wNbIIdOe8MdVq",
+				"recO53qw2O9cgJ5wP",
+				"recDPZADG53dWimhP",
+				"recOLs9h6icFPqVIV",
+				"recEE3oiL5lbCdx8j",
+				"recLhF4hfwjjWRwTj",
+				"recIlYyZvS5vqpJ2d",
+				"recWBbOIvjzVvQO6X",
+				"recS8XZ9bnvueO0P0",
+				"recllU6yGLPZyRA5t",
+				"recw678NgKwRlXk09",
+				"recLw4ouQmc5qXlXb",
+				"recMBfumWxtRKatJj",
+				"recMcnaJBiv5xsO3i",
+				"rec4kq5t2SCCWYHnP",
+				"recD9V4mNxkKMEfac",
+				"recwEnw6gbmYffCGm",
+				"recfNRnuKaPhBIlcy",
+				"recnXzgpw3uF94clC",
+				"recljs8Zr4jm7qHWN",
+				"rec5TV3hBQjsPIzcD",
+				"recOYGJrJJaPk1fsB",
+				"recZunuDPjW6XA86Q",
+				"rec8eSCfeoQCchDTg",
+				"recLSjvsUGjoWR7ui",
+				"rectJRYH8G0DrRol5",
+				"recsx96y4EGQWJ8Ge",
+				"rec0wSDF31HbtCWf7",
+				"recTD4x6WQtyyBYf0",
+				"recZi4Sb5TD7YvtNe",
+				"recX3dMYXGSHoWFlp",
+				"rec53BL45CPS3NA01",
+				"rec28hSUpQkaM9V38",
+				"recokFuMU4hQgRy4G",
+				"recgZMpO4hlnuGtD5",
+				"recxuLCbgd0cnAGAN",
+				"rechccDftrGisJF9L",
+				"recKUMGuClLUyMOWk",
+				"recn5m97k9hYf3R1C",
+				"recApG00jA5xgEhnp",
+				"recPVLYrkUJPLf4pi",
+				"recvSbpK4o9D8hD1R",
+				"recQalSOVuSsdNFfY",
+				"recltjJeEpQttMmzn",
+				"recaqdywCeFXiXQDh",
+				"recrBcM48b5QhXhQ1",
+				"recKAMABPEpyLuxXg",
+				"recacx6iZzb0kKsWq",
+				"rec8cfBQiD4CDppx5",
+				"recVfzw64EKUzKXaK",
+				"rec8Mb9d4EHNMiEFn",
+				"recTKTRuNWkDWi4rN",
+				"rectL3reGKbY348y2",
+				"recvD1pZMW8QJNwa1",
+				"recQQiDIH2yE6yj0b",
+				"rec3Sg9pHlTWNPRtZ",
+				"recIBLe1tEzsLfVZJ",
+				"recBwYM0gaVKrwoXQ",
+				"recUnitvr4XJXXmXl",
+				"recABbY8UAvscWbPp",
+				"rec11L80MqiWBKDXg",
+				"recMJua6YcgDUgakU",
+				"rec1FUua6oSx8x2iH",
+				"reccgja3vWkPeOk0X",
+				"recgsh8TKpeN4TXrJ",
+				"rec39OySiAAIvFDi6",
+				"recVc16T6QrIq0iov",
+				"recAfwDLnganQWIch",
+				"rech2VHHRNDyabFFe",
+				"recZRAW8WCqhNzTcb",
+				"rec07tGOi11YGlYmM",
+				"rec4k1LXo0wtHdJgA",
+				"rec8cVlEP7MGbAsOu",
+				"recXLa10xU9hLxZfJ",
+				"recOtMzX7Ptv6Q62f",
+				"recQ91J6KklSjjNXc",
+				"recatap4KhOYIERXO",
+				"reczRNoopxrfLhUq4"
+			],
+			"metacategories": []
+		},
+		{
 			"id": "recwKFGMDCz6F07Tt",
 			"name": {
 				"source": "Їдемо в зоопарк",
@@ -18900,9 +18995,9 @@
 		"recI1iABu3eiVBrM2": {
 			"id": "recI1iABu3eiVBrM2",
 			"main": {
-				"sound_url": "https://data.movapp.eu/sk-sounds/f/fcc50ad61a8be29b736a2b62eee489a2.mp3",
-				"translation": "Ideme do ZOO.",
-				"transcription": "Ідеме до ЗОО."
+				"sound_url": "https://data.movapp.eu/sk-sounds/3/342ba74621351dd8c8b5521e551da2d8.mp3",
+				"translation": "Ideme do ZOO (autom).",
+				"transcription": "Ідеме до ЗОО (аутом)."
 			},
 			"source": {
 				"sound_url": "https://data.movapp.eu/uk-sounds/f/f0e7e801baa0b4247ad440b33f8d0a86.mp3",
@@ -18928,9 +19023,9 @@
 		"rec2NFZ9Wl88P0CB6": {
 			"id": "rec2NFZ9Wl88P0CB6",
 			"main": {
-				"sound_url": "https://data.movapp.eu/sk-sounds/f/fcc50ad61a8be29b736a2b62eee489a2.mp3",
-				"translation": "Ideme do ZOO.",
-				"transcription": "Ідеме до ЗОО."
+				"sound_url": "https://data.movapp.eu/sk-sounds/8/8676dfc022eecd1e81050452853fb110.mp3",
+				"translation": " Ideme do ZOO (pešo).",
+				"transcription": " Ідеме до ЗОО (пешо)."
 			},
 			"source": {
 				"sound_url": "https://data.movapp.eu/uk-sounds/1/129584e017f661c246c4e865f905757e.mp3",
@@ -27434,6 +27529,1182 @@
 				"sound_url": "https://data.movapp.eu/uk-sounds/5/54bcbdc3e40fda03ec58da0521003586.mp3",
 				"translation": "Підпишіть тут.",
 				"transcription": "Pidpyšiť tut."
+			},
+			"image_url": null
+		},
+		"recyEprHkvsj9PlAD": {
+			"id": "recyEprHkvsj9PlAD",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/e0885010372fcf5f39b3a2a4bdb1f145.mp3",
+				"translation": "Bývate tu už dlho?",
+				"transcription": "Бивате ту уж длго?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/4630d9fe897e3266e69055feaf6337c7.mp3",
+				"translation": "Ви давно тут живете?",
+				"transcription": "Vy davno tut žyvete?"
+			},
+			"image_url": null
+		},
+		"recp75jYKD2XSp907": {
+			"id": "recp75jYKD2XSp907",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/8/8742a4eb07e88cfea04478deb05e3345.mp3",
+				"translation": "Nie, prisťahovali sme sa nedávno.",
+				"transcription": "Ніе, прістяговалі сме са недавно."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/b/b55bad0edf3c78ff36a2b08f8655c254.mp3",
+				"translation": "Ні, ми переїхали нещодавно.",
+				"transcription": "Ni, my perejichaly neščodavno."
+			},
+			"image_url": null
+		},
+		"rec1HZ4Lp2LgYzIDN": {
+			"id": "rec1HZ4Lp2LgYzIDN",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/4/424712e579b187175f0e4edd7ab1ac79.mp3",
+				"translation": "Žijeme tu už...",
+				"transcription": "Жієме ту уж..."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/8/8ec8485ddd84437e9c78739e538b8671.mp3",
+				"translation": "Ми живемо тут вже...",
+				"transcription": "My žyvemo tut vže..."
+			},
+			"image_url": null
+		},
+		"recyxbqKH3kcEsLSa": {
+			"id": "recyxbqKH3kcEsLSa",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/e17eb3ebe9bc321ba09778526d648d2d.mp3",
+				"translation": "Páči sa vám tu?",
+				"transcription": "Пачі са вам ту?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/2/2337282d6a66846d3188f398563a5c95.mp3",
+				"translation": "Вам тут подобається?",
+				"transcription": "Vam tut podobajeťsja?"
+			},
+			"image_url": null
+		},
+		"recnACzSlAsI2bX2N": {
+			"id": "recnACzSlAsI2bX2N",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/3/3b2ff9b421f5e3472374cb97e88ecf63.mp3",
+				"translation": "Áno, veľmi.",
+				"transcription": "Ано, вельмі."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/1/1dfe768679d56adf601f1242918aab8e.mp3",
+				"translation": "Так, дуже.",
+				"transcription": "Tak, duže."
+			},
+			"image_url": null
+		},
+		"rec36SFb5OuBf6AT5": {
+			"id": "rec36SFb5OuBf6AT5",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/2/271b9d8c4ae5b30335252522b549afdb.mp3",
+				"translation": "Áno, je tu pekne.",
+				"transcription": "Ано, є ту пекне."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/79f7a0e3a2fab2048d82bb70de2f0792.mp3",
+				"translation": "Так, тут добре.",
+				"transcription": "Tak, tut dobre."
+			},
+			"image_url": null
+		},
+		"rec2wNbIIdOe8MdVq": {
+			"id": "rec2wNbIIdOe8MdVq",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/7/7d4270e745b2c014bbf53e5d67987537.mp3",
+				"translation": "Je tu pekne.",
+				"transcription": "Є ту пекне."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/b/b0df503dba1b68857c815a14bfe85f64.mp3",
+				"translation": "Тут добре.",
+				"transcription": "Tut dobre."
+			},
+			"image_url": null
+		},
+		"recO53qw2O9cgJ5wP": {
+			"id": "recO53qw2O9cgJ5wP",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/b/babad980f488788f3e332392e8e0891d.mp3",
+				"translation": "Nesťažujem sa.",
+				"transcription": "Нестяжуєм са."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/0/05d5a356e0854988d4d44f1d5df834ed.mp3",
+				"translation": "Я не скаржуся.",
+				"transcription": "Ja ne skaržusja."
+			},
+			"image_url": null
+		},
+		"recDPZADG53dWimhP": {
+			"id": "recDPZADG53dWimhP",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/d/db55691ab06cf75b6bce39b94c58ab94.mp3",
+				"translation": "Chodíš sem často?",
+				"transcription": "Ходіш сем часто?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/3/3cec98ffb7cc864992b61f6bd59501d4.mp3",
+				"translation": "Ти часто буваєш тут?",
+				"transcription": "Ty často buvaješ tut?"
+			},
+			"image_url": null
+		},
+		"recOLs9h6icFPqVIV": {
+			"id": "recOLs9h6icFPqVIV",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/ea737b7245c9dc565706fae99645e87b.mp3",
+				"translation": "Nie, som tu prvýkrát.",
+				"transcription": "Ніе, сом ту првикрат."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/b/b6d8fc0de3ffbec2000eed2f8a0e90ed.mp3",
+				"translation": "Ні, я тут вперше.",
+				"transcription": "Ni, ja tut vperše."
+			},
+			"image_url": null
+		},
+		"recEE3oiL5lbCdx8j": {
+			"id": "recEE3oiL5lbCdx8j",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/7/7ca63c9c0c6708a2810b6f4e81a30877.mp3",
+				"translation": "Som tu skoro každý deň.",
+				"transcription": "Сом ту скоро кажди день."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/7ca1bdcee2875598d618fa5c96b17a92.mp3",
+				"translation": "Я тут майже щодня.",
+				"transcription": "Ja tut majže ščodnja."
+			},
+			"image_url": null
+		},
+		"recLhF4hfwjjWRwTj": {
+			"id": "recLhF4hfwjjWRwTj",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/8/8d1d45e529977259b067e8d874788ccb.mp3",
+				"translation": "Čo robíte?",
+				"transcription": "Чо робіте?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/1/1dd1662f9b8afc29c65d6343c03b49e3.mp3",
+				"translation": "Що ви робите?",
+				"transcription": "Ščo vy robyte?"
+			},
+			"image_url": null
+		},
+		"recIlYyZvS5vqpJ2d": {
+			"id": "recIlYyZvS5vqpJ2d",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/1/17ae1741115bf0ba14ef186544406e50.mp3",
+				"translation": "Teraz pracujem ako...",
+				"transcription": "Тераз працуєм ако..."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/a/a7adbaa87667d505cd51006b8cf3d876.mp3",
+				"translation": "Зараз я працюю (ким)...",
+				"transcription": "Zaraz ja pracjuju (kym)..."
+			},
+			"image_url": null
+		},
+		"recWBbOIvjzVvQO6X": {
+			"id": "recWBbOIvjzVvQO6X",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/c/cc55fbffba3e3078f76f73ea3af9c138.mp3",
+				"translation": "Ale to nie je moja pôvodná oblasť.",
+				"transcription": "Але то ніе є моя пyoводна область."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/e/e603b04cf3fc8cf726d3762bc892eac9.mp3",
+				"translation": "Але це не моя спеціальність.",
+				"transcription": "Ale ce ne moja specialnisť."
+			},
+			"image_url": null
+		},
+		"recS8XZ9bnvueO0P0": {
+			"id": "recS8XZ9bnvueO0P0",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/5/5a77b0998913c3944ae49256aec5b174.mp3",
+				"translation": "Naozaj?",
+				"transcription": "Наозай?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/6db4d6492a0cc7afb9d6ced05c76e407.mp3",
+				"translation": "Справді?",
+				"transcription": "Spravdi?"
+			},
+			"image_url": null
+		},
+		"recllU6yGLPZyRA5t": {
+			"id": "recllU6yGLPZyRA5t",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/d/df5b1357fbf9651c3110e6c0ea3385ce.mp3",
+				"translation": "To je zaujímavé.",
+				"transcription": "То є зауїмаве."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/44d2eceae82cb8e0ba71215dd3d30469.mp3",
+				"translation": "Це цікаво.",
+				"transcription": "Ce cikavo."
+			},
+			"image_url": null
+		},
+		"recw678NgKwRlXk09": {
+			"id": "recw678NgKwRlXk09",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/e66d0179e0fefb080ec18b199b878cb8.mp3",
+				"translation": "Som študent. Som študentka.",
+				"transcription": "Сом штудент. Сом штудентка."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/9/96cd21d58ee1a44f7c3afecf583b0eb0.mp3",
+				"translation": "Я студент. Я студентка.",
+				"transcription": "Ja student. Ja studentka."
+			},
+			"image_url": null
+		},
+		"recLw4ouQmc5qXlXb": {
+			"id": "recLw4ouQmc5qXlXb",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/b/b3eeeec904fddfb7ef70881dba2bfc1b.mp3",
+				"translation": "Študujem...",
+				"transcription": "Штудуєм..."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/4ef29b457fdd11c7e2260cf433da7da5.mp3",
+				"translation": "Я вивчаю...",
+				"transcription": "Ja vyvčaju..."
+			},
+			"image_url": null
+		},
+		"recMBfumWxtRKatJj": {
+			"id": "recMBfumWxtRKatJj",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/d/dbaccd7a4e68faf30e7f7c17d7c9d425.mp3",
+				"translation": "Ďakujem.",
+				"transcription": "Дякуєм."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/a/aa5c5639b5debc6a8d0fc70f5cb399ee.mp3",
+				"translation": "Дякую.",
+				"transcription": "Ďakuju."
+			},
+			"image_url": null
+		},
+		"recMcnaJBiv5xsO3i": {
+			"id": "recMcnaJBiv5xsO3i",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/a/a2f1e6fce01415eff89c14303b9e731d.mp3",
+				"translation": "To je milé.",
+				"transcription": "То є міле."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/41240c8624bde20c1dc9bbba6288ce50.mp3",
+				"translation": "Це так мило.",
+				"transcription": "Ce tak mylo."
+			},
+			"image_url": null
+		},
+		"rec4kq5t2SCCWYHnP": {
+			"id": "rec4kq5t2SCCWYHnP",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/9/922d9a1afa6fbeea1d25d1ea83a09722.mp3",
+				"translation": "To je pravda.",
+				"transcription": "То є правда."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/6f59c6043c841f75ac882d473b1da084.mp3",
+				"translation": "Так, це правда.",
+				"transcription": "Tak, ce pravda."
+			},
+			"image_url": null
+		},
+		"recD9V4mNxkKMEfac": {
+			"id": "recD9V4mNxkKMEfac",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/b/b7fa9df0955d7aeb2f1a63b534991595.mp3",
+				"translation": "To nie je pravda.",
+				"transcription": "То ніе є правда."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/b/ba71b98dca8498b46aebcceb51245da3.mp3",
+				"translation": "Це неправда.",
+				"transcription": "Ce nepravda."
+			},
+			"image_url": null
+		},
+		"recwEnw6gbmYffCGm": {
+			"id": "recwEnw6gbmYffCGm",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/8/82a91c098cb9f06ba075f10b153478b6.mp3",
+				"translation": "To nevadí.",
+				"transcription": "То неваді."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/2/2012330a73f81c1f4b6032b08413a679.mp3",
+				"translation": "Усе гаразд.",
+				"transcription": "Use harazd."
+			},
+			"image_url": null
+		},
+		"recfNRnuKaPhBIlcy": {
+			"id": "recfNRnuKaPhBIlcy",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/f/fedd7c7e8928f6342b5c4776c37c71af.mp3",
+				"translation": "To sa stáva.",
+				"transcription": "То са става."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/8/840842ab6a62979f2912cab4a236f6d6.mp3",
+				"translation": "Так буває.",
+				"transcription": "Tak buvaje."
+			},
+			"image_url": null
+		},
+		"recnXzgpw3uF94clC": {
+			"id": "recnXzgpw3uF94clC",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/9/984397df65a7ee013c472fdcd8b68a29.mp3",
+				"translation": "To je škoda.",
+				"transcription": "То є шкода."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/7ed292ed8ae35d0346bdabc427558789.mp3",
+				"translation": "Шкода.",
+				"transcription": "Škoda."
+			},
+			"image_url": null
+		},
+		"recljs8Zr4jm7qHWN": {
+			"id": "recljs8Zr4jm7qHWN",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/1/16f4f991c97e2b63c4cde2d1ac801259.mp3",
+				"translation": "Čo sa dá robiť.",
+				"transcription": "Чо са да робіть."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/d/d02225becfb624cd944f83552341e10c.mp3",
+				"translation": "Нічого не вдієш.",
+				"transcription": "Ničoho ne vdiješ."
+			},
+			"image_url": null
+		},
+		"rec5TV3hBQjsPIzcD": {
+			"id": "rec5TV3hBQjsPIzcD",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/c/cd1de27b6ac9cc01272f4ec74f877992.mp3",
+				"translation": "Môžem si to požičať?",
+				"transcription": "Мyoжем сі то пожічать?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/b/ba027d01476a7bcb00038bb2345958df.mp3",
+				"translation": "Можна це взяти?",
+				"transcription": "Možna ce vzjaty?"
+			},
+			"image_url": null
+		},
+		"recOYGJrJJaPk1fsB": {
+			"id": "recOYGJrJJaPk1fsB",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/f/f14e134c480e1261122ac4e979845862.mp3",
+				"translation": "Problém je v tom, že...",
+				"transcription": "Проблем є в том, же..."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/f/f5ae83b27b6ccd746adefab560dde4d9.mp3",
+				"translation": "Проблема в тому, що...",
+				"transcription": "Problema v tomu, ščo..."
+			},
+			"image_url": null
+		},
+		"recZunuDPjW6XA86Q": {
+			"id": "recZunuDPjW6XA86Q",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/8/88445fae52400a8018ada932a6a34590.mp3",
+				"translation": "Povedzte to pomalšie, prosím.",
+				"transcription": "Поведзте то помалшіе, просім."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/4968a96d0ec2b2de5c9f9f9b42264260.mp3",
+				"translation": "Скажіть, будь ласка, трохи повільніше.",
+				"transcription": "Skažiť, buď laska, trochy povilniše."
+			},
+			"image_url": null
+		},
+		"rec8eSCfeoQCchDTg": {
+			"id": "rec8eSCfeoQCchDTg",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/3/33301fd0a7e011da0a85099462bf41cd.mp3",
+				"translation": "Celkom vám nerozumiem.",
+				"transcription": "Целком вам нерозуміем."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/d/d2c5726ed7bf6e7cfe75516c099bf834.mp3",
+				"translation": "Я погано вас розумію.",
+				"transcription": "Ja pohano vas rozumiju."
+			},
+			"image_url": null
+		},
+		"recLSjvsUGjoWR7ui": {
+			"id": "recLSjvsUGjoWR7ui",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/b/bc0c686c50dcedc954ca0867b9a28ce4.mp3",
+				"translation": "Po slovensky sa len učím.",
+				"transcription": "По словенски са лен учім."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/630ff33473ac03be8dd7c77d1d97916e.mp3",
+				"translation": "Я лише вивчаю словацьку.",
+				"transcription": "Ja lyše vyvčaju slovacku."
+			},
+			"image_url": null
+		},
+		"rectJRYH8G0DrRol5": {
+			"id": "rectJRYH8G0DrRol5",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/4/4ad21a34fed8bdc3721b804c14fbf1de.mp3",
+				"translation": "Problém je, že nehovorím dobre po slovensky.",
+				"transcription": "Проблем є, же неговорім добре по словенски."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/43fb6e1277bbad958c53115a039b92ef.mp3",
+				"translation": "Проблема в тому, що я погано розмовляю словацькою.",
+				"transcription": "Problema v tomu, ščo ja pohano rozmovljaju slovackoju."
+			},
+			"image_url": null
+		},
+		"recsx96y4EGQWJ8Ge": {
+			"id": "recsx96y4EGQWJ8Ge",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/a/a1556bcb107c80a2e9d035bbfed5e593.mp3",
+				"translation": "To je vaša dcéra?",
+				"transcription": "То є ваша дцера?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/d/d95b1cc81d6a849d91df23c4d62d9f12.mp3",
+				"translation": "Це ваша донька?",
+				"transcription": "Ce vaša doňka?"
+			},
+			"image_url": null
+		},
+		"rec0wSDF31HbtCWf7": {
+			"id": "rec0wSDF31HbtCWf7",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/e1977e89fcd4ce5b7f031b5878f7956c.mp3",
+				"translation": "Áno.",
+				"transcription": "Ано."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/5/50f9f3a7e90776dc7e0bd85e4978796b.mp3",
+				"translation": "Так",
+				"transcription": "Tak"
+			},
+			"image_url": null
+		},
+		"recTD4x6WQtyyBYf0": {
+			"id": "recTD4x6WQtyyBYf0",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/6/6fbfb7da94cbc90218e6a3eae767008f.mp3",
+				"translation": "Ako sa volá?",
+				"transcription": "Ако са вола?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/f/f1b4772ca9b4aea96653e6d56138b405.mp3",
+				"translation": "Як її звуть?",
+				"transcription": "Jak jiji zvuť?"
+			},
+			"image_url": null
+		},
+		"recZi4Sb5TD7YvtNe": {
+			"id": "recZi4Sb5TD7YvtNe",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/5/59e2fb4a200e290620624605c65fb8ec.mp3",
+				"translation": "Viki.",
+				"transcription": "Вікі."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/b/bc14b5bc1c8536bdf5a567b5860ddd4f.mp3",
+				"translation": "Вікі",
+				"transcription": "Viki"
+			},
+			"image_url": null
+		},
+		"recX3dMYXGSHoWFlp": {
+			"id": "recX3dMYXGSHoWFlp",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/4/48bd49a7a867e4123a19c496af7e7efd.mp3",
+				"translation": "Viki má päť rokov",
+				"transcription": "Вікі ма петь роков"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/4d0f6a50225c0e7f3fa3618844fbfbe5.mp3",
+				"translation": "Віці п’ять років.",
+				"transcription": "Vici p’jať rokiv."
+			},
+			"image_url": null
+		},
+		"rec53BL45CPS3NA01": {
+			"id": "rec53BL45CPS3NA01",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/7/71a9cf875daf8b8ec9d2bf517fb191ea.mp3",
+				"translation": "Môj syn má 4 roky.",
+				"transcription": "Мyoй син ма 4 роки."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/f/f5504c3c1e06e2079bb4d59a095a0b39.mp3",
+				"translation": "Моєму синові чотири роки.",
+				"transcription": "Mojemu synovi čotyry roky."
+			},
+			"image_url": null
+		},
+		"rec28hSUpQkaM9V38": {
+			"id": "rec28hSUpQkaM9V38",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/d/d72b47a40d25897ec98941a04a83bf6b.mp3",
+				"translation": "Poďme spolu na šmykľavku.",
+				"transcription": "Подьме сполу на шмикльавку."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/a/a581aaf0e9e501ba820f765acb45ecfd.mp3",
+				"translation": "Ходімо разом на гірку.",
+				"transcription": "Chodimo razom na hirku."
+			},
+			"image_url": null
+		},
+		"recokFuMU4hQgRy4G": {
+			"id": "recokFuMU4hQgRy4G",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/6/64856ba4486935f6516156686c129fa0.mp3",
+				"translation": "Bežte spolu na šmykľavku.",
+				"transcription": "Бежте сполу на шмикльавку."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/a/a42abd2e2832e1f7081a5120c699f10d.mp3",
+				"translation": "Біжіть разом на гірку.",
+				"transcription": "Bižiť razom na hirku."
+			},
+			"image_url": null
+		},
+		"recgZMpO4hlnuGtD5": {
+			"id": "recgZMpO4hlnuGtD5",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/2/2f51146c4a1b799ac7fc92d40c8f83eb.mp3",
+				"translation": "Poď na hojdačku.",
+				"transcription": "Подь на гойдачку."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/6e65a4ab85e0876f4f4b1c1159de2c5e.mp3",
+				"translation": "Йди гойдатися на гойдалці.",
+				"transcription": "Jdy hojdatysja na hojdalci."
+			},
+			"image_url": null
+		},
+		"recxuLCbgd0cnAGAN": {
+			"id": "recxuLCbgd0cnAGAN",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/3/37391df0362c325bddde3b85c26c665e.mp3",
+				"translation": "Bežte spolu na preliezku.",
+				"transcription": "Бежте сполу на преліезку."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/c/c0c2526f0fd94d3341f0909f9151e207.mp3",
+				"translation": "Біжіть до пролазки.",
+				"transcription": "Bižiť do prolazky."
+			},
+			"image_url": null
+		},
+		"rechccDftrGisJF9L": {
+			"id": "rechccDftrGisJF9L",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/5/580b5df4fff6e35f11536d9e3c8c7939.mp3",
+				"translation": "Chodíte sem často?",
+				"transcription": "Ходіте сем часто?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/466e5c0db0fcafe8a070fa23876d7262.mp3",
+				"translation": "Ви часто буваєте тут?",
+				"transcription": "Vy často buvajete tut?"
+			},
+			"image_url": null
+		},
+		"recKUMGuClLUyMOWk": {
+			"id": "recKUMGuClLUyMOWk",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/4/436ac451e3be2b7d5c88fe95998013d3.mp3",
+				"translation": "Občas áno.",
+				"transcription": "Обчас ано."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/8/843b130b2a854ada1c3c1637af9f2323.mp3",
+				"translation": "Інколи так.",
+				"transcription": "Inkoly tak."
+			},
+			"image_url": null
+		},
+		"recn5m97k9hYf3R1C": {
+			"id": "recn5m97k9hYf3R1C",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/b/ba37755e8d4f65a843f58ddb5fbecc7c.mp3",
+				"translation": "My už musíme ísť. Majte sa pekne.",
+				"transcription": "Ми уж мусіме ість. Майте са пекне."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/4aca1b49d4b639979619771bb8e1a86e.mp3",
+				"translation": "Ми вже маємо йти. Гарного дня.",
+				"transcription": "My vže majemo jty. Harnoho dnja."
+			},
+			"image_url": null
+		},
+		"recApG00jA5xgEhnp": {
+			"id": "recApG00jA5xgEhnp",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/b/bdbb2c97fb9261fdcddc1d7a91ab9c5f.mp3",
+				"translation": "Dovidenia.",
+				"transcription": "Довіденіа."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/c/c232a34f76ff6e32f6a671bc0d198217.mp3",
+				"translation": "До побачення.",
+				"transcription": "Do pobačennja."
+			},
+			"image_url": null
+		},
+		"recPVLYrkUJPLf4pi": {
+			"id": "recPVLYrkUJPLf4pi",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/8/8ec4ac569a2c5fba93a164f501d6e2d5.mp3",
+				"translation": "To sú vaše deti?",
+				"transcription": "То су ваше деті?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/b/b8b9778e11d16b00b1f729b5f1029d60.mp3",
+				"translation": "Це ваші діти?",
+				"transcription": "Ce vaši dity?"
+			},
+			"image_url": null
+		},
+		"recvSbpK4o9D8hD1R": {
+			"id": "recvSbpK4o9D8hD1R",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/e9ce2bc69eeefb1a065d3255cf12fb54.mp3",
+				"translation": "Ako sa volajú?",
+				"transcription": "Ако са волаю?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/a/a8b444e9a5b969285c46e4b892ed71ea.mp3",
+				"translation": "Як їх звуть?",
+				"transcription": "Jak jich zvuť?"
+			},
+			"image_url": null
+		},
+		"recQalSOVuSsdNFfY": {
+			"id": "recQalSOVuSsdNFfY",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/3/3b6a0977872d17c64526d528596e27fc.mp3",
+				"translation": "Máša a Saša.",
+				"transcription": "Маша а Саша."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/9/93e143e24b6e98749e71844ff971452b.mp3",
+				"translation": "Маша та Саша.",
+				"transcription": "Maša ta Saša."
+			},
+			"image_url": null
+		},
+		"recltjJeEpQttMmzn": {
+			"id": "recltjJeEpQttMmzn",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/eff213b5a82a16c45f4fd58652df6977.mp3",
+				"translation": "To je váš syn?",
+				"transcription": "То є ваш син?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/8/89b48d0395c8996d890b67a4ce09f8c4.mp3",
+				"translation": "Це ваш син?",
+				"transcription": "Ce vaš syn?"
+			},
+			"image_url": null
+		},
+		"recaqdywCeFXiXQDh": {
+			"id": "recaqdywCeFXiXQDh",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/5/591209d6f5e630dd3e4ce6ba9d379f6b.mp3",
+				"translation": "Koľko má rokov?",
+				"transcription": "Колько ма роков?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/7a65f42860068eb2ee987289e78c0573.mp3",
+				"translation": "Скільки йому років?",
+				"transcription": "Skilky jomu rokiv?"
+			},
+			"image_url": null
+		},
+		"recrBcM48b5QhXhQ1": {
+			"id": "recrBcM48b5QhXhQ1",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/4/44f8511594f1e1eba48e1f29b10d7126.mp3",
+				"translation": "Koľko majú rokov?",
+				"transcription": "Колько маю роков?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/c/c7b2ae1aa48da8605f7290bc3d0c451c.mp3",
+				"translation": "Скільки їм років?",
+				"transcription": "Skilky jim rokiv?"
+			},
+			"image_url": null
+		},
+		"recKAMABPEpyLuxXg": {
+			"id": "recKAMABPEpyLuxXg",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/e930f3a8e0b810e7e45423ca4cf37e4c.mp3",
+				"translation": "Môžu sa spolu hrať?",
+				"transcription": "Мyoжу са сполу грать?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/0/01d8314542123822f4b829932ba602e2.mp3",
+				"translation": "Вони можуть погратися?",
+				"transcription": "Vony možuť pohratysja?"
+			},
+			"image_url": null
+		},
+		"recacx6iZzb0kKsWq": {
+			"id": "recacx6iZzb0kKsWq",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/9/964c890fdb60edda66453b06945bc307.mp3",
+				"translation": "Poď sa hojdať.",
+				"transcription": "Подь са гойдать."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/e/e199ca59af49f28351e1fb5b6519bcdd.mp3",
+				"translation": "Біжи на гойдалку.",
+				"transcription": "Bižy na hojdalku."
+			},
+			"image_url": null
+		},
+		"rec8cfBQiD4CDppx5": {
+			"id": "rec8cfBQiD4CDppx5",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/9/931b1a4a26e58e821787e04885df4a3c.mp3",
+				"translation": "Poď na pieskovisko.",
+				"transcription": "Подь на піесковіско."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/c/cad18dff87adb4bfefefa469db880351.mp3",
+				"translation": "Біжи в пісочницю.",
+				"transcription": "Bižy v pisočnycju."
+			},
+			"image_url": null
+		},
+		"recVfzw64EKUzKXaK": {
+			"id": "recVfzw64EKUzKXaK",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/f/ffb490c774d0d65b2e1ef9b6bef396bb.mp3",
+				"translation": "Máš pekné koláčiky.",
+				"transcription": "Маш пекне колачіки."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/74a9c3b8778d811a2a47ebf33804abe0.mp3",
+				"translation": "У тебе гарні пасочки.",
+				"transcription": "U tebe harni pasočky."
+			},
+			"image_url": null
+		},
+		"rec8Mb9d4EHNMiEFn": {
+			"id": "rec8Mb9d4EHNMiEFn",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/7/754ae9836671d4e2c600b7fe60dfafad.mp3",
+				"translation": "Poďme na ihrisko.",
+				"transcription": "Подьме на ігріско."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/9/9885818d5f2a019db52a3e8ff6acd8b8.mp3",
+				"translation": "Ходімо на майданчик.",
+				"transcription": "Chodimo na majdančyk."
+			},
+			"image_url": null
+		},
+		"recTKTRuNWkDWi4rN": {
+			"id": "recTKTRuNWkDWi4rN",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/9/9ade9566fcf816d29a1847ae9efac90d.mp3",
+				"translation": "Dnes je krásne.",
+				"transcription": "Днес є красне."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/e/eab1ddc28441dffc4e7f1771f250bffc.mp3",
+				"translation": "Сьогодні – гарно.",
+				"transcription": "Sohodni – harno."
+			},
+			"image_url": null
+		},
+		"rectL3reGKbY348y2": {
+			"id": "rectL3reGKbY348y2",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/f/fbd0bee00470c099ac3c3c609e9f9e8d.mp3",
+				"translation": "Áno, naozaj je krásny deň.",
+				"transcription": "Ано, наозай є красни день."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/0/0a5b6674d1b60b23d620f32fb189237b.mp3",
+				"translation": "Так, сьогодні справді чудовий день.",
+				"transcription": "Tak, sohodni spravdi čudovyj deň."
+			},
+			"image_url": null
+		},
+		"recvD1pZMW8QJNwa1": {
+			"id": "recvD1pZMW8QJNwa1",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/e/e9475634560057e67191d516368f5661.mp3",
+				"translation": "Pôjdeme do parku",
+				"transcription": "Пyoйдеме до парку"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/e/e1e740694e5069a6da20a491a5616212.mp3",
+				"translation": "Ходімо в парк",
+				"transcription": "Chodimo v park"
+			},
+			"image_url": null
+		},
+		"recQQiDIH2yE6yj0b": {
+			"id": "recQQiDIH2yE6yj0b",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/b/bfe43a06b59ca007fa9162a3e99c3931.mp3",
+				"translation": "Áno, dnes je pekne.",
+				"transcription": "Ано, днес є пекне."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/48a9db49dd1d457dd699d2db22622443.mp3",
+				"translation": "Так, сьогодні чудово.",
+				"transcription": "Tak, sohodni čudovo."
+			},
+			"image_url": null
+		},
+		"rec3Sg9pHlTWNPRtZ": {
+			"id": "rec3Sg9pHlTWNPRtZ",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/0/0f591f23a7d0a9e1f59114f9234fe4e4.mp3",
+				"translation": "Dnes je veľmi veterno.",
+				"transcription": "Днес є вельмі ветерно."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/7e190b11eaee95ba9e22b46932ab0a7d.mp3",
+				"translation": "Сьогодні дуже вітряно.",
+				"transcription": "Sohodni duže vitrjano."
+			},
+			"image_url": null
+		},
+		"recIBLe1tEzsLfVZJ": {
+			"id": "recIBLe1tEzsLfVZJ",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/6/679b091239a99962dff3171ecb78517d.mp3",
+				"translation": "Aj vám je tak teplo?",
+				"transcription": "Ай вам є так тепло?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/1/110c92c14ca48b575ad69ada55c00aad.mp3",
+				"translation": "Вам теж спекотно?",
+				"transcription": "Vam tež spekotno?"
+			},
+			"image_url": null
+		},
+		"recBwYM0gaVKrwoXQ": {
+			"id": "recBwYM0gaVKrwoXQ",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/4/4641b42276b1321c3465bdbdcc1abc02.mp3",
+				"translation": "Áno, ale v parku mi je dobre.",
+				"transcription": "Ано, але в парку мі є добре."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/7209f0a8e74c46604b5d9e1df9dfe773.mp3",
+				"translation": "Так, але в парку мені добре.",
+				"transcription": "Tak, ale v parku meni dobre."
+			},
+			"image_url": null
+		},
+		"recUnitvr4XJXXmXl": {
+			"id": "recUnitvr4XJXXmXl",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/d/d44fba99d92dc1bd6b5493a31bd66067.mp3",
+				"translation": "Áno, je mi veľmi teplo.",
+				"transcription": "Ано, є мі вельмі тепло."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/8/83760458ff2b7e405c068373ca8721ea.mp3",
+				"translation": "Так, дуже спекотно.",
+				"transcription": "Tak, duže spekotno."
+			},
+			"image_url": null
+		},
+		"recABbY8UAvscWbPp": {
+			"id": "recABbY8UAvscWbPp",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/2/2211f9e9b4c6692577fd3e8e879ae55a.mp3",
+				"translation": "Ani nie.",
+				"transcription": "Ані ніе."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/1/125023549d629ceac7d3fb224feb8772.mp3",
+				"translation": "Зовсім ні.",
+				"transcription": "Zovsim ni."
+			},
+			"image_url": null
+		},
+		"rec11L80MqiWBKDXg": {
+			"id": "rec11L80MqiWBKDXg",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/9/9a32f53bcad7c334eb9d127c6deb1473.mp3",
+				"translation": "Je mi dobre.",
+				"transcription": "Є мі добре."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/42e72d60f33795f191e9033a7aa2b96f.mp3",
+				"translation": "Мені добре.",
+				"transcription": "Meni dobre."
+			},
+			"image_url": null
+		},
+		"recMJua6YcgDUgakU": {
+			"id": "recMJua6YcgDUgakU",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/b/bfb58417bda87db7f2862c7896785e95.mp3",
+				"translation": "Je vám tiež tak zima?",
+				"transcription": "Є вам тіеж так зіма?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/e/ee2c7535b66fa54562f681c8243ad4ff.mp3",
+				"translation": "Вам теж холодно?",
+				"transcription": "Vam tež cholodno?"
+			},
+			"image_url": null
+		},
+		"rec1FUua6oSx8x2iH": {
+			"id": "rec1FUua6oSx8x2iH",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/a/a3c390c2d978337c666904f3f3d3b3dc.mp3",
+				"translation": "Áno, dnes ideme len na chvíľku.",
+				"transcription": "Ано, днес ідеме лен на хвільку."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/7542f8cf1f90f3bc15678c87d91a77b2.mp3",
+				"translation": "Так, сьогодні тут будемо недовго.",
+				"transcription": "Tak, sohodni tut budemo nedovho."
+			},
+			"image_url": null
+		},
+		"reccgja3vWkPeOk0X": {
+			"id": "reccgja3vWkPeOk0X",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/f/ffe2124b65be7ef132f7b8dd90b56972.mp3",
+				"translation": "Dnes nie je pekne.",
+				"transcription": "Днес ніе є пекне."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/8/8a289190fbd2554da3467fe0eb12d2e9.mp3",
+				"translation": "Сьогодні погана погода.",
+				"transcription": "Sohodni pohana pohoda."
+			},
+			"image_url": null
+		},
+		"recgsh8TKpeN4TXrJ": {
+			"id": "recgsh8TKpeN4TXrJ",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/2/20259362498510c7b31bffd0ac7947ed.mp3",
+				"translation": "Dnes je škaredo.",
+				"transcription": "Днес є шкаредо."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/7d7afadc7eaf10193c5bc9d9b0d16be0.mp3",
+				"translation": "Сьогодні неприємна погода.",
+				"transcription": "Sohodni nepryjemna pohoda."
+			},
+			"image_url": null
+		},
+		"rec39OySiAAIvFDi6": {
+			"id": "rec39OySiAAIvFDi6",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/d/d7d019ae58ada063307abebbf826bc76.mp3",
+				"translation": "Áno, to je. Už ideme domov.",
+				"transcription": "Ано, то є. Уж ідеме домов."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/e/e367519696dbf52dd6406eb0f75e8411.mp3",
+				"translation": "Так, і справді. Ми вже йдемо додому.",
+				"transcription": "Tak, i spravdi. My vže jdemo dodomu."
+			},
+			"image_url": null
+		},
+		"recVc16T6QrIq0iov": {
+			"id": "recVc16T6QrIq0iov",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/3/3ab0a0689d6af15ecfeec152be8c498e.mp3",
+				"translation": "Dnes je pekné počasie.",
+				"transcription": "Днес є пекне почасіе."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/661a3b7e02e1cc22600d35f09c926da5.mp3",
+				"translation": "Сьогодні хороша погода.",
+				"transcription": "Sohodni choroša pohoda."
+			},
+			"image_url": null
+		},
+		"recAfwDLnganQWIch": {
+			"id": "recAfwDLnganQWIch",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/6/6322eb42ea4c90156c95f43a4cc9ee83.mp3",
+				"translation": "To je váš pes?",
+				"transcription": "То є ваш пес?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/4e7fe377439afa9f457155b1533fdedf.mp3",
+				"translation": "Це ваш собака?",
+				"transcription": "Ce vaš sobaka?"
+			},
+			"image_url": null
+		},
+		"rech2VHHRNDyabFFe": {
+			"id": "rech2VHHRNDyabFFe",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/9/91f846c7dc54ab26358b04847b10f226.mp3",
+				"translation": "To je váš psík?",
+				"transcription": "То є ваш псік?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/4/4bea3e8000b7c4129fa65750bb2f691a.mp3",
+				"translation": "Це ваш песик?",
+				"transcription": "Ce vaš pesyk?"
+			},
+			"image_url": null
+		},
+		"recZRAW8WCqhNzTcb": {
+			"id": "recZRAW8WCqhNzTcb",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/1/1c171169fd697d620c64bb9a71409c93.mp3",
+				"translation": "Nie, strážim ho kamarátke.",
+				"transcription": "Ніе, стражім го камаратке."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/0/04e4c92968343ae582fbb846f28a9997.mp3",
+				"translation": "Ні, моєї подруги. Я за ним доглядаю.",
+				"transcription": "Ni, mojeji podruhy. Ja za nym dohljadaju."
+			},
+			"image_url": null
+		},
+		"rec07tGOi11YGlYmM": {
+			"id": "rec07tGOi11YGlYmM",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/a/a28b4d4f84728f0c1cfc0c42c40024c0.mp3",
+				"translation": "Je to pes alebo fenka?",
+				"transcription": "Є то пес алебо фенка?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/6/67a0b852ff1b919654fd3ba4a36e3305.mp3",
+				"translation": "Це хлопчик чи дівчинка?",
+				"transcription": "Ce chlopčyk čy divčynka?"
+			},
+			"image_url": null
+		},
+		"rec4k1LXo0wtHdJgA": {
+			"id": "rec4k1LXo0wtHdJgA",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/c/c201061f8ee57655cde8f235d805f126.mp3",
+				"translation": "Je krásny. Je krásna.",
+				"transcription": "Є красни. Є красна."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/c/c625e96d50a1a5d7a50de0dedf0df683.mp3",
+				"translation": "Красивий. Красива.",
+				"transcription": "Krasyvyj. Krasyva."
+			},
+			"image_url": null
+		},
+		"rec8cVlEP7MGbAsOu": {
+			"id": "rec8cVlEP7MGbAsOu",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/0/0ba4efcbd66f5e4d80c2f0d0e022d3eb.mp3",
+				"translation": "Môžem ho prosím pohladkať?",
+				"transcription": "Мyoжем го просім погладкать?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/0/05b02dfc330d62173819ca5425cecd42.mp3",
+				"translation": "Можна його погладити?",
+				"transcription": "Možna joho pohladyty?"
+			},
+			"image_url": null
+		},
+		"recXLa10xU9hLxZfJ": {
+			"id": "recXLa10xU9hLxZfJ",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/1/14967e7d9058cf784b408f737931b438.mp3",
+				"translation": "Môžem ju prosím pohladkať?",
+				"transcription": "Мyoжем ю просім погладкать?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/7/7fc4137e8856e563956c1e3d8e6bad95.mp3",
+				"translation": "Можна її погладити?",
+				"transcription": "Možna jiji pohladyty?"
+			},
+			"image_url": null
+		},
+		"recOtMzX7Ptv6Q62f": {
+			"id": "recOtMzX7Ptv6Q62f",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/f/f7e1d8e7165e5b6890b28f9b060d848e.mp3",
+				"translation": "Nehryzie?",
+				"transcription": "Негризіе?"
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/3/33b8347ef3d1d381400893eb2e6ff6dd.mp3",
+				"translation": "Не кусається?",
+				"transcription": "Ne kusajeťsja?"
+			},
+			"image_url": null
+		},
+		"recQ91J6KklSjjNXc": {
+			"id": "recQ91J6KklSjjNXc",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/f/ffeafb7e580b091425d0b005f2f1dd83.mp3",
+				"translation": "Je to ešte šteniatko.",
+				"transcription": "Є то еште штеніатко."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/8/845acbbdeb36657ad378d3dc2f2da891.mp3",
+				"translation": "Він ще цуценя. Вона ще цуценя.",
+				"transcription": "Vin šče cucenja. Vona šče cucenja."
+			},
+			"image_url": null
+		},
+		"recatap4KhOYIERXO": {
+			"id": "recatap4KhOYIERXO",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/b/bee2b342ade6c20cd37bdd30d5574857.mp3",
+				"translation": "Nehladkaj ho po ušiach.",
+				"transcription": "Негладкай го по ушіах."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/d/d93deceaa879c1619688e73b0fd046f0.mp3",
+				"translation": "Не гладь його по вухах.",
+				"transcription": "Ne hlaď joho po vuchach."
+			},
+			"image_url": null
+		},
+		"reczRNoopxrfLhUq4": {
+			"id": "reczRNoopxrfLhUq4",
+			"main": {
+				"sound_url": "https://data.movapp.eu/sk-sounds/5/5bddf3cff603d72fc37274f93e7e0d5a.mp3",
+				"translation": "Nepáči sa mu to. Nepáči sa jej to.",
+				"transcription": "Непачі са му то. Непачі са єй то."
+			},
+			"source": {
+				"sound_url": "https://data.movapp.eu/uk-sounds/f/fec33d17b335a216be33ac0d69721385.mp3",
+				"translation": "Йому це не подобається. Їй це не подобається.",
+				"transcription": "Jomu ce ne podobajeťsja. Jij ce ne podobajeťsja."
 			},
 			"image_url": null
 		}
